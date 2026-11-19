@@ -51717,7 +51717,18 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Fixture test (pytest, temp data dir): two base bundles, the second a pack with `languages: ["zh-Hans", "en"]`-style list and one approved en question → validate, export, `report --bundle <id> --locale en` pass; targets separate.
 - Rerun the baseline: identical. `npm run check`, `npm test`, `npm run build`, `qgen validate`, Python tests pass.
 
-Done when: the fixture passes and today''s output is unchanged.', '2026-11-19T18:23:01Z', NULL, 2300, 0, 'opus', 'questions');
+Done when: the fixture passes and today''s output is unchanged.
+
+## Also found by the pipeline review (task 2339)
+`task 2339: Pipeline review: findings, cleanup tasks, open deletions` found these "any base bundle" or "es" hits beyond the list above (2026-11-19 line numbers; re-check after plan 229''s cleanups). Each: fix, or keep with a reason in the done note.
+- Voice: `qgen.py` ~175-194 `voice_locale`/`voices_text`/`bundle_text` give every non-region bundle the `es` voice; `taxonomy.py` ~270. A second base bundle''s `voice` must reach its own languages'' prompts (en drafting, zh translation).
+- `targets.py` ~188: `kind != "base"` exempts every base bundle from needing a targets entry (only `base` has one).
+- `report.py`: ~502-510, ~536 D-75 target check counts `base` for every locale; ~596, ~612 and `authoring/tools/sim/career.ts` ~108, ~118 `--career` default `["base"]`; ~705-719, ~738 `--cost` has no projection for a second base bundle (`bundle_costs` skips kind base); ~1050 `qgen report` defaults to `--locale es`, ~241 `es` doubles as "all".
+- Names: `categories.py` ~90 `NAMES_LOCALES = ("en","es","de")` forced on every bundle (`validate.py` ~503-506, ~524-529, `categories.py` ~134, ~171): names locales per bundle `languages` (es-ES → es); `validate.py` ~369-378 `names_warnings` counts every bundle for every locale.
+- Export: `pool_export.py` ~35 always writes a top-level pool per locale, ~61-63 a demo pool per exported locale (the demo is `base`''s: only `base`''s languages).
+- `qgen bundle new` (`qgen.py` ~2036-2037) wants Spanish `--name`/`--description`; `taxonomy.py` ~39 defaults `languages` to `["es"]`.
+- `patch_notes.py` ~78, ~82, ~146, ~179: `pool.json` read as es, category names fall back to `names.es`.
+- Authoring start page and review tool: `authoring/tools/supply.ts` ~3, ~19 and `engine.py` ~66-68 (supply of es''s first base bundle only), `authoring/server/overview.py` ~22, ~135; `authoring/server/main.py` ~123 (`sub_of`), ~286 `names_of` default es; `authoring/ui/src/lib/api.ts` ~93 `fetchNames(locale = "es")`; `Stats.svelte` ~55, ~65; `ReviewHeader.svelte` ~34, ~48, ~57; `stats/breakdown.ts` ~56; `SparseList.svelte` ~41, ~75.', '2026-11-19T18:23:01Z', NULL, 2300, 0, 'opus', 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2330, 227, 'Copy model: copied_from, copy helper, validate rules', 'work', 'open', NULL, NULL, 'Task 2 of `plan 227: chinese-base bundle: model and setup` (section "Copy model"), per `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` (copies). Lets a question of one bundle be copied into another with its own text and status, sharing the media record but never the file.
 
 ## Changes
@@ -51731,7 +51742,15 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Tests: copy of an en source, of an es source with approved en, refusal without; validate errors (missing source, copy of a copy, two copies in one bundle, on a translation); duplicate exemption source↔copy but not copy↔same-bundle.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`, Python tests pass; `qgen report` unchanged for today''s data.
 
-Done when: the helper and rules exist, tested, D-entry written.', '2026-11-19T18:23:14Z', NULL, 2300, 0, NULL, 'questions');
+Done when: the helper and rules exist, tested, D-entry written.
+
+## Also found by the pipeline review (task 2339)
+`task 2339: Pipeline review: findings, cleanup tasks, open deletions` (2026-11-19 line numbers; re-check after plan 229''s cleanups):
+- `validate.py` ~57-59, ~88-92: a copy''s `subcategory` and `concept` are checked against its own bundle''s taxonomy and concept lists; the helper maps the subcategory (plan 230''s `from-base.json`) and drops or maps `concept`.
+- A copy gets its own `batch` and `review` (no copied `reviewed_at`): else `report --review-time` (`report.py` ~809-836), `$/approved` (`report.py` ~675) and `health.batch_health` count it under the source''s batch.
+- Media stays fixed on a copy: `review_steps.kept_slots` (~73-81), merge''s `unpicked` (`qgen.py` ~1426), `revise_in_pool` unpicking on a type/query change (~1561-1564, ~1660) and the review server''s `pick_media`/`search_media` (`authoring/server/main.py` ~307-322) key "fixed media" on `media_first` only. One helper (`media_first or copied_from`) in all of them, plus a server-side refusal; else a fit or rework run re-searches a copy''s media and it stops sharing the file.
+- `qgen report --overlaps` (if kept by `decision 760: Pipeline cleanup: which unused features may go?`) pairs every copy with its source: exempt.
+- Not settled here: whether new chinese-base drafts must avoid `base` questions that were not copied (D-111 checks every bundle; `qgen.py` ~893, ~1117, ~1397, ~1415). The drafting part of `plan 60: masterplan` raises it.', '2026-11-19T18:23:14Z', NULL, 2300, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2331, 227, 'Shared media and content depot for a base pack', 'work', 'open', NULL, NULL, 'Task 3 of `plan 227: chinese-base bundle: model and setup` (sections "Media not duplicated" and the depot line). A copied question must use the same media file as its source everywhere, and a base bundle in a pack ships in the game''s content depot (`decision 753: chinese-base ships in the game''s content depot, not as DLC`).
 
 ## Changes
@@ -51798,7 +51817,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - `qgen validate` (empty taxonomy accepted for the new bundle, or only the expected warning), `qgen export`, `qgen report --bundle chinese-base --locale en`; es, es-ES, en, de output unchanged; `npm run check`, `npm test`, `npm run build`.
 
-Done when: `chinese-base` exists with approved `rule` and `voice`.', '2026-11-19T18:23:45Z', NULL, 2300, 0, NULL, 'questions');
+Done when: `chinese-base` exists with approved `rule` and `voice`.
+
+## Also found by the pipeline review (task 2339)
+- Prompts name the bundle `base` where they mean "the base bundle": `house-style.md` ~36-38 ("International angle", "played in every language of the game"), `draft.md` ~24, `review.md` ~27, `rate.md` ~9, ~19, `concepts-facets.md` ~13, `concepts-list.md` ~10, ~15, `concepts-topup.md` ~7. Say in the rule/voice decision which of these rules apply to chinese-base (and how), with the wording drafts (D-36); the prompt edit is part of applying the answer.', '2026-11-19T18:23:45Z', NULL, 2300, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2336, 227, 'Close-out of plan 227: fixture check end to end', 'work', 'open', NULL, NULL, 'Close-out of `plan 227: chinese-base bundle: model and setup` ("Done when").
 
 - With a fixture `chinese-base` (temp data: one copy of a `base` media question, one new question; not committed): `qgen validate`, `qgen export`, `qgen report --bundle chinese-base --locale en` pass; the copy''s media is one file in cache, `work/ship-media/`, `build/media/` and credits.
@@ -51838,7 +51860,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Answers written into the docs, consequences recorded, every affected later plan has its follow-up task or needs none (listed in the done note).', '2026-11-19T18:25:00Z', NULL, 2301, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2339, 229, 'Pipeline review: findings, cleanup tasks, open deletions', 'work', 'open', NULL, NULL, 'Task 1 of `plan 229: Pipeline review and cleanup for milestone 12`. Read the plan in full ("Scope", "How unused is found", "Aimed at this milestone''s needs", "Rules for every cleanup task"); it is binding over this summary. No code change in this task.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2339, 229, 'Pipeline review: findings, cleanup tasks, open deletions', 'work', 'done', NULL, '2026-11-19, authoring/reports/pipeline-review.md, authoring/reports/pipeline-review-baseline/ (commit eee362cb); decisions 760 (deletions), 761 (prompt wording); cleanup tasks 2347–2373 in plan 229 (2362–2372 wait on 760, 2373 on 761), all required by task 2340; follow-ups 2374–2376 (plan 139, 1165 requires 2374/2375), 2377 (plan 140); review findings appended to tasks 2329, 2330, 2335; kept by decision 104: media_cache/http_base twins and save_file upgrades; by decision 216: rework --model fable', 'Task 1 of `plan 229: Pipeline review and cleanup for milestone 12`. Read the plan in full ("Scope", "How unused is found", "Aimed at this milestone''s needs", "Rules for every cleanup task"); it is binding over this summary. No code change in this task.
 
 ## Baseline
 - Capture before anything changes, for the close-out''s comparison: `qgen validate`, `qgen report`, `qgen report --locale <l>` for es, es-ES, en, de, `qgen report --cost` → `authoring/reports/pipeline-review-baseline/` (committed; the close-out deletes it). Note the commit hash in the report.
@@ -51855,7 +51877,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Prompt wording changes: draft + pm decision (D-36), the task pending on it.
 - Follow-ups for other parts: tasks in plans 139, 227, 140 or the part 5 plan (`plan 230: chinese-base step 1: euro-centric filter and copies`), with what, where, done when.
 
-Done when: the report is staged, every finding is a task, a decision or "kept", and the close-out task requires every cleanup task added.', '2026-11-19T18:25:49Z', NULL, 2305, 0, 'opus', 'questions');
+Done when: the report is staged, every finding is a task, a decision or "kept", and the close-out task requires every cleanup task added.', '2026-11-19T18:25:49Z', '2026-11-19T18:58:48Z', 2305, 0, 'opus', 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2340, 229, 'Close-out of plan 229: checks, unchanged output, starting points of plans 139 and 227', 'work', 'open', NULL, NULL, 'Task 3 of `plan 229: Pipeline review and cleanup for milestone 12` (read it in full). Runs after `task 2339: Pipeline review: findings, cleanup tasks, open deletions` and every cleanup task it added (they are this task''s prerequisites).
 
 ## Checks
@@ -51969,6 +51991,372 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `qgen validate`, `qgen report --bundle chinese-base --locale en` (copies per subcategory and difficulty; the gap to 6000 is part 7''s, `decision 730: Base tile count: «6000+»`), `npm run check`, `npm test`, `npm run build` pass; `base`''s pools and reports unchanged.
 
 Done when: every approved `base` source with an English text is judged, copies approved or `needs_work`, the developer''s flips applied; the done note gives the counts.', '2026-11-19T18:27:47Z', NULL, 2307, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2347, 229, 'Fill {max_video_s} and {max_audio_s} in every prompt', 'work', 'open', NULL, NULL, '## What
+`qgen.prompt()` (`authoring/tools/qgen.py` ~221) never fills `{max_video_s}` / `{max_audio_s}`; only `media_first.prompt_file()` (`media_first.py:524`) does. So review (`review_steps.py` ~250), fix (~308) and audit (`audit.py` ~211) of media-first questions get the literal "{max_video_s}" from `prompts/media-first-checks.md:8` and `prompts/audit.md:34`.
+
+## Change
+- Fill both placeholders in `qgen.prompt()` from `media_first.MAX_VIDEO_SECONDS` / `MAX_AUDIO_SECONDS` (or wherever the constants live; import, `decision 199: AGENTS.md rule: import, don''t copy; a copy across a boundary names its source? (code review part 11)`); drop the extra `.replace` in `prompt_file`.
+- Test: the review, fix and audit system prompts of a media-first item contain no `{max_` (like `test_judge_window.py:54`).
+
+Done when: the test passes and no rendered prompt keeps a `{max_…}` placeholder.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:30Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2348, 229, 'Crash-safe write order in apply, merge and translate''s done mark', 'work', 'open', NULL, NULL, '## What
+Three write orders lose work on a crash or Ctrl-C:
+- `apply_to_drafts` (`qgen.py` ~1667-1682) rewrites draft files without the moved questions before writing `revised-*.json`; a crash in between drops them from every file.
+- `cmd_merge` (`qgen.py` ~1440-1443) saves the pool before `merged.json` / `ids.json`; a rerun then sees its own questions as duplicates and review loses rater notes.
+- `cmd_translate_batch` (`translate.py` ~389-393) marks `done` before the `unmerged()` check; the rerun the message asks for starts a new `tr-<l>-<n+1>` and pays again.
+
+## Change
+- apply: `revised-*` first, then drafts, then `applied.json`. merge: `merged.json` and `ids.json` inside the lock before the pool. translate: `unmerged` check before `done`.
+- Tests for each order (simulate a failure between writes).
+
+Done when: tests pass; output unchanged.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:31Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2349, 229, 'Remove applied one-off migrations: rekey, bundles, import', 'work', 'open', NULL, NULL, '## What
+Applied one-off migrations still in the CLI:
+- `qgen rekey` / `authoring/tools/rekey.py`: slug migration, applied 2026-10-16 (`decision 258: Slug keys for base and colombia: the list`, `decision 259: Category and subcategory keys: English slugs`); input `work/slugs/proposal.json` only. `taxonomy.py` imports it just for `rel()` (use `relative_to(ROOT)` as elsewhere in that file).
+- `qgen bundles` (`cmd_bundles`, `BUNDLE_SCHEMA`, `BUNDLE_GROUP`, `bundles_text`, `prompts/bundles.md`): D-39 sorting, last run 2026-10-07; every question has a bundle; a rerun would send ~20k questions to claude.
+- `qgen import`, `improve --assign-unbatched` and `cmd_apply`''s `source == "pool"` branch (QG-13): one run, `work/first-120` (2026-10-06); 0 questions without `batch`; `qgen rework` replaced it. Keep `revise_in_pool` and `apply_to_drafts`.
+
+## Change
+- Delete them; keep `app/data/old-keys.json` and `categories.old_keys()` (saves and patch notes read them).
+- Docs: qgen.py docstring, `README.md` (~129), `plans/07-question-generation.md` QG-13, `plans/22-bundles.md`, `plans/15c-regional-questions.md`, `plans/decisions.md` mentions, `authoring/ui/src/lib/types.ts:63` comment ("Set by `qgen.py apply`" → fix/rework). History lines in decisions stay as history.
+
+Done when: commands gone, `rg "rekey|cmd_bundles|cmd_import|assign-unbatched"` only finds history; checks pass, output unchanged.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:31Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2350, 229, 'Remove dead CLI entry points: dedupe, english-keys, merge --min-score', 'work', 'open', NULL, NULL, '## What
+Dead CLI entry points in `authoring/tools/qgen.py`:
+- `qgen dedupe` (~1369-1377, ~2068): no caller, no doc row; merge already runs `duplicates()`. Stale step rows in `plans/19-repo-layout.md:61`, `plans/07-question-generation.md:87`.
+- `merge --min-score` with `soft_score`/`SOFT_CRITERIA` (~99, ~1380, ~1414, ~2071): every caller passes 0 (`qgen.py` ~1938, `translate.py` ~381, `test_media_first_batch.py` ~329); help says it is off.
+- `qgen english-keys` as its own subcommand (~2069): ran standalone once (2026-10-15); the batch runs `cmd_english_keys` as a step. Its `about` strings (`qgen.py` ~1288, `validate.py` ~384) then name "the english-keys step of qgen batch".
+
+## Change
+- Remove all three; keep `cmd_english_keys` as a step; drop the `min_score` args at the callers.
+
+Done when: removed, docs fixed, checks pass, output unchanged.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:31Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2351, 229, 'Drop compatibility code for data no file has any more', 'work', 'open', NULL, NULL, '## What
+Compatibility code for data no file has any more:
+- `played.py` ~88, ~103: fallbacks for "stats files from before milestone 16" / "older servers and clients": nothing released, no `stats.json` exists.
+- `categories.slug_keys()` (~95-97) and its gate at `validate.py` ~513: always true.
+- `categories._fallback` (~138-144, ~154): no `categories.json` has `name`; `display()` returns the key.
+- `media_first.STALE_WHY` (~191, ~200, `heal_triage`): no triage row has it; keep the cut-off line repair and `ENV_ERRNOS`; adjust `test_media_first.py` cases.
+- `media_survey.py` ~158-160: list-shaped pool branch (all are dicts); add `encoding="utf-8"`.
+- `q.get("bundle") or "base"` at `categories.py` ~55, `validate.py` ~568, `report.py` ~820, `authoring/server/main.py` ~123: every question has `bundle` (validate it if not already required).
+- `patch_notes.py` ~73-74, ~87: names from pre-slug `categories.json` via `old_keys()`; no `v*` tag exists, every ref is after the slug migration.
+- `finalize_concepts` facet `"Otros"` (`qgen.py` ~712): concept lists are English since plan 148 → `"Other"` (check no list has "Otros").
+
+Done when: removed, tests adjusted, checks pass, output unchanged.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:32Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2352, 229, 'One pool-file helper per language, no dead pool.es.json branch', 'work', 'open', NULL, NULL, '## What
+"Pool file of a locale" is written five times, two with a dead `pool.es.json` branch:
+- `authoring/tools/paths.py` ~22-24 `locale_pool`, `layout.py` ~39-42 `EXPORT`/`LOCALE_POOL`, `report.py` ~496-499 own `locale_pool`, `authoring/tools/sim/load.ts` ~13-17 (re-implements `poolFile` from `app/client` engine `pool.ts`), `validate.py` ~113-115 checks `LOCALE_POOL("es")` = `pool.es.json`, a file that never exists.
+
+## Change
+- One Python helper (`paths.pool(locale)` or `layout.POOL_FILE`) everywhere; `sim/load.ts` uses `poolFile(locale)` from the engine; fix the validate check to the real es file. (`code-review.md` ~1983 "won''t fix" note: update.)
+
+Done when: one helper per language, checks pass, output unchanged.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:32Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2353, 229, 'Duplicated helpers in authoring/tools: import, don''t copy', 'work', 'open', NULL, NULL, '## What
+Duplicated helpers in `authoring/tools` (decision 199: import, don''t copy):
+- "read JSON if it exists": `demo.py` ~24, `work_gc.py` ~23, `patch_notes.py` ~62, `flag_loop.py` ~63, `save_file.py` ~113, `played.py` ~35 vs `qgen.load_json` (~109). These can''t import qgen (cycles) but all import `atomic`: add `atomic.read_json(path, default=None)`, use it everywhere incl. `qgen.load_json`.
+- `audit.py` ~55 natural sort vs `qgen.natural_key` (already imported there).
+- Largest-remainder rounding: `qgen.level_counts` (~838-845) vs `targets.scaled` (~27-34): one helper in `targets`.
+- `validate._num` (~187) vs `targets._number` (~51).
+- `validate.py` ~108 and ~111 call `pool_export.exports(data)` twice (each loads every translation file); `pool_export.exports` (~41-44) only forwards to `translations.exports`.
+- `report.py` ~813: unused third tuple element.
+
+Done when: one copy each, checks pass, output unchanged.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:32Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2354, 229, 'Duplicated helpers in the review server: import, don''t copy', 'work', 'open', NULL, NULL, '## What
+Duplicates in the review server `authoring/server`:
+- `main.py` ~328 `load_bundles` copies `qgen.load_bundles` (~166; qgen is imported at ~110); `main.py` ~339 reads `age-groups.json` again instead of `qgen.load_age_groups`.
+- `main.py` ~188-227 `locale_questions` and ~230-264 `source_questions` repeat the same filter chain (batch, status, reviewer, bundle, subcategory, media, licence, demo, audit, played, sample): one filter table.
+- Player-flag feedback text built twice: `main.py` ~370-394 `apply_flags` vs `reviews.py` ~136-142 `report_feedback`, both defaulting the locale to `"es"`: one helper in `reviews.py`.
+- `reviews.py` ~146-149 `HEADER`/`LABELS` copy `app/client/src/game/report.ts` and the locales'' `flag.*` strings: comment naming the source (`decision 199: AGENTS.md rule: import, don''t copy; a copy across a boundary names its source? (code review part 11)`; Python ↔ TS).
+
+Done when: one copy each, API tests pass, the review pages behave as before (restart `local-app-trivia-authoring.service`, user unit; load `/review`, `/stats`, home).
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:32Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2355, 229, 'qgen report --cost: rows per bundle''s languages, rates per bundle and mode', 'work', 'open', NULL, NULL, '## What
+`qgen report --cost` (`authoring/tools/report.py` ~692-750) gives wrong projections:
+- Regions always get rows `["es","en"]` with es as drafting language: `usa es`, `uk es`, `germany es` exist, germany''s `de` and spain''s `es-ES` are missing, `usa en`/`uk en` count their own batches again as translations. Themes loop over all `translations.LOCALES`, not the bundle''s `languages`.
+- `last3` takes the last 3 merged batches per locale across all bundles and modes: "draft en $5.36" comes from media-first runs, "draft es" from mexico; base''s and the themes'' projections come out ~15× too high.
+
+## Change
+- Rows per bundle: `translations.draft_locale(b)` (drafting) + the other `languages` (+ en if translated runs exist); rates per (bundle, mode), media-first apart (`media_first_cost` exists).
+- Named difference against the baseline `report-cost.txt`: the projection rows; list them in the done note.
+
+Done when: rows match each bundle''s languages and draft locale; rates per bundle and mode; checks pass.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:33Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2356, 229, 'Batch report health: the run''s own bundle''s deficit', 'work', 'open', NULL, NULL, '## What
+`health.deficit_line(bundle="base")` (`authoring/tools/health.py` ~356-373) is called without a bundle from `health_section` and `write_batches_md`: every batch report prints base''s deficit whatever the run''s bundle (e.g. `authoring/reports/batch-12.md`, a colombia batch).
+
+## Change
+- `health_section` passes the run''s `run.json` `bundle`; `batches.md` one line per bundle, or base labelled as such.
+- Reports already written stay (generated history); named difference: only new reports.
+
+Done when: a regional run''s report shows its own bundle''s deficit; test; checks pass.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:33Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2357, 229, 'Translation runs: build the related-questions view once per step', 'work', 'open', NULL, NULL, '## What
+In translation runs `related_questions` rebuilds the English view of the pool on every review and audit call: `review_steps.py` ~188, ~220 and `audit.py` ~198 pass `pool_en=None` when a locale is set, so `as_locale` re-reads `questions.en.json` and `english-keys.json` per call.
+
+## Change
+- Build it once per step and pass it (`pool_en=pool` where equal). Same results.
+
+Done when: same related lists (test or a before/after dump on one run''s items), checks pass.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:33Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2358, 229, 'trivia-media sync: per file, broken mark on every question using it', 'work', 'open', NULL, NULL, '## What
+`trivia-media sync` (`authoring/tools/media.py` ~250, ~303-323) works per (question, slot), not per file: 2316 file URLs are shared by 2+ questions today (1152 across bundles), so it over-counts "downloading N missing file(s)", runs the file check once per sharer, and with `--status approved` marks `file_problem` only on sharers inside the filter: a draft or needs_work question on the same broken file stays "ok" forever (later syncs skip the cached file). chinese-base copies will share files with base (`decision 217: chinese-base membership: how does a translated base question count for chinese-base?`).
+
+## Change
+- Group by URL: download and check once, mark `file_problem` on every question with that URL, whatever the filter.
+- Test with two questions on one URL, one outside the filter.
+
+Done when: test passes; counts are per file; checks pass.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:34Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2359, 229, 'Media file counts per file, not per question, on stats and validate', 'work', 'open', NULL, NULL, '## What
+Counts of media files are counted per question:
+- `authoring/server/overview.py` ~126 (`licence_replace`: questions, not files), `authoring/server/media_stats.py` ~62-75 (resolution bands per question), `validate.py` ~79-81, ~104 (licence-replace list counts picks).
+- 2316 URLs are already shared; copies (`decision 217: chinese-base membership: how does a translated base question count for chinese-base?`) will add more. `media.licence_rows` already groups by URL.
+
+## Change
+- Count distinct file URLs (show question counts beside them where useful).
+- Named difference: these counts in the start page, stats page and `qgen validate`''s line.
+
+Done when: counts per file, tested; review pages load (restart `local-app-trivia-authoring.service`).
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:34Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2360, 229, 'qgen gc: finished rework, tighten and neutralize runs qualify', 'work', 'open', NULL, NULL, '## What
+`qgen gc` (`authoring/tools/work_gc.py` ~27-35 `qualifies`) only takes modes `batch` and `media-first`. Finished rework, tighten and neutralize runs keep their `sheets/` (rework-* 1.29 GB, tighten 0.23 GB, neutralize 0.25 GB of 13 GB).
+
+## Change
+- A done rework/tighten/neutralize run qualifies once every question it touched has a human review or a later run (same rule as checked batches); `--dry-run` shows them.
+- RUNBOOK "Media-first batches" gc line: say it covers rework runs too.
+
+Done when: `qgen gc --dry-run` lists such runs; test; nothing deleted by the task itself.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:34Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2361, 229, 'Stale docs and comments of the pipeline', 'work', 'open', NULL, NULL, '## What
+Stale docs and comments:
+- `authoring/RUNBOOK.md` ~93 "for `base` about 1000 drafts and 700 merged" and `review_steps.py` ~19 "57 × 18 slots": base has 198 subcategories (99 × 18 per batch). Give the rule, or today''s numbers.
+- `qgen.py` ~1817-1822: a failed final `qgen validate` exits 1 and says "Stop and report"; RUNBOOK''s exit-code table says exit 1 = rerun, stop after three. Add a RUNBOOK row for that message (or its own exit code with a row).
+- `README.md` ~138: `--player <name>` is `strong|typical|both`, `--simulate` only; `README.md` ~149: "reports in en/de go to that translation" → reports go to the source when it is in that language (`decision 235: Source locale per question and translations from either source (English-first base)`, `reviews.landing`; QC.md ~74 is right).
+- `flag_loop.py` ~16 points to a revise.md "Player flags" section that doesn''t exist (it is a bullet under Rules).
+- `translate.py` ~34-36 `run_bundle` docstring ("base for other runs") is wrong.
+- `media.py` docstring `--batch pilot` example: stale.
+- `providers/commons.py` ~12, `providers/nasa.py` ~13 `IMAGE_WIDTH = 2560` with comment "D-48 wants 3840": Commons rounds up, every pick is `3840px-`; set 3840 if the produced URLs stay the same (check on a sample), else fix the comment; `plans/06-images.md` IMG-16.
+
+Done when: docs match the code; checks pass.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:35Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2362, 229, 'Single-step qgen subcommands: remove or keep', 'work', 'open', NULL, NULL, 'Waits for `decision 760: Pipeline cleanup: which unused features may go?`, candidate #1.
+
+## If deleted
+- Remove the `add(...)` registrations of `draft`, `rate`, `factcheck`, `revise`, `apply`, `merge`, `media`, `sheets`, `review`, `fix`, `research`, `record`, `sync`, `translate` (`authoring/tools/qgen.py` ~2016-2023, ~2058-2078, ~2138-2152); the step functions stay (the batch calls them with `ns(...)`).
+- `draft`''s first-call path (~971-980) and its options `--subcategories`, `--bundle`, `--seed`, `--slots`; the hint at ~984; the usage docstring (~10-22, ~54-57, still Spanish subcategory names).
+- Keep `concepts` and `batch-report` (`report.py` ~363 tells users to run it).
+- Docs: `README.md` "for debugging" row, RUNBOOK "Never" list (`qgen concepts`, `qgen review`, … examples), `plans/19-repo-layout.md`, `plans/07-question-generation.md`.
+
+## If kept
+- Only fix the stale usage docstring (Spanish subcategory names → slug keys).
+
+Done when: per the answer; checks pass, output unchanged.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:35Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2363, 229, 'qgen neutralize: remove or fix its cost line', 'work', 'open', NULL, NULL, 'Waits for `decision 760: Pipeline cleanup: which unused features may go?`, candidate #2.
+
+## If deleted
+- `qgen neutralize` (`authoring/tools/qgen.py` ~33, ~2182-2186), `rework.py` neutralize parts (`SCANS` entry ~86-100, `cmd_neutralize`, `scan_extras`, `print_neutralize_scan`, `write_neutralize_report` ~178-285), `prompts/neutralize.md`; rows in AGENTS.md ("Making questions"), RUNBOOK ("Under pm run" step 4, "Never"), QC.md, README.
+- Keep the readers of old `neutralize-*` audit dirs (`audit.py` ~105-116, `validate.py` ~404-431, `report.py` ~384, ~641).
+
+## If kept
+- Fix `rework.py` ~266: `costs(WORK / run / "costs.log")` passes a file where `qgen.costs` wants a directory, so the report counts only the audit''s calls (`authoring/reports/neutralize-1.md` says 60 calls; the run has 455): `costs(WORK / run)`.
+
+Done when: per the answer; checks pass, output unchanged.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:35Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2364, 229, 'qgen tighten: remove or keep', 'work', 'open', NULL, NULL, 'Waits for `decision 760: Pipeline cleanup: which unused features may go?`, candidate #3.
+
+## If deleted
+- `qgen tighten` (`authoring/tools/qgen.py` ~32, ~2179-2181), `rework.py` ~132-163 and its `SCANS` entry, `prompts/tighten.md`; the scan wording in `prompts/review.md` (~12, ~14 `only_shortened`) only if no other scan uses it (rework does use `kept`); rows in AGENTS.md, RUNBOOK, QC.md, README.
+- `work/tighten-1`, `work/tighten-2` stay (cost history; `report.py` ~641 run-kind row stays).
+
+## If kept
+- Nothing (note: tighten-2 is unfinished since 2026-10-11; `qgen tighten` would resume it).
+
+Done when: per the answer; checks pass, output unchanged.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:36Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2365, 229, 'qgen audit --backlog: last slice, then remove', 'work', 'open', NULL, NULL, 'Waits for `decision 760: Pipeline cleanup: which unused features may go?`, candidate #4.
+
+## If "run the last slice, then delete"
+- First run `qgen audit --backlog` once (the answer is the developer''s ask, RUNBOOK "Never"; foreground, longest timeout; act on the exit code as RUNBOOK step 3; stage what it prints) until `--dry-run` lists nothing.
+- Then remove `--backlog`, `--slice`, `--dry-run`, `BACKAUDIT_SLICE` and the backlog code (`authoring/tools/audit.py` ~236-280, `qgen.py` ~24, ~2147-2150); keep the readers of `backaudit-*` audit dirs. Docs: README ~119, RUNBOOK ~59, ~71.
+- The claude line of the run goes into the done note (`decision 208: What must a script that calls claude report to its caller?`).
+
+## If kept
+- Drop this task.
+
+Done when: per the answer; checks pass; output unchanged except the audit counts the run adds.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:36Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2366, 229, 'qgen video-window: remove or keep', 'work', 'open', NULL, NULL, 'Waits for `decision 760: Pipeline cleanup: which unused features may go?`, candidate #5.
+
+## If deleted
+- `authoring/tools/video_window.py`, `qgen video-window` (`qgen.py` ~31, ~2137, ~2231), the window judge in `media_first.py` (~445-510: `JUDGE_MODEL`, `JUDGE_DIR`, `judge_schema`, `window_input`, `judge_window`, `commons_text` if unused after), `prompts/media-window.md`, `test_video_window.py`, `test_judge_window.py`, the case in `test_media_first_steps.py` ~200, the `package.json` test line; rows in AGENTS.md ("Making questions"), RUNBOOK ~59, ~70, QC.md ~78.
+- `qgen validate`''s over-long video rule (`validate.py` ~206-211) stays.
+
+## If kept
+- Drop this task.
+
+Done when: per the answer; checks pass, output unchanged.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:36Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2367, 229, 'NASA and Freesound providers: remove or keep', 'work', 'open', NULL, NULL, 'Waits for `decision 760: Pipeline cleanup: which unused features may go?`, candidate #6 (NASA) and #7 (Freesound).
+
+## Per deleted provider
+- `authoring/tools/providers/nasa.py` / `freesound.py`, their entries in `providers/__init__.py` (`PROVIDERS`, `ORDER`, `SPACE_CATEGORIES`), `openverse.source_name` if it names NASA, `IMAGE_WIDTH` in nasa.py; `plans/23-media-providers.md` rows (MP-6, provider table), `plans/06-images.md` IMG-16; `.env.local` keys are the developer''s (say so in the done note).
+- `licence_verdict` on a record of a removed provider: none exist (0 picks); keep an "unknown provider" error.
+- house-style.md''s media sources line is the prompt decision''s (`decision 761: Prompt wording cleanup from the pipeline review: apply?`), not this task''s.
+
+## If both kept
+- Drop this task.
+
+Done when: per the answer; checks pass, output unchanged.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:37Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2368, 229, 'trivia-media fetch: remove or keep', 'work', 'open', NULL, NULL, 'Waits for `decision 760: Pipeline cleanup: which unused features may go?`, candidate #8.
+
+## If deleted
+- `trivia-media fetch` (`authoring/tools/media.py` ~4, ~327-355, ~454-457), `README.md` ~129 row, mentions in `plans/06-images.md`, `plans/07-question-generation.md`.
+
+## If kept
+- Fix its docstring example (`--batch pilot`, a run that no longer exists).
+
+Done when: per the answer; checks pass, output unchanged.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:37Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2369, 229, 'qgen report options exit-check, calibration, overlaps, subcategories', 'work', 'open', NULL, NULL, 'Waits for `decision 760: Pipeline cleanup: which unused features may go?`, candidate #9–#12.
+
+## Per deleted option of `qgen report`
+- `--exit-check`: `report.py` ~446-489, ~1004-1005, `qgen.py` ~36, ~2121; README row; docstrings of `health.py` ~2 and `authoring/server/spot_checks.py` ~2; `plans/16-content-target.md` ~39.
+- `--calibration`: `report_calibration`, `last_batches` (`report.py` ~172-186, ~1008-1009), `qgen.py` ~35, ~2113, README ~138; `calibration()` stays (`health.py` ~144).
+- `--overlaps`: `report.py` ~189-203 and its flag.
+- `--subcategories`: `report.py` ~30-134, ~1052-1054 (recommended keep).
+
+## If all kept
+- `--overlaps` would pair each chinese-base copy with its source: note it in `task 2330: Copy model: copied_from, copy helper, validate rules` (exempt copy↔source) via `pm task set` if not there yet; else drop this task.
+
+Done when: per the answer; checks pass, output unchanged except removed sections.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:37Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2370, 229, 'Review page bundle move, its start page row, old redirect', 'work', 'open', NULL, NULL, 'Waits for `decision 760: Pipeline cleanup: which unused features may go?`, candidate #13 and #14.
+
+## If deleted
+- Review page bundle move: the `n` key (`authoring/ui/src/review/Review.svelte` ~374-386, ~440), `setBundle` in `authoring/ui/src/lib/api.ts`, `POST /api/questions/<id>/bundle` (`authoring/server/main.py` ~332-335), README key row (~70-80), tests.
+- Start page row "N of M questions in the bundle X without a human review" (`authoring/server/overview.py` ~113-119 `queues.bundles`, `authoring/ui/src/home/Home.svelte` ~85-89).
+- Old redirect `/?batch=` → `/review` (`authoring/ui/src/App.svelte` ~12-15; `plans/decisions.md` ~206 mention).
+
+## If kept
+- Drop this task.
+
+Done when: per the answer; review pages load (restart `local-app-trivia-authoring.service`, user unit; never launch by hand); checks pass.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:37Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2371, 229, 'Old work/ files: convert, then drop their compat', 'work', 'open', NULL, NULL, 'Waits for `decision 760: Pipeline cleanup: which unused features may go?`, candidate #15, #16 and #17.
+
+## Per "convert, then drop" in the answer
+- #15: convert each `costs.log` under the main checkout''s `work/` (16 dirs: batch-4..8, pilot, concepts, bundles, first-120, rework-1, tighten-1/2, neutralize-1, backaudit-1, …) into `calls.jsonl` rows the reader accepts (`qgen.calls`, ~488-493), then read only `calls.jsonl`. `qgen report --cost` must be identical to the baseline.
+- #16: patch old `run.json` files without `bundle` / `draft_locale` (`bundle: "base"`, `draft_locale: "es"`; batch-4..8, rework and backaudit dirs), then drop the defaults (`qgen.py` ~981, ~1729, ~1861; `translate.py` ~31, ~338; report, health and QC readers). Report, `--qc` and `--batches` output identical.
+- #17: rewrite the 1089 media candidate files from 2026-10-06..11 without `provider`/`restrictions` (`work/media/`), then drop `provider_of`''s commons default and the old-candidate branch (`providers/__init__.py` ~47-48, ~132-136, `commons.lookup`); fold `work/media-pilot/pilot-1/triage.jsonl` into `work/media-first/files.jsonl` as run `pilot-1` (format of the ledger), then drop `media_first.pilot_rows` (~99-106, callers ~136, ~161, ~177) and its test mocks. Only when no media-first run is unfinished (batch-93 is, 2026-11-19): else stop with `pm task requires` on the task that finishes it, or note why it is safe.
+- One-off scripts are throw-away (not committed); `work/` changes are local (gitignored) and named in the done note.
+
+## If all kept
+- Drop this task.
+
+Done when: per the answer; output identical to the baseline; checks pass.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:38Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2372, 229, 'Explicit locale on every source question', 'work', 'open', NULL, NULL, 'Waits for `decision 760: Pipeline cleanup: which unused features may go?`, candidate #18.
+
+## If "convert"
+- Write `locale: "es"` on every source in `authoring/data/questions.json` without `locale` (6310 on 2026-11-19); `qgen validate` requires `locale` on sources; drop the es default of `translations.source_locale` (~22-24), `qgen.py` ~1432 (`merge` omits `locale` for es), `cmd_import`''s default if still there; check `app/` loaders don''t read the source pool (they read exports).
+- `qgen export` output must be byte-identical; `qgen report` identical.
+- A D-entry note on decision 235''s shape in `plans/decisions.md` (`decision 235: Source locale per question and translations from either source (English-first base)`).
+
+## If kept
+- Drop this task.
+
+Done when: per the answer; exports identical; checks pass.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:38Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2373, 229, 'Apply the prompt wording cleanup', 'work', 'open', NULL, NULL, 'Waits for `decision 761: Prompt wording cleanup from the pipeline review: apply?`.
+
+## Change
+- Apply the approved text (as drafted, or with the developer''s edits) to `authoring/tools/prompts/house-style.md` (media sources line), `draft.md` (duplicate `background_query` bullet), `translate.md` (same-language rule), `concepts-list.md` and `concepts-facets.md` (English examples). If the NASA provider is deleted (`decision 760: Pipeline cleanup: which unused features may go?`, #6), the media sources line takes the decision''s variant without NASA.
+- Check: `prompt(...)` renders for draft, translate, concepts without leftovers; `pm decision consequences 761 "…"`.
+- "Keep the current wording": drop this task.
+
+Done when: files match the answer; checks pass.
+
+Rules: "Rules for every cleanup task" of `plan 229: Pipeline review and cleanup for milestone 12` (checks, unchanged output against `authoring/reports/pipeline-review-baseline/` except what this task names, run state stays resumable, `rg` removed names over code and docs, `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`). Finding in `authoring/reports/pipeline-review.md`.', '2026-11-19T18:56:38Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2374, 139, 'Unicode-aware text normaliser for duplicate, overlap and option checks', 'work', 'open', NULL, NULL, 'Found by `task 2339: Pipeline review: findings, cleanup tasks, open deletions` (`authoring/reports/pipeline-review.md`, "For later parts"). Every text normaliser of the pipeline deletes Chinese characters, so checks on zh text either flag everything or find nothing.
+
+## What
+- `authoring/tools/concepts.py` ~26-37: `slug` and `key` do NFKD → `encode("ascii", "ignore")` → `[^a-z0-9 ]`; `qgen.norm` is `concepts.key`. `key("长城") == ""`.
+- Effects (checked by running them): `qgen.duplicates()` (~1212-1227) calls every zh answer a duplicate of every other (`SequenceMatcher("", "")` = 1.0); `overlap_candidates` / `_overlap_keys` / `stem` (~1227-1353) and rate''s candidates (~1116) return nothing for zh; `review_steps.related_questions` (~144-152, used by review and `audit.py` ~170) returns 30 arbitrary zh questions; `option_key` (~1047-1050, used by `check_question_shape`, also in `validate.py` ~296 on translations) maps "第1名"/"1号" → "1" and "约100万"/"100多万" → "100": false "duplicate options"; pure-CJK concept names all key to "" (`validate.py` ~95-98 "same concept twice"; `finalize_concepts` drops them); `media_first` uses `stem` too.
+- Stop words are es/de only.
+
+## Change
+- One Unicode-aware normaliser (NFKC + casefold, keep letters and digits by `str.isalnum`, Latin accents folded as today, Latin stop words only for Latin text); for Han text compare by character bigrams instead of space-split words (`stem`, overlap keys). `slug` stays ASCII for file names (it names Latin subcategory keys only; a zh concept list file name is not needed while sources are English).
+- Tests with zh samples (duplicates, distinct options, overlap of two near-identical zh questions) and the current es/en/de cases.
+- es, es-ES, en, de: `qgen report --overlaps` (if still there) and merge drops on a past batch''s drafts compared before/after; any change named in the done note.
+
+Done when: zh tests pass and Latin results are unchanged (or each change named); `npm run check`, `npm test`, `npm run build`, `qgen validate`, Python tests pass.', '2026-11-19T18:57:29Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2375, 139, 'Review and print pages: lang attributes and a CJK font', 'work', 'open', NULL, NULL, 'Found by `task 2339: Pipeline review: findings, cleanup tasks, open deletions` (`authoring/reports/pipeline-review.md`, "For later parts"). The review tool would show Chinese only through font fallback, tagged as Spanish.
+
+## What
+- `authoring/ui/index.html` ~2 `<html lang="es">`; no `lang=` on question text anywhere in `authoring/ui/src/review/`; `authoring/ui/src/app.css` ~23 `font-family: system-ui, …`. With `lang=es` Noto CJK may pick Japanese glyph forms; the dev shell (`flake.nix`) pins no CJK font, so a fresh machine shows boxes.
+- Joker cards (`authoring/ui/src/print/JokerCards.svelte` ~21-26): paper size only for es, en, es-ES, de (zh falls back to letter; China uses A4); ~76, 91, 142, 150, 165 hard-code "Nunito"/"Baloo 2" instead of `var(--font-text)`/`var(--font-display)` from `theme.css` (~67-68) it already imports.
+
+## Change
+- `lang="en"` on the page; `lang={locale}` on question, options, hints and source panels; a CJK font (e.g. Noto Sans CJK SC/TC per the zh locale(s)) in the dev shell; joker cards: theme variables, A4 for every locale but en/es (check which ones use letter today and keep them).
+- Check with a scratch zh translation (not committed): `/review?locale=<zh>` and the print page render Chinese with the right glyphs (screenshot in the done note).
+
+Done when: zh renders correctly on review and print pages; `npm run check`, `npm test`, `npm run build` pass.', '2026-11-19T18:57:29Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2376, 139, 'qgen flag: Chinese report labels and no es default', 'work', 'open', NULL, NULL, 'Found by `task 2339: Pipeline review: findings, cleanup tasks, open deletions` (`authoring/reports/pipeline-review.md`, "For later parts"). A player report pasted from the Chinese game would lose its lines in `qgen flag`.
+
+## What
+- `authoring/tools/reviews.py` ~146-149 `HEADER`/`LABELS`: Pregunta/Question/Frage, Respuesta/Answer/Antwort, Nota/Note/Notiz, copied from `app/client/src/game/report.ts` and the locales'' `flag.question`, `flag.answer`, `flag.note`. A zh report parses the header only (`cur = None` on the first unlabelled line).
+- Defaults to `"es"` when a report has no locale: `reviews.py` ~139, `authoring/server/main.py` ~381-383 (or the shared helper after `task 2354: Duplicated helpers in the review server: import, don''t copy`).
+
+## Change
+- zh labels from the app''s zh catalog (needs the zh UI strings of `plan 142: UI in Chinese`; if they don''t exist yet, `pm task requires` on the task that adds them and stop); source comment naming the TS files (`decision 199: AGENTS.md rule: import, don''t copy; a copy across a boundary names its source? (code review part 11)`).
+- Test: a pasted zh report becomes a needs_work review on the right question and translation.
+
+Done when: test passes; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-19T18:57:30Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2377, 140, 'Translation number check for Chinese numerals and fullwidth digits', 'work', 'open', NULL, NULL, 'Found by `task 2339: Pipeline review: findings, cleanup tasks, open deletions` (`authoring/reports/pipeline-review.md`, "For later parts").
+
+## What
+- `authoring/tools/translate.py` ~39-52 `numbers()` decides whether a translation changed a number (changed → fact-check call). "4.2万" vs "42,000", "三" vs "3", fullwidth digits "１２" and the fullwidth comma "，" all look like changed numbers, so most zh translations with numbers get a fact-check call (safe, but cost).
+
+## Change
+- Normalise fullwidth digits and separators, 万/亿 multipliers (and simple Chinese numerals if cheap) before comparing; tests with zh samples; es/en/de cases unchanged.
+- Measure on the pilot run of `task 2303: Pilot translation run zh-Hans of chinese-base: run, native spot check, budget decision` if this lands later: the done note gives the share of zh translations sent to fact-check for numbers.
+
+Done when: tests pass; `npm run check`, `npm test`, `npm run build`, `qgen validate`, Python tests pass.', '2026-11-19T18:57:30Z', NULL, 2339, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -59508,6 +59896,41 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (757, 'Sensitivity rule for Chinese content: how do drafting, the fit pass and zh translation treat contested political topics?', 'pending', '["Avoid contested political topics entirely: no questions on the status of Taiwan, Tibet, Xinjiang or Hong Kong, on 1989, on judgements of the Cultural Revolution, Great Leap Forward or present leaders, on disputed borders or islands; no maps that draw a disputed border as a fact, no ROC or other contested flags; Taiwan, Hong Kong and Macau appear only as places (cities, food, nature), never as a country or a province; pre-1911 history, culture, science and nature are free", "Neutral facts only: contested topics allowed when the question states an undisputed fact (a date, a name) without judgement or status wording; maps and flags checked case by case", "No special rule: the house style applies as for every other locale"]', 'From `plans/26-china.md` "Content sensitivity" and "Taiwan vs. mainland framing": scan of base (q-4242 Mao, q-2944 Bamboo Curtain, q-2638 Dalai Lama''s palace, q-0969 Hong Kong colony, locator maps with Asian borders q-2377, q-0417). The chosen option''s text is the rule part 5''s fit prompt, part 7''s voice, part 8''s locale prompt, plan 142''s catalog and plan 144''s store text quote; base for es/en/de unchanged.', 'Some subjects are politically charged for Chinese speakers: Taiwan''s status, Tibet, Xinjiang, Hong Kong''s protests, 1989, judgements on Mao''s era, and disputed borders on maps. The mainland and Taiwan see several of them in opposite ways, so even a dry fact can read as taking sides, and one question can cost the game reviews or offend a family. This decides one rule for writing the new China-centred questions, for picking which existing questions move over, and for translating into Chinese.', NULL, NULL, '2026-11-19T18:37:14Z', NULL, 2337, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (758, 'Store targets for Chinese players: global Steam only, Steam China later, or an NPPA licence?', 'pending', '["Global Steam only; no Steam China, no NPPA licence", "Global Steam now; look at Steam China later (needs a licence through a Chinese publisher)", "Pursue an NPPA licence through a Chinese publisher (Steam China and other mainland stores)"]', 'From `plans/26-china.md` "Mainland sales: NPPA licence and Steam China" and "Unexpected implications" (anti-addiction, VPN). 2026: 3–12 imported games approved a month; Steam China ≈ 536 products. Plan 144 (store page) follows the answer.', 'Selling a game in mainland China legally needs a government publication licence, applied for through a Chinese publisher after a content review, which takes months to years. The global Steam store is reachable from the mainland in practice but unlicensed, and could be blocked at any time; Steam China is a separate store that only carries licensed games. This decides where the Chinese version is sold, and with it whether the game needs a Chinese partner, real-name checks and playtime limits for minors.', NULL, NULL, '2026-11-19T18:37:20Z', NULL, 2337, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (759, 'Question reports and telemetry for Chinese players: keep as is, own domain, or off for zh?', 'pending', '["Keep as is for zh: sending may fail in the mainland, the report falls back to «Copiar», telemetry is lost; a zh PRIVACY.md section", "Move the server to a custom domain on Cloudflare (needs a domain of our own) to improve reachability; otherwise as option 1", "Reports and telemetry off when the language is zh (no send, no consent question; «Copiar» only)"]', 'From `plans/26-china.md` "Reachability from the mainland" (reportUrl on workers.dev; report:send 2 s ticket + 5 s connect + 10 s total then «Copiar»; telemetry 4 s at quit, one background retry, never blocks) and "Personal data: PIPL vs. our GDPR line" (only the free-text note and the transient SteamID/IP are plausibly personal; both features consent-based). Any answer: a zh section in PRIVACY.md (plan 144).', 'The game can send a report about a wrong question, and, if the player agrees, anonymous play statistics, to a small server of ours. That server''s address is likely blocked in mainland China, and China''s privacy law asks foreign services that collect data from Chinese users for consent and a local representative. The game already works fully offline and falls back to copying the report text when sending fails. This decides whether that is enough, whether the server moves to an address more likely to get through, or whether both features are switched off for Chinese.', NULL, NULL, '2026-11-19T18:37:25Z', NULL, 2337, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (760, 'Pipeline cleanup: which unused features may go?', 'pending', '["As recommended in the table: delete or convert 1–11 and 13–18, keep 12", "Keep everything"]', 'Review of the question pipeline before milestone 12 (`task 2339: Pipeline review: findings, cleanup tasks, open deletions`, report `authoring/reports/pipeline-review.md`). These features are unused or nearly so, but a decision or a doc row still names them, so they are yours to keep or drop. Usage from `work/*/run.json` (main checkout), git log, RUNBOOK, AGENTS.md. Answer with option 1, option 2, or per number ("as recommended but keep 3 and 5").
+
+| # | Candidate | Last use | Goes with it | Rec. |
+|---|---|---|---|---|
+| 1 | Single-step subcommands `qgen draft`, `rate`, `factcheck`, `revise`, `apply`, `merge`, `media`, `sheets`, `review`, `fix`, `research`, `record`, `sync`, `translate` (the batch runs them as steps) | no standalone run since 2026-10-01; RUNBOOK forbids them for workers, README keeps them "for debugging" | `draft`''s first-call path and its `--subcategories/--bundle/--seed/--slots`, qgen.py''s usage docstring (still Spanish subcategory names); `concepts` and `batch-report` stay (used 10-15, named in reports) | delete |
+| 2 | `qgen neutralize` (plan 64), `prompts/neutralize.md` | 1 run, neutralize-1, 2026-10-14; `decision 271: QC neutralize-1: which changes?`: no second pass; base drafts in English since plan 148 | its SCANS entry, report, AGENTS/RUNBOOK/QC rows; readers of the old `neutralize-*` audit dirs stay | delete |
+| 3 | `qgen tighten` (QG-24), `prompts/tighten.md` | 2 runs 2026-10-11, tighten-2 never finished | SCANS entry, rows in AGENTS/RUNBOOK/QC/README; tighten-2''s files stay as cost history | delete |
+| 4 | `qgen audit --backlog` (+ `--slice`, `--dry-run`) | 6 runs, last 2026-10-23; 11 questions left | the backaudit readers stay | run the last slice, then delete |
+| 5 | `qgen video-window`, `prompts/media-window.md`, the window judge in media_first.py, two test files | 1 run 2026-11-17; no video qualifies now and `qgen validate` rejects any new over-long video | AGENTS/RUNBOOK/QC rows | delete |
+| 6 | NASA image provider | 0 picks, 0 candidates ever (Commons always had 3+ for space) | IMG-16 note, `ORDER` entry, house-style''s NASA clause | delete |
+| 7 | Freesound provider module | 0 picks; out of the audio order since `decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`; plans/23 kept the module "unasked" | plans/23 rows | delete |
+| 8 | `trivia-media fetch` | no caller (batches and the review page fetch through other code) | README row, docstring | delete |
+| 9 | `qgen report --exit-check` (milestone 1''s done-when) | milestone 1 closed 2026-10-11; no later reference | README row, two docstrings, plans/16 line | delete |
+| 10 | `qgen report --calibration` (the flag; the function stays for batch health) | no doc, plan or decision uses it | README row | delete |
+| 11 | `qgen report --overlaps` | no RUNBOOK/QC/plan reference; would list every copy with its source once chinese-base has copies | — | delete |
+| 12 | `qgen report --subcategories` (supply per subcategory × difficulty) | references: JK-10 (done), backlog B-19 | — | keep (useful for chinese-base supply) |
+| 13 | Review page: `n` key moves a question to another bundle; start page row "N questions in bundle X without a human review" | moves last used for the colombia proposals (decision 7, 2026-10-12); a move breaks `qgen validate` now (subcategories are per bundle); the start page asks to hand-check 13,000+ regional questions | endpoint, `setBundle`, README key row | delete |
+| 14 | Old link redirect `/?batch=` → `/review` in the authoring UI | no such link left in repo or reports | — | delete |
+| 15 | Reading `costs.log` (old runs, 16 dirs) besides `calls.jsonl` | newest costs.log 2026-10-15 | one-off: convert them to `calls.jsonl`, `report --cost` identical | convert, then drop |
+| 16 | Defaults for old `run.json` without `bundle` (→ base) / `draft_locale` (→ es) | batch-4..8, 82 rework, 6 backaudit dirs | one-off patch of those files | convert, then drop |
+| 17 | Compat for old media work files: 1089 candidate files without `provider`/`restrictions` (2026-10-06..11); media-first inventory re-reading the pilot''s triage file | still read on every run | one-off rewrite / fold the pilot rows into the ledger | convert, then drop |
+| 18 | A source question without `locale` means Spanish (6310 sources) | live | one data change: `locale: "es"` written on them, validate requires it; no es default left before Chinese | convert |
+
+Kept without asking (used or decided): `rework --model fable` (`decision 216: Fable for qgen rework: keep, drop or try for batch review? (plan 58)`), media-first `--files`/`--until` (developer''s debug flags, used batch-78), `qgen remap`, `qgen taxonomy`, `qgen concepts`, `qgen flag --pull`, `qgen telemetry`, `report --played` (post-launch), `qgen gc`, `qgen demo`, `qgen patch-notes`.', 'Before adding Chinese, the tools that write and review the game''s questions were reviewed for parts nobody uses any more. Some of them were asked for earlier or are still mentioned in the instructions, so the developer chooses for each one whether it stays or goes. Whatever goes is removed with its documentation; whatever stays is kept as it is.', NULL, NULL, '2026-11-19T18:54:13Z', NULL, 2339, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (761, 'Prompt wording cleanup from the pipeline review: apply?', 'pending', '["Apply all four as drafted", "Apply with my edits", "Keep the current wording"]', 'Prompt wording is yours (D-36). The pipeline review (`task 2339: Pipeline review: findings, cleanup tasks, open deletions`) found four small fixes in `authoring/tools/prompts/`; nothing else in the prompts changes. Prompt rules that name the bundle `base` and would need a different reading for chinese-base are not here: they go into chinese-base''s rule/voice decision (`task 2335: Create the chinese-base bundle: entry, names, rule and voice`).
+
+1. `house-style.md` line 126 names Freesound, which the pipeline no longer searches (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`).
+   - now: "**Media sources** (searched in this order): Wikimedia Commons for everything; NASA for space photos and videos; Openverse for more photos (Flickr, museums); Freesound for sounds. Audio only for things these have: …"
+   - draft: "**Media sources** (searched in this order): Wikimedia Commons for everything, sounds included; NASA for space photos and videos; Openverse for more photos (Flickr, museums). Audio only for things these have: …"
+   - if the NASA provider goes (`decision 760: Pipeline cleanup: which unused features may go?`, #6): "…: Wikimedia Commons for everything, sounds included; Openverse for more photos (Flickr, museums). …"
+2. `draft.md` line 27: the `background_query` bullet repeats house-style.md line 128 word for word; both are in the same draft call. Draft: delete it from `draft.md`.
+3. `translate.md` line 5, same-language rule names only Spanish: "When source and target are two varieties of one language (Spanish (Latin America) → Spanish (Spain), or back), …". Draft: "When source and target are two varieties of one language (e.g. Spanish (Latin America) → Spanish (Spain), or back), …" (the rest unchanged; also covers two Chinese varieties later).
+4. Spanish examples left in English prompts (concept lists are drafted in English since plan 148):
+   - `concepts-list.md` line 8: "Concrete and specific: "Saturno", not "Planetas grandes"." → "Concrete and specific: "Saturn", not "Large planets"."
+   - `concepts-facets.md` line 19: "(e.g. `sound` for Matemáticas)" → "(e.g. `sound` for Mathematics)"', 'The instructions that guide the AI when it writes and translates questions still contain a few leftovers: a sound library that is no longer used, a paragraph that appears twice, and Spanish examples in English text. Four small wording fixes are proposed; the developer approves them, edits them, or keeps the current text.', NULL, NULL, '2026-11-19T18:54:24Z', NULL, 2339, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, NULL, NULL, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, NULL, NULL, 73367);
@@ -62146,6 +62569,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2537, 2337, '2026-11-19T18:25:06Z', '2026-11-19T18:37:51Z', 'done', NULL, 0, '9d2b1285c9617418a5614d26a93ec4a4871cf289', 'questions', 'claude-opus-5-5', 'f5a93106-5f7c-4dac-b875-34be3a17cc39', NULL, 64, 96, 31899, 4448235, 128912, 2.7377483149999997, 143953, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2538, 2305, '2026-11-19T18:25:12Z', '2026-11-19T18:26:10Z', 'done', NULL, 0, '7414cc4f9ffe95cdf6bad9f6843e34793d0238df', NULL, 'claude-opus-5-5', '1f2f1224-4c5b-495e-a83c-1f49182cb93b', NULL, 9, 18, 3567, 385062, 36908, 0.44368840000000004, 51775, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2539, 2307, '2026-11-19T18:26:10Z', '2026-11-19T18:28:05Z', 'done', NULL, 0, 'e65d632cbee8081586d03eebc3a1eafecfdabf96', NULL, 'claude-opus-5-5', 'b45ca329-74a8-4e9c-b814-0e1535947cf4', NULL, 13, 26, 9333, 699428, 52040, 0.7429695999999999, 66389, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2540, 2339, '2026-11-19T18:37:51Z', '2026-11-19T18:59:20Z', 'done', NULL, 0, 'eee362cb26ec3929ddbb3b7d653b2f96ebcbff7a', 'questions', 'claude-opus-5-5', '031dda16-4f1b-4637-8e47-9b3af8e7665e', NULL, 41, 72, 53215, 3911155, 164835, 17.466376599999997, 179188, 60, 473050);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -62913,6 +63337,18 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (2338, 756);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2338, 757);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2338, 758);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2338, 759);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2362, 760);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2363, 760);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2364, 760);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2365, 760);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2366, 760);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2367, 760);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2368, 760);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2369, 760);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2370, 760);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2371, 760);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2372, 760);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2373, 761);
 
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 146);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 1865);
@@ -62929,6 +63365,8 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1163, 234
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1164, 1163);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1165, 1163);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1165, 1164);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1165, 2374);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1165, 2375);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1166, 1163);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1166, 2301);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1166, 2338);
@@ -63545,6 +63983,33 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2336, 233
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2336, 2335);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2338, 2337);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2339);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2347);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2348);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2349);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2350);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2351);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2352);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2353);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2354);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2355);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2356);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2357);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2358);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2359);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2360);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2361);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2362);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2363);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2364);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2365);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2366);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2367);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2368);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2369);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2370);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2371);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2372);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2373);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2341, 2297);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2341, 2335);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2342, 2335);
@@ -63558,6 +64023,12 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2344, 234
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2345, 2343);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2345, 2344);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2346, 2345);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2374, 2340);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2375, 2340);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2376, 1163);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2376, 2340);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2377, 1163);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2377, 2340);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
