@@ -245,18 +245,22 @@ def apply_pick(target, fields):
 
 
 def mark_broken(problems):
-    """{(qid, slot): file_problem} into the source pool: the slot's licence verdict is then `replace`."""
+    """{file_url: file_problem} into every slot of the source pool using that file, whatever its status:
+    the slot's licence verdict is then `replace`."""
     if not problems:
         return
     with atomic.locked(POOL):
         data = json.loads(POOL.read_text(encoding="utf-8"))
+        hit = []
         for q in data["questions"]:
             for slot in SLOTS:
-                if (q["id"], slot) in problems:
-                    q[slot]["file_problem"] = problems[q["id"], slot]
+                url = (q.get(slot) or {}).get("file_url")
+                if url in problems:
+                    q[slot]["file_problem"] = problems[url]
+                    hit.append((q["id"], slot, url))
         atomic.write_json(POOL, data)
-    for (qid, slot), problem in sorted(problems.items()):
-        print(f"broken source file: {qid} {slot}: {problem}", file=sys.stderr)
+    for qid, slot, url in hit:
+        print(f"broken source file: {qid} {slot}: {problems[url]}", file=sys.stderr)
 
 
 def download(candidate, slot="media"):
@@ -302,17 +306,21 @@ def cmd_sync(args):
     qs = json.loads(POOL.read_text(encoding="utf-8"))["questions"]
     if args.status:
         qs = [q for q in qs if q["status"] == args.status]
-    todo = [(q["id"], slot, q[slot]["file_url"]) for q in qs for slot in SLOTS
-            if (q.get(slot) or {}).get("file_url") and not cache_path(q[slot]["file_url"]).is_file()]
+    todo = {}  # file_url -> first (qid, slot) using it: one download and check per file
+    for q in qs:
+        for slot in SLOTS:
+            url = (q.get(slot) or {}).get("file_url")
+            if url and not cache_path(url).is_file():
+                todo.setdefault(url, (q["id"], slot))
     print(f"downloading {len(todo)} missing file(s)", flush=True)
     failed, broken = [], {}
-    for qid, slot, url in todo:
+    for url, (qid, slot) in todo.items():
         label = qid if slot == "media" else f"{qid} background"
         try:
             with downloading("sync", qid, slot, url):
                 problem = file_problem(cached(url))
             if problem:
-                broken[qid, slot] = problem
+                broken[url] = problem
         except Exception:  # noqa: BLE001 — keep going (waiting() logged it); rerun retries the rest
             failed.append(label)
     mark_broken(broken)
