@@ -176,51 +176,9 @@ Round 1 failed (`decision 738: Reveal sounds (right and wrong answer, impact, bl
 
 - Old `fanfarria*` and `trombon-triste` files and rows gone; `golpe` stays for `splash-drop` (splash task); round-1 `acierto-5` gone
 
-### Joker group, round 1
+### Joker group, round 1 (rejected)
 
-Source: Kenney Digital Audio (tones, phasers, power-ups, space trash), Kenney RPG Audio (cloth, book, leather) and Kenney Casino Audio (cards, chips), all CC0, the `clean-digital` theme; no digital pack has a broom, so the sweep is a Kenney cloth swish (decision 735's brief: the joker round finds one). Peaky clips (`triturado`, `cristal-roto`, `escoba-suave`, `susurro-nota`, `carta-gira`) pass through a limiter in `trivia-sfx convert`, else -16 LUFS is out of reach under -1.5 dBTP. `tick` is in the UI group; `swoosh-up` stays with the jokers (inventory). Old `rebobinar`, `vidrio`, `susurro-papel`, `swoosh-sube` stay for the splash cues (splash task). Approval pending (joker decision); alternates staged on `/sounds` ("Effects: jokers", round 1).
-
-| Cue | Installed file | Source file | Alternate |
-|---|---|---|---|
-| `joker-armed` | `comodin-listo` | `twoTone2` | `twoTone1` |
-| `joker-open` | `comodin-despliega` | `phaserUp3` | `phaserUp1` |
-| `joker-activate` | `comodin-activa` | `powerUp11` | `powerUp10` |
-| `broom` (Paso y fuera) | `escoba-suave` | RPG `cloth1` | `clothBelt` |
-| `bing` (Soplo) | `campanilla` | `tone1` | `highUp` |
-| `wand` (Hada madrina) | `varita-magica` | `zapThreeToneUp` | `powerUp9` |
-| `swoosh-up` (Cambiazo flip) | `carta-gira` | Casino `card-fan-1` | `card-slide-1` |
-| `cork-pop` | `corcho-sale` | `pepSound5` | `pepSound1` |
-| `rewind` | `cinta-atras` | `phaserDown3` | `laser9` |
-| `stamp` | `sello-seco` | RPG `bookPlace1` | `chop` |
-| `shredder` | `triturado` | `spaceTrash2` (first 1.4 s) | `spaceTrash3` |
-| `heartbeat` | `latido-grave` | RPG `dropLeather` | `doorClose_1` |
-| `glass-break` | `cristal-roto` | `spaceTrash1` (first 1.2 s) | `spaceTrash3` |
-| `rustle` | `susurro-nota` | RPG `cloth3` | `cloth2` |
-| `token-back` (rate varies) | `ficha-vuelve` | Casino `chip-lay-1` | UI `rollover5` |
-
-### Fireworks group, round 1
-
-Source: Kenney Digital Audio (lasers, space trash, pep sounds, tones), CC0, the `clean-digital` theme; no digital pack has real fireworks, so the sounds are synthetic-sounding stand-ins. `burst` has three variants (random, never twice in a row). `cohete` and `estallido` stay for `splash-rocket` and `splash-explode` (splash task). `trivia-sfx convert` trims silence: the rocket climb is 0.6 s, the sparklers 0.7 s (the old ones 1.5 s and 2.4 s). Approval pending (fireworks decision); alternates staged on `/sounds` ("Effects: fireworks", round 1).
-
-| Cue | Installed file(s) | Source file | Alternate |
-|---|---|---|---|
-| `rocket` (rate varies) | `cohete-sube` | `laser8` | `laser4` |
-| `burst` (rate varies) | `explosion-1`, `explosion-2`, `explosion-3` | `spaceTrash3`, `spaceTrash1`, `spaceTrash5` | `laser2` |
-| `confetti-cannon` (rate varies) | `confeti-pum` | `pepSound3` | `pepSound4` |
-| `sparklers` | `chispas` | `laser5` | `laser3` |
-| `stars` (rate varies) | `brillo-estrellas` | `twoTone1` | `powerUp9` |
-
-- Old `canon-confeti`, `bengalas`, `estrellas` files and rows gone
-
-### Timed group, round 1
-
-Source: Kenney Digital Audio (pep sounds, phase jump, high tones), CC0, the `clean-digital` theme. Heartbeat and rustle are jokers-group cues (their files `latido-grave`, `susurro-nota`) and play in timed rounds too; `padlock-close` and `fanfare` in the UI and reveal groups. `claim` has three variants (rate varies); `countdown` is one tick whose pitch rises with the level (1–3). `silbato` stays for `splash-drain` (splash task). Synth `claim` and `countdown` stay as fallback. Approval pending (timed decision); alternates staged on `/sounds` ("Effects: timed", round 1).
-
-| Cue | Installed file(s) | Source file | Alternate |
-|---|---|---|---|
-| `claim` (rate varies) | `reclamo-1`, `reclamo-2`, `reclamo-3` | `pepSound1`, `pepSound2`, `pepSound4` | `zapTwoTone`, `laser7` |
-| `countdown` (rate by level) | `cuenta-atras` | `phaseJump5` | `phaserUp5`, UI `click5` |
-| `whistle-down` | `fallo-cae` | `highDown` | `phaserDown2`, `zapTwoTone2` |
+Kenney clean-digital picks (Digital, RPG, Casino) sounded like cheap sci-fi; decision 739 rejected them: the old recordings were better, and the aim is a coherent, natural scheme. Reverted: every joker cue plays its old recording again (`comodin`, `comodin-preparado`, `comodin-abre`, `trituradora`, `latido`, `corcho`, `ficha`, `barrido`, `microondas`, `varita`, `sello`, `rasgado`, plus `vidrio`, `swoosh-sube`, `rebobinar`, `susurro-papel`), hand rows in `CREDITS.md`, no `trivia-sfx` records. The joker group keeps its old sounds; no further round unless the developer asks. The theme for the other groups needs rethinking (decisions 737, 739, 740).
 
 ## Manifest
 
