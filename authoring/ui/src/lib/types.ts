@@ -26,7 +26,7 @@ export interface LicenceVerdict {
   reasons: string[];
 }
 
-/** The play fields plus the search spec used by `trivia-media fetch`. */
+/** The play fields plus the search spec used by the media step. */
 interface Media extends PlayMedia, LicenceRecord {
   query: string;
   note: string | null;

@@ -53,7 +53,7 @@ Single keys, no modifiers:
 
 If no media has been picked yet, the first Commons candidate is shown as the **suggestion**, and `a` picks it automatically before approving. A good suggestion therefore needs no extra key.
 
-Every failed API call (decisions, difficulty, media picks and searches, background downloads) appears in an error panel in the top-right corner, saying what failed, for which question and why. Errors stay until dismissed. A Commons rate limit is reported immediately ("try again in about N s") instead of the server waiting silently; only the batch command `media.py fetch` waits rate limits out.
+Every failed API call (decisions, difficulty, media picks and searches, background downloads) appears in an error panel in the top-right corner, saying what failed, for which question and why. Errors stay until dismissed. A Commons rate limit is reported immediately ("try again in about N s") instead of the server waiting silently; only the batch media step waits rate limits out.
 
 Browser extensions that grab single keys (e.g. Vimium uses digits as count prefixes, `f` for link hints) must be switched off for `http://127.0.0.1:8001/*`. Opening the tool with `&debug=keys` shows what the browser reports for each key press.
 

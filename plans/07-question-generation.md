@@ -119,8 +119,8 @@ Existing questions (the first 120, or `needs_work` questions after a review) go 
 1. (Removed in plan 229: `qgen import`, used once; `qgen rework` replaced it.) It copied the pool's `draft` and `needs_work` questions of that batch into `work/<run>/drafts/` (chunks of 10, the pool ID as work ID). Questions without a batch get `--batch` assigned in the pool.
 2. `rate` and `factcheck` as usual, with the current prompts. Imported questions are all fact-checked.
 3. `qgen.py revise --run <run>`: questions with an issue go to Claude with the reasons: the developer's feedback, a failed or uncertain fact-check, a hard criterion below 4 (`correct`, `unambiguous`, `no_giveaway`), or a difficulty estimate 3+ levels away (with the rater's notes as context). Low soft scores don't trigger a revision (D-16; the first try with them rewrote 98 of 119 questions). Claude keeps, revises (same topic and ID, current house style) or proposes to drop each one. Questions without issues aren't sent.
-4. `qgen.py apply --run <run>`: writes the results into the pool. A revised question stays `draft` and gets a `revision` field: `{"action": "revise" | "drop", "reason": "...", "previous": {changed fields: old values}, "revised_on": date}`. Its quality scores and fact-check status are updated. If a media search term changed, the old candidates are discarded so `media.py fetch` finds new ones.
-5. `media.py fetch --batch <batch>`, then the developer reviews in the review tool, which shows the changes (`08-review-tool.md`).
+4. `qgen.py apply --run <run>`: writes the results into the pool. A revised question stays `draft` and gets a `revision` field: `{"action": "revise" | "drop", "reason": "...", "previous": {changed fields: old values}, "revised_on": date}`. Its quality scores and fact-check status are updated. If a media search term changed, the old candidates are discarded so the batch media step finds new ones.
+5. `qgen batch` fetches media candidates, then the developer reviews in the review tool, which shows the changes (`08-review-tool.md`).
 
 New drafts can be repaired the same way before `merge` (QG-16): `revise` then `apply` on a drafting run moves each revised draft to `drafts/revised-*.json` and deletes its rating and fact-check. `rate` and `factcheck` then judge the new version, so `merge`'s hard checks still decide. One round only; what still fails is dropped.
 
@@ -130,7 +130,7 @@ New drafts can be repaired the same way before `merge` (QG-16): `revise` then `a
 - One revise round (QG-16) fixed 44 of the 51 flagged drafts. **116 merged** as `batch: "batch-3"`; 8 dropped (7 giveaways, 1 duplicate inside the batch). Two fact-checks came back uncertain (`fact_checked: false`).
 - **Difficulty:** the drafter writes high targets easier than asked and says so (target 10 → mostly 7–9). The batch has 7 questions at 8 and 5 at 9, none at 10: 10 % at 8–10 instead of the 30 % aimed for. The top levels are still short (OQ-17); a small top-up run aimed only at 9–10 may be needed.
 - Usage: 150 Claude calls, about $15 at list price, so roughly $0.13 per merged question.
-- Media candidates not fetched yet (Commons isn't reachable from the cloud session): run `media.py fetch --batch batch-3`.
+- Media candidates not fetched yet (Commons isn't reachable from the cloud session): rerun `qgen batch` (resumes at media).
 - **Reviewed by Claude, not the developer** (115 approved, 1 `needs_work`); the reviews are marked `reviewer: "llm"` (D-33). The developer can still check them at `/review?batch=batch-3`.
 
 ## Batch-4 results (2026-10-07, D-32)
