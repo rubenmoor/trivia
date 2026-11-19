@@ -336,7 +336,6 @@
   <div class="top">
     <p class="round-line" class:sudden={timed.sudden_death}>{timed.sudden_death ? t("screen.timed.suddenDeath") : t("screen.timed.round", { n: timed.round, of: levels })}</p>
     <p class="label">{t("screen.timed.question", { n: timed.question_in_round, of: timed.round_size })}</p>
-    <span class="label placeholder">{"PLACEHOLDER(1453)"}</span>
   </div>
   <div class="clock" aria-hidden="true"><span class="fill" class:low={bar < 1 / 3} style:--left={bar}></span></div>
 
@@ -446,9 +445,6 @@
   }
   .round-line.sudden {
     color: var(--coral);
-  }
-  .placeholder {
-    color: var(--amber);
   }
   .clock {
     width: 100%;

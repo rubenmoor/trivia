@@ -90,7 +90,6 @@
     {/each}
   </div>
   {#key count}<p class="countdown" class:ready={count === null}>{count ?? t("screen.timed.ready")}</p>{/key}
-  <span class="label placeholder">{"PLACEHOLDER(1453)"}</span>
 </section>
 {:else}
 <section class="screen level">
@@ -214,8 +213,5 @@
   .countdown.ready {
     font-size: calc(3 * var(--u));
     color: var(--sky);
-  }
-  .placeholder {
-    color: var(--amber);
   }
 </style>
