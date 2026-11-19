@@ -360,6 +360,16 @@ def deficit_line(bundle="base", pool=None):
     return f"Deficit to the targets ({bundle}, approved now): " + ", ".join(f"{l}: {n}" for l, n in sorted(d.items()))
 
 
+def run_bundle(run):
+    return (load(WORK / run / "run.json") or {}).get("bundle", "base")
+
+
+def deficit_lines(runs, pool=None):
+    """One deficit line per bundle the runs drafted for, base first."""
+    bundles = sorted({run_bundle(r) for r in runs} | {"base"}, key=lambda b: (b != "base", b))
+    return [deficit_line(b, pool) + "  " for b in bundles]
+
+
 def health_section(run, pool=None):
     """Lines of «## Health» for authoring/reports/<run>.md: this run and the two before it."""
     num = lambda r: int(r[6:]) if re.fullmatch(r"batch-\d+", r) else 0
@@ -370,7 +380,7 @@ def health_section(run, pool=None):
             "across the source-locale switch too, decision 233), ✓/✗ against the thresholds in "
             "`authoring/data/targets.json`; a ✗ is reported, never a stop (decision 414); `qgen health ack` records the developer's look. "
             "Needs-work counts are `record`'s decisions; `problems guessed` = classified from feedback.", "",
-            *table(runs, pool), "", deficit_line(pool=pool), ""]
+            *table(runs, pool), "", deficit_line(run_bundle(run), pool), ""]
 
 
 def write_batches_md(pool=None):
@@ -383,7 +393,7 @@ def write_batches_md(pool=None):
              "the developer's review. ✓/✗ against the thresholds in `authoring/data/targets.json` (D-55). "
              "«source locale»: the drafts' language (`run.json` draft_locale; es up to batch-8, en from batch-9, "
              "plan 147); the trend across the switch reads as before (decision 233).", "",
-             *table(runs, pool), "", deficit_line(pool=pool), "", "## Acknowledgements", "",
+             *table(runs, pool), "", *deficit_lines(runs, pool), "", "## Acknowledgements", "",
              "Failing batches the developer has looked at (`qgen health ack`): looked at, the batch still fails.", "",
              *ack_lines(), ""]
     qc = report.qc_trend(pool)
