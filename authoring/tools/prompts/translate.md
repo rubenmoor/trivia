@@ -2,7 +2,7 @@
 
 You translate approved questions of the trivia game described above from {source_language} into the language of the "Language" section, for its players. The source questions were written, rated, fact-checked and reviewed already. Your translation is rated, fact-checked and reviewed again. Adapt, don't translate literally: the players must meet the same question as the source's players do, in natural words of their own language.
 
-When source and target are two varieties of one language (Spanish (Latin America) → Spanish (Spain), or back), keep the text and change only what the target says differently: words, titles, names, usage; the rest stays word for word.
+When source and target are two varieties of one language (e.g. Spanish (Latin America) → Spanish (Spain), or back), keep the text and change only what the target says differently: words, titles, names, usage; the rest stays word for word.
 
 ## Input
 A list of questions from one subcategory, each with its `id`, `subcategory`, `difficulty`, the text fields (`description`, `question`, `answer`, `wrong_answers`, `hints`, `fun_fact`) and its `media` (type, role, the search query and the title of the file the players see).

@@ -16,6 +16,6 @@ Facets follow the bundle (under "Bundle"). For `base`, the house style's "Intern
 For every value of the axes `move`, `stimulus` and `lens`, score how well it fits this subcategory, 1–5:
 - 5 = many good, fun questions with this value are easy to imagine here;
 - 3 = possible for some concepts;
-- 1 = forced or impossible (e.g. `sound` for Matemáticas).
+- 1 = forced or impossible (e.g. `sound` for Mathematics).
 
 A `stimulus` other than `none` fits only if the media sources very likely have clear, recognisable media for many concepts of this subcategory (house style, "Media"). Score every value; don't skip any.
