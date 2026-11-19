@@ -31,6 +31,7 @@
   import Overlay from "./Overlay.svelte";
   import SeatLost from "./SeatLost.svelte";
   import SeatTag from "./SeatTag.svelte";
+  import Tower from "./Tower.svelte";
   import { music, sfx, sound, unlock, type Cue, type Track } from "./sound.svelte.ts";
   import { wrongTransitionCue } from "./wrongCue.ts";
   import Stage from "./Stage.svelte";
@@ -62,7 +63,7 @@
   import { BLOCK_DROP_MS, FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, TURN_HOLD_MS, sleep } from "./timing.ts";
   import Veil from "./Veil.svelte";
 
-  type Screen = "language" | "consent" | "start" | "player" | "bundles" | "mode" | "choice" | "join" | "level" | "select" | "question" | "timed" | "turn" | "correct" | "wrong" | "victory" | "next" | "completed" | "badges";
+  type Screen = "language" | "consent" | "start" | "player" | "bundles" | "mode" | "choice" | "join" | "level" | "select" | "question" | "timed" | "turn" | "tower" | "correct" | "wrong" | "victory" | "next" | "completed" | "badges";
 
   const MUSIC: Record<Screen, Track | null> = {
     language: "normal",
@@ -75,6 +76,7 @@
     join: "normal",
     level: "normal",
     turn: "normal",
+    tower: "normal",
     select: "normal",
     question: "question",
     timed: "timed",
@@ -267,7 +269,7 @@
     await sleep(FADE_MS);
     apply?.();
     music(MUSIC[next]);
-    if (screen !== "turn") previous = screen; // the drop on Level follows the answer, not the handover
+    if (screen !== "turn" && screen !== "tower") previous = screen; // the drop on Level follows the answer, not the handover
     screen = next;
     picked = null;
     swappedBy = null;
@@ -364,8 +366,22 @@
     await sleep(TURN_HOLD_MS);
   }
 
+  /** rr-competitive after a right answer: the answering player's tower alone, the stone drops (decision 748). */
+  async function towerDrop() {
+    const seat = game?.last?.seat;
+    if (seat === undefined) return;
+    towerSeat = seat;
+    const top = onTwelve(seatBlocks(game!.session!, seat, levels), levels);
+    const landed = sleep(FADE_MS * 2 + BLOCK_DROP_MS).then(() => sfx("block", top));
+    await go("tower", "whoosh");
+    await landed;
+    if ((window as { __galleryTower?: unknown }).__galleryTower) await new Promise(() => {}); // gallery: frozen
+    await sleep(TURN_HOLD_MS);
+  }
+
   /** After «¡Correcto!»: the Level screen, where the new block drops and lands with a thud. */
   async function toLevel() {
+    if (game?.session?.mode === "rr-competitive" && game.last?.correct) await towerDrop();
     await turnHandover();
     const level = blocks;
     const landed = sleep(FADE_MS * 2 + BLOCK_DROP_MS).then(() => sfx("block", onTwelve(level, levels))); // the fall in Tower.svelte
@@ -744,6 +760,7 @@
 
   // Steam rich presence «Nivel 7 de 12» while playing (plan 85); none in timed: no «Ronda» token.
   let turnFrom = $state(0);
+  let towerSeat = $state(0);
   let presence = "";
   $effect(() => {
     const level = ["level", "select", "question", "correct", "next"].includes(screen) && !game?.session?.timed ? game?.level : undefined;
@@ -815,6 +832,9 @@
         {@render tray(game)}
       {/if}
       <S.Level {game} {levels} {blocks} drop={previous === "correct" || previous === "next"} {busy} before={roundBefore} paused={overlayOpen} onnext={() => go(table(game), "paper")} />
+    {:else if screen === "tower" && session}
+      <Stage />
+      <section class="screen level"><Tower filled={seatBlocks(session, towerSeat, levels)} {levels} drop /><SeatTag {session} seat={towerSeat} /></section>
     {:else if screen === "turn" && session}
       <Stage />
       <Turn {session} from={turnFrom} />
