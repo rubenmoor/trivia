@@ -18,11 +18,6 @@ BUNDLES = DATA / "bundles.json"  # D-39
 SUBJECTS = DATA / "subjects.json"  # plan 194: the 7 career subjects
 
 
-def locale_pool(locale):
-    """pool.<locale>.json: a translated locale's approved questions (D-81)."""
-    return DATA / f"pool.{locale}.json"
-
-
 def pool(locale="es", bundle="base"):
     """A bundle's pool in a locale: base's at the top, a pack's in bundles/<id>/ (decision 66)."""
     name = "pool.json" if locale == "es" else f"pool.{locale}.json"

@@ -493,12 +493,6 @@ SIM_MODES = ["solo", "rr-coop", "rr-competitive", "timed"]  # D-74, without game
 SIM_MULTI = {"rr-coop", "rr-competitive", "timed"}  # sessions; = sim/simulate.ts MULTI
 
 
-def locale_pool(locale):
-    """pool.<locale>.json; es falls back to pool.json (as sim/load.ts)."""
-    own = layout.LOCALE_POOL(locale)
-    return layout.EXPORT if locale == "es" and not own.exists() else own
-
-
 def target_check(locale, pool=None):
     """D-75: the locale's approved base questions vs. base's targets (decision 37)."""
     pool = pool if pool is not None else load_json(POOL)["questions"]
@@ -527,7 +521,7 @@ def report_simulate(args):
               "seeds": args.seeds or 40}
              for l in locales for m in modes for g in groups for p in models]
     t0 = time.monotonic()
-    have = [c for c in cells if locale_pool(c["locale"]).exists()]
+    have = [c for c in cells if layout.POOL_FILE(c["locale"]).exists()]
     _lock = engine.lock()
     with concurrent.futures.ThreadPoolExecutor(min((os.cpu_count() or 4) // 2 or 1, 8)) as ex:
         done = dict(zip(map(id, have), ex.map(engine.simulate, have)))
@@ -597,7 +591,7 @@ def report_career(args):
               "players": n, "seeds": args.seeds or 3, "games": args.games or 100, "subjects": subjects}
              for l in locales for g in groups for p in models for n in counts]
     t0 = time.monotonic()
-    have = [c for c in cells if locale_pool(c["locale"]).exists()]
+    have = [c for c in cells if layout.POOL_FILE(c["locale"]).exists()]
     _lock = engine.lock()
     with concurrent.futures.ThreadPoolExecutor(min((os.cpu_count() or 4) // 2 or 1, 8)) as ex:
         done = dict(zip(map(id, have), ex.map(engine.career, have)))

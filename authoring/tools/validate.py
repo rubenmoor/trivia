@@ -111,8 +111,8 @@ def validate_pool():
     for p in pool_export.stale_packs(pool_export.exports(data)):
         errors.append(f"{p.relative_to(ROOT)}: not written by `qgen export` (pack without questions); delete it")
     for l in translations.LOCALES:
-        if layout.LOCALE_POOL(l).exists() and not translations.exported(l, data):
-            errors.append(f"{layout.LOCALE_POOL(l).relative_to(ROOT)}: no {l} source or translation; delete it")
+        if layout.POOL_FILE(l).exists() and not translations.exported(l, data):
+            errors.append(f"{layout.POOL_FILE(l).relative_to(ROOT)}: no {l} source or translation; delete it")
     e, w = demo_problems(data)
     errors += e
     warnings += w
