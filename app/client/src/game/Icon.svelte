@@ -147,6 +147,11 @@
   {:else if name === "refresh"}
     <path d="M4.5 12a7.5 7.5 0 0 1 13-5.1M19.5 12a7.5 7.5 0 0 1-13 5.1" />
     <path d="M17.5 3v3.9h-3.9M6.5 21v-3.9h3.9" />
+  {:else if name === "clock"}
+    <circle cx="12" cy="12" r="8.5" fill="currentColor" fill-opacity="0.2" />
+    <path d="M12 7v5l3.5 2" />
+  {:else if name === "bolt"}
+    <path d="M13 3L5.5 13.5H11L10 21l8.5-10.5H13z" fill="currentColor" fill-opacity="0.25" />
   {:else if name === "power"}
     <circle cx="12" cy="11.8" r="7.5" fill="currentColor" fill-opacity="0.2" stroke="none" />
     <path d="M7 6.2a7.5 7.5 0 1 0 10 0" />

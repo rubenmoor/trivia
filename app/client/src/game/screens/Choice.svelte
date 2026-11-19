@@ -117,7 +117,6 @@
     else if (id === "video") video = !video;
     else if (id === "audio") audio = !audio;
     else if (id === "answers") answers = !answers;
-    else if (id === "pace") pace = pace === "normal" ? "hectic" : "normal";
     else if (id === "preset") return void (budget = stepPreset(budget, by));
     else if (id.startsWith("joker-")) return stepJoker(id.slice(6) as JokerName, by);
   }
@@ -157,7 +156,17 @@
   const GROUP_ICONS: Record<string, IconName> = { kids: "balloon", young_teens: "skateboard", young_adults: "book", adults: "mug" };
   const VIDEO_KEY = t("configure.videoKey").toLowerCase();
   const AUDIO_KEY = t("configure.audioKey").toLowerCase();
+  const PACE_OPTIONS: { id: "normal" | "hectic"; icon: IconName; key: string; name: string; about: string }[] = [
+    { id: "normal", icon: "clock", key: t("choice.paceNormalKey").toLowerCase(), name: t("choice.paceNormal"), about: t("choice.paceNormalAbout") },
+    { id: "hectic", icon: "bolt", key: t("choice.paceHecticKey").toLowerCase(), name: t("choice.paceHectic"), about: t("choice.paceHecticAbout") },
+  ];
+  function setPace(id: "normal" | "hectic") {
+    if (busy) return;
+    sfx("tick");
+    pace = id;
+  }
   const keys = $derived<Keys>({
+    ...(mode === "timed" ? Object.fromEntries(PACE_OPTIONS.map((o) => [o.key, { type: "letter", key: o.key }])) : {}),
     [VIDEO_KEY]: { type: "letter", key: VIDEO_KEY },
     [AUDIO_KEY]: { type: "letter", key: AUDIO_KEY },
     ...(jokerMode ? { [CUSTOMIZE_KEY]: { type: "letter", key: CUSTOMIZE_KEY } } : {}),
@@ -185,6 +194,7 @@
           customizing = !busy;
         }
         else if (a.type === "letter" && (a.key === VIDEO_KEY || a.key === AUDIO_KEY)) step(a.key === VIDEO_KEY ? "video" : "audio", 1);
+        else if (a.type === "letter" && mode === "timed" && PACE_OPTIONS.some((o) => o.key === a.key)) setPace(PACE_OPTIONS.find((o) => o.key === a.key)!.id);
         else if (a.type === "pick" && options && a.n <= options.groups.length) pickGroup(options.groups[a.n - 1].id);
         else if (a.type === "back") onback();
         else return false;
@@ -225,6 +235,28 @@
         </div>
       </div>
     {:else}
+      {#if mode === "timed"}
+        <div class="pick-row" role="radiogroup" data-line>
+          {#each PACE_OPTIONS as o, i (o.id)}
+            {@const on = pace === o.id}
+            <OptionButton
+              {on}
+              style="--i:{i + 1}"
+              role="radio"
+              aria-checked={on}
+              onclick={() => setPace(o.id)}
+              disabled={busy}
+              data-focus-id="pace-{o.id}"
+              caption={t("choice.pace")}
+            >
+              {#snippet icon()}<Icon name={o.icon} />{/snippet}
+              {#snippet chip()}<Prompt action={{ type: "letter", key: o.key }} />{/snippet}
+              <span class="label pace-name">{o.name}</span>
+              <span class="label">{o.about}</span>
+            </OptionButton>
+          {/each}
+        </div>
+      {/if}
       <p class="label pick-heading">{t("choice.groups")}</p>
       {#if mode === "rr-competitive"}
         <div class="seat-groups" data-nav-scroll>
@@ -257,9 +289,6 @@
       <div class="lines switches">
         {@render toggle("video", t("configure.video"), video, "film", VIDEO_KEY)}
         {@render toggle("audio", t("configure.audio"), audio, "speaker", AUDIO_KEY)}
-        {#if mode === "timed"}
-          {@render toggle("pace", t("choice.pace"), pace === "normal", "refresh", undefined, [t("choice.paceNormal"), t("choice.paceHectic")])}
-        {/if}
       </div>
       {#if jokerMode}
       <div class="row" data-line>
@@ -422,6 +451,10 @@
   .row .customize {
     padding: calc(0.5 * var(--u)) calc(1.2 * var(--u));
     font-size: calc(1.1 * var(--u));
+  }
+  .pace-name {
+    color: var(--sky);
+    font-weight: 700;
   }
   .warn {
     color: var(--amber);
