@@ -63,7 +63,7 @@ class Fields(unittest.TestCase):
 
 class Export(unittest.TestCase):
     def test_play_entry_keeps_excerpt(self):
-        base = {"id": "q-1", "status": "approved", "difficulty": 1, "subcategory": "x", "bundle": "base",
+        base = {"id": "q-1", "status": "approved", "difficulty": 1, "subcategory": "x", "bundle": "base", "locale": "es",
                 "description": "", "question": "?", "answer": "a", "wrong_answers": [], "hints": [], "fun_fact": "",
                 "background": None}
         ex = {"start": 0, "end": 5}
