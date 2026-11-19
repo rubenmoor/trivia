@@ -156,8 +156,8 @@ def pool_media():
     """Normalised file titles of every file in a source pool's media or background (page title or file_url)."""
     out = set()
     for f in layout.AUTHORING.glob("data/**/questions*.json"):
-        data = json.loads(f.read_text())
-        for q in data["questions"] if isinstance(data, dict) else data:
+        data = json.loads(f.read_text(encoding="utf-8"))
+        for q in data["questions"]:
             for slot in ("media", "background"):
                 m = q.get(slot) or {}
                 for key in ("source_url", "file_url"):

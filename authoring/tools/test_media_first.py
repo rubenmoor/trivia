@@ -181,9 +181,3 @@ class ResumeRobustness(unittest.TestCase):
         with mock.patch.object(mf, "probe", side_effect=ValueError("bad")), mock.patch.object(mf, "record"):
             self.assertIsNone(mf.probe_or_drop(self.d, "batch-1", file))
         self.assertIn("probe failed: bad", self.path.read_text())
-
-    def test_heal_drops_errno_28_rows(self):
-        mf.write_jsonl(self.path, [{"title": "a", "why_not": "probe failed: [Errno 28] No space"},
-                                   {"title": "b", "why_not": "probe failed: bad"}, {"title": "c"}])
-        mf.heal_triage(self.d)
-        self.assertEqual([t["title"] for t in mf.read_jsonl(self.path)], ["b", "c"])

@@ -188,18 +188,16 @@ def probe(title, excerpt=None):
 
 # Errors of the machine, not of a file: the file is not ledgered, the step stops and a resume probes it again.
 ENV_ERRNOS = {errno.ENOSPC, errno.EDQUOT, errno.EROFS, errno.EMFILE, errno.ENFILE, errno.ENOMEM}
-STALE_WHY = "probe failed: [Errno 28]"  # rows of a full disk, written before this fix
 
 
 def heal_triage(d):
-    """Resume: rewrite triage.jsonl without a cut-off last line and without disk-full probe failures."""
+    """Resume: rewrite triage.jsonl without a cut-off last line and ."""
     path = steps_dir(d) / "triage.jsonl"
     if not path.exists():
         return
     rows = read_jsonl(path)
-    keep = [t for t in rows if not (t.get("why_not") or "").startswith(STALE_WHY)]
-    if path.read_text(encoding="utf-8") != "".join(json.dumps(t, ensure_ascii=False) + "\n" for t in keep):
-        write_jsonl(path, keep)
+    if path.read_text(encoding="utf-8") != "".join(json.dumps(t, ensure_ascii=False) + "\n" for t in rows):
+        write_jsonl(path, rows)
 
 
 def probe_or_drop(d, run, f):
