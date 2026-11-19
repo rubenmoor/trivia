@@ -6,6 +6,12 @@ This is a review of the question authoring and translation pipeline, done before
 - Usage: from `work/*/run.json` and step dirs in the main checkout (302 runs), `calls.jsonl`/`costs.log`, git log, RUNBOOK, QC.md, AGENTS.md, answered decisions.
 - Line numbers are from 2026-11-19 (`~`). The cleanups move them.
 
+## Status (task 2340, 2026-11-19): done
+- Every finding above is done by its task (2347–2373) or kept by decision; nothing is open except what "For later parts" lists (tasks 2374–2377, 2329, 2330, 2335, 1163, plan 230's tasks).
+- Close-out checks: `npm run build`, `qgen validate`, the Python tests (116, OK) pass. `npm run check` fails only on knip's unused `HINT_MS`/`PACES` in `app/client/src/engine/choice.ts` (outside this plan).
+- Close-out fixes: `media_probe.frames` candidates carry `provider: commons` (task 2371 dropped the pre-MP-2 default); `test_media_first_report` lost the `window` column (task 2366).
+- Output against the baseline: `validate` and every `report` identical (the baseline files only add an `exit 0` line). `report --cost` differs by design: no `costs.log` wording (2371), a `backaudit-7` row (converted costs.log, 2371), projection rows and rates per bundle and mode (2355).
+
 ## Usage summary
 Who runs what, by mode, with the last start date.
 - `batch`: base es (early) 10-11, base en 10-23, colombia 10-24, stem 10-28, spain and germany 11-11, usa and mexico 11-12, uk 11-14 (17 runs).

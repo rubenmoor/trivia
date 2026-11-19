@@ -69,7 +69,7 @@ def frames(path, out, s, e):
     for n, t in enumerate(times, 1):
         run(["ffmpeg", "-v", "error", "-y", "-ss", str(t), "-i", str(path), "-frames:v", "1",
              "-vf", "scale=640:-2", str(out / "frames" / f"{n:02d}.png")])
-    cands = [{"type": "video", "preview_url": (out / "frames" / f"{n:02d}.png").resolve().as_uri()}
+    cands = [{"type": "video", "provider": "commons", "preview_url": (out / "frames" / f"{n:02d}.png").resolve().as_uri()}
              for n in range(1, FRAMES + 1)]
     make_sheet(cands, out / "sheet.png", out / "thumbs")
     return list(enumerate(times, 1))

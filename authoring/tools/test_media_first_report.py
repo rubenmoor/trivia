@@ -38,12 +38,12 @@ class Funnel(unittest.TestCase):
         f = mf.funnel(d, qs)
         keys = mf.FUNNEL
         row = lambda *v: dict(zip(keys, v))
-        self.assertEqual(f["seed"]["s1"], row(2, 2, 2, 1, 1, 1, 0))
-        self.assertEqual(f["seed"]["s2"], row(2, 1, 1, 1, 1, 0, 1))
+        self.assertEqual(f["seed"]["s1"], row(2, 2, 2, 1, 1, 1))
+        self.assertEqual(f["seed"]["s2"], row(2, 1, 1, 1, 1, 0))
         self.assertEqual(f["class"]["pd-music"], f["seed"]["s2"])
         text = "\n".join(mf.funnel_lines(d, qs, 3.0, 1))
-        self.assertIn("| s1 | 2 | 2 | 2 | 1 | 1 | 1 | 0 |", text)
-        self.assertIn("| total | 4 | 3 | 3 | 2 | 2 | 1 | 1 |", text)
+        self.assertIn("| s1 | 2 | 2 | 2 | 1 | 1 | 1 |", text)
+        self.assertIn("| total | 4 | 3 | 3 | 2 | 2 | 1 |", text)
         self.assertIn("$ per approved: $3.00", text)
 
     def test_empty(self):
