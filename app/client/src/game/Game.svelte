@@ -793,13 +793,13 @@
     {:else if screen === "level" && game}
       <Stage />
       {#if !session?.timed}
-        <div class="corner-hud"><Hud level={null} player={game.player} {session} /></div>
+        <div class="corner-hud" class:multi={!!session}><Hud level={null} player={game.player} {session} /></div>
         {@render tray(game)}
       {/if}
       <S.Level {game} {levels} {blocks} drop={previous === "correct" || previous === "next"} {busy} before={roundBefore} paused={overlayOpen} onnext={() => go(table(game), "paper")} />
     {:else if screen === "select" && game}
       <Stage />
-      <div class="corner-hud"><Hud level={game.level} {levels} player={game.player} {session} /></div>
+      <div class="corner-hud" class:multi={!!session}><Hud level={game.level} {levels} player={game.player} {session} /></div>
       {@render tray(game)}
       <S.Select {game} {picked} {fresh} {busy} onpick={pick} />
     {:else if screen === "question" && game?.question}
@@ -933,6 +933,10 @@
     top: var(--safe-y);
     left: var(--safe-x);
     z-index: 1;
+  }
+  .corner-hud.multi {
+    left: 50%;
+    transform: translateX(-50%);
   }
   .side-tray {
     position: absolute;
