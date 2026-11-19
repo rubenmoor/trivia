@@ -1,0 +1,481 @@
+warning: app/data/bundles/geography/pool.en.json: missing; geography is listed for en
+warning: app/data/bundles/history/pool.en.json: missing; history is listed for en
+warning: app/data/bundles/movies/pool.en.json: missing; movies is listed for en
+warning: app/data/bundles/sports/pool.en.json: missing; sports is listed for en
+warning: pool.en.json: approved colombia questions, but colombia isn't listed for en
+warning: pool.en.json: approved germany questions, but germany isn't listed for en
+warning: pool.en.json: approved mexico questions, but mexico isn't listed for en
+warning: pool.en.json: approved spain questions, but spain isn't listed for en
+warning: q-0054: axes break a rule: {"if": {"move": ["count", "estimate"]}, "then": {"answer_kind": ["number"]}}
+warning: q-0082: axes break a rule: {"if": {"move": ["who"]}, "then": {"answer_kind": ["person"]}}
+warning: q-0102: axes break a rule: {"if": {"move": ["who"]}, "then": {"answer_kind": ["person"]}}
+warning: q-0115: axes break a rule: {"if": {"move": ["name_concept", "word_meaning", "analogy"]}, "then": {"answer_kind": ["word", "thing"]}}
+warning: q-0120: axes break a rule: {"if": {"clue": ["completion"]}, "then": {"move": ["identify", "word_meaning"], "answer_kind": ["word"], "lens": ["language", "pop_culture", "colombia", "everyday", "popular_science"]}}
+warning: q-0122: approved but no background picked
+warning: q-0150: axes break a rule: {"if": {"move": ["count", "estimate", "when", "analogy", "connection", "odd_one_out", "sequence"]}, "then": {"clue": ["direct", "scenario"]}}
+warning: q-0150: axes break a rule: {"if": {"clue": ["completion"]}, "then": {"move": ["identify", "word_meaning"], "answer_kind": ["word"], "lens": ["language", "pop_culture", "colombia", "everyday", "popular_science"]}}
+warning: q-0171: axes break a rule: {"if": {"clue": ["three_facts"]}, "then": {"answer_kind": ["thing", "place", "group", "word"]}}
+warning: q-0176: axes break a rule: {"if": {"clue": ["three_facts"]}, "then": {"answer_kind": ["thing", "place", "group", "word"]}}
+warning: q-0179: axes break a rule: {"if": {"clue": ["three_facts"]}, "then": {"answer_kind": ["thing", "place", "group", "word"]}}
+warning: q-0183: axes break a rule: {"if": {"clue": ["three_facts"]}, "then": {"answer_kind": ["thing", "place", "group", "word"]}}
+warning: q-0195: axes break a rule: {"if": {"stimulus": ["photo"]}, "then": {"move": ["identify", "origin", "made_of", "purpose", "who", "count"], "clue": ["direct"]}}
+warning: q-0215: axes break a rule: {"if": {"move": ["who"]}, "then": {"answer_kind": ["person"]}}
+warning: q-0224: axes break a rule: {"if": {"move": ["origin"]}, "then": {"answer_kind": ["place", "thing", "person"]}}
+warning: q-0277: axes break a rule: {"if": {"move": ["connection"]}, "then": {"answer_kind": ["group", "word"]}}
+warning: q-0277: axes break a rule: {"if": {"move": ["count", "estimate", "when", "analogy", "connection", "odd_one_out", "sequence"]}, "then": {"clue": ["direct", "scenario"]}}
+warning: q-0291: axes break a rule: {"if": {"clue": ["three_facts"]}, "then": {"answer_kind": ["thing", "place", "group", "word"]}}
+warning: q-0292: axes break a rule: {"if": {"clue": ["completion"]}, "then": {"move": ["identify", "word_meaning"], "answer_kind": ["word"], "lens": ["language", "pop_culture", "colombia", "everyday", "popular_science"]}}
+warning: q-0312: axes break a rule: {"if": {"clue": ["three_facts"]}, "then": {"answer_kind": ["thing", "place", "group", "word"]}}
+warning: q-0316: axes break a rule: {"if": {"clue": ["three_facts"]}, "then": {"answer_kind": ["thing", "place", "group", "word"]}}
+warning: q-0333: axes break a rule: {"if": {"move": ["origin"]}, "then": {"answer_kind": ["place", "thing", "person"]}}
+warning: q-0359: axes break a rule: {"if": {"move": ["name_concept", "word_meaning", "analogy"]}, "then": {"answer_kind": ["word", "thing"]}}
+warning: q-0359: axes break a rule: {"if": {"answer_kind": ["number", "time"]}, "then": {"move": ["count", "estimate", "when", "record", "sequence"]}}
+warning: q-0367: axes break a rule: {"if": {"move": ["origin"]}, "then": {"answer_kind": ["place", "thing", "person"]}}
+warning: q-0426: axes break a rule: {"if": {"move": ["who"]}, "then": {"answer_kind": ["person"]}}
+warning: q-0428: axes break a rule: {"if": {"move": ["count", "estimate", "when", "analogy", "connection", "odd_one_out", "sequence"]}, "then": {"clue": ["direct", "scenario"]}}
+warning: q-0428: axes break a rule: {"if": {"clue": ["completion"]}, "then": {"move": ["identify", "word_meaning"], "answer_kind": ["word"], "lens": ["language", "pop_culture", "colombia", "everyday", "popular_science"]}}
+warning: q-0440: axes break a rule: {"if": {"move": ["count", "estimate", "when", "analogy", "connection", "odd_one_out", "sequence"]}, "then": {"clue": ["direct", "scenario"]}}
+warning: q-0440: axes break a rule: {"if": {"clue": ["completion"]}, "then": {"move": ["identify", "word_meaning"], "answer_kind": ["word"], "lens": ["language", "pop_culture", "colombia", "everyday", "popular_science"]}}
+warning: q-0443: axes break a rule: {"if": {"move": ["connection"]}, "then": {"answer_kind": ["group", "word"]}}
+warning: q-0443: axes break a rule: {"if": {"move": ["count", "estimate", "when", "analogy", "connection", "odd_one_out", "sequence"]}, "then": {"clue": ["direct", "scenario"]}}
+warning: q-0443: axes break a rule: {"if": {"clue": ["three_facts"]}, "then": {"answer_kind": ["thing", "place", "group", "word"]}}
+warning: q-0467: axes break a rule: {"if": {"clue": ["three_facts"]}, "then": {"answer_kind": ["thing", "place", "group", "word"]}}
+warning: q-0482: axes break a rule: {"if": {"clue": ["three_facts"]}, "then": {"answer_kind": ["thing", "place", "group", "word"]}}
+warning: q-0500: axes break a rule: {"if": {"clue": ["three_facts"]}, "then": {"answer_kind": ["thing", "place", "group", "word"]}}
+warning: q-0510: axes break a rule: {"if": {"clue": ["three_facts"]}, "then": {"answer_kind": ["thing", "place", "group", "word"]}}
+warning: q-0521: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0523: axes break a rule: {"if": {"move": ["name_concept", "word_meaning", "analogy"]}, "then": {"answer_kind": ["word", "thing"]}}
+warning: q-0523: axes break a rule: {"if": {"move": ["count", "estimate", "when", "analogy", "connection", "odd_one_out", "sequence"]}, "then": {"clue": ["direct", "scenario"]}}
+warning: q-0523: axes break a rule: {"if": {"clue": ["completion"]}, "then": {"move": ["identify", "word_meaning"], "answer_kind": ["word"], "lens": ["language", "pop_culture", "colombia", "everyday", "popular_science"]}}
+warning: q-0530: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0534: axes break a rule: {"if": {"move": ["count", "estimate", "when", "analogy", "connection", "odd_one_out", "sequence"]}, "then": {"clue": ["direct", "scenario"]}}
+warning: q-0550: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0557: axes break a rule: {"if": {"move": ["count", "estimate", "when", "analogy", "connection", "odd_one_out", "sequence"]}, "then": {"clue": ["direct", "scenario"]}}
+warning: q-0557: axes break a rule: {"if": {"clue": ["completion"]}, "then": {"move": ["identify", "word_meaning"], "answer_kind": ["word"], "lens": ["language", "pop_culture", "colombia", "everyday", "popular_science"]}}
+warning: q-0561: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0568: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0582: axes break a rule: {"if": {"move": ["name_concept", "word_meaning", "analogy"]}, "then": {"answer_kind": ["word", "thing"]}}
+warning: q-0582: axes break a rule: {"if": {"clue": ["completion"]}, "then": {"move": ["identify", "word_meaning"], "answer_kind": ["word"], "lens": ["language", "pop_culture", "colombia", "everyday", "popular_science"]}}
+warning: q-0583: axes break a rule: {"if": {"move": ["origin"]}, "then": {"answer_kind": ["place", "thing", "person"]}}
+warning: q-0591: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0592: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0596: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0601: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0607: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0634: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0640: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0642: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0645: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0661: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0666: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0670: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0676: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0690: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0703: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0714: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0722: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0727: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0731: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0758: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0767: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0768: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0788: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0800: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0805: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0817: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0821: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0827: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0830: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0834: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0859: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0867: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0869: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0878: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0880: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0895: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0898: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0901: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0902: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0906: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0907: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0918: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0919: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0927: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0930: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0937: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0942: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0960: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0963: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0975: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0976: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0982: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-0999: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1004: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1028: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1033: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1036: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1037: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1040: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1050: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1054: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1055: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1057: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1060: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1084: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1086: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1096: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1100: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1105: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1109: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1130: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1140: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1142: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1147: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1148: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1150: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1158: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1169: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1173: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1174: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1176: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1177: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1178: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1191: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1195: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1199: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1203: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1210: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1213: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1219: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1221: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1224: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1237: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1238: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1248: axes break a rule: {"if": {"move": ["count", "estimate", "when", "analogy", "connection", "odd_one_out", "sequence"]}, "then": {"clue": ["direct", "scenario"]}}
+warning: q-1248: axes break a rule: {"if": {"clue": ["completion"]}, "then": {"move": ["identify", "word_meaning"], "answer_kind": ["word"], "lens": ["language", "pop_culture", "colombia", "everyday", "popular_science"]}}
+warning: q-1262: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1298: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1301: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1310: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1311: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1312: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1313: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1314: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1316: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1317: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1318: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1320: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1322: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1330: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1336: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1346: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1348: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1351: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1373: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1388: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1389: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1393: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1394: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1395: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1416: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1428: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1441: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1444: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1451: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1458: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1473: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1487: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1509: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1529: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1531: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1538: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1552: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1553: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1554: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1557: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1570: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1572: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1573: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1576: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1580: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1593: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1597: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1604: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1605: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1612: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1614: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1617: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1636: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1639: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1646: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1648: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1657: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1660: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1664: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1684: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1689: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1692: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1695: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1710: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1713: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1716: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1719: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1749: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1756: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1786: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1790: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1810: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1817: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1830: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1831: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1839: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1843: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1858: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1871: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1889: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1890: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1895: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1911: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1919: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1924: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1928: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1929: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1930: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1932: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1940: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1943: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1956: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1983: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1986: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-1994: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2000: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2044: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2045: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2056: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2059: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2060: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2082: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2096: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2100: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2102: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2107: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2110: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2114: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2118: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2134: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2142: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2169: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2220: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2225: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2249: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2256: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2264: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2273: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2286: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2287: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2301: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2311: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2321: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2334: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2362: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2394: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2398: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2404: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2405: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2406: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2414: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2427: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2440: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2470: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2493: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2504: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2551: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2567: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2588: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2589: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2591: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2611: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2612: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2615: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2633: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2642: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2647: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2660: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2663: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2664: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2668: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2672: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2674: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2675: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2682: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2694: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2711: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2715: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2717: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2725: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2753: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2780: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2784: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2790: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2798: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2801: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2812: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2818: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2819: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2840: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2846: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2854: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2857: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2865: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2870: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2876: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2877: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2888: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2900: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2901: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2910: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2911: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2927: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2930: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2940: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2941: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2985: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-2996: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3003: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3011: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3022: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3027: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3034: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3040: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3041: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3062: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3068: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3069: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3070: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3077: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3111: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3153: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3160: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3169: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3170: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3178: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3188: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3189: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3193: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3211: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3217: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3220: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3228: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3241: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3242: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3243: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3248: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3253: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3274: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3281: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3291: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3292: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3306: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3316: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3324: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3327: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3333: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3335: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3341: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3344: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3359: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3365: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3383: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3394: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3404: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3413: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3430: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3447: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3454: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3461: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3462: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3470: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3481: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3487: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3510: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3514: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3522: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3523: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3530: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3557: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3564: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3571: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3577: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3589: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3592: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3602: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3623: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3635: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3654: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3658: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3665: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3676: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3679: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3688: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3692: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3699: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3701: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3721: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3723: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3726: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3727: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3740: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3757: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3767: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3777: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3778: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3782: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3802: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3812: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3814: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3822: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3834: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3845: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3852: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3869: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3877: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3886: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3888: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3893: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3897: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3921: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3925: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3927: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3953: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3965: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3971: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3983: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-3990: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-4049: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-4089: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-4091: axes break a rule: {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}}
+warning: q-7797: media not cached
+warning: q-8066: media not cached
+warning: q-8293: media not cached
+warning: q-8461: media not cached
+warning: q-8766: media not cached
+warning: q-8801: media not cached
+warning: q-8861: media not cached
+warning: q-9005: media not cached
+warning: q-9066: media not cached
+warning: q-20729: media not cached
+warning: authoring/data/questions.es.json: 5 approved translation(s) of a source not approved: q-20673, q-20709, q-4240, q-6336, q-8818
+warning: authoring/data/questions.es-ES.json: 7 approved translation(s) of a source not approved: q-0055, q-0126, q-20673, q-20709, q-4240 …
+warning: authoring/data/questions.en.json: 5 stale translation(s) (source text changed): q-7049, q-7365, q-7416, q-7821, q-8225
+warning: authoring/data/questions.en.json: 7 approved translation(s) of a source not approved: q-0055, q-6932, q-7478, q-7648, q-7852 …
+warning: authoring/data/questions.de.json: 6 approved translation(s) of a source not approved: q-0055, q-20673, q-20709, q-4240, q-6336 …
+warning: authoring/data/demo.json: fails: solo / gamemaster / rr-coop, kids (es-ES): engine pass, reserve 1 short
+warning: authoring/data/demo.json: fails: solo / gamemaster / rr-coop, kids, media off (es-ES): engine pass, reserve 1 short
+warning: authoring/data/demo.json: fails: solo / gamemaster / rr-coop, kids (de): engine pass, reserve 2 short
+warning: authoring/data/demo.json: fails: solo / gamemaster / rr-coop, young_adults (de): engine pass, reserve 4 short
+warning: authoring/data/demo.json: fails: solo / gamemaster / rr-coop, kids, media off (de): engine pass, reserve 2 short
+warning: authoring/data/demo.json: fails: solo / gamemaster / rr-coop, young_adults, media off (de): engine pass, reserve 4 short
+(477 warning(s); `trivia-media sync --status approved` fills the cache)
+id continuity: skipped, no v* tag
+OK: 21209 questions
+exit 0
