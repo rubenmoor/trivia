@@ -240,11 +240,14 @@ class Checks(Loop):
             self.assertIn("record without a row", err)
 
     def test_credits_today_passes(self):
-        # no records: today's CREDITS.md passes unchanged
-        self.assertEqual(self.cli("credits", "--check")[0], 0)
-        before = music.layout.AUDIO_CREDITS.read_text()
-        self.assertEqual(self.cli("credits")[0], 0)
-        self.assertEqual(music.layout.AUDIO_CREDITS.read_text(), before)
+        # no records: the hand rows of CREDITS.md (no generated block) pass unchanged
+        f = self.d / "CREDITS.md"
+        f.write_text(music.split_credits(music.layout.AUDIO_CREDITS.read_text())[0])
+        with mock.patch.object(music.layout, "AUDIO_CREDITS", f):
+            self.assertEqual(self.cli("credits", "--check")[0], 0)
+            before = f.read_text()
+            self.assertEqual(self.cli("credits")[0], 0)
+            self.assertEqual(f.read_text(), before)
 
 
 if __name__ == "__main__":
