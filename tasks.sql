@@ -31210,11 +31210,15 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `qgen validate` "each language has a base bundle": `zh-Hans` gets `chinese-base` only in part 2; the plan says how validate treats zh until then.
 - Done when (plan): `qgen validate` and `report` handle all three locales with empty pools; nothing changes for es/en/de.
 - Plan priority ~900. Check `pm plan list` first; refer to, don''t duplicate, open plans (e.g. `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`, `plan 103: Report server (POST /reports)`).', '2026-10-15T20:09:26Z', '2026-10-15T20:11:32Z', 1146, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1148, 60, 'write plan: chinese-base bundle: model and setup', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of `plan 60: masterplan` (`pm plan add 12 …`): the `chinese-base` bundle''s model and setup.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1148, 60, 'write plan: chinese-base bundle: model and setup', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of `plan 60: masterplan` (`pm plan add 12 …`): the `chinese-base` bundle''s model and setup.
 
-- Waits for `decision 217: chinese-base membership: how does a translated base question count for chinese-base?`; implement its answer in the translation layout, `export`, `validate` (D-81 amended, new D-entry in `plans/decisions.md`).
-- Scope: masterplan part 2: `qgen bundle new chinese-base --kind base`, `languages: ["zh-Hans"]`, `voice`, `rule`; `targets.json` 5000 in D-53''s mix; own taxonomy and concept lists (D-43, D-99, D-100) reusing `base`''s where they fit, plus China-centric categories, with a pm decision for the developer to approve the list (as `plan 138: Regional taxonomy: a general list, colombia reworked`); zh offers only `chinese-base` (`bundlesFor`, default base bundle, Choice screen, `qgen report --simulate --bundles`); achievements: `ALL_CATEGORIES` in a `chinese-base` game, `BUNDLE_*` regional only (decision 73, decision 146).
-- Waits for part 1''s plan (new locales in data and pipeline); name it.
+- Binding: `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` (copies): own id, `bundle: chinese-base`, `locale: en`, `copied_from: <base id>`, checked by `qgen validate`; no link afterwards, wording may diverge. A D-entry in `plans/decisions.md`.
+- Media not duplicated: copy keeps the `media` record; check `media_cache.py` `cache_path`, `app/desktop/stage-media.mjs` / encode cache and `trivia-media sync` store a shared file once; fix if not.
+- Bundle: `qgen bundle new chinese-base --kind base`, `languages: [<zh locale(s)>, "en"]`, `rule`, `voice`; `targets.json` 6000 in base''s mix (`decision 730: Base tile count: «6000+»`); taxonomy from part 6 plus reused `base` subcategories (D-99, D-100).
+- Game: English offers both base bundles, exactly one per session (picking one deselects the others: Choice screen, `bundlesFor`, stored choices, presets, mods'' base bundles; D-85 amended again); zh offers only `chinese-base`; default base per locale.
+- Seen counts (D-82): say whether `copied_from` shares the seen counter (a decision if not obvious).
+- Career/achievements: `chinese-base` categories map onto the 7 subjects (`plans/24-career.md`, unmapped refused by `qgen validate`); `ALL_CATEGORIES`-style achievements in a `chinese-base` game; `BUNDLE_*` add-ons only (decision 73, decision 146).
+- Waits for parts 2 (pipeline cleanup) and 3 (`plan 139: New locales in data and pipeline`); name them.
 - Plan priority ~880.', '2026-10-15T20:09:27Z', NULL, 1146, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1149, 60, 'write plan: Translation prompts and markets per locale', 'plan', 'done', 1000, '2026-10-15, plan 140: Translation prompts and markets per locale (tasks.sql only)', 'Write the plan for part 3 of `plan 60: masterplan` (`pm plan add 12 …`): translation prompts for `zh-Hans`, `ru`, `pt-BR` and the `chinese-base` fit pass prompt.
 
@@ -31234,12 +31238,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Waits for part 1''s plan (locales) and part 4''s (reviewers) for the playtest.
 - Refer to `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)` and `plan 136: Joker names and symbols, defined again` rather than duplicating them.
 - Plan priority ~400.', '2026-10-15T20:09:27Z', '2026-10-15T20:18:54Z', 1146, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1152, 60, 'write plan: chinese-base content', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of `plan 60: masterplan` (`pm plan add 12 …`): `chinese-base` content to 5000 approved.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1152, 60, 'write plan: chinese-base content', 'plan', 'dropped', 1000, 'masterplan revised: split into part 5 (fit pass and copies) and part 7 (new questions in English)', 'Write the plan for part 6 of `plan 60: masterplan` (`pm plan add 12 …`): `chinese-base` content to 5000 approved.
 
 - Waits for `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` (and the plans of parts 2–4).
 - Scope: masterplan part 6: fit pass over `base`''s zh translations (part 2''s model), developer corrects, sample to the native reviewer; new China-centric questions per decision 218; pilot first (QT-5: 50, `qgen health ack`), cost and reject rate → budget pm decision (as `plan 70: Cost, budget and generation plan by gap (CT-3, CT-4)`); runs to 5000 approved (`qgen report --bundle chinese-base --locale zh-Hans`, `--simulate` ✓).
 - Runs follow `authoring/RUNBOOK.md` (`qgen batch …` only); batch tasks like `plan 17: Batch runs` / `plan 84: Release content runs`.
-- Plan priority ~-120.', '2026-10-15T20:09:27Z', NULL, 1146, 0, NULL, 'questions');
+- Plan priority ~-120.', '2026-10-15T20:09:27Z', '2026-11-19T17:56:59Z', 1146, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1153, 60, 'write plan: Russian and Portuguese pools', 'plan', 'done', 1000, '2026-10-15, plan 143: Russian and Portuguese pools (tasks.sql only)', 'Write the plan for part 7 of `plan 60: masterplan` (`pm plan add 12 …`): approved `ru` and `pt-BR` pools of 5000 each from translated `base`.
 
 - Scope: masterplan part 7: `qgen batch --translate ru` / `--translate pt-BR`: pilot `tr-<locale>-1`, native spot check (part 4), `qgen health ack`, budget pm decision, full runs to 5000 approved each.
@@ -50400,8 +50404,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 let''s introduce additional configuration: "hectic" with all the current timers, and normal: all timers specific to the game mode get double the time.
 
 the choice between hectic and normal must appear on the "how to play" screen only for this specific mode.', '2026-11-19T17:35:01Z', '2026-11-19T17:41:44Z', NULL, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2286, 60, 'create tasks for plan 60: masterplan', 'split', 'open', 1000, NULL, 'Split plan 60 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T17:55:13Z', NULL, 1366, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2286, 60, 'create tasks for plan 60: masterplan', 'split', 'done', 1000, '2026-11-19, tasks 2294 (part 1), 2295 (part 2), 1148 updated (part 4), 2296 (part 5), 2297 (part 6), 2298 (part 7); 1152 dropped (split into parts 5 and 7); parts 3, 8–12 and plan 143''s drop via the existing revise tasks 2287–2293; decision 750 now blocks 2297, 2298', 'Split plan 60 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T17:55:13Z', '2026-11-19T17:57:06Z', 1366, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2287, 139, 'revise plan 139: New locales in data and pipeline', 'revise', 'open', 1000, NULL, '`plan 60: masterplan`, the plan above `plan 139: New locales in data and pipeline`, changed; it is quoted below. Bring `plan 139: New locales in data and pipeline` in line with it
 (`pm plan edit 139 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -51144,6 +51148,43 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 
 ## Out of scope
 - Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', NULL, 1366, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2294, 60, 'write plan: Chinese variants and the Chinese audience (evaluation)', 'plan', 'open', 1000, NULL, 'Write the plan for part 1 of `plan 60: masterplan` (`pm plan add 12 …`): which Chinese variant(s) the game gets, what each entails, and the implications of a Chinese audience.
+
+- Scope: masterplan part 1 (candidates `zh-Hans`, `zh-Hant`/`zh-TW`, Hong Kong; spoken dialects vs. written languages; per candidate Steam language and share, CJK font size, translation path incl. OpenCC conversion, reviewer need, cost per question, content framing).
+- Audience implications go into `plans/15-i18n.md` or a new `plans/26-china.md`: NPPA licence / global Steam / Steam China, content sensitivity, Taiwan vs. mainland framing, reachability (report server, telemetry, PIPL), numbers, dates, names, pinyin.
+- Tasks: a research task (`--web`) that writes the evaluation doc; decisions raised from its findings: variant(s) (recommended `zh-Hans` first), a sensitivity rule for drafting, fit pass and translation, store targets.
+- Binding: `decision 220: Native reviewers for zh-Hans, ru, pt-BR: paid freelancers, volunteers, or mixed?` (volunteers) for the reviewer-need column; `decision 222: New UI languages (zh-Hans, ru, pt-BR): offered only once their pool ships`.
+- Later plans (parts 3–12) say "the zh locale(s)" for the variant answer; name them as waiting for it.
+- Plan priority ~960.', '2026-11-19T17:56:56Z', NULL, 2286, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2295, 60, 'write plan: Pipeline review and cleanup for milestone 12', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of `plan 60: masterplan` (`pm plan add 12 …`): a thorough review and cleanup of question authoring and translation before any China work (milestone 12: "improve code where you can, remove features we don''t use").
+
+- Scope: masterplan part 2: `authoring/tools/qgen.py` and modules, `qgen batch` steps and `--translate`, prompts, `targets.py`, `translations.py`, review tool (`authoring/server`, `authoring/ui`), `authoring/RUNBOOK.md`, `authoring/QC.md`.
+- Tasks: one review task (worktree `questions`, `--model opus`) writing findings and the cleanup list (unused features found by usage: `work/*/` runs, `costs.log`, RUNBOOK); a decision listing deletion candidates where unsure; one task per cleanup, each with the AGENTS.md checks and an unchanged `qgen report` for es, es-ES, en, de unless it says why.
+- Aim the review at this milestone''s needs: a bundle with source `locale: en` and languages {zh, en} without es/de; copies with shared media; a fit pass over existing questions; a non-Latin locale.
+- Behaviour may change as long as `base`/regional/topic drafting, translation and review still work.
+- Plan priority ~940 (before parts 3–8''s code).', '2026-11-19T17:56:56Z', NULL, 2286, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2296, 60, 'write plan: chinese-base step 1: euro-centric filter and copies', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of `plan 60: masterplan` (`pm plan add 12 …`): the fit pass over `base`''s approved questions and their copies into `chinese-base` (milestone 12: "plainly filter out any question that appears euro-centric").
+
+- Scope: masterplan part 5: fit pass on the English text of all approved `base` questions; keep what a Chinese family can know and enjoy, drop euro-centric / Latin-American-centric, one-language wordplay, anything against part 1''s sensitivity rule.
+- Prompt `authoring/tools/prompts/fit.md`: draft + approval decision (D-36). The old fit-prompt task in `plan 140: Translation prompts and markets per locale` (task 1169) goes with that plan''s revision; don''t duplicate.
+- Output: copies by part 4''s model, subcategory mapped to `chinese-base`''s, light English adaptation only where the fit pass says, marked for review.
+- One `qgen` command (RUNBOOK; e.g. `qgen batch --bundle chinese-base --from base`), its runs in `authoring/RUNBOOK.md`.
+- Developer review: kept/dropped lists per subcategory and a sample at `/review?bundle=chinese-base`, corrections flip it (iterative feedback).
+- Waits for part 4 (`task 1148: write plan: chinese-base bundle: model and setup`) and part 1''s sensitivity decision; name them.
+- Plan priority ~-100.', '2026-11-19T17:56:57Z', NULL, 2286, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2297, 60, 'write plan: chinese-base taxonomy from Chinese school curricula', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of `plan 60: masterplan` (`pm plan add 12 …`): `chinese-base` categories and subcategories (milestone 12: "do research on typical chinese curricula at schools").
+
+- Scope: masterplan part 6: research (`--web` for its task) of 义务教育课程标准 subjects and shared family culture; propose categories/subcategories each mapped to a career subject (`plans/24-career.md`); reuse `base` subcategories the copies need; concept lists (D-43); scopes against overlap with the copies.
+- A decision for the developer to approve the list (like `decision 404: movies taxonomy: categories and subcategories`), then `qgen taxonomy --bundle chinese-base --apply`.
+- Waits for `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` (drafting language shapes language subcategories) and part 1''s sensitivity rule.
+- Plan priority ~850 (before part 4''s taxonomy step and part 7).', '2026-11-19T17:56:57Z', NULL, 2286, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2298, 60, 'write plan: chinese-base step 2: new China-centric questions in English', 'plan', 'open', 1000, NULL, 'Write the plan for part 7 of `plan 60: masterplan` (`pm plan add 12 …`): new China-centric questions for `chinese-base`, drafted in English for the developer''s review (milestone 12).
+
+- Scope: masterplan part 7: `qgen batch --bundle chinese-base` English sources for part 6''s subcategories; voice: English for a Chinese family, Chinese names and terms; developer reviews in English (iterative feedback).
+- Pilot 50 (`qgen health ack`), cost and reject rate → budget decision (like `plan 70: Cost, budget and generation plan by gap (CT-3, CT-4)`), then batch tasks until 6000 approved (copies + new) in the difficulty mix: `qgen report --bundle chinese-base --locale en`. Runs follow `authoring/RUNBOOK.md` only.
+- Waits for `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` and parts 4, 5, 6; name them.
+- Replaces the drafting half of the dropped `task 1152: write plan: chinese-base content`.
+- Plan priority ~-120.', '2026-11-19T17:56:58Z', NULL, 2286, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -61277,6 +61318,8 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2510, 2282, '2026-11-19T07:46:20Z', '2026-11-19T07:52:51Z', 'done', NULL, 0, '0cd1846efeee54fab24f91aa97157d12f118518e', 'app', 'claude-sonnet-5-5', '085ed9c9-e47e-4797-abb8-b0066fe460a0', NULL, 23, 40, 7568, 1060504, 53824, 0.39710639999999997, 68616, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2511, 2285, '2026-11-19T17:35:05Z', '2026-11-19T17:41:50Z', 'done', NULL, 0, '291e4122e4e94c30cfcf49c15dca823ac95bf0d4', NULL, 'claude-sonnet-5-5', '073cd727-4f78-472d-ae7b-f1aede38fbe1', NULL, 31, 54, 13119, 1596268, 72118, 0.57939679999999993, 85276, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2512, 1366, '2026-11-19T17:51:51Z', '2026-11-19T17:55:35Z', 'done', NULL, 0, 'c8ac4a89a3dfd8037b3ea209c3f20b185a28d1af', NULL, 'claude-opus-5-5', 'a356bddd-9880-4d2c-be34-b7e47e200264', NULL, 19, 38, 17146, 1186283, 85573, 1.2649125999999997, 85581, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2513, 2286, '2026-11-19T17:55:36Z', '2026-11-19T17:57:15Z', 'done', NULL, 0, '09688a9b2704110fcdf76add1a93ffc2438d7bf6', NULL, 'claude-opus-5-5', '0139ba67-de1f-4496-8d7b-4dc1908298ca', NULL, 11, 22, 7342, 556148, 55194, 0.6997096, 69545, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2514, 1148, '2026-11-19T17:57:09Z', NULL, 'running', NULL, NULL, '09688a9b2704110fcdf76add1a93ffc2438d7bf6', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 473050);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -62033,6 +62076,8 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (2251, 741);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2254, 742);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2255, 743);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2256, 744);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2297, 750);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2298, 750);
 
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 146);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 1865);
