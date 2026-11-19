@@ -50261,6 +50261,49 @@ What:
 
 Done when: the whole Carefree loop and the fixtures in `authoring/tools/music/test_music_loop.py` pass; a test with a real click (a step inserted at the seam) still fails; per-commit checks pass.', '2026-11-18T21:25:59Z', '2026-11-18T21:49:38Z', 2236, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2267, 223, 'New effects: wrong-answer sound plays twice', 'work', 'done', NULL, '2026-11-19, app/client/src/game/wrongCue.ts, wrongCue.test.ts, Game.svelte, screens/Question.svelte', 'Developer report (`decision 737: UI sounds, round 1: approve the new menu, pick, lock, whoosh and tick sounds, or what should change per cue?`): the wrong-answer sound (`sad-trombone`) plays a second time when advancing to the session-end / "you lost" screen. Find the two call sites (`rg "sad-trombone" app/client/src`), play it once per wrong answer, add a test. Done when a lost game plays it exactly once.', '2026-11-19T01:27:59Z', '2026-11-19T01:49:20Z', 2246, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2268, NULL, 'improvements for multiplayer modes', 'exec', 'open', NULL, NULL, '![](pm-images/2a785c9b2c94.png)
+
+showing the list of names in the latest savegame is good; but they do not fit in to the button and they should never appear in one line. be creative: create a layout that can accomodate for multiple player names, no matter how long they are
+
+![](pm-images/b83ed6badb27.png)
+
+in the multiplayer modes we need to show the currently active player much more prominently: centered, bigger, deserving of more attention. that applies to every screen that shows the current player
+
+the screen that asks ''who''s playing'' only makes sense in single player mode, it just have to appear after selection of single player and can''t be shown when a local multiplayer mode is selected
+
+all multiplayer modes currently are local multiplayer: the button should make this explicit "local multiplayer"
+
+![](pm-images/4a8610be8101.png)
+
+fix the button layouts once and for all. those buttons are in use everywhere: bundle selection, game mode selection ... always following the scheme icon | caption | more text | shortcut (keyboard or gamepad). define them once, use them everywhere. The icon should feature prominently in a column layout, using it''s own column. you can get creative to come up with a good design
+
+![](pm-images/e7ae3d908984.png)
+
+only the first added player in multiplayer gets a random funny name suggestion; all of them have to get it
+
+whenever in multiplayer mode "taking turns" or "round-robin competitive": when the next players gets a turn, we need a transission screen: it must show the last player (maybe lower opacity, grayish, small) and an animation that replaces them with the new player (bright, big) and then leave the new player on the screen for about a second
+
+![](pm-images/227f3ccb5560.png)
+
+this screen doesn''t work. it shows the available jokers per player, and the name of the player they refer to ... but the layout is not obvious. this seems like a cheap port from the singleplayer layout. come up with an actual solution (e.g. move the vertical joker list into the div with class "track svelte-game-tracks turn"). make sure that you account for the actual maximal number of players in multiplayer modes in the layout and for longish names (they can''t  break the layout!)
+
+not related to multiplayer: fix anyway: the "show image" function currently allows to hold a mouse button anywhere to show the image (hide the other elements) ... anywhere but the button that actually says "show image". also it shows the image, while the animations are running. The show image function can only be active once all animations have finished and allowing to click & hold anywhere isn''t super useful: just have it activate by clicking & holding the button.
+
+after replying correctly in multiplayer round-robin, the falling stone animation is now much smaller (because all towers are shown), worse even: the tower of the next player is highlighted while the stone falls. That doesn''t make sense. There must be a screen that only shows the tower of the player that just answered correctly. then the next player transition screen as specified above. this way we never need to show all towers on one and the same screen in multiplayer round-robin, which makes things easier.
+
+![](pm-images/c859106bce46.png)
+
+it says "K" is already used in the game ... that''s bad UI. If not all keys are available you have to show the keys that are. Ideally show a virtual keyboard that deactivates keys that can''t be selected and allows the players to select their key using the mouse even.
+
+![](pm-images/14b858fa276e.png)
+
+you can''t make the width dependent on the player''s name. they all have the right to equal space. find a mechanism that accomodates for potentially longish names (set a maximum length for players length and base the layout on that, or shrink font-size for long name; probably both)
+
+in competitive multiplayer, the animation that shows category and subcategory repeats in a loop. that''s a bug. it also replayes the animation once a player hits their respective button.
+
+in competitive multiplayer, when a player fails to answer and runs out of time, immediately the correct answer is highlighted in green. that is confusing. we need the specific message: "you ran out of time" (no answer highlighted) and then an animation that removes the player from the game (by removing all their hearts, then fading their name to gray and or a strikethrough) ... when after that animation only one player is left, we need to transition to the victory that explains how they won: "last remaining player" is different to "reached the top first"
+
+these are a lot of tasks in one. group them and create follow-up tasks (maybe even just one follow-up task for every item in here)', '2026-11-19T03:06:26Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
