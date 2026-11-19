@@ -9,7 +9,7 @@ from download import API_URL, Throttle, http_get
 ID = "commons"
 NAME = "Wikimedia Commons"
 PREVIEW_WIDTH = 500           # Commons rounds thumbnail widths to standard sizes; 500 is one
-IMAGE_WIDTH = 2560            # D-48 wants 3840: IMG-16; smaller originals are downloaded as they are
+IMAGE_WIDTH = 2560            # thumbnail width above which a larger image is thumbnailed; Commons rounds up, so picks are `3840px-` (IMG-16)
 VIDEO_PREFERENCE = ["1080p.vp9.webm", "720p.vp9.webm", "1080p.webm", "720p.webm", "480p.vp9.webm", "480p.webm"]
 
 # Templates the PD tags transclude, not tags themselves: subpages, layouts, texts, categories.

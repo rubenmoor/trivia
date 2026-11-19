@@ -135,7 +135,7 @@ Media comes from Wikimedia Commons first, then NASA (space only) and Openverse (
 ```sh
 qgen validate            # checks the source pool, and that app/data/pool.json is its current export
 qgen export              # rewrites app/data/pool.json and the packs' app/data/bundles/<id>/pool.json (the authoring server does this after every change); reload the game page
-qgen report              # supply per level, difficulty and category; progress vs. targets (--bundle <id>, --player <name>, --subcategories, --calibration [<batch>…], --overlaps, --exit-check, --qc [<batch>], --cost, --review-time, --batches, --simulate; all: -h)
+qgen report              # supply per level, difficulty and category; progress vs. targets (--bundle <id>, --player strong|typical|both (with --simulate), --subcategories, --calibration [<batch>…], --overlaps, --exit-check, --qc [<batch>], --cost, --review-time, --batches, --simulate; all: -h)
 qgen patch-notes [<from-tag> [<to-tag>]]   # a content patch's counts-only notes + Steam event drafts (default: newest v* tag → working tree)
 ```
 
@@ -146,7 +146,7 @@ qgen flag --pull --dry-run   # what the report server holds, nothing written
 qgen flag --pull             # reports → needs_work reviews, then acknowledged on the server
 ```
 
-Players send a flagged question with «Enviar» in «Preguntas marcadas»; the game posts it to the report server (`reportUrl` in `app/desktop/package.json`; `--url` overrides it). The pull needs the server's pull token: `export TRIVIA_REPORT_TOKEN=…` (e.g. in `.env.local`) or write it to `state/report-token` (gitignored); never commit it. Each report becomes a `needs_work` review with the feedback «Reporte de jugador (…)» in `/review?status=needs_work`; reports in `en`/`de` go to that translation. Pulled ids are kept in `state/reports-pulled.json`, so a repeated pull adds nothing; mod questions and unknown ids are skipped and acknowledged. Then `qgen rework` picks them up.
+Players send a flagged question with «Enviar» in «Preguntas marcadas»; the game posts it to the report server (`reportUrl` in `app/desktop/package.json`; `--url` overrides it). The pull needs the server's pull token: `export TRIVIA_REPORT_TOKEN=…` (e.g. in `.env.local`) or write it to `state/report-token` (gitignored); never commit it. Each report becomes a `needs_work` review with the feedback «Reporte de jugador (…)» in `/review?status=needs_work`; a report goes to the source question when it is in the report's language, else to that translation (decision 235, `reviews.landing`). Pulled ids are kept in `state/reports-pulled.json`, so a repeated pull adds nothing; mod questions and unknown ids are skipped and acknowledged. Then `qgen rework` picks them up.
 
 ### Run the report server locally
 

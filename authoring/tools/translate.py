@@ -32,7 +32,7 @@ def text_locale(d):
 
 
 def run_bundle(d):
-    """The bundle a `--translate` run translates (base for other runs)."""
+    """The bundle a `--translate` run translates (`base` when the run names none)."""
     return (load_json(d / "run.json", {}) or {}).get("bundle") or "base"
 
 

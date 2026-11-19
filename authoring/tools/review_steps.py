@@ -16,7 +16,7 @@ from qgen import PROBLEMS, FACT_FIELDS, FACT_SCHEMA, QUESTION_FIELDS, REVISE_SCH
 
 # --- the LLM batch's steps: media, sheets, review, fix, research, record (D-36) 
 
-BATCH_SLOTS = 18  # draft slots per subcategory (D-46); base: 57 × 18 slots, about 700 merged questions
+BATCH_SLOTS = 18  # draft slots per subcategory (D-46); base: half of its 198 subcategories × 18 slots
 REVIEW_MODEL = "opus"
 
 REVIEW_SCHEMA = {"type": "object", "required": ["decision", "feedback", "fix", "pick", "background_pick", "new_query", "reasons", "problems"],

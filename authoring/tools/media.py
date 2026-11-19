@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Media candidates and picks (plans/06-images.md, D-13); the providers are in providers/ (D-45).
 
-    trivia-media fetch [--batch pilot | --ids q-0001,q-0002] [--force]
+    trivia-media fetch [--batch batch-12 | --ids q-0001,q-0002] [--force]
     trivia-media sync [--status approved] [--prune]
     trivia-media licenses [--status approved] [--json]
 
