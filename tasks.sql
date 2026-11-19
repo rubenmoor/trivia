@@ -619,7 +619,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - A flag sent from the released game under Steam arrives via `qgen flag --pull` as a needs_work review; without the server the copy fallback works.
 
 Plan files: `plans/11-steam.md`.', '2026-10-11T21:55:09Z', NULL, 0);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (12, 'To China!', 'on-hold', 'add chinese lanaguage to the game. first evaluate, which language exactly and what each entails. I can think of two or three main dialects of mainland china and taiwanese in addition.
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (12, 'To China!', 'open', 'add chinese lanaguage to the game. first evaluate, which language exactly and what each entails. I can think of two or three main dialects of mainland china and taiwanese in addition.
 
 this implies translation of the game and the whole interface, but also: the translation of questions, which is far more translation work. We will start with the base bundle, i.e. when selecting a chinese language in the game, the current logic applies and only those bundles that offer this language will be shown resulting in only the base bundle until we add the translation of other bundles.
 
