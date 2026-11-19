@@ -51503,8 +51503,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - A worker run ends at a RUNBOOK stop: its health or spot-check decision, this task pending on it (`pm task-pending-decision`); it resumes after the answer. Done only at the target.
 
 Done when: `qgen report --bundle chinese-base --locale zh-Hans` shows 6000 approved in the difficulty mix, `qgen report --simulate --bundles chinese-base` ✓ for zh-Hans (one simulate run at a time), `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-19T18:03:39Z', NULL, 2302, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2305, 229, 'create tasks for plan 229: Pipeline review and cleanup for milestone 12', 'split', 'open', 1000, NULL, 'Split plan 229 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:03:55Z', NULL, 2295, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2305, 229, 'create tasks for plan 229: Pipeline review and cleanup for milestone 12', 'split', 'done', 1000, '2026-11-19, tasks 2339 (review), 2340 (close-out); 1163, 1172, 2329 require 2340; cleanup tasks and the unsure-deletions decision come from 2339', 'Split plan 229 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:03:55Z', '2026-11-19T18:26:04Z', 2295, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2306, 141, 'create tasks for plan 141: Native reviewers for Chinese', 'split', 'done', 1000, '2026-11-19, tasks 1171, 1172, 1174 rewritten (zh only, volunteers, decision 754 jobs, no gloss; 1172 requires 1171 and task 2305, 1174 requires 1171 and task 2301 and waits for plan 228''s variant decision), task 1173 dropped (no fit sheet), decision 217 consequences recorded; no new decisions', 'Split plan 141 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:06:46Z', '2026-11-19T18:08:37Z', 2289, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2307, 230, 'create tasks for plan 230: chinese-base step 1: euro-centric filter and copies', 'split', 'open', 1000, NULL, 'Split plan 230 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -51838,6 +51838,39 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Answers written into the docs, consequences recorded, every affected later plan has its follow-up task or needs none (listed in the done note).', '2026-11-19T18:25:00Z', NULL, 2301, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2339, 229, 'Pipeline review: findings, cleanup tasks, open deletions', 'work', 'open', NULL, NULL, 'Task 1 of `plan 229: Pipeline review and cleanup for milestone 12`. Read the plan in full ("Scope", "How unused is found", "Aimed at this milestone''s needs", "Rules for every cleanup task"); it is binding over this summary. No code change in this task.
+
+## Baseline
+- Capture before anything changes, for the close-out''s comparison: `qgen validate`, `qgen report`, `qgen report --locale <l>` for es, es-ES, en, de, `qgen report --cost` → `authoring/reports/pipeline-review-baseline/` (committed; the close-out deletes it). Note the commit hash in the report.
+
+## Review
+- Usage from the main checkout''s `work/` (`run.json`, step folders, `calls.jsonl`), RUNBOOK, QC.md, AGENTS.md, `pm decision list --answered --grep <command>` (a feature a decision asked for stays unless a newer decision drops it).
+- Code: options with no caller, dead branches, applied one-off migrations, compatibility code for formats no file has any more, duplicated helpers (decision 199).
+- Milestone 12 needs: base bundle ≠ id `base` and no `es`; copies with shared media (decision 217); a fit pass reusing `audit`/`rework`/`neutralize`; non-Latin locale (length limits, tokenizing, `slug`, `\w`/`[A-Za-z]`, fonts, `ensure_ascii`). Check what `plan 227: chinese-base bundle: model and setup` tasks (2329–2336) already cover; don''t duplicate them.
+
+## Output
+- `authoring/reports/pipeline-review.md`: per finding what, where, why, proposed change, risk; "Kept, used" list; "For later parts" list with the task ids added there.
+- Each certain cleanup: `pm task add 229 "<subject>" --worktree questions` (body: what, where, done when; "Rules for every cleanup task" of plan 229 by reference), then `pm task requires <close-out task of plan 229> <it>`.
+- Unsure deletions: one `pm decision add` listing candidates with last use and what goes with each, keep/delete per candidate; their tasks `pm task-pending-decision <task> <decision>`.
+- Prompt wording changes: draft + pm decision (D-36), the task pending on it.
+- Follow-ups for other parts: tasks in plans 139, 227, 140 or the part 5 plan (`plan 230: chinese-base step 1: euro-centric filter and copies`), with what, where, done when.
+
+Done when: the report is staged, every finding is a task, a decision or "kept", and the close-out task requires every cleanup task added.', '2026-11-19T18:25:49Z', NULL, 2305, 0, 'opus', 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2340, 229, 'Close-out of plan 229: checks, unchanged output, starting points of plans 139 and 227', 'work', 'open', NULL, NULL, 'Task 3 of `plan 229: Pipeline review and cleanup for milestone 12` (read it in full). Runs after `task 2339: Pipeline review: findings, cleanup tasks, open deletions` and every cleanup task it added (they are this task''s prerequisites).
+
+## Checks
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `python -m pytest authoring/tools`.
+- Unchanged output: `qgen validate`, `qgen report`, `qgen report --locale <l>` (es, es-ES, en, de), `qgen report --cost` against `authoring/reports/pipeline-review-baseline/`; each difference named by a cleanup task''s note, else a bug: fix it if small, else a follow-up task in this plan. Delete the baseline folder afterwards.
+- Smoke: the pipeline end to end without claude calls where an option allows it (`--dry-run`), else `qgen batch --help`, `--bundle`, `--translate`, `--media-first`, `rework` help and the unit tests; review pages load (`trivia-authoring` is a systemd user unit, `local-app-trivia-authoring.service`: restart it, don''t launch it by hand).
+
+## Report and docs
+- `authoring/reports/pipeline-review.md`: each finding marked done, task id, or kept by decision.
+- RUNBOOK, QC.md, the `qgen` rows of AGENTS.md, README describe what''s left (`rg` removed names, decision 200).
+
+## Starting points
+- `plan 139: Chinese locales in data and pipeline` and `plan 227: chinese-base bundle: model and setup` (and their open tasks, e.g. `task 2329: A base bundle other than base in the pipeline`): each statement about code that no longer holds → a line in the done note, and a follow-up task in that plan (or `pm task set` on the open task) if the change asks for work.
+
+Done when: all checks pass, output matches the baseline except named differences, the report is marked done, starting points re-checked.', '2026-11-19T18:25:57Z', NULL, 2305, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -62009,6 +62042,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2535, 2332, '2026-11-19T18:24:04Z', NULL, 'running', NULL, NULL, '9803c64d2784b3a054647c11a0908d49a41dd288', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2536, 2301, '2026-11-19T18:24:11Z', '2026-11-19T18:25:11Z', 'done', NULL, 0, '9d2b1285c9617418a5614d26a93ec4a4871cf289', NULL, 'claude-opus-5-5', '07b742b0-1f6d-4dc8-8b66-588b91584030', NULL, 10, 20, 4142, 398782, 34415, 0.43799640000000006, 49185, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2537, 2337, '2026-11-19T18:25:06Z', NULL, 'running', NULL, NULL, '9d2b1285c9617418a5614d26a93ec4a4871cf289', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2538, 2305, '2026-11-19T18:25:12Z', '2026-11-19T18:26:10Z', 'done', NULL, 0, '7414cc4f9ffe95cdf6bad9f6843e34793d0238df', NULL, 'claude-opus-5-5', '1f2f1224-4c5b-495e-a83c-1f49182cb93b', NULL, 9, 18, 3567, 385062, 36908, 0.44368840000000004, 51775, 60, 473050);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -62784,6 +62818,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1163, 229
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1163, 2301);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1163, 2305);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1163, 2338);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1163, 2340);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1164, 1163);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1165, 1163);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1165, 1164);
@@ -62792,6 +62827,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1166, 230
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1166, 2338);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1172, 1171);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1172, 2305);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1172, 2340);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1174, 1171);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1174, 2301);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1174, 2338);
@@ -63385,6 +63421,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2328, 230
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2328, 2320);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2328, 2327);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2329, 2305);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2329, 2340);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2330, 2329);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2331, 2329);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2333, 2329);
@@ -63399,6 +63436,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2336, 233
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2336, 2334);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2336, 2335);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2338, 2337);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2340, 2339);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
