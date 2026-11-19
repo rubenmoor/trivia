@@ -1054,6 +1054,16 @@ def round_robin(r):
     r.settle(3.5)
     r.shot("victory-rr-coop")
     rr_question(r, "comp-q")
+    r.answer(r.meta["comp-q"]["right"])
+    r.wait("main .result", 30000)
+    r.settle(2.5)
+    r.page.evaluate("window.__galleryTower = {}")  # freezes the tower screen
+    for pad in range(3):  # the next seat's pad presses «Siguiente»
+        r.pad(0, pad)
+    r.wait(".level .tower")
+    r.settle(2)
+    r.shot("tower-rr-competitive")
+    rr_question(r, "comp-q")
     r.answer((r.meta["comp-q"]["right"] + 1) % 4)
     r.wait("main .result.wrong", 30000)
     r.settle(2.5)
@@ -1183,7 +1193,7 @@ STEPS = [
       "choice-rr-coop", "choice-timed", "choice-rr-competitive", "bundles-session"], multiplayer),
     (["start-resume-session", "start-resume-session-2", "start-resume-session-5", "start-resume-session-8", "menu-session", "seat-lost"], in_session),
     (["level-rr-coop", "select-rr-coop", "correct-rr-coop", "wrong-rr-coop", "victory-rr-coop", "level-rr-competitive",
-      "turn-rr-coop", "turn-rr-competitive", "wrong-rr-competitive", "victory-rr-competitive", "victory-last-standing"], round_robin),
+      "turn-rr-coop", "tower-rr-competitive", "turn-rr-competitive", "wrong-rr-competitive", "victory-rr-competitive", "victory-last-standing"], round_robin),
     (["timed-question", "timed-claimed", "timed-claim-last", "timed-paused", "timed-time-up", "timed-round",
       "timed-last-heart", "timed-all-at-risk", "timed-nobody-wins", "timed-sudden-death", "victory-timed"], timed),
 ]
