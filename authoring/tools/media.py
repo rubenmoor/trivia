@@ -26,7 +26,6 @@ from download import RateLimited, cached, file_problem, http_get
 from media_cache import cache_path
 from media_keep import prune
 import atomic  # authoring/tools/atomic.py
-import categories  # authoring/tools/categories.py (D-19, D-43)
 import progress  # authoring/tools/progress.py: a log line per download (task 1131)
 import providers  # authoring/tools/providers/: Commons and the other media providers (D-45)
 
@@ -92,15 +91,14 @@ def query_variants(query):
     return out
 
 
-def find_candidates(media, category=None, every=False, failures=None):
+def find_candidates(media, every=False, failures=None):
     """Up to MAX_CANDIDATES for a question's media, from the providers in order (D-45): each one
     with ever shorter queries until there are ENOUGH; the next provider is only asked while there
     are fewer. `every` (a licence replacement, plans/53): every provider is asked as if it were
     the first, and the candidates alternate between them. Videos are topped up with images.
     A rate-limited or failing provider is skipped; if that leaves nothing, a rate limit is raised so a
     rerun retries instead of storing an empty result. Other failures (5xx, timeout) are added as
-    messages to `failures` when given (else raised): the slot is then stored without candidates.
-    `category` is the broad category's slug."""
+    messages to `failures` when given (else raised): the slot is then stored without candidates."""
     kinds = [media["type"]] + (["image"] if media["type"] == "video" else [])
     found, seen, per_author, errors, failed = [], set(), {}, [], []
 
@@ -113,7 +111,7 @@ def find_candidates(media, category=None, every=False, failures=None):
         found.append(c)
 
     for kind in kinds:
-        for i, provider in enumerate(providers.order(kind, category)):
+        for i, provider in enumerate(providers.order(kind)):
             if i and len(found) >= ENOUGH and not every:
                 break  # the providers before gave enough; spare the others' limits
             base = len(found) if every else 0
@@ -177,17 +175,12 @@ def load_candidates(qid, slot="media"):
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
 
 
-def category_of(q):
-    c = categories.category_of(*categories.key(q))
-    return c["slug"] if c else None
-
-
 def fetch_for(q, slot="media", every=False, tolerate=False):
     """Store the slot's candidates. `tolerate` (batch steps): a provider's 5xx or timeout stores
     none, with the messages under `errors`; `record` then makes the question needs_work."""
     spec = slot_media(q, slot)
     failures = [] if tolerate else None
-    found = find_candidates(spec, category_of(q), every, failures)
+    found = find_candidates(spec, every, failures)
     CANDIDATES.mkdir(parents=True, exist_ok=True)
     data = {"query": spec["query"], "type": spec["type"], "candidates": found}
     if failures:

@@ -45,7 +45,7 @@ Every candidate is in the decision's table with its last use and what goes with 
 | 3 | `qgen tighten` | delete | 2364 |
 | 4 | `audit --backlog` (11 questions left) | last slice, then delete | 2365 |
 | 5 | `qgen video-window` | deleted | 2366 |
-| 6, 7 | NASA, Freesound providers (0 picks) | delete | 2367 |
+| 6, 7 | NASA, Freesound providers (0 picks) | deleted | 2367 |
 | 8 | `trivia-media fetch` | delete | 2368 |
 | 9–12 | `report --exit-check`, `--calibration`, `--overlaps`, `--subcategories` | delete 9–11, keep 12 | 2369 |
 | 13, 14 | review-page bundle move with its start-page row, the old `/?batch=` redirect | delete | 2370 |

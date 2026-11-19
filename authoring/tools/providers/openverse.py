@@ -40,7 +40,7 @@ def token():
 
 
 def source_name(source):
-    return {"flickr": "Flickr", "met": "The Met", "nasa": "NASA"}.get(source, source.replace("_", " ").title())
+    return {"flickr": "Flickr", "met": "The Met"}.get(source, source.replace("_", " ").title())
 
 
 def search(query, kind, limit=30):

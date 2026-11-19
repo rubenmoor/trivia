@@ -20,10 +20,9 @@ def raising(exc):
 class FailingProvider(unittest.TestCase):
     def fetch(self, exc, tolerate=True):
         with tempfile.TemporaryDirectory() as tmp, \
-                mock.patch.object(providers, "order", lambda kind, category: ["openverse"]), \
+                mock.patch.object(providers, "order", lambda kind: ["openverse"]), \
                 mock.patch.object(providers, "search", raising(exc)), \
-                mock.patch.object(media, "CANDIDATES", Path(tmp)), \
-                mock.patch.object(media, "category_of", lambda q: None):
+                mock.patch.object(media, "CANDIDATES", Path(tmp)):
             return media.fetch_for(Q, "media", tolerate=tolerate)
 
     def test_server_error_and_timeout_store_no_candidates(self):
