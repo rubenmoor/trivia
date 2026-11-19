@@ -12030,6 +12030,77 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - The developer approved the whole rework on the TV (task 6''s decision)
 - Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`', 'Once all the new music and sound effects are in the game, they still have to sound right together: the music must sit under the effects and under the sound of quiz videos, and the rise in tension when an answer is locked in must stay clear. This last step balances the volumes, makes sure the files fit the download size and appear in the full game and the free demo, lists every author on the credits screen, updates the descriptions, and finally asks the developer to listen to the whole game on the TV. Only that approval finishes the sound rework.', '2026-11-18T20:49:06Z', 2226, NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (226, 16, 'Multiplayer polish after the first hands-on try', 140, 'Follow-up of `task 2268: improvements for multiplayer modes` (developer''s screenshots in `pm-images/`). Builds on plans 161-165. Rules: `decision 747` (the rules recorded for this plan), `decision 679: Key chips are fixed shortcut labels: Enter/A only on a scope''s primary, a letter or pad button elsewhere, nothing focus-bound`. Each task: gallery review set via `trivia-gallery --set task-<id>`, strings in all four locales per `locales/style/<locale>.md`, names never break the layout (longish names, max seats from the real player cap).', 'The developer tried the local multiplayer modes and found many rough spots: cramped buttons, unclear screens, cut-off names, confusing turn changes and a few bugs. This plan collects the fixes so that several people around one TV always see who is playing, what they can pick and what just happened.', '2026-11-19T03:07:27Z', 2268, NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (227, 12, 'chinese-base bundle: model and setup', 880, 'Part 4 of `plan 60: masterplan`: the data model and setup of `chinese-base`, a second base bundle beside `base`. Copies of `base` questions (part 5) and new China-centric questions (part 7) land in it; English offers both base bundles, at most one per session; the zh locale(s) offer only `chinese-base`.
+
+Waits for: part 2 (pipeline review and cleanup, `task 2295: write plan: Pipeline review and cleanup for milestone 12` and the plan it writes) and part 3 (`plan 139: New locales in data and pipeline`: the zh locale(s) in the locale lists). The split links the tasks below to their tasks with `--requires`.
+
+## Binding inputs
+- `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` → copies.
+- `decision 730: Base tile count: «6000+»`: target 6000, base''s mix.
+- `decision 752: One base bundle per session: at most one, not exactly one`.
+- `decision 753: chinese-base ships in the game''s content depot, not as DLC`.
+- `decision 751: chinese-base copies: does a copy share its source''s seen counter?` (open; recommended: share). Only the seen-key task waits for it.
+- D-94 (packs: every bundle besides `base` lives in `app/data/bundles/<id>/`), D-99/D-100 (bundle-scoped taxonomy, keys bundle + name), D-107 (English drafting, `locale` per source), plan 194 / `plans/24-career.md` (subject per category, unmapped refused on our bundles).
+
+## Copy model (decision 217)
+- A copy is a source question in `authoring/data/questions.json`: new id, `bundle: chinese-base`, `locale: en`, `copied_from: <base id>`, `subcategory` = a `chinese-base` subcategory (the mapped one), `status` reset for the developer''s review (part 5 says which: `needs_work`/pending as its fit pass decides), difficulty and answers from the source.
+- English text: an `en` source''s own; an `es` source''s approved `en` translation (`questions.en.json`); none approved → not copyable.
+- `media` record copied as is (same `file_url`, excerpt, credit), never the file.
+- No link afterwards: `copied_from` is provenance only (fit pass, stats, validate); fixes to the source don''t propagate; translations of the copy are its own (`questions.<zh>.json`, by `--translate`).
+- One helper does it (`authoring/tools/`, e.g. `copies.py` `copy_question(src_id, subcategory)`), used by part 5''s command; no command of its own here.
+- `qgen validate`: `copied_from` names an existing question of another bundle, not itself a copy; at most one copy per source per bundle; only on sources (translations take it from the source, D-81).
+- Overlap and duplicate checks (`already_asked`, D-111, near-duplicate checks in validate/review): a copy and its source are not duplicates of each other; a copy and another `chinese-base` question are (normal rule within the bundle).
+- D-entry in `plans/decisions.md` (next free D number): the copy model.
+
+## A base bundle that isn''t `base`
+- Today code often equates "a base bundle" with the id `base` (paths, `targets.bundle_kind` default, validate''s `kind == "base"` English-first rule, `qgen bundle new --kind base` writes no target, `report --simulate` default, start page supply, ALL_CATEGORIES''s `c.bundle === "base"`). Audit: `rg` for the literal `"base"` and `kind.*base` over `authoring/` and `app/`; each hit is "the bundle `base`" (keep) or "any base bundle" (fix).
+- Files: `chinese-base` is a D-94 pack directory `app/data/bundles/chinese-base/` (`categories.json`, `names.<locale>.json`, `pool.en.json`, `pool.<zh>.json`); no `pool.json` (no `es`). Export, loader (`withPacks`), validate and report accept a pack without `es` and a base bundle in a pack directory.
+- Targets: `qgen bundle new --kind base` writes `targets.json` `<id>` = base''s mix (6000, `targets.scaled` of base''s total); drafting aims (`targets.py`, D-84/decision 236) count `chinese-base` per its own `languages` only (it never drives `base`''s drafting, nor `base`''s gaps it).
+- Depot (decision 753): `stage-media.mjs` puts a `kind: base` pack''s pool and media in the content depot (no `pack-media.json` entry); build, `trivia-steam` depot VDFs, release check pool hashes (`<locale>/chinese-base`) follow.
+
+## Media not duplicated
+- Already shared by construction: the cache is keyed by URL (`media_cache.py` `cache_path`, `resolve.mjs` `cacheName`), shipped names by URL + excerpt fragment (`shippedName`, decision 644), `stage-media.mjs` dedups by URL in one `Set`, `trivia-media sync` and `media_keep` work on URLs.
+- Check, with a fixture copy: one cache file, one encode in `work/ship-media/`, one file in `build/media/`, the Credits/attribution list shows the file once; review tool and `/review?licence=replace` list both questions on that file. Fix what doesn''t hold.
+
+## The bundle
+- `qgen bundle new chinese-base --kind base --icon <one of BUNDLE_ICONS> --language en …`: entry in `app/data/bundles.json` after `base` (so `base` stays the first base bundle in en), `languages: [<zh locale(s)>, "en"]`; empty `categories.json`; names in `names.en.json` / `names.<zh>.json` (game names: Spanish `name`/`description` per bundles.json''s rule, here also needed in en and zh).
+- `rule` (English, membership for the pipeline): China-centred, what a Chinese family knows or learns in school; also what part 1''s sensitivity rule allows. `voice`: English for a Chinese family (Chinese names in pinyin, Chinese order, terms with characters where they help) and each zh locale''s variety. Both drafted by the worker and approved by the developer in a pm decision (prompt text, D-36).
+- Taxonomy: from part 6 (`qgen taxonomy --bundle chinese-base --apply`), plus reused `base` subcategories by name (D-99, D-100); every category with a `subject` (plan 194). Not this plan''s work beyond the empty bundle; part 6 waits for the bundle task.
+- `--icon` needs the flag on `bundle new` for kind base (today: any non-region); a `kind: base` bundle''s `country` stays forbidden.
+
+## Game: base bundles per locale, at most one per session
+- `bundlesFor` unchanged (by `languages`): en → `base`, `chinese-base` + add-ons; zh → `chinese-base` only (until other bundles list zh).
+- `BundleSelector.svelte` `toggled`: picking a base bundle deselects the other base bundles; picking the selected one turns it off; add-ons toggle as today (decision 752). Same in `Bundles.svelte` and wherever `toggled` is used.
+- Engine (`choice.ts`, `state.ts`): a choice with two or more base bundles is normalized to the first in the locale''s order (stored choices, `playerChoice` preset, decision 158), never written back (D-85''s rule for stored choices); `newGame`/`new` refuse 2+ base bundles (new refusal key, strings es/es-ES/en/de; UI never sends it).
+- Default per locale: the locale''s first base bundle (unchanged rule): en → `base`, zh → `chinese-base`.
+- Mods'' base bundles (decision 269 superseded, plan 151): the same one-of rule; a mod''s base bundle stays off by default.
+- Docs: D-85 amended again in `plans/decisions.md`; `plans/22-bundles.md`; `bundles.json` `about` ("exactly one per session" → at most one).
+- Gallery review set (`trivia-gallery --set task-<id> --only bundles --locale en`) with a fixture `chinese-base` pool.
+
+## Seen counts (D-82, decision 751)
+- If option 1: export writes `copied_from` into the pool entries; engine seen key = `copied_from ?? id` for `count`, `blocked`, exhausted subcategories, low-supply, QUESTIONS_1000''s distinct ids, `qgen report --simulate`''s sessions; the save stays v-current (rows keep the real id). If option 2: nothing to do, D-82 note only.
+
+## Career and achievements
+- `chinese-base`''s categories map onto the 7 subjects (`app/data/subjects.json`, `subject` per category); `qgen validate` already refuses unmapped ones on our bundles: check it covers a pack base bundle.
+- ALL_CATEGORIES (`achievements.ts`): today `base`''s categories only, so a family playing only `chinese-base` can never get it. New rule: every category with approved questions of any one base bundle offered in the game''s locale has a right answer; test for each base bundle.
+- `BUNDLE_*` stays for add-on DLC only (decision 73, decision 146): no `BUNDLE_CHINESE_BASE` (decision 753: not DLC); career badges count `chinese-base` categories by their subject. Reachability with `chinese-base` alone is part 12''s check.
+
+## Tasks (suggested split, in order)
+1. (questions) A base bundle other than `base` in the pipeline: audit and fixes on the authoring side (paths, targets, `bundle new --kind base` with target and `--icon`, export/validate/report for a pack without `es`), fixture test with a two-base-bundle data set; `qgen validate`/`report` unchanged for today''s data.
+2. (questions) Copy model: `copied_from`, the copy helper, validate rules, overlap/duplicate exemption, D-entry; tests. After 1.
+3. (app) Media and depot: shared-file checks with a fixture copy (cache, encode cache, `build/media`, credits), `stage-media.mjs` base packs in the content depot (decision 753), release check hashes. After 1.
+4. (app) One base bundle per session (decision 752): `toggled`, engine normalize/refuse, presets, mods, strings, D-85 and `plans/22-bundles.md`, gallery set. Independent of 1–3.
+5. (app) ALL_CATEGORIES per base bundle; other app-side `"base"` hits from the audit (start page supply, `sim/`). After 1.
+6. (app) Seen key for copies, pending on decision 751; export of `copied_from` (questions side if needed, one task each work tree, or one in questions touching both). After 2.
+7. (questions) Create `chinese-base`: `qgen bundle new`, names, draft `rule`/`voice` and a pm decision for the developer to approve them; after 1, part 3''s zh locale lists (`plan 139: New locales in data and pipeline`) and part 1''s variant decision; parts 5, 6, 7 wait for it.
+
+## Left to other parts
+- zh locale(s) in the lists (part 3); taxonomy (part 6); the fit pass and copying run (part 5); drafting (part 7); zh translation (part 8); UI catalogs and fonts (part 10); store text naming `chinese-base` (part 11); career reachability, a demo for zh, release (part 12).
+
+## Done when
+- With a fixture `chinese-base` (a copy and a new question): `qgen validate`, `export`, `report --bundle chinese-base --locale en` pass; the copy''s media is one file everywhere; English shows two base tiles, at most one on; zh shows only `chinese-base`; ALL_CATEGORIES reachable in a `chinese-base` game.
+- The real `chinese-base` exists (empty taxonomy until part 6), `rule`/`voice` approved.
+- es, es-ES, en, de output unchanged otherwise: `npm run check`, `npm test`, `npm run build`, `qgen validate`, `qgen report` as before.', 'The Chinese edition gets its own main set of questions, partly copied from the existing set and partly new, while English-speaking players can choose between the two sets. This part sets up how a copied question is stored without storing its pictures and sounds twice, makes the game allow only one main set per game, and keeps badges and achievements working for players of the Chinese set.', '2026-11-19T18:00:00Z', 1148, NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -31216,7 +31287,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `qgen validate` "each language has a base bundle": `zh-Hans` gets `chinese-base` only in part 2; the plan says how validate treats zh until then.
 - Done when (plan): `qgen validate` and `report` handle all three locales with empty pools; nothing changes for es/en/de.
 - Plan priority ~900. Check `pm plan list` first; refer to, don''t duplicate, open plans (e.g. `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`, `plan 103: Report server (POST /reports)`).', '2026-10-15T20:09:26Z', '2026-10-15T20:11:32Z', 1146, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1148, 60, 'write plan: chinese-base bundle: model and setup', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of `plan 60: masterplan` (`pm plan add 12 …`): the `chinese-base` bundle''s model and setup.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1148, 60, 'write plan: chinese-base bundle: model and setup', 'plan', 'done', 1000, '2026-11-19, plan 227: chinese-base bundle: model and setup (priority 880); decision 751 raised (seen counter for copies), decisions 752 (at most one base bundle per session) and 753 (chinese-base in the content depot, not DLC) recorded; no files changed', 'Write the plan for part 4 of `plan 60: masterplan` (`pm plan add 12 …`): the `chinese-base` bundle''s model and setup.
 
 - Binding: `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` (copies): own id, `bundle: chinese-base`, `locale: en`, `copied_from: <base id>`, checked by `qgen validate`; no link afterwards, wording may diverge. A D-entry in `plans/decisions.md`.
 - Media not duplicated: copy keeps the `media` record; check `media_cache.py` `cache_path`, `app/desktop/stage-media.mjs` / encode cache and `trivia-media sync` store a shared file once; fix if not.
@@ -31225,7 +31296,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Seen counts (D-82): say whether `copied_from` shares the seen counter (a decision if not obvious).
 - Career/achievements: `chinese-base` categories map onto the 7 subjects (`plans/24-career.md`, unmapped refused by `qgen validate`); `ALL_CATEGORIES`-style achievements in a `chinese-base` game; `BUNDLE_*` add-ons only (decision 73, decision 146).
 - Waits for parts 2 (pipeline cleanup) and 3 (`plan 139: New locales in data and pipeline`); name them.
-- Plan priority ~880.', '2026-10-15T20:09:27Z', NULL, 1146, 0, NULL, 'questions');
+- Plan priority ~880.', '2026-10-15T20:09:27Z', '2026-11-19T18:00:05Z', 1146, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1149, 60, 'write plan: Translation prompts and markets per locale', 'plan', 'done', 1000, '2026-10-15, plan 140: Translation prompts and markets per locale (tasks.sql only)', 'Write the plan for part 3 of `plan 60: masterplan` (`pm plan add 12 …`): translation prompts for `zh-Hans`, `ru`, `pt-BR` and the `chinese-base` fit pass prompt.
 
 - Scope: masterplan part 3: `authoring/tools/prompts/locale-{zh-Hans,ru,pt-BR}.md` like `locale-en.md` / `locale-de.md` (decisions 35, 160, 167); per-locale rules (Simplified characters, Chinese punctuation, 万; Russian case endings across options, «ёлочки», Cyrillic transliteration; Brazilian usage, «você»; numbers and units).
@@ -31281,42 +31352,52 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:22:44Z', NULL, 1154, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1162, 145, 'create tasks for plan 145: Release and close-out of the new languages', 'split', 'open', 1000, NULL, 'Split plan 145 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:24:37Z', NULL, 1155, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1163, 139, 'New locales zh-Hans, ru, pt-BR in the locale lists and rules', 'work', 'open', NULL, NULL, 'Part 1 of `plan 139: Chinese locales in data and pipeline`: the three locales become translation locales (D-78, D-81) with empty pools; es/en/de unchanged.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1163, 139, 'Chinese locale(s) in the locale lists and rules', 'work', 'open', NULL, NULL, 'Task 1 of `plan 139: Chinese locales in data and pipeline`: the zh locale(s) become question translation locales (D-78, D-81) with empty pools; es, es-ES, en, de unchanged. No `ru` / `pt-BR` anywhere (out of milestone 12), no `DRIVES_DRAFTING` (gone, `decision 236: English-first drafting for base: what drives drafting and which locales steer it`), no `bundles.json` change.
 
-## Before any change
-- Capture baseline output on the unchanged tree: `qgen validate`, `qgen report`, `qgen report --simulate`, `qgen report --cost` → temp files (deleted at the end).
+## Before starting
+- "the zh locale(s)" = the answer of the variant decision raised under part 1 of `plan 60: masterplan` (plan written by `task 2294: write plan: Chinese variants and the Chinese audience (evaluation)`). Not answered yet: `pm task-pending-decision 1163 <id>`, stage nothing, stop. Not raised yet: `pm task requires 1163 <the task that raises it>`, stop.
+- Part 2''s cleanup (plan written by `task 2295: write plan: Pipeline review and cleanup for milestone 12`) lands first: if its cleanup tasks in the `questions` worktree are still open, `pm task requires 1163 <them>` and stop. Re-read the code after them; the names below are the 2026-11-19 starting point.
+
+## Baseline first
+- On the unchanged tree: `qgen validate`, `qgen report`, `qgen report --simulate`, `qgen report --cost` → temp files (deleted at the end).
 
 ## Changes
-- `authoring/tools/translations.py`: `LANGUAGES` += `"zh-Hans": "Simplified Chinese"`, `"ru": "Russian"`, `"pt-BR": "Brazilian Portuguese"` (comment: D-78, milestone 12; replace the "when milestone 12 resumes" comment); rename `LAUNCH` → `ALL`, all callers follow (`rg -n ''\bLAUNCH\b'' authoring`: `qgen.py`, `targets.py`, `played.py`, `reviews.py`, `authoring/server/main.py`, `overview.py`, `patch_notes.py`, …).
-- New `translations.DRIVES_DRAFTING = ("en", "de")`; `targets.source_supply` / `source_shortfall` count a locale for a bundle only if it is in `DRIVES_DRAFTING` and the bundle lists it in `languages` (`decision 219: Do the new locales (zh-Hans, ru, pt-BR) steer es drafting from the start?`). `--cost` projection and `--locale` progress still cover every locale.
-- `app/client/src/lib/data.ts` `LOCALES` and `app/desktop/check-mod.mjs` `LOCALES`: add the three; `engine/pool.test.ts` fixture unchanged.
-- `app/data/bundles.json`: `base` `languages` = `["es", "en", "de", "ru", "pt-BR"]` (no `zh-Hans`: zh plays `chinese-base`, part 2).
-- `authoring/tools/patch_notes.py` `EVENT`: entries for the three, drafted from `en`''s (native check in part 8).
-- `qgen.py` `bundle_problems`: a locale no bundle lists in `languages` → warning `zh-Hans: no bundle lists it yet (chinese-base, part 2)`, not an error; a locale listed by some bundle without a base bundle stays an error.
-- `qgen report --simulate` (`report_simulate`''s `default`): a locale with no base bundle is skipped with a line, no fallback to `"base"`.
-- `qgen batch --translate <locale>`: accepts the three; stops before any claude call with a clear message when `authoring/tools/prompts/locale-<locale>.md` is missing (prompts: part 3).
+- `authoring/tools/translations.py` `LANGUAGES` += the zh locale(s), e.g. `"zh-Hans": "Simplified Chinese"`; comment: D-78, milestone 12; drop the "zh-Hans, ru, pt-BR when milestone 12 resumes" wording. `NAMED` follows by itself.
+- `app/client/src/lib/data.ts` `LOCALES`, `app/desktop/check-mod.mjs` `LOCALES`: the same; `engine/pool.test.ts` fixture unchanged.
+- `authoring/tools/patch_notes.py` `EVENT`: an entry per zh locale, drafted from `en`''s (native check: part 11).
+- `qgen validate` (`validate.bundle_problems`): a locale no bundle lists → warning `<zh>: no bundle lists it yet (chinese-base, plan 60 part 4)` instead of the silent skip; listed without a base bundle stays an error.
+- `qgen report --simulate` (`report.report_simulate`): a locale with no base bundle is skipped with a line, no fallback to `"base"`.
+- `targets.source_supply`: counts a locale for a bundle only if the bundle lists it in `languages`. Verify es, es-ES, en, de aims stay identical; if a bundle counts a locale it doesn''t list, say so in the done note instead of changing its aims.
+- `qgen batch --translate <zh>`: accepted; stops before any claude call with a clear message while `authoring/tools/prompts/locale-<zh>.md` is missing (today `qgen.prompt` falls back to `locale-zh.md`; prompt is part 8).
+- `qgen report --cost` projection and `--locale` progress include the zh locale(s).
 
 ## Check
-- Rerun the four commands; es/en/de output identical to the baseline apart from the new locales'' rows/lines and the zh warning.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass. Missing `names.{zh-Hans,ru,pt-BR}.json` only warns (next task adds them).', '2026-10-15T20:25:33Z', NULL, 1156, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1164, 139, 'Names files for zh-Hans, ru, pt-BR', 'work', 'open', NULL, NULL, 'Part 2 of `plan 139: Chinese locales in data and pipeline`; after the locale lists task.
+- Rerun the four baseline commands: identical apart from zh rows/lines and the zh warning.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; a missing `names.<zh>.json` may only warn (next task adds it).', '2026-10-15T20:25:33Z', NULL, 1156, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1164, 139, 'Names files for the Chinese locale(s)', 'work', 'open', NULL, NULL, 'Task 2 of `plan 139: Chinese locales in data and pipeline`; after `task 1163: Chinese locale(s) in the locale lists and rules`. No `ru` / `pt-BR` files.
 
-- `app/data/names.ru.json`, `app/data/names.pt-BR.json`: same shape as `names.en.json`; `base`''s categories and subcategories, bundle `base`, age groups. Not `colombia` (no bundle lists ru/pt-BR besides `base`).
-- `app/data/names.zh-Hans.json`: age groups only; `chinese-base`''s names come with its taxonomy (part 2 of `plan 60: masterplan`).
-- Drafted by the worker from `names.en.json` + the Spanish (`names` in `bundles.json` / taxonomy); pt-BR spelling, Simplified characters. No marker in the files: list them in the task''s done note as "for the native reviewers (part 4)".
-- Check: `qgen validate` has no names warnings for the three; `npm run check`, `npm test`, `npm run build` pass.', '2026-10-15T20:25:33Z', NULL, 1156, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1165, 139, 'Check pass and docs for the new locales', 'work', 'open', NULL, NULL, 'Part 3 of `plan 139: Chinese locales in data and pipeline`; after the locale lists and names files tasks. Fixes only what breaks; anything larger is a follow-up task.
+- `app/data/names.<zh>.json` per zh locale (as `task 1163` added them): age groups only, same shape as the age-group part of `names.en.json`. No bundle, category or subcategory names: no bundle lists zh yet; `chinese-base`''s names come with parts 4 and 6 of `plan 60: masterplan`.
+- Drafted by the worker in the right characters (Simplified for `zh-Hans`, Traditional for a `zh-Hant`/`zh-TW`), from `names.en.json` and the Spanish names. No marker in the file; list the drafted names in the done note "for part 9''s native reviewers".
+- Check: `qgen validate` has no names warnings for the zh locale(s); `npm run check`, `npm test`, `npm run build` pass.', '2026-10-15T20:25:33Z', NULL, 1156, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1165, 139, 'Check pass and docs for the Chinese locale(s)', 'work', 'open', NULL, NULL, 'Task 3 of `plan 139: Chinese locales in data and pipeline`; after `task 1163: Chinese locale(s) in the locale lists and rules` and `task 1164: Names files for the Chinese locale(s)`. Fixes only crashes in the commands below; anything larger is a follow-up task in the plan that owns it (part 2''s cleanup plan if pipeline-wide, part 8 of `plan 60: masterplan` if translation-only).
 
-## Check with empty pools for zh-Hans, ru, pt-BR
-- `qgen validate` (only the zh "no bundle lists it yet" warning), `qgen export` (no `pool.<locale>.json` for the three), `qgen report` with `--locale <each>`, `--simulate` (zh skipped with a line), `--cost` (projection for all six), `--played`; `qgen health`; `qgen flag` with a pasted report tagged `ru` lands on that translation (decision 102).
-- `qgen batch --translate ru` stops before any call (no `locale-ru.md`).
-- `trivia-authoring` (:8001): start page (`overview.py`) shows the three as empty rows; `/review?locale=zh-Hans|ru|pt-BR` and the stats page''s locale links load without errors (`authoring/server/main.py` `?locale=` check).
-- Generic parts, read only: `run_locale` tags `tr-<locale>-<n>`, `reviews.HEADER` `[\w-]+`, `authoring/steam/release_check.py` `pools()`, telemetry `locale`, `report-server/src/validate.ts` `LANG`.
+## Empty zh pools
+- `qgen validate` (only the zh "no bundle lists it yet" warning), `qgen export` (no `pool.<zh>.json`), `qgen report` (`--locale <zh>`, `--simulate` with the skip line, `--cost`, `--played`), `qgen health`, `qgen flag` with a pasted report tagged with the zh locale (lands on that translation, decision 102).
+- `qgen batch --translate <zh>` stops before any claude call (no `locale-<zh>.md`).
+- `trivia-authoring`: restart the systemd unit (`local-app-trivia-authoring.service`, user), don''t launch by hand; start page (`overview.py`) shows an empty zh row; `/review?locale=<zh>` and the stats page''s locale links load.
+- Generic parts, read only: `tr-<locale>-<n>` tags, `reviews.HEADER` `[\w-]+`, `authoring/steam/release_check.py` `pools()`, telemetry `locale`, `report-server/src/validate.ts` `LANG`.
+
+## Non-Latin sample (scratch copy only)
+- Temp copy of the data, never committed: three hand-written zh translations of approved `base` questions → `qgen validate` and `qgen export` accept them, the review page renders them.
+- Look for Latin-only assumptions: length limits in characters, word-based overlap or tokenizing, `slug`, sorting; each one found → follow-up task as above.
+
+## Regression
+- es, es-ES, en, de: `qgen validate`, `qgen report`, `--simulate`, `--cost` against `task 1163`''s baseline (rerun it on the commit before `task 1163` if gone): identical apart from zh rows and the warning.
 
 ## Docs
-- `plans/decisions.md`: D-78 / D-81 notes (the three locales, `DRIVES_DRAFTING`, decision 219).
-- `plans/15-i18n.md` "later languages": now in the lists, empty pools; what parts 2–8 add.
-- `directory.md` only if a new file kind appeared (names files aren''t new).
+- `plans/decisions.md`: D-78 / D-81 notes (the zh locale(s); decision 236''s "only listing bundles count" rule).
+- `plans/15-i18n.md` "later languages": zh in the lists with empty pools; ru/pt-BR no longer planned; what parts 4–12 add.
+- `directory.md` only if a new file kind appears.
 
 ## Done when
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; plan 139''s "Done when" holds.', '2026-10-15T20:25:34Z', NULL, 1156, 0, NULL, 'questions');
@@ -31463,7 +31544,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `lib/input.svelte.ts` `toIntent`: per the key decision (recommended: `e.code` fallback when `e.key` is a non-Latin letter).
 - `picker.letters` per catalog and `MAX_NAME` per the picker decision (`LetterPicker.svelte`, Player screen).
 - `check:literals`: ru plural maps need `one`/`few`/`many` (+`other`); every catalog character covered by the locale''s font (after task 2; if task 2''s font files aren''t in yet, add a follow-up task instead).
-- `app/desktop/mods.mjs` `LANGS` (`check-mod.mjs` `LOCALES` is `task 1163: New locales zh-Hans, ru, pt-BR in the locale lists and rules`''s); `publish.mjs` Workshop language tags: Steam''s tag names (`schinese`/`russian`/`brazilian` style per Steam''s Workshop tag list), not `split("-")[0]`; modding kit docs (`modding/`) list the languages.
+- `app/desktop/mods.mjs` `LANGS` (`check-mod.mjs` `LOCALES` is `task 1163: Chinese locale(s) in the locale lists and rules`''s); `publish.mjs` Workshop language tags: Steam''s tag names (`schinese`/`russian`/`brazilian` style per Steam''s Workshop tag list), not `split("-")[0]`; modding kit docs (`modding/`) list the languages.
 - `authoring/tools/reviews.py` `LABELS` (`decision 142: Report text format (copy fallback, qgen flag)`): Question/Answer/Note labels as the catalogs will say them (take them from the catalog leaves at runtime if simple, else placeholders updated by tasks 4–6).
 - `authoring/tools/gallery.py` `LOCALES` += the three.
 - `/comodines?lang=`: zh-Hans, ru, pt-BR, all A4 (`@page size`).
@@ -51191,8 +51272,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Waits for `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` and parts 4, 5, 6; name them.
 - Replaces the drafting half of the dropped `task 1152: write plan: chinese-base content`.
 - Plan priority ~-120.', '2026-11-19T17:56:58Z', NULL, 2286, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2299, 139, 'create tasks for plan 139: Chinese locales in data and pipeline', 'split', 'open', 1000, NULL, 'Split plan 139 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T17:58:44Z', NULL, 2287, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2299, 139, 'create tasks for plan 139: Chinese locales in data and pipeline', 'split', 'done', 1000, '2026-11-19, tasks 1163, 1164, 1165 reworded to zh only (no ru/pt-BR, no DRIVES_DRAFTING, no bundles.json change); 1163 requires 2294, 2295 and goes pending on the variant decision once raised; 1164 → 1163, 1165 → 1163, 1164; no new decisions (variant decision comes from part 1)', 'Split plan 139 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T17:58:44Z', '2026-11-19T17:59:56Z', 2287, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2300, 227, 'create tasks for plan 227: chinese-base bundle: model and setup', 'split', 'open', 1000, NULL, 'Split plan 227 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:00:00Z', NULL, 1148, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -58715,6 +58798,11 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (750, 'New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?', 'pending', '["1: drafted in English, reviewed by the developer, translated into Chinese; supersedes decision 218", "2: keep decision 218: drafted in Chinese"]', 'Milestone 12 now says: ''draft the new questions of the second step in english first (for me to review)'', and offers the Chinese base bundle in English too. `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` answered ''drafted in Chinese'' (2026-10-16), before the edit. `plan 60: masterplan` (revised by task 1366) assumes option 1; the content parts wait for this answer.
 Option 1: English sources like `base` since D-107 (`qgen batch --bundle chinese-base`, `locale: en`), the developer reviews in English, then `qgen batch --translate <zh locale> --bundle chinese-base`; English text ships as chinese-base''s English pool; Chinese-language questions (characters, idioms) drafted in English with the Chinese term quoted, checked by the native reviewers in the translation review.
 Option 2: keep decision 218: Chinese source language for the new questions (a second drafting path); the developer can''t review them; English then comes by translation from Chinese.', 'The Chinese edition of the game gets its own set of new questions about China. Earlier the answer was to write them directly in Chinese; the goal as rewritten since says to draft them in English first so the developer can review them. This choice settles which language the new questions are written and reviewed in, and so whether a second writing language is needed at all.', NULL, NULL, '2026-11-19T17:53:51Z', NULL, 1366, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (751, 'chinese-base copies: does a copy share its source''s seen counter?', 'pending', '["1: share: copy and source count as one question for seen, blocked and distinct counts", "2: separate: a copy is a new question for every count"]', 'Decision 217 (copies) gives a chinese-base copy its own id and `copied_from: <base id>`; D-82 counts seen events by id, so today a copy is a new question. Only English offers both base bundles (one per session); zh offers only chinese-base, so the question only matters for English players and for a save that plays in several languages.
+Option 1: the engine counts by a seen key = `copied_from` ?? id: a copy and its source share count, Bloquear pregunta, exhausted subcategories, the low-supply warning and QUESTIONS_1000''s distinct count; the exported pool carries `copied_from`; texts stay independent (fixes don''t propagate). Small engine change, no save change.
+Option 2: separate counters (no link after copying, as decision 217 reads literally): an English family switching bundles sees up to ~4000 questions a second time as fresh; QUESTIONS_1000 counts both.', 'The new Chinese edition reuses many existing questions as copies with their own wording. An English-speaking family can play either question set, so the same question may come up once from each. This chooses whether the game treats a copy and its original as one question when it decides what was already seen, or as two independent ones.', NULL, NULL, '2026-11-19T17:59:07Z', NULL, 1148, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (752, 'One base bundle per session: at most one, not exactly one', 'answered', '[]', 'Milestone 12: ''there can only be one base bundle in any game session, so selecting one de-selects all others'' limits the count, it doesn''t forbid zero; milestone 8''s any-combination games without a base bundle (D-85 amended 2026-10-16) keep working, `no_questions` stays the refusal for an empty choice. Plan 60 part 4''s ''exactly one'' reads as this.', 'The game is getting a second main question set, a Chinese one, next to the existing one, and only one of them may be used in a game. This settles whether a game may also have no main set at all, playing only add-on packs, as is allowed today.', 'At most one base bundle per session: picking a base bundle deselects the other base bundles; picking the selected one again turns it off, as today; games of add-on bundles only (milestone 8) stay; a stored choice or preset with two or more base bundles keeps the first in the locale''s order', NULL, '2026-11-19T17:59:16Z', '2026-11-19T17:59:16Z', 1148, NULL, 'rule', 1148, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (753, 'chinese-base ships in the game''s content depot, not as DLC', 'answered', '[]', 'D-94 calls every bundle besides `base` a pack with a DLC depot (`build/pack-media.json`); decision 66 (packs as free DLC) is about add-ons. A Chinese player must get chinese-base with the game, and the copies share most media with `base`.', 'Packs of extra questions reach players as optional downloads on Steam. The new Chinese main question set is not an extra but the game itself for Chinese players, so this fixes that it comes with every copy of the game and its pictures and sounds are stored only once.', 'chinese-base (and every kind: base bundle) ships with the game: its pool files and its own media in the content depot; stage-media.mjs writes no pack-media.json entry and no DLC depot for a base bundle; media it shares with base stay once', NULL, '2026-11-19T17:59:17Z', '2026-11-19T17:59:17Z', 1148, NULL, 'rule', 1148, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, NULL, NULL, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, NULL, NULL, 73367);
@@ -61329,6 +61417,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2513, 2286, '2026-11-19T17:55:36Z', '2026-11-19T17:57:15Z', 'done', NULL, 0, '09688a9b2704110fcdf76add1a93ffc2438d7bf6', NULL, 'claude-opus-5-5', '0139ba67-de1f-4496-8d7b-4dc1908298ca', NULL, 11, 22, 7342, 556148, 55194, 0.6997096, 69545, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2514, 1148, '2026-11-19T17:57:09Z', NULL, 'running', NULL, NULL, '09688a9b2704110fcdf76add1a93ffc2438d7bf6', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2515, 2287, '2026-11-19T17:57:16Z', '2026-11-19T17:58:56Z', 'done', NULL, 0, '35418e2bed24d102902e4aedaa2fdab97f00d45e', NULL, 'claude-opus-5-5', '428b33d8-f606-4911-8bce-8a4cccd9f821', NULL, 10, 20, 7407, 533233, 54774, 0.6930586, 69793, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2516, 2299, '2026-11-19T17:58:56Z', '2026-11-19T18:00:07Z', 'done', NULL, 0, '1a613a8eff4e7e5994027a9ca15243db7fe6caa8', NULL, 'claude-opus-5-5', '5a762433-6deb-4064-a901-f71dfcbd9391', NULL, 9, 18, 5321, 374947, 38813, 0.4919854, 53868, 60, 473050);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -62094,6 +62183,11 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (639, 1726
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1034, 1033);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1034, 1711);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1035, 1034);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1163, 2294);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1163, 2295);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1164, 1163);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1165, 1163);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1165, 1164);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1649, 1648);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1666, 1889);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1667, 1666);
