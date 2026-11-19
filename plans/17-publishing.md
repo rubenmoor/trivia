@@ -184,6 +184,10 @@ This section records what a worker found for the three store names: «Living Roo
 | Wohnzimmer-Quiz | App Store de, Play | none | – | – | – | 2026-10-14 |
 | Wohnzimmer-Quiz | domain | wohnzimmer-quiz.de, wohnzimmer-quiz.com, wohnzimmerquiz.com free; wohnzimmerquiz.de in DENIC's redemption period (recently dropped) | – | – | – | 2026-10-14 |
 
+| Living Room 知识竞赛 / 知識競賽 | Steam (zh searches, 2026-11-19) | none; quiz games found have other names (Family Quiz, Party Quiz, Quick Trivia, Knowledge Party on Epic) | – | – | – | 2026-11-19 |
+| Living Room 知识竞赛 / 知識競賽 | web (zh, en) | none: no game, app or show named «Living Room 知识竞赛»; 知识竞赛 alone is the generic word for a quiz contest | – | – | – | 2026-11-19 |
+| Living Room 知识竞赛 / 知識競賽 | TMview, WIPO GBD (CNIPA), TIPO, Chinese app stores | not checked: search tool can't query registries or app stores (captcha, scripts) | 9, 41 | – | open | 2026-11-19 |
+
 - Findings:
   - No Steam game is named after any of the three.
   - No live identical mark was found in classes 9, 28 or 41.
@@ -193,6 +197,7 @@ This section records what a worker found for the three store names: «Living Roo
     - «Trivia Family - En Español» on the Spanish App Store.
     - For «Wohnzimmer-Quiz», nothing close; «Wohnzimmer» is a common word in German marks.
 - Result (2026-10-15, pm decision 176): all three pass; D-50 and OQ-34 final. No professional clearance search.
+- Chinese names (decision 766, decision 768): «Living Room 知识竞赛» (zh-Hans), «Living Room 知識競賽» (zh-Hant). Web and Steam searches found no clash. 知识竞赛 is a descriptive common term ("knowledge contest"), so it can't be a mark by itself; «Living Room» carries the name, as for the en name. CNIPA/WIPO, TIPO and Chinese app stores still need the developer's manual look (pm decision "Chinese store name passes PUB-7?"). Not registering in China is the choice for now (`plans/26-china.md`).
 
 ## Steamworks signup (PUB-6)
 This is the developer's checklist for becoming a Steamworks partner as a person (decision 67, D-98) and creating the app. Workers only research and write it; every step below is the developer's. Valve's order is paperwork, then the fee, then bank, tax and identity, so the advisor check comes before the first step. Once done, report it in pm decision 177 "Steamworks app created? App ID?" (pm plan 129). Not legal or tax advice.
