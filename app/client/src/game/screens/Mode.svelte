@@ -16,6 +16,7 @@
   import type { GameMode } from "../../lib/types.ts";
   import { modePreset, type Kind, type Stage } from "../modePreset.ts";
   import Icon, { type IconName } from "../Icon.svelte";
+  import OptionButton from "../OptionButton.svelte";
   import Prompt from "../Prompt.svelte";
 
   let {
@@ -164,22 +165,23 @@
   </div>
 </section>
 
-{#snippet card(id: string, name: string, about: string, key: string, icon: IconName, on: boolean, i: number, pickIt: () => void, ships?: string)}
-  <button
-    class="pick-tile card glass"
-    class:on
-    style:--i={i + 1}
+{#snippet card(id: string, name: string, about: string, key: string, glyph: IconName, on: boolean, i: number, pickIt: () => void, ships?: string)}
+  <OptionButton
+    class="card"
+    {on}
+    style="--i:{i + 1}"
     role="radio"
     aria-checked={on}
     onclick={pickIt}
     disabled={busy}
     data-focus-id={id}
+    caption={name}
   >
-    <Prompt action={{ type: "letter", key }} hold />
-    <span class="pick-name"><Icon name={icon} /> {name}</span>
+    {#snippet icon()}<Icon name={glyph} />{/snippet}
+    {#snippet chip()}<Prompt action={{ type: "letter", key }} hold />{/snippet}
     <span class="label">{about}</span>
     {#if ships}<span class="label warn">{`PLACEHOLDER(${ships})`}</span>{/if}
-  </button>
+  </OptionButton>
 {/snippet}
 
 <style>
@@ -217,7 +219,7 @@
   .group .pick-row {
     align-items: stretch;
   }
-  .card {
+  :global(.card) {
     min-width: calc(24 * var(--u));
     max-width: calc(30 * var(--u));
   }

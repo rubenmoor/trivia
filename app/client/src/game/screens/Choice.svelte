@@ -20,6 +20,7 @@
   import { defaultDraft, type ChoiceDraft } from "../choiceDraft.ts";
   import { seatColor, type SeatDraft } from "../seats.ts";
   import Icon, { type IconName } from "../Icon.svelte";
+  import OptionButton from "../OptionButton.svelte";
   import Prompt from "../Prompt.svelte";
   import { sfx } from "../sound.svelte.ts";
 
@@ -233,20 +234,21 @@
       {:else}
       <div class="pick-row" role="radiogroup" data-line>
         {#each options.groups as g, i (g.id)}
-          <button
-            class="pick-tile glass"
-            class:on={g.id === group}
-            style:--i={i + 1}
+          {@const on = g.id === group}
+          <OptionButton
+            {on}
+            style="--i:{i + 1}"
             role="radio"
-            aria-checked={g.id === group}
+            aria-checked={on}
             onclick={() => pickGroup(g.id)}
             disabled={busy}
             data-focus-id="group-{g.id}"
+            caption={g.name}
           >
-            <Prompt action={{ type: "pick", n: i + 1 }} hold />
-            <span class="pick-name">{#if GROUP_ICONS[g.id]}<Icon name={GROUP_ICONS[g.id]} />{/if} {g.name}</span>
+            {#snippet icon()}{#if GROUP_ICONS[g.id]}<Icon name={GROUP_ICONS[g.id]} />{/if}{/snippet}
+            {#snippet chip()}<Prompt action={{ type: "pick", n: i + 1 }} hold />{/snippet}
             <span class="label">{about(g.id)}</span>
-          </button>
+          </OptionButton>
         {/each}
       </div>
       {/if}
