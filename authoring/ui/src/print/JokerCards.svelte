@@ -3,7 +3,7 @@
   // 2 × each other joker, 12 cards of 2.5 in in a 3 × 4 grid, with dashed cut lines. White
   // cards to save ink; the token, name and key match the game's tray (JokerTray.svelte).
   // `?lang=es|es-ES|en|de` (LUI-5): texts from the app catalogs; Letter for es/en, A4 for de/es-ES.
-  import "$app/game/theme.css"; // the fonts (Baloo 2, Nunito)
+  import "$app/game/theme.css"; // the fonts (Baloo 2, Nunito, the zh faces)
   import Icon from "$app/game/Icon.svelte";
   import { TOKENS } from "$app/game/jokers.ts";
   import { catalogFor, endonym, fill, UI_LANGS } from "$app/lib/i18n.ts";
@@ -24,6 +24,8 @@
     en: "size: letter; margin: 0.5in",
     "es-ES": "size: A4; margin: 0.84in 0.38in",
     de: "size: A4; margin: 0.84in 0.38in",
+    "zh-Hans": "size: A4; margin: 0.84in 0.38in",
+    "zh-Hant": "size: A4; margin: 0.84in 0.38in",
   };
 
   const q = new URLSearchParams(location.search).get("lang");
@@ -65,6 +67,22 @@
 </main>
 
 <style>
+  /* Same chains as the game's theme.css for zh-Hans / zh-Hant (WenKai for names, no brush on paper). */
+  .screen-only,
+  .sheet {
+    --f-text: "Nunito", system-ui, sans-serif;
+    --f-display: "Baloo 2", system-ui, sans-serif;
+  }
+  .screen-only:lang(zh-Hans),
+  .sheet:lang(zh-Hans) {
+    --f-text: "Nunito", "Han Rounded SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+    --f-display: "Baloo 2", "LXGW WenKai", "Han Rounded SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+  }
+  .screen-only:lang(zh-Hant),
+  .sheet:lang(zh-Hant) {
+    --f-text: "Nunito", "Han Rounded TC", "Microsoft JhengHei", "Noto Sans CJK TC", system-ui, sans-serif;
+    --f-display: "Baloo 2", "LXGW WenKai", "Han Rounded TC", "Microsoft JhengHei", "Noto Sans CJK TC", system-ui, sans-serif;
+  }
   /* Only on this page: every authoring page shares one stylesheet (the others are dark). */
   :global(body:has(.sheet)) {
     background: #e9e6df;
@@ -73,7 +91,7 @@
   .screen-only {
     max-width: 7.5in;
     margin: 0.4in auto 0.2in;
-    font-family: "Nunito", system-ui, sans-serif;
+    font-family: var(--f-text);
   }
   .screen-only nav {
     display: flex;
@@ -88,7 +106,7 @@
   }
   .screen-only h1 {
     margin: 0 0 0.3em;
-    font-family: "Baloo 2", system-ui, sans-serif;
+    font-family: var(--f-display);
   }
   .screen-only button {
     font: inherit;
@@ -139,7 +157,7 @@
   }
   h2 {
     margin: 0.04in 0 0;
-    font-family: "Baloo 2", system-ui, sans-serif;
+    font-family: var(--f-display);
     font-size: 19pt;
     font-weight: 800;
     line-height: 1;
@@ -147,7 +165,7 @@
   }
   .rule {
     margin: 0;
-    font-family: "Nunito", system-ui, sans-serif;
+    font-family: var(--f-text);
     font-size: 8.5pt;
     font-weight: 700;
     line-height: 1.25;
@@ -162,7 +180,7 @@
     height: 0.26in;
     border: 1.5px solid var(--ink);
     border-radius: 0.05in;
-    font-family: "Baloo 2", system-ui, sans-serif;
+    font-family: var(--f-display);
     font-size: 10pt;
     font-weight: 800;
     color: var(--ink);

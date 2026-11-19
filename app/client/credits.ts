@@ -1,5 +1,5 @@
 // Build-time credits (PUB-5, plan 47): credits.json for the Credits screen, CREDITS.md shipped in dist/.
-import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, rmSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import type { Plugin } from "vite";
 import { demo } from "./devserver.ts";
@@ -37,9 +37,19 @@ const ELGAR =
   "Victory march: Pomp and Circumstance No. 1, composed by Edward Elgar († 1934, public domain); " +
   "recording by the United States Marine Band, a US government work (public domain).";
 
+/** The CJK fonts (plan 142) ship in the full game; in the demo only with a zh demo pool (plan 177). */
+const ZH_FONTS = !demo || readdirSync(`${dataDir}demo`).some((f) => /^pool\.zh[\w-]*\.json$/.test(f));
+const OFL = "SIL OFL 1.1";
 const FONTS = [
-  { name: "Baloo 2", file: "fonts/baloo-2.woff2", license: "SIL OFL 1.1", license_file: "fonts/OFL-Baloo2.txt" },
-  { name: "Nunito", file: "fonts/nunito.woff2", license: "SIL OFL 1.1", license_file: "fonts/OFL-Nunito.txt" },
+  { name: "Baloo 2", file: "fonts/baloo-2.woff2", license: OFL, license_file: "fonts/OFL-Baloo2.txt" },
+  { name: "Nunito", file: "fonts/nunito.woff2", license: OFL, license_file: "fonts/OFL-Nunito.txt" },
+  ...(ZH_FONTS ? [
+    { name: "Ma Shan Zheng", file: "fonts/zh-ma-shan-zheng.woff2", license: OFL, license_file: "fonts/OFL-MaShanZheng.txt" },
+    { name: "LXGW WenKai", file: "fonts/zh-lxgw-wenkai.woff2", license: OFL, license_file: "fonts/OFL-LXGWWenKai.txt" },
+    ...["sc-regular", "sc-bold", "tc-regular", "tc-bold"].map((v) => ({
+      name: `Resource Han Rounded ${v.replace("-", " ").toUpperCase()}`, file: `fonts/zh-rhr-${v}.woff2`, license: OFL, license_file: "fonts/OFL-ResourceHanRounded.txt",
+    })),
+  ] : []),
 ];
 
 function title(sourceUrl: string): string {
@@ -347,6 +357,10 @@ export function credits(): Plugin {
           res.end(String(e));
         }
       });
+    },
+    writeBundle(o) {
+      if (ZH_FONTS || !o.dir) return;
+      for (const f of readdirSync(`${o.dir}/fonts`).filter((f) => /^(zh-|OFL-(MaShanZheng|LXGWWenKai|ResourceHanRounded))/.test(f))) rmSync(`${o.dir}/fonts/${f}`);
     },
     generateBundle() {
       const c = buildCredits();

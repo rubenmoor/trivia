@@ -16,6 +16,8 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
             within 10 s (plan 104); `--skip report` until the server is set up (plan 103 task 4)
   modkit    steam-run <linux-unpacked>/living-room-trivia --check-mod (no display needed) on its modding/template-bundle and each
             modding/examples/* exits 0 (plans 120, 121)
+  zh-fonts  node app/desktop/subset-fonts.mjs --check: every zh character of a shipped catalog, names file and pool is in the
+            zh fonts (plan 142)
   credits   node authoring/steam/credits_check.mjs on both unpacked builds: files ↔ credits.json, both ways
   smoke     node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked: TRIVIA_DEV_STEAM_USER=1 (decision 111),
             network off; save and resume, no «progress needs Steam» notice (with packs: again without them)
@@ -61,6 +63,7 @@ STEPS = {
     "nix": [["nix", "build", ".#app", "--no-link"]],
     "desktop": [["trivia-desktop-build", "--dir"], ["trivia-steam", "stage"]],
     "media-budget": [["node", "app/desktop/stage-media.mjs", "--check"]],
+    "zh-fonts": [["node", "app/desktop/subset-fonts.mjs", "--check"]],
     "report": [],
     "modkit": [["steam-run", f"{UNPACKED}/living-room-trivia", "--ozone-platform=headless", "--check-mod", f"{UNPACKED}/modding/{m}"]
                for m in ("template-bundle", *(f"examples/{e.name}" for e in sorted((REPO / "modding/examples").iterdir()) if e.is_dir()))],

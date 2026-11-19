@@ -147,7 +147,7 @@
   h2 {
     margin: 0;
     text-align: center;
-    font-family: var(--font-display);
+    font-family: var(--font-brush);
     font-size: calc(2.4 * var(--u));
     font-weight: 800;
   }
@@ -182,7 +182,7 @@
     border-radius: calc(0.7 * var(--u));
     background: var(--cream);
     color: var(--ink);
-    font-family: var(--font-display);
+    font-family: var(--font-brush);
     font-size: calc(1.3 * var(--u));
     font-weight: 700;
     line-height: 1.15;

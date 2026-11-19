@@ -167,6 +167,11 @@ if (check) {
   const audioMb = audio.reduce((n, f) => n + statSync(path.join(audioDir, f)).size, 0) / MB;
   console.log(`${audioMb > budget.audio ? "✗" : "✓"} audio: ${audio.length} files, ${audioMb.toFixed(1)} MB of ${budget.audio} MB`);
   if (audioMb > budget.audio) fails.push(`audio over budget: ${audioMb.toFixed(1)} > ${budget.audio} MB`);
+  const fontDir = path.join(REPO, "app", "client", "public", "fonts");
+  const zhFonts = demo ? [] : readdirSync(fontDir).filter((f) => /^zh-.*\.woff2$/.test(f)); // the demo ships none without a zh pool (credits.ts)
+  const fontMb = zhFonts.reduce((n, f) => n + statSync(path.join(fontDir, f)).size, 0) / MB;
+  console.log(`${fontMb > budget.fonts ? "✗" : "✓"} zh fonts: ${zhFonts.length} files, ${fontMb.toFixed(1)} MB of ${budget.fonts} MB`);
+  if (fontMb > budget.fonts) fails.push(`zh fonts over budget: ${fontMb.toFixed(1)} > ${budget.fonts} MB`);
   const big = [...size].filter(([, n]) => n > MB).sort((a, b) => b[1] - a[1]);
   for (const [f, n] of big) {
     const max = KIND[path.extname(f)] === "video" ? budget.video : budget.file;
