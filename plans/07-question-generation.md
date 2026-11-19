@@ -117,7 +117,7 @@ For the pilot, `merge --min-score 0` keeps everything except hard fails, so the 
 ## Revising pool questions (QG-13)
 Existing questions (the first 120, or `needs_work` questions after a review) go through the same quality steps as new drafts, then get revised instead of written from scratch:
 
-1. `qgen.py import --run <run> --batch <batch>`: copies the pool's `draft` and `needs_work` questions of that batch into `work/<run>/drafts/` (chunks of 10, the pool ID as work ID). Questions without a batch get `--batch` assigned in the pool.
+1. (Removed in plan 229: `qgen import`, used once; `qgen rework` replaced it.) It copied the pool's `draft` and `needs_work` questions of that batch into `work/<run>/drafts/` (chunks of 10, the pool ID as work ID). Questions without a batch get `--batch` assigned in the pool.
 2. `rate` and `factcheck` as usual, with the current prompts. Imported questions are all fact-checked.
 3. `qgen.py revise --run <run>`: questions with an issue go to Claude with the reasons: the developer's feedback, a failed or uncertain fact-check, a hard criterion below 4 (`correct`, `unambiguous`, `no_giveaway`), or a difficulty estimate 3+ levels away (with the rater's notes as context). Low soft scores don't trigger a revision (D-16; the first try with them rewrote 98 of 119 questions). Claude keeps, revises (same topic and ID, current house style) or proposes to drop each one. Questions without issues aren't sent.
 4. `qgen.py apply --run <run>`: writes the results into the pool. A revised question stays `draft` and gets a `revision` field: `{"action": "revise" | "drop", "reason": "...", "previous": {changed fields: old values}, "revised_on": date}`. Its quality scores and fact-check status are updated. If a media search term changed, the old candidates are discarded so `media.py fetch` finds new ones.
@@ -157,7 +157,7 @@ New drafts can be repaired the same way before `merge` (QG-16): `revise` then `a
 - [x] QG-9 Pilot: draft ~60–80 questions, weighted to levels 4–7. *2026-10-06, 89 drafted, 1 slot skipped.*
 - [x] QG-10 Pilot: rating pass and fact-check. *2026-10-06, 89 rated, 74 fact-checked (68 confirmed, 5 wrong, 1 uncertain); 80 merged as `batch: "pilot"`, 9 dropped (`work/pilot/dropped.json`).*
 - [x] QG-11 Pilot: developer reviews all pilot questions; set the quality threshold and decide on scaling. *2026-10-06: no score threshold, prompts tuned (D-16); scaling worth it, size open (OQ-17).*
-- [x] QG-13 Revise existing questions (generalised rework, see "Revising pool questions"): `import`, `revise`, `apply`. *2026-10-06: first 120 → batch `first-120`: 119 rated and fact-checked (118 confirmed), 60 revised, 2 proposed drops, 57 unchanged; ~$6 at list price for both revise attempts.*
+- [x] QG-13 Revise existing questions (generalised rework, see "Revising pool questions"): `import` (removed, plan 229), `revise`, `apply`. *2026-10-06: first 120 → batch `first-120`: 119 rated and fact-checked (118 confirmed), 60 revised, 2 proposed drops, 57 unchanged; ~$6 at list price for both revise attempts.*
 - [x] QG-14 Evaluate the first-120 review and tune the prompts. *2026-10-06, see "First-120 review results" (D-23); `authoring/tools/prompts/house-style.md`, `rate.md`, `revise.md`.*
 - [x] QG-15 Batch-3: ~120 new questions over 34 new subcategories. *2026-10-06, 116 merged as drafts (q-0201…q-0316); see "Batch-3 results". Media fetch and developer review still to do.*
 - [x] QG-16 `revise`/`apply` for new drafts before `merge`. *2026-10-06, `qgen.py` `apply_to_drafts`.*

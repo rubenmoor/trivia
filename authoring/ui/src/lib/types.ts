@@ -60,7 +60,7 @@ interface Background extends PlayBackground, LicenceRecord {
 
 export type Slot = "media" | "background";
 
-/** Set by `qgen.py apply` (plans/07-question-generation.md, QG-13). */
+/** Set by `qgen rework` and the review fix step (plans/07-question-generation.md, QG-13). */
 export interface Revision {
   action: "revise" | "drop";
   reason: string;

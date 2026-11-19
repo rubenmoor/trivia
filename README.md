@@ -126,7 +126,7 @@ qgen remap --bundle <id> [--apply work/remap/<id>/proposal.json]   # its questio
 
 Don't run the pipeline steps by hand; the batch command does it all and can be resumed. Details: [`authoring/RUNBOOK.md`](authoring/RUNBOOK.md). Afterwards, review the batch in the review tool.
 
-`trivia-media fetch --batch <batch>` searches Commons for media candidates for questions that have none yet. The single pipeline steps (`qgen draft`, `rate`, `factcheck`, …, and `qgen import` for revising questions already in the pool) stay available for debugging; work files go to `work/<run>/`. See [`plans/07-question-generation.md`](plans/07-question-generation.md).
+`trivia-media fetch --batch <batch>` searches Commons for media candidates for questions that have none yet. The single pipeline steps (`qgen draft`, `rate`, `factcheck`, …) stay available for debugging; work files go to `work/<run>/`. See [`plans/07-question-generation.md`](plans/07-question-generation.md).
 
 Media comes from Wikimedia Commons first, then NASA (space only) and Openverse (D-45, [`plans/23-media-providers.md`](plans/23-media-providers.md)); Freesound is out of the order before release (D-103). Keys go in `.env.local` (gitignored, loaded by direnv): `COMMONS_ACCESS_TOKEN` (an owner-only OAuth 2.0 consumer with basic rights on Meta-Wiki; higher Commons limits, IMG-15), `FREESOUND_API_KEY` (unused while Freesound is out of the order), and optionally `OPENVERSE_CLIENT_ID`/`OPENVERSE_CLIENT_SECRET` (Openverse works anonymously with 200 requests a day).
 

@@ -10,11 +10,9 @@ An LLM makes a batch with exactly one command (authoring/RUNBOOK.md):
 It runs these steps in a fixed order; they stay available one by one for debugging:
 
     qgen concepts [--subcategories "Volcanes,Piratas"] [--top-up] [--fill]   # concept lists (D-37)
-    qgen bundles                    # sort the pool into bundles (D-39)
     qgen bundle new <id> --name … --description … --kind region|theme --language <L> --country <CC> --icon <name> --rule … --voice …   # an empty bundle (D-41)
     qgen taxonomy --bundle <id> [--apply work/taxonomy/<id>/proposal.json]   # a regional or theme bundle's categories (plans 138, 184)
     qgen remap --bundle <id> [--apply work/remap/<id>/proposal.json]   # its questions onto a new taxonomy (plan 138)
-    qgen rekey --map work/slugs/proposal.json [--apply]   # category and subcategory keys → English slugs (plan 149); dry run by default
     qgen draft --run <run> --subcategories "Volcanes,Piratas" [--bundle <id>]
     qgen draft | rate | factcheck | dedupe | revise | apply | merge --run <run>
     qgen english-keys               # English answer + concept per non-en source, for en runs' overlap checks (decision 232)
@@ -51,10 +49,6 @@ the questions at hand: a batch's draft_locale (run.json), a merged question's `l
 live in work/<run>/ and every step skips what is already done, so a run can be resumed. Every Claude call
 goes to work/<run>/calls.jsonl; a command that called Claude ends with a `claude:` totals line (decision 208).
 
-Revising questions that are already in the pool (07, QG-13):
-
-    qgen import --run <run> --batch <batch> [--assign-unbatched]
-    qgen rate | factcheck | revise | apply --run <run>
 """
 import argparse, atexit, concurrent.futures, datetime, difflib, fcntl, hashlib, json, random, re, subprocess, sys, threading, time, unicodedata
 from pathlib import Path
@@ -78,7 +72,6 @@ import media_first  # authoring/tools/media_first.py: `qgen batch --media-first`
 import media_probe  # authoring/tools/media_probe.py: `qgen media-probe` (plan 201)
 import media_survey  # authoring/tools/media_survey.py: `qgen media-survey` (plan 201)
 import patch_notes  # authoring/tools/patch_notes.py: `qgen patch-notes` (plan 96)
-import rekey  # authoring/tools/rekey.py: `qgen rekey` (plan 149)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 import demo  # authoring/tools/demo.py: `qgen demo` (plan 174)
 import played  # authoring/tools/played.py: opt-in telemetry → state/played/ (plan 109)
@@ -165,11 +158,6 @@ VOICE = "idiomatic Latin American Spanish (es-419)"
 
 def load_bundles():
     return load_json(layout.BUNDLES)["bundles"]
-
-
-def bundles_text():
-    """The bundles and their membership rules, for prompts (D-39)."""
-    return "\n".join(f"- `{b['id']}`: {b['rule']}" for b in load_bundles())
 
 
 def voice_locale(b):
@@ -753,69 +741,6 @@ def finalize_concepts(d, bundle):
         if tagged:
             save_json(POOL, data)
             print(f"  tagged {tagged} pool question(s) with a concept and axes")
-
-
-BUNDLE_SCHEMA = {"type": "object", "required": ["questions"], "properties": {"questions": {
-    "type": "array", "items": {"type": "object", "required": ["id", "bundle", "reason"],
-                               "properties": {"id": STR, "bundle": STR, "reason": STR}}}}}
-BUNDLE_GROUP = 20  # questions per `qgen bundles` call
-
-
-def cmd_bundles(args):
-    """Sort the existing pool into bundles (BN-3, D-39). Questions without `bundle` get `base`;
-    then an LLM pass proposes a bundle for every question it hasn't seen yet, and the proposals
-    are written into the pool. Proposals stay in work/bundles/proposals.json, so a rerun only
-    sends new questions and never overwrites a bundle the developer changed afterwards."""
-    d = WORK / "bundles"
-    d.mkdir(parents=True, exist_ok=True)
-    with atomic.locked(POOL):
-        data = load_json(POOL)
-        missing = [q for q in data["questions"] if not q.get("bundle")]
-        for q in missing:
-            q["bundle"] = "base"
-        if missing:
-            save_json(POOL, data)
-            print(f"  {len(missing)} question(s) without a bundle set to base")
-    ids = {b["id"] for b in load_bundles()}
-    proposals = load_json(d / "proposals.json", {})
-    todo = [q for q in data["questions"] if q["id"] not in proposals and q["status"] != "rejected"]
-    system = prompt("house-style", "bundles")
-    lock = threading.Lock()
-
-    def work(group):
-        items = [{k: named(q, translations.source_locale(q))[k] for k in ["id", "subcategory", "question", "answer", "wrong_answers", "hints"]}
-                 for q in group]
-        user = "## Bundles\n" + bundles_text() + "\n\n## Questions\n" + json.dumps(items, ensure_ascii=False)
-        out = claude(system, user, BUNDLE_SCHEMA, args.model, d)
-        got = {r["id"]: r for r in out["questions"] if r["bundle"] in ids}
-        asked = {q["id"] for q in group}
-        unanswered = [q["id"] for q in group if q["id"] not in got]
-        with lock:
-            proposals.update({i: {"bundle": got[i]["bundle"], "reason": got[i]["reason"], "applied": False}
-                              for i in got if i in asked})
-            save_json(d / "proposals.json", proposals)
-        print(f"  bundles: {group[0]['id']}…{group[-1]['id']}: "
-              + ", ".join(f"{b} {sum(1 for i in got if got[i]['bundle'] == b)}" for b in sorted(ids)), flush=True)
-        if unanswered:
-            raise RuntimeError(f"no bundle for {', '.join(unanswered)}")
-
-    errors = parallel(work, [todo[i:i + BUNDLE_GROUP] for i in range(0, len(todo), BUNDLE_GROUP)],
-                      args.jobs, "bundles", "calls")
-    with atomic.locked(POOL):
-        data = load_json(POOL)  # proposals go in once, in one write
-        moved = []
-        for q in data["questions"]:
-            p = proposals.get(q["id"])
-            if p and not p["applied"]:
-                if q["bundle"] != p["bundle"]:
-                    moved.append(f"{q['id']} → {p['bundle']}: {q['question'][:70]} ({p['reason']})")
-                q["bundle"], p["applied"] = p["bundle"], True
-        save_json(POOL, data)
-        save_json(d / "proposals.json", proposals)
-        cmd_export(args)
-    print("\n".join(f"  {m}" for m in moved))
-    print(f"{len(moved)} question(s) moved out of base; check them at /review?bundle=<id> (trivia-authoring)")
-    return errors
 
 
 def target_weights(pool_questions, bundle):
@@ -1451,40 +1376,6 @@ REVISABLE = ["difficulty", "description", "question", "answer", "wrong_answers",
              "needs_media", "background"]
 
 
-def cmd_import(args):
-    """Copy a batch's draft/needs_work pool questions into work/<run>/drafts/ for rate/factcheck/revise."""
-    d = run_dir(args)
-    with atomic.locked(POOL):
-        data = load_json(POOL)
-        if args.assign_unbatched:
-            n = 0
-            for q in data["questions"]:
-                if q.get("batch") is None:
-                    q["batch"] = args.batch
-                    n += 1
-            save_json(POOL, data)
-            print(f"assigned batch {args.batch!r} to {n} question(s) without a batch")
-    qs = [q for q in data["questions"] if q.get("batch") == args.batch and q["status"] in ("draft", "needs_work")]
-    locales = {translations.source_locale(q) for q in qs}
-    if len(locales) > 1:
-        sys.exit(f"{args.batch} has questions in {', '.join(sorted(locales))}: one language per run")
-    work = []
-    for q in qs:
-        w = {k: q[k] for k in QUESTION_FIELDS}
-        w.update(tmp_id=q["id"], style=q.get("style"), axes=q.get("axes"), concept=q.get("concept"), bundle=q.get("bundle"),
-                 subcategory=q.get("subcategory"),
-                 media={k: q["media"][k] for k in ["type", "role", "query", "note"]},
-                 needs_fact_check=True, needs_media=bool(q.get("needs_media")),
-                 background_query=(q.get("background") or {}).get("query", ""),
-                 feedback=(q.get("review") or {}).get("feedback") if q["status"] == "needs_work" else None)
-        work.append(w)
-    files = chunks(work)
-    for i, qs in enumerate(files, 1):
-        save_json(d / "drafts" / f"chunk-{i:02d}.json", {"questions": qs, "skipped": []})
-    save_json(d / "run.json", {"source": "pool", "batch": args.batch, "draft_locale": min(locales, default="es")})
-    print(f"imported {len(work)} question(s) into {len(files)} chunk(s)")
-
-
 DIFFICULTY_GAP = 3  # rater on 1–15: mean |diff| 1.5 at 10–15 (task 30), so only big gaps count
 
 
@@ -1588,49 +1479,10 @@ def revise_in_pool(q, new, reason, today):
 
 def cmd_apply(args):
     d = run_dir(args)
-    cfg = load_json(d / "run.json") or {}
     revisions = {}
     for f in (d / "revisions").glob("*.json"):
         revisions.update(load_json(f))
-    applied = set(load_json(d / "applied.json", []))
-    if cfg.get("source") != "pool":
-        return apply_to_drafts(d, revisions, applied)
-    ratings, checks = collect(d)
-    with atomic.locked(POOL):
-        data = load_json(POOL)
-        today = datetime.date.today().isoformat()
-        counts = {"keep": 0, "revise": 0, "drop": 0, "unchanged": 0, "malformed": 0}
-
-        for q in data["questions"]:
-            qid = q["id"]
-            if qid in applied or q.get("batch") != cfg["batch"] or q["status"] not in ("draft", "needs_work"):
-                continue
-            r, c, rev = ratings.get(qid), checks.get(qid), revisions.get(qid)
-            if r:
-                q["quality"] = {k: r.get(k) for k in [*RUBRIC, "difficulty_estimate", "notes"]}
-            if c:
-                q["fact_checked"] = c["verdict"] == "confirmed"
-            if not rev or rev["action"] == "keep":
-                counts["keep" if rev else "unchanged"] += 1
-                applied.add(qid)
-                continue
-            if rev["action"] == "drop":
-                q["revision"] = {"action": "drop", "reason": rev["reason"], "previous": {}, "revised_on": today}
-            else:
-                new = rev["question"]
-                if bad := check_question_shape(new):
-                    print(f"  {qid}: revision malformed ({'; '.join(bad)}), skipped")
-                    counts["malformed"] += 1
-                    continue
-                revise_in_pool(q, new, rev["reason"], today)
-            if q["status"] == "needs_work":
-                q["status"], q["review"] = "draft", None
-            counts[rev["action"]] += 1
-            applied.add(qid)
-        save_json(POOL, data)
-    save_json(d / "applied.json", sorted(applied))
-    print("applied: " + ", ".join(f"{k} {v}" for k, v in counts.items() if v)
-          + f". Next: trivia-media fetch --batch {cfg['batch']}")
+    return apply_to_drafts(d, revisions, set(load_json(d / "applied.json", [])))
 
 
 def apply_to_drafts(d, revisions, applied):
@@ -2031,8 +1883,6 @@ def main():
     cp.add_argument("--fill", action="store_true", help=f"also top up lists with fewer than {concepts.TARGET_SIZE} concepts to that size")
     cp.add_argument("--bundle", help="the bundle of --subcategories (default base); without them: only this bundle's (default: every bundle)")
     cp.set_defaults(run=None)
-    bp = add("bundles", cmd_bundles, "opus", run=False)
-    bp.set_defaults(run=None)
     bn = sub.add_parser("bundle", help="manage bundles (D-41)").add_subparsers(dest="action", required=True)
     bnew = bn.add_parser("new", help="create an empty bundle")
     bnew.set_defaults(fn=cmd_bundle_new)
@@ -2051,10 +1901,6 @@ def main():
     tx.add_argument("--bundle", required=True, help="a regional or theme bundle")
     tx.add_argument("--apply", metavar="PROPOSAL", help="write categories.json and names from this proposal.json "
                     "(edited to the developer's answer); no LLM call but the names")
-    rk = sub.add_parser("rekey", help="category and subcategory keys → English slugs (plan 149); dry run by default")
-    rk.set_defaults(fn=rekey.cmd_rekey)
-    rk.add_argument("--map", required=True, type=Path, help="the slug list (decision 258), e.g. work/slugs/proposal.json")
-    rk.add_argument("--apply", action="store_true", help="write the files (default: print what would change)")
     rm = add("remap", cmd_remap, "opus", run=False)
     rm.add_argument("--bundle", required=True, help="a regional bundle")
     rm.add_argument("--apply", metavar="PROPOSAL", help="move the questions as this proposal.json says "
@@ -2075,9 +1921,6 @@ def main():
     add("merge", cmd_merge).add_argument("--min-score", type=float, default=0,
                                          help="minimum mean of distractors/age_fit/fun/description "
                                               "(default 0: off; the pilot showed it doesn't predict the developer)")
-    imp = add("import", cmd_import)
-    imp.add_argument("--batch", required=True, help="pool batch to revise")
-    imp.add_argument("--assign-unbatched", action="store_true", help="give questions without a batch this batch name first")
     add("revise", cmd_revise, "opus")
     add("apply", cmd_apply)
     rp = add("report", cmd_report, run=False)
