@@ -85,7 +85,6 @@ def fold(stats, sessions, known):
     """Add sessions (GET /telemetry rows) to stats in place; known: rated(). → counts."""
     n = {"sessions": 0, "games": 0, "answers": 0, "unknown": 0}
     g = stats["games"]
-    g.setdefault("players", {})  # stats files from before milestone 16
     anywhere = {i: e for k in known.values() for i, e in k.items()}  # a source or translation in any locale
     for s in sessions:
         day = s["received_day"]
@@ -99,7 +98,7 @@ def fold(stats, sessions, known):
             group, mode = game["age_group"] or "custom", game["mode"]
             _add(g["results"], f"{day}|{s['version']}|{mode}|{group}|{game['result']}")
             _add(g["reached"], f"{day}|{group}|{mode}|{game['reached']}|{game['result']}")
-            _add(g["players"], f"{day}|{mode}|{game.get('players', 1)}")  # missing = 1 (older servers and clients)
+            _add(g["players"], f"{day}|{mode}|{game['players']}")
             for joker, uses in game["jokers"].items():
                 if uses:
                     g["jokers"][f"{day}|{joker}"] = g["jokers"].get(f"{day}|{joker}", 0) + uses

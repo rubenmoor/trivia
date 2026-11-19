@@ -695,7 +695,7 @@ def finalize_concepts(d, bundle):
             if lst is None and "concepts" in raw:
                 lst = {"subcategory": s, "facets": raw["facets"], "axis_fit": raw["axis_fit"], "concepts": []}
                 tags = raw["existing"]
-                items = raw["concepts"] + [{"name": e["concept"], "facet": "Otros", "known_at": by_id[e["id"]]["difficulty"]}
+                items = raw["concepts"] + [{"name": e["concept"], "facet": "Other", "known_at": by_id[e["id"]]["difficulty"]}
                                            for e in tags if e["id"] in by_id]  # a question's level stands in for the concept's
             elif lst is not None and topup.exists():
                 extra = load_json(topup)

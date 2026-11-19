@@ -508,10 +508,8 @@ def subject_problems():
 
 
 def slug_problems():
-    """The slug rule (decision 259), on once names.es.json exists: keys are slugs, categories.json holds no names,
+    """The slug rule (decision 259): keys are slugs, categories.json holds no names,
     names.{en,es,de}.json name every category and subcategory of every bundle (questions: validate_pool's key check)."""
-    if not categories.slug_keys():
-        return []
     errors = subject_problems()
     for b in categories.bundle_ids():
         cats = categories.load(b)
