@@ -13,7 +13,7 @@ import translations  # authoring/tools/translations.py
 CAUSES_FILE = layout.REPO / "authoring" / "data" / "flag-causes.json"  # [{id, date, run, cause, action, reason}]
 PREFIXES = ("Marcada en el juego (", "Reporte de jugador (")  # reviews.report_feedback, server/main.py apply_flags
 REPEATED = 3  # one cause this often proposes a prompt or QC change
-CAUSES = {  # revise.md "Player flags"; the revise schema's enum
+CAUSES = {  # revise.md, the `cause` rule; the revise schema's enum
     "wrong_fact": "the answer or a stated fact was false",
     "ambiguous": "the question allows another reading or answer",
     "second_correct_option": "a wrong option was also right",
