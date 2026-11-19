@@ -184,9 +184,9 @@ Kenney clean-digital picks (Digital, RPG, Casino) sounded like cheap sci-fi; dec
 
 Kenney clean-digital picks were synthetic bleeps; decision 740 rejected them: the old fireworks were good, natural sounds wanted. Reverted: `rocket` `cohete`, `burst` `estallido`, `confetti-cannon` `canon-confeti`, `sparklers` `bengalas`, `stars` `estrellas`; hand rows in `CREDITS.md`, no `trivia-sfx` records. No further round unless the developer asks.
 
-### Splash group, round 1 (old recordings kept)
+### Splash group, round 1 (old recordings kept, approved)
 
-Given the rejections of synthetic picks (decisions 737, 739, 740: natural sounds wanted), round 1 changes no file: every `splash-*` cue keeps its old natural recording, hand rows in `CREDITS.md`, no `trivia-sfx` records. Workers can't hear; replacing 20 sounds blind would repeat the failed rounds. Approval pending (splash decision); the developer names the cues to change, the next round searches natural recordings for those only.
+Given the rejections of synthetic picks (decisions 737, 739, 740: natural sounds wanted), round 1 changes no file: every `splash-*` cue keeps its old natural recording, hand rows in `CREDITS.md`, no `trivia-sfx` records. Workers can't hear; replacing 20 sounds blind would repeat the failed rounds. Approved (decision 765: Category splash sounds, round 1: keep today's 20 natural recordings, or which cues should change?): no further round.
 
 | Cue | File (rate) | Cue | File (rate) |
 |---|---|---|---|
