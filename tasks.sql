@@ -31529,8 +31529,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:20:22Z', '2026-11-19T18:15:20Z', 1153, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1161, 144, 'create tasks for plan 144: Store page and Steam in Chinese', 'split', 'done', 1000, '2026-11-19, tasks 2313 2314 2315 2316 2317 2318 2319 2320', 'Split plan 144 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:22:44Z', '2026-11-19T18:18:12Z', 1154, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1162, 145, 'create tasks for plan 145: Release, career check and close-out of Chinese', 'split', 'open', 1000, NULL, 'Split plan 145 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:24:37Z', NULL, 1155, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1162, 145, 'create tasks for plan 145: Release, career check and close-out of Chinese', 'split', 'done', 1000, '2026-11-19, tasks 2321–2328, decision 755 (go-live bar; task 2326 pends on it); task 2319 requires 2326', 'Split plan 145 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:24:37Z', '2026-11-19T18:21:42Z', 1155, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1163, 139, 'Chinese locale(s) in the locale lists and rules', 'work', 'open', NULL, NULL, 'Task 1 of `plan 139: Chinese locales in data and pipeline`: the zh locale(s) become question translation locales (D-78, D-81) with empty pools; es, es-ES, en, de unchanged. No `ru` / `pt-BR` anywhere (out of milestone 12), no `DRIVES_DRAFTING` (gone, `decision 236: English-first drafting for base: what drives drafting and which locales steer it`), no `bundles.json` change.
 
 ## Before starting
@@ -51616,6 +51616,88 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Not here: `plans/15-i18n.md`, README (plan 145).
 
 Done when: docs updated, consequences written; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-19T18:18:08Z', NULL, 1161, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2321, 145, 'Release check smoke per locale and base bundle', 'work', 'open', NULL, NULL, 'Part of `plan 145: Release, career check and close-out of Chinese`, Tasks 2. Needs plan 227''s pack and depot task (`chinese-base` in `app/data/bundles/chinese-base/`, content depot, `decision 753: chinese-base ships in the game''s content depot, not as DLC`) and its one-base logic (`decision 752: One base bundle per session: at most one, not exactly one`); not done yet → `pm task requires` those tasks of `plan 227: chinese-base bundle: model and setup`, stop.
+
+- `authoring/steam/smoke.mjs`: `--lang <locale>` and `--bundle <base id>` (defaults `es`, the locale''s default base); each run: new game, levels 1–3, no memory-only notice, question text from that bundle''s pool (id check); for a zh locale `document.fonts` shows the CJK family loaded (no fallback face); a level type without media questions in a young pool: skipped with a printed note.
+- en one-base check: picking `chinese-base` on Choice deselects `base`; a stored choice with both keeps the first.
+- `release_check.py` `smoke` step: once per shipped (locale, base) pair: es/es-ES/en/de with `base` as today, en with `chinese-base`, each zh locale (plan 139''s lists) with `chinese-base`; pairs from data, not hard-coded per locale.
+- Try on a local `trivia-desktop-build --dir` with a throw-away `chinese-base` pack (a few `base` questions with a CJK marker in `pool.<zh>.json`, not staged) and without: es/es-ES/en/de unchanged.
+- Docs: `plans/11-steam.md` "How to run" smoke line, `release_check.py` docstring.
+
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; `trivia-release-check --skip tag --skip report` on the local build: smokes as above, header lists every pool incl. `<locale>/chinese-base`.
+Done when: the release check smokes every shipped (locale, base bundle) pair.', '2026-11-19T18:21:01Z', NULL, 1162, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2322, 145, 'Release check: locale manual row for a new zh pool', 'work', 'open', NULL, NULL, 'Part of `plan 145: Release, career check and close-out of Chinese`, Tasks 3.
+
+- `release_check.py`: new manual row `locale`, scope `locale`: asked only when a zh pool is new since `previous_tag()` (read the old tree with `git show`, as `kind()` does), like the `save` scope; `MANUAL`, `checklist()` scope.
+- Row text: Steam client language set to the zh locale (Steam → Settings → Interface), start `beta` from Steam: first start guesses the zh locale, only `chinese-base` offered, a game to level 3, text without tofu or overflow, the Steam store/library page shows the language; plus en: both base tiles, one per session (`decision 752: One base bundle per session: at most one, not exactly one`).
+- The release-candidate decision template gets the row.
+- `plans/11-steam.md`: "Manual rows", "Patch variant", "Decision per release candidate" (`locale` ✗ → `plan 142: UI in Chinese` for UI/fonts, `plan 140: Translation into Chinese` for content); "Patch path" step 1 names `--translate <zh> --bundle chinese-base`.
+
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; a content-only diff with a new zh pool (throw-away commit or a test with a fake previous tree) asks the `locale` row, without one it doesn''t; a test for the scope.
+Done when: the row appears exactly when a zh pool is new.', '2026-11-19T18:21:02Z', NULL, 1162, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2323, 145, 'Chinese full patch: candidate, release check, live decision', 'work', 'open', NULL, NULL, 'Part of `plan 145: Release, career check and close-out of Chinese`, Tasks 4 and ship order step 1. Once only. Preconditions: `plan 142: UI in Chinese` closed, `plan 227: chinese-base bundle: model and setup` closed, the first content patch out (`plan 96: Content updates as patches (ST-5)`). Not yet → `pm task requires` the missing task, stop.
+
+- `pm decision add "Start the Chinese full patch?"` (preconditions listed: plans 142 and 227 done, `trivia-gallery` all locales clean, `qgen validate` clean, zh pool absent or below supply and `chinese-base` hidden from en, unless `decision 755: Chinese: when do the zh pool and chinese-base in English go live on default?` allows it); pend on it.
+- On `go`: bump minor `x.(y+1).0` (`decision 91: Game version: single source of truth`), `qgen patch-notes` draft with a hand-written "Changes" section (CJK font, one base per session, Chinese coming), `trivia-release-check` with every ST-4 row, `pm decision add "Release candidate v<x> passed?"` per ST-4; pend.
+- On its answer: `plans/11-steam.md` ST-4 "Worker on the answer"; then `pm decision add "Full patch v<x> live? date, build id"`; pend; record in 11-steam "Patch notes".
+- Workers never log into Steamworks or set builds live; the developer does, from exact steps.
+
+Done when: the full patch is live on `default`, recorded in 11-steam.', '2026-11-19T18:21:16Z', NULL, 1162, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2324, 145, 'Media budget check for chinese-base before go-live', 'work', 'open', NULL, NULL, 'Part of `plan 145: Release, career check and close-out of Chinese`, Tasks 5. After the pilot export of `task 2303: Pilot translation run zh-Hans of chinese-base: run, native spot check, budget decision`.
+
+- `chinese-base`''s own media only: copies share files with `base` (plan 227), new China-centric questions add files; the CJK font is plan 142''s `fonts` entry.
+- Draft export, then `node authoring/steam/stage-media.mjs --check` against `app/desktop/media-budget.json`; estimate the size at 6000 approved per locale from the media share so far.
+- Over the `content` budget now or by the estimate → `pm decision add` (raise the budget, or a `chinese-base` media cap), pend; never a silent raise.
+- Record the figures and the answer in `plans/16-content-target.md` and, per the answer, `media-budget.json`.
+
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate` if code or budget files change.
+Done when: the figures are recorded and within budget, or the decision is answered and applied.', '2026-11-19T18:21:17Z', NULL, 1162, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2325, 145, 'Career check against chinese-base', 'work', 'open', NULL, NULL, 'Part of `plan 145: Release, career check and close-out of Chinese`, Tasks 6 (milestone 12: "badges and awards should still work"). Runs once `chinese-base` has 6000 approved in en: part 7''s last drafting run (the plan written by `task 2298: write plan: chinese-base step 2: new China-centric questions in English`); not yet → `pm task requires` that run''s task, stop.
+
+- `qgen report --career --locale en` restricted to `chinese-base`; add a `--bundles` filter to `--career` if it lacks one, with a test.
+- Per subject × grade band: supply and games-to-N against `plans/24-career.md` thresholds (15 / 25 / 15 right per subject at elementary / middle / high, college 15 at 13+); compare with `base`''s figures in `work/career/`.
+- `qgen report --simulate --bundles chinese-base --locale en`: ALL_CATEGORIES with `chinese-base` works.
+- Every badge reachable with `chinese-base` alone in a comparable number of games → note in `plans/24-career.md` ("every badge reachable with the base bundle alone" holds per base bundle).
+- A badge out of reach or far slower → `pm decision add` (thresholds per base bundle, a change for all, or more drafting in the thin subject × band), pend on it; the answer → follow-up tasks in this plan.
+- The zh rerun is part of the zh go-live task''s numbers, not here. Runs follow `authoring/RUNBOOK.md`; one simulate at a time.
+
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate` if code changes.
+Done when: the result is in `plans/24-career.md`, any gap decided.', '2026-11-19T18:21:17Z', NULL, 1162, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2326, 145, 'zh-Hans go-live patch: candidate, release check, live decision', 'work', 'open', NULL, NULL, 'Part of `plan 145: Release, career check and close-out of Chinese`, Tasks 7 and ship order step 2, for `zh-Hans` (Steam `schinese`). If the variant decision of `plan 228: Chinese variants and the Chinese audience (evaluation)` adds `zh-Hant` (or drops `zh-Hans`), `pm task add` one such task per extra zh locale in this plan, with the same body.
+
+Waits for: `decision 755: Chinese: when do the zh pool and chinese-base in English go live on default?` (pending), the full patch live (`task 2323: Chinese full patch: candidate, release check, live decision`), the zh pool at the bar of 755''s answer, "Playtest passed? (zh-Hans)" (`task 2311: Gallery and playtest decisions for the zh locale(s)`), plan 144''s store texts, capsules and media approved (`task 2316`, `task 2317`, `task 2318`), the native release sample read (`decision 754: Native checks of Chinese translation runs: pilot and release sample, not every run`; informs, doesn''t block, its result quoted). Missing → pend on the blocking decision or `pm task requires` the task, stop.
+
+- `pm decision add "Start the zh-Hans go-live patch?"` with the numbers: `qgen report --simulate --locale zh-Hans --bundles chinese-base`, `qgen report --career --locale zh-Hans` (bundles `chinese-base`), approved per level, en `chinese-base` count (and whether en goes live now, per 755); pend.
+- On `go`: `plans/11-steam.md` patch path: patch version `x.y.Z+1` (`content-only`, `decision 91: Game version: single source of truth`), `qgen patch-notes` incl. the zh event draft (`decision 97: Patch notes: counts only?`), `trivia-release-check` with the `locale` row (`task 2322: Release check: locale manual row for a new zh pool`); `pm decision add "Release candidate v<x> passed?"`; pend.
+- On its answer: `pm decision add "zh-Hans live on default? date, build id, Supported languages ticked"` (the developer ticks Supported languages and enters the store blocks the same day, `decision 222: New UI languages (zh-Hans, ru, pt-BR): offered only once their pool ships`); pend; record in 11-steam "Patch notes".
+- Workers never log into Steamworks or set builds live.
+- Growth patches afterwards (Tasks 8): plan 96''s content patch path at `decision 96: Content patch cadence after launch?`, ≥ 100 new approved per zh locale; none planned here.
+
+Done when: zh-Hans live on `default`, recorded in 11-steam.', '2026-11-19T18:21:27Z', NULL, 1162, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2327, 145, 'Docs after the Chinese go-live', 'work', 'open', NULL, NULL, 'Part of `plan 145: Release, career check and close-out of Chinese`, Tasks 9. After the zh go-live(s) and the career check.
+
+- `plans/15-i18n.md`: zh shipped, ship order (full patch, go-live, growth).
+- `plans/15a-ui-translation.md`: ship rows for zh (LUI-6 is plan 144''s).
+- `plans/15b-question-translation.md`: zh live, counts.
+- `plans/16-content-target.md`: `chinese-base` target 6000 (`decision 730: Base tile count: «6000+»`) and progress per locale.
+- `plans/22-bundles.md`: `chinese-base` as second base bundle, en + zh, at most one base per session (`decision 752: One base bundle per session: at most one, not exactly one`), copies per `decision 217: chinese-base membership: how does a translated base question count for chinese-base?`.
+- `plans/24-career.md`: the career check''s result (`task 2325: Career check against chinese-base`).
+- `plans/decisions.md`: D-entries for the ship order, the go-live bar (`decision 755: Chinese: when do the zh pool and chinese-base in English go live on default?`), the `locale` row.
+- `README.md`: smoke `--lang` / `--bundle`, a how-to "Ship a new language"; `authoring/RUNBOOK.md`: the `chinese-base` runs as they shipped.
+- `AGENTS.md` only if a command or flag changed (`trivia-release-check` line); `directory.md` only for a new top-level file or directory (decision 196); `plans/project.md` in sync.
+- `rg` old names over `.md` files (decision 200).
+
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+Done when: the docs above describe Chinese as shipped.', '2026-11-19T18:21:39Z', NULL, 1162, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2328, 145, 'Close-out of Chinese: 6000 per locale, simulate and career rerun', 'work', 'open', NULL, NULL, 'Part of `plan 145: Release, career check and close-out of Chinese`, Tasks 10; closes `milestone 12: To China!`. Needs every zh locale and en at 6000 approved in `chinese-base`; not yet → pend on the blocking decision of the lagging plan (or `pm task requires` its task), stop.
+
+- `qgen report --simulate --bundles chinese-base` ✓ for en and each zh locale (one simulate at a time), recorded with date in `plans/16-content-target.md`.
+- Career check rerun (as `task 2325: Career check against chinese-base`) for en and each zh locale ✓; a gap → `pm decision add`, pend.
+- zh live on `default` with store pages entered (`task 2319: Steamworks entry checklist for the zh locale(s)`, `task 2320: Close-out of the Chinese store page`).
+- `pm decision consequences` on this plan''s answered decisions (`decision 755: Chinese: when do the zh pool and chinese-base in English go live on default?`, the full-patch, go-live and live decisions).
+
+Check: `qgen validate`.
+Done when: the checks above pass and are recorded.', '2026-11-19T18:21:39Z', NULL, 1162, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -59144,6 +59226,13 @@ Option 2: separate counters (no link after copying, as decision 217 reads litera
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (752, 'One base bundle per session: at most one, not exactly one', 'answered', '[]', 'Milestone 12: ''there can only be one base bundle in any game session, so selecting one de-selects all others'' limits the count, it doesn''t forbid zero; milestone 8''s any-combination games without a base bundle (D-85 amended 2026-10-16) keep working, `no_questions` stays the refusal for an empty choice. Plan 60 part 4''s ''exactly one'' reads as this.', 'The game is getting a second main question set, a Chinese one, next to the existing one, and only one of them may be used in a game. This settles whether a game may also have no main set at all, playing only add-on packs, as is allowed today.', 'At most one base bundle per session: picking a base bundle deselects the other base bundles; picking the selected one again turns it off, as today; games of add-on bundles only (milestone 8) stay; a stored choice or preset with two or more base bundles keeps the first in the locale''s order', NULL, '2026-11-19T17:59:16Z', '2026-11-19T17:59:16Z', 1148, NULL, 'rule', 1148, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (753, 'chinese-base ships in the game''s content depot, not as DLC', 'answered', '[]', 'D-94 calls every bundle besides `base` a pack with a DLC depot (`build/pack-media.json`); decision 66 (packs as free DLC) is about add-ons. A Chinese player must get chinese-base with the game, and the copies share most media with `base`.', 'Packs of extra questions reach players as optional downloads on Steam. The new Chinese main question set is not an extra but the game itself for Chinese players, so this fixes that it comes with every copy of the game and its pictures and sounds are stored only once.', 'chinese-base (and every kind: base bundle) ships with the game: its pool files and its own media in the content depot; stage-media.mjs writes no pack-media.json entry and no DLC depot for a base bundle; media it shares with base stay once', NULL, '2026-11-19T17:59:17Z', '2026-11-19T17:59:17Z', 1148, NULL, 'rule', 1148, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (754, 'Native checks of Chinese translation runs: pilot and release sample, not every run', 'answered', '[]', 'Inputs: milestone 9 / decision 313: the LLM translation review is a translation''s only review (no spot check on tr-* runs since 2026-10-16; tr-en-1 and tr-de-1 found every translation good); decision 414: human reviews never gate generation or translation, only the developer''s release check; decision 220: volunteers, unpaid, who can''t carry ~20 per-run checks. Exception for zh: the developer can''t even do the optional review of QC.md ''Translation runs'', so a native read is the only human check; the pilot catches prompt problems early, the release sample is the release gate''s evidence, the Chinese-language questions are the ones most likely to fail. Plan: plan 141: Native reviewers (rewritten by task 2289).', 'Nobody in the family reads Chinese, so a few volunteer native speakers check the Chinese questions instead. Asking unpaid volunteers to check every one of about twenty translation batches is too much, and for English and German the automatic review alone has proven good enough. So the volunteers check the first trial batch, a sample of the finished set before release, and the questions that play on the Chinese language itself; none of these checks holds up the work.', 'Per zh locale the native volunteer gets: the pilot run''s sheet (tr-<zh>-1), one release sample of 30 across all runs before the zh release (D-79 bar: ≥ 90 % agreement), and a full sheet of the Chinese-language questions (characters, idioms, poems); further per-run sheets only when the volunteer offers. No run or task waits on a reviewer or a sheet (decision 414); the developer imports returned verdicts in ../trivia-review.', NULL, '2026-11-19T18:06:13Z', '2026-11-19T18:06:13Z', 2289, NULL, 'rule', 2289, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (755, 'Chinese: when do the zh pool and chinese-base in English go live on default?', 'pending', '["Once qgen report --simulate --locale <zh> --bundles chinese-base passes for one family''s full game (12 levels, no repeats), playtest and store approved; chinese-base in English in the same patch", "As 1, but chinese-base in English earlier, once its own English simulate passes", "Only at 6000 approved per locale", "At a fixed count per locale (say which, e.g. 2000)"]', 'From `plan 145: Release, career check and close-out of Chinese` (Tasks 1). The go-live patch per zh locale (content-only, `decision 91: Game version: single source of truth`) waits for this answer; the full patch before it (font, catalogs, one-base logic) hides zh until then (`decision 222: New UI languages (zh-Hans, ru, pt-BR): offered only once their pool ships`).
+
+- Small pool: repeats within a family''s few games, categories with few questions per level, the ALL_CATEGORIES mix thinner; store reviews in Chinese judge the first impression.
+- Target: 6000 approved per locale (`decision 730: Base tile count: «6000+»`); months to it: plan 140''s budget decision (`task 2303: Pilot translation run zh-Hans of chinese-base: run, native spot check, budget decision`) and part 7''s drafting runs.
+- Growth after go-live: monthly content patches, ≥ 100 new approved per locale (`decision 96: Content patch cadence after launch?`); `colombia` launched small the same way (decision 110).
+- Option 1b: as 1, but `chinese-base` in English goes live earlier, in a content patch once `qgen report --simulate --locale en --bundles chinese-base` passes (two English store announcements).
+- Whatever the answer: playtest passed (plan 142), store blocks approved (plan 144), and the native release sample read (`decision 754: Native checks of Chinese translation runs: pilot and release sample, not every run`) before the go-live.', 'The Chinese version of the game and the new China-centred question set will grow over months, from a few hundred questions to about six thousand. You have to choose when players first get them: as soon as one family can play a full game without repeats, only once the full set is done, or at a fixed size in between. An early release reaches Chinese players sooner but risks repeated questions and thin categories in reviews; a late one waits many months.', NULL, NULL, '2026-11-19T18:20:44Z', NULL, 1162, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, NULL, NULL, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, NULL, NULL, 73367);
@@ -61775,6 +61864,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2530, 2292, '2026-11-19T18:15:29Z', '2026-11-19T18:17:00Z', 'done', NULL, 0, '3f0a703c9abcf0e5fa37a124c411bd1af8c762ad', NULL, 'claude-opus-5-5', 'b9ef1947-b868-44e6-b930-df38a2c7ac53', NULL, 8, 12, 8599, 323769, 62960, 0.74046180000000006, 78072, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2531, 1161, '2026-11-19T18:17:01Z', '2026-11-19T18:18:20Z', 'done', NULL, 0, '4446bc9c4b2b2f20338d76bba732cbd1eb742488', NULL, 'claude-opus-5-5', 'd34721b3-1700-45e6-a490-09df26008a98', NULL, 9, 18, 6897, 428429, 44339, 0.57840980000000009, 59501, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2532, 2293, '2026-11-19T18:18:21Z', '2026-11-19T18:19:59Z', 'done', NULL, 0, '53e8dcc8e60d37ef3d2f42c908d81478e3d36abf', NULL, 'claude-opus-5-5', 'fab92289-1a4d-49b7-90fc-34e0999f51a5', NULL, 11, 18, 9044, 597694, 79152, 0.9337068, 94156, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2533, 1162, '2026-11-19T18:19:59Z', '2026-11-19T18:22:05Z', 'done', NULL, 0, '7445756bb28c2c98174377b6c89344abd9956d70', NULL, 'claude-opus-5-5', '884b1e12-1b9e-4dfe-8865-7496e78f2bea', NULL, 12, 24, 9834, 659375, 53594, 0.75740300000000016, 67950, 60, 473050);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -62536,6 +62626,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (2297, 750);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2298, 750);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2303, 750);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2304, 750);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2326, 755);
 
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 146);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 1865);
@@ -63115,7 +63206,29 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2319, 231
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2319, 2316);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2319, 2317);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2319, 2318);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2319, 2326);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2320, 2319);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2321, 1163);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2321, 2300);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2322, 1163);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2323, 716);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2323, 2300);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2323, 2312);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2323, 2321);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2323, 2322);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2324, 2303);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2325, 2298);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2326, 2311);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2326, 2316);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2326, 2317);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2326, 2318);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2326, 2323);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2326, 2324);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2327, 2325);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2327, 2326);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2328, 2304);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2328, 2320);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2328, 2327);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
