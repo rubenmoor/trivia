@@ -10,15 +10,9 @@ export type Loaded = { ok: true; data: EngineData; pool: string } | { ok: false;
 
 const read = (path: string): unknown => JSON.parse(readFileSync(path, "utf8"));
 
-/** The pool file of a locale: pool.<locale>.json; es falls back to pool.json. */
-function poolPath(locale: string, dir = DATA_DIR): string {
-  const own = join(dir, `pool.${locale}.json`);
-  return locale === "es" && !existsSync(own) ? join(dir, "pool.json") : own;
-}
-
 /** Pool of `locale` with its packs' (as lib/data.ts), categories of every bundle, bundles, age groups; a missing pool → no_pool. */
 export function loadData(locale: string, dir = DATA_DIR): Loaded {
-  const pool = poolPath(locale, dir);
+  const pool = join(dir, poolFile(locale));
   if (!existsSync(pool)) return { ok: false, error: "no_pool", pool };
   const bundlesJson = read(join(dir, "bundles.json"));
   const packFiles = packsFor(parseBundles(bundlesJson), locale).map((b) => {
