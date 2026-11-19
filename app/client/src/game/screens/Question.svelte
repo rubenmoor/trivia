@@ -428,7 +428,7 @@
   onpointercancel={() => (peeking = false)}
   onpointerleave={() => (peeking = false)}
 >
-  <div class="top">
+  <div class="top" class:multi={!!session}>
     <Hud {level} {levels} player={playerName} {session} />
     {#if canPeek}<span class="peek glass"><Prompt action={{ type: "peek", down: true }} /> {t("screen.question.peek")}</span>{/if}
   </div>
@@ -507,6 +507,9 @@
     display: flex;
     align-items: center;
     gap: calc(0.8 * var(--u));
+  }
+  .top.multi {
+    justify-self: center;
   }
   .peek {
     display: flex;
