@@ -19,6 +19,7 @@
     exit: forced,
     entrance: forcedIn,
     leave = false,
+    ondone,
   }: {
     category: string;
     subcategory: string | null;
@@ -34,6 +35,8 @@
     entrance?: SplashEntrance;
     /** The question was decided (Timed): leave at once, the exit's sound kept (decision 508). */
     leave?: boolean;
+    /** The splash is over (or never shown). */
+    ondone?: () => void;
   } = $props();
 
   const hook = galleryHold();
@@ -131,6 +134,11 @@
     left = true;
     const p = untrack(() => phase);
     if (p === "in" || p === "hold") exitNow();
+    else if (p === "wait") ondone?.();
+  });
+
+  $effect(() => {
+    if (phase === "gone") untrack(() => ondone?.());
   });
 </script>
 
