@@ -63833,7 +63833,6 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (2393, 763);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2406, 771);
 
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 146);
-INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 1865);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (639, 1726);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1034, 1033);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1034, 1711);
