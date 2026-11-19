@@ -378,9 +378,9 @@ export const de = {
       demo: "Kostenlose Demoversion",
       resume: "Weiterspielen, Stufe {level}",
       resumePlayer: "Weiterspielen: {name}, Stufe {level}",
-      /** A multiplayer session: {names} cut short after two; the mode's name below. */
-      resumeSession: "Weiterspielen: {names}, Stufe {level}",
-      resumeTimed: "Weiterspielen: {names}, Runde {level}",
+      /** A multiplayer session: the mode's name and the names as chips below. */
+      resumeSession: "Weiterspielen, Stufe {level}",
+      resumeTimed: "Weiterspielen, Runde {level}",
       new: "Neues Spiel",
       newKey: "N",
       language: "Sprache: {name}",

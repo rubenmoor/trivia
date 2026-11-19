@@ -988,6 +988,9 @@ def multiplayer(r):
 def in_session(r):
     r.scene("session", pads=2)
     r.shot("start-resume-session")
+    for n in (2, 5, 8):  # task 2271: the resume chips at 2, 5 and 8 seats, one name very long
+        r.scene(f"session-{n}", pads=n - 1, bound=True)
+        r.shot(f"start-resume-session-{n}")
     r.scene("session", pads=2, bound=True)
     r.click('[data-focus-id="main"]')
     r.wait("main .level, main .select, main .question")
@@ -1164,7 +1167,7 @@ STEPS = [
     (["mods", "mods-notice", "mods-crashed", "mods-empty"], mods),
     (["mode-multi", "join-empty", "join-name-picker", "join-5", "greeting-session", "join-8", "join-keyboard-timed",
       "choice-rr-coop", "choice-timed", "choice-rr-competitive", "bundles-session"], multiplayer),
-    (["start-resume-session", "menu-session", "seat-lost"], in_session),
+    (["start-resume-session", "start-resume-session-2", "start-resume-session-5", "start-resume-session-8", "menu-session", "seat-lost"], in_session),
     (["level-rr-coop", "select-rr-coop", "correct-rr-coop", "wrong-rr-coop", "victory-rr-coop", "level-rr-competitive",
       "wrong-rr-competitive", "victory-rr-competitive", "victory-last-standing"], round_robin),
     (["timed-question", "timed-claimed", "timed-claim-last", "timed-paused", "timed-time-up", "timed-round",
