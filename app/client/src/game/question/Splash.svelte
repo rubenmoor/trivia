@@ -210,7 +210,7 @@
     margin: 0;
     max-width: 100%;
     color: white;
-    font-family: var(--font-display);
+    font-family: var(--font-brush);
     line-height: 1.05;
     text-wrap: balance;
     overflow-wrap: anywhere;

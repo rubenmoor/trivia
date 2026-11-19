@@ -15,6 +15,50 @@
   font-weight: 200 1000;
   font-display: block;
 }
+/* CJK faces (plan 142, decision 767): CJK blocks and full-width punctuation only, so a Latin page never loads them. Ma Shan Zheng has no
+   Traditional glyphs: zh-Hant uses WenKai there. One weight each for the display faces: no synthetic bold. */
+@font-face {
+  font-family: "Ma Shan Zheng";
+  src: url("/fonts/zh-ma-shan-zheng.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+2E80-9FFF, U+F900-FAFF, U+3000-303F, U+FF00-FFEF, U+2010-2027;
+}
+@font-face {
+  font-family: "LXGW WenKai";
+  src: url("/fonts/zh-lxgw-wenkai.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+2E80-9FFF, U+F900-FAFF, U+3000-303F, U+FF00-FFEF, U+2010-2027;
+}
+@font-face {
+  font-family: "Han Rounded SC";
+  src: url("/fonts/zh-rhr-sc-regular.woff2") format("woff2");
+  font-weight: 100 599;
+  font-display: swap;
+  unicode-range: U+2E80-9FFF, U+F900-FAFF, U+3000-303F, U+FF00-FFEF, U+2010-2027;
+}
+@font-face {
+  font-family: "Han Rounded SC";
+  src: url("/fonts/zh-rhr-sc-bold.woff2") format("woff2");
+  font-weight: 600 900;
+  font-display: swap;
+  unicode-range: U+2E80-9FFF, U+F900-FAFF, U+3000-303F, U+FF00-FFEF, U+2010-2027;
+}
+@font-face {
+  font-family: "Han Rounded TC";
+  src: url("/fonts/zh-rhr-tc-regular.woff2") format("woff2");
+  font-weight: 100 599;
+  font-display: swap;
+  unicode-range: U+2E80-9FFF, U+F900-FAFF, U+3000-303F, U+FF00-FFEF, U+2010-2027;
+}
+@font-face {
+  font-family: "Han Rounded TC";
+  src: url("/fonts/zh-rhr-tc-bold.woff2") format("woff2");
+  font-weight: 600 900;
+  font-display: swap;
+  unicode-range: U+2E80-9FFF, U+F900-FAFF, U+3000-303F, U+FF00-FFEF, U+2010-2027;
+}
 
 .game {
   /* Base: night blue and slate gray */
@@ -66,6 +110,7 @@
 
   --font-display: "Baloo 2", system-ui, sans-serif;
   --font-text: "Nunito", system-ui, sans-serif;
+  --font-brush: var(--font-display); /* big captions, category and subcategory: Ma Shan Zheng in zh-Hans */
   --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 
@@ -75,6 +120,26 @@
   color: var(--paper);
   background: var(--night-900);
   font-variant-numeric: tabular-nums;
+}
+
+/* Chinese UI and Chinese question content (own `lang`, task 629): system CJK fonts last. */
+.game:lang(zh-Hans),
+.game [lang]:lang(zh-Hans) {
+  --font-text: "Nunito", "Han Rounded SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+  --font-display: "Baloo 2", "LXGW WenKai", "Han Rounded SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+  --font-brush: "Baloo 2", "Ma Shan Zheng", "LXGW WenKai", "Han Rounded SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+}
+.game:lang(zh-Hant),
+.game [lang]:lang(zh-Hant) {
+  --font-text: "Nunito", "Han Rounded TC", "Microsoft JhengHei", "Noto Sans CJK TC", system-ui, sans-serif;
+  --font-display: "Baloo 2", "LXGW WenKai", "Han Rounded TC", "Microsoft JhengHei", "Noto Sans CJK TC", system-ui, sans-serif;
+  --font-brush: var(--font-display);
+}
+.game [lang]:lang(zh-Hans),
+.game [lang]:lang(zh-Hant) {
+  font-family: var(--font-text);
+  line-break: strict;
+  word-break: normal;
 }
 
 /* Long German compounds (LUI-5); not `es`: Chromium would hyphenate Spanish line ends too. */
@@ -111,7 +176,7 @@
 /* Type roles (10, "Scale") */
 .game .title {
   margin: 0;
-  font-family: var(--font-display);
+  font-family: var(--font-brush);
   font-size: calc(4 * var(--u));
   font-weight: 800;
   line-height: 1.1;
