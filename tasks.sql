@@ -619,40 +619,21 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - A flag sent from the released game under Steam arrives via `qgen flag --pull` as a needs_work review; without the server the copy fallback works.
 
 Plan files: `plans/11-steam.md`.', '2026-10-11T21:55:09Z', NULL, 0);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (12, 'Conquer the world', 'on-hold', 'After the launch in English, Spanish and German (pm decision 26), the game ships in Simplified Chinese, Russian and Brazilian Portuguese: the three next-largest language groups on Steam. The Chinese version gets its own base bundle, `chinese-base`: a Chinese family plays China-centric questions instead of a Spanish-speaking world''s. In zh, `chinese-base` is offered in `base`''s place.
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (12, 'Conquer the world', 'on-hold', 'add chinese lanaguage to the game. first evaluate, which language exactly and what each entails. I can think of two or three main dialects of mainland china and taiwanese in addition.
 
-## Outcome
-- Questions, UI and store page in Simplified Chinese, Russian and Portuguese (Brazil), each with its own approved pool meeting the content target (pm decision 21: 5000 per language with D-53''s mix).
-- Built on the launch languages'' translation pipeline and review tool (Steam S4); no new pipeline per language.
-- Russian and Portuguese play translated `base`, as the launch languages do.
+this implies translation of the game and the whole interface, but also: the translation of questions, which is far more translation work. We will start with the base bundle, i.e. when selecting a chinese language in the game, the current logic applies and only those bundles that offer this language will be shown resulting in only the base bundle until we add the translation of other bundles.
 
-## Chinese: `chinese-base` bundle
-- The zh game''s base bundle: `chinese-base`; `base` isn''t offered in zh.
-- Target: 5000 approved with D-53''s mix, like `base` (pm decision 21).
-- Contents:
-  - translated `base` questions that work for a Chinese family (not about the Spanish-speaking world, no Spanish wordplay); a fit pass picks them, the gamemaster corrects
-  - new China-centric questions (Chinese history, places, food, festivals, people, language, pop culture) fill the rest
-- Own taxonomy and concept lists per D-43, reusing `base`''s where they fit.
-- Other bundles (`colombia`, …) stay switchable in zh only if translated; not required.
-- Open, for the masterplan to raise as pm decisions:
-  - membership: D-39 says one bundle per question, D-81 takes the bundle from the source; how a `base` question also counts for `chinese-base` (e.g. a per-locale fit flag on the zh translation vs. a bundle per locale)
-  - new China-centric questions: drafted in Spanish and translated (one pipeline) or drafted in Chinese
+in theory, we could just translate the base bundle as we have done before. However, I want a different appraoch and immediately create a new base bundle centered on chinese culture, history, society and education and so on. The result will be that there will be an additional base bundle (the chinese base) after implementation of this milestone. Earlier i said, only ever one base bundle is shown in the game. But we do something different: the chines base bundle will be available in the selected chinese dialects and english. Thus, when english is selected as language, the player can choose between two base bundle: the current one and the chinese one. The only specialty: there can only be one base bundle in any game session, so selecting one de-selects all others.
 
-## Bundle languages
-- Per-bundle `languages` comes from milestone 5; here: add ru, pt-BR to `base`, zh to `chinese-base` (zh''s only base bundle).
+in order to create the chinese-centric new base bundle: go through the existing bundle and plainly filter out any question that appears euro-centric. This is the first step. As a second step, this reduced base bundle gets translated. This means: across the base bundle, questions will be duplicates. That is intended. Figure out a structure: duplicating the wording of the question seems to be a good choice, because it will allow questions that started identical to diverge (e.g. change the english wording for something adequate for people in China). And the price (more disk space) is small. Definitely do not duplicate media.
 
-## Constraints
-- On hold until the gamemaster starts it (pending decision on the masterplan task).
-- Translations without human control, as in milestone 9 (developer, 2026-10-16): no native reviewers; replaces decision 220 (volunteer reviewers) and decision 221 (offline review sheet).
-- zh-drafted `chinese-base` questions are translated to en; the developer''s spot check of their batches works on the en translation (source zh alongside), as for any draft batch (decision 2).
+before you start, give our question authoring and translation pipelein a through review in preparation of this task. improve code where you can, remove features we don''t use, make changes when they seem useful. you are allowed to change behavior - as long as the new pipeline still serves, in general, to create and review euro-centric questions as before.
 
-## Out of scope
-- Languages beyond these three.
-- Own base bundles for Russian or Portuguese.
+the second step will be the authoring of new questions genuinely and specifically centered around everything china. do research on typical chinese curricula at schools. we will have to add categories and subcategories, too. The goal ist to match the existing base bundle in size for the chinese base. 
 
-## Done when
-- All three languages playable in the released game, store pages localized, content target met per language.
-- zh game plays `chinese-base` (5000 approved) instead of `base`.', '2026-10-12T16:46:08Z', NULL, 5);
+badges and awards (all stuff related to career) should still work: but it might require an adjustment once the chinese base is finished.
+
+draft the new questions of the second step in english first (for me to review)', '2026-10-12T16:46:08Z', NULL, 5);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (13, 'Code quality', 'implemented', 'The code grew fast through many pm workers (milestones 1–11, ~24k lines in `app/` and `authoring/`) and nobody has read it as a whole. This milestone reviews it file by file, fixes what is cheap to fix and writes everything down in one report for the gamemaster.
 
 ## Priority
