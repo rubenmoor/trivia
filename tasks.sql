@@ -8246,74 +8246,61 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 ## Done when
 - `qgen validate` passes with only the zh warning; `qgen report`, `--simulate`, `--cost`, `health` run with the zh locale(s) empty; the review tool and start page show them empty; the scratch sample validated, exported and rendered.
 - es, es-ES, en, de output as before; `npm run check`, `npm test`, `npm run build` pass.', 'Before any Chinese question can be written, translated or reviewed, the authoring tools and the game''s data files have to know that Chinese exists as a question language. This part adds the chosen Chinese variant (most likely Simplified Chinese for mainland China) to every list of languages, with no questions yet, and makes sure the tools handle an empty, not-yet-offered language without errors. It changes nothing for the Spanish, English and German questions the game already has.', '2026-10-15T20:11:24Z', 1147, NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (140, 12, 'Translation prompts and markets per locale', 700, 'The translation prompts for the new locales `zh-Hans`, `ru`, `pt-BR`, and the prompt of the `chinese-base` fit pass. Part 3 of `plan 60: masterplan`. Each locale prompt is a short `authoring/tools/prompts/locale-<locale>.md` like `locale-en.md` / `locale-de.md`; `prompt()` fills it into `{locale}` of translate, rate, review, fix and audit (D-87), so no code changes. Prompts are the developer''s (D-36): every draft goes into a pm decision before the file is written.
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (140, 12, 'Translation into Chinese', 700, 'The translation of `chinese-base` into the zh locale(s): one locale prompt per zh locale, then the `--translate` runs to 6000 approved per zh locale. Part 8 of `plan 60: masterplan`. A locale prompt is a short `authoring/tools/prompts/locale-<zh>.md` like `locale-en.md` / `locale-de.md`; `prompt()` fills it into `{locale}` of translate, rate, review, fix and audit (D-87), so no prompt code changes. Prompts are the developer''s (D-36): every draft goes into a pm decision before the file is written.
 
 ## Builds on
-- `plan 139: New locales in data and pipeline`: the locales in `translations.LANGUAGES`; `qgen batch --translate <locale>` stops before any call while `locale-<locale>.md` is missing. Writing a file lifts that stop, but no run starts before parts 4, 6 and 7 (runs only come from their tasks).
+- Part 1 (`task 2294: write plan: Chinese variants and the Chinese audience (evaluation)`): which zh locale(s) (recommended `zh-Hans` first) and the sensitivity rule; "the zh locale(s)" below means its answer. A variant served by conversion (e.g. OpenCC for `zh-Hant`) gets no prompt or run of its own here, only what part 1''s plan says.
+- `plan 139: Chinese locales in data and pipeline`: the zh locale(s) in `translations.LANGUAGES`; `qgen batch --translate <zh>` stops before any call while `locale-<zh>.md` is missing.
+- `plan 227: chinese-base bundle: model and setup`: the bundle, `languages: [<zh>, "en"]`, copies (`decision 217: chinese-base membership: how does a translated base question count for chinese-base?`, option 3).
+- Parts 5 and 7 (`task 2296: write plan: chinese-base step 1: euro-centric filter and copies`, `task 2298: write plan: chinese-base step 2: new China-centric questions in English`): the approved English sources to translate. The fit pass is part 5''s, on copies before translation; no fit step here.
+- `plan 141: Native reviewers`: who spot-checks the zh runs; runs wait for its reviewer path.
+- `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` (open, recommended option 1): sources `locale: en` (D-107), so translate reads English (`{source_language}`); with option 2 this plan''s runs change (Chinese sources, English by translation) and are rewritten then.
 - `decision 35: Translation prompts and markets per locale (plan 66)`: shape of a locale prompt; text in media is never a problem.
-- `decision 160: Translation prompts: add the style guide''s address and glossary?`: an address bullet and a quotes bullet per locale, no glossary block.
-- `decision 167: Translation prompt for a regional bundle (en for colombia)`: say nothing about where the players are; spelling and usage standards stay; same difficulty bullet ("Difficulty and distractors on the same scale 1–15 (the calibration examples are about Spanish speakers, the scale isn''t).").
-- House style "Keep it short" (`question` under 120, rarely over 160 characters); `translate.md` "Doesn''t travel" reasons.
+- `decision 160: Translation prompts: add the style guide''s address and glossary?`: an address bullet and a quotes bullet, no glossary block.
+- `decision 167: Translation prompt for a regional bundle (en for colombia)`: nothing about where the players are; spelling and usage standards stay; difficulty bullet as in `locale-en.md` today ("Difficulty and distractors on the same scale 1–15.", since `decision 241: Calibration examples for an international English pool: apply?`).
+- House style "Keep it short"; `translate.md` "Doesn''t travel" reasons.
 
-## Locale prompts: same bullets as `locale-de.md`
-In this order: all content in <language> + spelling standard; words all speakers understand; address; quotes; units, numbers, dates; names and titles; grammar across the four options; length; the difficulty bullet (decision 167); "Where this house style says Spanish …, read <language>. Its examples stay in Spanish".
-- Rules in English, examples in the target language (as `locale-de.md`). Examples are checked by the drafting worker; native reviewers (part 4) can propose fixes after the pilot''s spot check.
+## Locale prompt: bullets as `locale-de.md`
+In this order: all content in Chinese + script standard; the `{voices}` bullet; words all speakers understand; address; punctuation and quotes; units, numbers, dates; names and titles; options; hints; length; the difficulty bullet. Rules in English, examples in Chinese, each with an English gloss in the decision body (the developer can''t read Chinese); native reviewers (`plan 141: Native reviewers`) can propose fixes after the pilot, through a new decision.
 
-### `zh-Hans` (Simplified Chinese)
-- Simplified characters (as used in mainland China), Putonghua words; no Traditional characters, no Cantonese or Taiwanese usage.
+### `zh-Hans` (if part 1 picks it)
+- Simplified characters as used in mainland China, Putonghua words; no Traditional characters, no Cantonese or Taiwanese usage.
 - Address: generic «你»; never «您», never assume a plural (no «你们», «大家»).
 - Punctuation: full-width (，。？！：；), quotes “…” (nested ‘…’), titles of books, films, songs in 《…》.
-- Numbers: Arabic digits; no thousands separator; 万 / 亿 from 10 000 («42195人» or «约4.2万人», «300万»); decimal point; dates «1969年7月20日»; metric units in Chinese (米, 公里, 千克, 摄氏度).
-- Names and titles: the standard Chinese forms (Xinhua transliteration): «哥伦布», «圣女贞德»; film or book by its mainland release title («头脑特工队», «百年孤独»); a Latin-script name only where no Chinese form is in use (brands).
-- Options: no articles, but measure words and the question''s frame must fit all four; same form and similar character count.
-- Hints: a hint on the Spanish first letter or syllables becomes one that works in Chinese (number of characters, a character in the answer, the pinyin initial) or is replaced; hint 3 never contains a character of the answer that gives it away.
-- Length: Chinese is denser: «question» ideally under 50 characters, rarely over 70.
-- Not travelling: judged as for every locale (`translate.md`); whether a question fits a Chinese family is the fit pass''s job, not a reason for `travels: no`: `translatable: false` on the source is global (`translations.translatable`), so a zh-only reason must never set it.
+- Numbers: Arabic digits; no thousands separator; 万 / 亿 from 10 000 («42195人» or «约4.2万人», «300万»); decimal point; dates «1969年7月20日»; metric units in Chinese (米, 公里, 千克, 摄氏度); an English source''s imperial brackets dropped.
+- Names and titles: standard Chinese forms (Xinhua transliteration) «哥伦布», «圣女贞德»; mainland release titles («头脑特工队», «百年孤独»); Latin script only where no Chinese form is in use (brands). Chinese people, places and terms written in pinyin in the English source go back to their characters, in Chinese name order; curriculum terms (dynasties, 成语, poems) as Chinese school books write them.
+- Chinese-language questions (characters, idioms, poems) drafted in English with the Chinese term quoted (decision 750 option 1): rebuilt as a native Chinese question; one that can''t be rebuilt → `travels: no`, `wordplay`.
+- Options: measure words and the question''s frame fit all four; same form, similar character count.
+- Hints: one on English letters, rhymes or syllables becomes one that works in Chinese (number of characters, a character of the answer, the pinyin initial) or is replaced; hint 3 never contains a character that gives the answer away.
+- Length: «question» ideally under 50 characters, rarely over 70 (open line for the developer).
+- Sensitivity: part 1''s rule, verbatim, as one bullet (a translation that can''t follow it → `travels: no`, `other`, with a note).
+- `travels: no` only for `translate.md`''s reasons and the sensitivity bullet; whether a question fits a Chinese family was decided before (part 5, part 7).
 
-### `ru` (Russian)
-- Standard Russian; «ё» written where it is pronounced (decision for the developer in the approval: always «ё» vs. only where ambiguous; proposed: always).
-- Address: generic «ты»; never «вы» (neither polite nor plural), no plural imperatives («Послушайте»).
-- Quotes «ёлочки» «…», nested „…“.
-- Numbers: space as thousands separator from 10 000 («42 195 человек»), none up to 9999; decimal comma; large round numbers in words («3 миллиона»); dates «20 июля 1969 года»; metric.
-- Names and titles: the established Russian forms («Христофор Колумб», «Жанна д’Арк»), Russian release titles («Головоломка», «Сто лет одиночества»); other names by practical transcription into Cyrillic, never left in Latin script (brands excepted).
-- Grammar across options: case, gender and number endings must fit all four; phrase the question so every option stands in the nominative («Какое животное…?», «Как называется…?»).
-- Length: Russian runs longer, like German: stays under 160 characters.
+### A second zh locale with its own translation (only if part 1 says so)
+- Same bullets; script, vocabulary and usage of its market (e.g. Taiwan: Traditional characters, Taiwan words, 「…」 quotes, its release titles and transliterations); its own decision.
 
-### `pt-BR` (Brazilian Portuguese)
-- Brazilian Portuguese, spelling of the 1990 Orthographic Agreement; Brazilian words and usage, never European Portuguese («ônibus», «trem», «celular»; «fato», «time» for a sports team).
-- Address: generic «você»; never «tu», «o senhor»; never assume a plural (no «vocês», no plural imperatives).
-- Quotes “…” (curly double quotes).
-- Numbers: dot as thousands separator from 1.000 («42.195 pessoas»), decimal comma («42,195 km»), years without separator; large round numbers in words («3 milhões»); dates «20 de julho de 1969»; metric.
-- Names and titles as Brazilians know them («Cristóvão Colombo», «Joana d’Arc»), Brazilian release titles («Divertida Mente», «Cem Anos de Solidão»).
-- Grammar across options: articles and contractions (o/a, do/da, no/na) and gender agreement must fit all four; options without articles.
-- Length: under 160 characters.
-
-## `chinese-base` fit pass prompt
-- Waits for `decision 217: chinese-base membership: how does a translated base question count for chinese-base?`; with its recommended option (fit flag on the zh translation) the pass judges each approved `zh-Hans` translation of a `base` source.
-- New `prompts/fit.md`, generic for "a base bundle of another locale": `{bundle}`, its `rule` and `voice` from `bundles.json` (written by part 2), `{locale}` as above. Input: the Spanish source, the translation, subcategory, difficulty.
-- Asks per id: `fit` yes / no + `reason` (`spanish_world`: needs the Spanish-speaking world (people, places, TV, football clubs, food known there); `spanish_language`: lives on Spanish words even if it travelled; `too_hard_here`: fair only for players who grew up in the West, far above its difficulty for a Chinese family; `other`) + one English line for the developer. A question about the wider world that a Chinese family knows fits (world geography, science, global films, Messi); doubt → `no` with a note, the developer corrects (milestone).
-- Difficulty is not re-judged here: the translation''s rate step already did it for the zh market.
-- The step running it (`qgen` command or a step of `tr-zh-Hans-*`, schema, where `fit` is written, the review tool toggle) is part 2''s plan (`task 1148: write plan: chinese-base bundle: model and setup`); this plan only writes the prompt. If decision 217 is answered with option 2 or 3, the prompt''s input and output follow that answer (option 3: the pass picks `base` sources to copy, input the Spanish source only).
+## Runs
+- `qgen batch --translate <zh> --bundle chinese-base`, one command per RUNBOOK; copies and new questions alike, export to the `chinese-base` pack''s `pool.<zh>.json` (decision 112).
+- Pilot: the first run (50), then the stop until `qgen health ack tr-<zh>-1`; the native spot check (`plan 141: Native reviewers`) and the developer''s look at cost and reject rate (`qgen report --cost`) → a budget decision (runs and $ to 6000).
+- Then runs until `chinese-base` has 6000 approved in each zh locale in its difficulty mix (`qgen report --bundle chinese-base --locale <zh>`); stale translations (an English source changed after its translation) are retranslated by the same command; `qgen report --simulate --bundles chinese-base` ✓ for each zh locale.
+- Runs need English sources: they start once parts 5 and 7 have approved some, and continue alongside part 7''s drafting.
 
 ## Approval (D-36)
-- One pm decision per locale prompt, "Translation prompt `<locale>`: approve the draft?": the full draft in the body, the points that need the developer''s choice as open lines (zh length limit, Russian «ё», `pt-BR` word list), options "approve as drafted" (recommended) / "changes". One more for `fit.md`.
-- The developer can''t read the target languages: the body gives an English gloss of every example; the native reviewers of part 4 read the files after approval and before the pilot (their findings become a change through a new decision, not a silent edit).
-- The file is written only after the answer; the drafting task waits on its decision and finishes by applying it.
+- One pm decision per locale prompt, "Translation prompt `<zh>`: approve the draft?": full draft in the body, English gloss of every example, open lines (length limit, anything part 1 leaves open), options "approve as drafted" (recommended) / "changes".
+- The file is written only after the answer; the task waits on its decision and finishes by applying it.
 
 ## Tasks (suggested split)
-1. `locale-zh-Hans.md`: draft, raise its decision, wait (`pm task-pending-decision`), on the answer write the file, `qgen batch --translate zh-Hans` reaches the translate step''s prompt (check `prompt("translate", locale="zh-Hans")` renders, no call), `pm decision consequences`.
-2. `locale-ru.md`: the same.
-3. `locale-pt-BR.md`: the same.
-4. `prompts/fit.md`: pending on decision 217 from the start; then draft against part 2''s model and `chinese-base`''s `rule` (if part 2 hasn''t written it yet, also pending on part 2''s taxonomy/rule task), raise its decision, write the file on the answer.
-5. Docs: `plans/15b-question-translation.md` "Prompts" line names the new locale files and `fit.md`; D-87 in `plans/decisions.md` names the locales; `authoring/QC.md` only if the spot check reads differently for zh. After tasks 1–3 (4 adds its own line).
+1. Locale prompt per zh locale with its own translation (task 1166 for `zh-Hans`, rewritten): waits for part 1''s variant and sensitivity decisions; draft, decision, on the answer write the file, check `prompt("translate"|"rate"|"review"|"fix"|"audit", locale=<zh>)` renders, no call; es, es-ES, en, de renders unchanged; `plans/15b-question-translation.md` "Prompts" line and D-87''s locale list in `plans/decisions.md` name it; `authoring/RUNBOOK.md` only if a step reads differently for zh. Needs `plan 139: Chinese locales in data and pipeline`.
+2. Pilot run per zh locale (priority ~-130): requires 1, part 5''s first approved copies, `plan 141: Native reviewers`'' reviewer path; the run, `qgen health ack`, native spot check, budget decision with cost and reject rate.
+3. Runs to 6000 per zh locale (priority ~-130, iterative): requires 2''s budget decision and part 7''s sources; done when `qgen report` shows 6000 approved per zh locale and `--simulate` passes.
+- Drop: task 1167 (ru), task 1168 (pt-BR), task 1169 (fit pass prompt: part 5 writes `fit.md`).
 
 ## Left to other parts
-- UI style guides `locales/style/{zh-Hans,ru,pt-BR}.md` (part 5) follow these prompts'' address and quotes rules.
-- Who reviews (part 4), runs and the fit pass''s runs (parts 6, 7), store texts (part 8).
+- `fit.md` and the fit pass (part 5); UI style guides `locales/style/<zh>.md` (`plan 142: UI in the new languages`) follow this prompt''s address and punctuation; store texts (`plan 144: Store page and Steam for the new languages`); career check (`plan 145: Release and close-out of the new languages`).
 
 ## Done when
-- `locale-zh-Hans.md`, `locale-ru.md`, `locale-pt-BR.md` and `fit.md` exist as the developer approved them, each with an answered decision and its consequences.
-- `prompt(...)` renders for each new locale; es/en/de prompts unchanged; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '', '2026-10-15T20:13:25Z', 1149, NULL);
+- `locale-<zh>.md` exists for each zh locale with its own translation, as approved, with an answered decision and consequences.
+- `chinese-base` has 6000 approved translations per zh locale; `qgen report --simulate` ✓; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', 'The Chinese edition of the game needs its questions in Chinese. Questions are written and reviewed in English first, then a language model translates them, following a short style sheet per language that the developer approves. This part writes that style sheet for Chinese and then runs the translation of the whole Chinese question set, with a small trial first and checks by native readers.', '2026-10-15T20:13:25Z', 1149, NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (141, 12, 'Native reviewers', 720, 'Who checks `zh-Hans`, `ru` and `pt-BR` content, and how they reach it. Part 4 of `plan 60: masterplan`. No one in the family reads these languages (milestone constraint), yet every translation run needs a native spot check (`authoring/QC.md` "Translation runs", D-87) at the release bar (D-79: 30 questions, ≥ 90 % agreement), and each pilot''s go (`qgen health ack`) reads it. This plan picks the people (a pm decision), builds the offline path between them and the review tool, and gates the runs on an engaged reviewer per locale.
 
 ## Decisions
@@ -12101,6 +12088,61 @@ Waits for: part 2 (pipeline review and cleanup, `task 2295: write plan: Pipeline
 - With a fixture `chinese-base` (a copy and a new question): `qgen validate`, `export`, `report --bundle chinese-base --locale en` pass; the copy''s media is one file everywhere; English shows two base tiles, at most one on; zh shows only `chinese-base`; ALL_CATEGORIES reachable in a `chinese-base` game.
 - The real `chinese-base` exists (empty taxonomy until part 6), `rule`/`voice` approved.
 - es, es-ES, en, de output unchanged otherwise: `npm run check`, `npm test`, `npm run build`, `qgen validate`, `qgen report` as before.', 'The Chinese edition gets its own main set of questions, partly copied from the existing set and partly new, while English-speaking players can choose between the two sets. This part sets up how a copied question is stored without storing its pictures and sounds twice, makes the game allow only one main set per game, and keeps badges and achievements working for players of the Chinese set.', '2026-11-19T18:00:00Z', 1148, NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (228, 12, 'Chinese variants and the Chinese audience (evaluation)', 960, 'Part 1 of `plan 60: masterplan`: decide which written Chinese the game gets, what each option costs, and what a Chinese audience means for the game. Evaluation and decisions only: no code, no locale entries, no questions. The findings go into a new doc `plans/26-china.md`; `plans/15-i18n.md` gets a pointer row. Every later part says "the zh locale(s)" for the variant answer and waits for it.
+
+## Binding inputs
+- `decision 220: Native reviewers for zh-Hans, ru, pt-BR: paid freelancers, volunteers, or mixed?` → volunteers (credited, unpaid): the reviewer-need column counts volunteers, not fees; a variant without a reachable volunteer is a risk, not a cost.
+- `decision 222: New UI languages (zh-Hans, ru, pt-BR): offered only once their pool ships`: a zh UI language appears in the picker only once its pool ships; applies to every variant chosen.
+- `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` (copies), `decision 752: One base bundle per session: at most one, not exactly one`, `decision 753: chinese-base ships in the game''s content depot, not as DLC`: the bundle model is fixed; this plan only decides which zh locale(s) it lists besides `en`.
+- `decision 236: English-first drafting for base: what drives drafting and which locales steer it`: a zh locale never steers `base` drafting.
+- Steam language mapping already prepared: `guessTag()` knows `schinese` (`plans/15-i18n.md`, plan 85).
+
+## Waits for
+- Nothing (first part). Part 2''s cleanup may run alongside.
+
+## Evaluation doc `plans/26-china.md` (research task, `--web`)
+- Candidates, one section each with a comparison table at the top:
+  - Simplified Chinese (`zh-Hans`; mainland, Singapore, Malaysia; Steam `schinese`).
+  - Traditional Chinese for Taiwan (`zh-Hant` / `zh-TW`; Steam `tchinese`; Taiwan vocabulary, 注音 not needed for a text game).
+  - Hong Kong / Macau (Traditional, written standard Chinese; Cantonese colloquial only in speech and informal writing; no Steam language of its own, players use `tchinese`).
+  - Spoken varieties (Mandarin, Cantonese, Wu, Min, Hakka): why they don''t become separate written locales for a text game; state it plainly for the developer (milestone: "two or three main dialects").
+- Per candidate, columns:
+  - Steam language and share: Steam Hardware & Software Survey language share (Simplified vs. Traditional), with the survey month cited; note the survey''s known swings.
+  - Fonts: CJK coverage needed (GB 2312 / 通用规范汉字表 ~8100 for Simplified, Big5 / 常用字 ~4800+ for Traditional), candidate OFL fonts (e.g. Noto Sans SC/TC, Source Han, a rounded display face to match Baloo/Nunito such as a CJK rounded OFL font if one exists), size full vs. subset to the characters the pool and catalogs use (the build can subset per release); compare with today''s 96 KB `app/client/public/fonts` and `app/desktop/media-budget.json`. System-font fallback (Windows: Microsoft YaHei / JhengHei; Linux/Deck: Noto CJK if installed) as an option.
+  - Translation path: own `--translate` run per variant vs. one Simplified run plus OpenCC conversion (`s2twp`: characters and Taiwan phrases) plus a vocabulary pass; what OpenCC gets wrong (one-to-many characters, names, terms); what it costs in pipeline code (a conversion step vs. a second translation locale).
+  - Reviewer need: volunteers per variant (decision 220); a converted variant still needs a native read.
+  - Cost per question: today''s `qgen report --cost` $ per approved translation for en/de as the baseline; CJK token counts (more tokens per character) as an estimate; total for 6000 per variant.
+  - Content framing: mainland vs. Taiwan school curricula, history and civics framing, what `chinese-base` can share between them (part 6''s taxonomy, part 7''s drafting).
+- The Chinese audience: one section per implication, each "what it means for us" + the decision it raises (or "no decision: …"):
+  - Mainland sales: NPPA licence (版号) required for sale in mainland China; global Steam reachable there but unlicensed and blockable any time; Steam China (蒸汽平台, Perfect World) a separate licensed store with its own review; what a licence application would take (domestic publisher, content review). Recommendation: global Steam only.
+  - Content sensitivity: Taiwan''s status, Tibet, Xinjiang, Hong Kong 2019, 1989, Cultural Revolution and Great Leap judgements, disputed borders on maps (Arunachal / South Tibet, Aksai Chin, South China Sea, Senkaku/Diaoyu), flags (ROC flag), leaders; also existing `base` questions and media (maps, flags) that touch them; what Steam (global) itself requires. One rule for `chinese-base` drafting, part 5''s fit pass and every zh translation.
+  - Taiwan vs. mainland: one bundle can''t frame history and politics for both; options: one shared `chinese-base` with neutral facts only, or the variants differ in content (out of scope unless the developer says so).
+  - Reachability from mainland: media ship with the game (Commons being blocked doesn''t matter); the report server and telemetry on Cloudflare Workers (plan 103, plan 106): measure or cite reachability; game must work fully offline when they fail (check the code paths: timeouts, no blocking UI).
+  - Personal data: PIPL on cross-border transfer for opt-in telemetry and question reports (what data is sent, whether any of it is personal, consent wording); compare with the GDPR line we already have.
+  - Language and format: 万/亿 for numbers, dates 年月日, Chinese name order, foreign names in their Chinese form (transliteration consistency across questions), pinyin for Chinese terms in the English pool, full-width punctuation, line breaking (no spaces), letter key chips on Chinese keyboards (decision 53, decision 671), answer letters A–D.
+  - Anything else found that the developer would not expect (milestone: "let me know"), e.g. age rating or anti-addiction rules if they touch global Steam, game name in Chinese and trademark (PUB-7, plan 129).
+- Ends with a short "Recommendation" list for the developer and the decisions raised.
+
+## Decisions raised (by the research task, from its findings)
+- Variant(s): recommended option `zh-Hans` only now; `zh-Hant` later (by OpenCC conversion plus a native pass, or its own run). Options also: both at once; `zh-Hant` only. The answer = "the zh locale(s)" for parts 3–12.
+- Sensitivity rule for drafting, fit pass and translation: options e.g. avoid contested political topics entirely (recommended for a family party game) / neutral facts only / no special rule; the rule text goes into part 5''s fit prompt, part 7''s voice and part 8''s locale prompt.
+- Store targets: global Steam only (recommended) / also Steam China later / pursue an NPPA licence.
+- Further decisions only where the doc finds a choice only the developer can make (e.g. telemetry and reports off or reworded for zh, a Taiwan-specific content line).
+- Each decision: `--intro` per the house rules, body pointing at the section of `plans/26-china.md`.
+
+## Follow-through (after the answers)
+- A task writes the answers into `plans/26-china.md` (decisions section), `plans/15-i18n.md` (later languages: the zh locale(s); ru/pt-BR no longer planned for milestone 12), `plans/decisions.md` if a D-row changes, and the decision consequences; it checks that parts 3–12''s plans read "the zh locale(s)" consistently and adds a follow-up task to a part whose plan needs a change from an answer (e.g. a second locale for part 3, the sensitivity rule for parts 5, 7, 8, a font choice for part 10, store targets for part 11).
+- `task 1163: Chinese locale(s) in the locale lists and rules` waits for the variant decision (its own body says how).
+
+## Tasks (suggested split)
+1. Research and write `plans/26-china.md` (`--web`, `--model opus`, worktree `questions`), pointer row in `plans/15-i18n.md`, raise the decisions above; the task''s done note lists the decision ids.
+2. Apply the answers (follow-through above); pending on the decisions of task 1; worktree `questions`.
+
+## Done when
+- `plans/26-china.md` covers every candidate and implication above with sources; the variant, sensitivity and store decisions are answered and written into the docs; parts 3–12 know their zh locale(s).
+
+## Out of scope
+- Any code, locale list, font, prompt or question work (parts 3–12); Russian, Portuguese.', 'Chinese is not one written language for a game: mainland China writes Simplified characters, Taiwan and Hong Kong write Traditional ones, and the spoken dialects mostly share these written forms. This part works out which written Chinese the game should get first, what each option costs in translation, fonts and native readers, and what selling to a Chinese audience implies, from mainland licensing and politically sensitive topics to whether online features reach players there. The developer then chooses, and every later step of the Chinese work builds on that choice.', '2026-11-19T18:01:31Z', 2294, NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -31404,7 +31446,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1166, 140, 'Translation prompt zh-Hans: draft, approval, locale-zh-Hans.md', 'work', 'open', NULL, NULL, 'Write `authoring/tools/prompts/locale-zh-Hans.md`, the Simplified Chinese market block that `prompt()` fills into `{locale}` of translate, rate, review, fix and audit (`decision 35: Translation prompts and markets per locale (plan 66)`, D-87). No code change. Prompts are the developer''s (D-36): the file is written only after the developer approves the draft in a pm decision.
 
 ## Steps
-1. Draft from `plan 140: Translation prompts and markets per locale` section "`zh-Hans`": same bullets and order as `locale-de.md` (all content in Simplified Chinese + standard; words all speakers understand; address; quotes/punctuation; units, numbers, dates; names and titles; grammar across the four options; hints; length; the difficulty bullet of `decision 167: Translation prompt for a regional bundle (en for colombia)` verbatim; "Where this house style says Spanish …, read Chinese. Its examples stay in Spanish"). Rules in English, examples in Chinese. Address and quotes per `decision 160: Translation prompts: add the style guide''s address and glossary?` (no glossary). Say nothing about where players are (decision 167).
+1. Draft from `plan 140: Translation into Chinese` section "`zh-Hans`": same bullets and order as `locale-de.md` (all content in Simplified Chinese + standard; words all speakers understand; address; quotes/punctuation; units, numbers, dates; names and titles; grammar across the four options; hints; length; the difficulty bullet of `decision 167: Translation prompt for a regional bundle (en for colombia)` verbatim; "Where this house style says Spanish …, read Chinese. Its examples stay in Spanish"). Rules in English, examples in Chinese. Address and quotes per `decision 160: Translation prompts: add the style guide''s address and glossary?` (no glossary). Say nothing about where players are (decision 167).
 2. Must state: whether a question fits a Chinese family is not a reason for `travels: no` (that is the `chinese-base` fit pass''s job; `translatable: false` is global).
 3. `pm decision add "Translation prompt zh-Hans: approve the draft?"`, kind rule: full draft in the body, an English gloss for every Chinese example, open lines for the developer (length limit: «question» ideally under 50 characters, rarely over 70), options "approve as drafted" (recommended) / "changes". Then `pm task-pending-decision <this task> <decision>`, stage nothing beyond pm, stop.
 4. On the answer: write the file as approved; check `prompt("translate", locale="zh-Hans")` (and rate, review, fix, audit) renders with the block, no claude call; `qgen batch --translate zh-Hans` gets past the missing-prompt stop (plan 139) — stop it before any call (e.g. `--dry-run` if available, else check the code path); es/en/de renders unchanged. `pm decision consequences <decision> "…"`.
@@ -31417,7 +31459,7 @@ Done when: file exists as approved, decision answered with consequences, `npm ru
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1167, 140, 'Translation prompt ru: draft, approval, locale-ru.md', 'work', 'open', NULL, NULL, 'Write `authoring/tools/prompts/locale-ru.md`, the Russian market block that `prompt()` fills into `{locale}` of translate, rate, review, fix and audit (`decision 35: Translation prompts and markets per locale (plan 66)`, D-87). No code change. Prompts are the developer''s (D-36): the file is written only after the developer approves the draft in a pm decision.
 
 ## Steps
-1. Draft from `plan 140: Translation prompts and markets per locale` section "`ru`": same bullets and order as `locale-de.md` (all content in standard Russian; words all speakers understand; address «ты», never «вы», no plural imperatives; quotes «…», nested „…“; numbers, dates, metric; names and titles in established Russian forms, Cyrillic transcription, brands excepted; grammar: every option in the nominative; length under 160 characters; the difficulty bullet of `decision 167: Translation prompt for a regional bundle (en for colombia)` verbatim; "Where this house style says Spanish …, read Russian. Its examples stay in Spanish"). Rules in English, examples in Russian. Address and quotes per `decision 160: Translation prompts: add the style guide''s address and glossary?` (no glossary). Say nothing about where players are (decision 167).
+1. Draft from `plan 140: Translation into Chinese` section "`ru`": same bullets and order as `locale-de.md` (all content in standard Russian; words all speakers understand; address «ты», never «вы», no plural imperatives; quotes «…», nested „…“; numbers, dates, metric; names and titles in established Russian forms, Cyrillic transcription, brands excepted; grammar: every option in the nominative; length under 160 characters; the difficulty bullet of `decision 167: Translation prompt for a regional bundle (en for colombia)` verbatim; "Where this house style says Spanish …, read Russian. Its examples stay in Spanish"). Rules in English, examples in Russian. Address and quotes per `decision 160: Translation prompts: add the style guide''s address and glossary?` (no glossary). Say nothing about where players are (decision 167).
 2. `pm decision add "Translation prompt ru: approve the draft?"`, kind rule: full draft in the body, an English gloss for every Russian example, open line for the developer: «ё» always where pronounced (proposed) vs. only where ambiguous; options "approve as drafted" (recommended) / "changes". Then `pm task-pending-decision <this task> <decision>`, stop.
 3. On the answer: write the file as approved; check `prompt("translate", locale="ru")` (and rate, review, fix, audit) renders, no claude call; `qgen batch --translate ru` gets past the missing-prompt stop (plan 139) without starting a call; es/en/de renders unchanged. `pm decision consequences <decision> "…"`.
 
@@ -31429,7 +31471,7 @@ Done when: file exists as approved, decision answered with consequences, `npm ru
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1168, 140, 'Translation prompt pt-BR: draft, approval, locale-pt-BR.md', 'work', 'open', NULL, NULL, 'Write `authoring/tools/prompts/locale-pt-BR.md`, the Brazilian Portuguese market block that `prompt()` fills into `{locale}` of translate, rate, review, fix and audit (`decision 35: Translation prompts and markets per locale (plan 66)`, D-87). No code change. Prompts are the developer''s (D-36): the file is written only after the developer approves the draft in a pm decision.
 
 ## Steps
-1. Draft from `plan 140: Translation prompts and markets per locale` section "`pt-BR`": same bullets and order as `locale-de.md` (Brazilian Portuguese, 1990 Orthographic Agreement, Brazilian words never European Portuguese; address generic «você», no «tu», «o senhor», no plurals; quotes “…”; numbers with dot thousands separator from 1.000, decimal comma, dates, metric; names and Brazilian release titles; grammar: articles, contractions and gender fit all four options, options without articles; length under 160 characters; the difficulty bullet of `decision 167: Translation prompt for a regional bundle (en for colombia)` verbatim; "Where this house style says Spanish …, read Portuguese. Its examples stay in Spanish"). Rules in English, examples in Portuguese. Address and quotes per `decision 160: Translation prompts: add the style guide''s address and glossary?` (no glossary). Say nothing about where players are (decision 167).
+1. Draft from `plan 140: Translation into Chinese` section "`pt-BR`": same bullets and order as `locale-de.md` (Brazilian Portuguese, 1990 Orthographic Agreement, Brazilian words never European Portuguese; address generic «você», no «tu», «o senhor», no plurals; quotes “…”; numbers with dot thousands separator from 1.000, decimal comma, dates, metric; names and Brazilian release titles; grammar: articles, contractions and gender fit all four options, options without articles; length under 160 characters; the difficulty bullet of `decision 167: Translation prompt for a regional bundle (en for colombia)` verbatim; "Where this house style says Spanish …, read Portuguese. Its examples stay in Spanish"). Rules in English, examples in Portuguese. Address and quotes per `decision 160: Translation prompts: add the style guide''s address and glossary?` (no glossary). Say nothing about where players are (decision 167).
 2. `pm decision add "Translation prompt pt-BR: approve the draft?"`, kind rule: full draft in the body, an English gloss for every Portuguese example, open line for the developer: the Brazilian-vs-European word list («ônibus», «trem», «celular», «fato», «time»); options "approve as drafted" (recommended) / "changes". Then `pm task-pending-decision <this task> <decision>`, stop.
 3. On the answer: write the file as approved; check `prompt("translate", locale="pt-BR")` (and rate, review, fix, audit) renders, no claude call; `qgen batch --translate pt-BR` gets past the missing-prompt stop (plan 139) without starting a call; es/en/de renders unchanged. `pm decision consequences <decision> "…"`.
 
@@ -50599,7 +50641,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 
 ## Out of scope
 - Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', '2026-11-19T17:58:48Z', 1366, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2288, 140, 'revise plan 140: Translation prompts and markets per locale', 'revise', 'open', 1000, NULL, '`plan 60: masterplan`, the plan above `plan 140: Translation prompts and markets per locale`, changed; it is quoted below. Bring `plan 140: Translation prompts and markets per locale` in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2288, 140, 'revise plan 140: Translation prompts and markets per locale', 'revise', 'done', 1000, '2026-11-19, plan 140 rewritten as ''Translation into Chinese'' (zh prompt(s) + runs; ru/pt-BR and fit prompt out); split queued as task 2302', '`plan 60: masterplan`, the plan above `plan 140: Translation prompts and markets per locale`, changed; it is quoted below. Bring `plan 140: Translation prompts and markets per locale` in line with it
 (`pm plan edit 140 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -50704,7 +50746,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - New plans: parts 1, 2, 4 (task 1148), 5, 6, 7 (old task 1152 `chinese-base content` splits into parts 5 and 7).
 
 ## Out of scope
-- Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', NULL, 1366, 0, NULL, NULL);
+- Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', '2026-11-19T18:01:52Z', 1366, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2289, 141, 'revise plan 141: Native reviewers', 'revise', 'open', 1000, NULL, '`plan 60: masterplan`, the plan above `plan 141: Native reviewers`, changed; it is quoted below. Bring `plan 141: Native reviewers` in line with it
 (`pm plan edit 141 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -50775,7 +50817,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Pilot first (50, `qgen health ack`), its cost and reject rate → budget decision, then runs until `chinese-base` has 6000 approved (copies + new) in the difficulty mix: `qgen report --bundle chinese-base --locale en`.
 - Priority ~-120; after parts 4, 5, 6.
 
-## Part 8: Translation into Chinese (rewrites `plan 140: Translation prompts and markets per locale`)
+## Part 8: Translation into Chinese (rewrites `plan 140: Translation into Chinese`)
 - Locale prompt per zh locale (`authoring/tools/prompts/locale-<zh>.md`, like `locale-en.md`; decisions 35, 160, 167): characters, Chinese punctuation, 万/亿, names as Chinese speakers know them, units, terms of the curriculum; approval decision per prompt (D-36).
 - Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
 - Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
@@ -50802,7 +50844,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 
 ## Existing plans of this milestone
 - `plan 139: Chinese locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
-- `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
+- `plan 140: Translation into Chinese` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
 - `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
 - `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
 - `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
@@ -50881,7 +50923,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Pilot first (50, `qgen health ack`), its cost and reject rate → budget decision, then runs until `chinese-base` has 6000 approved (copies + new) in the difficulty mix: `qgen report --bundle chinese-base --locale en`.
 - Priority ~-120; after parts 4, 5, 6.
 
-## Part 8: Translation into Chinese (rewrites `plan 140: Translation prompts and markets per locale`)
+## Part 8: Translation into Chinese (rewrites `plan 140: Translation into Chinese`)
 - Locale prompt per zh locale (`authoring/tools/prompts/locale-<zh>.md`, like `locale-en.md`; decisions 35, 160, 167): characters, Chinese punctuation, 万/亿, names as Chinese speakers know them, units, terms of the curriculum; approval decision per prompt (D-36).
 - Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
 - Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
@@ -50908,7 +50950,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 
 ## Existing plans of this milestone
 - `plan 139: Chinese locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
-- `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
+- `plan 140: Translation into Chinese` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
 - `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
 - `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
 - `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
@@ -50987,7 +51029,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Pilot first (50, `qgen health ack`), its cost and reject rate → budget decision, then runs until `chinese-base` has 6000 approved (copies + new) in the difficulty mix: `qgen report --bundle chinese-base --locale en`.
 - Priority ~-120; after parts 4, 5, 6.
 
-## Part 8: Translation into Chinese (rewrites `plan 140: Translation prompts and markets per locale`)
+## Part 8: Translation into Chinese (rewrites `plan 140: Translation into Chinese`)
 - Locale prompt per zh locale (`authoring/tools/prompts/locale-<zh>.md`, like `locale-en.md`; decisions 35, 160, 167): characters, Chinese punctuation, 万/亿, names as Chinese speakers know them, units, terms of the curriculum; approval decision per prompt (D-36).
 - Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
 - Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
@@ -51014,7 +51056,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 
 ## Existing plans of this milestone
 - `plan 139: Chinese locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
-- `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
+- `plan 140: Translation into Chinese` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
 - `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
 - `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
 - `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
@@ -51093,7 +51135,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Pilot first (50, `qgen health ack`), its cost and reject rate → budget decision, then runs until `chinese-base` has 6000 approved (copies + new) in the difficulty mix: `qgen report --bundle chinese-base --locale en`.
 - Priority ~-120; after parts 4, 5, 6.
 
-## Part 8: Translation into Chinese (rewrites `plan 140: Translation prompts and markets per locale`)
+## Part 8: Translation into Chinese (rewrites `plan 140: Translation into Chinese`)
 - Locale prompt per zh locale (`authoring/tools/prompts/locale-<zh>.md`, like `locale-en.md`; decisions 35, 160, 167): characters, Chinese punctuation, 万/亿, names as Chinese speakers know them, units, terms of the curriculum; approval decision per prompt (D-36).
 - Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
 - Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
@@ -51120,7 +51162,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 
 ## Existing plans of this milestone
 - `plan 139: Chinese locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
-- `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
+- `plan 140: Translation into Chinese` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
 - `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
 - `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
 - `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
@@ -51199,7 +51241,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Pilot first (50, `qgen health ack`), its cost and reject rate → budget decision, then runs until `chinese-base` has 6000 approved (copies + new) in the difficulty mix: `qgen report --bundle chinese-base --locale en`.
 - Priority ~-120; after parts 4, 5, 6.
 
-## Part 8: Translation into Chinese (rewrites `plan 140: Translation prompts and markets per locale`)
+## Part 8: Translation into Chinese (rewrites `plan 140: Translation into Chinese`)
 - Locale prompt per zh locale (`authoring/tools/prompts/locale-<zh>.md`, like `locale-en.md`; decisions 35, 160, 167): characters, Chinese punctuation, 万/亿, names as Chinese speakers know them, units, terms of the curriculum; approval decision per prompt (D-36).
 - Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
 - Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
@@ -51226,7 +51268,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 
 ## Existing plans of this milestone
 - `plan 139: Chinese locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
-- `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
+- `plan 140: Translation into Chinese` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
 - `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
 - `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
 - `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
@@ -51235,14 +51277,14 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 
 ## Out of scope
 - Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', NULL, 1366, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2294, 60, 'write plan: Chinese variants and the Chinese audience (evaluation)', 'plan', 'open', 1000, NULL, 'Write the plan for part 1 of `plan 60: masterplan` (`pm plan add 12 …`): which Chinese variant(s) the game gets, what each entails, and the implications of a Chinese audience.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2294, 60, 'write plan: Chinese variants and the Chinese audience (evaluation)', 'plan', 'done', 1000, '2026-11-19, plan 228: Chinese variants and the Chinese audience (evaluation), priority 960; no files', 'Write the plan for part 1 of `plan 60: masterplan` (`pm plan add 12 …`): which Chinese variant(s) the game gets, what each entails, and the implications of a Chinese audience.
 
 - Scope: masterplan part 1 (candidates `zh-Hans`, `zh-Hant`/`zh-TW`, Hong Kong; spoken dialects vs. written languages; per candidate Steam language and share, CJK font size, translation path incl. OpenCC conversion, reviewer need, cost per question, content framing).
 - Audience implications go into `plans/15-i18n.md` or a new `plans/26-china.md`: NPPA licence / global Steam / Steam China, content sensitivity, Taiwan vs. mainland framing, reachability (report server, telemetry, PIPL), numbers, dates, names, pinyin.
 - Tasks: a research task (`--web`) that writes the evaluation doc; decisions raised from its findings: variant(s) (recommended `zh-Hans` first), a sensitivity rule for drafting, fit pass and translation, store targets.
 - Binding: `decision 220: Native reviewers for zh-Hans, ru, pt-BR: paid freelancers, volunteers, or mixed?` (volunteers) for the reviewer-need column; `decision 222: New UI languages (zh-Hans, ru, pt-BR): offered only once their pool ships`.
 - Later plans (parts 3–12) say "the zh locale(s)" for the variant answer; name them as waiting for it.
-- Plan priority ~960.', '2026-11-19T17:56:56Z', NULL, 2286, 0, NULL, 'questions');
+- Plan priority ~960.', '2026-11-19T17:56:56Z', '2026-11-19T18:01:35Z', 2286, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2295, 60, 'write plan: Pipeline review and cleanup for milestone 12', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of `plan 60: masterplan` (`pm plan add 12 …`): a thorough review and cleanup of question authoring and translation before any China work (milestone 12: "improve code where you can, remove features we don''t use").
 
 - Scope: masterplan part 2: `authoring/tools/qgen.py` and modules, `qgen batch` steps and `--translate`, prompts, `targets.py`, `translations.py`, review tool (`authoring/server`, `authoring/ui`), `authoring/RUNBOOK.md`, `authoring/QC.md`.
@@ -51253,7 +51295,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2296, 60, 'write plan: chinese-base step 1: euro-centric filter and copies', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of `plan 60: masterplan` (`pm plan add 12 …`): the fit pass over `base`''s approved questions and their copies into `chinese-base` (milestone 12: "plainly filter out any question that appears euro-centric").
 
 - Scope: masterplan part 5: fit pass on the English text of all approved `base` questions; keep what a Chinese family can know and enjoy, drop euro-centric / Latin-American-centric, one-language wordplay, anything against part 1''s sensitivity rule.
-- Prompt `authoring/tools/prompts/fit.md`: draft + approval decision (D-36). The old fit-prompt task in `plan 140: Translation prompts and markets per locale` (task 1169) goes with that plan''s revision; don''t duplicate.
+- Prompt `authoring/tools/prompts/fit.md`: draft + approval decision (D-36). The old fit-prompt task in `plan 140: Translation into Chinese` (task 1169) goes with that plan''s revision; don''t duplicate.
 - Output: copies by part 4''s model, subcategory mapped to `chinese-base`''s, light English adaptation only where the fit pass says, marked for review.
 - One `qgen` command (RUNBOOK; e.g. `qgen batch --bundle chinese-base --from base`), its runs in `authoring/RUNBOOK.md`.
 - Developer review: kept/dropped lists per subcategory and a sample at `/review?bundle=chinese-base`, corrections flip it (iterative feedback).
@@ -51276,6 +51318,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T17:58:44Z', '2026-11-19T17:59:56Z', 2287, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2300, 227, 'create tasks for plan 227: chinese-base bundle: model and setup', 'split', 'open', 1000, NULL, 'Split plan 227 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:00:00Z', NULL, 1148, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2301, 228, 'create tasks for plan 228: Chinese variants and the Chinese audience (evaluation)', 'split', 'open', 1000, NULL, 'Split plan 228 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:01:31Z', NULL, 2294, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2302, 140, 'create tasks for plan 140: Translation into Chinese', 'split', 'open', 1000, NULL, 'Split plan 140 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:01:33Z', NULL, 2288, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -61415,9 +61461,12 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2511, 2285, '2026-11-19T17:35:05Z', '2026-11-19T17:41:50Z', 'done', NULL, 0, '291e4122e4e94c30cfcf49c15dca823ac95bf0d4', NULL, 'claude-sonnet-5-5', '073cd727-4f78-472d-ae7b-f1aede38fbe1', NULL, 31, 54, 13119, 1596268, 72118, 0.57939679999999993, 85276, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2512, 1366, '2026-11-19T17:51:51Z', '2026-11-19T17:55:35Z', 'done', NULL, 0, 'c8ac4a89a3dfd8037b3ea209c3f20b185a28d1af', NULL, 'claude-opus-5-5', 'a356bddd-9880-4d2c-be34-b7e47e200264', NULL, 19, 38, 17146, 1186283, 85573, 1.2649125999999997, 85581, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2513, 2286, '2026-11-19T17:55:36Z', '2026-11-19T17:57:15Z', 'done', NULL, 0, '09688a9b2704110fcdf76add1a93ffc2438d7bf6', NULL, 'claude-opus-5-5', '0139ba67-de1f-4496-8d7b-4dc1908298ca', NULL, 11, 22, 7342, 556148, 55194, 0.6997096, 69545, 60, 473050);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2514, 1148, '2026-11-19T17:57:09Z', NULL, 'running', NULL, NULL, '09688a9b2704110fcdf76add1a93ffc2438d7bf6', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2514, 1148, '2026-11-19T17:57:09Z', '2026-11-19T18:00:17Z', 'done', NULL, 0, '09688a9b2704110fcdf76add1a93ffc2438d7bf6', 'questions', 'claude-opus-5-5', '5c90eb6c-d3fe-4855-bc17-f1a765d7a95e', NULL, 17, 32, 14720, 1096225, 78428, 1.141197, 93447, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2515, 2287, '2026-11-19T17:57:16Z', '2026-11-19T17:58:56Z', 'done', NULL, 0, '35418e2bed24d102902e4aedaa2fdab97f00d45e', NULL, 'claude-opus-5-5', '428b33d8-f606-4911-8bce-8a4cccd9f821', NULL, 10, 20, 7407, 533233, 54774, 0.6930586, 69793, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2516, 2299, '2026-11-19T17:58:56Z', '2026-11-19T18:00:07Z', 'done', NULL, 0, '1a613a8eff4e7e5994027a9ca15243db7fe6caa8', NULL, 'claude-opus-5-5', '5a762433-6deb-4064-a901-f71dfcbd9391', NULL, 9, 18, 5321, 374947, 38813, 0.4919854, 53868, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2517, 2288, '2026-11-19T18:00:08Z', '2026-11-19T18:02:01Z', 'done', NULL, 0, 'e03002c71327c9286a0348ea9e9c551e48503af1', NULL, 'claude-opus-5-5', 'bed20130-df1f-4e9f-86c1-edda688a1d21', NULL, 11, 22, 6795, 604791, 54243, 0.69089020000000012, 68593, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2518, 2294, '2026-11-19T18:00:17Z', '2026-11-19T18:01:50Z', 'done', NULL, 0, 'e03002c71327c9286a0348ea9e9c551e48503af1', 'questions', 'claude-opus-5-5', 'd91f7065-4fe2-47a5-938b-cc6afae5101f', NULL, 8, 16, 5896, 404478, 50987, 0.6067756, 66084, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2519, 2295, '2026-11-19T18:01:50Z', NULL, 'running', NULL, NULL, 'e03002c71327c9286a0348ea9e9c551e48503af1', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 473050);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
