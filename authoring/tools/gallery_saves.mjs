@@ -257,12 +257,10 @@ const round = (...steps) => steps;
 scene("timed-q", timedScene(timedSession(4, round(by(3, false), by(0), by(1), shown))));
 // Three seats: Sofía on her last heart, Mateo on his last chance in round 3.
 scene("timed-heart", timedScene(timedSession(3, [
-  ...round(by(0), by(1), timeUp), ...round(by(0), by(1), timeUp), ...round(by(0), timeUp, shown),
+  ...round(by(0), by(1), by(0)), ...round(by(0), by(1), by(0)), ...round(by(0), by(0), shown),
 ])));
-// Three seats on one heart each, Luna out in round 3: both left at risk on the round's last question.
-scene("timed-risk", timedScene(timedSession(3, [
-  ...round(timeUp, timeUp, timeUp), ...round(timeUp, timeUp, timeUp), ...round(by(0, false), timeUp, shown),
-])));
+// Three seats down to one heart each by two time-outs (task 2402), Luna out: both left at risk in round 2.
+scene("timed-risk", timedScene(timedSession(3, [...round(timeUp, timeUp, by(0, false)), shown])));
 // Two seats right every round up to round 12: the sudden-death round screen; its question claimed by Luna.
 const toTwelve = Array.from({ length: 11 }, () => round(by(0), by(1))).flat();
 scene("timed-12", timedScene(timedSession(2, toTwelve)));

@@ -80,18 +80,18 @@ Shared by the three: no skip, no undo, no joker changes mid-game; flagging only 
 ### Competitive timed (`timed`; en «Compete simultaneously», es «Todos a la vez»; D-80, replaces D-77's timed part)
 - 12 rounds; round = level (the question's difficulty follows the round); questions per round = number of players.
 - One age group for everyone; no jokers.
-- Every question shown to all players: 30 s, a hint every 8 s; unclaimed after 30 s = next question, nothing else.
+- Every question shown to all players: 30 s, a hint every 8 s; unclaimed after 30 s = −1 life for every player still in, then the next question (decision 772: Timed mode: an unclaimed time-out costs every player still in a heart).
 - Claim: own action, any player, any time → that player has 6 s to answer; 6 s timeout = wrong answer; once the answer is shown, the next question comes; players may claim again after scoring.
-- Lives: three each; round end: no correct answer in that round = −1 life; wrong answer (or claim timeout) = out at once; third life lost = out.
+- Lives: three each; round end: no correct answer in that round and no life lost at a time-out in it = −1 life; wrong answer (or claim timeout) = out at once; third life lost = out.
 - Win: round 12 is sudden death (first claim + correct answer wins at once); only one player left = wins at once.
-- Visuals: rounds and hearts; a heart pulses at a player's last chance in a round without a correct answer, stronger on their last heart; last 3 s of a claim: a clock ticks once per second, louder each tick, plus a pulsing red frame (impending-death warning of a first-person shooter); the same red frame when everyone is at risk at once (all on their last life, nobody correct this round yet).
+- Visuals: rounds and hearts; a heart pulses at a player's last chance in a round without a correct answer, stronger on their last heart; last 3 s of a claim: a clock ticks once per second, louder each tick, plus a pulsing red frame (impending-death warning of a first-person shooter); the same red frame when everyone is at risk at once (all still in on their last life: any time-out ends them all).
 - Seen events (D-82): ≈ N questions per round (N players), up to 12 rounds, fewer after drop-outs; no jokers.
 - Screens (plan 164): round 12 opens on the round screen as «Muerte súbita» (repeat count after a repeated round) with `boom`, the Timed screen's round line red; a win shows the session Victory («¡Gana Ana!», «Último en pie» when the others fell, the others' seat tags with hearts); nobody wins (decision 280) shows Wrong with «Nadie gana esta vez» and muted seat tags; Start's resume line names the round; no rich-presence token.
 - As built (plan 159, engine only):
   - Clock: all deadlines are epoch ms in the save; the client counts down from `view().session.timed` and sends `expire`; the engine checks every claim and answer against the stored timestamps (late = settled, not an error).
   - The question's 30 s run from `show` (client: the question is on screen), not from the previous question's end (decision 296: Timed mode: a round screen with a countdown before each round, and the question clock starts when the question is on screen): `shown_at` null until then; `claim` / `answer` before it: `not_shown`; an unshown question never expires; `show` is idempotent.
   - Round size = players still in at the round's start (decision 276: Timed mode: after a drop-out, how many questions does a round have?).
-  - Everyone out at one round end: nobody wins (decision 280: Timed mode: everyone out at one round end means nobody wins).
+  - Everyone out at one round end or one time-out: nobody wins (decision 280: Timed mode: everyone out at one round end means nobody wins).
   - Round 12 without a correct answer repeats as another sudden-death round (decision 281: Timed mode: round 12 without a correct answer repeats as another sudden-death round).
   - `pause` / `resume` (decision 282: Timed mode: the Esc menu and the Steam overlay pause the clock and hide the question): `claim`, `answer`, `expire` refused (`paused`); the view hides question, answers and hints; `resume` shifts the question and claim deadlines by the paused time. Nothing pauses outside `timed` (D-92).
 

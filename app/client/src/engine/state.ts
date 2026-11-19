@@ -160,6 +160,8 @@ export interface TimedState {
   round_done: number;
   /** Seats with a correct answer this round. */
   round_correct: number[];
+  /** Seats that lost a life at an unclaimed time-out this round: none more at its end; absent in older saves. */
+  round_lost?: number[];
   /** null: drawn, not on screen yet (decision 296). */
   shown_at: number | null;
   claim: { seat: number; at: number } | null;
