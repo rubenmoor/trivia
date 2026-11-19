@@ -44,7 +44,7 @@ def licence_kind(name):
 
 
 def provider_of(candidate):
-    return PROVIDERS[candidate.get("provider", "commons")]  # candidates from before MP-2 are Commons'
+    return PROVIDERS[candidate["provider"]]
 
 
 def order(kind):

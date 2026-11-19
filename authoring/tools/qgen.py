@@ -460,11 +460,8 @@ def claude(system, user, schema, model, cwd, web=False, retries=2, read=False, w
 
 
 def calls(d):
-    """Every Claude call logged in the work directory d: calls.jsonl, and costs.log from before task 1134."""
-    old, new = d / "costs.log", d / "calls.jsonl"
-    cells = [line.split("\t") for line in old.read_text(encoding="utf-8").splitlines()] if old.exists() else []
-    return ([{"model": c[0], "usd": None if c[1] in ("None", "") else float(c[1])} for c in cells if len(c) == 2]
-            + media_first.read_jsonl(new))  # tolerates cut-off and glued lines
+    """Every Claude call logged in the work directory d (calls.jsonl; tolerates cut-off and glued lines)."""
+    return media_first.read_jsonl(d / "calls.jsonl")
 
 
 def costs(d):
@@ -587,7 +584,7 @@ def cmd_concepts(args):
         subs = [(bundle, s) for s in sub_keys(args.subcategories, bundle)]
     elif getattr(args, "run", None):
         run = load_json(WORK / args.run / "run.json")
-        bundle = run.get("bundle", "base")
+        bundle = run["bundle"]
         subs = [(bundle, s) for s in run["subcategories"]]
     else:
         subs = [(c["bundle"], s) for c in categories.load(bundle) for s in c["subcategories"]]
@@ -874,7 +871,7 @@ def cmd_draft(args):
     subcategory into drafts/; malformed questions dropped, skips may retire concepts."""
     d = run_dir(args)
     cfg = load_json(d / "run.json")
-    subs, bundle = cfg["subcategories"], cfg.get("bundle", "base")  # runs before D-41 have no bundle
+    subs, bundle = cfg["subcategories"], cfg["bundle"]
     missing = [s for s in subs if concepts.load(bundle, s) is None]
     if missing:
         sys.exit(f"No concept list for {', '.join(missing)}: run `qgen concepts --bundle {bundle} --subcategories ...` first.")
@@ -1668,7 +1665,7 @@ def cmd_batch(args):
     lock_run(d)
     if resuming:
         check_mode(run, mode)
-        open_bundle = load_json(d / "run.json").get("bundle", "base")
+        open_bundle = load_json(d / "run.json")["bundle"]
         if open_bundle != args.bundle:
             sys.exit(f"{run} is unfinished and writes for bundle {open_bundle!r}, not {args.bundle!r}. "
                      f"Finish it first: qgen batch" + (f" --bundle {open_bundle}" if open_bundle != "base" else ""))

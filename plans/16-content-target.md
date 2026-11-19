@@ -53,7 +53,7 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per questi
 - Patches (ST-5, [`11`](11-steam.md) "Content updates (ST-5)"): new approved questions per language, fixed questions, dropped ones by status; monthly, only if ≥ 100 new approved per launch language or a reported fix waits; hotfixes any time (decision 96).
 
 ## Cost
-`costs.log` records the cost per generated question. A full run for 5000 questions × 4 question locales (English drafts plus three translations each, with translation, rating and fact-checking) needs a budget estimate before it starts (CT-3).
+`calls.jsonl` records the cost per generated question. A full run for 5000 questions × 4 question locales (English drafts plus three translations each, with translation, rating and fact-checking) needs a budget estimate before it starts (CT-3).
 - pm plan 70: `qgen report --cost` (CT-3), per-locale deficits + `es` source shortfall for `en`/`de` (CT-4, pm decision 37; the shortfall replaced by English drafting for the four question locales' deficits, D-107, pm decision 236), release budget per language as a pm decision after the translation pilot, before full runs.
 - `qgen report --cost [--json]` (task 461): $ per run (own log + `audit/`), draft $/approved (last 3 batches, weighted), translation $/approved per locale, overhead ratio, projection per language, spent vs. `targets.json` `"budget"`.
 - `qgen report --cost` also lists rows per regional bundle (× es, en) and per theme bundle (× en drafting, × es, es-ES, de translations): deficit to its target (a theme's en row: its draft gap), $/approved of its own runs, else base's rate (marked `*`) (plan 184).
@@ -75,7 +75,7 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per questi
 ## Tasks
 - [x] CT-1 Decide the target (OQ-32): 5000 approved per launch language, D-53's mix, no games number (2026-10-12, D-75). CT-2 (S4) reports games per player.
 - [x] CT-2 `qgen.py report --simulate` on the engine: games per new player per language, region, mode and age group; information only (D-75). (2026-10-12, task 412: `authoring/tools/engine.py`, `qgen.py` `report --simulate`; default matrix 56 s; es today: adults typical ≈ 68 solo games, strong 28; exit 1: es 1136/5000, en/de no pool.)
-- [ ] CT-3 Cost estimate per question (draft → approved, and per translation) from `costs.log`; budget for the release.
+- [ ] CT-3 Cost estimate per question (draft → approved, and per translation) from `calls.jsonl`; budget for the release.
 - [x] CT-4 Generation plan by gap: which difficulties and subcategories need the most, batch by batch. *2026-10-12, task 462 (D-84): deficits per locale + `es` source shortfall (`targets.py`), read by `draft` and the subcategory ranking; `qgen report --locale L`, `--simulate`'s target check and `--cost` use them. `--translate`'s weight: plan 66 follow-up. Source shortfall replaced by D-107 (English drafting by the four locales' deficits; plan 148 task 1236).*
 - [x] CT-5 Quality sampling: spot-check size and error limit per batch; `qgen.py` support for drawing the sample. *2026-10-24, plan 57: bar 30 / ≥ 90 %, back-audit 1039 questions, 99 major (9.5 %), $51.49; spot checks pending.*
   - Family pool: closed 2026-10-11 (pm decision 2: 30 per batch, ≥ 90 % agreement). Open for the public release: pm plan 57 (release bar, back-audit).

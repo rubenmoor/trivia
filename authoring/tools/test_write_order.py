@@ -54,7 +54,7 @@ class WriteOrder(unittest.TestCase):
     def test_merge_saves_run_state_before_pool(self):
         pool = self.d.parent / "pool.json"
         REAL_SAVE(pool, {"questions": [{"id": "q-0001", "question": "Other?", "answer": "Zzz", "locale": "es"}]})
-        REAL_SAVE(self.d / "run.json", {"mode": "batch"})
+        REAL_SAVE(self.d / "run.json", {"mode": "batch", "bundle": "base", "draft_locale": "es"})
         REAL_SAVE(self.d / "drafts" / "01.json", {"questions": [draft("ta")], "skipped": []})
         REAL_SAVE(self.d / "ratings" / "01.json", {"ta": {k: 5 for k in qgen.RUBRIC}})
         args = argparse.Namespace(run="run")

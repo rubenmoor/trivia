@@ -68,7 +68,7 @@ def bundle_runs(bundle, n=2, done=False):
     import health  # authoring/tools/health.py (imports qgen)
     def ok(run):
         cfg = load_json(WORK / run / "run.json", {}) or {}
-        return cfg.get("bundle", "base") == bundle and (cfg.get("done") or not done)
+        return cfg["bundle"] == bundle and (cfg.get("done") or not done)
     return [r for r in health.batch_runs() if ok(r)][-n:]
 
 
@@ -143,7 +143,7 @@ def calibration(run, pool=None):
     ratings, _ = collect(d)
     ids = load_json(d / "ids.json", {})
     by_id = {q["id"]: q for q in (pool if pool is not None else load_json(POOL)["questions"])}
-    bundle = (load_json(d / "run.json", {}) or {}).get("bundle", "base")
+    bundle = load_json(d / "run.json")["bundle"]
     rows = {}
     row = lambda lvl: rows.setdefault(lvl, {"slots": 0, "known_at": [], "drafted": [], "rated": [], "final": [],
                                             "merged": 0, "approved": 0})
@@ -570,10 +570,10 @@ def cost_runs(pool):
         run, kind = d.name, run_kind(d.name)
         own, audit = costs(d), costs(d / "audit")
         if not own and not audit:
-            skipped.append(f"{run}: no calls.jsonl or costs.log")
+            skipped.append(f"{run}: no calls.jsonl")
             continue
         approved, locale = None, None
-        bundle = (load_json(d / "run.json", {}) or {}).get("bundle", "base") if kind in ("batch", "translation") else None
+        bundle = load_json(d / "run.json")["bundle"] if kind in ("batch", "translation") else None
         if kind == "batch":
             locale = text_locale(d)
             if run in merged:
@@ -681,7 +681,7 @@ def report_cost(args):
     if args.json:
         return print(json.dumps(r, ensure_ascii=False))
     usd = lambda x: "–" if x is None else f"${x:.2f}"
-    print("cost per run (plan 70, CT-3; work/*/calls.jsonl or costs.log at list price; $/approved = the run's own log, as batches.md)")
+    print("cost per run (plan 70, CT-3; work/*/calls.jsonl at list price; $/approved = the run's own log, as batches.md)")
     rows = [("run", "kind", "calls", "$", "audit $", "approved", "$/approved")]
     rows += [(x["run"], x["kind"] + (f" {x['locale']}" if x["locale"] else ""), str(x["calls"]), usd(x["cost"]),
               usd(x["audit"]) if x["audit"] else "–", "–" if x["approved"] is None else str(x["approved"]),

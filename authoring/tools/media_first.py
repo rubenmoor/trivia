@@ -95,16 +95,6 @@ def record(run, rows):
     return len(new)
 
 
-def pilot_rows():
-    """The pilot's triaged files (history) (aided verdict, else blind): {title, seed, worth}."""
-    by = {}
-    for f in sorted((layout.WORK / "media-pilot").glob("*/triage.jsonl")):
-        for r in read_jsonl(f):
-            if r["title"] not in by or r.get("mode") == "aided":
-                by[r["title"]] = {"title": r["title"], "seed": r["seed"], "worth": bool(r["worth"])}
-    return list(by.values())
-
-
 def seed_stats(rows):
     """{seed: [triaged, worth]} over rows."""
     st = defaultdict(lambda: [0, 0])
@@ -126,7 +116,7 @@ def skipped(seed, stats):
 
 
 def used_titles(rows=None):
-    return {media_survey.norm_title(r["title"]) for r in (pilot_rows() + ledger() if rows is None else rows)}
+    return {media_survey.norm_title(r["title"]) for r in (ledger() if rows is None else rows)}
 
 
 def survey_files(crawl=True):
@@ -157,7 +147,7 @@ def select(run_dir, limit=None):
     path = run_dir / QUEUE
     if path.exists():
         return read_jsonl(path)
-    queue = inventory(survey_files(), pilot_rows() + ledger(), media_survey.pool_media(), limit)
+    queue = inventory(survey_files(), ledger(), media_survey.pool_media(), limit)
     write_jsonl(path, queue)
     return queue
 
@@ -173,7 +163,7 @@ def inventory_step(run_dir, limit=None):
 def remaining(run_dir, run):
     """The queue's files not yet in the ledger and whose seed isn't skipped by now (the ledger grows during the run)."""
     done = {media_survey.norm_title(r["title"]) for r in ledger() if r["run"] == run}
-    stats = seed_stats(pilot_rows() + ledger())
+    stats = seed_stats(ledger())
     return [f for f in select(run_dir) if media_survey.norm_title(f["title"]) not in done and not skipped(f["seed"], stats)]
 
 

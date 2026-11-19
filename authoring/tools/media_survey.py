@@ -212,7 +212,7 @@ def apply_filters(by_seed, in_pool):
                 counts[why] += 1
                 continue
             t = TYPE_OF[rec["mediatype"]]
-            kept.append({**rec, "licence_kind": providers.licence_kind(rec["license"]), "type": t,
+            kept.append({**rec, "provider": providers.commons.ID, "licence_kind": providers.licence_kind(rec["license"]), "type": t,
                          "needs_excerpt": (rec["duration"] or 0) > max_seconds(t),
                          "seed": seed["id"], "kind": seed["kind"], "class": seed["class"], "base_categories": seed["cats"]})
     return kept, counts

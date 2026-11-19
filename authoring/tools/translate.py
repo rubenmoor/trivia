@@ -25,15 +25,15 @@ def run_locale(d):
 
 
 def text_locale(d):
-    """The language of a run's drafts: a translation run's locale, else run.json's draft_locale (plan 148;
-    older runs es). Merged questions carry their own (translations.source_locale)."""
+    """The language of a run's drafts: a translation run's locale, else run.json's draft_locale (plan 148).
+    Merged questions carry their own (translations.source_locale)."""
     cfg = load_json(d / "run.json", {}) or {}
-    return cfg.get("locale") or cfg.get("draft_locale") or "es"
+    return cfg.get("locale") or cfg["draft_locale"]
 
 
 def run_bundle(d):
-    """The bundle a `--translate` run translates (`base` when the run names none)."""
-    return (load_json(d / "run.json", {}) or {}).get("bundle") or "base"
+    """The bundle a run drafts or translates."""
+    return load_json(d / "run.json")["bundle"]
 
 
 def numbers(text):
@@ -327,7 +327,7 @@ def cmd_translate_batch(args):
     if resuming:
         if run_locale(d) != locale:
             sys.exit(f"{run} is not a {locale} translation run")
-        open_bundle = load_json(d / "run.json").get("bundle", "base")
+        open_bundle = load_json(d / "run.json")["bundle"]
         if open_bundle != bundle:
             sys.exit(f"{run} is unfinished and writes for bundle {open_bundle!r}, not {bundle!r}. Finish it first: "
                      f"qgen batch --translate {locale}" + (f" --bundle {open_bundle}" if open_bundle != "base" else ""))
