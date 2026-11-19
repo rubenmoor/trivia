@@ -163,18 +163,18 @@ Source: Kenney UI Audio (clicks, rollovers, switches) and Kenney Digital Audio (
 | `tear` | `rasgado` | `zap1` | `spaceTrash1` |
 | `paper` | `pagina` | `phaserDown1` | `phaseJump3` |
 
-### Reveal group, round 1
+### Reveal group, round 2
 
-Source: Kenney Digital Audio (power-ups, tones, low tones), CC0, the `clean-digital` theme. Applause (`applause`, `applause-big`) keeps today's files (brief), no change. `whistle-down` is in the timed group (its task). `boom` was synth only, now recorded. Approval pending (reveal decision); alternates staged on `/sounds` ("Effects: reveal", round 1).
+Round 1 failed (`decision 738: Reveal sounds (right and wrong answer, impact, block landing): approve, or what to change?`): the Kenney Digital tones sounded like cheap sci-fi bleeps, right and wrong were too much, the block did not sound like an object landing. Round 2 drops the digital theme for this group: short natural sounds, Kenney RPG Audio and Casino Audio (CC0). Applause keeps today's files. Approval pending (reveal decision); alternates staged on `/sounds` ("Effects: reveal", round 2).
 
 | Cue | Installed file(s) | Source file | Alternate |
 |---|---|---|---|
-| `fanfare` | `acierto-1` … `acierto-5` (random, never twice in a row) | `threeTone1`, `threeTone2`, `powerUp1`, `powerUp3`, `powerUp12` | `pepSound2`, `powerUp8` |
-| `sad-trombone` | `error` | `lowDown` | `zapThreeToneDown`, `lowThreeTone` |
-| `boom` | `impacto` | `lowThreeTone` | `spaceTrash5` (too quiet at 1.5 s, not installed) |
-| `block` | `golpe-torre` (rate rises with the level) | `lowRandom` | `pepSound3` |
+| `fanfare` | `acierto-1` … `acierto-4` (coin and chip clinks, 0.6–0.9 s, random, never twice in a row, rate varies) | RPG `handleCoins`, `handleCoins2`; Casino `chips-collide-2`, `chips-collide-3` | RPG `metalClick` |
+| `sad-trombone` | `error` (soft leather drop, 0.6 s) | RPG `dropLeather` | RPG `bookPlace3` |
+| `boom` | `impacto` (door shut, 0.8 s) | RPG `doorClose_2` | - |
+| `block` | `golpe-torre` (book set down, rate rises with the level) | RPG `bookPlace1` | RPG `footstep05` |
 
-- Old `fanfarria*` and `trombon-triste` files and rows gone; `golpe` stays for `splash-drop` (splash task)
+- Old `fanfarria*` and `trombon-triste` files and rows gone; `golpe` stays for `splash-drop` (splash task); round-1 `acierto-5` gone
 
 ### Joker group, round 1
 
