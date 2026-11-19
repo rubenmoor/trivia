@@ -1,6 +1,6 @@
 # 26 — China: Chinese variants and the Chinese audience
 
-**Status:** evaluation (`plan 228: Chinese variants and the Chinese audience (evaluation)`, task 2337, 2026-11-19); decisions 756–759 raised, not yet answered
+**Status:** evaluation (`plan 228: Chinese variants and the Chinese audience (evaluation)`, task 2337, 2026-11-19); decisions 756–759 answered 2026-11-19 (section "Decisions"; applied by task 2338)
 
 This document decides nothing by itself: it compares which written Chinese the game could ship, what each costs, and what selling a family trivia game to Chinese speakers means beyond translation. Spoken "dialects" are not separate written languages for a text game, so the real choice is between the two scripts (Simplified, Traditional) and the regional vocabulary that goes with them. The audience sections list the legal, political and technical facts a developer from Europe would not expect, each with what it means for us and the decision it raises. Bound by decisions 217, 220, 222, 236, 752, 753 (copies, volunteers, picker gate, English-first `base`, one base per session, content depot); "the zh locale(s)" in every later part = the answer to the variant decision below.
 
@@ -131,6 +131,7 @@ What selling to Chinese speakers means beyond the words. Each implication: what 
 - **Fonts on a Steam Deck in Chinese:** the Deck has CJK fonts for its own UI, but the game's Chromium may not see them: shipping a font is the safe path (plan 142).
 
 ## Recommendation
+Research-time recommendations; the developer's answers are under "Decisions" below and win where they differ (variant: both; sensitivity: neutral facts; domain).
 - Ship `zh-Hans` only now; `zh-Hant` later as its own decision, by conversion (OpenCC `s2twp` + vocabulary pass + native read) once zh-Hans and a Taiwanese volunteer exist.
 - No dialect locales; Hong Kong and Macau read `zh-Hant` (later) or `zh-Hans`.
 - Sensitivity: leave contested political topics out of `chinese-base`, every zh translation, the zh catalogs and the store texts; check every map with East or South Asia and every flag question in part 5's fit pass; `base` for es/en/de stays as is.
@@ -145,3 +146,18 @@ What selling to Chinese speakers means beyond the words. Each implication: what 
 - Store targets → decision 758; "Mainland sales: NPPA licence and Steam China".
 - Reports and telemetry for zh players → decision 759; "Reachability from the mainland", "Personal data: PIPL vs. our GDPR line".
 - Ids: decision 756 (variant), decision 757 (sensitivity), decision 758 (store targets), decision 759 (reports and telemetry); answers written in by `task 2338: Apply the Chinese variant, sensitivity and store answers to the docs`.
+
+## Decisions
+Answered 2026-11-19; they override the recommendations above where they differ.
+- `decision 756: Chinese variant(s): which written Chinese does the game ship in milestone 12?` → `zh-Hans` and `zh-Hant` both in milestone 12, a player choice like any language.
+  - "The zh locale(s)" in every later part = `zh-Hans` + `zh-Hant`; each is its own locale in the picker, own pool, own catalog, own native reviewer (decision 220), own gate (decision 222).
+  - Steam languages `schinese` + `tchinese`; fonts SC + TC; Hong Kong and Macau read `zh-Hant`.
+  - Open: how `zh-Hant` is translated (own run vs. OpenCC `s2twp` + vocabulary pass + native read); raised as its own decision.
+- `decision 757: Sensitivity rule for Chinese content: how do drafting, the fit pass and zh translation treat contested political topics?` → neutral facts only.
+  - Rule text (verbatim into the fit prompt, the `chinese-base` voice, the zh locale prompts and store texts): contested topics are allowed when the question states an undisputed fact (a date, a name) without judgement or status wording; maps and flags are checked case by case.
+  - Replaces the research recommendation "leave contested topics out entirely": no blanket ban on maps, flags or politics in shots, trailer or pool; each map or flag is judged on its own.
+  - Same rule for `zh-Hans` and `zh-Hant`; `base` for es/en/de stays as is.
+- `decision 758: Store targets for Chinese players: global Steam only, Steam China later, or an NPPA licence?` → global Steam now; Steam China later (needs a licence through a Chinese publisher).
+  - No NPPA work, no anti-addiction work now; Steam China is a backlog item (`plans/backlog.md` B-23).
+- `decision 759: Question reports and telemetry for Chinese players: keep as is, own domain, or off for zh?` → move the report/telemetry server to a custom domain on Cloudflare (needs a domain of our own) to improve reachability; otherwise as before (kept for zh, silent fallback, `PRIVACY.md` zh section).
+  - Needs the developer to pick and register the domain; follow-up work: domain decision, then server and client URL change.
