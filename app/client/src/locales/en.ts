@@ -287,6 +287,8 @@ export const en = {
     title: "Game mode",
     soloKind: "One team, or a gamemaster running it",
     multi: "Multiplayer",
+    /** The tag on the three multiplayer mode buttons. */
+    local: "Local multiplayer",
     multiAbout: "Everyone with their own controller or keyboard",
     multiKey: "P",
     standard: "Standard",

@@ -440,8 +440,7 @@ def start(r):
 
 def player(r):
     r.scene("base")
-    r.click('[data-focus-id="main"]')
-    r.wait(".name-button")
+    to_player(r)
     r.settle(2.5)
     r.shot("player")
     r.key("ArrowDown")  # the ring: the selected name, then the badges button; no chip changes (decision 671)
@@ -468,8 +467,7 @@ def career(r):
     """The badge page of the first player: some badges, all, career off (plan 197)."""
     for save, name in (("career", "career"), ("career-full", "career-full"), ("career-off", "career-off")):
         r.scene(save)
-        r.click('[data-focus-id="main"]')
-        r.wait(".name-button")
+        to_player(r)
         r.click(".player .badges")
         r.wait(".career")
         r.settle(1)
@@ -515,12 +513,26 @@ def seguir(r, ready):
     r.settle(0.6)
 
 
-def choice(r):
-    r.scene("base")
-    r.click('[data-focus-id="main"]')
+def player_next(r, ready):
+    """The Player screen (single player only): the first name, then `ready`."""
     r.wait(".name-button")
     r.settle(0.8)
     r.click('[data-focus-id="play"]')
+    r.wait(ready)
+    r.settle(0.6)
+
+
+def to_player(r):
+    """Start → Mode (kind, then the standard mode) → the Player screen."""
+    r.click('[data-focus-id="main"]')
+    r.wait('[data-focus-id="kind-single"]:enabled')
+    seguir(r, '[data-focus-id="mode-gamemaster"]')
+    seguir(r, ".name-button")
+
+
+def choice(r):
+    r.scene("base")
+    r.click('[data-focus-id="main"]')
     r.wait('[data-focus-id="kind-single"]:enabled')
     r.settle(1.5)
     r.shot("mode-kind")
@@ -528,13 +540,18 @@ def choice(r):
     r.settle(1)
     r.shot("mode-single")
     r.click('[data-focus-id="mode-gamemaster"]')
-    seguir(r, ".config")
+    r.click('[data-focus-id="next"]')
+    player_next(r, ".config")
     r.settle(1.5)
     r.shot("choice-gamemaster")
-    r.click('[data-focus-id="back"]')
+    r.click('[data-focus-id="back"]')  # Choice → Player
+    r.wait('.player [data-focus-id="back"]:enabled')
+    r.settle(0.8)
+    r.click('.player [data-focus-id="back"]')  # Player → Mode
     r.wait('[data-focus-id="mode-solo"]:enabled')
     r.click('[data-focus-id="mode-solo"]')
-    seguir(r, '[data-focus-id="customize"]')
+    r.click('[data-focus-id="next"]')
+    player_next(r, '[data-focus-id="customize"]')
     r.settle(1.5)
     r.shot("choice-solo")
     r.click('[data-focus-id="customize"]')
@@ -554,20 +571,20 @@ def choice(r):
 
 
 def to_bundles(r):
-    """The default pick all the way: Mode, Mode again, Choice, then Bundles."""
+    """From Start: Mode, Mode again, Player, Choice, then Bundles."""
+    r.click('[data-focus-id="main"]')
+    r.wait('[data-focus-id="kind-single"]:enabled')
+    r.settle(0.8)
     seguir(r, '[data-focus-id="mode-gamemaster"]')
     r.click('[data-focus-id="mode-gamemaster"]')
-    seguir(r, ".config")
+    r.click('[data-focus-id="next"]')
+    player_next(r, ".config")
     seguir(r, ".bundles-screen")
 
 
 def supply(r):
     if not r.only or "supply-notice" in r.only:
         r.scene("seen")
-        r.click('[data-focus-id="main"]')
-        r.wait(".name-button")
-        r.settle(0.8)
-        r.click('[data-focus-id="play"]')
         to_bundles(r)
         r.wait('[data-focus-id="start"]:enabled')
         r.settle(1)
@@ -577,10 +594,6 @@ def supply(r):
         r.shot("supply-notice")
     for save, sel, name in (("short", ".supply", "bundles-supply-report"), ("blocked", ".error", "bundles-no-questions")):
         r.scene(save)
-        r.click('[data-focus-id="main"]')
-        r.wait(".name-button")
-        r.settle(0.8)
-        r.click('[data-focus-id="play"]')
         to_bundles(r)
         r.wait(f".bundles-screen {sel}")
         r.settle(1.2)
@@ -603,10 +616,6 @@ def topics(r):
         return skip_topics(r, names)
     if not r.only or "bundles-topics" in r.only:
         r.scene("topics-lost")
-        r.click('[data-focus-id="main"]')
-        r.wait(".name-button")
-        r.settle(0.8)
-        r.click('[data-focus-id="play"]')
         to_bundles(r)
         r.settle(1)
         r.shot("bundles-topics")
@@ -875,10 +884,8 @@ def mods(r):
 def to_mode(r, save="base", pads=0):
     r.scene(save, pads=pads)
     r.click('[data-focus-id="main"]')
-    r.wait(".name-button")
-    r.settle(0.8)
-    r.click('[data-focus-id="play"]')
     r.wait('[data-focus-id="kind-multi"]:enabled')
+    r.settle(0.8)
 
 
 def to_join(r, mode, save="base", pads=0):
@@ -929,7 +936,7 @@ def multiplayer(r):
     join_pads(r, 4)
     r.click('[data-focus-id="join-keyboard"]')
     r.wait('[data-focus-id="seat-name-4"]')
-    for i in range(1, 4):
+    for i in range(4):
         name_seat(r, i)
     r.click('[data-focus-id="seat-name-4"]')
     r.wait(".backdrop .name-button")
@@ -951,7 +958,7 @@ def multiplayer(r):
     # Eight seats: the list scrolls.
     to_join(r, "rr-coop", "crowd", pads=8)
     join_pads(r, 8)
-    for i in range(1, 8):
+    for i in range(8):
         name_seat(r, i)
     r.shot("join-8")
     # Keyboard-only timed: three claim keys, a fourth refused.
@@ -960,7 +967,7 @@ def multiplayer(r):
         r.click('[data-focus-id="join-keyboard"]')
         type_key(r, key)
         r.wait(f'[data-focus-id="seat-name-{i}"]')
-    for i in (1, 2):
+    for i in (0, 1, 2):
         name_seat(r, i)
     r.click('[data-focus-id="join-keyboard"]')
     type_key(r, "a")  # an answer letter: refused
@@ -973,6 +980,7 @@ def multiplayer(r):
     # Round-robin competitive: each seat its own age group; a short supply naming a seat.
     to_join(r, "rr-competitive", "short", pads=2)
     join_pads(r, 2)
+    name_seat(r, 0)
     name_seat(r, 1)
     seguir(r, '[data-focus-id="config-seat-group-1"]')
     r.click('[data-focus-id="config-seat-group-1"] .step:last-child')
@@ -1125,10 +1133,6 @@ def demo_menu(r):
 
 def demo_bundles(r):
     r.scene("base")
-    r.click('[data-focus-id="main"]')
-    r.wait(".name-button")
-    r.settle(0.8)
-    r.click('[data-focus-id="play"]')
     to_bundles(r)
     r.wait('[data-focus-id="start"]:enabled')
     r.settle(1.5)

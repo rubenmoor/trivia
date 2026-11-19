@@ -24,7 +24,6 @@
 
   let {
     mode,
-    player,
     busy,
     seats,
     onseats,
@@ -32,8 +31,6 @@
     onback,
   }: {
     mode: GameMode;
-    /** The Player screen's name: the first seat's preset. */
-    player: string;
     busy: boolean;
     /** The draft from an earlier visit, else empty. */
     seats: SeatDraft[];
@@ -111,10 +108,8 @@
   /** `next` bindings over the seats so far, a new seat last. */
   async function seated(next: Binding[]) {
     notice = null;
-    const name = list.length === 0 ? player : null;
-    update(next.map((binding, i) => (i < list.length ? { ...list[i], binding } : { binding, name, group: DEFAULT_AGE_GROUP })));
+    update(next.map((binding, i) => (i < list.length ? { ...list[i], binding } : { binding, name: null, group: DEFAULT_AGE_GROUP })));
     const at = list.length - 1;
-    if (name) void presetGroup(at, name);
     await tick();
     focusControl(section?.querySelector<HTMLElement>(`[data-focus-id="seat-name-${at}"]`));
   }

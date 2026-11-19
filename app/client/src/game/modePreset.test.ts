@@ -11,7 +11,7 @@ test("Mode preset: no last choice → standard mode on the single-player step (t
   assert.deepEqual(modePreset(null, null, ALL, 2), { pick: "solo", kind: "single", stage: "kind" });
 });
 
-test("Mode preset: the player's last mode wins when it is shown", () => {
+test("Mode preset: the last mode played wins when it is shown", () => {
   assert.deepEqual(modePreset(null, "gamemaster", BUILT, 1), { pick: "gamemaster", kind: "single", stage: "single" });
   assert.deepEqual(modePreset(null, "solo", BUILT, 1), { pick: "solo", kind: "single", stage: "single" });
   // a multiplayer last mode: its kind and tile, the kind step still first; Join asks for seats later

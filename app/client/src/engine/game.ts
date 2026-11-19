@@ -298,10 +298,10 @@ function newestGame(save: SaveData, player?: unknown): GameRow | null {
     : newest(save.games.filter((g) => g.player_id === pid));
 }
 
-/** The player's last choice of mode: their newest game's, null without one (the Mode screen owns the standard default
- * and the built check; MD-7, task 2114). */
-export function playerMode(save: SaveData, player?: unknown): GameMode | null {
-  const row = newestGame(save, player);
+/** The last mode played: the save's newest game's, any player, null without one (Mode comes before Player, decision
+ * 747; the Mode screen owns the standard default and the built check; MD-7, task 2114). */
+export function lastMode(save: SaveData): GameMode | null {
+  const row = newest(save.games);
   return row ? gameMode(withDefaults(structuredClone(row.state))) : null;
 }
 

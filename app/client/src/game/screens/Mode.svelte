@@ -1,13 +1,13 @@
 <script lang="ts">
-  // The Mode screens (plans/04-ui-tv-display.md, "Mode"; MD-7, decision 314), between Player and the age screen: first
+  // The Mode screens (plans/04-ui-tv-display.md, "Mode"; MD-7, decision 314), right after Start (decision 747): first
   // «Solo o en grupo» or «Multijugador», then the mode itself: standard or gamemaster mode, or the multiplayer modes in
   // two groups (collaborative: rr-coop; competitive: rr-competitive, timed), one pick. Only the built modes show (dev mode
   // shows the unbuilt ones marked, decision 293); with no multiplayer mode to show, the first step is skipped.
-  // Preset (modePreset.ts, task 2114): the pick kept for Back, else `?mode=`, else the player's last choice (their newest
-  // game's mode, if shown), else the standard mode; with the kind step, that mode's kind. «Seguir» (Enter/A anywhere) goes
+  // Preset (modePreset.ts, task 2114): the pick kept for Back, else `?mode=`, else the last mode played (the save's newest
+  // game's, if shown), else the standard mode; with the kind step, that mode's kind. «Seguir» (Enter/A anywhere) goes
   // on, Space/X picks the ring's tile, a tile's letter picks it and moves the ring, Back goes a step back.
   import { onMount, untrack } from "svelte";
-  import { BUILT_MODES, fetchPlayerMode } from "../../lib/api.ts";
+  import { BUILT_MODES, fetchLastMode } from "../../lib/api.ts";
   import { devMode } from "../../lib/desktop.ts";
   import { show } from "../../lib/focus.ts";
   import { t } from "../../lib/i18n.ts";
@@ -20,13 +20,11 @@
   import Prompt from "../Prompt.svelte";
 
   let {
-    player,
     busy,
     mode,
     onnext,
     onback,
   }: {
-    player: string;
     busy: boolean;
     /** The pick kept in Game.svelte from an earlier visit (Back from a later screen), else null: the preset applies. */
     mode: GameMode | null;
@@ -82,7 +80,7 @@
   onMount(async () => {
     if (kept) return;
     const launch = new URLSearchParams(location.search).get("mode") as GameMode | null;
-    ({ pick, kind } = preset(launch ?? (await fetchPlayerMode(player).catch(() => null))));
+    ({ pick, kind } = preset(launch ?? (await fetchLastMode().catch(() => null))));
   });
 
   const list = $derived(stage === "single" ? SINGLE : MULTI);
@@ -151,7 +149,7 @@
           <p class="label pick-heading">{g.name}</p>
           <div class="pick-row" data-line>
             {#each g.tiles as m, i (m.id)}
-              {@render card(`mode-${m.id}`, m.name, m.about, m.key, m.icon, m.id === chosen, gi * 2 + i, () => (pick = m.id), unbuilt(m))}
+              {@render card(`mode-${m.id}`, m.name, m.about, m.key, m.icon, m.id === chosen, gi * 2 + i, () => (pick = m.id), unbuilt(m), true)}
             {/each}
           </div>
         </div>
@@ -165,7 +163,7 @@
   </div>
 </section>
 
-{#snippet card(id: string, name: string, about: string, key: string, glyph: IconName, on: boolean, i: number, pickIt: () => void, ships?: string)}
+{#snippet card(id: string, name: string, about: string, key: string, glyph: IconName, on: boolean, i: number, pickIt: () => void, ships?: string, local = false)}
   <OptionButton
     class="card"
     {on}
@@ -179,6 +177,7 @@
   >
     {#snippet icon()}<Icon name={glyph} />{/snippet}
     {#snippet chip()}<Prompt action={{ type: "letter", key }} hold />{/snippet}
+    {#if local}<span class="label local">{t("mode.local")}</span>{/if}
     <span class="label">{about}</span>
     {#if ships}<span class="label warn">{`PLACEHOLDER(${ships})`}</span>{/if}
   </OptionButton>
@@ -222,6 +221,9 @@
   :global(.card) {
     min-width: calc(24 * var(--u));
     max-width: calc(30 * var(--u));
+  }
+  .local {
+    color: var(--sky);
   }
   .warn {
     color: var(--amber);

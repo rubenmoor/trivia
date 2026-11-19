@@ -304,10 +304,16 @@ async function toStart() {
   }
 }
 
-/** Start screen → a new player → the Mode screen. */
-async function newPlayer() {
-  at("new player");
+/** Start screen → the Mode screen. */
+async function toMode() {
+  at("new game");
   await h.click('[data-focus-id="main"]');
+  await h.waitFor(visibleEl(".mode-screen"), "mode screen");
+}
+
+/** The Player screen (single player only): a new player → the age screen. */
+async function enterPlayer() {
+  at("new player");
   await h.waitFor(visibleEl("#new-player"), "player screen");
   await h.evaluate(`(() => {
     const i = document.querySelector("#new-player");
@@ -324,6 +330,7 @@ async function chooseSingle(mode) {
   await h.click('[data-focus-id="next"]');
   await h.click(`[data-focus-id="mode-${mode}"]`);
   await h.click('[data-focus-id="next"]');
+  await enterPlayer();
   if (mode === "solo") await h.click('[data-focus-id="group-young_teens"]'); // gamemaster: the settings screen, as defaulted
   await h.click('[data-focus-id="next"]');
   at("bundles");
@@ -342,7 +349,7 @@ async function game(dir) {
   at("start");
   let shell = await launch();
   await toStart();
-  await newPlayer();
+  await toMode();
   begin("solo");
   const offered = await chooseSingle("solo");
   await h.click(".level .hint");
@@ -390,7 +397,7 @@ async function gamemasterGame(dir) {
   at("gamemaster start");
   const shell = await launch();
   await toStart();
-  await newPlayer();
+  await toMode();
   await chooseSingle("gamemaster");
   await h.click(".level .hint");
   const locale = (await saved((s) => s.games?.length, "new game")).games.at(-1).locale ?? "es";
@@ -460,12 +467,13 @@ async function modsGame(dir) {
   if (!name) throw new Error("no CSS variable in the theme's style.css");
   const got = await h.evaluate(`getComputedStyle(document.querySelector(".game")).getPropertyValue(${JSON.stringify(name)}).trim()`);
   if (got !== value.trim()) throw new Error(`${name} is "${got}", the theme sets "${value.trim()}"`);
-  await newPlayer();
+  await toMode();
   at("player bundle");
   await h.click('[data-focus-id="kind-single"]');
   await h.click('[data-focus-id="next"]');
   await h.click('[data-focus-id="mode-solo"]');
   await h.click('[data-focus-id="next"]');
+  await enterPlayer();
   await h.click('[data-focus-id="group-young_teens"]');
   await h.click('[data-focus-id="next"]');
   const tb = path.join(DIR, "modding", "template-bundle");
@@ -540,12 +548,13 @@ async function matrixGame(dir, mode, group, groups, wrongAt) {
   const shell = await launch();
   try {
     await toStart();
-    await newPlayer();
+    await toMode();
     at(`${label}: choice`);
     await h.click('[data-focus-id="kind-single"]');
     await h.click('[data-focus-id="next"]');
     await h.click(`[data-focus-id="mode-${mode}"]`);
     await h.click('[data-focus-id="next"]');
+    await enterPlayer();
     if (mode === "solo") await h.click(`[data-focus-id="group-${group}"]`);
     else {
       // The configure screen's difficulty line: the groups in order, a new player at the default one.
@@ -747,7 +756,7 @@ async function setText(sel, text) {
   })()`);
 }
 
-/** Mode → Join (every seat, its device, its name) → Choice (age) → Bundles → the session's first screen. */
+/** Mode → Join (every seat, its device, its name; no Player screen) → Choice (age) → Bundles → the session's first screen. */
 async function setup(r) {
   at(`${r.label}: mode`);
   await h.click('[data-focus-id="kind-multi"]');
@@ -763,7 +772,6 @@ async function setup(r) {
       if (b.length === 1) await setText(".key-field", b);
     }
     await h.waitFor(visibleEl(`[data-focus-id="seat-name-${i}"]`), `seat ${i}`);
-    if (!i) continue;
     await h.click(`[data-focus-id="seat-name-${i}"]`);
     await setText(".backdrop #new-player", NAMES[i]);
     await h.click('.backdrop [data-focus-id="play"]');
@@ -1062,7 +1070,7 @@ async function multiplayer(dir, r) {
   seed = 1;
   r.shell = await launchPads(r.seats.filter((b) => typeof b === "number").length);
   await toStart();
-  await newPlayer();
+  await toMode();
   await setup(r);
   await r.play(r);
   await quit(r.shell);

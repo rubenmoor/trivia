@@ -33,7 +33,7 @@
     onstart,
     onback,
   }: {
-    player: string;
+    player?: string;
     /** Choice's picks. */
     draft: ChoiceDraft;
     /** The Join screen's seats in a multiplayer session, else empty. */

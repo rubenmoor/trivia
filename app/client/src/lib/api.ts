@@ -1,6 +1,6 @@
 import { devMode } from "./desktop.ts";
 import * as engine from "../engine/api.ts";
-import { gameChoice, jokersUsed, playerMode, view } from "../engine/game.ts";
+import { gameChoice, jokersUsed, lastMode, view } from "../engine/game.ts";
 import type { CareerView, RankStep, ScoreStep } from "../engine/career.ts";
 import { seededRng } from "../engine/rng.ts";
 import type { Outlook } from "../engine/outlook.ts";
@@ -224,9 +224,9 @@ export async function noteRunningOut(body: ChoiceBody, shown: string[]): Promise
   await run((save, data) => engine.noteRunningOut(save, data, { ...body, shown }), "next");
 }
 
-/** The mode of the player's newest game, null without one (MD-7). */
-export async function fetchPlayerMode(player: string): Promise<GameMode | null> {
-  return read((save) => ({ save, status: 200, body: playerMode(save, player) }), "next");
+/** The mode of the save's newest game, null without one (MD-7). */
+export async function fetchLastMode(): Promise<GameMode | null> {
+  return read((save) => ({ save, status: 200, body: lastMode(save) }), "next");
 }
 
 /** Play a joker (09-jokers.md): the game afterwards plus what happened, for the animation. */
