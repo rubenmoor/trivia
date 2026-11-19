@@ -89,3 +89,10 @@ class JudgeWindow(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class PromptPlaceholders(unittest.TestCase):
+    def test_media_prompts_have_no_max_placeholder(self):
+        for names in (["review", "media-first-checks"], ["audit", "media-first-checks"], ["house-style", "revise", "media-first-checks"],
+                      ["media-window"]):
+            self.assertNotIn("{max_", qgen.prompt(*names, locale="en"), names)

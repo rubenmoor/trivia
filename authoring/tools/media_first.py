@@ -18,7 +18,7 @@ from types import SimpleNamespace
 import atomic, categories, layout, progress
 import media_probe, media_survey, providers
 from providers import commons
-from media import MAX_AUDIO_SECONDS, MAX_VIDEO_SECONDS, excerpt_schema, max_seconds, pick_fields, play_window  # authoring/tools/media.py
+from media import excerpt_schema, max_seconds, pick_fields, play_window  # authoring/tools/media.py
 
 MF_DESIGNED = 120        # designed questions per run (≈ 100 approved at the pilot's look share)
 PROBE_JOBS = 4          # probes are local (ffmpeg, whisper), more than the claude calls' 3
@@ -521,7 +521,7 @@ def subcategories():
 
 def prompt_file(name, *before):
     from qgen import prompt
-    return (prompt(*before, name, locale="en").replace("{max_video_s}", str(MAX_VIDEO_SECONDS)).replace("{max_audio_s}", str(MAX_AUDIO_SECONDS))
+    return (prompt(*before, name, locale="en")
             .replace("{taxonomy}", taxonomy_text()))
 
 
