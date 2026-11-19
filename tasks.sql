@@ -51475,8 +51475,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T17:58:44Z', '2026-11-19T17:59:56Z', 2287, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2300, 227, 'create tasks for plan 227: chinese-base bundle: model and setup', 'split', 'done', 1000, '2026-11-19, tasks 2329-2336; 2334 pending on decision 751; 2321, 2316, 2323 linked to their plan 227 tasks', 'Split plan 227 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:00:00Z', '2026-11-19T18:24:03Z', 1148, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2301, 228, 'create tasks for plan 228: Chinese variants and the Chinese audience (evaluation)', 'split', 'open', 1000, NULL, 'Split plan 228 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:01:31Z', NULL, 2294, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2301, 228, 'create tasks for plan 228: Chinese variants and the Chinese audience (evaluation)', 'split', 'done', 1000, '2026-11-19, tasks 2337, 2338; decisions are raised by task 2337 from its findings; tasks 1163, 1166, 1174, 1175, 2313 now require 2338', 'Split plan 228 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:01:31Z', '2026-11-19T18:25:05Z', 2294, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2302, 140, 'create tasks for plan 140: Translation into Chinese', 'split', 'done', 1000, '2026-11-19, tasks 1166 (rewritten: zh-Hans prompt, waits for plan 228''s answers, task 1163, decision 750), 2303 (pilot run), 2304 (runs to 6000); dropped 1167, 1168, 1169', 'Split plan 140 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:01:33Z', '2026-11-19T18:04:04Z', 2288, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2303, 140, 'Pilot translation run zh-Hans of chinese-base: run, native spot check, budget decision', 'work', 'open', -130, NULL, 'The first `qgen batch --translate zh-Hans --bundle chinese-base` run (50) of `plan 140: Translation into Chinese` ("Runs"), its checks and the budget for the rest. Follow `authoring/RUNBOOK.md` exactly; one command, no pipeline steps by hand.
@@ -51808,6 +51808,36 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Anything that fails: a follow-up task in this plan, not fixed here unless it''s one line.
 
 Done when: all of the above hold, noted per line in the done note.', '2026-11-19T18:23:55Z', NULL, 2300, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2337, 228, 'Research and write plans/26-china.md: Chinese variants and the Chinese audience', 'work', 'open', NULL, NULL, 'Research task of `plan 228: Chinese variants and the Chinese audience (evaluation)`. No code, no locale entries, no questions.
+
+## What
+- Write `plans/26-china.md` exactly per the plan''s section "Evaluation doc `plans/26-china.md`": intro paragraph, one section per candidate (zh-Hans; zh-Hant/Taiwan; Hong Kong/Macau; spoken varieties and why they are not written locales) with a comparison table at the top; columns: Steam language share (survey month cited), fonts (coverage, OFL candidates, full vs. subset size vs. today''s `app/client/public/fonts` and `app/desktop/media-budget.json`, system-font fallback), translation path (own `--translate` run vs. Simplified + OpenCC `s2twp` + vocabulary pass), reviewer need (volunteers, `decision 220: Native reviewers for zh-Hans, ru, pt-BR: paid freelancers, volunteers, or mixed?`; `decision 754: Native checks of Chinese translation runs: pilot and release sample, not every run`), cost per question (baseline from `qgen report --cost`, CJK token estimate, total for 6000), content framing (mainland vs. Taiwan curricula).
+- "The Chinese audience" sections, each "what it means for us" + decision raised or "no decision: …": mainland sales (NPPA 版号, Steam China), content sensitivity (incl. a scan of existing `base` questions and media — maps, flags — that touch the listed topics), Taiwan vs. mainland framing, reachability (report server and telemetry on Cloudflare Workers, plan 103, plan 106; check the game''s code paths for timeouts and non-blocking UI when they fail), PIPL vs. our GDPR line, language and format (万/亿, dates, name order, transliteration, pinyin in the en pool, punctuation, line breaking, key chips per `decision 671: Key chips are labels, not predictions`, A–D letters), anything else unexpected (age rating, anti-addiction, game name and trademark).
+- Cite sources (URLs) throughout. End with "Recommendation" and "Decisions raised".
+- Pointer row for `plans/26-china.md` in `plans/15-i18n.md`; row in `directory.md` only if it lists plan docs (decision 196: no per-file rows otherwise).
+- Bound by the plan''s "Binding inputs" (decisions 217, 220, 222, 236, 752, 753): don''t reopen them.
+
+## Decisions to raise (`pm decision add`, each with `--intro`, body pointing at its section of `plans/26-china.md`)
+- Variant(s): recommended `zh-Hans` only now, `zh-Hant` later; also both at once; `zh-Hant` only.
+- Sensitivity rule for drafting, fit pass and translation: recommended avoid contested political topics entirely; neutral facts only; no special rule. Option text = the rule text later prompts use.
+- Store targets: recommended global Steam only; also Steam China later; pursue an NPPA licence.
+- Further ones only where the findings leave a choice only the developer can make (e.g. telemetry/reports for zh, a Taiwan-specific content line).
+- Make the follow-through task of this plan ("Apply the Chinese variant, sensitivity and store answers to the docs") pending on every decision raised: `pm task-pending-decision <that task> <decision id>`.
+
+## Done when
+- `plans/26-china.md` covers every candidate and implication of the plan with sources; pointer row in `plans/15-i18n.md`; decisions raised and linked; the done note lists the decision ids.', '2026-11-19T18:24:53Z', NULL, 2301, 1, 'opus', 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2338, 228, 'Apply the Chinese variant, sensitivity and store answers to the docs', 'work', 'open', NULL, NULL, 'Follow-through of `plan 228: Chinese variants and the Chinese audience (evaluation)`, after the developer answered the decisions that `task 2337: Research and write plans/26-china.md: Chinese variants and the Chinese audience` raised (this task is pending on them; if one is still open, stop).
+
+## What
+- `plans/26-china.md`: a "Decisions" section with each answer (cite `decision <id>: <subject>`).
+- `plans/15-i18n.md` later languages: the zh locale(s) of the variant answer; ru/pt-BR no longer planned for milestone 12.
+- `plans/decisions.md`: only if a D-row changes.
+- `pm decision consequences <id> "<text>"` for each decision where this task is the last waiting.
+- Read the plans of milestone 12''s parts 3–12 (`pm milestone show 12`; plans 139–142, 144, 145, 227, 229, 230 and later ones): they must read "the zh locale(s)" consistently with the answer. For a plan that needs a change from an answer (e.g. a second locale for plan 139, the sensitivity rule text for the fit pass / drafting voice / locale prompt, a font hint for the CJK font work, store targets for plan 144), add a follow-up task to that plan (`pm task add`, body: what, where, done when); don''t edit their bodies here.
+- Check `task 1163: Chinese locale(s) in the locale lists and rules` still reads right for the answer; if not, add a follow-up task to its plan.
+
+## Done when
+- Answers written into the docs, consequences recorded, every affected later plan has its follow-up task or needs none (listed in the done note).', '2026-11-19T18:25:00Z', NULL, 2301, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -61977,6 +62007,8 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2533, 1162, '2026-11-19T18:19:59Z', '2026-11-19T18:22:05Z', 'done', NULL, 0, '7445756bb28c2c98174377b6c89344abd9956d70', NULL, 'claude-opus-5-5', '884b1e12-1b9e-4dfe-8865-7496e78f2bea', NULL, 12, 24, 9834, 659375, 53594, 0.75740300000000016, 67950, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2534, 2300, '2026-11-19T18:22:05Z', '2026-11-19T18:24:11Z', 'done', NULL, 0, '9803c64d2784b3a054647c11a0908d49a41dd288', NULL, 'claude-opus-5-5', '1c72d83f-f6dc-4079-a08e-35c71152a368', NULL, 16, 30, 10299, 903022, 62201, 0.88431240000000022, 77306, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2535, 2332, '2026-11-19T18:24:04Z', NULL, 'running', NULL, NULL, '9803c64d2784b3a054647c11a0908d49a41dd288', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2536, 2301, '2026-11-19T18:24:11Z', '2026-11-19T18:25:11Z', 'done', NULL, 0, '9d2b1285c9617418a5614d26a93ec4a4871cf289', NULL, 'claude-opus-5-5', '07b742b0-1f6d-4dc8-8b66-588b91584030', NULL, 10, 20, 4142, 398782, 34415, 0.43799640000000006, 49185, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2537, 2337, '2026-11-19T18:25:06Z', NULL, 'running', NULL, NULL, '9d2b1285c9617418a5614d26a93ec4a4871cf289', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 473050);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -62751,16 +62783,20 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1163, 229
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1163, 2295);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1163, 2301);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1163, 2305);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1163, 2338);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1164, 1163);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1165, 1163);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1165, 1164);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1166, 1163);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1166, 2301);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1166, 2338);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1172, 1171);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1172, 2305);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1174, 1171);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1174, 2301);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1174, 2338);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1175, 2301);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1175, 2338);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1176, 1175);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1177, 1163);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1177, 1175);
@@ -63301,6 +63337,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2311, 230
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2311, 2310);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2312, 2311);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2313, 2301);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2313, 2338);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2314, 2313);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2315, 1176);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2315, 1177);
@@ -63361,6 +63398,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2336, 233
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2336, 2333);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2336, 2334);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2336, 2335);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2338, 2337);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
