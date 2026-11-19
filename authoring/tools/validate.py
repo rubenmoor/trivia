@@ -24,6 +24,7 @@ def validate_pool():
     """(errors, warnings) for the whole source pool and its export (QP-7)."""
     data = load_json(POOL)
     errors, warnings, ids, unlicensed = [], [], set(), []
+    unlicensed_urls = set()
     subcategories = categories.broad_of()
     lists = {}
     axes_of = {b: concepts.load_axes(b) for b in categories.bundle_ids()}
@@ -79,6 +80,7 @@ def validate_pool():
                 verdict, reasons = providers.licence_verdict(slot) if slot.get("file_url") else ("ok", [])
                 if verdict == "replace":  # plans/26, plans/53
                     unlicensed.append(f"{qid} {label} ({'; '.join(reasons)})")
+                    unlicensed_urls.add(slot["file_url"])
         if all(k in q for k in ["wrong_answers", "hints", "difficulty", "answer"]):
             errors += [f"{qid}: {p}" for p in check_question_shape(q)]
         if q.get("axes") is not None:  # D-37
@@ -101,7 +103,7 @@ def validate_pool():
         if bad:
             errors.append(f"{concepts.path(b, sub).relative_to(ROOT)}: known_at missing or not {lo}–{hi} (D-38): {first_ids(bad)}")
     if unlicensed:
-        errors.append(f"{len(unlicensed)} approved pick(s) on the licence replace list (needs_work and a new file, decision 47): {first_ids(unlicensed)}")
+        errors.append(f"{len(unlicensed_urls)} file(s) ({len(unlicensed)} approved pick(s)) on the licence replace list (needs_work and a new file, decision 47): {first_ids(unlicensed)}")
     e, w = translation_problems(data)
     errors += e
     warnings += w

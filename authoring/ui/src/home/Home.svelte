@@ -79,7 +79,7 @@
       },
       {
         count: q.licence_replace,
-        text: `${q.licence_replace === 1 ? "question" : "questions"} with a licence to replace: pick new media files`,
+        text: `${q.licence_replace === 1 ? "media file" : "media files"} with a licence to replace: pick new ones`,
         href: review({ licence: "replace" }),
       },
       ...q.bundles.map((b) => ({
