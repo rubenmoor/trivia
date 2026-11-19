@@ -256,6 +256,7 @@ const ERRORS: Record<string, string | ((p: Params) => string)> = {
   age_group_unknown: (p) => `unknown age group ${pyRepr(String(p.group))}`,
   bundle_unknown: (p) => `unknown bundle ${pyRepr(String(p.bundle))}`,
   bundles_not_list: "bundles must be a list",
+  bundles_many_base: "at most one base bundle per game",
   bundle_not_offered: (p) => `bundle ${pyRepr(String(p.bundle))} isn't offered in ${p.locale}`,
   difficulty_invalid: "a custom difficulty is {start, end}, whole numbers 1–15, end ≥ start, without an age group",
   levels_invalid: (p) => `levels: a whole number ${p.min}–${p.max}`,

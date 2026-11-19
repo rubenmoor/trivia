@@ -714,6 +714,7 @@ export const de = {
     age_group_unknown: "unbekannte Altersgruppe: „{group}“",
     bundle_unknown: "unbekanntes Paket: „{bundle}“",
     bundles_not_list: "die Pakete müssen eine Liste sein",
+    bundles_many_base: "höchstens ein Basispaket pro Spiel",
     bundle_not_offered: "das Paket „{bundle}“ gibt es in dieser Sprache nicht",
     no_questions: "keine Fragen für diese Auswahl: ein Paket mit Fragen wählen",
     difficulty_invalid: "eigene Schwierigkeit: 1 bis 15, das Ende nicht unter dem Anfang",

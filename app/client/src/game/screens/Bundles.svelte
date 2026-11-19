@@ -12,7 +12,8 @@
   import { t } from "../../lib/i18n.ts";
   import { show } from "../../lib/focus.ts";
   import { pushScope, type Keys } from "../../lib/input.svelte.ts";
-  import BundleSelector, { bundleKeys, orderBundles, toggled, type Bundle } from "../BundleSelector.svelte";
+  import BundleSelector, { bundleKeys, orderBundles, type Bundle } from "../BundleSelector.svelte";
+  import { toggled } from "../toggled.ts";
   import type { GameMode, Supply } from "../../lib/types.ts";
   import { bodyOf, choiceOf, isSession, type ChoiceDraft } from "../choiceDraft.ts";
   import type { SeatDraft } from "../seats.ts";

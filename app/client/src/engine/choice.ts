@@ -50,7 +50,7 @@ export function gameChoice(state: Pick<GameState, "settings">, data: EngineData)
   let out = d.bundles;
   if (bundles !== undefined) {
     try {
-      out = resolveBundles(data, bundles);
+      out = resolveBundles(data, bundles, false);
     } catch (e) {
       if (!(e instanceof GameError)) throw e;
     }
@@ -63,8 +63,16 @@ export function gameChoice(state: Pick<GameState, "settings">, data: EngineData)
   };
 }
 
-/** Bundles offered in the locale, duplicates dropped, any combination (plan 151), bundles.json order. */
-function resolveBundles(data: EngineData, wanted: unknown): string[] {
+/** At most one base bundle (decision 752): the first in bundles.json order stays; for stored choices, never written back. */
+function oneBase(data: EngineData, ids: string[]): string[] {
+  const isBase = (id: string) => data.bundles.find((b) => b.id === id)?.kind === "base";
+  const first = ids.find(isBase);
+  return ids.filter((id) => !isBase(id) || id === first);
+}
+
+/** Bundles offered in the locale, duplicates dropped, at most one base bundle (decision 752: a request with
+ * several is refused, `strict` off keeps the first), bundles.json order. */
+function resolveBundles(data: EngineData, wanted: unknown, strict = true): string[] {
   if (!Array.isArray(wanted)) throw new GameError("bundles_not_list");
   const known = new Set(data.bundles.map((b) => b.id));
   const offered = new Set(bundlesFor(data).map((b) => b.id));
@@ -72,7 +80,10 @@ function resolveBundles(data: EngineData, wanted: unknown): string[] {
     if (typeof b !== "string" || !known.has(b)) throw new GameError("bundle_unknown", { bundle: String(b) });
     if (!offered.has(b)) throw new GameError("bundle_not_offered", { bundle: b, locale: data.locale });
   }
-  return data.bundles.filter((b) => wanted.includes(b.id)).map((b) => b.id);
+  const ids = data.bundles.filter((b) => wanted.includes(b.id)).map((b) => b.id);
+  const one = oneBase(data, ids);
+  if (strict && one.length < ids.length) throw new GameError("bundles_many_base");
+  return one;
 }
 
 /** What a choice may get from a request body (plan 27, D-88). */

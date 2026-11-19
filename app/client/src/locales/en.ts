@@ -716,6 +716,7 @@ export const en = {
     age_group_unknown: "unknown age group: '{group}'",
     bundle_unknown: "unknown bundle: '{bundle}'",
     bundles_not_list: "bundles must be a list",
+    bundles_many_base: "at most one base bundle per game",
     bundle_not_offered: "the bundle '{bundle}' isn't available in this language",
     no_questions: "no questions for this choice: pick a bundle that has some",
     difficulty_invalid: "custom difficulty: 1 to 15, end not below start",

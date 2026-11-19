@@ -786,7 +786,7 @@ Template:
 - Decision:
   - **Configure screen** (plan 29's Choice screen in gamemaster mode; opens on the player's last game's settings, else the defaults below):
     - Difficulty: an age group, or «Custom»: start and end difficulty 1–15, end ≥ start, levels ramp evenly.
-    - Bundles: a shared bundle selector (also in the menu and elsewhere): the locale's bundles, base bundles apart, any combination (amended 2026-10-16; D-85 had exactly one). Default: the locale's first base bundle, non-base off.
+    - Bundles: a shared bundle selector (also in the menu and elsewhere): the locale's bundles, base bundles apart, at most one base bundle (amended 2026-10-16: any combination; 2026-11-19, decision 752: at most one again, picking a base bundle deselects the others; a stored choice or preset with several keeps the first in bundles.json order, never written back; a request with several is refused `bundles_many_base`; D-85 had exactly one). Default: the locale's first base bundle, non-base off.
     - Jokers: one row per joker, 0–99 or ∞; default the standard set (`STANDARD_JOKERS`); no presets.
     - Allow video questions, allow audio questions: on/off, default on; no general media switch.
     - Number of levels 1–20, default 12; the Tower adapts. No start level.

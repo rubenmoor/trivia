@@ -108,7 +108,7 @@ test("defaults per locale: the first base bundle and the locale's other bundles"
 
 test("an empty selection or a bundle not offered → 409, save unchanged; base off is fine", () => {
   assert.deepEqual(game.resolveChoice(data, { bundles: ["colombia"] }).bundles, ["colombia"]);
-  assert.deepEqual(game.resolveChoice(twoBases, { bundles: ["base", "base2"] }).bundles, ["base", "base2"]);
+  assert.throws(() => game.resolveChoice(twoBases, { bundles: ["base", "base2"] }), /at most one base bundle/);
   const save = game.newGame(emptySave(), data, io(11), "ana").save;
   for (const [d, bundles, code] of [
     [data, [], "no_questions"],
@@ -129,6 +129,17 @@ test("stored bundles that don't resolve play with the defaults, never written ba
   save = game.pick(save, data, io(14), 0).save;
   assert.equal(stateOf(save).phase, "question");
   assert.deepEqual(stateOf(save).settings.bundles, ["colombia", "mars"]);
+});
+
+test("stored or preset choices with two base bundles keep the first, never written back", () => {
+  let save = game.newGame(emptySave(), twoBases, io(15), "ana", { bundles: ["base"] }).save;
+  stateOf(save).settings.bundles = ["base2", "base"];
+  assert.deepEqual(game.gameChoice(stateOf(save), twoBases).bundles, ["base"]);
+  assert.deepEqual(stateOf(save).settings.bundles, ["base2", "base"]);
+  assert.deepEqual(game.playerChoice(save, twoBases, "ana").bundles, ["base"]);
+  const r = gameAction(save, twoBases, io(16), "new", { player: "bea", bundles: ["base", "base2"] });
+  assert.equal(r.status, 409);
+  assert.equal((r.body as { error: string }).error, "bundles_many_base");
 });
 
 test("unknown group or bundle → 409, save unchanged", () => {
