@@ -1,5 +1,5 @@
 """Human spot checks per batch (plan 16): the seeded sample and authoring/data/spot-checks.json.
-Written by the authoring server (a run's "size" by hand, decision 228); `qgen report --qc` and the exit check read the file."""
+Written by the authoring server (a run's "size" by hand, decision 228); `qgen report --qc` reads the file."""
 import datetime, json
 
 import layout  # authoring/tools/layout.py

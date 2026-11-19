@@ -1,5 +1,5 @@
 """Batch health (plan 15, D-55): metrics per `qgen batch` run from work/<run>/ and the pool.
-Shared by `qgen batch-report`, `qgen report --batches` and plan 12's exit check. No LLM."""
+Shared by `qgen batch-report`, `qgen report --batches`. No LLM."""
 import datetime, re
 from collections import Counter
 
@@ -193,7 +193,7 @@ def passes(value, bounds):
 
 def failures(run, pool=None, h=None):
     """Names of the thresholds the run fails ([] = pass), None while targets.json has no thresholds.
-    An ack doesn't change this (plan 12's exit check)."""
+    An ack doesn't change this."""
     t = thresholds(run)
     if t is None: return None
     h = h or batch_health(run, pool)
