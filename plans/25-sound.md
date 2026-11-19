@@ -274,3 +274,33 @@ The developer's picks after listening on `/sounds` (`decision 735: Sound brief, 
 - Shared `roll` and `victory`: kept, nothing new to find (`task 2257: New soundtracks: shared roll and victory`)
 - Files: `redoble.m4a` (drum roll, US Air Force Band) and `victoria.m4a` (Elgar, US Marine Band), both public domain, as in the brief
 - Not deleted by `task 2258: New soundtracks: old music files gone and the tally`
+
+### `chill-lofi` (Tranquilo lofi): approved, round 1 (`task 2254: New soundtracks: first set`)
+- Track: "Late Night Radio", Kevin MacLeod, CC BY 4.0; 72 bpm; 8 bars, loop 26.667 s; record `authoring/data/music/lofi-tranquilo-late-night-radio.json`
+- Variants `musica-lofi-tranquilo-<variant>.m4a`, 1.28 MB together:
+  - `normal`: `bass-3+other-1`, -21.2 LUFS
+  - `question`: `bass-1+other`, -19.2 LUFS
+  - `submitted`: full, -18.0 LUFS
+  - `timed`: full, same as `submitted`
+- Approved by the developer (`decision 742: Soundtrack 'Tranquilo lofi' (Late Night Radio): approved, swapped, or changes?`) without alternates
+
+### Acústica cálida: approved, round 1 (`task 2255: New soundtracks: second set`)
+- Track: "BossaBossa", Kevin MacLeod, CC BY 4.0; 77.5 bpm; 8 bars, loop 24.775 s; record `authoring/data/music/acustica-calida-bossabossa.json`
+- Variants `musica-acustica-calida-<variant>.m4a`, 1.21 MB together:
+  - `normal`: `bass-3+other-1`, -20.9 LUFS
+  - `question`: `bass-1+other`, -19.2 LUFS
+  - `submitted`: full, -18.0 LUFS
+  - `timed`: full, same as `submitted`
+- `trivia-music check` fails on `submitted`/`timed` (seam after AAC ≈ 4.2, limit 3.0); accepted by the developer if the wrap sounds clean (`decision 743: Soundtrack 'Acústica cálida' (BossaBossa): approved, swapped, or changes?`); `task 2258: New soundtracks: old music files gone and the tally` must not fail on it
+- Brief's track "Bossa Antigua" dropped: every re-split failed the check
+
+### Jazz de concurso: approved, round 1 (`task 2256: New soundtracks: third set`)
+- Track: "Jazz Brunch", Kevin MacLeod, CC BY 4.0; 100 bpm; 12 bars, loop 28.8 s; record `authoring/data/music/jazz-de-concurso-jazzbrunch.json`
+- Variants `musica-jazz-de-concurso-<variant>.m4a`, 1.41 MB together:
+  - `normal`: `bass-3+other-3`, -22.5 LUFS
+  - `question`: `bass-3+other-3+drums-3`, -21.0 LUFS
+  - `submitted`: full, -18.0 LUFS
+  - `timed`: full, same as `submitted`
+- `trivia-music check` passes; budget a hair over 1.4 MB, accepted
+- Approved by the developer (`decision 744: Soundtrack 'Jazz de concurso' (Jazz Brunch): approved, swapped, or changes?`)
+- Brief's track "Backbay Lounge" dropped: comb 1.34 under 1.5 (no firm beat)
