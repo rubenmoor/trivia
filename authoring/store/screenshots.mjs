@@ -92,13 +92,10 @@ async function gameplay(lang, saveDir, data, ui) {
   await shoot(lang, "joker-snipe");
 }
 
-/** Start → player → the Mode screen's single-player step (`shot`: the shot of it) → the Choice screen in `mode`. */
+/** Start → the Mode screen's single-player step (`shot`: the shot of it) → Player → the Choice screen in `mode`. */
 async function toChoice(saveDir, data, ui, mode, shot) {
   await load(saveDir, baseSave(ui, data.locale));
   await click("button.candy");
-  await waitFor(visibleEl(".name-button"), "player screen");
-  await sleep(800);
-  await click('[data-focus-id="play"]');
   await waitFor(visibleEl('[data-focus-id="kind-single"]'), "mode screen");
   await click('[data-focus-id="kind-single"]');
   await click('[data-focus-id="next"]');
@@ -109,6 +106,9 @@ async function toChoice(saveDir, data, ui, mode, shot) {
     await shoot(shot.lang, shot.name);
   }
   await click('[data-focus-id="next"]');
+  await waitFor(visibleEl(".name-button"), "player screen");
+  await sleep(800);
+  await click('[data-focus-id="play"]');
 }
 
 const focus = (sel) => evaluate(`document.querySelector(${JSON.stringify(sel)}).focus()`);

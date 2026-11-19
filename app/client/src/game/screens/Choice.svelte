@@ -36,7 +36,7 @@
   }: {
     /** The Mode screen's pick. */
     mode: GameMode;
-    player: string;
+    player?: string;
     busy: boolean;
     /** The picks kept in Game.svelte from an earlier visit (Back from Join or Bundles), else null: the preset applies. */
     draft: ChoiceDraft | null;

@@ -18,10 +18,13 @@
   let {
     busy,
     onchoose,
+    onback,
     ondeleted,
   }: {
     busy: boolean;
     onchoose: (name: string) => void;
+    /** Back to the Mode screen. */
+    onback: () => void;
     /** A player was deleted (their running game may be gone too). */
     ondeleted: () => void;
   } = $props();
@@ -82,12 +85,26 @@
     focusControl(cancelButton);
     return pop;
   });
+
+  // Backspace/B: back to Mode, unless a dialog or the badge page is open (they take their own).
+  $effect(() =>
+    pushScope({
+      name: "player-back",
+      handle: (a) => {
+        if (a.type !== "back" || doomed || careerOf) return false;
+        onback();
+        return true;
+      },
+    }),
+  );
 </script>
 
 <section class="player">
   <h1 class="title">{t("screen.player.title")}</h1>
 
   {#if loaded}<NamePicker {players} {busy} scope="player" suggest {onchoose} ondelete={(p) => (doomed = p)} onbadges={demo ? undefined : (p) => (careerOf = p.name)} />{/if}
+
+  <button class="secondary back" onclick={onback} disabled={busy} data-focus-id="back"><Icon name="back" /> {t("action.back")} <Prompt action="back" /></button>
 
   {#if careerOf}<Career name={careerOf} onclose={() => (careerOf = null)} />{/if}
 

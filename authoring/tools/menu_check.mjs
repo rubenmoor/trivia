@@ -5,7 +5,7 @@
 // [--visible] [--chromium <exe>]; exit 1 names the failed step. Steps:
 //   enter     fresh save: only Enter from Start to the first question → a standard-mode game, a suggested team name, default settings
 //   pad-a     the same with only pad A (a fresh save)
-//   last      that player plays a gamemaster game; next time only Enter → gamemaster mode preselected and played
+//   last      that player plays a gamemaster game; next time only Enter → gamemaster mode (the save's last) preselected and played
 //   space     Space on the ring's Mode tile only picks it; Enter with the ring on a tile goes on; Space on a bundle tile
 //             toggles it once (no native double click); Enter with the ring on a bundle starts the game
 //   letter    a bundle's letter toggles it and moves the ring onto it; a mode's letter likewise
@@ -130,13 +130,9 @@ async function waitScreen(sel, what) {
   await sleep(700); // transitions ignore input while they run
 }
 
-/** Start → Player → Mode → Choice → Bundles → the first question, one `go` per screen. */
+/** Start → Mode → Player → Choice → Bundles → the first question, one `go` per screen. */
 async function onlyConfirm(go, label) {
   at(`${label}: start`);
-  await go();
-  await waitScreen("#new-player", "player screen");
-  at(`${label}: player`);
-  const name = await h.evaluate(`document.querySelector("#new-player").value`);
   await go();
   await waitScreen(".mode-screen", "mode screen");
   at(`${label}: mode`);
@@ -144,6 +140,10 @@ async function onlyConfirm(go, label) {
     await go();
     await sleep(900);
   }
+  await waitScreen("#new-player", "player screen");
+  at(`${label}: player`);
+  const name = await h.evaluate(`document.querySelector("#new-player").value`);
+  await go();
   await waitScreen(".choice", "choice screen");
   at(`${label}: choice`);
   await go();
@@ -169,13 +169,11 @@ async function checkEnterOnly(label, go) {
   return name;
 }
 
-/** A gamemaster game for `name` through the menus, then the player's next walk with only Enter preselects it. */
+/** A gamemaster game for `name` through the menus, then the next walk with only Enter preselects it (the save's last mode). */
 async function checkLastChoice(name) {
   at("last: gamemaster game");
   await toStart();
   await key("n"); // es: «Nueva partida»'s key (a game is running: Enter would be «Continuar», the Start list's default)
-  await waitScreen("#new-player", "player screen");
-  await key("Enter"); // the most recent name
   await waitScreen(".mode-screen", "mode screen");
   if (await onScreen('[data-focus-id="kind-single"]')) {
     await key("Enter");
@@ -185,6 +183,8 @@ async function checkLastChoice(name) {
   if ((await ringId()) !== "mode-gamemaster") throw new Error(`ring on ${await ringId()} after the letter, want mode-gamemaster`);
   if ((await pressed('[data-focus-id="mode-gamemaster"]')) !== "true") throw new Error("the letter didn't pick gamemaster mode");
   await key("Enter"); // «Seguir», whatever has the ring
+  await waitScreen("#new-player", "player screen");
+  await key("Enter"); // the most recent name
   await waitScreen(".choice", "choice screen");
   await key("Enter");
   await waitScreen('[data-focus-id="start"]', "bundles screen");
@@ -196,8 +196,6 @@ async function checkLastChoice(name) {
   at("last: next time, only Enter");
   await toStart();
   await key("n");
-  await waitScreen("#new-player", "player screen");
-  await key("Enter");
   await waitScreen(".mode-screen", "mode screen");
   if (await onScreen('[data-focus-id="kind-single"]')) {
     if ((await pressed('[data-focus-id="kind-single"]')) !== "true") throw new Error("the kind step doesn't preselect «Solo o en grupo»");
@@ -205,6 +203,8 @@ async function checkLastChoice(name) {
     await sleep(900);
   }
   await h.waitFor(`document.querySelector('[data-focus-id="mode-gamemaster"]')?.getAttribute("aria-checked") === "true"`, "gamemaster preselected", 5000);
+  await key("Enter");
+  await waitScreen("#new-player", "player screen");
   await key("Enter");
   await waitScreen(".choice", "choice screen");
   if (!(await onScreen('[data-focus-id="config-levels"]'))) throw new Error("not the configure screen: gamemaster mode wasn't carried");
@@ -222,8 +222,6 @@ async function checkSpaceAndLetters() {
   at("space: to the mode screen");
   await toStart();
   await key("n");
-  await waitScreen("#new-player", "player screen");
-  await key("Enter");
   await waitScreen(".mode-screen", "mode screen");
   if (await onScreen('[data-focus-id="kind-single"]')) {
     await key("Enter");
@@ -247,6 +245,8 @@ async function checkSpaceAndLetters() {
   await key("g");
   if ((await ringId()) !== "mode-solo" || (await pressed('[data-focus-id="mode-solo"]')) !== "true") throw new Error("the standard mode's letter didn't pick it with the ring");
   at("space: Enter with the ring on a tile goes on");
+  await key("Enter");
+  await waitScreen("#new-player", "player screen");
   await key("Enter");
   await waitScreen(".choice", "choice screen");
   await key("Enter");
@@ -279,13 +279,13 @@ async function checkPadX() {
   await toStart();
   await h.evaluate("window.__pads(1); true");
   await key("n");
-  await waitScreen("#new-player", "player screen");
-  await padPress(BTN.A);
   await waitScreen(".mode-screen", "mode screen");
   for (let i = 0; i < 2 && (await onScreen(".mode-screen")); i++) {
     await padPress(BTN.A);
     await sleep(900);
   }
+  await waitScreen("#new-player", "player screen");
+  await padPress(BTN.A);
   await waitScreen(".choice", "choice screen");
   await padPress(BTN.A);
   await waitScreen('[data-focus-id="start"]', "bundles screen");

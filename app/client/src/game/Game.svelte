@@ -1,6 +1,6 @@
 <script lang="ts">
   // The game on the TV (plans/04-ui-tv-display.md, D-21, D-25): a state machine over the screens
-  // Start → Player → Mode → (Join, multiplayer) → Choice (age) → Bundles → Level → Select → Question → Correct / Wrong → … → Victory → (Badges, plan 197) → Start (answers off, D-105:
+  // Start → Mode → Player (single) or Join (multiplayer) → Choice (age) → Bundles → Level → Select → Question → Correct / Wrong → … → Victory → (Badges, plan 197) → Start (answers off, D-105:
   // Question → Next → … → Completed; timed, plan 164: Level as round screen → Timed → … → Level → …), with one transition routine and the admin overlay on Esc. The engine
   // keeps the game (engine/, lib/api.ts).
   import { onDestroy, onMount, tick, untrack } from "svelte";
@@ -121,7 +121,7 @@
   let main = $state<HTMLElement>();
   /** The chosen name while «¡Hola, …!» plays (UI-16). */
   let greeting = $state<string | null>(null);
-  /** The name picked on Player, for the Choice and Bundles screens. */
+  /** The name picked on Player (single player only), for the Choice and Bundles screens. */
   let chosen = $state<string | null>(null);
   /** The Mode screen's pick, kept for Back; null: a fresh visit (decision 314). */
   let pickedMode = $state<GameMode | null>(null);
@@ -377,27 +377,29 @@
     unlocked = true;
     greeting = null;
     refused = null;
-    await go("player", "whoosh");
-  }
-
-  /** A name was picked or typed: their choice next, fresh picks (plan 151). */
-  async function choosePlayer(name: string) {
-    if (busy) return;
-    chosen = name;
+    chosen = null;
     pickedMode = null;
     draft = null;
     seats = [];
     bundlePick = null;
-    refused = null;
     await go("mode", "whoosh");
   }
 
-  /** The Mode screen's «Seguir»: the Join screen (multiplayer) or the Choice screen; another mode drops the Choice picks. */
+  /** The Mode screen's «Seguir»: the Join screen (multiplayer) or the Player screen; another mode drops the Choice picks. */
   async function modePicked(mode: GameMode) {
     if (busy) return;
     if (draft && draft.mode !== mode) draft = null;
     pickedMode = mode;
-    await go(isSession(mode) ? "join" : "choice", "whoosh");
+    await go(isSession(mode) ? "join" : "player", "whoosh");
+  }
+
+  /** A name was picked or typed (single player): the Choice screen next. */
+  async function choosePlayer(name: string) {
+    if (busy) return;
+    if (chosen !== name) draft = null;
+    chosen = name;
+    refused = null;
+    await go("choice", "whoosh");
   }
 
   /** The Choice screen's «Seguir»: the Bundles screen, with these picks kept. */
@@ -410,14 +412,14 @@
 
   /** The Bundles screen's «¡A jugar!»: start the game, greet, then the Level screen. */
   async function startGame(choice: GameActionBody & { mode: GameMode }, runningOut: string[]) {
-    if (busy || chosen === null) return;
+    if (busy || (chosen === null && !isSession(choice.mode))) return;
     busy = true;
     try {
       const session = isSession(choice.mode);
       const names = seats.map((x) => x.name ?? "");
       game = await gameAction("new", session
         ? { ...choice, players: names, devices: seats.map((x) => deviceOf(x.binding)), ...(choice.mode === "rr-competitive" ? { age_groups: seats.map((x) => x.group) } : {}) }
-        : { player: chosen, ...choice });
+        : { player: chosen ?? undefined, ...choice });
       if (session && game) bindSession(game.id, seats.map((x) => x.binding));
       await noteRunningOut(choice, runningOut).catch((e) => console.warn("noteRunningOut:", e)); // every start: it prunes too
       error = saveWarning();
@@ -775,19 +777,19 @@
       <S.Start {game} {running} {levels} {notice} {busy} mods={startMods} onmods={() => (modsOpen = true)} onlanguage={openLanguage} onresume={resume} onnew={newGame} ondismiss={() => (notice = null)} />
     {:else if screen === "player"}
       <Stage />
-      <S.Player {busy} onchoose={choosePlayer} ondeleted={refresh} />
-    {:else if screen === "mode" && chosen !== null}
+      <S.Player {busy} onchoose={choosePlayer} onback={() => go("mode", "whoosh")} ondeleted={refresh} />
+    {:else if screen === "mode"}
       <Stage />
-      <S.Mode player={chosen} {busy} mode={pickedMode} onnext={modePicked} onback={() => go("player", "whoosh")} />
-    {:else if screen === "join" && chosen !== null && pickedMode}
+      <S.Mode {busy} mode={pickedMode} onnext={modePicked} onback={() => go("start", "whoosh")} />
+    {:else if screen === "join" && pickedMode}
       <Stage />
-      <S.Join mode={pickedMode} player={chosen} {busy} {seats} onseats={(s) => (seats = s)} onnext={() => go("choice", "whoosh")} onback={() => go("mode", "whoosh")} />
-    {:else if screen === "choice" && chosen !== null && pickedMode}
+      <S.Join mode={pickedMode} {busy} {seats} onseats={(s) => (seats = s)} onnext={() => go("choice", "whoosh")} onback={() => go("mode", "whoosh")} />
+    {:else if screen === "choice" && pickedMode}
       <Stage />
-      <S.Choice mode={pickedMode} player={chosen} {busy} {draft} {seats} onseats={(s) => (seats = s)} onnext={choicePicked} onback={() => go(isSession(pickedMode!) ? "join" : "mode", "whoosh")} />
-    {:else if screen === "bundles" && chosen !== null && draft}
+      <S.Choice mode={pickedMode} player={chosen ?? undefined} {busy} {draft} {seats} onseats={(s) => (seats = s)} onnext={choicePicked} onback={() => go(isSession(pickedMode!) ? "join" : "player", "whoosh")} />
+    {:else if screen === "bundles" && draft}
       <Stage />
-      <S.Bundles player={chosen} {draft} {seats} {busy} {greeting} {refused} picked={bundlePick} onpick={(ids) => (bundlePick = ids)} onstart={startGame} onback={() => go("choice", "whoosh")} />
+      <S.Bundles player={chosen ?? undefined} {draft} {seats} {busy} {greeting} {refused} picked={bundlePick} onpick={(ids) => (bundlePick = ids)} onstart={startGame} onback={() => go("choice", "whoosh")} />
     {:else if screen === "level" && game}
       <Stage />
       {#if !session?.timed}

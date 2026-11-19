@@ -324,6 +324,8 @@ const es = {
     title: "Modo de juego",
     soloKind: "Un equipo, o un anfitrión que lo maneja todo",
     multi: "Multijugador",
+    /** The tag on the three multiplayer mode buttons. */
+    local: "Multijugador local",
     multiAbout: "Cada jugador con su mando o su teclado",
     multiKey: "J",
     standard: "Estándar",

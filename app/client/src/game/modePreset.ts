@@ -1,5 +1,5 @@
 // The Mode screen's preset (plans/04-ui-tv-display.md, "Mode"; MD-7, task 2114): the pick kept for Back, else `?mode=`,
-// else the player's last choice (the mode of their newest game), else the standard mode. Pure, for the tests.
+// else the last mode played (the save's newest game's), else the standard mode. Pure, for the tests.
 import type { GameMode } from "../lib/types.ts";
 import { isSession } from "../engine/game.ts";
 
@@ -16,7 +16,7 @@ export interface ModePreset {
 
 const kindOf = (mode: GameMode): Kind => (isSession(mode) ? "multi" : "single");
 
-/** `kept`: Game.svelte's pick from an earlier visit; `last`: `?mode=`, else the player's last mode, null without one;
+/** `kept`: Game.svelte's pick from an earlier visit; `last`: `?mode=`, else the last mode played, null without one;
  * `shown`: the modes on the screen (built, or marked in dev mode); `kinds`: 2 with a multiplayer mode shown. */
 export function modePreset(kept: GameMode | null, last: GameMode | null, shown: readonly GameMode[], kinds: number): ModePreset {
   if (kept) return { pick: kept, kind: kindOf(kept), stage: kindOf(kept) };
