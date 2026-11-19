@@ -55,15 +55,16 @@
   import { screenFailed, screenFor } from "./screens/registry.ts";
   import Select from "./screens/Select.svelte";
   import Start from "./screens/Start.svelte";
+  import Dropout from "./screens/Dropout.svelte";
   import Timed from "./screens/Timed.svelte";
   import Turn from "./screens/Turn.svelte";
   import Victory from "./screens/Victory.svelte";
   import Wrong from "./screens/Wrong.svelte";
   import "./theme.css";
-  import { BLOCK_DROP_MS, FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, TURN_HOLD_MS, sleep } from "./timing.ts";
+  import { BLOCK_DROP_MS, DROPOUT_END_MS, DROPOUT_HOLD_MS, FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, TURN_HOLD_MS, sleep } from "./timing.ts";
   import Veil from "./Veil.svelte";
 
-  type Screen = "language" | "consent" | "start" | "player" | "bundles" | "mode" | "choice" | "join" | "level" | "select" | "question" | "timed" | "turn" | "tower" | "correct" | "wrong" | "victory" | "next" | "completed" | "badges";
+  type Screen = "language" | "consent" | "start" | "player" | "bundles" | "mode" | "choice" | "join" | "level" | "select" | "question" | "timed" | "turn" | "tower" | "dropout" | "correct" | "wrong" | "victory" | "next" | "completed" | "badges";
 
   const MUSIC: Record<Screen, Track | null> = {
     language: "normal",
@@ -76,6 +77,7 @@
     join: "normal",
     level: "normal",
     turn: "normal",
+    dropout: null,
     tower: "normal",
     select: "normal",
     question: "question",
@@ -269,7 +271,7 @@
     await sleep(FADE_MS);
     apply?.();
     music(MUSIC[next]);
-    if (screen !== "turn" && screen !== "tower") previous = screen; // the drop on Level follows the answer, not the handover
+    if (screen !== "turn" && screen !== "tower" && screen !== "dropout") previous = screen; // the drop on Level follows the answer, not the handover
     screen = next;
     picked = null;
     swappedBy = null;
@@ -278,7 +280,7 @@
       await tick();
       await Promise.race([(next === "question" ? questionRef : timedRef)?.ready?.() ?? Promise.resolve(), sleep(PRELOAD_MAX_MS)]);
     }
-    if (next !== "turn") emit("screen", { name: nameOf(next) });
+    if (next !== "turn" && next !== "dropout") emit("screen", { name: nameOf(next) });
     if (next === "question" && game?.question) emit("question:shown", { id: game.question.id, level: game.level });
     black = false;
     await sleep(FADE_MS);
@@ -505,12 +507,32 @@
 
   /** Timed: the session ended: a winner (round 12 or last standing), else nobody wins (decision 280). */
   async function timedEnd(next: Game) {
-    if (next.result === "won") await go("victory", "applause-big", () => (game = next));
+    const was = game?.session?.seats;
+    const recent = next.session?.seats.flatMap((x, i) => (was?.[i]?.status === "playing" && x.status === "out" ? [i] : [])) ?? [];
+    if (next.result === "won" && recent.length) {
+      await dropout(next, recent, true, () => (game = next));
+      await go("victory", "applause-big");
+    }
+    else if (next.result === "won") await go("victory", "applause-big", () => (game = next));
     else await go("wrong", "boom", () => (game = next));
   }
 
+  /** The drop-out screen: the seats just out play their game over; `final`: the fallen fade, the winner stays (task 2404). */
+  async function dropout(next: Game, recent: number[], final: boolean, apply?: () => void) {
+    dropRecent = recent;
+    dropFinal = final;
+    dropSeed = next.id + (recent[0] ?? 0);
+    await go("dropout", "whoosh", apply);
+    await sleep(final ? DROPOUT_END_MS : DROPOUT_HOLD_MS);
+  }
+  let dropRecent = $state<number[]>([]);
+  let dropFinal = $state(false);
+  let dropSeed = $state(0);
+
   /** rr-competitive's Wrong «Seguir» (one seat out, decision 279): the next turn, or the last one standing wins. */
   async function afterOut() {
+    const seat = game?.last?.seat;
+    if (game && seat !== undefined) await dropout(game, [seat], game.result !== null);
     if (game?.result === null) {
       await turnHandover();
       await go("level", "whoosh");
@@ -737,7 +759,7 @@
 
   $effect(() => {
     const on = screen;
-    if (on === "language" || on === "consent" || on === "player" || on === "bundles" || on === "mode" || on === "choice" || on === "join" || on === "turn" || on === "question" || on === "timed" || on === "badges") return; // they push their own
+    if (on === "language" || on === "consent" || on === "player" || on === "bundles" || on === "mode" || on === "choice" || on === "join" || on === "turn" || on === "dropout" || on === "question" || on === "timed" || on === "badges") return; // they push their own
     return pushScope({
       name: on,
       keys: on === "start" ? { [NEW_KEY]: { type: "new" }, [LANGUAGE_KEY]: { type: "language" }, [MODS_KEY]: { type: "letter", key: MODS_KEY } } : undefined,
@@ -838,6 +860,9 @@
     {:else if screen === "turn" && session}
       <Stage />
       <Turn {session} from={turnFrom} />
+    {:else if screen === "dropout" && session}
+      <Stage mood="wrong" />
+      <Dropout {session} recent={dropRecent} final={dropFinal} seed={dropSeed} />
     {:else if screen === "select" && game}
       <Stage />
       <div class="corner-hud" class:multi={!!session}><Hud level={game.level} {levels} player={game.player} {session} /></div>

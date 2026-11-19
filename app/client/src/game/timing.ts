@@ -53,6 +53,14 @@ export const TIMED_RESULT_MS = 2200;
 export const ROUND_HOLD_MS = 1800;
 export const COUNTDOWN_STEP_MS = 900;
 
+/** Drop-out screen: all tiles, then the one just out plays its game over, then (a winner) the fallen fade; total with a winner / without. */
+export const DROPOUT_LEAD_MS = 700;
+export const DROPOUT_HIT_MS = 1700;
+export const DROPOUT_FADE_MS = 1100;
+const DROPOUT_WIN_MS = 900;
+export const DROPOUT_END_MS = DROPOUT_LEAD_MS + DROPOUT_HIT_MS + DROPOUT_FADE_MS + DROPOUT_WIN_MS;
+export const DROPOUT_HOLD_MS = DROPOUT_LEAD_MS + DROPOUT_HIT_MS + 600;
+
 /** Round-robin turn handover: the new player stays this long after the fade-in, then Level follows by itself (decision 747). */
 export const TURN_HOLD_MS = 1000;
 

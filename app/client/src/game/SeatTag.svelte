@@ -1,5 +1,5 @@
 <script lang="ts">
-  // A seat on screen (plan 163): its colour, name and device glyph; out (not a team's loss): muted and struck, won: a crown.
+  // A seat on screen (plan 163): its colour, name and device glyph; out (not a team's loss): muted and struck (`alive`: not yet, the drop-out screen), won: a crown.
   // Hud (small), Level's turn line (large), Correct, Wrong, Victory, the tracks and the timed screens.
   import type { SessionView } from "../lib/seats.ts";
   import { seating } from "../lib/seats.svelte.ts";
@@ -7,13 +7,13 @@
   import SeatDevice from "./SeatDevice.svelte";
   import { nameScale, seatColor } from "./seats.ts";
 
-  let { session, seat, small = false, struck = false }: { session: SessionView; seat: number; small?: boolean; struck?: boolean } = $props();
+  let { session, seat, small = false, struck = false, alive = false }: { session: SessionView; seat: number; small?: boolean; struck?: boolean; alive?: boolean } = $props();
 
   const s = $derived(session.seats[seat]);
 </script>
 
 {#if s}
-  <span class="seat-tag glass" class:small class:out={struck || s.status === "out" || (s.status === "lost" && session.mode !== "rr-coop")} style:--seat={seatColor(seat)}>
+  <span class="seat-tag glass" class:small class:out={!alive && (struck || s.status === "out" || (s.status === "lost" && session.mode !== "rr-coop"))} style:--seat={seatColor(seat)}>
     {#if s.status === "won"}<Icon name="crown" />{:else}<span class="dot" aria-hidden="true"></span>{/if}
     <span class="name" style:font-size="{nameScale(String(s.player ?? seat + 1))}em">{s.player ?? seat + 1}</span>
     <span class="device"><SeatDevice binding={seating.binding[seat] ?? null} /></span>
