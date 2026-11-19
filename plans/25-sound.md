@@ -283,3 +283,13 @@ The developer's picks after listening on `/sounds` (`decision 735: Sound brief, 
   - `submitted`: full, -18.0 LUFS
   - `timed`: full, same as `submitted`
 - Approved by the developer (`decision 742: Soundtrack 'Tranquilo lofi' (Late Night Radio): approved, swapped, or changes?`) without alternates
+
+### Acústica cálida: approved, round 1 (`task 2255: New soundtracks: second set`)
+- Track: "BossaBossa", Kevin MacLeod, CC BY 4.0; 77.5 bpm; 8 bars, loop 24.775 s; record `authoring/data/music/acustica-calida-bossabossa.json`
+- Variants `musica-acustica-calida-<variant>.m4a`, 1.21 MB together:
+  - `normal`: `bass-3+other-1`, -20.9 LUFS
+  - `question`: `bass-1+other`, -19.2 LUFS
+  - `submitted`: full, -18.0 LUFS
+  - `timed`: full, same as `submitted`
+- `trivia-music check` fails on `submitted`/`timed` (seam after AAC ≈ 4.2, limit 3.0); accepted by the developer if the wrap sounds clean (`decision 743: Soundtrack 'Acústica cálida' (BossaBossa): approved, swapped, or changes?`); `task 2258: New soundtracks: old music files gone and the tally` must not fail on it
+- Brief's track "Bossa Antigua" dropped: every re-split failed the check
