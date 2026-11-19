@@ -74,9 +74,9 @@
   }
   .muted {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: calc(0.6 * var(--u));
+    flex-direction: column; /* one name per line */
+    align-items: center;
+    gap: calc(0.4 * var(--u));
     opacity: 0.45;
     filter: grayscale(1);
   }

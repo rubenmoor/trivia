@@ -89,9 +89,9 @@
   }
   .rest {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: calc(0.6 * var(--u)) calc(1 * var(--u));
+    flex-direction: column; /* one name per line */
+    align-items: center;
+    gap: calc(0.4 * var(--u));
     max-width: 60vw;
   }
   .rest-seat {

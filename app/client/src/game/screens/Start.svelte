@@ -117,9 +117,9 @@
   }
   .names {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: calc(0.4 * var(--u));
+    flex-direction: column; /* one name per line */
+    align-items: center;
+    gap: calc(0.2 * var(--u));
     margin-top: calc(0.4 * var(--u));
     font-size: 0.6em;
   }
