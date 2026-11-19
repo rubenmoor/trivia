@@ -1,0 +1,65 @@
+{
+ "id": "jazz-de-concurso-jazzbrunch",
+ "library": "incompetech",
+ "title": "Jazz Brunch",
+ "author": "Kevin MacLeod",
+ "page": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700074",
+ "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Jazz%20Brunch.mp3",
+ "sha256": "9e980a5a5ff7663d7f5ac22209190f34f1df465c5a6b588dd2c0bcbfc217e380",
+ "downloaded": "2026-11-18",
+ "licence": {
+  "spdx": "CC-BY-4.0",
+  "read_on_page": "2026-11-18"
+ },
+ "listed": {
+  "bpm": "100",
+  "feel": "Bright, Grooving, Relaxed"
+ },
+ "adapted": "Adapted: cut to a loop, split into layers and remixed per variant, loudness changed.",
+ "credit": "\"Jazz Brunch\" by Kevin MacLeod (https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700074), licensed under Creative Commons: By Attribution 4.0, https://creativecommons.org/licenses/by/4.0/ . Adapted: cut to a loop, split into layers and remixed per variant, loudness changed.",
+ "loop": {
+  "bpm": 100.0,
+  "bars": 12,
+  "whole": false,
+  "start_s": 273.882,
+  "start_bar": 114,
+  "downbeat_s": 0.2825,
+  "loop_s": 28.8,
+  "gain_db": -0.9,
+  "lufs": -18.0,
+  "true_peak": -2.8,
+  "comb_score": 2.849,
+  "repeat_similarity": 0.925,
+  "seam_jump_vs_mean_step": 1.38
+ },
+ "exports": {
+  "normal": {
+   "file": "musica-jazz-de-concurso-normal.m4a",
+   "recipe": "bass-3+other-3",
+   "samples": 1382400,
+   "lufs": -22.5,
+   "true_peak": -8.4
+  },
+  "question": {
+   "file": "musica-jazz-de-concurso-question.m4a",
+   "recipe": "bass-3+other-3+drums-3",
+   "samples": 1382400,
+   "lufs": -21.0,
+   "true_peak": -5.0
+  },
+  "submitted": {
+   "file": "musica-jazz-de-concurso-submitted.m4a",
+   "recipe": "bass+drums+other",
+   "samples": 1382400,
+   "lufs": -18.0,
+   "true_peak": -2.2
+  },
+  "timed": {
+   "file": "musica-jazz-de-concurso-timed.m4a",
+   "recipe": "bass+drums+other",
+   "samples": 1382400,
+   "lufs": -18.0,
+   "true_peak": -2.2
+  }
+ }
+}

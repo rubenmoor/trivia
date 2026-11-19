@@ -24,7 +24,8 @@ export const SOUNDTRACKS = {
   "lofi-tranquilo": { tracks: REQUIRED_TRACKS, loopStart: 0, loopEnd: 26.667, level: 1 },
   // warm-acoustic, BossaBossa (Bossa Antigua failed the seam check): record acustica-calida-bossabossa.json, 77.5 bpm, 8 bars
   "acustica-calida": { tracks: REQUIRED_TRACKS, loopStart: 0, loopEnd: 24.775, level: 1 },
-  "jazz-de-concurso": { tracks: [], loopStart: 0, loopEnd: 0, level: 1 }, // jazz-quiz-show, Backbay Lounge
+  // jazz-quiz-show, Jazz Brunch (Backbay Lounge failed the beat check): record jazz-de-concurso-jazzbrunch.json, 100 bpm, 12 bars
+  "jazz-de-concurso": { tracks: REQUIRED_TRACKS, loopStart: 0, loopEnd: 28.8, level: 1 },
 } as const satisfies Record<string, Soundtrack>;
 
 export type SoundtrackId = keyof typeof SOUNDTRACKS;
