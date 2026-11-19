@@ -110,8 +110,13 @@
     if (start) began = true;
   });
 
+  // Untracked: `delay` comes through the parent's props spread, new on every game re-read (task 2400)
   $effect(() => {
-    if (!began) return;
+    if (began) untrack(play);
+    return () => timers.forEach(clearTimeout);
+  });
+
+  function play() {
     timers = [
       setTimeout(() => {
         if (left) return;
@@ -131,12 +136,11 @@
         );
       }, delay),
     ];
-    return () => timers.forEach(clearTimeout);
-  });
+  }
 
-  // `leave`: out at once from `in` or `hold`; still waiting: never shown
+  // `leave`: out at once from `in` or `hold`; still waiting: never shown; once
   $effect(() => {
-    if (!leave) return;
+    if (!leave || left) return;
     left = true;
     const p = untrack(() => phase);
     if (p === "in" || p === "hold") exitNow();
