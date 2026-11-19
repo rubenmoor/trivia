@@ -12280,6 +12280,69 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 
 ## Out of scope
 - Translation of copies (`plan 140: Translation into Chinese`); new questions and the 6000 gap (part 7); the taxonomy itself (part 6); the copy model, seen counter, game side (`plan 227: chinese-base bundle: model and setup`); copies from regional or topic bundles.', 'The Chinese edition''s main question set starts from the existing one: every question already in the game is read once more and kept, lightly adapted or left out, depending on whether a Chinese family could know and enjoy it. Questions about European or Latin American TV, clubs, customs or word games drop out, and topics that are politically sensitive for a Chinese audience stay out by one agreed rule. The kept questions are copied into the new set, sharing their pictures and sounds, and the developer reviews what was kept and dropped and can reverse any call.', '2026-11-19T18:08:34Z', 2296, NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (231, 12, 'chinese-base taxonomy from Chinese school curricula', 850, 'Part 6 of `plan 60: masterplan`: the categories and subcategories of `chinese-base`, from research on Chinese school curricula and on what Chinese families share. Output: an applied `app/data/bundles/chinese-base/categories.json` (every category with a career subject), its names, the `base` → `chinese-base` subcategory map for part 5, and per subcategory a scope that keeps new questions off the copies'' ground. No questions, no concept lists here.
+
+Waits for:
+- `plan 227: chinese-base bundle: model and setup`: `task 2329: A base bundle other than base in the pipeline` (code), `task 2335: Create the chinese-base bundle: entry, names, rule and voice` (the bundle, its `rule`/`voice` fed to the prompt).
+- `plan 228: Chinese variants and the Chinese audience (evaluation)`: `decision 757: Sensitivity rule for Chinese content: how do drafting, the fit pass and zh translation treat contested political topics?` (pending): the proposal waits for it; `decision 756: Chinese variant(s): which written Chinese does the game ship in milestone 12?` only for the zh names at apply (via task 2335, which needs it anyway).
+- Required by `task 2341: Subcategory map base → chinese-base (from-base.json) and its validate rule` (plan 230) and part 7''s drafting (`task 2298: write plan: chinese-base step 2: new China-centric questions in English`). The split links 2341 to this plan''s apply task (`pm task requires 2341 <apply>`).
+
+## Binding inputs
+- `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` → English: names, scopes, samples in English; language subcategories asked in English and translated (see "Language subcategories").
+- `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` → copies keep a `chinese-base` subcategory; D-99/D-110: a subcategory is bundle + slug, so a "reused" `base` subcategory is a new `chinese-base` entry with the same slug (`chinese-base/mammals`), own scope, own names.
+- `decision 730: Base tile count: «6000+»`: 6000 approved, base''s difficulty mix (`targets.json`); ≈ 30 per subcategory as `base` (6000 / 198) → ≈ 200 subcategories.
+- Plan 194 / `plans/24-career.md`: every category has one of the 7 subjects (`app/data/subjects.json`); `qgen validate` refuses unmapped.
+- `decision 404: movies taxonomy: categories and subcategories`, `decision 370: Theme taxonomy prompt: apply?`: pattern for the prompt decision, the proposal decision and its checks. Prompts are the developer''s (D-36).
+- `decision 754: Native checks of Chinese translation runs: pilot and release sample, not every run`: the Chinese-language questions get a full native sheet; this plan marks which subcategories those are.
+
+## Research (task 1, `--web`)
+- Mainland 义务教育课程标准（2022年版）per subject, plus 普通高中课程标准 where families know it (高考 topics): 语文 (古诗文 recitation lists: 小学 75, 初中 61; 成语, 汉字, 四大名著, 鲁迅), 数学 (算盘, 九章算术, 祖冲之), 历史 (dynasties, 四大发明, 丝绸之路, 郑和), 地理 (provinces, rivers, mountains, climate, 中国地理), 道德与法治, 科学 / 物理 / 化学 / 生物学, 音乐 (民乐, 乐器), 美术 (书法, 国画), 体育与健康 (乒乓球, 武术, 太极), 信息科技, 劳动.
+- Shared family culture beyond school: festivals and 二十四节气, 生肖, food (八大菜系, regional snacks, tea), places and 5A sights, legends (嫦娥, 后羿, 白蛇传), inventions and science (天宫, 嫦娥 probes, 屠呦呦), sport (Olympic champions, CBA, 女排), pop culture (春晚, 西游记 TV 1986, 金庸 wuxia, C-pop, 国漫, games: 王者荣耀, 黑神话：悟空), brands and daily life (高铁, 支付宝, 微信), spoken varieties (粤语, 吴语, 闽语) as content (`plans/26-china.md` "Spoken varieties").
+- Taiwan''s 108課綱 only as a cross-check: what both sides learn (shared ground for a later `zh-Hant`, `plans/26-china.md` "Taiwan vs. mainland framing").
+- Per topic: career subject, rough family age it''s known at (known_at scale), and "out" where `decision 757` (as answered; until then its recommended option) forbids it (most of 道德与法治, post-1949 political history, borders).
+- Output: `authoring/data/bundles/chinese-base/research.md` (input to the prompt; bullets, sources linked), a pointer line in `plans/26-china.md`.
+
+## `qgen taxonomy` for a base bundle that isn''t `base` (task 2)
+- Today `cmd_taxonomy` (`authoring/tools/taxonomy.py`) refuses `kind: base`. New branch for a base bundle ≠ `base`, prompt `authoring/tools/prompts/taxonomy-base.md` (draft + approval decision, like decision 370; no real run until applied).
+- Input: bundle `rule`/`voice`, target and ≈ subcategory count, `research.md` if present, `base`''s subcategories with scope (`english-keys`/names) and approved counts, `subjects_text()`, base''s per-subject share of approved questions.
+- Output schema (`proposal.{json,md}` in `work/taxonomy/<id>/`): categories (`slug`, `en`, `name`, `subject`, `subject_reason`, `origin`: `reused` | `new`, `scope`, `reason`); subcategories (`slug`, `en`, `name`, `origin`: `reused` (slug = a `base` slug, home of its copies) | `new`, `scope`, `reason`, `related`: own subcategories it borders, `samples` with `known_at` for `new`); `from_base`: every `base` subcategory → a proposal slug or `null` with a reason (`euro_centric`, `latam_centric`, `wordplay`, `sensitivity`), plus `expected_keep` (0–1, the model''s guess of the share part 5 keeps).
+- `proposal.md`: per category and subject: reused / new counts, projected copies (approved × `expected_keep`), the gap to 6000 that part 7 drafts, per-subject share vs. `base` (career balance, part 12).
+- `--apply`: `categories.json` (with `subject`), `names.<locale>.json` for the bundle''s languages (en + the zh locale(s); zh by `taxonomy-names.md`), `authoring/data/bundles/<id>/related.json` (subcategory → its neighbours; authoring only, like `base-related.json`), `work/taxonomy/<id>/from-base.json` (the map, for task 2341 to write and validate). Refuses: unknown `reused` slug, a `from_base` key that isn''t a `base` subcategory, a `base` subcategory with approved questions missing from `from_base`, a target slug not in the proposal.
+- Tests in `test_taxonomy.py` (fixture bundles, no calls); render check of the prompt without a call.
+
+## Proposal and decision (task 3)
+- `qgen taxonomy --bundle chinese-base` (opus, 1 call; cost reported, decision 208).
+- Checks and hand edits before the decision, written into its body (as decision 404):
+  - Sensitivity: no subcategory, scope or sample against decision 757''s rule.
+  - Overlap: new vs. reused (e.g. `chinese-cuisine` vs. reused `world-cuisines`: the reused one''s scope says "outside China", China-topic copies go to the new one through the map only if a whole `base` subcategory is China-topic; else they stay, and `related` makes drafting keep off them); new vs. new.
+  - Career: every category has a subject; projected per-subject shares within ±5 points of `base`''s, or the gap said.
+  - Kids level: lowest `known_at` per subcategory spread as in decision 404; children''s culture present (儿歌, 动画片, 童话, 课本 figures).
+  - Size: ≈ 200 subcategories, ≈ 30 per subcategory after copies; merges offered.
+  - Language subcategories marked (see below).
+  - Theme bundles (`history`, `geography`, `movies`, …, en only): their `base_related` point at `base`; an English player may combine them with `chinese-base`; overlap accepted, said in the body.
+- Decision "chinese-base taxonomy: categories, subcategories and the map from base", `--intro` per house rules; body: full list (category, subject, subcategories with origin and scope one-liners), the `from_base` table per `base` category (subcategory, approved, target or null, why, `expected_keep`), projection table. Options: "apply as proposed (with the hand edits listed)" (recommended) / "apply with changes (name them)" / "redo (say what)". Iterative feedback: option 3 reruns task 3 with the developer''s notes in the user message.
+- `pm task-pending-decision <task 4> <id>`.
+
+## Language subcategories
+- Topics like 成语, 汉字, 唐诗 / 宋词, 歇后语 are drafted in English (decision 750) and translated: a question that is fair in English may give its answer away in Chinese (an idiom''s meaning asked, the Chinese idiom spells it out) and vice versa.
+- Their scopes say: ask origin story, author, the poem''s place or season, the character''s picture origin; never what the Chinese words state; options in characters + pinyin + English gloss in en.
+- Listed in the decision as their own group, so the developer can keep, cut or postpone them; they are the "Chinese-language questions" of decision 754''s native sheet (mark in `related.json`? no: a `language: true` flag per subcategory in `categories.json` only if part 8 needs it; part 7 decides).
+
+## Apply (task 4)
+- `qgen taxonomy --bundle chinese-base --apply work/taxonomy/chinese-base/proposal.json` with the developer''s answer edited in; `qgen validate` (subjects, uniqueness); `plans/22-bundles.md` row for `chinese-base` (taxonomy cell), `plans/26-china.md` pointer; decision consequences.
+- Concept lists (D-43, `authoring/data/bundles/chinese-base/concepts/`): not here; part 7''s first batch drafts them from scope and samples; reused subcategories'' lists start from their copies'' concepts (part 7 wires it).
+
+## Tasks (suggested split, in order)
+1. (questions, `--web`, opus) Research: curricula and shared family culture → `research.md`, `plans/26-china.md` pointer. No code.
+2. (questions) `qgen taxonomy` for a base bundle ≠ `base`: branch, schema, `taxonomy-base.md` draft and approval decision, apply with `related.json` and `from-base.json`, tests. Requires `task 2329: A base bundle other than base in the pipeline`.
+3. (questions, opus) Proposal run, checks and hand edits, taxonomy decision. Requires 1, 2, `task 2335: Create the chinese-base bundle: entry, names, rule and voice`; pending on `decision 757: Sensitivity rule for Chinese content: how do drafting, the fit pass and zh translation treat contested political topics?` and task 2''s prompt decision.
+4. (questions) Apply the answered taxonomy, names, docs. Requires 3; pending on 3''s decision; `task 2341: Subcategory map base → chinese-base (from-base.json) and its validate rule` requires it.
+
+## Out of scope
+- The map file and its validate rule (`task 2341`); fit pass (plan 230); concept lists and drafting (part 7); zh translation of questions (`plan 140: Translation into Chinese`); career reachability (`plan 145: Release, career check and close-out of Chinese`); a Taiwan-specific taxonomy.
+
+## Done when
+- `app/data/bundles/chinese-base/categories.json` holds the approved taxonomy, every category with a subject; names for en and the zh locale(s); `related.json` and the map proposal exist; `qgen validate` passes; es, es-ES, en, de output unchanged (`qgen report`).', 'The Chinese edition''s main question set needs its own list of topics, the way a quiz show sorts questions into categories such as history or food. This part studies what children in China learn at school and what Chinese families share at home, from festivals and poems to food and sport, and turns that into categories and subcategories. It also decides which of the existing topics carry over for questions copied from the current set, so new questions don''t repeat them, and it keeps every topic tied to the school subjects the game''s badges count.', '2026-11-19T20:08:13Z', 2297, NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -52357,6 +52420,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Measure on the pilot run of `task 2303: Pilot translation run zh-Hans of chinese-base: run, native spot check, budget decision` if this lands later: the done note gives the share of zh translations sent to fact-check for numbers.
 
 Done when: tests pass; `npm run check`, `npm test`, `npm run build`, `qgen validate`, Python tests pass.', '2026-11-19T18:57:30Z', NULL, 2339, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2378, 231, 'create tasks for plan 231: chinese-base taxonomy from Chinese school curricula', 'split', 'open', 1000, NULL, 'Split plan 231 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T20:08:13Z', NULL, 2297, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
