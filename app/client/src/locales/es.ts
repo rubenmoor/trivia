@@ -629,6 +629,7 @@ const es = {
       correct: "¡Correcto, {name}!",
       /** Nobody claimed in the 30 s. */
       timeUp: "Se acabó el tiempo",
+      ranOut: "A {name} se le acabó el tiempo",
       /** The veil while the clock is paused. */
       paused: "Pausa",
       /** Round 12: the first correct answer wins. */
@@ -643,7 +644,7 @@ const es = {
       /** rr-competitive: the winner. */
       winner: "¡Gana {name}!",
       /** rr-competitive: won because every other player is out. */
-      standing: "Último en pie",
+      standing: "Último jugador en pie",
       top: "¡{name} llegó a la cima!",
       /** The team round-robin mode: every player, cut short after four. */
       team: "¡{names} llegaron a la cima!",

@@ -564,6 +564,7 @@ export const de = {
       claimed: "{name}!",
       correct: "Richtig, {name}!",
       timeUp: "Zeit abgelaufen",
+      ranOut: "{name} ist die Zeit abgelaufen",
       /** The veil while the clock is paused. */
       paused: "Pause",
       /** Round 12: the first correct answer wins. */
@@ -578,7 +579,7 @@ export const de = {
       /** rr-competitive: the winner. */
       winner: "{name} gewinnt!",
       /** rr-competitive: won because every other player is out. */
-      standing: "Zuletzt übrig",
+      standing: "Letzter verbliebener Spieler",
       top: "{name} ist auf dem Gipfel!",
       /** The team round-robin mode: every player, cut short after four. */
       team: "{names} sind auf dem Gipfel!",

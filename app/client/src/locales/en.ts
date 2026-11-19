@@ -565,6 +565,8 @@ export const en = {
       claimed: "{name}!",
       correct: "Correct, {name}!",
       timeUp: "Time's up",
+      /** The claimer's 6 s ran out: no answer marked. */
+      ranOut: "{name} ran out of time",
       /** The veil while the clock is paused. */
       paused: "Paused",
       /** Round 12: the first correct answer wins. */
@@ -579,7 +581,7 @@ export const en = {
       /** rr-competitive: the winner. */
       winner: "{name} wins!",
       /** rr-competitive: won because every other player is out. */
-      standing: "Last one standing",
+      standing: "Last player remaining",
       top: "{name} made it to the top!",
       /** The team round-robin mode: every player, cut short after four. */
       team: "{names} made it to the top!",
