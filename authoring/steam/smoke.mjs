@@ -769,7 +769,7 @@ async function setup(r) {
     if (typeof b === "number") await padPress(BTN.A, b);
     else {
       await h.click('[data-focus-id="join-keyboard"]');
-      if (b.length === 1) await setText(".key-field", b);
+      if (b.length === 1) await h.click(`[data-focus-id="key-${b}"]`);
     }
     await h.waitFor(visibleEl(`[data-focus-id="seat-name-${i}"]`), `seat ${i}`);
     await h.click(`[data-focus-id="seat-name-${i}"]`);

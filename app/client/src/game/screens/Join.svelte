@@ -60,8 +60,7 @@
   let nameRefusal = $state<string | null>(null);
   /** The key capture: for a new seat (`seat` null) or a seat's re-pick. */
   let capture = $state<{ seat: number | null } | null>(null);
-  let keyRefusal = $state<string | null>(null);
-  let keyField = $state<HTMLInputElement>();
+  let keyDialog = $state<HTMLElement>();
   let section = $state<HTMLElement>();
   let nextButton = $state<HTMLButtonElement>();
   let padTick = $state(0);
@@ -162,20 +161,17 @@
     nameRefusal = null;
   }
 
-  const keyText = (k: string) => (k === " " ? t("picker.space") : k.toUpperCase());
+  /** The on-screen keyboard's rows: every letter and digit a claim key could be (`claimKeyOk` disables the rest). */
+  const KEY_ROWS = ["1234567890", "qwertyuiop", "asdfghjkl", "zxcvbnm"].map((r) => [...r]);
+  const keyText = (k: string) => k.toUpperCase();
+  const capTaken = $derived(
+    capture ? list.flatMap((s, j) => (j !== capture!.seat && keyOf(s.binding) ? [keyOf(s.binding)!] : [])) : [],
+  );
 
-  /** A key typed into the capture field: the seat's claim key, or why not (decision 290). */
-  function typedKey(e: Event) {
-    const field = e.currentTarget as HTMLInputElement;
-    const k = [...field.value].at(-1)?.toLowerCase() ?? "";
-    field.value = "";
-    if (!k || !capture) return;
+  /** A key picked by click, pad or the physical key: the seat's claim key (decision 290). */
+  function pickKey(k: string) {
+    if (!capture || !claimKeyOk(k, capTaken)) return;
     const seat = capture.seat;
-    const taken = list.flatMap((s, j) => (j !== seat && keyOf(s.binding) ? [keyOf(s.binding)!] : []));
-    if (!claimKeyOk(k, taken)) {
-      keyRefusal = t(claimKeyOk(k, []) ? "screen.join.keyTaken" : "screen.join.keyReserved", { key: keyText(k) });
-      return;
-    }
     closeCapture();
     if (seat !== null) update(list.map((s, j) => (j === seat ? { ...s, binding: { key: k } } : s)));
     else {
@@ -186,7 +182,6 @@
 
   function closeCapture() {
     capture = null;
-    keyRefusal = null;
   }
 
   function next() {
@@ -215,19 +210,21 @@
     }),
   );
 
-  // The key capture: the next letter or digit typed is the key; Esc, Backspace or B cancel.
+  // The key picker: an on-screen keyboard; click, ring + Space/X or the physical key picks; Esc, Backspace or B cancel.
   $effect(() => {
     if (!capture) return;
-    const pop = pushScope({
+    return pushScope({
       name: "join-key",
       modal: true,
+      root: () => keyDialog,
+      keys: Object.fromEntries(KEY_ROWS.flat().map((k) => [k, { type: "letter", key: k }])),
       handle: (a) => {
         if (a.type === "back" || a.type === "menu") closeCapture();
+        else if (a.type === "letter") pickKey(a.key);
+        else return false;
         return true;
       },
     });
-    keyField?.focus();
-    return pop;
   });
 </script>
 
@@ -302,11 +299,18 @@
 
 {#if capture}
   <div class="backdrop">
-    <div class="dialog" role="dialog" aria-labelledby="join-key-title">
+    <div class="dialog" role="dialog" aria-labelledby="join-key-title" bind:this={keyDialog}>
       <h2 id="join-key-title">{t("screen.join.keyTitle")}</h2>
       <p>{t("screen.join.keyBody")}</p>
-      <input class="key-field" bind:this={keyField} oninput={typedKey} onblur={() => keyField?.focus()} autocomplete="off" spellcheck="false" aria-labelledby="join-key-title" />
-      {#if keyRefusal}<p class="error">{keyRefusal}</p>{/if}
+      <div class="keyboard">
+        {#each KEY_ROWS as row, r (r)}
+          <div class="krow">
+            {#each row as k (k)}
+              <button class="secondary kcap" onclick={() => pickKey(k)} disabled={!claimKeyOk(k, capTaken)} data-focus-id="key-{k}" data-ringed>{keyText(k)}</button>
+            {/each}
+          </div>
+        {/each}
+      </div>
       <button class="secondary" onclick={closeCapture}><Icon name="back" /> {t("action.cancel")} <Prompt action="menu" pad="back" /></button>
     </div>
   </div>
@@ -472,17 +476,23 @@
     margin: 0;
     color: var(--slate-200);
   }
-  .key-field {
-    width: calc(5 * var(--u));
-    padding: calc(0.4 * var(--u));
-    border: 1px solid var(--sky);
-    border-radius: calc(0.8 * var(--u));
-    background: rgba(11, 17, 32, 0.6);
-    color: transparent;
-    caret-color: var(--sky);
-    font-size: calc(2.4 * var(--u));
-    text-align: center;
-    outline: none;
+  .keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: calc(0.5 * var(--u));
+  }
+  .krow {
+    display: flex;
+    justify-content: center;
+    gap: calc(0.5 * var(--u));
+  }
+  .kcap {
+    width: calc(4.6 * var(--u));
+    padding: calc(0.5 * var(--u)) 0;
+    font-size: calc(1.8 * var(--u));
+  }
+  .kcap:disabled {
+    opacity: 0.25;
   }
   .error {
     margin: 0;
