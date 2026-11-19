@@ -8301,56 +8301,58 @@ In this order: all content in Chinese + script standard; the `{voices}` bullet; 
 ## Done when
 - `locale-<zh>.md` exists for each zh locale with its own translation, as approved, with an answered decision and consequences.
 - `chinese-base` has 6000 approved translations per zh locale; `qgen report --simulate` ✓; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', 'The Chinese edition of the game needs its questions in Chinese. Questions are written and reviewed in English first, then a language model translates them, following a short style sheet per language that the developer approves. This part writes that style sheet for Chinese and then runs the translation of the whole Chinese question set, with a small trial first and checks by native readers.', '2026-10-15T20:13:25Z', 1149, NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (141, 12, 'Native reviewers', 720, 'Who checks `zh-Hans`, `ru` and `pt-BR` content, and how they reach it. Part 4 of `plan 60: masterplan`. No one in the family reads these languages (milestone constraint), yet every translation run needs a native spot check (`authoring/QC.md` "Translation runs", D-87) at the release bar (D-79: 30 questions, ≥ 90 % agreement), and each pilot''s go (`qgen health ack`) reads it. This plan picks the people (a pm decision), builds the offline path between them and the review tool, and gates the runs on an engaged reviewer per locale.
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (141, 12, 'Native reviewers for Chinese', 720, 'Who checks the Chinese content of milestone 12, and how they reach it. Part 9 of `plan 60: masterplan`. No one in the family reads Chinese; "the zh locale(s)" = the answer of `plan 228: Chinese variants and the Chinese audience (evaluation)` (recommended `zh-Hans` only). Russian and Portuguese are out of the milestone: no reviewer, sheet or request for `ru`/`pt-BR`.
 
-## Decisions
-- `decision 220: Native reviewers for zh-Hans, ru, pt-BR: paid freelancers, volunteers, or mixed?` (pending): who, costs, recommended paid per language with the pilot as a trial. Tasks 4 waits on it.
-- `decision 221: How does an outside native reviewer reach the review tool?` (recorded): an offline sheet per run, returned as a verdict file; no reachable review page.
-- Relies on: `decision 35: Translation prompts and markets per locale (plan 66)` (text in media is never a problem), `decision 167: Translation prompt for a regional bundle (en for colombia)`, D-79 (release bar), D-87 (runs, pilot stop).
+## Binding inputs
+- `decision 220: Native reviewers for zh-Hans, ru, pt-BR: paid freelancers, volunteers, or mixed?` → volunteers (native-speaking acquaintances, later the community), credited, unpaid; only its zh part still applies.
+- `decision 221: How does an outside native reviewer reach the review tool?` → offline sheet per job, verdict file back by e-mail; review tool stays on `127.0.0.1`.
+- `decision 754: Native checks of Chinese translation runs: pilot and release sample, not every run`: what the volunteer checks and that nothing waits for it.
+- `decision 414: Human reviews don''t gate question generation or translation`, `decision 313: Pilot translation run no longer stops the next run` (milestone 9: the LLM translation review is a translation''s only review; `authoring/QC.md` "Translation runs").
+- `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` (copies) and masterplan part 5: the fit pass is reviewed by the developer in English; no native fit sheet.
+- `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` (open, recommended option 1): every `chinese-base` source is `locale: en`, so the source is the sheet''s English reference (no machine gloss). With option 2 the zh volunteer would be the only reviewer of Chinese-drafted sources (a full review, ~35 h more): this plan is rewritten then.
+- `decision 222: New UI languages (zh-Hans, ru, pt-BR): offered only once their pool ships`: the playtest runs on a build where the zh pool ships (beta branch).
 
-## What a reviewer does (one per language)
-- Before the pilot: read the approved `authoring/tools/prompts/locale-<locale>.md` (`plan 140: Translation prompts and markets per locale`); findings → a new pm decision, never a silent edit.
-- Per run `tr-<locale>-<n>`: the spot check of its 30-question sample (`spot_checks.sample`), plus general comments (patterns) for QC step 4 proposals on `locale-<locale>.md`, `translate.md`, `translate-review.md`.
-- zh only: the `chinese-base` fit pass sample (format by `decision 217: chinese-base membership: how does a translated base question count for chinese-base?`, part 2).
-- zh only, if `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` makes sources Chinese-drafted: every such source (a full review, not a sample); its sheet comes with part 6''s plan.
-- UI (part 5): the `trivia-gallery` screens of their locale, then a playtest via a Steam key on the `beta` branch; findings feed "Playtest passed? (<lang>)".
-- Store texts (part 8): read and correct the drafts.
+## What the volunteer does (per zh locale)
+- Before the pilot: read the approved `authoring/tools/prompts/locale-<zh>.md` (`plan 140: Translation into Chinese`); findings → a new pm decision, never a silent edit.
+- Sheets (decision 754): the pilot `tr-<zh>-1` (30 of its sample); the Chinese-language questions of `chinese-base` (all approved translations in the subcategories part 6 marks as about the Chinese language: characters, idioms 成语, poems; not a sample); one release sample of 30 across all `tr-<zh>-*` runs before the zh release; more per-run sheets only if offered. General comments feed proposals on `locale-<zh>.md`, `translate.md`, `translate-review.md` (QC step 4 rules: change tasks only).
+- UI (`plan 142: UI in the new languages`): `trivia-gallery` screens of their locale, then a playtest via a Steam key on the `beta` branch; findings → that plan''s "Playtest passed? (<zh>)".
+- Store texts (`plan 144: Store page and Steam for the new languages`): read and correct the drafts.
+- Time per locale (decision 220''s estimates, fewer sheets): prompt 1 h, 3–4 sheets × ~45 min, UI 3–4 h, store 1–2 h ≈ 8–10 h over months.
 
-## Spot-check sheet (decision 221)
-- `qgen spotcheck export <run> [--controls 3]` → `work/<run>/spotcheck-<run>.html`: one self-contained file (inline JS/CSS, small inline images; audio/video named, not embedded), opens offline in any browser.
-  - Brief at the top (from `authoring/NATIVE-REVIEW.md`), then the run''s sample in `spot_checks.sample` order.
-  - Per item: English reference (the approved, non-stale `en` translation of the source; else an English gloss made at export, marked "gloss"), the translation (question, four options with the right one marked, hints, explanation if any), subcategory, difficulty 1–15.
-  - Blind by construction: no LLM review, audit, status or feedback in the file.
-  - Reviewer''s input per item: approve / needs_work / reject / doesn''t travel (as the review tool), problem kinds (the server''s `PROBLEMS`), feedback in English, an optional corrected text in the target language; general comments at the end.
-  - Progress kept in the browser''s `localStorage`; «Download verdicts» → `spotcheck-<run>.verdicts.json` (run, sample ids, sheet hash, verdicts); the reviewer sends it back by e-mail.
-  - Controls: `--controls N` adds N planted faulty copies of sample items (wrong right answer, changed number, garbled option; ids `control-<k>`, listed in `work/<run>/spotcheck-controls.json`, never in a pool); default 3 for new locales, 0 otherwise.
-- `qgen spotcheck import <file> [--dry-run]`: checks run, ids and sheet hash; writes each verdict as the translation''s human review (`reviewer: "human"`, `by: "native"`, no name: the repo is public), then `spot_checks.record` (same file, same item shape, `locale` set); controls scored apart: "controls caught k/N" printed and added to the run report''s QC section by `qgen report --qc`; a corrected text goes into the feedback, not over the translation (the next run''s fix step reads it as today).
-- Code in `authoring/tools/spotcheck.py` (export, import) reusing `authoring/server/spot_checks.py` and `reviews.py`; `qgen.py` only dispatches. The review tool stays local (`127.0.0.1`), unchanged.
-- The developer''s own en/de checks keep using the review tool; the sheet works for any `tr-*` run (also en/de, if wanted).
+## Sheet (decision 221)
+- `qgen spotcheck export <run> [--controls N]` → `work/<run>/spotcheck-<run>.html`; `--release <zh>` (seeded sample of 30 over all approved translations of `chinese-base` in that locale) and `--subcategory <key>… --locale <zh>` (all approved translations there) → `work/spotcheck/<name>.html`.
+  - One self-contained file (inline JS/CSS, small inline images; audio/video named, not embedded), opens offline; brief from `authoring/NATIVE-REVIEW.md` at the top.
+  - Per item: English source (the reference; `chinese-base` sources are English), the translation (question, four options with the right one marked, hints, explanation if any), subcategory, difficulty 1–15. A source not in English: skipped and listed at export (none expected in `chinese-base`); no machine gloss, no claude call.
+  - Blind: no LLM review, audit, status or feedback in the file.
+  - Input per item as the review tool: approve / needs_work / reject / doesn''t travel, problem kinds (`qgen.py` `PROBLEMS`), feedback in English, optional corrected text in Chinese; general comments at the end; progress in `localStorage`; «Download verdicts» → `<name>.verdicts.json` (sheet name, ids, sheet hash, verdicts).
+  - Controls: `--controls N` (default 3 for a zh locale, else 0) planted faulty copies (wrong right answer, changed number, garbled option), ids `control-<k>`, mixed in, listed in `work/…/spotcheck-controls.json`, never in a pool.
+- `qgen spotcheck import <file> [--dry-run]`: checks name, ids, hash; each verdict → the translation''s human review (`reviewer: "human"`, `by: "native"`, no name: public repo) and `spot_checks.record` (`locale` set); corrected text into the feedback, never over the translation (the next run''s fix step reads it); controls scored apart, "controls caught k/N" printed and shown by `qgen report --qc`. Run by the developer in `../trivia-review` (AGENTS.md: spot checks are human review work), then merged.
+- Code in `authoring/tools/spotcheck.py`, reusing `authoring/server/spot_checks.py` and `authoring/tools/reviews.py` as `plan 229: Pipeline review and cleanup for milestone 12` leaves them; `qgen.py` only dispatches. Works for any `tr-*` run (also en/de, if wanted).
 
-## Gate: no run without a reviewer
-- No code gate: runs only come from the tasks of parts 6 and 7.
-- After decision 220, per locale a `once` decision "Native reviewer for <locale> engaged?" (option "engaged"); parts 6 and 7 make their pilot tasks pending on it (their plans; part 6 also for `chinese-base`). Raised by task 4.
-- Names, contacts, payments: outside the repo (the developer''s own records); credits by consent are part 9''s.
+## Nothing waits (decision 414, decision 754)
+- No run or task waits on a volunteer, an "engaged" decision or a sheet''s answer. A pm worker that exports a sheet raises `pm decision add "Spot check <sheet> done?"` (body: the sheet path, the import command), no `pm task-pending-decision`.
+- Per zh locale one decision "Native reviewer for <zh> engaged?" (option "engaged"), raised with the request text: it tells the developer the sheets can go out; it blocks nothing.
+- The zh release (`plan 145: Release and close-out of the new languages`) reads the release sample''s agreement as the developer''s own gate; a missing check is a release-check row, not a stopped task.
+- Names, contacts: outside the repo (the developer''s own records). Credits by consent: part 12''s.
 
 ## Brief: `authoring/NATIVE-REVIEW.md`
-- For the reviewers, in English, short: the game (family trivia on a TV, 12 questions to victory), each job above with time per job, what they check (QC.md extra checks: faithful to the source, natural, hints and wrong answers that work in the language, difficulty for the language''s players; text in media is never a problem), the locale prompt''s rules as the yardstick, how to return work, deadline per sheet (~1 week).
-- For the developer, a short section: per job what to send (sheet, gallery zip, Steam key, store text draft) and what to do with the reply (import, `qgen report --qc`, answer the playtest or store decisions).
-- QC.md "Translation runs": the spot check by an outside reviewer is the sheet + import; pm worker: `pm decision add "Spot check tr-<locale>-<n> done?"` as today, body names the sheet path.
+- For the volunteers, in English, short: the game (family trivia on a TV, 12 questions to victory), each job above with its time, what they check (faithful to the English source, natural Chinese, hints and wrong answers that work in Chinese, difficulty for Chinese players, part 1''s sensitivity rule; text in media never a problem, `decision 35: Translation prompts and markets per locale (plan 66)`), the locale prompt as the yardstick, how to return work, ~1 week per sheet; no mention of controls.
+- For the developer, a short section: per job what to send (sheet, gallery zip, Steam key, store draft) and what to do with the reply (import in `../trivia-review`, `qgen report --qc`, answer the playtest or store decisions).
+- QC.md "Translation runs": the zh exception (decision 754) and the sheet path.
 
 ## Tasks (suggested split)
-1. `qgen spotcheck export` and `import` with controls (above); try it end to end on an existing `tr-en-*` or `tr-de-*` run with a throw-away verdict file (`--dry-run` import, nothing committed under `authoring/data/`); `qgen report --qc` shows "controls caught". Docs: QC.md, README how-to, D-entry (D-106 or next) in `plans/decisions.md`, `plans/15b-question-translation.md` QT-6 note.
-2. `authoring/NATIVE-REVIEW.md` brief (above), embedded by the export; `directory.md` unchanged (inside `authoring/`).
-3. zh fit-sample sheet: `qgen spotcheck export --fit <run>` (or the command part 2 names), fit yes / no + reason per item, import writes the developer-correctable fit field; pending on decision 217 and part 2''s fit model task.
-4. On decision 220''s answer: a posting / request text per language (scope, ~hours, rate or volunteer credit, trial = pilot sheet) in `work/native-review/` (not committed), the three "Native reviewer for <locale> engaged?" decisions, `pm decision consequences 220`; pending on decision 220.
+1. Brief `authoring/NATIVE-REVIEW.md` (task 1171, rewritten: zh only, volunteers, decision 754''s jobs, no fit job).
+2. `qgen spotcheck export|import` with controls, `--release`, `--subcategory` (task 1172, rewritten: no gloss, zh only defaults, import by the developer); requires 1 (embeds the brief); requires plan 229''s cleanup of the review and spot-check code (link its task); check end to end on a scratch copy of an existing `tr-en-*` / `tr-de-*` run (`--controls 3`, hand-filled verdict file, `--dry-run` and one real import in the scratch copy, `qgen report --qc`); nothing committed under `authoring/data/` or `work/`. Docs: QC.md, README how-to, D-entry in `plans/decisions.md`, QT-6 note in `plans/15b-question-translation.md`.
+3. Volunteer requests and engaged decisions (task 1174, rewritten): waits for part 1''s variant decision (`pm task-pending-decision` on it); per zh locale a request text in `work/native-review/<zh>.md` (not committed): jobs and hours above, credit + free key, return by e-mail, ~1 week per sheet; the "Native reviewer for <zh> engaged?" decision(s), blocking nothing; `pm decision consequences 220` (zh only by volunteers; ru/pt-BR out of milestone 12; per-run checks replaced by decision 754). Also `pm task set` on `task 2303: Pilot translation run zh-Hans of chinese-base: run, native spot check, budget decision`: no wait on the engaged or spot-check decisions (decision 414), export the pilot sheet and raise its decision only.
+- Drop: task 1173 (fit sheet: the fit pass is reviewed by the developer in English, part 5); `pm decision consequences 217` names it.
 
 ## Left to other parts
-- Running the pilots and the go (`qgen health ack`): parts 6, 7. Playtest decisions, gallery per locale: part 5. Store texts: part 8. Credits: part 9.
+- Running the translations and the pilot (`plan 140: Translation into Chinese`); raising the Chinese-language and release-sample sheets: the runs task of plan 140 and plan 145 (each exports with this plan''s command). Gallery and playtest decision: plan 142. Store texts: plan 144. Credits, release gate: plan 145.
 
 ## Done when
-- `qgen spotcheck export|import` work end to end on a translation run (blind sheet, verdicts recorded as spot checks, controls scored); `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
-- `authoring/NATIVE-REVIEW.md` exists; QC.md names the sheet path.
-- Decision 220 answered; one "engaged" decision per locale raised.', '', '2026-10-15T20:15:43Z', 1150, NULL);
+- `qgen spotcheck export|import` work end to end (blind sheet, verdicts recorded as human reviews and spot checks, controls scored); `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- `authoring/NATIVE-REVIEW.md` exists; QC.md names the zh exception and the sheet.
+- One request text and one "engaged" decision per zh locale; decision 220''s consequences recorded.', 'Nobody in the family reads Chinese, so the Chinese questions, screens and store page need outside native speakers to check them. The developer chose unpaid, credited volunteers. This part writes the short guide for them, builds a self-contained file they can open offline, fill in and mail back, and finds the volunteers; their checks inform the developer but never hold up the work.', '2026-10-15T20:15:43Z', 1150, NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (142, 12, 'UI in the new languages', 400, 'Every screen of the game in `zh-Hans`, `ru` and `pt-BR`, checked by native speakers: fonts per script, catalogs, style guides, keys, layout, Steam texts and a native playtest per language. Part 5 of `plan 60: masterplan`. Same path as the launch languages: `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)` (catalog design, `check:literals`, `/comodines`, playtest checklist), `plan 136: Joker names and symbols, defined again` (names from the English ones, one symbol); this plan only adds what differs for the new scripts and languages. Owner doc: `plans/15a-ui-translation.md`.
 
 ## Waits for
@@ -31547,7 +31549,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `directory.md`: no change expected (no new top-level file).
 
 Done when: those docs match the files as approved; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:26:31Z', '2026-10-15T20:26:41Z', 1157, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1171, 141, 'Native reviewer brief: authoring/NATIVE-REVIEW.md', 'work', 'open', 730, NULL, 'Write `authoring/NATIVE-REVIEW.md`, the brief for outside native reviewers of `zh-Hans`, `ru`, `pt-BR` (`plan 141: Native reviewers`, "Brief"). The spot-check sheet (`qgen spotcheck export`, task in this plan) embeds it at the top, so it runs first.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1171, 141, 'Native reviewer brief: authoring/NATIVE-REVIEW.md', 'work', 'open', 730, NULL, 'Write `authoring/NATIVE-REVIEW.md`, the brief for outside native reviewers of `zh-Hans`, `ru`, `pt-BR` (`plan 141: Native reviewers for Chinese`, "Brief"). The spot-check sheet (`qgen spotcheck export`, task in this plan) embeds it at the top, so it runs first.
 
 - In English, short; style per AGENTS.md (intro paragraph, then bullets).
 - For the reviewers:
@@ -31562,7 +31564,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `directory.md` unchanged (file inside `authoring/`).
 
 Done when: the file exists and reads as a one-page brief; `npm run check` passes.', '2026-10-15T20:27:37Z', NULL, 1158, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1172, 141, 'qgen spotcheck export and import: offline sheet for outside reviewers', 'work', 'open', NULL, NULL, 'Build the offline spot-check sheet of `decision 221: How does an outside native reviewer reach the review tool?`, as specified in `plan 141: Native reviewers` "Spot-check sheet" (read it in full).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1172, 141, 'qgen spotcheck export and import: offline sheet for outside reviewers', 'work', 'open', NULL, NULL, 'Build the offline spot-check sheet of `decision 221: How does an outside native reviewer reach the review tool?`, as specified in `plan 141: Native reviewers for Chinese` "Spot-check sheet" (read it in full).
 
 - `authoring/tools/spotcheck.py` (new): export and import; reuse `authoring/server/spot_checks.py` (`sample`, `record`, `size`) and `authoring/tools/reviews.py`; `qgen.py` only dispatches `qgen spotcheck export|import` (`decision 101: qgen.py stays one module (code review part 7)`: no package split).
 - `qgen spotcheck export <run> [--controls N]` → `work/<run>/spotcheck-<run>.html`: self-contained (inline JS/CSS, small inline images; audio/video named only), brief from `authoring/NATIVE-REVIEW.md` on top, sample in `spot_checks.sample` order; per item English reference (approved non-stale `en` translation, else a gloss made at export, marked "gloss"), translation (question, options with the right one marked, hints, explanation), subcategory, difficulty 1–15; blind: no LLM review, audit, status, feedback. Input per item as the review tool (approve / needs_work / reject / doesn''t travel, `PROBLEMS`, feedback, optional corrected text), general comments; `localStorage` progress; «Download verdicts» → `spotcheck-<run>.verdicts.json` (run, sample ids, sheet hash, verdicts).
@@ -31573,7 +31575,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Docs: `authoring/QC.md` "Translation runs" (outside reviewer: sheet + import; pm worker still `pm decision add "Spot check tr-<locale>-<n> done?"`, body names the sheet path), README how-to, D-entry (next free, D-106 or later) in `plans/decisions.md`, QT-6 note in `plans/15b-question-translation.md`.
 
 Done when: export/import work as above; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:27:37Z', NULL, 1158, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1173, 141, 'Fit-sample sheet for chinese-base (zh only)', 'work', 'open', NULL, NULL, 'Extend the offline sheet (`task 1172: qgen spotcheck export and import: offline sheet for outside reviewers`) for the `chinese-base` fit pass: the zh native reviewer checks a sample of the fit pass''s picks (`plan 141: Native reviewers`, task 3).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1173, 141, 'Fit-sample sheet for chinese-base (zh only)', 'work', 'open', NULL, NULL, 'Extend the offline sheet (`task 1172: qgen spotcheck export and import: offline sheet for outside reviewers`) for the `chinese-base` fit pass: the zh native reviewer checks a sample of the fit pass''s picks (`plan 141: Native reviewers for Chinese`, task 3).
 
 - Waits on `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` and on the fit model from the `chinese-base` model plan (written by `task 1148: write plan: chinese-base bundle: model and setup`) and the fit pass prompt (`task 1169: Fit pass prompt: draft, approval, prompts/fit.md`). Use the command name and field that plan names; else `qgen spotcheck export --fit <run>`.
 - Per item: the English reference and the zh translation as in the spot-check sheet; input fit yes / no + reason (English); blind: no LLM fit verdict shown.
@@ -31582,7 +31584,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Check on a throw-away copy as task 1172 did; nothing committed under `authoring/data/`.
 
 Done when: a fit sheet exports, a hand-filled verdict file imports into the fit field; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:27:48Z', NULL, 1158, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1174, 141, 'Native reviewer requests and the engaged decisions per locale', 'work', 'open', NULL, NULL, 'After `decision 220: Native reviewers for zh-Hans, ru, pt-BR: paid freelancers, volunteers, or mixed?` is answered (`plan 141: Native reviewers`, "Gate"):
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1174, 141, 'Native reviewer requests and the engaged decisions per locale', 'work', 'open', NULL, NULL, 'After `decision 220: Native reviewers for zh-Hans, ru, pt-BR: paid freelancers, volunteers, or mixed?` is answered (`plan 141: Native reviewers for Chinese`, "Gate"):
 
 - Per locale (`zh-Hans`, `ru`, `pt-BR`) a posting / request text in `work/native-review/<locale>.md` (not committed): the jobs and hours from decision 220 and `authoring/NATIVE-REVIEW.md`, rate (paid) or credit + free key (volunteer) per the answer, trial = the pilot''s spot-check sheet, return by e-mail, ~1 week per sheet; zh adds the `chinese-base` fit sample (and full source review if `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` went Chinese). No names, contacts or payments in the repo.
 - Raise three `once` decisions `Native reviewer for <locale> engaged?` with option "engaged"; body names the request file. The pilot tasks of the ru/pt-BR pools plan (`plan 143: Russian and Portuguese pools`) and of the `chinese-base` content plan get pending on them: link any that already exist with `pm task-pending-decision`; else say so in the consequences, so those plans'' split tasks do it.
@@ -50793,7 +50795,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 
 ## Out of scope
 - Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', '2026-11-19T18:01:52Z', 1366, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2289, 141, 'revise plan 141: Native reviewers', 'revise', 'open', 1000, NULL, '`plan 60: masterplan`, the plan above `plan 141: Native reviewers`, changed; it is quoted below. Bring `plan 141: Native reviewers` in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2289, 141, 'revise plan 141: Native reviewers', 'revise', 'done', 1000, '2026-11-19, plan 141 rewritten for milestone 12 as edited (zh only, volunteers, sheets per decision 754, nothing waits per decision 414); decision 754 recorded; split queued as task 2306', '`plan 60: masterplan`, the plan above `plan 141: Native reviewers`, changed; it is quoted below. Bring `plan 141: Native reviewers` in line with it
 (`pm plan edit 141 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -50898,7 +50900,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - New plans: parts 1, 2, 4 (task 1148), 5, 6, 7 (old task 1152 `chinese-base content` splits into parts 5 and 7).
 
 ## Out of scope
-- Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', NULL, 1366, 0, NULL, NULL);
+- Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', '2026-11-19T18:06:54Z', 1366, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2290, 142, 'revise plan 142: UI in the new languages', 'revise', 'open', 1000, NULL, '`plan 60: masterplan`, the plan above `plan 142: UI in the new languages`, changed; it is quoted below. Bring `plan 142: UI in the new languages` in line with it
 (`pm plan edit 142 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -50974,7 +50976,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
 - Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
 
-## Part 9: Native reviewers (rewrites `plan 141: Native reviewers`)
+## Part 9: Native reviewers (rewrites `plan 141: Native reviewers for Chinese`)
 - No Chinese reader in the family: who (paid or volunteer, per zh locale), how they reach the review (export/import sheet or a reachable review page), what they check (spot checks of each translation run, Chinese-language questions, UI playtest, store texts). A pm decision with costs.
 - Priority ~720.
 
@@ -50997,7 +50999,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 ## Existing plans of this milestone
 - `plan 139: Chinese locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
 - `plan 140: Translation into Chinese` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
-- `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
+- `plan 141: Native reviewers for Chinese` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
 - `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
 - `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
 - `plan 144: Store page and Steam for the new languages` → part 11; `plan 145: Release and close-out of the new languages` → part 12.
@@ -51080,7 +51082,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
 - Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
 
-## Part 9: Native reviewers (rewrites `plan 141: Native reviewers`)
+## Part 9: Native reviewers (rewrites `plan 141: Native reviewers for Chinese`)
 - No Chinese reader in the family: who (paid or volunteer, per zh locale), how they reach the review (export/import sheet or a reachable review page), what they check (spot checks of each translation run, Chinese-language questions, UI playtest, store texts). A pm decision with costs.
 - Priority ~720.
 
@@ -51103,7 +51105,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 ## Existing plans of this milestone
 - `plan 139: Chinese locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
 - `plan 140: Translation into Chinese` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
-- `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
+- `plan 141: Native reviewers for Chinese` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
 - `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
 - `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
 - `plan 144: Store page and Steam for the new languages` → part 11; `plan 145: Release and close-out of the new languages` → part 12.
@@ -51186,7 +51188,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
 - Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
 
-## Part 9: Native reviewers (rewrites `plan 141: Native reviewers`)
+## Part 9: Native reviewers (rewrites `plan 141: Native reviewers for Chinese`)
 - No Chinese reader in the family: who (paid or volunteer, per zh locale), how they reach the review (export/import sheet or a reachable review page), what they check (spot checks of each translation run, Chinese-language questions, UI playtest, store texts). A pm decision with costs.
 - Priority ~720.
 
@@ -51209,7 +51211,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 ## Existing plans of this milestone
 - `plan 139: Chinese locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
 - `plan 140: Translation into Chinese` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
-- `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
+- `plan 141: Native reviewers for Chinese` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
 - `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
 - `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
 - `plan 144: Store page and Steam for the new languages` → part 11; `plan 145: Release and close-out of the new languages` → part 12.
@@ -51292,7 +51294,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
 - Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
 
-## Part 9: Native reviewers (rewrites `plan 141: Native reviewers`)
+## Part 9: Native reviewers (rewrites `plan 141: Native reviewers for Chinese`)
 - No Chinese reader in the family: who (paid or volunteer, per zh locale), how they reach the review (export/import sheet or a reachable review page), what they check (spot checks of each translation run, Chinese-language questions, UI playtest, store texts). A pm decision with costs.
 - Priority ~720.
 
@@ -51315,7 +51317,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 ## Existing plans of this milestone
 - `plan 139: Chinese locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
 - `plan 140: Translation into Chinese` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
-- `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
+- `plan 141: Native reviewers for Chinese` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
 - `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
 - `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
 - `plan 144: Store page and Steam for the new languages` → part 11; `plan 145: Release and close-out of the new languages` → part 12.
@@ -51394,6 +51396,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: `qgen report --bundle chinese-base --locale zh-Hans` shows 6000 approved in the difficulty mix, `qgen report --simulate --bundles chinese-base` ✓ for zh-Hans (one simulate run at a time), `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-19T18:03:39Z', NULL, 2302, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2305, 229, 'create tasks for plan 229: Pipeline review and cleanup for milestone 12', 'split', 'open', 1000, NULL, 'Split plan 229 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:03:55Z', NULL, 2295, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2306, 141, 'create tasks for plan 141: Native reviewers for Chinese', 'split', 'open', 1000, NULL, 'Split plan 141 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:06:46Z', NULL, 2289, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -58921,6 +58925,7 @@ Option 1: the engine counts by a seen key = `copied_from` ?? id: a copy and its 
 Option 2: separate counters (no link after copying, as decision 217 reads literally): an English family switching bundles sees up to ~4000 questions a second time as fresh; QUESTIONS_1000 counts both.', 'The new Chinese edition reuses many existing questions as copies with their own wording. An English-speaking family can play either question set, so the same question may come up once from each. This chooses whether the game treats a copy and its original as one question when it decides what was already seen, or as two independent ones.', NULL, NULL, '2026-11-19T17:59:07Z', NULL, 1148, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (752, 'One base bundle per session: at most one, not exactly one', 'answered', '[]', 'Milestone 12: ''there can only be one base bundle in any game session, so selecting one de-selects all others'' limits the count, it doesn''t forbid zero; milestone 8''s any-combination games without a base bundle (D-85 amended 2026-10-16) keep working, `no_questions` stays the refusal for an empty choice. Plan 60 part 4''s ''exactly one'' reads as this.', 'The game is getting a second main question set, a Chinese one, next to the existing one, and only one of them may be used in a game. This settles whether a game may also have no main set at all, playing only add-on packs, as is allowed today.', 'At most one base bundle per session: picking a base bundle deselects the other base bundles; picking the selected one again turns it off, as today; games of add-on bundles only (milestone 8) stay; a stored choice or preset with two or more base bundles keeps the first in the locale''s order', NULL, '2026-11-19T17:59:16Z', '2026-11-19T17:59:16Z', 1148, NULL, 'rule', 1148, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (753, 'chinese-base ships in the game''s content depot, not as DLC', 'answered', '[]', 'D-94 calls every bundle besides `base` a pack with a DLC depot (`build/pack-media.json`); decision 66 (packs as free DLC) is about add-ons. A Chinese player must get chinese-base with the game, and the copies share most media with `base`.', 'Packs of extra questions reach players as optional downloads on Steam. The new Chinese main question set is not an extra but the game itself for Chinese players, so this fixes that it comes with every copy of the game and its pictures and sounds are stored only once.', 'chinese-base (and every kind: base bundle) ships with the game: its pool files and its own media in the content depot; stage-media.mjs writes no pack-media.json entry and no DLC depot for a base bundle; media it shares with base stay once', NULL, '2026-11-19T17:59:17Z', '2026-11-19T17:59:17Z', 1148, NULL, 'rule', 1148, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (754, 'Native checks of Chinese translation runs: pilot and release sample, not every run', 'answered', '[]', 'Inputs: milestone 9 / decision 313: the LLM translation review is a translation''s only review (no spot check on tr-* runs since 2026-10-16; tr-en-1 and tr-de-1 found every translation good); decision 414: human reviews never gate generation or translation, only the developer''s release check; decision 220: volunteers, unpaid, who can''t carry ~20 per-run checks. Exception for zh: the developer can''t even do the optional review of QC.md ''Translation runs'', so a native read is the only human check; the pilot catches prompt problems early, the release sample is the release gate''s evidence, the Chinese-language questions are the ones most likely to fail. Plan: plan 141: Native reviewers (rewritten by task 2289).', 'Nobody in the family reads Chinese, so a few volunteer native speakers check the Chinese questions instead. Asking unpaid volunteers to check every one of about twenty translation batches is too much, and for English and German the automatic review alone has proven good enough. So the volunteers check the first trial batch, a sample of the finished set before release, and the questions that play on the Chinese language itself; none of these checks holds up the work.', 'Per zh locale the native volunteer gets: the pilot run''s sheet (tr-<zh>-1), one release sample of 30 across all runs before the zh release (D-79 bar: ≥ 90 % agreement), and a full sheet of the Chinese-language questions (characters, idioms, poems); further per-run sheets only when the volunteer offers. No run or task waits on a reviewer or a sheet (decision 414); the developer imports returned verdicts in ../trivia-review.', NULL, '2026-11-19T18:06:13Z', '2026-11-19T18:06:13Z', 2289, NULL, 'rule', 2289, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, NULL, NULL, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, NULL, NULL, 73367);
@@ -61541,6 +61546,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2519, 2295, '2026-11-19T18:01:50Z', '2026-11-19T18:04:17Z', 'done', NULL, 0, 'e03002c71327c9286a0348ea9e9c551e48503af1', 'questions', 'claude-opus-5-5', '2e03ba9b-d54e-4245-a1a2-b57afe4e4eaf', NULL, 14, 28, 7926, 840899, 66583, 0.85947580000000012, 80932, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2520, 2302, '2026-11-19T18:02:01Z', '2026-11-19T18:04:19Z', 'done', NULL, 0, '9b5e80a8baa24535b23ed9ad48a1078b464241b2', NULL, 'claude-opus-5-5', '77902aef-1c1e-4f6f-9aa6-423df81bd68e', NULL, 16, 32, 9289, 812610, 50405, 0.75167, 64755, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2521, 2296, '2026-11-19T18:04:18Z', NULL, 'running', NULL, NULL, '9b5e80a8baa24535b23ed9ad48a1078b464241b2', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2522, 2289, '2026-11-19T18:04:19Z', '2026-11-19T18:07:08Z', 'done', NULL, 0, '72aef6d9cf11156dbd39f8ad6152a962e11603fc', NULL, 'claude-opus-5-5', 'd6f8088e-2d06-4332-91c0-5ae44cf7d7a6', NULL, 15, 30, 11487, 965885, 70145, 0.9841970000000001, 84494, 60, 473050);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
