@@ -12,14 +12,13 @@ import re, sys, threading, time
 
 from download import RateLimited
 import progress  # authoring/tools/progress.py: a log line per search (task 1131)
-from providers import commons, freesound, nasa, openverse
+from providers import commons, openverse
 
-PROVIDERS = {m.ID: m for m in [commons, nasa, openverse, freesound]}
+PROVIDERS = {m.ID: m for m in [commons, openverse]}
 
 # Which providers a search asks, in order, per media type (plans/23, "Which provider for which
-# slot"). NASA only for space subcategories. Freesound out (D-103).
-ORDER = {"image": ["commons", "nasa", "openverse"], "audio": ["commons"], "video": ["commons", "nasa"]}
-SPACE_CATEGORIES = {"space"}
+# slot").
+ORDER = {"image": ["commons", "openverse"], "audio": ["commons"], "video": ["commons"]}
 
 # The allowlist (D-45): licences that allow a commercial release with credit, by family.
 # Exact matches only, so NC, ND, GFDL, GPL and unknown licences never pass.
@@ -48,10 +47,9 @@ def provider_of(candidate):
     return PROVIDERS[candidate.get("provider", "commons")]  # candidates from before MP-2 are Commons'
 
 
-def order(kind, category=None):
+def order(kind):
     """The providers to ask for this media type, in order, leaving out those without a key."""
-    ids = [p for p in ORDER[kind] if p != "nasa" or category in SPACE_CATEGORIES]
-    return [p for p in ids if PROVIDERS[p].available()]
+    return [p for p in ORDER[kind] if PROVIDERS[p].available()]
 
 
 def cooling(provider):

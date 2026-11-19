@@ -49,7 +49,7 @@
     return c.page_url === slot.source_url;
   }
 
-  const PROVIDERS: Record<string, string> = { commons: "Commons", openverse: "Openverse", nasa: "NASA", freesound: "Freesound" };
+  const PROVIDERS: Record<string, string> = { commons: "Commons", openverse: "Openverse" };
 
   /** Where the candidate comes from (D-45): "Commons", "Flickr via Openverse", … */
   function origin(c: MediaCandidate) {
