@@ -53,6 +53,7 @@
   import { t } from "../lib/i18n.ts";
   import BundleMark from "./BundleMark.svelte";
   import Icon from "./Icon.svelte";
+  import OptionButton from "./OptionButton.svelte";
   import Prompt from "./Prompt.svelte";
   import { scrollBox } from "./scrollBox.ts";
   import { sfx } from "./sound.svelte.ts";
@@ -131,31 +132,31 @@
 {#snippet tile(b: Bundle, i: number)}
   {@const on = selected.includes(b.id)}
   {@const key = keyOf(b)}
-  <button
-    class="tile bundle glass"
-    class:on
-    style:--i={i}
+  <OptionButton
+    class="bundle"
+    {on}
+    dim
+    compact={large}
+    style="--i:{i}"
     role="switch"
     aria-checked={on}
     onclick={() => toggle(b)}
     disabled={busy}
     data-focus-id="bundle-{b.id}"
+    caption={b.base && buildInfo().demo ? t("bundles.demoName") : b.name}
   >
-    <span class="mark"><BundleMark bundle={b} /></span>
-    <span class="body">
-      {#if key}<Prompt action={{ type: "letter", key }} hold />{/if}
-      <span class="name-text">{b.base && buildInfo().demo ? t("bundles.demoName") : b.name}</span>
-      {#if large}
-        {@const c = countShown(b)}
-        <span class="label count">{t(c.plus ? "bundles.countPlus" : "bundles.count", { n: c.n })}</span>
-        {#if on}<span class="check"><Icon name="check" /></span>{/if}
-      {:else}
-        <span class="switch label">{t(on ? "choice.on" : "choice.off")}</span>
-      {/if}
-      {#if !large}<span class="label description">{b.description}</span>{/if}
-      {#if b.source === "mod"}<span class="label made"><Icon name="puzzle" /> {t("bundles.playerMade", { mod: b.modName ?? "" })}</span>{/if}
-    </span>
-  </button>
+    {#snippet icon()}<BundleMark bundle={b} />{/snippet}
+    {#snippet chip()}{#if key}<Prompt action={{ type: "letter", key }} hold />{/if}{/snippet}
+    {#if large}
+      {@const c = countShown(b)}
+      <span class="label count">{t(c.plus ? "bundles.countPlus" : "bundles.count", { n: c.n })}</span>
+      {#if on}<span class="check"><Icon name="check" /></span>{/if}
+    {:else}
+      <span class="switch label">{t(on ? "choice.on" : "choice.off")}</span>
+      <span class="label description">{b.description}</span>
+    {/if}
+    {#if b.source === "mod"}<span class="label made"><Icon name="puzzle" /> {t("bundles.playerMade", { mod: b.modName ?? "" })}</span>{/if}
+  </OptionButton>
 {/snippet}
 
 <style>
@@ -178,51 +179,7 @@
     background: var(--slate-600);
     border-radius: calc(0.1 * var(--u));
   }
-  .tile {
-    display: flex;
-    align-items: center;
-    gap: calc(1 * var(--u));
-    min-width: calc(20 * var(--u));
-    max-width: calc(34 * var(--u));
-    padding: calc(1 * var(--u)) calc(1.6 * var(--u));
-    border-color: var(--slate-600);
-    text-align: left;
-    transition:
-      transform 0.2s var(--spring),
-      border-color 0.2s,
-      opacity 0.2s;
-    animation: arrive 0.5s calc(0.15s + var(--i) * 0.05s) var(--spring) backwards;
-  }
-  /* Icon column (left, centred, 150% of the name), content column (right) */
-  .mark {
-    flex: none;
-    display: flex;
-    align-items: center;
-    font-size: calc(3 * var(--u));
-  }
-  .body {
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .tile:hover:not(:disabled) {
-    transform: translateY(calc(-0.3 * var(--u)));
-  }
-  .tile.on {
-    border-color: var(--sky);
-    background: rgba(76, 201, 240, 0.16);
-    transform: translateY(calc(-0.3 * var(--u)));
-  }
-  .name-text {
-    font-family: var(--font-display);
-    font-size: calc(2 * var(--u));
-    font-weight: 800;
-    line-height: 1.1;
-  }
-  .bundle:not(.on) .name-text,
-  .bundle:not(.on) .switch {
+  :global(.bundle:not(.on)) .switch {
     color: var(--slate-400);
   }
   .switch {
@@ -266,32 +223,6 @@
     justify-content: start;
     align-content: start;
     gap: calc(1 * var(--u));
-  }
-  .large .tile {
-    position: relative;
-    max-width: none;
-    min-width: 0;
-    padding: calc(1 * var(--u)) calc(3.4 * var(--u)) calc(1 * var(--u)) calc(1.4 * var(--u));
-  }
-  .large .body {
-    gap: calc(0.2 * var(--u));
-  }
-  .large .mark {
-    font-size: calc(2.85 * var(--u));
-  }
-  .large .tile:hover:not(:disabled) {
-    transform: translateY(calc(-0.3 * var(--u)));
-    border-color: var(--slate-400);
-  }
-  .large .tile.on {
-    transform: none;
-  }
-  .large .tile.on:hover:not(:disabled) {
-    transform: translateY(calc(-0.3 * var(--u)));
-    border-color: var(--sky);
-  }
-  .large .name-text {
-    font-size: calc(1.9 * var(--u));
   }
   .large .label {
     font-size: calc(1.2 * var(--u));

@@ -14,6 +14,7 @@
   import Icon from "./Icon.svelte";
   import { MAX_NAME } from "./letters.ts";
   import LetterPicker from "./LetterPicker.svelte";
+  import OptionButton from "./OptionButton.svelte";
   import Prompt from "./Prompt.svelte";
 
   let {
@@ -146,21 +147,22 @@
     <div class="pick-row names" role="radiogroup">
       {#each shown as p, i (p.name)}
         <div class="entry">
-          <button
-            class="pick-tile name-button glass"
-            class:on={selected === p.name}
-            style:--i={i + 1}
+          <OptionButton
+            class="name-button"
+            on={selected === p.name}
+            style="--i:{i + 1}"
             role="radio"
             aria-checked={selected === p.name}
             onclick={() => select(p)}
             disabled={busy}
             data-focus-id="name-{i + 1}"
             data-focus-default={selected === p.name || undefined}
+            caption={p.name}
           >
-            <Prompt action={{ type: "pick", n: i + 1 }} hold />
-            <span class="pick-name"><Icon name="person" /> {p.name}</span>
+            {#snippet icon()}<Icon name="person" />{/snippet}
+            {#snippet chip()}<Prompt action={{ type: "pick", n: i + 1 }} hold />{/snippet}
             <span class="label">{games(p)}</span>
-          </button>
+          </OptionButton>
           {#if ondelete}
             <button class="delete" onclick={() => ondelete(p)} disabled={busy} title={t("screen.player.delete", { name: p.name })}>
               <Icon name="trash" />

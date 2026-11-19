@@ -154,7 +154,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 
 ### Mode (MD-7, plan 36, decision 314)
 - `game/screens/Mode.svelte`, two steps in one screen. Step 1 «¿Cómo se juega?»: two tiles, «Solo o en grupo» (keys `mode.soloKey`) and «Multijugador» (`mode.multiKey`); skipped while no multiplayer mode is shown. Step 2 «Modo de juego»: single: «Estándar» (mode `solo`) and «Modo anfitrión»; multiplayer: two visually separated groups, one pick across both: «En colaboración» (rr-coop) and «En competencia» (rr-competitive, `timed`); the unbuilt ones only in dev mode, marked `PLACEHOLDER` (decision 293, `BUILT_MODES`).
-- Selected state: the tile look everywhere (outline + tint, `.pick-tile.on` in `theme.css`); a pick then «Seguir» / `Enter` / A. Back from step 2 returns to step 1, from step 1 to Player; coming back from a later screen opens step 2 of the pick.
+- Selected state: the tile look everywhere (outline + tint, `OptionButton.svelte`: icon | caption | text | shortcut chip, task 2270); a pick then «Seguir» / `Enter` / A. Back from step 2 returns to step 1, from step 1 to Player; coming back from a later screen opens step 2 of the pick.
 - Preset (`game/modePreset.ts`, task 2114): the pick kept for Back, else the `?mode=` launch option, else the player's last choice (their newest game's mode, if shown; a multiplayer one restores its kind and tile), else the standard mode («Estándar», `solo`); with the kind step, that mode's kind («Solo o en grupo» for a player without one). Focus ids `kind-single`, `kind-multi`, `mode-<id>`.
 - Input (scope `mode`, primary «Seguir»): `Enter`/A go on whatever has the ring (a tile too); `Space`/X pick the ring's tile; a tile's letter picks it and moves the ring onto it; `Backspace`/B back.
 
