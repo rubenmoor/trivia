@@ -11,7 +11,7 @@
   import Horizon from "../Horizon.svelte";
   import Icon from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
-  import { modeName, seatNames } from "../seats.ts";
+  import { modeName, seatNameList } from "../seats.ts";
 
   let {
     game,
@@ -71,8 +71,11 @@
         <Icon name="play" />
         {#if game?.session}
           <span class="resume-session">
-            {t(game.session.timed ? "screen.start.resumeTimed" : "screen.start.resumeSession", { names: seatNames(game.session, 2), level: game.level })}
+            {t(game.session.timed ? "screen.start.resumeTimed" : "screen.start.resumeSession", { level: game.level })}
             <small>{modeName(game.session)}</small>
+            <span class="names">
+              {#each seatNameList(game.session) as name, i (i)}<span class="chip" title={name}>{name}</span>{/each}
+            </span>
           </span>
         {:else}{game?.player
           ? t("screen.start.resumePlayer", { name: game.player, level: game.level })
@@ -107,6 +110,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .resume-session {
+    min-width: 0;
+    max-width: calc(54 * var(--u));
+  }
+  .names {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(0.4 * var(--u));
+    margin-top: calc(0.4 * var(--u));
+    font-size: 0.6em;
+  }
+  .chip {
+    max-width: 12em; /* long names cut with an ellipsis */
+    padding: 0 0.6em;
+    border-radius: 1em;
+    background: rgba(0, 0, 0, 0.14);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .resume-session small {
     font-size: 0.6em;

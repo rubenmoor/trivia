@@ -24,9 +24,12 @@ export function seatBlocks(session: SessionView, seat: number, levels: number, c
   return s.status === "won" && climbed ? levels : s.level - 1;
 }
 
-/** The session's names, the first `max` of them and «y n más» (Victory's team line, Start's resume line). */
+/** The session's names in seat order (Start's resume chips). */
+export const seatNameList = (session: SessionView): string[] => session.seats.map((s, i) => s.player ?? String(i + 1));
+
+/** The session's names, the first `max` of them and «y n más» (Victory's team line). */
 export function seatNames(session: SessionView, max: number): string {
-  const names = session.seats.map((s, i) => s.player ?? String(i + 1));
+  const names = seatNameList(session);
   const shown = names.length > max ? [...names.slice(0, max), t("seat.more", { n: names.length - max })] : names;
   return new Intl.ListFormat(lang === "xx" ? "es" : lang, { type: "conjunction" }).format(shown);
 }

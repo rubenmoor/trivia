@@ -137,6 +137,19 @@ saves.crowd = withExtraPlayers(structuredClone(done));
 saves.session = newSession(structuredClone(done), data, io(), PLAYERS.slice(0, 3), { mode: "rr-coop" }).save;
 meta.session = { id: saves.session.games.at(-1).id, bound: [{ pad: 0 }, { pad: 1 }, "kbm"] };
 
+// Start's resume chips (task 2271): 2 seats, 5 seats, and 8 seats (the Join screen's list) with one very long name.
+const LONG = "Maximiliana Wolfeschlegelstein"; // 30 letters, the name cap
+saves["session-2"] = newSession(structuredClone(done), data, io(), PLAYERS.slice(0, 2), { mode: "rr-coop" }).save;
+saves["session-5"] = newSession(structuredClone(done), data, io(), PLAYERS, { mode: "rr-competitive" }).save;
+{
+  const crowd = structuredClone(saves.crowd);
+  crowd.players[3].name = LONG;
+  saves["session-8"] = newSession(crowd, data, io(), [...PLAYERS, ...EXTRA_PLAYERS].map((n, i) => (i === 3 ? LONG : n)), { mode: "timed" }).save;
+}
+meta["session-2"] = { id: saves["session-2"].games.at(-1).id, bound: [{ pad: 0 }, "kbm"] };
+meta["session-5"] = { id: saves["session-5"].games.at(-1).id, bound: [{ pad: 0 }, { pad: 1 }, { pad: 2 }, { pad: 3 }, "kbm"] };
+meta["session-8"] = { id: saves["session-8"].games.at(-1).id, bound: [...Array.from({ length: 7 }, (_, i) => ({ pad: i })), "kbm"] };
+
 // Round-robin scenes (plans 163, 165): built with the engine's session actions, one acting seat per call.
 const gameRow = (save) => save.games.at(-1);
 const turnOf = (save) => gameRow(save).turn;

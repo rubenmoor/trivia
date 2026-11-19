@@ -428,9 +428,9 @@ const es = {
       demo: "Versión de demostración gratuita",
       resume: "Continuar, nivel {level}",
       resumePlayer: "Continuar: {name}, nivel {level}",
-      /** A multiplayer session: {names} cut short after two; the mode's name below. */
-      resumeSession: "Continuar: {names}, nivel {level}",
-      resumeTimed: "Continuar: {names}, ronda {level}",
+      /** A multiplayer session: the mode's name and the names as chips below. */
+      resumeSession: "Continuar, nivel {level}",
+      resumeTimed: "Continuar, ronda {level}",
       new: "Nueva partida",
       /** Shortcut for `new` (case-insensitive). */
       newKey: "N",
