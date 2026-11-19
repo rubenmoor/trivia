@@ -22,7 +22,8 @@ export const SOUNDTRACKS = {
   // The brief's sets (plans/25-sound.md "Brief"); a set not installed yet plays the generated loops (plan 224)
   // chill-lofi, Late Night Radio: record lofi-tranquilo-late-night-radio.json, 72 bpm, 8 bars
   "lofi-tranquilo": { tracks: REQUIRED_TRACKS, loopStart: 0, loopEnd: 26.667, level: 1 },
-  "acustica-calida": { tracks: [], loopStart: 0, loopEnd: 0, level: 1 }, // warm-acoustic, Bossa Antigua
+  // warm-acoustic, BossaBossa (Bossa Antigua failed the seam check): record acustica-calida-bossabossa.json, 77.5 bpm, 8 bars
+  "acustica-calida": { tracks: REQUIRED_TRACKS, loopStart: 0, loopEnd: 24.775, level: 1 },
   "jazz-de-concurso": { tracks: [], loopStart: 0, loopEnd: 0, level: 1 }, // jazz-quiz-show, Backbay Lounge
 } as const satisfies Record<string, Soundtrack>;
 
