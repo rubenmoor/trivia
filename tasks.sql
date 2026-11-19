@@ -31515,8 +31515,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:18:52Z', '2026-11-19T18:14:46Z', 1151, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1160, 143, 'create tasks for plan 143: Russian and Portuguese pools', 'split', 'dropped', 1000, '2026-11-19: plan 60: masterplan (milestone 12 as edited, Chinese only) gives plan 143: Russian and Portuguese pools no part; its open tasks are dropped (task 2291)', 'Split plan 143 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:20:22Z', '2026-11-19T18:15:20Z', 1153, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1161, 144, 'create tasks for plan 144: Store page and Steam in Chinese', 'split', 'open', 1000, NULL, 'Split plan 144 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:22:44Z', NULL, 1154, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1161, 144, 'create tasks for plan 144: Store page and Steam in Chinese', 'split', 'done', 1000, '2026-11-19, tasks 2313 2314 2315 2316 2317 2318 2319 2320', 'Split plan 144 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:22:44Z', '2026-11-19T18:18:12Z', 1154, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1162, 145, 'create tasks for plan 145: Release and close-out of the new languages', 'split', 'open', 1000, NULL, 'Split plan 145 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:24:37Z', NULL, 1155, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1163, 139, 'Chinese locale(s) in the locale lists and rules', 'work', 'open', NULL, NULL, 'Task 1 of `plan 139: Chinese locales in data and pipeline`: the zh locale(s) become question translation locales (D-78, D-81) with empty pools; es, es-ES, en, de unchanged. No `ru` / `pt-BR` anywhere (out of milestone 12), no `DRIVES_DRAFTING` (gone, `decision 236: English-first drafting for base: what drives drafting and which locales steer it`), no `bundles.json` change.
@@ -51542,6 +51542,68 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision consequences` on each decision of plan 142 this task is the last to wait for (font, gallery, playtest).
 
 Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; es/es-ES/en/de gallery shots unchanged except decided changes.', '2026-11-19T18:14:28Z', NULL, 1159, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2313, 144, 'Store name in Chinese: candidates and decision', 'work', 'open', NULL, NULL, 'Part of `plan 144: Store page and Steam in Chinese`, Tasks 1.
+
+- Needs the variant decision of `plan 228: Chinese variants and the Chinese audience (evaluation)` answered (the zh locale(s)) and `plans/26-china.md` (naming / trademark finding). Unanswered or not yet raised: `pm task-pending-decision` on it (if raised), stage, stop.
+- Per zh locale: keep «Living Room Trivia» or a localized name; 2–3 candidates (e.g. «客厅问答», «家庭问答»; `zh-Hant` in Traditional characters), each with gloss, back-translation, length; recommended first (localized, like `decision 78: German store name (PUB-8, D-50): keep «Living Room Trivia» or a localized one?`).
+- Each candidate fits the capsule logotype lines (above/main/below, as `authoring/store/capsules.mjs` `NAMES`); cite the `plans/26-china.md` naming findings.
+- `pm decision add "Store name in Chinese?" --intro …`; then mark the PUB-7 check task of plan 144 pending on it (`pm task-pending-decision`).
+
+Done when: the decision exists with candidates, and the PUB-7 task waits for it.', '2026-11-19T18:17:34Z', NULL, 1161, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2314, 144, 'PUB-7 check of the Chinese store name', 'work', 'open', NULL, NULL, 'Part of `plan 144: Store page and Steam in Chinese`, Tasks 2. Runs after the answer to "Store name in Chinese?" (raised by `task 2313: Store name in Chinese: candidates and decision`); answer «Living Room Trivia» kept → nothing to check: note it in `plans/17-publishing.md` "Name check (PUB-7)", done.
+
+- Per chosen localized name, the method of `plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)` (`plans/17-publishing.md` "Name check (PUB-7)", `decision 176: Store names pass PUB-7?`): Steam store and app list, EUIPO/TMview, WIPO Global Brand Database incl. CNIPA records, classes 9/41; `zh-Hant`: Taiwan TIPO; web search incl. Chinese app stores and games of that name.
+- Rows (source, date, hit, verdict) into that table.
+- `pm decision add "Chinese store name passes PUB-7?" --intro …` (pass / fail → new candidates / fall back to «Living Room Trivia»); `pm task-pending-decision` the store-texts task of plan 144 on it.
+
+Done when: table rows written, decision raised and linked.', '2026-11-19T18:17:45Z', NULL, 1161, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2315, 144, 'Store scripts for the zh locale(s): capsules, screenshots, trailer', 'work', 'open', NULL, NULL, 'Part of `plan 144: Store page and Steam in Chinese`, Tasks 4 (code, early; outputs not for approval). zh locale(s) = the variant answer of `plan 228: Chinese variants and the Chinese audience (evaluation)`; expected `zh-Hans`.
+
+- `authoring/store/capsules.mjs`: `NAMES` += zh (the answer to "Store name in Chinese?" if given, else a `PLACEHOLDER(<this task''s follow-up id>)` name), CJK font via the page''s `:lang()` chain (font from `task 1176: Font for the zh locale(s) in the client and build`), output folder per zh tag.
+- `authoring/store/screenshots.mjs`, `authoring/store/trailer.mjs` (`trivia-trailer`): accept the zh locale(s) in `--lang`; `Q` from `chinese-base` ids in `pool.<zh>.json`; the `bundles` shot replaced for zh (zh offers only `chinese-base`, e.g. an age-group shot, `decision 79: Store screenshots: which set?`); question shots / trailer refuse with a message until the zh pool exists (as en/de did).
+- Try each under `TRIVIA_DEV_STEAM_USER=1` with `?lang=<zh>`.
+- `plans/17a-store-page.md` "Capsules", "Screenshots", "Trailer": the zh rules.
+- es/es-ES/en/de outputs unchanged: re-render one launch locale, compare.
+
+Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; zh capsules render; screenshot/trailer scripts accept zh or refuse cleanly.', '2026-11-19T18:17:45Z', NULL, 1161, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2316, 144, 'Store texts zh and the English chinese-base lines in 17a', 'work', 'open', NULL, NULL, 'Part of `plan 144: Store page and Steam in Chinese`, Tasks 3 (Design: zh texts, English text, AI disclosure). Needs answered: "Chinese store name passes PUB-7?" (`task 2314: PUB-7 check of the Chinese store name`), `chinese-base`''s `rule` and names (`plan 227: chinese-base bundle: model and setup`); unanswered → `pm task-pending-decision`, stage, stop.
+
+- `plans/17a-store-page.md`, per zh locale a block like `en`: name, short description (Steam''s count, CJK char = 1; recheck Valve''s limit), About This Game (BBCode), feature bullets, privacy line, controller line, modding bullet + link line + Workshop description, AI disclosure. Draft from the catalog (`task 2308: Style guide, catalog and joker-name decision for the zh locale(s)`), `locales/style/<zh>.md` and `en`; full-width punctuation; describe `chinese-base` only; obey part 1''s sensitivity rule (`plans/26-china.md`).
+- `en` block: one feature bullet + one About line (second question set centred on China, one set per game); "Supported languages" zh row marked "ticked at ship (decision 222)".
+- AI disclosure line in every language (en, es, es-ES, de, zh): Chinese text AI-translated, native volunteers check samples (`decision 754: Native checks of Chinese translation runs: pilot and release sample, not every run`); `chinese-base` English sources per `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?`''s answer.
+- Back-translation for the developer; send per `authoring/NATIVE-REVIEW.md`: `pm decision add --once "Native read of store texts done? (<zh>)"` (body: the block; reply as corrected text), pend on it. Next run: apply corrections, `pm decision add "Store texts approved? (<zh>)"`, pend on it; on approval note it in 17a.
+
+Done when: 17a blocks approved for each zh locale.', '2026-11-19T18:17:59Z', NULL, 1161, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2317, 144, 'Capsules render and approval for the zh locale(s)', 'work', 'open', NULL, NULL, 'Part of `plan 144: Store page and Steam in Chinese`, Tasks 5. Needs the final Chinese name (answers of "Store name in Chinese?", "Chinese store name passes PUB-7?"); unanswered → pend, stop.
+
+- `NAMES` in `authoring/store/capsules.mjs` set to the final name (replace any placeholder).
+- `node authoring/store/capsules.mjs --only <zh>`; check every size: logotype legible at small 462×174, CJK glyphs from the shipped font, no fallback font.
+- `pm decision add "Capsules approved? (<zh>)" --intro …` with the paths; pend on it; fixes → follow-up task in plan 144.
+
+Done when: capsules approved per zh locale.', '2026-11-19T18:18:00Z', NULL, 1161, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2318, 144, 'Store screenshots and trailer for the zh locale(s): render and approval', 'work', 'open', NULL, NULL, 'Part of `plan 144: Store page and Steam in Chinese`, Tasks 6 (late). Waits for "Playtest passed? (<zh>)" (`task 2311: Gallery and playtest decisions for the zh locale(s)`) and the zh pool exported (`task 2304: Translation runs zh-Hans of chinese-base to 6000 approved`); else pend on the blocking decision, stop.
+
+- `node authoring/store/screenshots.mjs --lang <zh>` (7 shots, `decision 79: Store screenshots: which set?`, `bundles` shot replaced), `trivia-trailer --lang <zh>`.
+- Question shots and trailer from `chinese-base`, picked against the sensitivity rule (`plans/26-china.md`: no maps, flags, politics), short, image cached.
+- Check as `task 845: Store media: render screenshots and trailers for approval`: demo players, no notice, no PLACEHOLDER, wording as the catalog.
+- 17a paths and render date; `pm decision add "Store screenshots and trailer approved? (<zh>)"` (body: the bundles shot replaced, and whether to re-render `en`''s `bundles` shot); pend on it.
+
+Done when: approved per zh locale.', '2026-11-19T18:18:00Z', NULL, 1161, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2319, 144, 'Steamworks entry checklist for the zh locale(s)', 'work', 'open', NULL, NULL, 'Part of `plan 144: Store page and Steam in Chinese`, Tasks 7. The developer enters, workers never log into Steamworks. Needs the zh ship patch planned in `plan 145: Release and close-out of the new languages`; not yet → `pm task requires` its task, stop.
+
+- `plans/17a-store-page.md` "Entry checklist", per zh locale: localized name (General Application Settings), short description, About This Game, capsules and library assets as localized versions, screenshots and trailer per language, Supported languages row (Interface + Subtitles ✓ only with the ship patch, `decision 222: New UI languages (zh-Hans, ru, pt-BR): offered only once their pool ships`), the `en` `chinese-base` lines and the AI disclosure line in every language, achievement names/descriptions (`schinese` / `tchinese` from `steam-achievements.vdf`, `task 2310: Final joker names and Steam texts for the zh locale(s)`; recheck Valve''s achievements localization page, cite it), rich presence VDF re-upload (`decision 71: Upload the rich presence tokens in Steamworks?`), AI disclosure survey field if localized.
+- `pm decision add "Store page entered for <zh>?"` (entered / issues); pend on it; issues → follow-up tasks in plan 144.
+
+Done when: checklist in 17a, decision answered "entered".', '2026-11-19T18:18:08Z', NULL, 1161, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2320, 144, 'Close-out of the Chinese store page', 'work', 'open', NULL, NULL, 'Part of `plan 144: Store page and Steam in Chinese`, Tasks 8.
+
+- `plans/17a-store-page.md`: status line, zh blocks marked entered.
+- `plans/17-publishing.md` "Name check (PUB-7)": result for the Chinese name; PUB-8 note for Chinese.
+- `plans/15a-ui-translation.md`: LUI-6 note for zh.
+- `pm decision consequences` on each answered decision of plan 144 (store name, PUB-7, native read, texts, capsules, media, entered).
+- Not here: `plans/15-i18n.md`, README (plan 145).
+
+Done when: docs updated, consequences written; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-19T18:18:08Z', NULL, 1161, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -61699,6 +61761,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2528, 1175, '2026-11-19T18:14:46Z', '2026-11-19T18:15:17Z', 'blocked', NULL, 0, 'd0d8171fc78c99077571b37d0f5a7e78172171d0', 'app', 'claude-sonnet-5-5', '2db09e04-39eb-4586-993c-d1fe1b7f90d9', NULL, 8, 18, 1623, 366697, 42561, 0.22317969999999998, 57093, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2529, 2291, '2026-11-19T18:14:56Z', '2026-11-19T18:15:28Z', 'done', NULL, 0, 'a39ef126d5cc8f81c081dbb6ce7a1329848348af', NULL, 'claude-opus-5-5', '14456938-7548-4f0b-bb65-b04aaa88d23a', NULL, 6, 12, 1483, 253291, 35334, 0.3630382, 49684, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2530, 2292, '2026-11-19T18:15:29Z', '2026-11-19T18:17:00Z', 'done', NULL, 0, '3f0a703c9abcf0e5fa37a124c411bd1af8c762ad', NULL, 'claude-opus-5-5', 'b9ef1947-b868-44e6-b930-df38a2c7ac53', NULL, 8, 12, 8599, 323769, 62960, 0.74046180000000006, 78072, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2531, 1161, '2026-11-19T18:17:01Z', '2026-11-19T18:18:20Z', 'done', NULL, 0, '4446bc9c4b2b2f20338d76bba732cbd1eb742488', NULL, 'claude-opus-5-5', 'd34721b3-1700-45e6-a490-09df26008a98', NULL, 9, 18, 6897, 428429, 44339, 0.57840980000000009, 59501, 60, 473050);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -63020,6 +63083,26 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2311, 230
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2311, 2309);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2311, 2310);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2312, 2311);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2313, 2301);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2314, 2313);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2315, 1176);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2315, 1177);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2316, 672);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2316, 2300);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2316, 2308);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2316, 2314);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2317, 2314);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2317, 2315);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2318, 845);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2318, 2304);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2318, 2311);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2318, 2315);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2319, 1162);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2319, 2310);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2319, 2316);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2319, 2317);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2319, 2318);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2320, 2319);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
