@@ -1,5 +1,5 @@
 <script lang="ts">
-  // Level (UI-14): the tower (rr-competitive: the turn seat's own, decision 748), «Nivel n de 12» and the milestone line; the new block drops after Correct.
+  // Level (UI-14): the tower (rr-competitive: the turn seat's own, decision 748), its jokers beside it, «Nivel n de 12» and the milestone line; the new block drops after Correct.
   // In a round-robin session also the turn handover: «Turno de» and the turn seat's tag (decisions 279, 747: after the Turn screen).
   // Timed: the round screen (decision 296): «Ronda n de 12», every seat's hearts (the ones just lost crack), then 3-2-1.
   import { onMount } from "svelte";
@@ -13,7 +13,8 @@
   import Prompt from "../Prompt.svelte";
   import SeatTag from "../SeatTag.svelte";
   import Tower from "../Tower.svelte";
-  import { seatBlocks } from "../seats.ts";
+  import JokerTray from "../JokerTray.svelte";
+  import { seatBlocks, seatColor } from "../seats.ts";
   import { sfx } from "../sound.svelte.ts";
   import { COUNTDOWN_STEP_MS, FADE_MS, ROUND_HOLD_MS, sleep } from "../timing.ts";
 
@@ -94,7 +95,13 @@
 {:else}
 <section class="screen level">
   {#if session?.mode === "rr-competitive"}
-    <Tower filled={seatBlocks(session, session.turn, levels)} {levels} />
+    <div class="track" style:--seat={seatColor(session.turn)}>
+      <div class="own">
+        <Tower filled={seatBlocks(session, session.turn, levels)} {levels} />
+        <JokerTray readonly left={game.jokers_left} />
+      </div>
+      <SeatTag {session} seat={session.turn} small />
+    </div>
   {:else}
     <Tower filled={blocks} {levels} {drop} />
   {/if}
@@ -131,6 +138,22 @@
   .level {
     flex-direction: row;
     justify-content: space-evenly;
+  }
+  .track {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(1.2 * var(--u));
+    padding: calc(1.2 * var(--u)) calc(2 * var(--u));
+    border: 2px solid var(--seat);
+    border-radius: calc(1.6 * var(--u));
+    box-shadow: 0 0 calc(2.2 * var(--u)) var(--seat);
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .own {
+    display: flex;
+    align-items: center;
+    gap: calc(2 * var(--u));
   }
   .level-text {
     display: flex;
