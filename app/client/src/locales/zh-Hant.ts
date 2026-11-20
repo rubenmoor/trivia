@@ -632,9 +632,9 @@ export const zhHant = {
       desc: { elementary: "答對{n}道{subject}題，難度為小學或更高。", middle: "答對{n}道{subject}題，難度為國中或更高。", high: "答對{n}道{subject}題，難度為高中或更高。" },
     },
     diploma: {
-      elementary: { name: "小學畢業", desc: "7個科目全部透過小學階段。" },
-      middle: { name: "國中畢業", desc: "7個科目全部透過國中階段。" },
-      high: { name: "高中畢業", desc: "7個科目全部透過高中階段。" },
+      elementary: { name: "小學畢業", desc: "7個科目全部通過小學階段。" },
+      middle: { name: "國中畢業", desc: "7個科目全部通過國中階段。" },
+      high: { name: "高中畢業", desc: "7個科目全部通過高中階段。" },
     },
     college: { name: "大學", desc: "答對{n}道大學難度的題。" },
     year: { name: "難度：{group}", desc: "在{group}難度下完成{n}局遊戲。" },

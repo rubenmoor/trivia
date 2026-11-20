@@ -21,3 +21,4 @@ Seen in review; guidance, not a lint. Wrong → right.
 - Mainland vocabulary left by the converter or the draft: «手柄» → «控制器», «舉報» → «檢舉», «稽核» → «審核», «許可權» → «權限», «賬號» → «帳號», «制作» → «製作», «發送» → «傳送»
 - Mainland quotes “…” → 「…」
 - Mainland level term «初中» → «國中»
+- «透過» for 通过 (pass a stage, a level) → «通過»; «透過» only means "by way of"
