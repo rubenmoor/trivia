@@ -938,7 +938,7 @@ def retire(bundle, sub, slots, skipped):
 
 
 def option_key(text):
-    """norm(), or the casefolded text where norm() drops everything (ß, Ø, Cyrillic)."""
+    """norm(), or the casefolded text where norm() drops everything (punctuation only)."""
     text = re.sub(r"(?<![\w)])[-−–]\s?(?=\d)", "neg ", text)  # "-100" ≠ "100"
     return norm(text) or unicodedata.normalize("NFKC", text).casefold().strip()
 
@@ -1124,13 +1124,13 @@ def overlap_norm(text, locale="es"):
 
 
 def stem(text, locale="es"):
-    """overlap_norm() with every word's plural ending dropped. Spanish: trailing «s», then «e»: Almenas → almena,
+    """overlap_norm() with every word's plural ending dropped; CJK text as character bigrams. Spanish: trailing «s», then «e»: Almenas → almena,
     padres → padr; German the same (Hunde → hund). English: -ies → y, -es after s/x/z/ch/sh, else -s (not -ss): cities → city, boxes → box."""
     def en(w):
         return (re.sub(r"ies$", "y", w) if w.endswith("ies") else re.sub(r"(s|x|z|ch|sh)es$", r"\1", w)
                 if re.search(r"(s|x|z|ch|sh)es$", w) else re.sub(r"(?<!s)s$", "", w))
     return " ".join((en(w) if locale == "en" else re.sub(r"e$", "", re.sub(r"s$", "", w))) if len(w) > 3 else w
-                    for w in overlap_norm(text, locale).split())
+                    for w in concepts.cjk_bigrams(overlap_norm(text, locale)).split())  # Han: bigrams, no plurals
 
 
 def keys_hash(q):
@@ -1215,6 +1215,16 @@ def _overlap_keys(q, cache, locale):
     return k[1]
 
 
+def _width(text):
+    """Length in Latin letters: a Han character counts 2, so a 2-character Han answer (长城) passes the 4-letter bar."""
+    return len(text) + sum(map(len, concepts.CJK.findall(text)))
+
+
+def _within(a, b):
+    """a a whole word of b; Han text has no word boundaries, so any Han a inside b."""
+    return f" {a} " in f" {b} " or bool(concepts.CJK.search(a)) and a in b
+
+
 def overlap_candidates(q, others, cache, locale="es", cap=8):
     """[(other, why, rank)] for B-5 (plan 15): questions that may ask the same fact as q, closest first.
     Rank 0 same answer, 1 similar answer, 2 stem-equal concept or answer, 3 one's concept/answer in
@@ -1229,16 +1239,16 @@ def overlap_candidates(q, others, cache, locale="es", cap=8):
             if a["answer"] == b["answer"]:
                 why, rank = "same answer", 0
             elif (difflib.SequenceMatcher(None, a["answer"], b["answer"]).ratio() >= 0.8
-                  or min(len(a["answer"]), len(b["answer"])) >= 4
-                  and (f" {a['answer']} " in f" {b['answer']} " or f" {b['answer']} " in f" {a['answer']} ")):
+                  or min(_width(a["answer"]), _width(b["answer"])) >= 4
+                  and (_within(a["answer"], b["answer"]) or _within(b["answer"], a["answer"]))):
                 why, rank = "similar answer", 1
         if not why and a["stems"] & b["stems"]:
             why, rank = f"same stem «{min(a['stems'] & b['stems'])}»", 2
         if not why:
-            hit = min((s for s in a["stems"] if len(s) >= 4 and f" {s} " in b["text"]), default=None)
+            hit = min((s for s in a["stems"] if _width(s) >= 4 and f" {s} " in b["text"]), default=None)
             if hit:
                 why, rank = f"«{hit}» in its text", 3
-            elif hit := min((s for s in b["stems"] if len(s) >= 4 and f" {s} " in a["text"]), default=None):
+            elif hit := min((s for s in b["stems"] if _width(s) >= 4 and f" {s} " in a["text"]), default=None):
                 why, rank = f"its «{hit}» in this text", 3
         if why:
             found.append((rank, -difflib.SequenceMatcher(None, a["question"], b["question"]).ratio(), p, why))
