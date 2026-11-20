@@ -33,7 +33,9 @@ def validate_pool():
     bundle_ids = {b["id"] for b in bundles}
     bundle_of = {b["id"]: b for b in bundles}
     errors += taxonomy_problems()
-    errors += slug_problems()
+    e, w = slug_problems({q.get("bundle") or "base" for q in data["questions"]})
+    errors += e
+    warnings += w
     e, w = bundle_problems(bundles)
     errors += e
     warnings += w
@@ -517,13 +519,14 @@ def taxonomy_problems():
     return errors
 
 
-def subject_problems():
-    """Errors: a category of base or a bundle without a known subject, a locale missing subject names (plan 194)."""
+def subject_problems(used):
+    """(errors, warnings): a category of base or a bundle without a known subject, a locale missing subject names
+    (plan 194); no categories yet: a warning while the bundle (`used`: bundles with questions) has no questions."""
     ids = categories.subject_ids()
-    errors = []
+    errors, warnings = [], []
     for b in categories.bundle_ids():
         if not categories.load(b):  # `qgen bundle new` writes none: its taxonomy (with subjects) comes next
-            errors.append(f"{categories.path(b).relative_to(ROOT)}: no categories yet (`qgen taxonomy --bundle {b}`, then `--apply`)")
+            (errors if b in used else warnings).append(f"{categories.path(b).relative_to(ROOT)}: no categories yet (`qgen taxonomy --bundle {b}`, then `--apply`)")
         bad = [c["slug"] for c in categories.load(b) if c.get("subject") not in ids]
         if bad:
             errors.append(f"{categories.path(b).relative_to(ROOT)}: category without a subject or with an unknown one "
@@ -532,14 +535,14 @@ def subject_problems():
         got = (load_json(layout.NAMES(l), {}) or {}).get("subjects") or {}
         if missing := [i for i in ids if not (isinstance(got.get(i), str) and got[i].strip())]:
             errors.append(f"{layout.NAMES(l).relative_to(ROOT)}: subject name(s) missing: {first_ids(missing)}")
-    return errors
+    return errors, warnings
 
 
-def slug_problems():
-    """The slug rule (decision 259): keys are slugs, categories.json holds no names,
+def slug_problems(used):
+    """(errors, warnings): subject_problems, and the slug rule (decision 259): keys are slugs, categories.json holds no names,
     names files (categories.names_locales: en, es, de; a bundle with other languages en and its own) name every
     category and subcategory of every bundle (questions: validate_pool's key check)."""
-    errors = subject_problems()
+    errors, warnings = subject_problems(used)
     for b in categories.bundle_ids():
         cats = categories.load(b)
         rel = categories.path(b).relative_to(ROOT)
@@ -554,7 +557,7 @@ def slug_problems():
                        + [f"subcategory {s}" for s in categories.subcategories(b) if s not in (doc.get("subcategories") or {})])
             if missing:
                 errors.append(f"{layout.NAMES(l, b).relative_to(ROOT)}: {len(missing)} name(s) missing: {first_ids(missing)}")
-    return errors
+    return errors, warnings
 
 
 COUNTRY = r"[A-Z]{2}"  # a regional bundle's country (plan 151); COUNTRY in app/client/src/engine/pool.ts
