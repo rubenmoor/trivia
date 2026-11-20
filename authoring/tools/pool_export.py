@@ -31,7 +31,8 @@ def pool_text(entries):
 
 
 def split(entries, locale="es"):
-    """{path: text}: base's entries in its pool file (always), each pack's in its own when it has any."""
+    """{path: text}: base's entries in its pool file (always: the game reads it in every locale, even one only a base
+    pack such as chinese-base offers), each pack's in its own when it has any."""
     by = {"base": []}
     for e in entries:
         by.setdefault(e["bundle"], []).append(e)
@@ -46,15 +47,17 @@ def demo_ids():
 
 
 def demo_exports(pool):
-    """{path: text}: app/data/demo/pool[.<locale>].json, base's entries of the listed ids unchanged; {} without a list."""
+    """{path: text}: app/data/demo/pool[.<locale>].json, base's entries of the listed ids unchanged, in base's
+    languages only; {} without a list."""
     import translations  # authoring/tools/translations.py (imports this module)
     ids = demo_ids()
     if ids is None:
         return {}
     want = set(ids)
+    langs = next(b["languages"] for b in json.loads(layout.BUNDLES.read_text(encoding="utf-8"))["bundles"] if b["id"] == "base")
     return {layout.DEMO_POOL(l): pool_text([e for e in translations.play_entries(l, pool)
                                             if e["id"] in want and e["bundle"] == "base"])
-            for l in translations.LOCALES if translations.exported(l, pool)}
+            for l in translations.LOCALES if l in langs and translations.exported(l, pool)}
 
 
 def stale_demo(texts):

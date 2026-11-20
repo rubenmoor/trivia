@@ -87,15 +87,32 @@ NAME_KINDS = ("categories", "subcategories", "subjects")  # subjects: base's nam
 SLUG = re.compile(r"[a-z0-9]+(-[a-z0-9]+)*")
 
 
+def names_locale(locale):
+    """The names file a locale's names go in: es-ES's in es's, which es-ES reads first (decision 259)."""
+    return "es" if locale.startswith("es") else locale
+
+
+def names_locales(bundle):
+    """The locales whose names files the bundle needs: en (keys and prompts are English) and its `languages`'
+    (es-ES → es); `base` and a bundle that lists es or de keep all of NAMES_LOCALES."""
+    langs = next((b.get("languages") or [] for b in _read(BUNDLES, "bundles") if b["id"] == bundle), [])
+    own = {names_locale(l) for l in langs} | {"en"}
+    return tuple(NAMES_LOCALES) if own <= set(NAMES_LOCALES) else tuple(dict.fromkeys(["en", *sorted(own - {"en"})]))
+
+
 def _names_files(locale, bundle):
     """The bundle's names files for a locale, the overriding one last: es-ES reads es's, then its own."""
     return [names(l, bundle) for l in (["es", "es-ES"] if locale == "es-ES" else [locale])]
 
 
-def load_names(locale):
+def load_names(locale, fallback=None):
     """{"bundles", "categories", "subcategories", "age_groups"}: display names in a locale (D-81), base's file
     merged with every bundle's; "categories" and "subcategories" keyed by sub_key (bundle + key, D-99).
-    es-ES: names.es.json, then names.es-ES.json where Spain differs (decision 259)."""
+    es-ES: names.es.json, then names.es-ES.json where Spain differs (decision 259). `fallback`: a locale whose
+    names fill the gaps (display only, never for validate's missing-name checks)."""
+    if fallback and fallback != locale:
+        under, own = load_names(fallback), load_names(locale)
+        return {k: {**under[k], **own[k]} for k in own}
     out = {"bundles": {}, "categories": {}, "subcategories": {}, "subjects": {}, "age_groups": {}}
     for b in bundle_ids():
         for p in _names_files(locale, b):
@@ -127,11 +144,12 @@ def _all_files(locale=None):
 
 def display(bundle, key, locale="es", kind="subcategories"):
     """A category's or subcategory's display name in a locale (decision 259): the locale's names file
-    → es's for es-ES → the key itself."""
+    → es's for es-ES → en's (a bundle without names in that locale, e.g. chinese-base in es) → the key itself."""
     k = sub_key(bundle, key)
-    own = _cached(("names", locale), _all_files(locale), lambda: load_names(locale))[kind]
-    if k in own:
-        return own[k]
+    for l in dict.fromkeys([locale, "en"]):
+        own = _cached(("names", l), _all_files(l), lambda l=l: load_names(l))[kind]
+        if k in own:
+            return own[k]
     return key
 
 

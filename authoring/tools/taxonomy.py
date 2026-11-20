@@ -11,7 +11,7 @@ import categories  # authoring/tools/categories.py: every bundle's categories (D
 import targets  # authoring/tools/targets.py: pool targets (D-53)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 
-from qgen import INT, STR, bundle_row, bundle_text, claude, cmd_export, load_age_groups, load_bundles, load_json, save_json, slug, voice_locale  # authoring/tools/qgen.py
+from qgen import INT, STR, bundle_row, bundle_text, claude, cmd_export, load_age_groups, load_bundles, load_json, save_json, slug, voice_locales  # authoring/tools/qgen.py
 
 
 CATEGORIES_ABOUT = ("Categories of the {bundle} bundle (D-41, D-43): structure only, keyed by English slugs unique "
@@ -19,31 +19,42 @@ CATEGORIES_ABOUT = ("Categories of the {bundle} bundle (D-41, D-43): structure o
 
 
 def cmd_bundle_new(args):
-    """An empty bundle (BN-9, D-41): its entry in app/data/bundles.json, a non-base one's 2000 target
-    (D-101) and an empty categories.json, for a regional or theme one filled by `qgen taxonomy` (plan 138), else by hand. Concept lists come from `qgen batch --bundle <id>`; axes stay base's until
-    authoring/data/bundles/<id>/question-axes.json exists."""
+    """An empty bundle (BN-9, D-41): its entry in app/data/bundles.json (a base bundle after the base bundles), its target
+    (a base bundle base's mix at base's total, decision 730; else 2000, D-101) and an empty categories.json, for a regional
+    or theme one filled by `qgen taxonomy` (plan 138), else by hand. Concept lists come from `qgen batch --bundle <id>`;
+    axes stay base's until authoring/data/bundles/<id>/question-axes.json exists."""
     if not re.fullmatch(r"[a-z0-9-]+", args.id):
         sys.exit("A bundle id is lowercase letters, digits and dashes.")
     data = load_json(layout.BUNDLES)
     if any(b["id"] == args.id for b in data["bundles"]):
         sys.exit(f"Bundle {args.id!r} already exists.")
-    if args.kind == "region" and not (args.language and args.voice and args.country):
+    langs = [l.strip() for l in (args.language or "").split(",") if l.strip()]
+    if bad := [l for l in langs if l not in translations.LOCALES]:
+        sys.exit(f"--language: unknown {', '.join(bad)}; one of {', '.join(translations.LOCALES)}")
+    if len(langs) > 1 and args.kind == "region":
+        sys.exit("--language: a regional bundle has one language, the region's (decision 110).")
+    if args.kind == "region" and not (langs and args.voice and args.country):
         sys.exit("A regional bundle needs --language (the region's), --voice (its language variety) and --country.")
+    if args.kind == "base" and not (langs and args.voice):
+        sys.exit("A base bundle needs --language (its languages, comma-separated) and --voice.")
     if args.country and (args.kind != "region" or not re.fullmatch(COUNTRY, args.country)):
         sys.exit("--country: a regional bundle's ISO 3166-1 alpha-2 code in capitals, e.g. CO.")
     if args.icon and (args.kind == "region" or args.icon not in BUNDLE_ICONS):
         sys.exit(f"--icon: not on a regional bundle, else one of {', '.join(BUNDLE_ICONS)}.")
-    data["bundles"].append({"id": args.id, "kind": args.kind, **({"country": args.country} if args.country else {}),
-                            **({"icon": args.icon} if args.icon else {}),
-                            "languages": [args.language or ("en" if args.kind == "theme" else "es")], "name": args.name,
-                            "description": args.description, "rule": args.rule,
-                            **({"voice": args.voice} if args.voice else {})})
+    row = {"id": args.id, "kind": args.kind, **({"country": args.country} if args.country else {}),
+           **({"icon": args.icon} if args.icon else {}),
+           "languages": langs or ["en" if args.kind == "theme" else "es"], "name": args.name,
+           "description": args.description, "rule": args.rule, **({"voice": args.voice} if args.voice else {})}
+    at = len(data["bundles"]) if args.kind != "base" else \
+        max(i for i, b in enumerate(data["bundles"]) if b["kind"] == "base") + 1
+    data["bundles"].insert(at, row)
     save_json(layout.BUNDLES, data)
-    if args.kind != "base":
-        t = targets.load_all()
-        save_json(layout.TARGETS, {**t, args.id: targets.scaled(targets.BUNDLE_TOTAL)})
+    t = targets.load_all()
+    total = t["base"]["total"] if args.kind == "base" else targets.BUNDLE_TOTAL
+    save_json(layout.TARGETS, {**t, args.id: targets.scaled(total)})
     path = categories.path(args.id)
     if not path.exists():
+        path.parent.mkdir(parents=True, exist_ok=True)
         save_json(path, {"about": CATEGORIES_ABOUT.format(bundle=args.id), "categories": []})
     nxt = (f"`qgen taxonomy --bundle {args.id}` proposes its categories and subcategories (plan 138), "
            f"`--apply` writes them" if args.kind in {"region", "theme"}
@@ -86,9 +97,7 @@ def subjects_text():
                      for s in categories._read(categories.SUBJECTS, "subjects"))
 
 
-def names_locale(locale):
-    """The names file a locale's names go in: es-ES's in es's, which es-ES reads first (decision 259)."""
-    return "es" if locale.startswith("es") else locale
+names_locale = categories.names_locale
 
 
 def derived_slug(en, region):
@@ -266,8 +275,8 @@ def draft_names(bundle, todo, d):
         rows = [{"key": k, "name": e["names"][src], "scope": e.get("scope", "")} for k, e in items]
         schema = {"type": "object", "required": ["items"], "properties": {"items": {"type": "array", "items": {
             "type": "object", "required": ["key", *locales], "properties": {"key": STR, **{l: STR for l in locales}}}}}}
-        vl = names_locale(voice_locale(b))
-        voice = f"\n\n## Voice\n`{vl}`: {b['voice']}" if b.get("voice") and vl in locales else ""
+        vl = [l for l in dict.fromkeys(map(names_locale, voice_locales(b))) if l in locales]
+        voice = f"\n\n## Voice\n{', '.join(f'`{l}`' for l in vl)}: {b['voice']}" if b.get("voice") and vl else ""
         user = ("## Target languages\n" + "\n".join(f"- `{l}`: {'Spanish (Latin America and Spain)' if l == 'es' else LANGUAGES[l]}"
                                                 for l in locales) + voice
                 + "\n\n## Names\n" + json.dumps(rows, ensure_ascii=False, indent=1))

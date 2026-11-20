@@ -197,14 +197,20 @@ def report_progress(pool, bundle, locale="es"):
         report_supply(pool, locale, bundle)
 
 
+def first_language(bundle):
+    """The bundle's first `languages` entry (base: es), `qgen report`'s default locale for it; es for an unknown id."""
+    return next((b["languages"][0] for b in load_bundles() if b["id"] == bundle), "es")
+
+
 def report_supply(pool, locale, bundle="base"):
-    """English drafting for base or a theme (plan 70, decision 236): per question locale its deficit, yield, untranslated
-    sources and the drafts it asks for, per level; the draft gap = the largest."""
+    """English drafting for a base bundle or a theme (plan 70, decision 236): per question locale its deficit, yield,
+    untranslated sources and the drafts it asks for, per level; the draft gap = the largest. The bundle's first
+    language (base: es, `qgen report`'s default) shows every locale."""
     supply = targets.source_supply(pool, bundle)
     fmt = lambda d: ", ".join(f"{l}: {n}" for l, n in sorted(d.items()) if n) or "none"
     print(f"en drafting for {bundle} (decision 236; per level; drafts = deficit / yield − untranslated, en 1:1):")
     for l, x in supply.items():
-        if locale in (l, "es"):
+        if locale in (l, first_language(bundle)):
             gap = {lvl: targets.locale_gap(x, lvl) for lvl in x["deficit"]}
             print(f"  {l}: yield {x['yield']:.2f}; deficit {fmt(x['deficit'])}; untranslated {fmt(x['untranslated'])}; "
                   f"drafts {fmt(gap)}")
@@ -413,23 +419,28 @@ SIM_MODES = ["solo", "rr-coop", "rr-competitive", "timed"]  # D-74, without game
 SIM_MULTI = {"rr-coop", "rr-competitive", "timed"}  # sessions; = sim/simulate.ts MULTI
 
 
-def target_check(locale, pool=None):
-    """D-75: the locale's approved base questions vs. base's targets (decision 37)."""
+def target_check(locale, pool=None, bundle="base"):
+    """D-75: the locale's approved questions of its base bundle vs. that bundle's targets (decision 37)."""
     pool = pool if pool is not None else load_json(POOL)["questions"]
-    t = targets.load_targets("base")
-    by = targets.approved_by_level(pool, "base", locale)
-    short = targets.deficits(pool, "base", locale) or {}
+    t = targets.load_targets(bundle)
+    by = targets.approved_by_level(pool, bundle, locale)
+    short = targets.deficits(pool, bundle, locale) or {}
     short = {d: n for d, n in short.items() if n}
     n = sum(by.values())
-    return {"locale": locale, "ok": n >= t["total"] and not short, "approved": n, "total": t["total"], "short": short}
+    return {"locale": locale, "bundle": bundle, "ok": n >= t["total"] and not short, "approved": n, "total": t["total"],
+            "short": short}
+
+
+def first_base(locales):
+    """{locale: [its first base bundle]} ([] if none): the locale's default game, packs off (D-99, decision 752)."""
+    bundles = load_json(layout.BUNDLES)["bundles"]
+    return {l: [b["id"] for b in bundles if b.get("kind") == "base" and l in b.get("languages", [])][:1] for l in locales}
 
 
 def report_simulate(args):
     """Games per new player until the first repeat (plan 62, CT-2; plan 65), information only; exit code = D-75's target check."""
     locales = args.locale.split(",") if args.locale else translations.LOCALES
-    bundles = load_json(layout.BUNDLES)["bundles"]
-    default = {l: [b["id"] for b in bundles if b.get("kind") == "base" and l in b.get("languages", [])][:1]
-               for l in locales}  # the locale's default game: its first base bundle, packs off (D-99)
+    default = first_base(locales)
     for l in [l for l in locales if not default[l]]:
         print(f"simulate: {l} skipped, no base bundle lists it")
     locales = [l for l in locales if default[l]]
@@ -450,7 +461,7 @@ def report_simulate(args):
         done = dict(zip(map(id, have), ex.map(engine.simulate, have)))
     results = [done.get(id(c)) or {**c, "result": "no_pool"} for c in cells]
     pool = load_json(POOL)["questions"]
-    checks = [target_check(l, pool) for l in locales]
+    checks = [target_check(l, pool, default[l][0]) for l in locales]
     ok = all(c["ok"] for c in checks)
     if args.json:
         print(json.dumps({"model": {"typical_p": engine_model(results)}, "seconds": round(time.monotonic() - t0, 1),
@@ -492,7 +503,8 @@ def report_simulate(args):
     print("target check (D-75, decision 37: approved base questions per launch language vs. base's targets):")
     for c in checks:
         short = ", ".join(f"{d}: −{n}" for d, n in c["short"].items())
-        print(f"  {'✓' if c['ok'] else '✗'} {c['locale']}: {c['approved']}/{c['total']} approved"
+        print(f"  {'✓' if c['ok'] else '✗'} {c['locale']}{'' if c['bundle'] == 'base' else ' ' + c['bundle']}: "
+              f"{c['approved']}/{c['total']} approved"
               + (f"; short at difficulty {short}" if short else ""))
     sys.exit(0 if ok else 1)
 
@@ -510,8 +522,9 @@ def report_career(args):
     counts = [args.players] if args.players else CAREER_PLAYERS
     subjects = load_json(Path(args.subjects)) if args.subjects else {  # default: the data's (plan 194), `<bundle>/<category>` keys
         categories.sub_key(c["bundle"], c["slug"]): c["subject"] for c in categories.load()}
-    cells = [{"locale": l, "bundles": args.bundles.split(",") if args.bundles else ["base"], "age_group": g, "player": p,
-              "players": n, "seeds": args.seeds or 3, "games": args.games or 100, "subjects": subjects}
+    default = first_base(locales)
+    cells = [{"locale": l, "bundles": args.bundles.split(",") if args.bundles else default[l] or ["base"], "age_group": g,
+              "player": p, "players": n, "seeds": args.seeds or 3, "games": args.games or 100, "subjects": subjects}
              for l in locales for g in groups for p in models for n in counts]
     t0 = time.monotonic()
     have = [c for c in cells if layout.POOL_FILE(c["locale"]).exists()]
@@ -526,7 +539,7 @@ def report_career(args):
     bands = ok["bands"] if ok else []
     label = [f"{lo}–{hi}" for lo, hi in bands]
     ms = ok["milestones"] if ok else []
-    print("career supply figures (milestone 20, plan 193; information only), base bundle; "
+    print("career supply figures (milestone 20, plan 193; information only), the locale's first base bundle; "
           f"{args.seeds or 3} seeds per cell, {ok['max_games'] if ok else '?'} games per seed; {time.monotonic() - t0:.0f} s")
     print("  bands: " + ", ".join(label) + "; exact = this band, harder = this band or harder; every = every correct answer, "
           "distinct = distinct questions; players take turns at solo games on one save, figures and games per player")
@@ -649,15 +662,15 @@ def cost_report(pool):
 
 
 def bundle_costs(pool, runs, rates, ratio):
-    """Rows per non-base bundle (decision 110; base is the projection): its draft locale (translations.draft_locale),
+    """Rows per bundle besides base (decision 110; base is the projection): its draft locale (translations.draft_locale),
     the other `languages`, and any locale it has translation runs for. $ per approved of its plain --bundle batches
-    (media-first apart) and --translate --bundle runs, deficit to its target (a theme's draft row: its draft gap,
-    decision 236), projection; no own run yet → base's rate."""
+    (media-first apart) and --translate --bundle runs, deficit to its target (a theme's and another base bundle's draft
+    row: its draft gap, decision 236), projection; no own run yet → base's rate."""
     rows = []
     for b in load_bundles():
-        theme = b.get("kind") == "theme"
-        if b.get("kind") != "region" and not theme:
+        if b["id"] == "base":
             continue
+        theme = b.get("kind") != "region"  # a theme or another base bundle: en drafts aim at its draft gap
         draft = translations.draft_locale(b)
         extra = sorted({r["locale"] for r in runs if r["bundle"] == b["id"] and r["kind"] == "translation"} - {draft, *b["languages"]})
         gap = sum((targets.draft_gaps(pool, b["id"]) or {}).values()) if theme else None
@@ -965,8 +978,9 @@ def cmd_report(args):
         lo, hi = l["range"]
         flag = f"  MISSING {l['missing']}" if l["missing"] else ""
         print(f"  level {l['level']:2} (difficulty {lo}–{hi}): {l['candidates']:3} candidates{flag}")
-    for l in (args.locale or "es").split(","):
-        report_progress(pool, args.bundle or "base", l)
+    bundle = args.bundle or "base"
+    for l in (args.locale or first_language(bundle)).split(","):
+        report_progress(pool, bundle, l)
     if args.subcategories:
         report_subcategories(avail, checked["ranges"])
         report_saturation(pool, args.bundle or "base")

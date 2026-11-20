@@ -145,15 +145,20 @@ def load_bundles():
     return load_json(layout.BUNDLES)["bundles"]
 
 
-def voice_locale(b):
-    """The locale a bundle's `voice` describes (D-78, plan 98): a regional bundle's drafts; base's and a theme's es text."""
-    return translations.draft_locale(b) if b["kind"] == "region" else "es"
+def voice_locales(b):
+    """The locales a bundle's `voice` describes (D-78, plan 98): a regional bundle's drafts; a base bundle without es
+    (chinese-base) its every language; base's and a theme's es text."""
+    if b["kind"] == "region":
+        return (translations.draft_locale(b),)
+    if b["kind"] == "base" and "es" not in b["languages"]:
+        return tuple(b["languages"])
+    return ("es",)
 
 
 def voices_text(locale):
     """The voices of the bundles whose text in `locale` has one, for the locale prompts' {voices} (D-78)."""
     return "\n".join(f"  - `{b['id']}`: {b.get('voice') or VOICE}" for b in load_bundles()
-                     if voice_locale(b) == locale) or "  - none"
+                     if locale in voice_locales(b)) or "  - none"
 
 
 def bundle_row(bundle):
@@ -163,7 +168,7 @@ def bundle_row(bundle):
 def bundle_text(bundle, locale="es"):
     """The one bundle a batch writes for, as a content limit for the drafter (D-41); its voice for text in its voice's locale."""
     b = bundle_row(bundle)
-    voice = f"\nVoice: {b.get('voice') or VOICE}" if locale == voice_locale(b) else ""
+    voice = f"\nVoice: {b.get('voice') or VOICE}" if locale in voice_locales(b) else ""
     return f"Every question you write is in the `{bundle}` bundle: {b['rule']}{voice}"
 
 
@@ -1853,14 +1858,14 @@ def main():
     bnew.add_argument("id")
     bnew.add_argument("--name", required=True, help="name shown in the game, in Spanish (es, es-ES; en and de in names.<locale>.json)")
     bnew.add_argument("--description", required=True, help="description shown in the game, in Spanish like --name")
-    bnew.add_argument("--kind", required=True, choices=["region", "theme"])
-    bnew.add_argument("--language", choices=translations.LOCALES,
-                      help="region: the locale it drafts in, its only `languages` entry until en joins (decision 110); theme: default en")
+    bnew.add_argument("--kind", required=True, choices=["region", "theme", "base"])
+    bnew.add_argument("--language", help="region: the locale it drafts in, its only `languages` entry until en joins (decision 110); "
+                      "theme: default en; base (required): its languages, comma-separated, e.g. zh-Hans,zh-Hant,en")
     bnew.add_argument("--icon", help="not region: the tile's symbol, one of BUNDLE_ICONS (default pin)")
     bnew.add_argument("--country", help="region: its ISO 3166-1 alpha-2 code in capitals, e.g. CO; the game shows its flag")
     bnew.add_argument("--rule", required=True, help="one English sentence: when a question belongs in it")
     bnew.add_argument("--voice", help="English: the language variety of its own text in prompts, e.g. \"British English: …\" "
-                      f"(region: required; theme: its es text, default: {VOICE})")
+                      f"(region, base: required; base without es: its languages' text; theme: its es text, default: {VOICE})")
     tx = add("taxonomy", cmd_taxonomy, "opus", run=False)
     tx.add_argument("--bundle", required=True, help="a regional or theme bundle")
     tx.add_argument("--apply", metavar="PROPOSAL", help="write categories.json and names from this proposal.json "
@@ -1874,9 +1879,10 @@ def main():
     rp.add_argument("--player", help="with --simulate: strong|typical|both (default both)")
     rp.add_argument("--simulate", action="store_true",
                     help="games per new player until the first repeat on the engine (plan 62, plan 65, information only); exit 1 if a launch language misses D-75's target")
-    rp.add_argument("--locale", help="progress vs. targets for this locale (default es); with --simulate: "
+    rp.add_argument("--locale", help="progress vs. targets for this locale (default: the bundle's first language, base: es, "
+                    "which also lists every locale's drafting line); with --simulate: "
                     "comma-separated (default: every question locale, decision 235)")
-    rp.add_argument("--bundles", help="with --simulate: comma-separated (default: the locale's first base bundle, packs off)")
+    rp.add_argument("--bundles", help="with --simulate or --career: comma-separated (default: the locale's first base bundle, packs off)")
     rp.add_argument("--age-group", help="with --simulate: comma-separated (default: all four)")
     rp.add_argument("--mode", help="with --simulate: solo|rr-coop|rr-competitive|timed|all (default solo); "
                     "with --played: one mode (default every mode)")
@@ -1888,7 +1894,7 @@ def main():
     rp.add_argument("--games", type=int, help="with --career: games per seed (default 100)")
     rp.add_argument("--subjects", metavar="FILE", help="with --career: JSON category key → subject, other than the data's (default: each category's `subject` in categories.json; plan 194)")
     rp.add_argument("--cost", action="store_true",
-                    help="$ per run and per approved by run kind, projection per launch language and per regional and theme bundle "
+                    help="$ per run and per approved by run kind, projection per launch language and per bundle besides base "
                     "(plan 70, CT-3; plan 98)")
     rp.add_argument("--json", action="store_true", help="with --simulate, --cost, --review-time or --played: JSON on stdout")
     rp.add_argument("--played", action="store_true",

@@ -229,14 +229,14 @@ def media_first_problems(q):
 
 def source_locale_problems(q, bundle):
     """A source's locale (decision 235): known; base from batch-9 on en; a regional bundle's in its region's
-    language, the first of its languages (decision 110)."""
+    language, the first of its languages (decision 110); a theme's and another base bundle's en (decision 236)."""
     loc, out = q.get("locale"), []
     if loc not in translations.LOCALES:
         return [f"locale must be one of {', '.join(translations.LOCALES)}"]
     m = re.fullmatch(r"batch-(\d+)", q.get("batch") or "")
     if bundle and bundle["kind"] == "base" and m and int(m.group(1)) >= translations.ENGLISH_FROM and loc != "en":
         out.append(f"locale must be en: base drafts in English from batch-{translations.ENGLISH_FROM} on (plan 148)")
-    if bundle and bundle["kind"] in {"region", "theme"} and loc != (want := translations.draft_locale(bundle)):
+    if bundle and (bundle["kind"] in {"region", "theme"} or bundle["id"] != "base") and loc != (want := translations.draft_locale(bundle)):
         out.append(f"locale must be {want}, {bundle['id']}'s " + ("language (decision 110)" if bundle["kind"] == "region"
                                                                 else "draft language (decision 236)"))
     return out
@@ -363,14 +363,17 @@ def name_ok(v, bundle):
 
 
 def names_warnings(data):
-    """Missing names per locale, once a bundle lists it or it has a pool (a bare names file, e.g. zh, isn't enough)."""
-    out, cats = [], categories.load()
-    listing = {l for b in load_bundles() for l in b.get("languages") or []}
+    """Missing names per locale, once a bundle lists it or it has a pool (a bare names file, e.g. zh, isn't enough):
+    of the bundles that list it or have a pool file in it."""
+    out, bundles = [], load_bundles()
+    listing = {l for b in bundles for l in b.get("languages") or []}
     for l in translations.NAMED:
         if not (translations.exported(l, data) or l in listing):
             continue
         names = categories.load_names(l)
-        n = (len(set(categories.bundle_ids()) - set(names["bundles"]))
+        ids = {b["id"] for b in bundles if l in (b.get("languages") or []) or layout.POOL_FILE(l, b["id"]).exists()}
+        cats = [c for c in categories.load() if c["bundle"] in ids]
+        n = (len(ids - set(names["bundles"]))
              + len({categories.sub_key(c["bundle"], c["slug"]) for c in cats} - set(names["categories"]))
              + len({categories.sub_key(c["bundle"], s) for c in cats for s in c["subcategories"]} - set(names["subcategories"]))
              + len({g["id"] for g in load_age_groups()["groups"]} - set(names["age_groups"])))
@@ -509,7 +512,8 @@ def subject_problems():
 
 def slug_problems():
     """The slug rule (decision 259): keys are slugs, categories.json holds no names,
-    names.{en,es,de}.json name every category and subcategory of every bundle (questions: validate_pool's key check)."""
+    names files (categories.names_locales: en, es, de; a bundle with other languages en and its own) name every
+    category and subcategory of every bundle (questions: validate_pool's key check)."""
     errors = subject_problems()
     for b in categories.bundle_ids():
         cats = categories.load(b)
@@ -519,7 +523,7 @@ def slug_problems():
             errors.append(f"{rel}: not a slug (decision 259): {first_ids(bad)}")
         if named_ := [c["slug"] for c in cats if "name" in c]:
             errors.append(f"{rel}: names go in the names files, not categories.json (decision 259): {first_ids(named_)}")
-        for l in categories.NAMES_LOCALES:
+        for l in categories.names_locales(b):
             doc = load_json(layout.NAMES(l, b), {}) or {}
             missing = ([f"category {c['slug']}" for c in cats if c["slug"] not in (doc.get("categories") or {})]
                        + [f"subcategory {s}" for s in categories.subcategories(b) if s not in (doc.get("subcategories") or {})])
