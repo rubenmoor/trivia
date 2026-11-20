@@ -358,7 +358,7 @@ def apply_flags():
     known = {}
     done = []
     for qid, flag in pending.items():
-        locale = flag.get("locale") or "es"
+        locale = flag.get("locale") or reviews.LEGACY_LOCALE
         if reviews.needs_work(qid, locale, reviews.flag_feedback(flag), known) is None:
             print(f"Flag for unknown question {qid} ({locale}) dropped", file=sys.stderr)
             continue
