@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "note": "zh-Hans term -> exact zh-Hant text, kept out of OpenCC s2twp (qgen batch --translate zh-Hant). Longest term wins. Add what the vocabulary pass or the native read finds.",
+  "terms": {
+    "悉尼": "雪梨",
+    "布里斯班": "布里斯本"
+  }
+}

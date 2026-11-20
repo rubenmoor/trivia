@@ -6,6 +6,7 @@ from collections import Counter
 import layout  # paths (D-35)
 from layout import REPO as ROOT, SOURCE_POOL as POOL, WORK
 import progress  # authoring/tools/progress.py: the plain log (QG-18, task 1131)
+import hant  # authoring/tools/hant.py: zh-Hant by conversion (decision 762)
 import categories  # authoring/tools/categories.py: every bundle's categories (D-19, D-43)
 import media as media_tool  # authoring/tools/media.py: candidates, sheets, picks (`media` is the cache)
 import targets  # authoring/tools/targets.py: pool targets (D-53)
@@ -443,6 +444,41 @@ def cmd_translate_batch(args):
           f"  git commit -m \"{run}: {h['translated']} {'' if bundle == 'base' else bundle + ' '}questions into "
           f"{LANGUAGES[locale]}, {h['approved']} approved "
           f"(qgen batch --translate)\"")
+    return []
+
+
+def cmd_convert_batch(args):
+    """`qgen batch --translate zh-Hant [--bundle b]` (decision 762): no LLM, no run: convert the approved zh-Hans
+    translations (OpenCC s2twp + exceptions list) → export → validate. Rerunning converts what changed since."""
+    bundle = args.bundle
+    check_bundle(bundle)
+    pool = load_json(POOL)["questions"]
+    again = "qgen batch --translate zh-Hant" + (f" --bundle {bundle}" if bundle != "base" else "")
+    if args.ids or args.run:
+        sys.exit("zh-Hant is converted, not run: no --ids or --run")
+    if args.dry_run:
+        done, gone = hant.sync(bundle, pool, dry_run=True)
+        print(f"zh-Hant would convert {len(done)} {bundle} zh-Hans translations and withdraw {len(gone)}"
+              + (": " + ", ".join(done[:20]) + (" …" if len(done) > 20 else "") if done else "") + ".")
+        return []
+    result = {}
+
+    def convert(_):
+        result["done"], result["gone"] = hant.sync(bundle, pool)
+        print(f"  converted {len(result['done'])}, withdrew {len(result['gone'])} (zh-Hans no longer approved)")
+        return []
+
+    t0 = run_steps([("convert", convert, None), ("export", lambda a: cmd_export(a) or [], argparse.Namespace())], again)
+    n = len(result["done"]) + len(result["gone"])
+    print(f"\nDone: zh-Hant: {len(result['done'])} converted from zh-Hans, {len(result['gone'])} withdrawn "
+          f"(took {progress.duration(time.monotonic() - t0)}).")
+    if n:
+        files = [translations.path(hant.LOCALE), layout.POOL_FILE(hant.LOCALE), layout.POOL_FILE(hant.LOCALE, bundle), layout.BUNDLE_DATA, layout.DEMO_DATA]
+        print("Commit exactly this:\n  git add " + " ".join(f.relative_to(ROOT).as_posix() for f in files) + "\n"
+              f"  git commit -m \"zh-Hant: {len(result['done'])} {'' if bundle == 'base' else bundle + ' '}questions converted from zh-Hans "
+              f"(qgen batch --translate)\"")
+    else:
+        print("Nothing changed: no commit.")
     return []
 
 
