@@ -21,6 +21,7 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
   `for x in work media state .env.local; do ln -s "$PWD/$x" ../trivia-worktrees/<name>/$x; done` (from the main checkout)
 - `/work`, `/media`, `/state` in `.git/info/exclude` (the `.gitignore` `dir/` patterns miss symlinks; untracked = dirty tree, RUNBOOK step 1)
 - Before linking a new work tree: move its own `work/` runs into the main checkout's `work/`
+- Never move HEAD in a work tree (no `checkout`, `switch`, `reset` to another commit, not even `HEAD~0`): pm merges only its branch `pm/wt/<name>`, a detached HEAD's commits never reach `main` (decision 790); baseline at an older commit: scratch `git worktree add --detach <scratchpad dir> <commit>`, removed afterwards
 
 ## Rules
 - Ponytail plugin: off by default (`.claude/settings.json`), `lite` for pm workers on programming tasks (kind work, any work tree; `authoring/tools/pm-worker/claude`), always off in `qgen`'s writing calls; where on, it decides on tests; AGENTS.md wins everywhere else, e.g. deferred work and known limits go to `pm task add`, never `shortcut:` comments.
