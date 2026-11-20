@@ -29,6 +29,14 @@ class Convert(unittest.TestCase):
         self.assertEqual(hant.convert_all(["悉尼的视频", "悉尼歌剧院"], terms), ["雪梨的影片", "雪梨歌劇院"])
         self.assertEqual(hant.convert_all(["悉尼"], {}), ["悉尼"])  # without the list: unchanged by OpenCC
 
+    def test_shipped_list_fixes_s2twp(self):
+        terms = hant.exceptions()
+        cases = {"她住在海里": "她住在海裡", "在海里游": "在海裡游",  # 里/裡, and 游 not 遊
+                 "是模仿真金币的": "是模仿真金幣的",  # phrase overmatch: 仿真→模擬
+                 "印度教历": "印度教曆", "乔治·布尔": "喬治·布爾", "布尔值": "布林值"}
+        self.assertNotEqual(hant.convert_all(list(cases), {}), list(cases.values()))  # s2twp alone gets them wrong
+        self.assertEqual(hant.convert_all(list(cases), terms), list(cases.values()))
+
     def test_entry(self):
         q = src()
         t = hant.convert_entries([hans(q)], {"悉尼": "雪梨"})[0]

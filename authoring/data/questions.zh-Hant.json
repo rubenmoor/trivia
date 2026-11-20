@@ -14,9 +14,9 @@
       "hints": [
         "它慶祝春天的到來。",
         "除了彩粉，很多人還會用水槍和水球把對方澆個透。",
-        "它在印度教歷帕爾古納月的滿月舉行，通常在3月。"
+        "它在印度教曆帕爾古納月的滿月舉行，通常在3月。"
       ],
-      "description": "唯一一個把衣服弄髒不但不捱罵，反而是正經任務的派對。",
+      "description": "唯一一個把衣服弄髒不但不挨罵，反而是正經任務的派對。",
       "fun_fact": "侯麗節又叫“灑紅節”或“色彩節”，慶祝的是善戰勝惡。",
       "difficulty": 8,
       "status": "approved",
@@ -26,7 +26,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "7beedee88aca",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -54,7 +54,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "98737a98e4b5",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -82,7 +82,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "d9b9dc691fcb",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -96,7 +96,7 @@
         "美杜莎"
       ],
       "hints": [
-        "她住在海里，但她是傳說中的生物。",
+        "她住在海裡，但她是傳說中的生物。",
         "在故事裡，她用美妙的歌聲吸引水手。",
         "迪士尼動畫裡的愛麗兒就是其中之一。"
       ],
@@ -110,7 +110,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "2e4c6d94e84d",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -138,7 +138,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "7beba3b28881",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -166,7 +166,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "c06c6d990612",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -194,7 +194,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "2b47fab7ab3a",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -222,7 +222,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "66bf9f0873bd",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -250,7 +250,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "5a2cd1f91704",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -278,7 +278,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "b59a77b230ab",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -297,7 +297,7 @@
         "大熱天裡，冰淇淋也會這樣。"
       ],
       "description": "唯一一種能吃的海盜寶藏，吃完還不用去看牙醫……嗯，差不多吧。",
-      "fun_fact": "巧克力金幣外面那層金色錫紙是模模擬金幣的，在很多國家，人們會在聖誕節把它當作禮物送人。",
+      "fun_fact": "巧克力金幣外面那層金色錫紙是模仿真金幣的，在很多國家，人們會在聖誕節把它當作禮物送人。",
       "difficulty": 1,
       "status": "approved",
       "batch": "conv-zh-Hant",
@@ -306,7 +306,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "620e1b047d73",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -334,7 +334,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "f5a091a1db71",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -362,7 +362,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "ab33a48d8f3d",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -390,7 +390,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "618d24efc564",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -418,7 +418,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "2eee5c792d68",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -446,7 +446,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "dc486cba81ba",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -474,7 +474,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "46ac581ddf75",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -493,7 +493,7 @@
         "全世界成千上萬的生物實驗室都在養它。"
       ],
       "description": "一條穿著條紋睡衣、日程卻排得滿滿的魚。",
-      "fun_fact": "會發光的觀賞魚 GloFish（熒光魚），最初就是轉入了水母或珊瑚基因的斑馬魚。",
+      "fun_fact": "會發光的觀賞魚 GloFish（螢光魚），最初就是轉入了水母或珊瑚基因的斑馬魚。",
       "difficulty": 12,
       "status": "approved",
       "batch": "conv-zh-Hant",
@@ -502,7 +502,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "9d1fbbcecbcb",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -530,7 +530,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "e7830c971052",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -558,7 +558,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "a134d198aba5",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -586,7 +586,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "f28feb403a86",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -614,7 +614,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "faf802e8fa6a",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -642,7 +642,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "554d63f9e0bf",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -670,7 +670,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "0efafd2e1750",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -698,7 +698,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "5641aa9e20f1",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -726,7 +726,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "b32a53572402",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -754,7 +754,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "a935d74f0e46",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -769,7 +769,7 @@
       ],
       "hints": [
         "它比任何人都活得久，而且久得多。",
-        "如今在海里遊的一些格陵蘭睡鯊，可能在莫札特寫曲子的時候就已經出生了。",
+        "如今在海裡游的一些格陵蘭睡鯊，可能在莫札特寫曲子的時候就已經出生了。",
         "有好幾個世紀，但還不到幾千年。"
       ],
       "description": "這種鯊魚慢得出奇，連樹懶在它旁邊都顯得急匆匆的。",
@@ -782,7 +782,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "788409f19fa7",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -810,7 +810,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "b93d4a0f26dc",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -838,7 +838,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "28a840c04de6",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -866,7 +866,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "4650731aeb17",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -894,7 +894,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "b5db692eb2da",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -922,7 +922,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "a25b0345ca3a",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -950,7 +950,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "30c8a14bfd01",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -978,7 +978,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "b58d364d7208",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -1006,7 +1006,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "0b9066063687",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -1034,14 +1034,14 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "f0a67594a1a3",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
     {
       "id": "q-21603",
       "question": "哪位19世紀的英國數學家創立了一種“非真即假”的代數，奠定了今天計算機的基礎？",
-      "answer": "喬治·布林",
+      "answer": "喬治·布爾",
       "wrong_answers": [
         "艾倫·圖靈",
         "查爾斯·巴貝奇",
@@ -1053,7 +1053,7 @@
         "程式設計師每天都要敲他的英文姓氏，只是縮成了四個字母。"
       ],
       "description": "有人把整個世界簡化成了“是”或“否”，你的手機至今還在感謝他。",
-      "fun_fact": "布林幾乎完全靠自學成才：他很小就離開了學校，一邊當老師一邊自學數學。",
+      "fun_fact": "布爾幾乎完全靠自學成才：他很小就離開了學校，一邊當老師一邊自學數學。",
       "difficulty": 13,
       "status": "approved",
       "batch": "conv-zh-Hant",
@@ -1062,7 +1062,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "d97913898351",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -1090,7 +1090,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "b17b812867c9",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -1118,7 +1118,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "d910ad7d02e3",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -1146,7 +1146,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "52baef2448f2",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -1174,7 +1174,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "4e1423cf33d3",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -1202,7 +1202,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "254e5ade054b",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -1230,7 +1230,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "6402a6595b1a",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -1258,7 +1258,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "79c55c66f31d",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -1286,7 +1286,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "21f02cdf8f76",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -1314,7 +1314,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "9346aa4d8d58",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -1342,7 +1342,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "36fe83476aca",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -1370,7 +1370,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "cd774d8981a7",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     },
@@ -1398,7 +1398,7 @@
       "converted_from": {
         "locale": "zh-Hans",
         "text": "d621c431aa10",
-        "rules": "8b867b33aaea"
+        "rules": "0741944e1e34"
       },
       "converted_on": "2026-11-20"
     }
