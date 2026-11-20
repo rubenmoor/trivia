@@ -221,6 +221,8 @@ export interface Game {
       shown: boolean;
       deadline: number | null; claim: { seat: number; deadline: number; /** ms of the question's clock left at the claim */ question_left: number } | null; paused: boolean;
       hints_shown: number | null; all_at_risk: boolean;
+      /** The round before this one had no answer at all: every seat in lost a heart. */
+      idle_round: boolean;
       /** The clocks in ms (the game's pace). */
       question_ms: number; hint_ms: number; claim_ms: number;
     };

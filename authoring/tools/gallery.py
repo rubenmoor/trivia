@@ -1146,7 +1146,7 @@ def timed(r):
     r.shot("timed-last-heart")
     timed_on(r, "timed-risk", 10)
     r.shot("timed-all-at-risk")
-    r.clock("timed-risk", 31)  # the time-out takes all three last hearts
+    r.clock("timed-risk", 31)  # the round end takes all three last hearts
     r.wait("main .result.wrong", 30000)
     r.settle(2.5)
     r.shot("timed-nobody-wins")

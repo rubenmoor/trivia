@@ -675,7 +675,7 @@ Template:
   - **Burns** (D-28 burning, D-75 simulation): ≈ N questions per round (N players) for up to 12 rounds, fewer after drop-outs; no joker burns.
   - Open detail (not a decision): after drop-outs, do questions per round follow the players still in?
 - Consequences: Plan 13 "Competitive timed", MD-8, MD-9 and plan 14 section 3, IN-6 (claim action, per-player claim keys on the shared keyboard) follow this entry; plan 16 burns per mode updated. D-75's target (5000 per language) unchanged.
-- Supersedes / related: D-77 (timed part), D-75 (timed burns), pm decision 23; unclaimed time-out, round-end lives and «at risk» superseded by `decision 773: Timed mode: an unclaimed time-out costs a heart only to the players who answered nothing in the round` (which supersedes decision 772)
+- Supersedes / related: D-77 (timed part), D-75 (timed burns), pm decision 23; unclaimed time-out, round-end lives and «at risk» superseded by `decision 773: Timed mode: an unclaimed time-out costs a heart only to the players who answered nothing in the round` (which supersedes decision 772); both undone by the developer's rule in task 2411 (a heart is lost only at a round's end, by a player with no answer; all players when nobody answered, pulsing red)
 
 ## D-81: Translated questions: one file per locale, derived staleness, names files
 - Date: 2026-10-12

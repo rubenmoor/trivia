@@ -332,8 +332,6 @@
   });
   /** The seat that answered, once revealed: ✓ or out on the strip. */
   const answered = $derived(held && revealed && held.last.seat !== undefined ? held.last : null);
-  /** An unclaimed time-out, once revealed: seats still in without a correct answer this round lose a heart (decision 773). */
-  const timeUp = $derived(!!held && revealed && held.last.unclaimed === true);
 </script>
 
 <div class="timed-screen" bind:this={screenEl}>
@@ -391,7 +389,7 @@
   {/if}
 
   {#if ticking || atRisk}
-    <div class="frame" class:fast={ticking} aria-hidden="true"></div>
+    <div class="red-frame" class:fast={ticking} aria-hidden="true"></div>
   {/if}
 
   {#if timedOf(game).paused}
@@ -400,14 +398,13 @@
 
   <div class="strip">
     {#each session.seats as s, i (i)}
-      {@const lost = timeUp && s.status === "playing" && !s.correct_this_round ? 1 : 0}
-      {@const out = s.status !== "playing" || (answered?.seat === i && !answered.correct) || (lost > 0 && (s.lives ?? LIVES) <= 1)}
+      {@const out = s.status !== "playing" || (answered?.seat === i && !answered.correct)}
       {@const ok = s.correct_this_round || (answered?.seat === i && answered.correct)}
       {@const dropped = answered?.seat === i && !answered.correct}
       {@const label = claimLabel(i)}
       <div class="seat glass-light" class:out class:dim={claim !== null && claim.seat !== i}>
         <SeatTag {session} seat={i} small struck={out} />
-        <Hearts lives={dropped ? 0 : (s.lives ?? LIVES) - lost} cracked={dropped ? (s.lives ?? LIVES) : lost} {out} pulse={pulseOf(s)} small />
+        <Hearts lives={dropped ? 0 : (s.lives ?? LIVES)} cracked={dropped ? (s.lives ?? LIVES) : 0} {out} pulse={pulseOf(s)} small />
         {#if ok}
           <span class="ok"><Icon name="check" /></span>
         {:else if !out && label}
@@ -486,32 +483,6 @@
     gap: calc(1.2 * var(--u));
     padding: calc(0.8 * var(--u)) calc(1.6 * var(--u));
     animation: arrive 0.35s var(--spring) backwards;
-  }
-  .frame { /* PLACEHOLDER(1453): look */
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    box-shadow: inset 0 0 calc(6 * var(--u)) calc(1.2 * var(--u)) var(--coral);
-    animation: frame 1.8s ease-in-out infinite;
-  }
-  .frame.fast {
-    animation-duration: 1s;
-  }
-  @keyframes frame {
-    0%,
-    100% {
-      opacity: 0.25;
-    }
-    50% {
-      opacity: 0.9;
-    }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .frame {
-      animation: none;
-      opacity: 0.6;
-    }
   }
   .veil {
     position: absolute;

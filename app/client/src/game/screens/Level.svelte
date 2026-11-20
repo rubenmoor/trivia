@@ -75,6 +75,7 @@
 
 {#if timed && session}
 <section class="screen round">
+  {#if timed.idle_round && before}<div class="red-frame dramatic" aria-hidden="true"></div>{/if}
   {#if timed.sudden_death}
     <h1 class="title big sudden">{t("screen.timed.suddenDeath")}</h1>
     {#if timed.repeat > 0}<p class="kicker">{t("screen.timed.again", { n: timed.repeat + 1 })}</p>{/if}

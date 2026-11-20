@@ -184,7 +184,7 @@ test("timed: claims, a claim run out, an unclaimed question, the round end's liv
   const s = row(save).state;
   assert.deepEqual([s.phase, s.settings.cards, s.settings.customized, s.settings.jokers.hint, row(save).turn], ["question", 0, false, 0, undefined]);
   assert.deepEqual(row(save).seats!.map((x) => x.lives), [3, 3, 3]);
-  assert.deepEqual(flow(save), { round_size: 3, round_done: 0, round_correct: [], round_lost: [], shown_at: T0, claim: null, paused_at: null, repeat: 0 });
+  assert.deepEqual(flow(save), { round_size: 3, round_done: 0, round_correct: [], shown_at: T0, claim: null, paused_at: null, repeat: 0 });
 
   assert.equal(timed(save, "answer", { seat: 0, index: 0 }, T0 + 1000).error, "claim_first");
   const early = timed(save, "expire", {}, T0 + game.QUESTION_MS);
@@ -208,24 +208,27 @@ test("timed: claims, a claim run out, an unclaimed question, the round end's liv
   save = timed(save, "claim", { seat: 2 }, flow(save).shown_at! + game.QUESTION_MS + 1).save; // too late: settled, no claim
   assert.equal(row(save).state.history.at(-1)!.unclaimed, true);
   assert.equal(row(save).state.history.at(-1)!.correct, undefined);
-  // the unclaimed time-out: only Cami (no answer yet) loses a life, Ana answered (decision 773); no second one at the end; round 2
-  // has the two seats still in (decision 276)
+  // the round ends: only Cami (no answer) loses a life, Ana answered, Beto is out; round 2 has the two seats still in (decision 276)
   assert.deepEqual(row(save).seats!.map((x) => x.lives), [3, 3, 2]);
   assert.deepEqual([row(save).state.level, flow(save).round_size, flow(save).round_done, flow(save).claim], [2, 2, 0, null]);
   assert.equal(save.seen.filter((x) => x.game_id === row(save).id).length, 3);
   assert.equal(new Set(row(save).state.offered).size, 4);
 });
 
-test("timed: an unclaimed time-out costs a life only seats without an answer this round (task 2409)", () => {
+test("timed: a time-out costs nothing; the round end takes a life from every seat without an answer (task 2411)", () => {
   let save = startTimed(["Ana", "Beto"]);
   const expire = (s: SaveData) => timed(s, "expire", {}, flow(s).shown_at! + game.QUESTION_MS + 1).save;
   save = claimAnswer(save, 0, true, T0 + 1000); // Ana answered; Beto did not
   save = expire(save);
   assert.deepEqual(row(save).seats!.map((x) => x.lives), [3, 2]);
-  assert.deepEqual(flow(save).round_lost ?? [], []); // the round ended: reset
+  assert.equal(flow(save).idle_round, false);
   assert.deepEqual([row(save).state.level, flow(save).round_size], [2, 2]);
-  save = expire(expire(save)); // round 2 idle: a life each per time-out, none more at the round end
-  assert.deepEqual(row(save).seats!.map((x) => x.lives), [1, 0].map((n, i) => (i ? 0 : n)));
+  save = expire(save); // round 2: a time-out alone costs nothing
+  assert.deepEqual(row(save).seats!.map((x) => x.lives), [3, 2]);
+  save = expire(save); // nobody answered in round 2: everyone loses a life, flagged for the drama
+  assert.deepEqual(row(save).seats!.map((x) => x.lives), [2, 1]);
+  assert.equal(flow(save).idle_round, true);
+  assert.equal(game.view(save, data, { ...io(1), ms: flow(save).shown_at! })!.session!.timed!.idle_round, true);
 });
 
 test("timed: a correct answer in round 12 wins", () => {
@@ -255,7 +258,7 @@ test("timed: round 12 without a correct answer repeats, everyone out means nobod
   for (let round = 1; round <= 11; round++) for (const seat of [0, 1]) save = claimAnswer(save, seat, true, ms += 2000);
   save = idleRound(save);
   assert.deepEqual([row(save).state.level, flow(save).repeat, flow(save).round_size], [12, 1, 2]);
-  assert.deepEqual(row(save).seats!.map((x) => x.lives), [1, 1]); // a life per unclaimed time-out, none more at the end
+  assert.deepEqual(row(save).seats!.map((x) => x.lives), [2, 2]); // an idle round: a life each
   assert.equal(game.view(save, data, { ...io(1), ms: flow(save).shown_at! })!.session!.timed!.all_at_risk, false); // not on the last question
   save = idleRound(idleRound(save));
   assert.deepEqual([row(save).result, row(save).state.phase], ["lost", "lost"]);
