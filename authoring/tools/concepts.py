@@ -29,12 +29,26 @@ def slug(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
 
 
+STOP_WORDS = {"el", "la", "los", "las", "un", "una", "de", "del", "der", "die", "das"}  # es, de; Latin text only
+
+
 def key(name):
-    """Normalized concept name: what has to be unique across subcategories (OQ-40)."""
-    text = unicodedata.normalize("NFKD", name.replace("ß", "ss")).encode("ascii", "ignore").decode().lower()  # ß: de
-    words = [w for w in re.sub(r"[^a-z0-9 ]+", " ", text).split()
-             if w not in {"el", "la", "los", "las", "un", "una", "de", "del", "der", "die", "das"}]
-    return " ".join(words)
+    """Normalized name: what has to be unique across subcategories (OQ-40). Unicode: NFKD, accents folded,
+    casefold, letters and digits of any script kept (Han too); es/de stop words dropped."""
+    text = unicodedata.normalize("NFKD", name.replace("ß", "ss"))  # ß: de
+    text = "".join(c for i, c in enumerate(text) if not (unicodedata.category(c) == "Mn" and text[i - 1].isascii()))  # Latin accents only
+    text = unicodedata.normalize("NFKC", text).casefold()
+    # ASCII punctuation separates words; other punctuation (’ – «) vanishes, as before
+    words = "".join(c if c.isalnum() else " " if c.isascii() else "" for c in text).split()
+    return " ".join(w for w in words if w not in STOP_WORDS)
+
+
+CJK = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]+")
+
+
+def cjk_bigrams(text):
+    """CJK runs as space-separated character bigrams (a lone character stays): no word boundaries to split on."""
+    return CJK.sub(lambda m: " ".join(m[0][i:i + 2] for i in range(max(len(m[0]) - 1, 1))), text)
 
 
 # --- axes ---------------------------------------------------------------------
