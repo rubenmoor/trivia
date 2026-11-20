@@ -127,6 +127,16 @@ class BaseBundle(unittest.TestCase):
             self.assertIn(key, system)
         self.assertNotIn("{language}", system)
 
+    def test_base_sizing_real_path(self):
+        """chinese-base: ≈ 30 per subcategory, ≈ 200 subcategories (plan 231, decision 730), as the call renders it."""
+        b = qgen.bundle_row("chinese-base")
+        total = taxonomy.targets.load_targets("chinese-base")["total"]
+        self.assertEqual(taxonomy.base_per_subcategory(), 30)
+        system, user = taxonomy.base_prompts(b, total)
+        self.assertIn("About 30 approved questions per subcategory, so about 200 subcategories", system)
+        self.assertIn(f"{total} approved questions: ≈ 200 subcategories of ≈ 30.", user)
+        self.assertNotIn("{", system.replace("{}", ""))
+
 
 if __name__ == "__main__":
     unittest.main()

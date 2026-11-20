@@ -313,13 +313,25 @@ def base_user(b, total, per, research, bases, approved):
     return "\n\n".join(parts)
 
 
+def base_per_subcategory():
+    """Approved per subcategory a further base bundle is sized for: base's target / base's subcategories (plan 231: 6000 / 198 ≈ 30)."""
+    return round(targets.load_targets("base")["total"] / len(categories.subcategories("base")))
+
+
+def base_prompts(b, total):
+    """(system, user) of a further base bundle's taxonomy call, rendered without a call."""
+    per = base_per_subcategory()
+    system = (PROMPTS / "taxonomy-base.md").read_text(encoding="utf-8").replace("{per_sub}", str(per)).replace(
+        "{subs}", str(round(total / per))).replace("{subjects}", subjects_text())
+    research = layout.BUNDLE_SOURCES / b["id"] / "research.md"
+    user = base_user(b, total, per, research.read_text(encoding="utf-8") if research.exists() else "",
+                     categories.load("base"), base_approved())
+    return system, user
+
+
 def base_taxonomy(b, total, d, args):
     """The proposal run of a further base bundle (plan 231): one call, proposal.{json,md} in work/taxonomy/<id>/."""
-    system = (PROMPTS / "taxonomy-base.md").read_text(encoding="utf-8").replace("{per_sub}", str(PER_SUBCATEGORY)).replace(
-        "{subs}", str(round(total / PER_SUBCATEGORY))).replace("{subjects}", subjects_text())
-    research = layout.BUNDLE_SOURCES / b["id"] / "research.md"
-    user = base_user(b, total, PER_SUBCATEGORY, research.read_text(encoding="utf-8") if research.exists() else "",
-                     categories.load("base"), base_approved())
+    system, user = base_prompts(b, total)
     out = claude(system, user, BASE_BUNDLE_TAXONOMY_SCHEMA, args.model, d)
     for c in out["categories"]:
         c["slug"] = slug(c["slug"])
