@@ -1,6 +1,6 @@
 # Style guide: `zh-Hans` (Simplified Chinese)
 
-How the UI talks in `zh-Hans.ts`: plain, friendly mainland Chinese for a family at the TV; playful in cheers and joker names, flat in menus and notices. Drafted by Claude from `en.ts` (`es.ts` for meaning), no native check yet (plan 141's volunteer, decision 220); the joker names are pending decision 775. Read this before changing a string in `zh-Hans.ts`; new bad patterns found in review go into the last section. `zh-Hant.md` derives from this guide (decision 762).
+How the UI talks in `zh-Hans.ts`: plain, friendly mainland Chinese for a family at the TV; playful in cheers and joker names, flat in menus and notices. Drafted by Claude from `en.ts` (`es.ts` for meaning), no native check yet (plan 141's volunteer, decision 220); the joker names are final (decision 775: Joker names for the Chinese UI (zh-Hans, zh-Hant)?). Read this before changing a string in `zh-Hans.ts`; new bad patterns found in review go into the last section. `zh-Hant.md` derives from this guide (decision 762).
 
 ## Glossary
 Fixed terms; use them as written, never a synonym. Steam terms as Steam writes them in `schinese`.
