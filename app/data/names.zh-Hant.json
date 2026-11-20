@@ -7,6 +7,15 @@
       "description": "以中國為中心的題目：中國家庭熟悉的歷史、學校知識、社會與文化。"
     }
   },
+  "subjects": {
+    "history": "歷史與人文",
+    "geography": "地理與社會",
+    "nature": "自然科學",
+    "science": "科學與技術",
+    "arts": "文學與藝術",
+    "media": "媒體與影視",
+    "sport": "體育與遊戲"
+  },
   "age_groups": {
     "kids": "簡單",
     "young_teens": "普通",

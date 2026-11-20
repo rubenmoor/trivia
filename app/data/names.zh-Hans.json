@@ -7,6 +7,15 @@
       "description": "以中国为中心的题目：中国家庭熟悉的历史、学校知识、社会与文化。"
     }
   },
+  "subjects": {
+    "history": "历史与人文",
+    "geography": "地理与社会",
+    "nature": "自然科学",
+    "science": "科学与技术",
+    "arts": "文学与艺术",
+    "media": "媒体与影视",
+    "sport": "体育与游戏"
+  },
   "age_groups": {
     "kids": "简单",
     "young_teens": "普通",
