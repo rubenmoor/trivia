@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Store screenshots (plan 88, PUB-8, decision 79): 7 per language at 1920×1080 (5 without its question pool),
 // the shell under Xvfb, raw CDP, a demo save per shot.
-// Usage (dev shell): node authoring/store/screenshots.mjs [--lang en,es,es-ES,de] [--visible]
+// Usage (dev shell): node authoring/store/screenshots.mjs [--lang en,es,es-ES,de,zh-Hans,zh-Hant] [--visible]
 // Needs app/client/dist (`npm run build`) and the media cache (`trivia-media sync --status approved`).
 import { existsSync } from "node:fs";
 import { mkdir, rm, writeFile } from "node:fs/promises";
@@ -9,8 +9,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { cacheName } from "../../app/desktop/resolve.mjs";
 import { launchShell, pageHelpers, sleep, visibleEl } from "../tools/cdp.mjs";
-import { baseSave, gameAt, latestState } from "../tools/demo_saves.mjs";
-import { loadData } from "../tools/engine_data.mjs";
+import { catchUp, emptyCareer } from "../../app/client/src/engine/career.ts";
+import { baseSave, earned, gameAt, latestState, SOME } from "../tools/demo_saves.mjs";
+import { loadData, poolLocale } from "../tools/engine_data.mjs";
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const OUT = path.join(REPO, "authoring", "store", "out", "screenshots");
@@ -18,8 +19,12 @@ const MEDIA = process.env.TRIVIA_MEDIA || path.join(REPO, "media"); // as the sh
 const W = 1920;
 const H = 1080;
 
-// Gameplay shots' questions (es pool): approved, short, an image each.
+// Gameplay shots' questions: approved, short, an image each; ids shared by the es, en and de pools. zh: its own
+// `chinese-base` ids under its tag once pool.<zh>.json exists (plan 144, sensitivity rule: no maps, flags, politics);
+// until then its question shots skip.
 const Q = { locked: "q-0030", joker: "q-0019" };
+const ZH_Q = {};
+const questionsFor = (locale) => (locale.startsWith("zh") ? ZH_Q[locale] : Q);
 
 const args = process.argv.slice(2);
 const opt = (name) => {
@@ -71,7 +76,7 @@ async function onQuestion(saveDir, save) {
 const answerEl = (i) => `.answers .answer:nth-child(${i + 1})`;
 
 /** Gameplay (decision 79): a locked-in answer, Francotirador aiming. Needs the UI language's own questions. */
-async function gameplay(lang, saveDir, data, ui) {
+async function gameplay(lang, saveDir, data, ui, Q) {
   const lockSave = gameAt(data, ui, 5, Q.locked);
   await onQuestion(saveDir, lockSave);
   await sleep(2500);
@@ -113,7 +118,26 @@ async function toChoice(saveDir, data, ui, mode, shot) {
 
 const focus = (sel) => evaluate(`document.querySelector(${JSON.stringify(sel)}).focus()`);
 
-/** The 5 informative shots (decision 79): modes, Customize game, configure screen, joker presets, bundles (the last screen before the game). */
+/** zh's 5th shot: the first player's badge page (gallery's `career` scene). */
+async function career(lang, saveDir, data, ui) {
+  const save = catchUp(baseSave(ui, data.locale), data);
+  save.players[0].career = { ...emptyCareer(), score: 312, ranks: [5, 6, 6], badges: earned(SOME) };
+  await load(saveDir, save);
+  await click("button.candy");
+  await waitFor(visibleEl('[data-focus-id="kind-single"]'), "mode screen");
+  await click('[data-focus-id="kind-single"]');
+  await click('[data-focus-id="next"]');
+  await waitFor(visibleEl('[data-focus-id="mode-solo"]'), "mode screen, single");
+  await click('[data-focus-id="next"]');
+  await waitFor(visibleEl(".player .badges"), "player screen");
+  await click(".player .badges");
+  await waitFor(visibleEl(".career"), "career page");
+  await sleep(1500);
+  await shoot(lang, "career");
+}
+
+/** The 5 informative shots (decision 79): modes, Customize game, configure screen, joker presets, bundles (the last screen before the game).
+ *  zh offers only chinese-base, so a bundles shot would show one tile: the badge page instead. */
 async function menus(lang, saveDir, data, ui) {
   await toChoice(saveDir, data, ui, "solo", { lang, name: "modes" });
   await click('[data-focus-id="group-young_teens"]');
@@ -133,6 +157,10 @@ async function menus(lang, saveDir, data, ui) {
   await sleep(1000);
   await shoot(lang, "joker-presets");
 
+  if (ui.startsWith("zh")) {
+    await career(lang, saveDir, data, ui);
+    return;
+  }
   await click('[data-focus-id="next"]');
   await waitFor(visibleEl('[data-focus-id="start"]'), "bundles screen");
   const pack = '[data-focus-id="bundle-colombia"]';
@@ -168,9 +196,10 @@ async function main() {
       console.log(ui);
       await rm(path.join(OUT, ui), { recursive: true, force: true });
       await mkdir(path.join(OUT, ui), { recursive: true });
-      const own = loadData(ui.split("-")[0]);
+      const locale = poolLocale(ui);
+      const own = loadData(locale);
       const data = own ?? es; // menu shots on the es pool show no question text
-      if (own) await gameplay(ui, tmp, data, ui);
+      if (own && questionsFor(locale)) await gameplay(ui, tmp, data, ui, questionsFor(locale));
       else followUp.push(ui);
       await menus(ui, tmp, data, ui);
     }

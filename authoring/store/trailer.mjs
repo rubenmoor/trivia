@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Store trailer (plan 88, PUB-8, decisions 79/80): a scripted game in the shell under Xvfb, its audio
 // through a private PulseAudio null sink, ffmpeg grabs both; the takes are cut to ≈20 s per language.
-// Usage (dev shell): trivia-trailer [--lang es,es-ES,en,de] [--keep-raw]
+// Usage (dev shell): trivia-trailer [--lang es,es-ES,en,de,zh-Hans,zh-Hant] [--keep-raw]
 // Needs app/client/dist (`npm run build`) and the media cache (`trivia-media sync --status approved`).
 import { spawn } from "node:child_process";
 import { existsSync } from "node:fs";
@@ -12,7 +12,7 @@ import { fileURLToPath } from "node:url";
 import { cacheName } from "../../app/desktop/resolve.mjs";
 import { launchShell, pageHelpers, sleep, visibleEl } from "../tools/cdp.mjs";
 import { gameAt, latestState, resetSeed } from "../tools/demo_saves.mjs";
-import { loadData } from "../tools/engine_data.mjs";
+import { loadData, poolLocale } from "../tools/engine_data.mjs";
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const OUT = path.join(REPO, "authoring", "store", "out", "trailer");
@@ -22,6 +22,7 @@ const H = 1080;
 const FPS = 30;
 
 // Per question pool: q1 answered right after Soplo, q2 Francotirador then a wrong answer. Short, an image each.
+// zh: `chinese-base` ids go here with the zh pool (plan 144); until then its trailer refuses.
 const Q = { es: { q1: "q-0030", q2: "q-0019" } };
 const LEVEL = 4; // q1's level; q2 one up
 
@@ -207,7 +208,7 @@ async function main() {
   if (!existsSync(path.join(REPO, "app", "client", "dist", "index.html"))) throw new Error("client not built: npm run build");
   const plans = [];
   for (const ui of LANGS) {
-    const locale = ui.split("-")[0];
+    const locale = poolLocale(ui);
     const data = loadData(locale);
     if (!data || !Q[locale]) {
       console.error(`${ui}: no pool.${locale}.json yet: its trailer waits for the question pool (decision 80)`);
