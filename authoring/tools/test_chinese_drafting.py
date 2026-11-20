@@ -212,6 +212,9 @@ class Prompts(Fixture):
         slots = json.loads(lang.split("## Slots\n", 1)[1].split("\n\n", 1)[0])
         self.assertEqual(len(slots), batches.PILOT_SLOTS)
         self.assertIn("Year of the Dog", users[categories.display(B, NEW, "en")])  # neighbour's copy in the avoid list
+        system = self.calls[0][0]  # decision 789: house-style's format rule for Chinese words
+        self.assertIn('画蛇添足 (huà shé tiān zú, "drawing legs on a snake")', system)
+        self.assertIn("it asks their origin story, author, dynasty", system)
 
     def test_rule_reaches_judging_calls_only_for_further_base(self):
         self.assertIn(qgen.bundle_row(B)["rule"], qgen.rule_section(B, "en"))

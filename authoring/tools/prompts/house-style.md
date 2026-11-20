@@ -40,6 +40,7 @@ A `base` question is played in every language of the game (English, Spanish for 
 - No question that lives on one language: no wordplay, pun, rhyme or sound joke, and no question about one language's spelling, plurals, letters or words, unless it works the same in every language.
 - A regional bundle (e.g. `colombia`) follows its own rule (under "Bundle") instead.
 - `chinese-base` does not follow this section: it is played by Chinese families (zh-Hans, zh-Hant, en), may rely on Chinese school and everyday knowledge, and has no Euro- or US-centred focus. Wordplay and one-language questions stay out unless they work in all its languages (characters, pinyin and tones are fine in zh).
+- `chinese-base` in English: a Chinese word, idiom, poem, character or title in the answer or an option is written as characters, pinyin and a short English gloss: 画蛇添足 (huà shé tiān zú, "drawing legs on a snake"). The question never asks what such words state (the gloss, or the Chinese text after translation, gives it away): it asks their origin story, author, dynasty, place, season or the character's picture origin.
 
 ## No giveaways
 Nothing may give the answer away: not the description, not the question text, not hints 1 and 2, not the media (an illustrative image is shown sharp, so it is the riskiest). Don't name things in the question that make it trivial (naming EVE and Pixar in a WALL·E question; a carnival's own slogan in a question about its city; a first clue that already identifies the answer). Hint 3 may come close.
