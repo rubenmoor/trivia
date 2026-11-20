@@ -34,5 +34,9 @@
   "fit-1": {
     "date": "2026-11-20",
     "note": "Pilot reviewed by the developer (decision 788), flips applied"
+  },
+  "tr-zh-Hans-1": {
+    "date": "2026-11-20",
+    "note": "pilot looked at by worker: 50/50 approved, 0 needs_work; audit agreement 88% from 6 'media essential, no file' audit findings on translations (media sits on the source; developer to confirm)"
   }
 }
