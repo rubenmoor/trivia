@@ -45,7 +45,7 @@ Suggested order: M5 keeps running alongside everything. M7 is the biggest; M8 an
 Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-game-flow.md), [`04`](04-ui-tv-display.md), [`05`](05-gamemaster-controls.md), [`06`](06-images.md), [`07`](07-question-generation.md), [`08`](08-review-tool.md), [`09`](09-jokers.md), [`10`](10-visual-design.md), [`19`](19-repo-layout.md). Leftovers:
 
 - [x] UI-7 follow-up: preload the next screen's media before fading in *2026-10-12, plan 31* — [`04`](04-ui-tv-display.md)
-- [~] UI-10 Sound assets: the music loops, whooshes, pops and joker sounds are still synthesized (fine for now, developer 2026-10-06); Kenney.nl CC0 packs are the next source to try — [`04`](04-ui-tv-display.md)
+- [~] UI-10 Sound assets: effects are recordings, joker sounds approved on the TV (decision 360); the music loops are still synthesized (soundtracks, plan 182) — [`04`](04-ui-tv-display.md)
 
 ### M5 — Enough content for game nights
 **Goal:** a pool large enough that each player gets several games, including joker use (D-27, D-28), with every approved question cached and illustrated.
