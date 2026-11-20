@@ -72,9 +72,9 @@ def slots_of(q):
 
 
 def kept_slots(run, q):
-    """A media-first question, in any run (batch, rework): `media`, the file it was built around (plan 203);
-    no search, research, sheet or new pick for it."""
-    return {"media"} if q.get("media_first") else set()
+    """A media-first question or a copy, in any run (batch, rework): `media`, the file it was built around (plan 203)
+    or shares with its source; no search, research, sheet or new pick for it."""
+    return {"media"} if copies.media_fixed(q) else set()
 
 
 def sheet_path(d, qid, slot):

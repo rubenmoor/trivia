@@ -1316,7 +1316,7 @@ def cmd_merge(args):
                     "id": f"q-{next_id:04d}", "status": "draft",
                     "difficulty": q["difficulty"], "description": q["description"], "question": q["question"],
                     "answer": q["answer"], "wrong_answers": q["wrong_answers"], "hints": q["hints"],
-                    "media": q["media"] if q.get("media_first") else media_tool.unpicked(q["media"]),  # fixed slot (plan 203)
+                    "media": q["media"] if copies.media_fixed(q) else media_tool.unpicked(q["media"]),  # fixed slot (plan 203)
                     "fun_fact": q["fun_fact"], "subcategory": q["subcategory"], "style": q.get("style"),
                     "concept": q.get("concept"), "axes": q.get("axes"),
                     "quality": {k: r.get(k) for k in [*RUBRIC, "difficulty_estimate", "notes"]},
@@ -1417,7 +1417,7 @@ def cmd_revise(args):
 def revise_in_pool(q, new, reason, today):
     """Write a revised question into pool question q; `revision.previous` keeps what changed
     (the review tool shows it). Returns the changed keys."""
-    new_media = q["media"] if q.get("media_first") else {**q["media"], **new["media"], "note": new["media"]["note"] or None}
+    new_media = q["media"] if copies.media_fixed(q) else {**q["media"], **new["media"], "note": new["media"]["note"] or None}
     media_changed = any(new_media[k] != q["media"][k] for k in ["type", "query"])
     if media_changed:
         new_media = media_tool.unpicked(new_media)
@@ -1478,7 +1478,7 @@ def apply_to_drafts(d, revisions, applied):
                 continue
             keys = [*QUESTION_FIELDS, "needs_media", "background_query"]
             moved.append({**q, **{k: new[k] for k in keys if k in new},
-                          "media": q["media"] if q.get("media_first") else {**new["media"], "note": new["media"]["note"] or None},
+                          "media": q["media"] if copies.media_fixed(q) else {**new["media"], "note": new["media"]["note"] or None},
                           "needs_fact_check": True, "revision_reason": rev["reason"]})
             c = checks.get(q["tmp_id"])
             if c and c["verdict"] == "confirmed" and all(new[k] == q[k] for k in FACT_FIELDS):

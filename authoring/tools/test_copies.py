@@ -90,3 +90,22 @@ class Rules(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class FixedMedia(unittest.TestCase):
+    def test_helper(self):
+        self.assertTrue(copies.media_fixed(q("q-1", copied_from="q-0")))
+        self.assertTrue(copies.media_fixed(q("q-1", media_first={"probe": "p"})))
+        self.assertFalse(copies.media_fixed(q("q-1")))
+
+    def test_kept_slots(self):
+        self.assertEqual(review_steps.kept_slots("batch-1", q("q-2", copied_from="q-1")), {"media"})
+        self.assertEqual(review_steps.kept_slots("batch-1", q("q-2")), set())
+
+    def test_revise_keeps_copy_media(self):
+        c = q("q-2", copied_from="q-1")
+        new = {k: c[k] for k in qgen.QUESTION_FIELDS} | {"needs_media": True, "background_query": None,
+               "media": {**c["media"], "type": "audio", "query": "other", "note": None}}
+        before = dict(c["media"])
+        qgen.revise_in_pool(c, new, "r", "2026-11-20")
+        self.assertEqual(c["media"], before)

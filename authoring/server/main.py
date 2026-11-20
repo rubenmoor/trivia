@@ -296,8 +296,15 @@ def find_question(qid):
     raise NoQuestion(qid)
 
 
+def refuse_copy(q, slot):
+    if slot == "media" and q.get("copied_from"):
+        raise ValueError(f"{q['id']} is a copy of {q['copied_from']}: its media file stays the source's")
+
+
 def pick_media(qid, index, slot):
-    target(find_question(qid), slot)
+    q = find_question(qid)
+    target(q, slot)
+    refuse_copy(q, slot)
     found = media.load_candidates(qid, slot)
     if not found or not 0 <= index < len(found["candidates"]):
         raise ValueError(f"no candidate {index + 1}")
@@ -309,7 +316,9 @@ def search_media(qid, query, slot, every=False):
     query = (query or "").strip()
     if not query:
         raise ValueError("empty search term")
-    target(find_question(qid), slot)
+    q = find_question(qid)
+    target(q, slot)
+    refuse_copy(q, slot)
     q = update_question(qid, lambda q: target(q, slot).update(query=query))
     media.fetch_for(q, slot, every)
     return q
