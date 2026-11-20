@@ -81,7 +81,7 @@
   const timed = $derived(session.timed!);
   const claim = $derived(held ? null : timedOf(game).claim);
   const question = $derived(held?.question ?? game.question);
-  const view: AnswerView = $derived({ struck: [], locked, snipe: false, target: null, hit: null, revealed, result: held && held.last.seat !== undefined && held.last.chosen === null ? null : (held?.last ?? null) });
+  const view: AnswerView = $derived({ struck: [], locked, snipe: false, target: null, hit: null, revealed, result: held && held.last.chosen === null ? null : (held?.last ?? null) }); // a time-out shows no answer
 
   /** Resolves once the media is ready (Game.svelte waits before the fade-in). */
   export function ready() {
@@ -332,6 +332,8 @@
   });
   /** The seat that answered, once revealed: ✓ or out on the strip. */
   const answered = $derived(held && revealed && held.last.seat !== undefined ? held.last : null);
+  /** An unclaimed time-out, once revealed: every seat in loses a heart. */
+  const timeUp = $derived(!!held && revealed && held.last.unclaimed === true);
 </script>
 
 <div class="timed-screen" bind:this={screenEl}>
@@ -398,13 +400,14 @@
 
   <div class="strip">
     {#each session.seats as s, i (i)}
-      {@const out = s.status !== "playing" || (answered?.seat === i && !answered.correct)}
+      {@const lost = timeUp && s.status === "playing" ? 1 : 0}
+      {@const out = s.status !== "playing" || (answered?.seat === i && !answered.correct) || (lost > 0 && (s.lives ?? LIVES) <= 1)}
       {@const ok = s.correct_this_round || (answered?.seat === i && answered.correct)}
       {@const dropped = answered?.seat === i && !answered.correct}
       {@const label = claimLabel(i)}
       <div class="seat glass-light" class:out class:dim={claim !== null && claim.seat !== i}>
         <SeatTag {session} seat={i} small struck={out} />
-        <Hearts lives={dropped ? 0 : (s.lives ?? LIVES)} cracked={dropped ? (s.lives ?? LIVES) : 0} {out} pulse={pulseOf(s)} small />
+        <Hearts lives={dropped ? 0 : (s.lives ?? LIVES) - lost} cracked={dropped ? (s.lives ?? LIVES) : lost} {out} pulse={pulseOf(s)} small />
         {#if ok}
           <span class="ok"><Icon name="check" /></span>
         {:else if !out && label}
