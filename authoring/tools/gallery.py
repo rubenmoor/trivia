@@ -1139,14 +1139,14 @@ def timed(r):
     r.clock("timed-q", 31)  # the client's expire settles it
     r.wait(".timed-screen .banner.result", 10000)
     r.shot("timed-time-up")
-    r.wait("main .screen.round", 10000)  # the time-out's cracked hearts, Max out
+    r.wait("main .screen.round", 10000)  # Sofía's cracked heart (no answer this round), Max out
     r.settle(1.2)
     r.shot("timed-round")
     timed_on(r, "timed-heart", 10)
     r.shot("timed-last-heart")
     timed_on(r, "timed-risk", 10)
     r.shot("timed-all-at-risk")
-    r.clock("timed-risk", 31)  # the time-out takes both last hearts
+    r.clock("timed-risk", 31)  # the time-out takes all three last hearts
     r.wait("main .result.wrong", 30000)
     r.settle(2.5)
     r.shot("timed-nobody-wins")
