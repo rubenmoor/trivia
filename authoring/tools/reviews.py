@@ -133,15 +133,19 @@ def needs_work(qid, locale, feedback, known, dry_run=False):
     return new
 
 
+# Flags saved before the game wrote a locale were all es.
+LEGACY_LOCALE = "es"
+
+
 def _origin(parts, locale, note):
-    """«(a, b, locale)» and the note's tail, the locale shown unless it is es."""
-    where = ", ".join([*filter(None, parts), *([locale] if locale != "es" else [])])
+    """«(a, b, locale)» and the note's tail, the locale shown unless it is the legacy es."""
+    where = ", ".join([*filter(None, parts), *([locale] if locale != LEGACY_LOCALE else [])])
     return f"({where}){f': {note}' if note else '.'}"
 
 
 def flag_feedback(flag):
     """A flag from the game as feedback; `flag`: flagged_on, player?, note?, locale?, shown? (GM-5)."""
-    head = _origin([flag.get("player"), flag["flagged_on"][:10]], flag.get("locale") or "es", flag.get("note"))
+    head = _origin([flag.get("player"), flag["flagged_on"][:10]], flag.get("locale") or LEGACY_LOCALE, flag.get("note"))
     shown = flag.get("shown")
     seen = (f" · Vista: «{shown['question']}» Respuesta: «{shown['answer']}»; otras: "
             f"{' / '.join(f'«{w}»' for w in shown['wrong_answers'])}." if shown else "")
@@ -157,7 +161,8 @@ def report_feedback(r):
 
 
 # Report text (decision 142): header, then labelled lines in the UI language.
-# Copies of app/client/src/game/report.ts (header) and the locales' flag.* labels; keep in step (decision 199).
+# Copies of app/client/src/game/report.ts (header) and flag.question/answer/note in app/client/src/locales/{es,en,de,zh-Hans,zh-Hant}.ts;
+# keep in step (decision 199).
 HEADER = re.compile(r"¡Trivia!\s*#(\S+)\s*·\s*([\w-]+)\s*·\s*v(\S+)\s*·\s*pool\s+(\S+)\s*·\s*(\d{4}-\d{2}-\d{2})")
 LABELS = {"question": ("Pregunta", "Question", "Frage", "题目", "題目"), "answer": ("Respuesta", "Answer", "Antwort", "答案", "答案"),
           "note": ("Nota", "Note", "Notiz", "备注", "備註")}
