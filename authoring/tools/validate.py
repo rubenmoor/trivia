@@ -363,10 +363,11 @@ def name_ok(v, bundle):
 
 
 def names_warnings(data):
-    """Missing names per locale, once the locale has a pool or a names file."""
+    """Missing names per locale, once a bundle lists it or it has a pool (a bare names file, e.g. zh, isn't enough)."""
     out, cats = [], categories.load()
+    listing = {l for b in load_bundles() for l in b.get("languages") or []}
     for l in translations.NAMED:
-        if not (translations.exported(l, data) or any(layout.NAMES(l, b).exists() for b in categories.bundle_ids())):
+        if not (translations.exported(l, data) or l in listing):
             continue
         names = categories.load_names(l)
         n = (len(set(categories.bundle_ids()) - set(names["bundles"]))

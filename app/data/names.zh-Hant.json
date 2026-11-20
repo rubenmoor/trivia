@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "locale": "zh-Hant",
+  "age_groups": {
+    "kids": "簡單",
+    "young_teens": "普通",
+    "young_adults": "困難",
+    "adults": "專家"
+  }
+}
