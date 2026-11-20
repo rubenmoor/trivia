@@ -1,7 +1,7 @@
 <script lang="ts" module>
   // National flags per language tag (plans/10-visual-design.md, VD-8) or one country (a regional bundle, plan 151):
   // own simplified drawings of the public-domain designs, fixed colours. Unknown tags and countries show the globe.
-  const DRAWN = ["mx", "co", "ar", "es", "gb", "us", "de", "at", "ch", "cn"] as const;
+  const DRAWN = ["mx", "co", "ar", "es", "gb", "us", "de", "at", "ch", "cn", "tw", "hk", "mo"] as const;
   type Flag = (typeof DRAWN)[number];
 
   const SETS: Record<string, Flag[]> = {
@@ -10,6 +10,7 @@
     en: ["gb", "us"],
     de: ["de", "at", "ch"],
     "zh-Hans": ["cn"],
+    "zh-Hant": ["hk", "mo", "tw"],
   };
 </script>
 
@@ -75,6 +76,27 @@
             <path d="M0-3l.88 2.7 2.84.02-2.3 1.66.87 2.7L0 2.4l-2.29 1.68.87-2.7-2.3-1.66 2.84-.02z" fill="#ffde00" transform="translate(5 5) scale(1.4)" />
             <g fill="#ffde00">
               <circle cx="10" cy="2" r="0.7" /><circle cx="12" cy="4" r="0.7" /><circle cx="12" cy="7" r="0.7" /><circle cx="10" cy="9" r="0.7" />
+            </g>
+          {:else if f === "tw"}
+            <rect width="30" height="20" fill="#fe0000" />
+            <rect width="15" height="10" fill="#000095" />
+            <circle cx="7.5" cy="5" r="3.2" fill="#fff" />
+            <circle cx="7.5" cy="5" r="2.2" fill="#000095" />
+            <circle cx="7.5" cy="5" r="1.8" fill="#fff" />
+          {:else if f === "hk"}
+            <rect width="30" height="20" fill="#de2910" />
+            <g fill="#fff" transform="translate(15 10)">
+              {#each [0, 72, 144, 216, 288] as a (a)}
+                <ellipse cx="0" cy="-3.6" rx="1.7" ry="3" transform="rotate({a})" />
+              {/each}
+            </g>
+          {:else if f === "mo"}
+            <rect width="30" height="20" fill="#00785e" />
+            <path d="M8 14.5q7-3 14 0v1.5q-7-3-14 0z" fill="#fff" />
+            <ellipse cx="15" cy="12.3" rx="3.6" ry="1.6" fill="#fff" />
+            <path d="M15 4l.5 1.3h1.4l-1.1.9.4 1.3-1.2-.8-1.2.8.4-1.3-1.1-.9h1.4z" fill="#fbd116" />
+            <g fill="#fbd116">
+              <circle cx="10.5" cy="6.3" r="0.8" /><circle cx="12" cy="4.6" r="0.8" /><circle cx="18" cy="4.6" r="0.8" /><circle cx="19.5" cy="6.3" r="0.8" />
             </g>
           {/if}
         </svg>
