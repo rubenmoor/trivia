@@ -19,7 +19,7 @@ import { fileURLToPath } from "node:url";
 import { filter, measure, TARGET_LUFS, TRUE_PEAK } from "./loudness.mjs";
 import { VIDEO } from "./media-formats.mjs";
 import { cacheName, excerptOf, shipPool, shippedName, sourceUrl } from "./resolve.mjs";
-import { stageUrls } from "./stage-urls.mjs";
+import { poolLocale, stageUrls } from "./stage-urls.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(HERE, "..", "..");
@@ -113,7 +113,7 @@ async function encode(src, name, excerpt) {
 }
 
 const DATA = path.join(REPO, "app", "data");
-const { urls, packMedia, baseMedia, shipsPool, poolLocale } = stageUrls(DATA, demo);
+const { urls, packMedia, baseMedia, shipsPool } = stageUrls(DATA, demo);
 
 // Budgets in MB (media-budget.json): per depot, per file (videos `video`).
 if (check) {

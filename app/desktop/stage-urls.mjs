@@ -22,7 +22,7 @@ export function stageUrls(DATA, demo = false) {
   if (demo) {
     const dir = path.join(DATA, "demo");
     for (const f of readdirSync(dir).filter((f) => /^pool(\.[\w-]+)?\.json$/.test(f))) for (const u of read(path.join(dir, f))) urls.add(u);
-    return { urls, packMedia, baseMedia, shipsPool, poolLocale };
+    return { urls, packMedia, baseMedia, shipsPool };
   }
   const dirs = readdirSync(path.join(DATA, "bundles")).filter((b) => statSync(path.join(DATA, "bundles", b), { throwIfNoEntry: false })?.isDirectory());
   for (const b of dirs.filter((b) => basePacks.has(b))) {
@@ -42,5 +42,5 @@ export function stageUrls(DATA, demo = false) {
     urls.add(u);
     if (b) packMedia[b].push(shippedName(u));
   }
-  return { urls, packMedia, baseMedia, shipsPool, poolLocale };
+  return { urls, packMedia, baseMedia, shipsPool };
 }
