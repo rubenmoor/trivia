@@ -11,12 +11,12 @@ export const JOKERS: readonly JokerName[] = ["hint", "skip", "easier", "category
 export const STANDARD_JOKERS: JokerBudget = { hint: 5, skip: 2, easier: 1, category: 1, snipe: 2 };
 /** Competitive timed (plan 159): per question, between hints, after a claim; lives per seat. */
 export const QUESTION_MS = 30000;
-export const HINT_MS = 8000;
+const HINT_MS = 8000;
 export const CLAIM_MS = 6000;
 export const LIVES = 3;
 /** Timed pace: hectic = the times above, normal = double. */
 export type Pace = "hectic" | "normal";
-export const PACES: readonly Pace[] = ["hectic", "normal"];
+const PACES: readonly Pace[] = ["hectic", "normal"];
 export function paceMs(pace: Pace | undefined): { question: number; hint: number; claim: number } {
   const k = pace === "normal" ? 2 : 1;
   return { question: QUESTION_MS * k, hint: HINT_MS * k, claim: CLAIM_MS * k };

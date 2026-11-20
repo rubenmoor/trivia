@@ -1982,7 +1982,7 @@ from report import REVIEW_GAP_MIN, cmd_report, count, qc_section
 from review_steps import BATCH_SLOTS, REVIEW_MODEL, batch_questions, cmd_fix, cmd_media, cmd_record, cmd_research, cmd_review, cmd_sheets, slots_of
 from rework import cmd_rework
 from taxonomy import cmd_bundle_new, cmd_remap, cmd_taxonomy
-from translate import LANGUAGES, cmd_translate, cmd_translate_batch, in_locale, merge_translations, run_bundle, run_locale, text_locale, translated_drafts
+from translate import LANGUAGES, cmd_translate_batch, in_locale, merge_translations, run_bundle, run_locale, text_locale, translated_drafts
 from validate import cmd_validate, validate_pool
 
 
