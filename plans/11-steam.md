@@ -96,7 +96,7 @@ Every public build — the launch and every later patch — passes one checklist
 - Report: `work/steam/v<x>/release-check.md` (header: version, pool hash, previous tag, kind, save version change; every skip).
 
 ### Manual rows
-On the `beta` branch, installed through Steam. Scope: always, full (full release only), save (only when `SAVE_VERSION` changed since the previous tag).
+On the `beta` branch, installed through Steam. Scope: always, full (full release only), save (only when `SAVE_VERSION` changed since the previous tag), locale (only when a zh pool is new since the previous tag: `app/data/pool.zh-*.json` or `bundles/<id>/pool.zh-*.json` absent in the previous tag's tree, read with `git ls-tree`).
 
 | row | scope | steps |
 |---|---|---|
@@ -112,6 +112,7 @@ On the `beta` branch, installed through Steam. Scope: always, full (full release
 | `red-frame` | full | Timed competitive: the red frame pulses in the last 3 s |
 | `multiplayer-pads` | full | Beta under Steam with real pads (Steam Input on): one session per mode (`rr-coop`, `rr-competitive`, `timed`) with every pad present, through Join to the first turn change or claim; every pad joins (note how many), each acts only for its seat (decision 299) |
 | `beta-save` | save | Save version changed: testers stay on `beta` until this build is on `default` (an older build can't read the new save) |
+| `locale` | locale | Steam client language set to the new zh locale (Steam → Settings → Interface), start `beta` from Steam: first start guesses the zh locale, only `chinese-base` offered, a game to level 3, text without tofu or overflow, the Steam store/library page shows the language; then English: both base tiles, picking one deselects the other (decision 752: One base bundle per session: at most one, not exactly one) |
 | `signoff` | always | Launch and full release: the family plays the candidate from `beta`; content-only patch: the developer's OK |
 
 ### Patch variant
@@ -121,6 +122,7 @@ On the `beta` branch, installed through Steam. Scope: always, full (full release
 - `telemetry` full only, same reason: recording, consent and send are client and shell code, the server deploys apart; no automated step: the `report` step's `/health` covers the only shared dependency, the base URL.
 - `mods` always: data changes can break the merged `bundles.json` (decision 128); `workshop` full only: Workshop discovery is shell code.
 - `mods-restart` full only: the relaunch is shell code (decision 154).
+- `locale` asked on any kind (a go-live patch is content-only) but only when a zh pool is new; a later patch that only grows the pool doesn't ask it.
 - Full-only rows are answered "skipped: content-only since <tag>" automatically and listed in the report.
 
 ### Decision per release candidate
@@ -134,9 +136,11 @@ On the `beta` branch, installed through Steam. Scope: always, full (full release
   | telemetry | | |
   | workshop | | |
   | mods-restart | | |
+  | locale (only when a zh pool is new) | | |
   | … every row the report lists, auto-skipped ones pre-filled | | |
 
 - Options: `passed` (recommended), `passed with minor issues (list)`, `failed (rows)`.
+- `locale` ✗ → plan 142 (`plan 142: UI in Chinese`) for UI and fonts, plan 140 (`plan 140: Translation into Chinese`) for content.
 - Worker on the answer:
   - `passed`: `trivia-release-check --manual FILE` with the answers so the report holds them; the build may go to `default` (by hand, Steamworks).
   - `passed with minor issues`: as passed; each issue a bullet in `plans/backlog.md`.
@@ -403,7 +407,7 @@ After launch, new and fixed questions reach players only as Steam patches: a new
 - A non-base bundle × locale reaching the bar: its pool, its `languages` entry, its DLC store language block (plan 187) in the next content patch; the patch notes count it. Topic bundles: none ships before all five have 2000+ approved (decision 520: Topic bundles below 2000 approved: ship or hold?).
 
 ### Patch path
-1. Questions: `qgen batch` per `authoring/RUNBOOK.md` (`--translate es|es-ES|en|de` for the translations, D-107).
+1. Questions: `qgen batch` per `authoring/RUNBOOK.md` (`--translate es|es-ES|en|de|<zh>` for the translations, D-107; `--translate <zh> --bundle chinese-base` for Chinese).
 2. Reports: `qgen flag --pull` (players' reports, report server, plan 103); `qgen flag` for pasted copy-fallback text; both → `needs_work`; `qgen rework` only when the developer asks.
 3. `qgen export`, then `qgen validate` (clean; also guards id continuity against the newest tag).
 4. `qgen patch-notes`: draft notes (counts only, decision 97); check kind and save version.
@@ -414,6 +418,7 @@ After launch, new and fixed questions reach players only as Steam patches: a new
 9. ST-4 manual rows on the Steam-installed `beta` (plan 104):
    - content-only: `offline` (Steam in offline mode, a game to level 3 hitting new questions) + `signoff` (the developer's OK);
    - `beta-save` on a save change;
+   - `locale` when a zh pool is new;
    - full patch: every row, incl. the manual `report` row.
 10. Candidate decision `Release candidate v<x> passed?` per "Decision per release candidate".
 11. Developer: SteamPipe → Builds → the BuildID → "Set build live on branch" `default`; check `default` = `beta`.
