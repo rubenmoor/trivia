@@ -370,6 +370,7 @@ def qc_trend(pool=None):
             ("false approve", lambda s: pct(len(s["false_approve"]), s["human_n"])),
             ("difficulty |Δ| ≥ 2", lambda s: pct(s["difficulty_2"], s["human_n"])),
             ("audit/human agreement", lambda s: pct(s["audit_human_agreed"], s["audit_human_n"]))]
+    scored = [controls_caught(r) for r in runs]  # native sheets' planted controls (plan 141)
     bar = f"≥ {q['spot_check_size']} questions, ≥ {100 * q['min_agreement']:.0f} %" if q else "no quality keys"
     mf_q = targets.load_quality(targets.MEDIA_FIRST)
     if any(s["mode"] == "media-first" for s in cols) and mf_q:
@@ -384,6 +385,9 @@ def qc_trend(pool=None):
     return ["| metric | " + " | ".join(runs) + " |", "|---|" + "---:|" * len(runs),
             "| source locale | " + " | ".join(map(source, runs)) + " |",
             *[f"| {k} | " + " | ".join(f(s) for s in cols) + " |" for k, f in rows],
+            *(["| controls caught (native sheets) | " + " | ".join(f"{c}/{n}" if (c, n) != (None, None) else "–" for c, n in
+                                                                    (x or (None, None) for x in scored)) + " |"]
+              if any(scored) else []),
             f"| **release** ({bar}, D-79) | " + " | ".join("✗ " + ", ".join(f) if (f := release_failures(s)) else "✓"
                                                             for s in cols) + " |",
             *media_first_summary(cols)]
@@ -1004,4 +1008,5 @@ def cmd_report(args):
 
 # the other command groups, after everything here is defined (they import each other)
 from audit import audits, is_major, is_media_first, llm_decisions, run_questions, spot_check_size  # authoring/tools/audit.py
+from spotcheck import controls_caught  # authoring/tools/spotcheck.py
 from translate import text_locale  # authoring/tools/translate.py

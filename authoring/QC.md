@@ -54,6 +54,10 @@ A `qgen batch --translate <locale>` run (D-87; `es`, `es-ES`, `en`, `de`, from s
 - Optional review by the developer: `http://127.0.0.1:8001/review?batch=tr-<locale>-<n>&locale=<locale>`; source and translation side by side (plan 67).
   - Stale translation: no approve (the next run redoes it); a question that only works in its source language: "doesn't travel".
   - `&sample=1` (blind sample) still works by URL; existing records in `authoring/data/spot-checks.json` stay.
+- Native check, zh only (decision 754: Native checks of Chinese translation runs: pilot and release sample, not every run): the pilot run, the Chinese-language subcategories and one release sample go to a volunteer as an offline sheet; nothing waits for it (decision 414).
+  - Export: `qgen spotcheck export <run> [--controls N]` → `work/<run>/spotcheck-<run>.html`; `--release <zh>` or `--subcategory <key>… --locale <zh>` → `work/spotcheck/<name>.html`; brief `authoring/NATIVE-REVIEW.md`.
+  - A pm worker that exports raises `pm decision add "Spot check <sheet> done?"` (body: sheet path, `qgen spotcheck import <name>.verdicts.json`), never `pm task-pending-decision`.
+  - Import (the developer, in `../trivia-review`): `qgen spotcheck import <file> [--dry-run]` → human reviews (`by: native`) and spot checks; `qgen report --qc` shows "controls caught k/N".
 - Player reports: `qgen flag` sets `needs_work` (below).
 - Prompt changes only in a change task: `prompts/translate.md`, `translate-review.md`, `locale-<locale>.md`, `rate.md`.
 

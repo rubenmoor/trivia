@@ -1927,6 +1927,7 @@ def main():
     pn.add_argument("--out", metavar="FILE", help="also write the Markdown here (default for a tag: work/steam/<tag>/patch-notes.md)")
     pn.add_argument("--json", action="store_true", help="JSON on stdout")
     media_survey.add_parser(sub)
+    spotcheck.add_parser(sub)
     media_probe.add_parser(sub)
     au = add("audit", cmd_audit, "opus", run=False)
     au.add_argument("--batch", help="default: the newest merged batch")
@@ -1998,6 +1999,7 @@ from player_reports import cmd_flag, cmd_telemetry
 from report import REVIEW_GAP_MIN, cmd_report, count, qc_section
 from review_steps import BATCH_SLOTS, REVIEW_MODEL, batch_questions, cmd_fix, cmd_media, cmd_record, cmd_research, cmd_review, cmd_sheets, slots_of
 from rework import cmd_rework
+import spotcheck  # authoring/tools/spotcheck.py: `qgen spotcheck` (plan 141)
 from taxonomy import cmd_bundle_new, cmd_remap, cmd_taxonomy
 from translate import LANGUAGES, cmd_translate_batch, in_locale, merge_translations, run_bundle, run_locale, text_locale, translated_drafts
 from validate import cmd_validate, validate_pool

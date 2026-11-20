@@ -1158,3 +1158,16 @@ Template:
   - **Overlap:** a copy and its source are no duplicates (`duplicates`, `overlap_candidates`, the review's `related`); a copy and another question of its own bundle are (normal rule)
 - Consequences: a copy never drives its source's `already_asked` or merge drops, nor the reverse
 - Supersedes / related: D-81, D-111; pm decisions 217, 751; plan 227
+
+## D-115: Offline spot-check sheet for outside native reviewers
+- Date: 2026-11-20
+- Context: the zh volunteers have no access to the review tool (127.0.0.1); pm decision 221 chose an offline sheet per job, a verdict file back by e-mail; plan 141, task 1172
+- Decision:
+  - **Export:** `qgen spotcheck export` (`authoring/tools/spotcheck.py`): one self-contained blind HTML file (inline JS/CSS, small cached images inline, audio/video named); English source beside the translation; no LLM review, audit or status; the brief of `authoring/NATIVE-REVIEW.md` on top; progress in `localStorage`
+  - **Jobs:** a `tr-*` run's spot-check sample, `--release <locale>` (seeded 30 of `chinese-base`), `--subcategory … --locale`; a source not in English is skipped and listed; no machine gloss, no claude call
+  - **Verdict file:** `<name>.verdicts.json` with sheet name, hash over name and ids, locale, verdicts (approve / needs_work / reject / doesn't travel, problem kinds, English feedback, optional corrected text), comments; `work/…/<name>.manifest.json` keeps the export's ids and controls
+  - **Import:** checks name, hash, ids; each verdict is a human review with `by: native` (no name, public repo) and a spot-check record where the item is in its run's sample; corrected text goes into the feedback, never over the translation; `--dry-run` writes nothing
+  - **Controls:** default 3 for zh locales, else 0: faulty copies (wrong right answer, changed number, garbled option) `control-<k>`, never in a pool; caught = any verdict but approve; scored in `authoring/data/spot-controls.json`, shown by `qgen report --qc`
+- Consequences: nothing waits for a sheet (pm decisions 414, 754); the sheet sits beside, not in, the review tool
+- Supersedes / related: D-33, QT-6; pm decisions 221, 754, 414; plans 141, 229
+
