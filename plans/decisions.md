@@ -642,6 +642,7 @@ Template:
 - Context: OQ-31, I18N-1 (plan 37); pm decisions 26 (launch languages) and 27 (Spanish variety, store languages). Today: Spanish with Colombian usage (D-6); regions are bundles (D-39, D-49); store names D-50.
 - Decision:
   - **Launch languages:** Spanish, English, German (`es`, `en`, `de`). Later: Simplified Chinese, Russian, Portuguese (Brazil) (`zh-Hans`, `ru`, `pt-BR`), milestone 12 "Conquer the world" (on hold).
+  - **Amended (milestone 12, plan 139 task 1165):** `zh-Hans` and `zh-Hant` are question locales with empty pools (`translations.LANGUAGES`, `data.ts`, `check-mod.mjs`; age-group names files only); no bundle lists them until `chinese-base` (plan 60 part 4), so `qgen validate` warns "no bundle lists it yet", `--simulate` skips them, `batch --translate` stops without `locale-<zh>.md`. `ru` and `pt-BR` are no longer planned.
   - **Spanish variety:** two variants.
     - `base` in neutral Latin American Spanish (`es-419`); the ~40 Colombianisms are rewritten through the pipeline (D-36), S4 content work.
     - `es-ES` variant only where the wording differs: regionalisms, `vosotros` in the UI.
@@ -690,6 +691,7 @@ Template:
   - **Export:** `app/data/pool.<locale>.json`, same shape as `pool.json`: source play fields (`id`, `subcategory`, `bundle`, `media`, `background`) + translated text and `difficulty`; only when source approved and translatable, translation approved and not stale. No `pool.es.json`; `pool.json` unchanged.
   - **Names:** Spanish subcategory names stay the keys everywhere. Hand-maintained, shipped `app/data/names.<locale>.json` (`bundles`, `categories`, `subcategories`, `age_groups` by id, pm decision 48) and `app/data/bundles/<id>/names.<locale>.json` (same without `bundles`, `age_groups`), mirroring D-43.
 - Consequences: `authoring/tools/translations.py` is the one reader/writer; `qgen validate` checks locale files, names and export staleness. Whole-pool rewrites of the source (`qgen tighten`, neutral Spanish) stale every touched translation, so full translation runs come after them.
+- Amended (plan 139 task 1165): the zh locales follow this layout unchanged (`questions.zh-Hans.json`, `pool.zh-Hans.json`, `tr-zh-Hans-<n>`); a pool of a locale no bundle lists exports but validate warns. Checked with a scratch sample of three zh translations: validate, export, flag and the review API accept them.
 - Supersedes / related: D-35, D-36, D-38, D-39, D-43, D-78; plans 15, 15b, 62, 63
 
 ## D-82: Seen counters instead of burning
