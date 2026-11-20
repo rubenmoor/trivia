@@ -159,7 +159,7 @@ def report_feedback(r):
 # Report text (decision 142): header, then labelled lines in the UI language.
 # Copies of app/client/src/game/report.ts (header) and the locales' flag.* labels; keep in step (decision 199).
 HEADER = re.compile(r"¡Trivia!\s*#(\S+)\s*·\s*([\w-]+)\s*·\s*v(\S+)\s*·\s*pool\s+(\S+)\s*·\s*(\d{4}-\d{2}-\d{2})")
-LABELS = {"question": ("Pregunta", "Question", "Frage", "问题", "問題"), "answer": ("Respuesta", "Answer", "Antwort", "答案", "答案"),
+LABELS = {"question": ("Pregunta", "Question", "Frage", "题目", "題目"), "answer": ("Respuesta", "Answer", "Antwort", "答案", "答案"),
           "note": ("Nota", "Note", "Notiz", "备注", "備註")}
 LABEL = re.compile(r"^(%s)[:：]\s*(.*)$" % "|".join(l for ls in LABELS.values() for l in ls))
 

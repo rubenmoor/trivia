@@ -173,7 +173,7 @@ for (const [lang, catalog] of Object.entries(CATALOGS)) {
     const b = base.get(p);
     if (b === undefined) problems.push(`${lang}: ${p} is not in es`);
     else if (params(v) !== params(b)) problems.push(`${lang}: ${p} has {${params(v)}}, es {${params(b)}}`);
-    else if ((lang === "en" || lang === "de") && JSON.stringify(v) === JSON.stringify(b) && !SAME_OK.some((r) => r.test(p))
+    else if ((lang === "en" || lang === "de" || lang.startsWith("zh")) && JSON.stringify(v) === JSON.stringify(b) && !SAME_OK.some((r) => r.test(p))
       && /\p{L}/u.test(texts(v).join("").replace(/\{\w+\}/g, "")))
       problems.push(`${lang}: ${p} is the same as in es`);
   }
