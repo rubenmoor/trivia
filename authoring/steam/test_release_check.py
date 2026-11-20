@@ -68,6 +68,20 @@ class BasePack(unittest.TestCase):
             self.assertEqual(steam.base_packs(), {"chinese-base"})
             self.assertEqual(steam.bundles(), ["colombia"])
 
+    def test_smoke_pairs_come_from_data(self):
+        data = self.repo / "app" / "data"
+        rows = json.loads((data / "bundles.json").read_text())
+        rows["bundles"][0]["languages"] = ["es", "en", "de"]
+        rows["bundles"][1]["languages"] = ["zh-Hans", "zh-Hant", "en"]
+        (data / "bundles.json").write_text(json.dumps(rows))
+        (data / "pool.en.json").write_text(json.dumps({"questions": [{"id": "a"}]}))
+        (data / "pool.json").write_text(json.dumps({"questions": [{"id": "e"}]}))
+        (data / "pool.de.json").write_text(json.dumps({"questions": []}))  # empty: not shipped
+        (data / "bundles/chinese-base/pool.en.json").write_text(json.dumps({"questions": [{"id": "c"}]}))
+        (data / "bundles/chinese-base/pool.zh-Hans.json").write_text(json.dumps({"questions": [{"id": "z"}]}))
+        with mock.patch.object(rc, "REPO", self.repo):
+            self.assertEqual(rc.smoke_pairs(), [("es", "base"), ("en", "base"), ("zh-Hans", "chinese-base"), ("en", "chinese-base")])
+
 
 if __name__ == "__main__":
     unittest.main()

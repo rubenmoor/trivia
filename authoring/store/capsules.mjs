@@ -79,6 +79,9 @@ const CSS = `
 .logo:lang(zh-Hans) { font-family: "Baloo 2", "Han Rounded SC"; }
 .logo:lang(zh-Hant) { font-family: "Baloo 2", "Han Rounded TC"; }
 .logo:lang(zh-Hans) .main, .logo:lang(zh-Hant) .main { line-height: 1.1; }
+/* zh: bigger «Living Room»; shadows visible on the dark ground (sharp lighter edge, soft amber glow; decision 784) */
+.logo:lang(zh-Hans) .side, .logo:lang(zh-Hant) .side { font-size: 0.6em; text-shadow: 0 0.06em 0 ${C.amberDeep}, 0 0 0.3em rgba(255,184,28,0.45); }
+.logo:lang(zh-Hans) .main, .logo:lang(zh-Hant) .main { text-shadow: 0 0.05em 0 #6b7a9c, 0 0 0.3em rgba(238,241,246,0.4); }
 * { box-sizing: border-box; margin: 0; }
 html, body { width: 100%; height: 100%; background: transparent; overflow: hidden; }
 .stage { position: relative; overflow: hidden; background: radial-gradient(ellipse at 50% 30%, ${C.night800}, ${C.night900} 75%); }

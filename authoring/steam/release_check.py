@@ -19,8 +19,11 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
   zh-fonts  node app/desktop/subset-fonts.mjs --check: every zh character of a shipped catalog, names file and pool is in the
             zh fonts (plan 142)
   credits   node authoring/steam/credits_check.mjs on both unpacked builds: files ↔ credits.json, both ways
-  smoke     node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked: TRIVIA_DEV_STEAM_USER=1 (decision 111),
-            network off; save and resume, no «progress needs Steam» notice (with packs: again without them)
+  smoke     node authoring/steam/smoke.mjs --lang L --bundle B app/desktop/release/linux-unpacked once per shipped (locale, base
+            bundle) pair (smoke_pairs: every `kind: base` bundle × its languages with a non-empty pool in app/data/; today es,
+            es-ES, en, de with base; en and each zh locale with chinese-base once its pool exists): TRIVIA_DEV_STEAM_USER=1
+            (decision 111), network off; save and resume, no «progress needs Steam» notice (with packs: again without them),
+            the bundle picked on Choice, questions from its pool, a zh locale with its CJK face loaded (plan 145)
   multiplayer  node authoring/steam/smoke.mjs --multiplayer: rr-coop, rr-competitive, timed × 3 pads, 3 keyboard seats,
             4 pads + keyboard and mouse (fake pads), each through Join to an end; seats act only for themselves, a
             mid-session restart (timed pads, both keyboard-only, timed 4 pads + kbm): pads rebind, keyboard seats
@@ -54,6 +57,21 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from steam import REPO, git, head_tag, version  # noqa: E402
 
+def smoke_pairs() -> list[tuple[str, str]]:
+    """(locale, base bundle) of every shipped pool with questions: each `kind: base` bundle in bundles.json × its languages
+    (base's pool at app/data/, another's in bundles/<id>/; es is pool.json), bundles.json order."""
+    data = REPO / "app" / "data"
+    out = []
+    for b in json.loads((data / "bundles.json").read_text())["bundles"]:
+        if b["kind"] != "base":
+            continue
+        for loc in b["languages"]:
+            f = (data if b["id"] == "base" else data / "bundles" / b["id"]) / ("pool.json" if loc == "es" else f"pool.{loc}.json")
+            if f.exists() and json.loads(f.read_text())["questions"]:
+                out.append((loc, b["id"]))
+    return out
+
+
 UNPACKED = "app/desktop/release/linux-unpacked"
 UNPACKED_WIN = "app/desktop/release/win-unpacked"
 STEPS = {
@@ -68,7 +86,7 @@ STEPS = {
     "modkit": [["steam-run", f"{UNPACKED}/living-room-trivia", "--ozone-platform=headless", "--check-mod", f"{UNPACKED}/modding/{m}"]
                for m in ("template-bundle", *(f"examples/{e.name}" for e in sorted((REPO / "modding/examples").iterdir()) if e.is_dir()))],
     "credits": [["node", "authoring/steam/credits_check.mjs", UNPACKED, UNPACKED_WIN]],
-    "smoke": [["node", "authoring/steam/smoke.mjs", UNPACKED]],
+    "smoke": [["node", "authoring/steam/smoke.mjs", "--lang", loc, "--bundle", bundle, UNPACKED] for loc, bundle in smoke_pairs()],
     "multiplayer": [["node", "authoring/steam/smoke.mjs", "--multiplayer", UNPACKED]],
     "mods": [["node", "authoring/steam/smoke.mjs", "--mods", UNPACKED]],
 }

@@ -1,10 +1,16 @@
 #!/usr/bin/env node
 // Packaged smoke game (plan 89, release check step 6): the unpacked Linux build offline, clean env, temp HOME,
 // TRIVIA_DEV_STEAM_USER=1 (decision 111: saves need a valid Steam user; the switch stands in for one).
-// Usage (dev shell): node authoring/steam/smoke.mjs [--demo] [--mods | --multiplayer | --matrix] [--trace <file>] [app/desktop/release/linux-unpacked];
+// Usage (dev shell): node authoring/steam/smoke.mjs [--demo] [--lang <locale>] [--bundle <base id>] [--mods | --multiplayer | --matrix] [--trace <file>] [app/desktop/release/linux-unpacked];
 // DEBUG=1 shows the shell's stderr
 // New player → levels 1–3 with an image, audio and video question → quit → restart resumes; no «progress needs Steam»
 // notice; then a Gamemaster-mode game, a few levels. Exit 1 names the step.
+// --lang <locale> (default es) and --bundle <base id> (default: the locale's first base bundle in bundles.json) pick the pair
+// the solo and Gamemaster games play (plan 145: the release check runs every shipped pair): the UI language picked on its first-start
+// screen, the base bundle's tile on the Bundles screen (turning on a second base bundle turns the first off, decision 752), the
+// game's locale as asked, every question on screen from that bundle's pool (or an add-on pack's), for a zh locale a CJK face
+// of theme.css loaded; a stored choice with several base bundles resolves to the first. A level type without a media question
+// in the pool is skipped with a note.
 // --demo (plan 177): the demo build (release/demo/linux-unpacked): the solo and Gamemaster games, the multiplayer sessions
 // of the built modes (BUILT_MODES) with --multiplayer; on the way the Start screen's demo line, one bundle tile and no pack,
 // no PLACEHOLDER in the visible text, every question in app/data/demo/pool.json.
@@ -30,7 +36,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { earned } from "../../app/client/src/engine/achievements.ts";
 import { BUILT_MODES, DEFAULT_AGE_GROUP, answer, claim, gameMode, jokersUsed, pick, show } from "../../app/client/src/engine/game.ts";
+import { gameChoice } from "../../app/client/src/engine/choice.ts";
 import { LEVELS } from "../../app/client/src/engine/selection.ts";
+import { UI_LANGS } from "../../app/client/src/lib/i18n.ts";
 import { seededRng } from "../../app/client/src/engine/rng.ts";
 import { cacheName, shippedName } from "../../app/desktop/resolve.mjs";
 import { connectPipe, pageHelpers, sleep, startXvfb, visibleEl } from "../tools/cdp.mjs";
@@ -43,11 +51,19 @@ const MULTI = ARGS.includes("--multiplayer");
 const DEMO = ARGS.includes("--demo");
 const MATRIX = ARGS.includes("--matrix");
 if (MATRIX && !DEMO) throw new Error("--matrix needs --demo");
-const TRACE = ARGS.includes("--trace") ? ARGS[ARGS.indexOf("--trace") + 1] : null;
-if (ARGS.includes("--trace") && !TRACE) throw new Error("--trace needs a file");
+const VALUE_FLAGS = ["--trace", "--lang", "--bundle"];
+/** The value after a flag, null if the flag is absent. */
+function flagValue(name) {
+  if (!ARGS.includes(name)) return null;
+  const v = ARGS[ARGS.indexOf(name) + 1];
+  if (!v || v.startsWith("--")) throw new Error(`${name} needs a value`);
+  return v;
+}
+const TRACE = flagValue("--trace");
+const LANG = flagValue("--lang") ?? "es";
 const EXE = DEMO ? "living-room-trivia-demo" : "living-room-trivia";
 const BUILD = path.resolve(
-  ARGS.find((a, i) => !a.startsWith("--") && ARGS[i - 1] !== "--trace") ??
+  ARGS.find((a, i) => !a.startsWith("--") && !VALUE_FLAGS.includes(ARGS[i - 1])) ??
     path.join(REPO, "app", "desktop", "release", ...(DEMO ? ["demo"] : []), "linux-unpacked"),
 );
 const BUNDLES = path.join("resources", "data", "bundles");
@@ -64,7 +80,10 @@ let scene;
 const begin = (name) => trace.push((scene = { scene: name, questions: [] }));
 /** A question on screen: `offered` the cards before the pick (none: a timed question), `st` the state with `current`. */
 function seen(offered, st) {
-  for (const id of [...offered, st.current]) if (DEMO_IDS && !DEMO_IDS.has(id)) throw new Error(`question ${id} is not in the demo list`);
+  for (const id of [...offered, st.current]) {
+    if (DEMO_IDS && !DEMO_IDS.has(id)) throw new Error(`question ${id} is not in the demo list`);
+    if (allowed && !allowed.has(id)) throw new Error(`question ${id} is not in the pool of ${LANG} / ${bundle()} (nor an add-on pack's)`);
+  }
   scene.questions.push({ level: st.level, offered, shown: st.current, answers: st.answers });
 }
 // Any visible PLACEHOLDER text, kept across reloads (sessionStorage) and read before a quit.
@@ -92,9 +111,9 @@ function which(cmd) {
   throw new Error(`${cmd} not found: run from the dev shell`);
 }
 
-/** Packs whose pool file for `locale` is in the build (as data.ts poolFile). */
+/** Packs offered in `locale`: it is in their bundles.json languages and their pool file is in the build (as data.ts poolFile). */
 const packsFor = (locale) =>
-  packs().filter((b) => existsSync(path.join(DIR, BUNDLES, b, locale === "es" ? "pool.json" : `pool.${locale}.json`)));
+  packs().filter((b) => bundleRows().find((x) => x.id === b)?.languages.includes(locale) && existsSync(poolPath(locale, b)));
 // DLC packs only: a base pack ships in the content depot (decision 753).
 const packs = () => {
   if (!existsSync(path.join(DIR, BUNDLES))) return [];
@@ -103,14 +122,39 @@ const packs = () => {
   return readdirSync(path.join(DIR, BUNDLES)).filter((b) => !base.has(b));
 };
 
-/** The first question per media type in the shipped pool of `locale` (as data.ts poolFile); their media files. */
-function pickQuestions(locale) {
+/** The build's bundles.json rows. */
+const bundleRows = () => JSON.parse(readFileSync(path.join(DIR ?? BUILD, "resources", "data", "bundles.json"), "utf8")).bundles;
+
+/** The base bundle this run plays: `--bundle`, else the locale's first base bundle in bundles.json (the game's default). */
+function bundle() {
+  const bases = bundleRows().filter((b) => b.kind === "base" && b.languages.includes(LANG));
+  const want = flagValue("--bundle") ?? bases[0]?.id;
+  if (!bases.some((b) => b.id === want)) throw new Error(`${want ?? "no base bundle"} is not a base bundle offered in ${LANG}`);
+  return want;
+}
+
+/** A bundle's pool file of `locale` in the build (as pool.ts poolFile): base's at the top, a pack's in bundles/<id>/. */
+function poolPath(locale, id) {
   const file = locale === "es" ? "pool.json" : `pool.${locale}.json`;
-  const pool = JSON.parse(readFileSync(path.join(DIR, "resources", "data", DEMO ? "demo" : "", file), "utf8"));
+  return path.join(DIR ?? BUILD, "resources", "data", DEMO ? "demo" : id === "base" ? "" : path.join("bundles", id), file);
+}
+
+/** The question ids a game of `locale` may show: the base bundle's pool plus the add-on packs' (all on by default). */
+function allowedIds(locale, id) {
+  const files = [poolPath(locale, id), ...packsFor(locale).map((b) => poolPath(locale, b))];
+  return new Set(files.filter(existsSync).flatMap((f) => JSON.parse(readFileSync(f, "utf8")).questions.map((q) => q.id)));
+}
+
+/** The first question per media type in the pool of `bundle` in `locale` (as pool.ts poolFile); their media files. A type
+ * without one is skipped with a note: the levels played are then fewer. */
+function pickQuestions(locale, id = "base") {
+  const pool = JSON.parse(readFileSync(poolPath(locale, id), "utf8"));
   return TYPES.flatMap((type) => {
     const q = pool.questions.find((x) => x.media?.type === type && x.media.file_url);
-    if (!q && DEMO) return []; // the demo list may lack a type (levels 1–n then)
-    if (!q) throw new Error(`no ${type} question in the pool`);
+    if (!q) {
+      if (!DEMO) console.log(`  note: no ${type} question in ${locale}/${id}: that level type is skipped`);
+      return [];
+    }
     const urls = [q.media.file_url, q.background?.file_url].filter(Boolean);
     return [{ type, q, files: urls.map((u) => mediaFile(u)) }];
   });
@@ -122,7 +166,7 @@ function mediaFile(url) {
   return existsSync(path.join(DIR, raw)) ? raw : path.join("resources", "media", shippedName(url));
 }
 
-let DIR, page, h, home, display;
+let DIR, page, h, home, display, allowed;
 const procs = [];
 
 const saveFile = () => path.join(home, ".config", "trivia", "save", "dev", "game.json") // decision 114;
@@ -231,7 +275,8 @@ function withoutPacks(tmp) {
 async function main() {
   if (!existsSync(path.join(BUILD, `${EXE}-bin`))) throw new Error(`${BUILD}: no unpacked Linux build (trivia-desktop-build${DEMO ? " --demo" : ""} --dir)`);
   DIR = BUILD;
-  pickQuestions("es"); // fail early on a pool without media questions
+  bundle(); // fail early on a pair that isn't offered
+  pickQuestions(LANG, bundle()); // fail early on a missing pool file
 
   // Not /tmp: steam-run's sandbox has its own.
   await mkdir(path.join(REPO, "work"), { recursive: true });
@@ -294,7 +339,9 @@ async function toStart() {
   await h.waitFor(`${visibleEl(".language .option")} || ${visibleEl(".consent .option")} || ${start}`, "first screen", 30000);
   if (await h.evaluate(visibleEl(".language .option"))) {
     at("language");
-    await h.click(".language .option.current");
+    const i = UI_LANGS.indexOf(LANG);
+    if (i < 0) throw new Error(`${LANG} is not a UI language`);
+    await h.click(`.language .option:nth-child(${i + 1})`);
     await h.waitFor(`${visibleEl(".consent .option")} || ${start}`, "after language");
   }
   if (await h.evaluate(visibleEl(".consent .option"))) {
@@ -344,8 +391,48 @@ async function chooseSingle(mode) {
   const offered = await h.evaluate(`JSON.stringify([...document.querySelectorAll(".bundles [data-focus-id^='bundle-']")]
     .map((b) => b.dataset.focusId.slice(7)))`);
   if (DEMO && offered !== '["base"]') throw new Error(`demo bundles offered: ${offered}, want base only`);
+  await pickBase();
   await h.click('[data-focus-id="start"]');
   return offered;
+}
+
+/** This run's base bundle on, every other base bundle off (decision 752: turning one on turns the other off). */
+async function pickBase() {
+  const want = bundle();
+  const bases = bundleRows().filter((b) => b.kind === "base" && b.languages.includes(LANG)).map((b) => b.id);
+  const on = (id) => h.evaluate(`document.querySelector('[data-focus-id="bundle-${id}"]')?.getAttribute("aria-checked") === "true"`);
+  if (!(await on(want))) {
+    at(`bundle ${want}`);
+    await h.click(`[data-focus-id="bundle-${want}"]`);
+  }
+  for (const id of bases) if ((await on(id)) !== (id === want)) throw new Error(`base bundle ${id} is ${id === want ? "off" : "on"} with ${want} picked`);
+}
+
+/** The shipped data: a stored choice naming every base bundle plays the first (decision 752), never both. */
+function oneStoredBase(locale) {
+  const bases = bundleRows().filter((b) => b.kind === "base" && b.languages.includes(locale)).map((b) => b.id);
+  if (bases.length < 2) return;
+  const got = gameChoice({ settings: { bundles: [...bases].reverse() } }, loadData(locale, path.join(DIR, "resources", "data"), DEMO))
+    .bundles.filter((id) => bases.includes(id));
+  if (got.join() !== bases[0]) throw new Error(`stored choice with ${bases.join(", ")} resolves to [${got}], want [${bases[0]}]`);
+  console.log(`  ${locale}: stored choice with ${bases.length} base bundles keeps ${bases[0]}`);
+}
+
+/** A zh locale: a CJK face of theme.css is loaded (no fallback face). */
+async function checkCjkFont() {
+  if (!LANG.startsWith("zh")) return;
+  const css = readFileSync(path.join(REPO, "app", "client", "src", "game", "theme.css"), "utf8");
+  const faces = [...css.matchAll(/@font-face\s*{[^}]*?font-family:\s*"([^"]+)"[^}]*?unicode-range:\s*U\+2E80/g)].map((m) => m[1]);
+  if (!faces.length) throw new Error("no CJK face found in theme.css");
+  const loaded = await h.evaluate(`[...document.fonts].filter((f) => f.status === "loaded").map((f) => f.family.replace(/"/g, ""))`);
+  if (!loaded.some((f) => faces.includes(f))) throw new Error(`no CJK face loaded (${faces.join(", ")}); loaded: ${loaded.join(", ") || "none"}`);
+  console.log(`  CJK face loaded: ${loaded.filter((f) => faces.includes(f)).join(", ")}`);
+}
+
+/** The game's question locale is the run's. */
+function assertLocale(locale) {
+  if (locale !== LANG) throw new Error(`the game plays ${locale}, not ${LANG} (pool below the supply bar, decision 222?)`);
+  allowed = DEMO ? null : allowedIds(locale, bundle());
 }
 
 /** One game in DIR with a fresh HOME: new player, levels 1–3, quit, restart resumes. */
@@ -361,6 +448,8 @@ async function game(dir) {
   await h.click(".level .hint");
   // The new game's question locale (plan 126: es unless the language has its own pool).
   const locale = (await saved((s) => s.games?.length, "new game")).games.at(-1).locale ?? "es";
+  assertLocale(locale);
+  oneStoredBase(locale);
   at("packs");
   const want = packsFor(locale).sort().join(", ") || "none";
   const { bundles } = JSON.parse(readFileSync(path.join(DIR, "resources", "data", "bundles.json"), "utf8"));
@@ -368,10 +457,11 @@ async function game(dir) {
   const got = JSON.parse(offered).filter((b) => !base.has(b)).sort().join(", ") || "none";
   if (got !== want) throw new Error(`${locale} packs offered: ${got}; expected ${want}`);
   console.log(`  ${locale} packs offered: ${got}`);
-  const picks = pickQuestions(locale);
+  const picks = pickQuestions(locale, bundle());
   for (const p of picks) console.log(`  ${locale} ${p.type}: ${p.q.id} ${p.files.join(" ")}`);
   for (const [i, p] of picks.entries()) await playLevel(i + 1, p);
   const next = picks.length + 1;
+  await checkCjkFont();
 
   at("quit");
   await saved((s) => running(s).level === next && running(s).phase === "select", `level ${next}`);
@@ -407,6 +497,7 @@ async function gamemasterGame(dir) {
   await chooseSingle("gamemaster");
   await h.click(".level .hint");
   const locale = (await saved((s) => s.games?.length, "new game")).games.at(-1).locale ?? "es";
+  assertLocale(locale);
   data = loadData(locale, path.join(DIR, "resources", "data"), DEMO);
   for (let level = 1; level <= 3; level++) {
     at(`gamemaster level ${level}`);
