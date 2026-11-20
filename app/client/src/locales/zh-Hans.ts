@@ -1,5 +1,5 @@
 // Simplified Chinese catalog (plans/15a-ui-translation.md): Claude's draft from `en`, no native-speaker check yet (plan 141).
-// Style guide: style/zh-Hans.md. Joker names: the recommended ones of the pending joker-name decision.
+// Style guide: style/zh-Hans.md. Joker names: decision 775 (Set A), final.
 import type { Catalog } from "./es.ts";
 
 export const zhHans = {
