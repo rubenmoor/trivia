@@ -53,6 +53,7 @@ A `qgen batch --bundle chinese-base --from base` run (`fit-<n>`, plan 230) judge
 - Lists: the copies at `http://127.0.0.1:8001/review?batch=fit-<n>`; verdicts in `authoring/data/bundles/chinese-base/fit.json`; the fit view with flips at `/review?fit=chinese-base` (filters verdict, reason, run; a drop sample of 30 per run; the spot-check sample of a run at `/review?batch=fit-<n>&sample=1`).
 - Samples: the spot check (`&sample=1`) over kept and adapted copies (the audit reads the adapted only); the fit view's drop sample (30 per run) to see the pass doesn't drop too much.
 - Flips: drop → keep (the next run copies it, no fit call); keep → drop (the copy `rejected` at once, in the fit view); adapt ↔ keep only through the copy's own review. Flips are `by: developer` in `fit.json`.
+- Health: `authoring/reports/batches.md` "Fit runs" (rates, $ per judged source; no thresholds, no gate); the developer records the look with `qgen health ack fit-<n> "<note>"`.
 - Prompt changes only after a decision on `prompts/fit.md` (D-36).
 
 ## Translation runs

@@ -353,6 +353,45 @@ def translation_health_section(run):
             "`qgen health ack` records the developer's look.", "", *lines, ""]
 
 
+# --- fit runs (plan 230): `qgen batch --bundle <id> --from base` ---------------
+# Report only: no thresholds, no warning before the next run (decision 414: never a stop); `qgen health ack`
+# records the developer's look at a run, e.g. the pilot fit-1.
+
+def fit_runs():
+    """work/fit-N whose run.json (mode fit) got past the copy step ("ids" written), oldest first."""
+    return [r for r in qgen.work_runs(r"fit-\d+", "run.json") if "ids" in (load(WORK / r / "run.json", {}) or {})
+            and (load(WORK / r / "run.json") or {}).get("mode") == "fit"]
+
+
+def fit_health(run, pool=None):
+    """{metric: value} of one fit run; None = n/a."""
+    import fit  # authoring/tools/fit.py (imports qgen)
+    s = fit.run_stats(run)
+    j = s["judged"]
+    d = WORK / run
+    dollars = sum(qgen.costs(d)) + sum(qgen.costs(d / "audit"))
+    adapt = s["adapt"]
+    return {"judged": j, "kept": s["keep"], "adapted": adapt, "dropped": s["drop"],
+            "keep rate": rate(s["keep"], j), "adapt rate": rate(adapt, j), "drop rate": rate(s["drop"], j),
+            "adapted approved": s["adapted_ok"], "adapted approved rate": rate(s["adapted_ok"], adapt),
+            "cost $": dollars, "$ per judged": rate(dollars, j)}
+
+
+FIT_PCT = {"keep rate", "adapt rate", "drop rate", "adapted approved rate"}
+
+
+def fit_table(runs):
+    cols = ["judged", "kept", "adapted", "dropped", "keep rate", "adapt rate", "drop rate",
+            "adapted approved", "adapted approved rate", "cost $", "$ per judged"]
+    out = ["| metric | " + " | ".join(runs) + " |", "|---|" + "---|" * len(runs)]
+    hs = [fit_health(r) for r in runs]
+    for c in cols:
+        cells = [("n/a" if h[c] is None else f"{100 * h[c]:.1f} %" if c in FIT_PCT
+                  else f"${h[c]:.2f}" if c.startswith("$") or c == "cost $" else str(h[c])) for h in hs]
+        out.append(f"| {c} | " + " | ".join(cells) + " |")
+    return out
+
+
 def deficit_line(bundle="base", pool=None):
     pool = pool if pool is not None else load(POOL)["questions"]
     d = targets.deficits(pool, bundle)
@@ -396,6 +435,12 @@ def write_batches_md(pool=None):
              *table(runs, pool), "", *deficit_lines(runs, pool), "", "## Acknowledgements", "",
              "Failing batches the developer has looked at (`qgen health ack`): looked at, the batch still fails.", "",
              *ack_lines(), ""]
+    fits = fit_runs()
+    if fits:
+        lines += ["## Fit runs", "",
+                  "`qgen batch --bundle <id> --from base` (plan 230): rates are of judged sources; reported only, no thresholds "
+                  "and no warning before the next run (decision 414); `qgen health ack` records the developer's look.", "",
+                  *fit_table(fits), ""]
     qc = report.qc_trend(pool)
     if qc:
         lines += ["## Quality control", "",

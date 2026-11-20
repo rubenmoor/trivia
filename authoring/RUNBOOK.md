@@ -95,6 +95,7 @@ A pm worker (environment `PM_WORKER=1`) follows the steps above with these chang
   - *fit*: `prompts/fit.md` in calls of 50 (opus): `keep` / `adapt` (with an issue for the reviser) / `drop` (with a reason).
   - *copy*: a copy per keep and adapt (`authoring/tools/copies.py`: own id, `bundle: chinese-base`, `locale: en`, `copied_from`, the mapped subcategory, the source's media record; `batch: fit-<n>`). Keep → approved (a near-duplicate of a question already in `chinese-base` → `needs_work`); adapt → `needs_work` with "adapt for a Chinese family: <issue>", then the rework steps; ends approved or `needs_work`.
 - Verdicts: `authoring/data/bundles/chinese-base/fit.json` (verdict, reason, note, run, `by`: fit, map, rule or developer, copy id); commit it with the run.
+- First run (pilot): stop after it for the developer's look, then `qgen health ack fit-<n> "<note>"` (no gate: the next run isn't blocked, and batches.md lists the fit row).
 - Report: `authoring/reports/fit-<n>.md` (judged, kept, adapted, dropped, by rule, not copyable, per `base` category and subcategory, drop reasons, needs work, cost). QC: `authoring/QC.md` "Fit runs".
 
 ## What the batch does (for reference)
