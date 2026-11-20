@@ -1174,6 +1174,37 @@ def as_locale(questions, locale):
     return out
 
 
+def fit_text(q, tr=None):
+    """A base source's approved English text (plan 230): an en source's own, else its approved en translation;
+    None: not copyable yet. `tr`: {id: en translation}, loaded if None."""
+    if translations.source_locale(q) == "en":
+        return {k: q[k] for k in translations.TEXT_FIELDS}
+    tr = {t["id"]: t for t in translations.load("en")["questions"]} if tr is None else tr
+    t = tr.get(q["id"])
+    return {k: t[k] for k in translations.TEXT_FIELDS} if t and t["status"] == "approved" else None
+
+
+def fit_item(q, text):
+    """fit.md's item for a base source and its English text (fit_text)."""
+    sub = q["subcategory"]
+    m = q.get("media") or {}
+    return {"id": q["id"],
+            "subcategory": f"{categories.display('base', sub, 'en')} (broad category: {categories.category_name('base', sub, 'en')})",
+            "difficulty": q["difficulty"],
+            **{k: text[k] for k in ("description", "question", "answer", "wrong_answers", "hints", "fun_fact")},
+            "media": {"type": m.get("type"), "title": media_title(q) if m.get("file_url") else None,
+                      "credit": m.get("credit")} if m else None}
+
+
+def fit_system(bundle):
+    """fit.md's system prompt for a target base bundle."""
+    return prompt("house-style", "fit", locale="en", bundle=bundle)
+
+
+def fit_user(items):
+    return "## Items\n" + json.dumps(items, ensure_ascii=False)
+
+
 ENGLISH_KEYS_SIZE = 250  # sources per english-keys call
 ENGLISH_KEYS_SCHEMA = {"type": "object", "required": ["items"], "properties": {"items": {
     "type": "array", "items": {"type": "object", "required": ["id", "answer", "concept"],
@@ -2010,7 +2041,7 @@ from review_steps import BATCH_SLOTS, REVIEW_MODEL, batch_questions, cmd_fix, cm
 from rework import cmd_rework
 import spotcheck  # authoring/tools/spotcheck.py: `qgen spotcheck` (plan 141)
 from taxonomy import cmd_bundle_new, cmd_remap, cmd_taxonomy
-from translate import LANGUAGES, cmd_translate_batch, in_locale, merge_translations, run_bundle, run_locale, text_locale, translated_drafts
+from translate import LANGUAGES, cmd_translate_batch, in_locale, media_title, merge_translations, run_bundle, run_locale, text_locale, translated_drafts
 from validate import cmd_validate, validate_pool
 
 
