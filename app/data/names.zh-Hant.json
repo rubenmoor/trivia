@@ -1,6 +1,12 @@
 {
   "version": 1,
   "locale": "zh-Hant",
+  "bundles": {
+    "chinese-base": {
+      "name": "基礎包：中國",
+      "description": "以中國為中心的題目：中國家庭熟悉的歷史、學校知識、社會與文化。"
+    }
+  },
   "age_groups": {
     "kids": "簡單",
     "young_teens": "普通",
