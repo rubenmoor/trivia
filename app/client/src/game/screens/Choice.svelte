@@ -157,8 +157,8 @@
   const VIDEO_KEY = t("configure.videoKey").toLowerCase();
   const AUDIO_KEY = t("configure.audioKey").toLowerCase();
   const PACE_OPTIONS: { id: "normal" | "hectic"; icon: IconName; key: string; name: string; about: string }[] = [
-    { id: "normal", icon: "clock", key: t("choice.paceNormalKey").toLowerCase(), name: t("choice.paceNormal"), about: t("choice.paceNormalAbout") },
     { id: "hectic", icon: "bolt", key: t("choice.paceHecticKey").toLowerCase(), name: t("choice.paceHectic"), about: t("choice.paceHecticAbout") },
+    { id: "normal", icon: "clock", key: t("choice.paceNormalKey").toLowerCase(), name: t("choice.paceNormal"), about: t("choice.paceNormalAbout") },
   ];
   function setPace(id: "normal" | "hectic") {
     if (busy) return;
@@ -236,6 +236,7 @@
       </div>
     {:else}
       {#if mode === "timed"}
+        <p class="label pick-heading">{t("choice.pace")}</p>
         <div class="pick-row" role="radiogroup" data-line>
           {#each PACE_OPTIONS as o, i (o.id)}
             {@const on = pace === o.id}
@@ -247,11 +248,10 @@
               onclick={() => setPace(o.id)}
               disabled={busy}
               data-focus-id="pace-{o.id}"
-              caption={t("choice.pace")}
+              caption={o.name}
             >
               {#snippet icon()}<Icon name={o.icon} />{/snippet}
               {#snippet chip()}<Prompt action={{ type: "letter", key: o.key }} />{/snippet}
-              <span class="label pace-name">{o.name}</span>
               <span class="label">{o.about}</span>
             </OptionButton>
           {/each}
@@ -451,10 +451,6 @@
   .row .customize {
     padding: calc(0.5 * var(--u)) calc(1.2 * var(--u));
     font-size: calc(1.1 * var(--u));
-  }
-  .pace-name {
-    color: var(--sky);
-    font-weight: 700;
   }
   .warn {
     color: var(--amber);
