@@ -179,6 +179,9 @@ def step_select(a):
     return []
 
 
+FIT_TRIES = 3
+
+
 def step_fit(a):
     """fit.md over the run's sources in chunks of FIT_CHUNK → work/<run>/fit/<first id>.json; when all are answered,
     their verdicts into fit.json."""
@@ -198,9 +201,15 @@ def step_fit(a):
             if text is None:
                 raise RuntimeError(f"{i}: its English text is gone since select (no approved, current en translation)")
             items.append(fit_item(by_id[i], text))
-        out, model = claude(system, fit_user(items), FIT_SCHEMA, a.model, d, with_model=True)
-        got = {x["id"]: x for x in out["items"] if x["id"] in group}
-        bad = [i for i in group if i not in got or got[i]["verdict"] == "adapt" and not (got[i]["issue"] or "").strip()]
+        got, model = {}, None
+        for _ in range(FIT_TRIES):  # the model sometimes skips items: ask again for the missing ones only
+            left = [it for it in items if it["id"] not in got]
+            if not left:
+                break
+            out, model = claude(system, fit_user(left), FIT_SCHEMA, a.model, d, with_model=True)
+            got |= {x["id"]: x for x in out["items"] if x["id"] in group and x["id"] not in got
+                    and not (x["verdict"] == "adapt" and not (x["issue"] or "").strip())}
+        bad = [i for i in group if i not in got]
         if bad:
             raise RuntimeError(f"fit: no usable verdict for {', '.join(bad)}")
         save_json(d / "fit" / f"{group[0]}.json", {"model": model, "items": [got[i] for i in group]})
