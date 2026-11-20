@@ -68,10 +68,6 @@ class BasePack(unittest.TestCase):
             self.assertEqual(steam.base_packs(), {"chinese-base"})
             self.assertEqual(steam.bundles(), ["colombia"])
 
-
-if __name__ == "__main__":
-    unittest.main()
-
     def test_smoke_pairs_come_from_data(self):
         data = self.repo / "app" / "data"
         rows = json.loads((data / "bundles.json").read_text())
@@ -85,3 +81,7 @@ if __name__ == "__main__":
         (data / "bundles/chinese-base/pool.zh-Hans.json").write_text(json.dumps({"questions": [{"id": "z"}]}))
         with mock.patch.object(rc, "REPO", self.repo):
             self.assertEqual(rc.smoke_pairs(), [("es", "base"), ("en", "base"), ("zh-Hans", "chinese-base"), ("en", "chinese-base")])
+
+
+if __name__ == "__main__":
+    unittest.main()
