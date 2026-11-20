@@ -63,6 +63,25 @@ test("wins, jokers and categories", () => {
   assert.ok(!inSteamworks("WIN_TIMED") && !inSteamworks("BUNDLE_COLOMBIA") && inSteamworks("FIRST_WIN"));
 });
 
+test("ALL_CATEGORIES: any one base bundle of the locale, alone (plan 227)", () => {
+  const bundle = (id: string) => ({ id, kind: "base", languages: ["es"], name: id, description: "" });
+  const cats: Category[] = [
+    { slug: "art", name: "Arte", bundle: "base", subcategories: ["Pintura"] },
+    { slug: "his", name: "Historia", bundle: "cb", subcategories: ["Dinastías"] },
+    { slug: "mus", name: "Música", bundle: "cb", subcategories: ["Ópera"] },
+  ];
+  const pool = [q("q-1", "Pintura"), q("q-2", "Dinastías", "cb"), q("q-3", "Ópera", "cb")];
+  const d = engineData(pool, cats, [bundle("base"), bundle("cb")] as never, realAgeGroups(), "es");
+  const got = (ids: string[]) => {
+    const save = emptySave();
+    save.games = [row("won", ids.map((question_id) => ({ level: 12, question_id, correct: true, jokers: [] })))];
+    return earned(save, d).includes("ALL_CATEGORIES");
+  };
+  assert.ok(got(["q-1"]), "base alone");
+  assert.ok(got(["q-2", "q-3"]), "second base bundle alone");
+  assert.ok(!got(["q-2"]), "second base bundle, one category missing");
+});
+
 // sessions (decision 285): scripted through the engine
 const real = engineData(realPool(), realCategories(), realBundles(), realAgeGroups());
 const T0 = Date.parse("2026-10-16T00:00:00Z");
