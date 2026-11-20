@@ -2139,6 +2139,17 @@ Post-milestone cleanup of milestone 1 (Enough content for game nights), per `dec
 | `authoring/tools/report.py` (`exit_check`, `report_exit_check`) | no findings: the last two done runs are taken per bundle, so the colombia batches (batch-16 on) don't enter the `base` check; missing data counts as ✗ | — | — | — |
 | `README.md` | status block still said ~2,140 approved and that question translations weren't shipped; now the counts, English-first drafting and the running translations | inconsistency | low | fixed (task 1758) |
 
+## Milestone 6 review (task 2416)
+
+Post-milestone cleanup of milestone 6 (Screen polish leftovers), per `decision 201: Recurring code review: who reviews new code after milestone 13? (code review part 11)`. Read in their current state: the splash (`question/splash.ts`, `Splash.svelte`, `timing.ts`), `Horizon.svelte` with `public/horizon/`, and the sharp-after-submit change in `question/Media.svelte`. `sound.svelte.ts`, `EffectsDemo.svelte` and the soundtrack files were reworked by milestone 22 and are left to its review. `npm` was not available in the worker shell: `npm run check` not run here.
+
+| file | finding | category | severity | status |
+|---|---|---|---|---|
+| `app/client/src/game/question/splash.ts` | no findings: one `pick` shared by exits (last 5) and entrances (last 2), the memory capped below the table size so a free item always exists | — | — | — |
+| `app/client/src/game/Horizon.svelte`, `app/client/public/horizon/` | no findings: every file in `public/horizon/` is used by the two layer tables, none missing; `CREDITS.md` beside them | — | — | — |
+| `app/client/src/game/question/Media.svelte` | no findings: `sharp` is a separate class from `dark`; D-15 documented in the header comment | — | — | — |
+| `app/client/src/` | `grep PLACEHOLDER` leaves two hits, both `PLACEHOLDER(1453)` (timed seat look, milestone 16); none from milestone 6; `Placeholder.svelte` and its references are gone | — | — | — |
+
 ## Inventory
 
 Every `git ls-files` path in scope, mapped to the one part that reviews it (2026-10-13, 174 files; produced by a throw-away script that reported no unassigned file). Files added later are added here by the part that reviews them.
