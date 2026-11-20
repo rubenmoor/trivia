@@ -201,7 +201,7 @@ def prompt(*names, locale="es", bundle="base", source_locale=None):
     """Prompt files joined; {age_groups} and {players} are filled from app/data/age-groups.json,
     {locale} from prompts/locale-<locale>.md, the language of the questions at hand (else locale-<language>.md;
     + translate-region.md for a regional bundle's translation, decision 167), {voices} from app/data/bundles.json (the
-    voices of `locale`), {source_language} from a translation's source locale (plan 148)."""
+    voices of `locale`), {bundle}/{rule}/{voice} (fit.md) from the bundle's row, {source_language} from a translation's source locale (plan 148)."""
     ag, focus = load_age_groups(), focus_group()
     groups = [f"{g['id'].replace('_', ' ')} ({ages_text(g)})" for g in ag["groups"]]
     if focus:
@@ -223,6 +223,8 @@ def prompt(*names, locale="es", bundle="base", source_locale=None):
         loc += "\n\n" + ((PROMPTS / "translate-region.md").read_text(encoding="utf-8").rstrip()
                           .replace("{bundle}", bundle).replace("{rule}", b["rule"]))
     text = text.replace("{locale}", loc)
+    if "{rule}" in text:  # fit.md: the target bundle's own text
+        text = text.replace("{bundle}", bundle).replace("{rule}", b["rule"]).replace("{voice}", b.get("voice") or VOICE)
     if source_locale:
         text = text.replace("{source_language}", LANGUAGES[source_locale])
     return (text.replace("{age_groups}", ", ".join(groups[:-1]) + " and " + groups[-1])
