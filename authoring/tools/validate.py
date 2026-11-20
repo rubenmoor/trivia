@@ -92,6 +92,7 @@ def validate_pool():
                 lists[key] = {c["name"] for c in (concepts.load(*key) or {}).get("concepts", [])}
             if q["concept"] not in lists[key]:
                 errors.append(f"{qid}: concept {q['concept']!r} is not in {key[1]}'s concept list ({key[0]})")
+    errors += copy_problems(data["questions"])
     for b, sub in subcategories:
         lst = concepts.load(b, sub)
         keys = [concepts.key(c["name"]) for c in (lst or {}).get("concepts", [])]
@@ -125,6 +126,28 @@ def validate_pool():
         errors.append(f"{len(gone)} id(s) of {tag}'s pool missing from authoring/data/questions.json "
                       f"(drop = status change, never deletion; plan 91): {', '.join(gone)}")
     return errors, warnings
+
+
+def copy_problems(questions):
+    """`copied_from` (decision 217): an existing question of another bundle that is no copy itself; one copy
+    per source per bundle. Only on sources: translations take it from the source (D-81), checked by their keys."""
+    by_id, out, seen = {q.get("id"): q for q in questions}, [], {}
+    for q in questions:
+        src_id = q.get("copied_from")
+        if src_id is None:
+            continue
+        qid, src = q.get("id", "?"), by_id.get(src_id)
+        if src is None:
+            out.append(f"{qid}: copied_from {src_id!r} is no question")
+            continue
+        if src.get("bundle") == q.get("bundle"):
+            out.append(f"{qid}: copied_from {src_id} is in the same bundle")
+        if src.get("copied_from"):
+            out.append(f"{qid}: copied_from {src_id} is itself a copy")
+        if (src_id, q.get("bundle")) in seen:
+            out.append(f"{qid}: second copy of {src_id} in {q.get('bundle')} (also {seen[src_id, q.get('bundle')]})")
+        seen.setdefault((src_id, q.get("bundle")), qid)
+    return out
 
 
 def demo_problems(data):
@@ -292,6 +315,8 @@ def translation_problems(data):
                 continue
             if t.get("status") not in {"draft", "approved", "rejected", "needs_work"}: errors.append(f"{where}: bad status")
             errors += [f"{where}: {x}" for x in review_problems(t)]
+            if "copied_from" in t:
+                errors.append(f"{where}: copied_from only on sources (a translation takes it from its source, D-81)")
             if all(k in t for k in ["wrong_answers", "hints", "difficulty", "answer"]):
                 errors += [f"{where}: {x}" for x in check_question_shape(t)]
             if translations.source_locale(q) == l:

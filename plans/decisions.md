@@ -1145,3 +1145,15 @@ Template:
   - Approved riddles stay; no `qgen rework`
 - Consequences: expected riddle share ≈ 5 %, top clue ≈ 51–53 %
 - Supersedes / related: amends D-55, PE-7; pm decisions 13, 351; plan 180
+
+## D-114: Copies of a question in another bundle: own question, provenance only
+- Date: 2026-11-20
+- Context: `chinese-base` takes questions of `base` that fit a Chinese family; pm decision 217 chose copies over shared membership, so wording can diverge per bundle (plan 227, task 2330)
+- Decision:
+  - **Copy:** a source question in `questions.json` with a new id, the target `bundle`, `locale: en`, `copied_from: <source id>`, the target's `subcategory`, the source's difficulty, answers and `media` record (same `file_url`, never a second file); own `batch`, no `review`, no `concept`/`axes`/`quality` (the target's concept lists differ)
+  - **Text:** an `en` source's own; an `es` source's approved, current `en` translation; none → refused (`authoring/tools/copies.py` `copy_question`; no command of its own, the caller appends and saves)
+  - **No link afterwards:** `copied_from` is provenance for the fit pass, stats and validate; fixes to the source don't propagate; translations of a copy are its own (D-81), and a seen counter is its own (pm decision 751)
+  - **Validate:** `copied_from` names an existing question of another bundle that is no copy; at most one copy per source per bundle; never on a translation entry
+  - **Overlap:** a copy and its source are no duplicates (`duplicates`, `overlap_candidates`, the review's `related`); a copy and another question of its own bundle are (normal rule)
+- Consequences: a copy never drives its source's `already_asked` or merge drops, nor the reverse
+- Supersedes / related: D-81, D-111; pm decisions 217, 751; plan 227

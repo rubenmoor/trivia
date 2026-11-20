@@ -65,6 +65,7 @@ import media_probe  # authoring/tools/media_probe.py: `qgen media-probe` (plan 2
 import media_survey  # authoring/tools/media_survey.py: `qgen media-survey` (plan 201)
 import patch_notes  # authoring/tools/patch_notes.py: `qgen patch-notes` (plan 96)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
+import copies  # authoring/tools/copies.py: copies into another bundle (decision 217)
 import demo  # authoring/tools/demo.py: `qgen demo` (plan 174)
 import played  # authoring/tools/played.py: opt-in telemetry → state/played/ (plan 109)
 
@@ -1111,7 +1112,7 @@ def duplicates(q, pool_questions, locale="es"):
     if qa.replace(" ", "").isdigit():
         return None
     for p in pool_questions:
-        if qa != overlap_norm(p["answer"], locale):
+        if qa != overlap_norm(p["answer"], locale) or copies.related(q, p.get("of", p)):  # a copy and its source aren't duplicates
             continue
         sim = difflib.SequenceMatcher(None, qq, overlap_norm(p["question"], locale)).ratio()
         both_essential = (q["media"]["role"] == p["media"]["role"] == "essential"
@@ -1237,7 +1238,7 @@ def overlap_candidates(q, others, cache, locale="es", cap=8):
     (`as_locale`); one cache per locale."""
     a, found = _overlap_keys(q, cache, locale), []
     for p in others:
-        if p is q:
+        if p is q or copies.related(q, p.get("of", p)):
             continue
         b, why, rank = _overlap_keys(p, cache, locale), None, 9
         if a["answer"] and b["answer"]:
