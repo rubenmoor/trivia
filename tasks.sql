@@ -337,7 +337,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - Start never shows a supply report; a pool too small for the chosen group and bundles shows on the Choice screen only.
 
 Plan files: `plans/21-age-groups.md`, `plans/22-bundles.md`.', '2026-10-11T21:54:56Z', '2026-10-16T02:26:26Z', 0);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (6, 'Screen polish leftovers', 'open', 'Leftovers from the finished visual and sound milestones (M3, M4), plus playful iconography before a game session.
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (6, 'Screen polish leftovers', 'implemented', 'Leftovers from the finished visual and sound milestones (M3, M4), plus playful iconography before a game session.
 
 ## Outcome
 - The next screen''s media is preloaded before it fades in; `PLACEHOLDER(UI-7)` is gone (UI-7).
@@ -383,7 +383,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - The developer approved the correct-answer sounds on the TV.
 - The developer approved the sharp picture after submit in a screen-gallery review set.
 
-Plan files: `plans/04-ui-tv-display.md`.', '2026-10-11T21:54:56Z', NULL, 0);
+Plan files: `plans/04-ui-tv-display.md`.', '2026-10-11T21:54:56Z', '2026-11-20T07:11:02Z', 0);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (7, 'Steam S2: product definition', 'implemented', 'The first phase of the Steam track (D-34) is decisions, not code: what the product is before anything Steam-specific gets built. It can run alongside the other milestones.
 
 ## Outcome
