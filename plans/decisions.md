@@ -605,7 +605,7 @@ Template:
   - **Target:** 5000 approved questions per launch language (es, en, de), with D-53's per-level mix (`authoring/data/targets.json`).
   - **No games-per-player number:** no bar a simulation must meet.
   - CT-2 (`qgen report --simulate`, S4) reports games per new player per mode, for information only. Burns per game: «Solo o en grupo» and round-robin co-op = 12 + the standard joker set's burns (3 × Soplo, 1 × each other joker, D-74); round-robin competitive ≈ N players × that; competitive (timed) ≈ 1 shared question per round, no jokers.
-  - Later languages (zh-Hans, ru, pt-BR, milestone 12): no target now.
+  - Later languages (zh-Hans, zh-Hant, milestone 12): no target now; ru, pt-BR no longer planned.
   - Quality bar unchanged: D-56, pm decision 2, release bar plan 57 (CT-5, pm decision 15).
 - Consequences: S4's exit = every launch language reaches the target, not a simulated games number. Whether a translated pool counts toward a language's 5000 follows plan 37's D-entry (OQ-31); open until then.
 - Supersedes / related: D-52, D-53, D-56, D-74; plans 16, 37, 38, 57
@@ -641,7 +641,7 @@ Template:
 - Date: 2026-10-12
 - Context: OQ-31, I18N-1 (plan 37); pm decisions 26 (launch languages) and 27 (Spanish variety, store languages). Today: Spanish with Colombian usage (D-6); regions are bundles (D-39, D-49); store names D-50.
 - Decision:
-  - **Launch languages:** Spanish, English, German (`es`, `en`, `de`). Later: Simplified Chinese, Russian, Portuguese (Brazil) (`zh-Hans`, `ru`, `pt-BR`), milestone 12 "Conquer the world" (on hold).
+  - **Launch languages:** Spanish, English, German (`es`, `en`, `de`). Later: Chinese (`zh-Hans`, `zh-Hant`), milestone 12; Russian, Portuguese (Brazil) dropped (amended below).
   - **Amended (milestone 12, plan 139 task 1165):** `zh-Hans` and `zh-Hant` are question locales with empty pools (`translations.LANGUAGES`, `data.ts`, `check-mod.mjs`; age-group names files only); no bundle lists them until `chinese-base` (plan 60 part 4), so `qgen validate` warns "no bundle lists it yet", `--simulate` skips them, `batch --translate` stops without `locale-<zh>.md`. `ru` and `pt-BR` are no longer planned.
   - **Spanish variety:** two variants.
     - `base` in neutral Latin American Spanish (`es-419`); the ~40 Colombianisms are rewritten through the pipeline (D-36), S4 content work.
@@ -1062,7 +1062,8 @@ Template:
   - **Source locale per question** (pm decision 235): `locale` on every source in `questions.json`, always written (task 2372; before, absent = `es`); `base` from batch-9 `en`, `base` ≤ batch-8 `es`, regional bundles their region's language. `questions.<L>.json` = translations into L of sources whose locale ≠ L (new `questions.es.json`, `questions.es-ES.json`); pool for L = approved sources in L + playing translations into L.
   - **Four question locales:** `en`, `es` (es-419, idiomatic Latin American, no compromise with Spain), `es-ES` (Spain's Spanish, own pool `pool.es-ES.json`), `de`; target 5000 approved each (D-75, pm decision 21).
   - **Drafting:** `qgen batch` for `base` drafts in English, international angle (no Spanish-world focus, no Anglo/US bias, no one-language wordplay); the whole chain on the English text; each en source → three translation jobs (`es`, `es-ES`, `de`). es-sourced questions stay es-sourced and get `en`, `de`, `es-ES` entries.
-  - **Gap aiming:** the four question locales' deficits steer English drafting (pm decision 236); milestone 12's locales only by plan 60's decision.
+  - **Gap aiming:** the deficits of the locales a bundle lists steer its English drafting (pm decision 236); a locale the bundle doesn't list never counts (`targets.source_supply`, plan 139 task 1163). zh steers only `chinese-base`, once that bundle lists it (plan 60 part 4).
+    - Effect when this landed: sports, history, movies, geography list only `en`, so their `en` aim shrank (`--cost`: en "to go" 2015 → 2000); `base` (all four) unchanged
     - per question locale L: approved = `base` sources in L + playing translations into L (`targets.approved_entries`)
     - draft gap per level = largest over the four of `targets.locale_gap`: deficit / yield − approved translatable sources not yet in L; `en` (the drafting locale) takes its drafts 1:1, untranslated es sources count at the en yield
     - `qgen report [--locale L]`: progress per locale + the gap table; `--cost`: draft $/approved per source locale (es batches' rate until an en batch), translations into each of the four, projection = en drafts + the rest of each deficit translated

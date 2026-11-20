@@ -63,7 +63,7 @@ Logged in [`open-questions.md`](open-questions.md) (frozen 2026-10-12; questions
 |----|----------|--------|
 | OQ-29 | ~~Desktop shell~~ answered: Electron (D-63) | 18 |
 | OQ-30 | ~~Game modes~~ answered: five modes, no presets, no checkpoint, no skip outside gamemaster mode (D-74) | 13 |
-| OQ-31 | ~~Launch languages~~ answered: es, en, de (zh-Hans, ru, pt-BR later); `base` in es-419 + es-ES variant, `colombia` stays Colombian (D-78) | 15, 16 |
+| OQ-31 | ~~Launch languages~~ answered: es, en, de (zh-Hans, zh-Hant later); `base` in es-419 + es-ES variant, `colombia` stays Colombian (D-78) | 15, 16 |
 | OQ-32 | ~~Content target~~ answered: 5000 approved per launch language, D-53's mix; no games number (D-75) | 16 |
 | OQ-33 | ~~Price model; account~~ answered: paid $9.99, regional pricing, packs as free DLC; account: a person, advisor check first (D-98) | 17 |
 | OQ-34 | ~~Store name~~ answered, final: «Living Room Trivia» / «Trivia en Familia» / de «Wohnzimmer-Quiz»; PUB-7 passed 2026-10-15 (D-50, decisions 78, 176) | 17 |
