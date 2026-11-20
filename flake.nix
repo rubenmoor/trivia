@@ -51,7 +51,7 @@
       };
 
       authoringTools = pkgs: rec {
-        qgen = fromCheckout pkgs "qgen" "authoring/tools/qgen.py" [ pkgs.claude-code pkgs.imagemagick pkgs.nodejs_22 ];
+        qgen = fromCheckout pkgs "qgen" "authoring/tools/qgen.py" [ pkgs.claude-code pkgs.imagemagick pkgs.nodejs_22 pkgs.opencc ];  # opencc: zh-Hant conversion (decision 762, Apache-2.0)
         # Library music into loops (plan 221): numpy, librosa, soundfile for the loop finder; uv makes the Demucs venv.
         trivia-music = fromCheckoutWith pkgs (pkgs.python3.withPackages (p: [ p.numpy p.librosa p.soundfile ]))
           "trivia-music" "authoring/tools/music/music.py" [ pkgs.ffmpeg-headless pkgs.uv ];
@@ -214,7 +214,7 @@
         let tools = authoringTools pkgs; in {
           default = pkgs.mkShell {
             packages = [
-              pkgs.nodejs_22 (pkgs.python3.withPackages (p: [ p.numpy p.librosa p.soundfile p.fonttools p.brotli ])) pkgs.ruff pkgs.imagemagick pkgs.claude-code pkgs.electron
+              pkgs.nodejs_22 (pkgs.python3.withPackages (p: [ p.numpy p.librosa p.soundfile p.fonttools p.brotli ])) pkgs.ruff pkgs.imagemagick pkgs.claude-code pkgs.electron pkgs.opencc  # opencc: authoring/tools/test_hant.py
               tools.qgen tools.trivia-media tools.trivia-authoring tools.trivia-dev tools.trivia-desktop
               tools.trivia-music tools.trivia-sfx tools.trivia-desktop-build tools.trivia-report-server tools.trivia-gallery tools.trivia-trailer
               pkgs.xvfb  # authoring/store/screenshots.mjs, authoring/steam/smoke.mjs

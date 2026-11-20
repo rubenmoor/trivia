@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "note": "zh-Hans term -> exact zh-Hant text, kept out of OpenCC s2twp (qgen batch --translate zh-Hant). Longest term wins. Add what the vocabulary pass or the native read finds. 海里: 'in the sea' in this pool, never the nautical mile. 布尔: the person Boole; the programming terms keep Taiwan's 布林.",
+  "terms": {
+    "悉尼": "雪梨",
+    "布里斯班": "布里斯本",
+    "海里": "海裡",
+    "海里游": "海裡游",
+    "模仿真": "模仿真",
+    "印度教历": "印度教曆",
+    "挨骂": "挨罵",
+    "荧光": "螢光",
+    "布尔": "布爾",
+    "布尔值": "布林值",
+    "布尔型": "布林型",
+    "布尔代数": "布林代數"
+  }
+}

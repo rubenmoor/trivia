@@ -154,7 +154,7 @@ Answered 2026-11-19; they override the recommendations above where they differ.
 - `decision 756: Chinese variant(s): which written Chinese does the game ship in milestone 12?` → `zh-Hans` and `zh-Hant` both in milestone 12, a player choice like any language.
   - "The zh locale(s)" in every later part = `zh-Hans` + `zh-Hant`; each is its own locale in the picker, own pool, own catalog, own native reviewer (decision 220), own gate (decision 222).
   - Steam languages `schinese` + `tchinese`; fonts SC + TC; Hong Kong and Macau read `zh-Hant`.
-  - Open: how `zh-Hant` is translated (own run vs. OpenCC `s2twp` + vocabulary pass + native read); raised as its own decision.
+  - How `zh-Hant` is translated: `decision 762: zh-Hant translation path: its own translation run, or conversion from zh-Hans?` → OpenCC `s2twp` conversion of approved zh-Hans (`authoring/tools/hant.py`, exceptions `authoring/data/zh-hant-exceptions.json`) + vocabulary pass + native read; no own run.
 - `decision 757: Sensitivity rule for Chinese content: how do drafting, the fit pass and zh translation treat contested political topics?` → neutral facts only.
   - Rule text (verbatim into the fit prompt, the `chinese-base` voice, the zh locale prompts and store texts): contested topics are allowed when the question states an undisputed fact (a date, a name) without judgement or status wording; maps and flags are checked case by case.
   - Replaces the research recommendation "leave contested topics out entirely": no blanket ban on maps, flags or politics in shots, trailer or pool; each map or flag is judged on its own.

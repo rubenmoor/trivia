@@ -1,0 +1,1756 @@
+{
+  "version": 1,
+  "hash": "27c3656d",
+  "questions": [
+    {
+      "id": "q-21210",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "chinese-base",
+      "description": "唯一一個把衣服弄髒不但不挨罵，反而是正經任務的派對。",
+      "question": "在印度，人們會在街頭互相拋撒彩色粉末，這個節日叫什麼？",
+      "answer": "侯麗節",
+      "wrong_answers": [
+        "排燈節",
+        "九夜節",
+        "龐格爾節"
+      ],
+      "hints": [
+        "它慶祝春天的到來。",
+        "除了彩粉，很多人還會用水槍和水球把對方澆個透。",
+        "它在印度教曆帕爾古納月的滿月舉行，通常在3月。"
+      ],
+      "fun_fact": "侯麗節又叫“灑紅節”或“色彩節”，慶祝的是善戰勝惡。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Taj_Mahal%2C_Agra%2C_India_edit2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATaj_Mahal%2C_Agra%2C_India_edit2.jpg",
+        "credit": "Yann; edited by King of Hearts · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Yann; edited by King of Hearts",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Yann",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21216",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "sweets-and-chocolate",
+      "bundle": "chinese-base",
+      "description": "這種配料從熬骨頭的大鍋一路溜進了糖果袋，居然誰都沒發現。",
+      "question": "它來自動物皮和骨頭裡的膠原蛋白，能讓軟糖變得有嚼勁。它是什麼？",
+      "answer": "明膠",
+      "wrong_answers": [
+        "果膠",
+        "瓊脂",
+        "玉米澱粉"
+      ],
+      "hints": [
+        "它來自動物，不是植物。",
+        "它有粉狀的，也有透明的薄片狀的。",
+        "肉皮凍放涼後能凝固成塊，靠的就是它。"
+      ],
+      "fun_fact": "因為含有明膠，很多軟糖其實不算素食，所以有些品牌改用從水果中提取的果膠。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/French_and_German_Gummy_bears.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFrench_and_German_Gummy_bears.JPG",
+        "credit": "MichaelFrey · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "MichaelFrey",
+        "author_url": "https://commons.wikimedia.org/wiki/User:MichaelFrey",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21221",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "deserts",
+      "bundle": "chinese-base",
+      "description": "一個大到全世界的貓一起上也用不完的貓砂盆。",
+      "question": "世界上最大的熱沙漠是哪一個？",
+      "answer": "撒哈拉沙漠",
+      "wrong_answers": [
+        "阿拉伯沙漠",
+        "卡拉哈里沙漠",
+        "阿塔卡馬沙漠"
+      ],
+      "hints": [
+        "它在非洲。",
+        "它覆蓋了這個大洲北部的一大片土地。",
+        "它的名字來自阿拉伯語，意思就是“沙漠”。"
+      ],
+      "fun_fact": "撒哈拉沙漠差不多和整個中國一樣大；如果把寒冷的沙漠也算上，世界上最大的沙漠其實是南極洲。",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Namib-Naukluft_Sand_Dunes_%282011%29.jpg/3840px-Namib-Naukluft_Sand_Dunes_%282011%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANamib-Naukluft_Sand_Dunes_%282011%29.jpg",
+        "credit": "Yathin S Krishnappa · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Yathin S Krishnappa",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Yathin_sk",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21224",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "the-sea",
+      "bundle": "chinese-base",
+      "description": "一位從不巡迴演出的歌手，因為她壓根沒有腳。",
+      "question": "“半人半馬”的生物叫半人馬，那麼上半身是女子、下半身是魚尾的傳說生物叫什麼？",
+      "answer": "美人魚",
+      "wrong_answers": [
+        "小仙女",
+        "寧芙",
+        "美杜莎"
+      ],
+      "hints": [
+        "她住在海裡，但她是傳說中的生物。",
+        "在故事裡，她用美妙的歌聲吸引水手。",
+        "迪士尼動畫裡的愛麗兒就是其中之一。"
+      ],
+      "fun_fact": "哥倫布在加勒比海看到海牛時寫道，他見到了美人魚，只是她們沒有畫裡那麼漂亮！",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/%C3%89douard_Adam_-_Steam_sailing_ship_Finsbury_in_a_stormy_sea_%281881%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%C3%89douard_Adam_-_Steam_sailing_ship_Finsbury_in_a_stormy_sea_%281881%29.jpg",
+        "credit": "Édouard Adam · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Édouard Adam",
+        "author_url": "https://www.wikidata.org/wiki/Q3579712",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21226",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "weather-and-climate",
+      "bundle": "chinese-base",
+      "description": "風學陀螺轉圈圈，結果一不小心轉過了頭。",
+      "question": "看看這張照片：這種天氣現象叫什麼？",
+      "answer": "龍捲風",
+      "wrong_answers": [
+        "颶風",
+        "海嘯",
+        "雪崩"
+      ],
+      "hints": [
+        "它轉得飛快，像一個巨大的陀螺。",
+        "它像一個漏斗，從雲裡一直伸到地面。",
+        "在《綠野仙蹤》裡，它把多蘿西的房子整個帶上了天。"
+      ],
+      "fun_fact": "美國是世界上龍捲風最多的國家，每年超過1000場。",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/F5_tornado_funnel_cloud_Elie_Manitoba_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AF5_tornado_funnel_cloud_Elie_Manitoba_2007.jpg",
+        "credit": "Justin Hobson. Original uploader was Justin1569 (Justin Hobson) at en.wikipedia · CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "author": "Justin Hobson. Original uploader was Justin1569 (Justin Hobson) at en.wikipedia",
+        "author_url": "https://en.wikipedia.org/wiki/User:Justin1569",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21232",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "trees",
+      "bundle": "chinese-base",
+      "description": "答這道題之前，先把脖子往後仰，再仰，再仰一點。",
+      "question": "世界上最高的樹是哪一種？",
+      "answer": "北美紅杉",
+      "wrong_answers": [
+        "猴麵包樹",
+        "銀杏樹",
+        "木棉樹"
+      ],
+      "hints": [
+        "它生長在美國加利福尼亞州海岸附近的森林裡。",
+        "最高的一棵比30層的大樓還要高。",
+        "它名字裡的顏色，正是它樹皮和木材的顏色。"
+      ],
+      "fun_fact": "目前已知最高的北美紅杉名叫“亥伯龍”，高約116米，為了保護它，它的具體位置一直是保密的。",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Tall_open_forest_canopy_from_below_Mt_Glorious_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATall_open_forest_canopy_from_below_Mt_Glorious_01.jpg",
+        "credit": "John Robert McPherson · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "John Robert McPherson",
+        "author_url": "https://commons.wikimedia.org/wiki/User:John_Robert_McPherson",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21237",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "mammals",
+      "bundle": "chinese-base",
+      "description": "一隻把“多吃蔬菜”當成人生信條的熊。",
+      "question": "大熊貓主要吃什麼？",
+      "answer": "竹子",
+      "wrong_answers": [
+        "鮮魚",
+        "蜂蜜",
+        "香蕉"
+      ],
+      "hints": [
+        "它是一種植物。",
+        "它能長得很高，裡面是空心的。",
+        "在亞洲，人們用它的莖搭腳手架，甚至做腳踏車。"
+      ],
+      "fun_fact": "大熊貓一天能花12個多小時吃東西。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Zhangjiajie_%28223137313%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AZhangjiajie_%28223137313%29.jpeg",
+        "credit": "Hanlu Cao · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Hanlu Cao",
+        "author_url": "https://500px.com/hanluus",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21238",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "birds",
+      "bundle": "chinese-base",
+      "description": "這種鳥倒車的本事，比你爸停車時還厲害。",
+      "question": "哪種鳥能向後飛？",
+      "answer": "蜂鳥",
+      "wrong_answers": [
+        "老鷹",
+        "鸚鵡",
+        "貓頭鷹"
+      ],
+      "hints": [
+        "它的個頭非常小。",
+        "它每秒鐘能扇動翅膀幾十次。",
+        "它喜歡吸食花蜜。"
+      ],
+      "fun_fact": "蜂鳥的心跳每分鐘可以超過1000次。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Heliconia_%28222385345%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHeliconia_%28222385345%29.jpg",
+        "credit": "Photo by David J. Stang · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Photo by David J. Stang",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21274",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "history",
+      "bundle": "chinese-base",
+      "description": "有人出門去找印度，結果迷了路，找到了一個完全不同的地方。",
+      "question": "1492年，誰帶著三艘船到達了美洲？",
+      "answer": "哥倫布",
+      "wrong_answers": [
+        "麥哲倫",
+        "亞美利哥",
+        "達·伽馬"
+      ],
+      "hints": [
+        "他是來自義大利熱那亞的航海家。",
+        "他是為西班牙國王和女王出海的。",
+        "南美洲國家哥倫比亞就是以他的名字命名的。"
+      ],
+      "fun_fact": "哥倫布以為自己到了亞洲的“印度”，所以把遇到的當地人稱為“印第安人”。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/%28Study_of_a_Large_Sailing_Ship_at_Sea%29_by_Edward_Hopper.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%28Study_of_a_Large_Sailing_Ship_at_Sea%29_by_Edward_Hopper.jpg",
+        "credit": "Edward Hopper · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Edward Hopper",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21334",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "skyscrapers",
+      "bundle": "chinese-base",
+      "description": "這份工作能看到全城最美的風景，可幹活的人一點也不想往下看。",
+      "question": "一隊清潔工要把世界最高建築哈利法塔的每塊玻璃都擦一遍。這要花多長時間？",
+      "answer": "大約3個月",
+      "wrong_answers": [
+        "大約3小時",
+        "大約3天",
+        "大約30年"
+      ],
+      "hints": [
+        "這座大樓有超過2.4萬扇窗戶。",
+        "大約36個人吊在作業平臺上幹這份活。",
+        "等他們擦完，頂上的窗戶又該重新擦了。"
+      ],
+      "fun_fact": "清潔工終於擦完哈利法塔的時候，最早擦的窗戶又髒了，只好從頭再來。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Cleaning_windows_skyscrapers_02.jpg/3840px-Cleaning_windows_skyscrapers_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACleaning_windows_skyscrapers_02.jpg",
+        "credit": "Buiobuione · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Buiobuione",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Buiobuione",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21337",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "history-of-money",
+      "bundle": "chinese-base",
+      "description": "唯一一種能吃的海盜寶藏，吃完還不用去看牙醫……嗯，差不多吧。",
+      "question": "我像海盜的金幣一樣閃閃發光，裡面卻是甜的。把我放在太陽底下，我會怎麼樣？",
+      "answer": "我會融化",
+      "wrong_answers": [
+        "我會生鏽",
+        "我會結冰",
+        "我會變大"
+      ],
+      "hints": [
+        "我的裡面不是金屬做的。",
+        "我是用一種小朋友都愛吃的棕色東西做的。",
+        "大熱天裡，冰淇淋也會這樣。"
+      ],
+      "fun_fact": "巧克力金幣外面那層金色錫紙是模仿真金幣的，在很多國家，人們會在聖誕節把它當作禮物送人。",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Treasure_Pirate_ship_Buccaneer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATreasure_Pirate_ship_Buccaneer.jpg",
+        "credit": "EgorovaSvetlana · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "EgorovaSvetlana",
+        "author_url": "https://commons.wikimedia.org/wiki/User:EgorovaSvetlana",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21339",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "economy-and-stock-market",
+      "bundle": "chinese-base",
+      "description": "每一塊巧克力，從前都是一顆懷揣遠大夢想的豆子。",
+      "question": "在巧克力工廠裡，可可豆運進去，巧克力棒做出來。這些可可豆叫什麼？",
+      "answer": "原材料",
+      "wrong_answers": [
+        "製成品",
+        "零配件",
+        "副產品"
+      ],
+      "hints": [
+        "想想工廠的活兒從哪裡開始，而不是在哪裡結束。",
+        "工廠在做出任何東西之前，先要有的就是它。",
+        "做T恤用的棉花、做桌子用的木頭，也都叫這個。"
+      ],
+      "fun_fact": "世界上大部分可可豆產自西非，而大部分巧克力卻是在遙遠的歐洲和北美生產的。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Bagging_Cocoa_seeds.jpg/3840px-Bagging_Cocoa_seeds.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABagging_Cocoa_seeds.jpg",
+        "credit": "Ei'eke · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ei'eke",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ei%27eke",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21340",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "world-religions",
+      "bundle": "chinese-base",
+      "description": "好幾米長的布，卻從來不用進衣櫃。",
+      "question": "圖中這種把長布一圈圈繞在頭上做成的服飾叫什麼？",
+      "answer": "纏頭巾",
+      "wrong_answers": [
+        "印花方巾",
+        "貝雷帽",
+        "連衣帽"
+      ],
+      "hints": [
+        "它是戴在頭上的。",
+        "在印度和中東很常見。",
+        "《一千零一夜》裡的阿拉丁和許多人物都戴著它。"
+      ],
+      "fun_fact": "錫克教徒的纏頭巾要用好幾米長的布，而且每天都得重新纏一遍。",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Head_of_a_Turkish_man_wearing_a_turban%2C_facing_left%2C_reputed_Wellcome_V0029770.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHead_of_a_Turkish_man_wearing_a_turban%2C_facing_left%2C_reputed_Wellcome_V0029770.jpg",
+        "credit": "CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": null,
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21347",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "vegetables",
+      "bundle": "chinese-base",
+      "description": "有一種蔬菜幾百年前換了身新衣服，從此再也沒換回來。",
+      "question": "一千多年前，亞洲人最早種的胡蘿蔔並不是橙色的。它們通常是什麼顏色？",
+      "answer": "紫色",
+      "wrong_answers": [
+        "藍色",
+        "綠色",
+        "粉色"
+      ],
+      "hints": [
+        "如今有些市場還會把這種顏色的胡蘿蔔當稀罕貨來賣。",
+        "這是一種深顏色，和茄子皮很像。",
+        "把紅色和藍色的顏料混在一起，就能調出這種顏色。"
+      ],
+      "fun_fact": "橙色胡蘿蔔流行起來，要歸功於大約400年前的荷蘭農民。",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Vegetable_garden_at_Eisenhower_National_Historic_Site._%28b23c07a7-6122-44cf-941c-34fc8116cbb8%29.jpg/3840px-Vegetable_garden_at_Eisenhower_National_Historic_Site._%28b23c07a7-6122-44cf-941c-34fc8116cbb8%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVegetable_garden_at_Eisenhower_National_Historic_Site._%28b23c07a7-6122-44cf-941c-34fc8116cbb8%29.jpg",
+        "credit": "Mary O'Neill · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Mary O'Neill",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21354",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "continents",
+      "bundle": "chinese-base",
+      "description": "一條窄窄的海，兩個大洲差點就手拉手了，可惜它們都太害羞。",
+      "question": "哪個海峽把亞洲和美洲隔開？",
+      "answer": "白令海峽",
+      "wrong_answers": [
+        "直布羅陀海峽",
+        "麥哲倫海峽",
+        "霍爾木茲海峽"
+      ],
+      "hints": [
+        "它在很靠北的地方，那裡非常寒冷。",
+        "它位於俄羅斯和美國阿拉斯加之間。",
+        "它以一位丹麥探險家的名字命名。"
+      ],
+      "fun_fact": "它最窄處只有約82公里寬，冬天海面有時還會結冰。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Mito_Strait_on_Sea_I.jpg/3840px-Mito_Strait_on_Sea_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMito_Strait_on_Sea_I.jpg",
+        "credit": "HenSti · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "HenSti",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:HenSti&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21367",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "rocks-and-minerals",
+      "bundle": "chinese-base",
+      "description": "這座山花了幾千年化妝，就等著遊客來拍照打卡。",
+      "question": "“鐵和硫的礦物把我的山坡畫成一道道條紋。成千上萬人在秘魯安第斯山脈爬到海拔5000多米來看我。”我是誰？",
+      "answer": "彩虹山",
+      "wrong_answers": [
+        "火焰山",
+        "彩繪山",
+        "巧克力山"
+      ],
+      "hints": [
+        "2010年代以前，很少有遊客知道我。",
+        "徒步的人身邊常常有羊駝和美洲駝一起走。",
+        "數一數我身上條紋有幾種顏色，再想想雨後的天空。"
+      ],
+      "fun_fact": "紅色條紋的顏色來自氧化鐵，說白了就是鐵鏽。",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/00_1566_Cusco_-_Plaza_de_Armas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A00_1566_Cusco_-_Plaza_de_Armas.jpg",
+        "credit": "W. Bulach · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "W. Bulach",
+        "author_url": "https://commons.wikimedia.org/wiki/User:W._Bulach",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21376",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "reptiles",
+      "bundle": "chinese-base",
+      "description": "這種中南美洲雨林裡的青蛙小得能蹲在一個瓶蓋上。",
+      "question": "看照片：這種生活在中美洲和南美洲雨林裡的小青蛙叫什麼？",
+      "answer": "玻璃蛙",
+      "wrong_answers": [
+        "箭毒蛙",
+        "牛蛙",
+        "角蛙"
+      ],
+      "hints": [
+        "它的名字和廚房裡常見的一種材料有關。",
+        "仔細看它的肚子：你能透過它看到什麼？",
+        "它肚皮上的皮膚是透明的，像窗戶一樣能一眼看穿。"
+      ],
+      "fun_fact": "玻璃蛙睡覺時會把大部分紅血球藏進肝臟裡，讓自己變得更加透明。",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Flickr_-_ggallice_-_Glass_frog_%282%29.jpg/3840px-Flickr_-_ggallice_-_Glass_frog_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlickr_-_ggallice_-_Glass_frog_%282%29.jpg",
+        "credit": "Geoff Gallice from Gainesville, FL, USA · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Geoff Gallice from Gainesville, FL, USA",
+        "author_url": "https://www.flickr.com/people/11014423@N07",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21377",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "fish",
+      "bundle": "chinese-base",
+      "description": "一條穿著條紋睡衣、日程卻排得滿滿的魚。",
+      "question": "看看這條帶條紋的小觀賞魚。在魚缸之外，它在全世界以什麼出名？",
+      "answer": "用於研究基因和人類疾病",
+      "wrong_answers": [
+        "用於清除池塘裡的藻類",
+        "用於製作廉價的魚子醬",
+        "用作釣金槍魚的魚餌"
+      ],
+      "hints": [
+        "它的胚胎是透明的，能直接看到裡面一點點發育。",
+        "它的心臟受損後，有一部分能重新長出來。",
+        "全世界成千上萬的生物實驗室都在養它。"
+      ],
+      "fun_fact": "會發光的觀賞魚 GloFish（螢光魚），最初就是轉入了水母或珊瑚基因的斑馬魚。",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Danio_rerio_port.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADanio_rerio_port.jpg",
+        "credit": "Soulkeeper · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Soulkeeper",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Soulkeeper",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21378",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "insects",
+      "bundle": "chinese-base",
+      "description": "要是螞蟻也穿鞋，給全家買鞋可得逛上一整天。",
+      "question": "三隻螞蟻排成一隊在走路。它們一共有幾條腿？",
+      "answer": "18",
+      "wrong_answers": [
+        "12",
+        "24",
+        "30"
+      ],
+      "hints": [
+        "所有昆蟲的腿的數量都一樣。",
+        "螞蟻的腿比小狗多，比蜘蛛少。",
+        "每隻螞蟻有6條腿，現在乘一乘吧。"
+      ],
+      "fun_fact": "有些螞蟻能搬動比自己身體重很多倍的東西。",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Ants_walking_in_line_back_to_their_nest.jpg/3840px-Ants_walking_in_line_back_to_their_nest.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAnts_walking_in_line_back_to_their_nest.jpg",
+        "credit": "Jidapa Promdech · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jidapa Promdech",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jidapa_Promdech&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21383",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "cats",
+      "bundle": "chinese-base",
+      "description": "個頭小小的，卻總覺得自己才是一家之主。",
+      "question": "世界上體型最小的狗是什麼品種？",
+      "answer": "吉娃娃",
+      "wrong_answers": [
+        "博美",
+        "約克夏",
+        "巴哥"
+      ],
+      "hints": [
+        "它的名字來自一個地名，不是人名。",
+        "它的小腦袋上長著一對大耳朵，還常常渾身發抖。",
+        "它來自墨西哥，名字和墨西哥北部的奇瓦瓦州一樣。"
+      ],
+      "fun_fact": "被吉尼斯世界紀錄評為世界上最小的狗的“奇蹟米莉”就是一隻吉娃娃，身高不到10釐米。",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Kittens_paw.JPG/3840px-Kittens_paw.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKittens_paw.JPG",
+        "credit": "Rooow Ly · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rooow Ly",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Rooow_Ly&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21417",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "explorers-and-discoveries",
+      "bundle": "chinese-base",
+      "description": "哥倫布的導航地圖有點過時，大概差了半個地球。",
+      "question": "哥倫布以為自己到了亞洲，西班牙人便把美洲叫作“印度群島”。為了和亞洲那片區分開，它叫什麼？",
+      "answer": "西印度群島",
+      "wrong_answers": [
+        "新印度群島",
+        "南印度群島",
+        "大西洋印度群島"
+      ],
+      "hints": [
+        "這個名字和指南針上的方向有關。",
+        "從西班牙出發，要朝著太陽落下的方向航行才能到那裡。",
+        "亞洲那邊的被稱為“東印度群島”。"
+      ],
+      "fun_fact": "正因為這個誤會，美洲原住民被叫作“印第安人”（英文 Indian，本意是“印度人”），可他們從來沒去過印度。",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Launch_of_fireships_against_the_Spanish_Armada%2C_7_August_1588_RMG_BHC0263.jpg/3840px-Launch_of_fireships_against_the_Spanish_Armada%2C_7_August_1588_RMG_BHC0263.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALaunch_of_fireships_against_the_Spanish_Armada%2C_7_August_1588_RMG_BHC0263.jpg",
+        "credit": "anonymous · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "anonymous",
+        "author_url": "https://www.wikidata.org/wiki/Q4233718",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21418",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "greek-gods",
+      "bundle": "chinese-base",
+      "description": "古代最吵的小區：天天晚上不是打雷，就是吵架，要麼就是擺宴席。",
+      "question": "古希臘人認為，他們的眾神住在哪座山上？",
+      "answer": "奧林匹斯山",
+      "wrong_answers": [
+        "埃特納山",
+        "富士山",
+        "乞力馬扎羅山"
+      ],
+      "hints": [
+        "它是希臘境內一座真實存在的山。",
+        "它的名字聽起來很像一項世界聞名的體育盛會。",
+        "它是希臘最高的山，眾神之王宙斯的宮殿就在山頂。"
+      ],
+      "fun_fact": "這座山真實存在：它是希臘最高峰，海拔近2920米。",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Artemis_Temple_Stoa_DSCN1977a-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArtemis_Temple_Stoa_DSCN1977a-1.jpg",
+        "credit": "Kritheus · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Kritheus",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kritheus",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21465",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "wonders-of-the-world",
+      "bundle": "chinese-base",
+      "description": "這座教堂看起來像是一家興奮過頭的麵包店設計的。",
+      "question": "關於聖瓦西里大教堂，下面哪種說法是錯誤的？",
+      "answer": "它完全由白色大理石建成",
+      "wrong_answers": [
+        "它坐落在紅場上",
+        "它有洋蔥形的圓頂",
+        "它位於莫斯科"
+      ],
+      "hints": [
+        "它的內部其實是幾座小禮拜堂連在一起。",
+        "它的圓頂看起來像冰淇淋或糖果。",
+        "從外面看，能看到很多紅磚。"
+      ],
+      "fun_fact": "16世紀，沙皇伊凡雷帝下令修建這座大教堂，用來慶祝一場軍事勝利。",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Russian_winter%2C_Trees_in_snow%2C_Rostov-on-Don%2C_Russia.jpg/3840px-Russian_winter%2C_Trees_in_snow%2C_Rostov-on-Don%2C_Russia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARussian_winter%2C_Trees_in_snow%2C_Rostov-on-Don%2C_Russia.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21482",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "world-cuisines",
+      "bundle": "chinese-base",
+      "description": "奶奶們攪這道甜點時那麼有耐心，簡直該領一塊奧運金牌。",
+      "question": "看看這張特寫：這是什麼甜點？",
+      "answer": "米布丁",
+      "wrong_answers": [
+        "芒果布丁",
+        "麵包布丁",
+        "焦糖布丁"
+      ],
+      "hints": [
+        "這是一種奶香濃濃的甜點，很多奶奶都會用鍋慢慢煮。",
+        "上面常常撒一點肉桂粉。",
+        "看看那些小顆粒：它們和晚飯碗裡常見的是同一種東西。"
+      ],
+      "fun_fact": "用牛奶煮的甜米甜點很多國家都有，從印度的 kheer 到英國的米布丁都是。",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Arroz_con_leche%2C_postre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArroz_con_leche%2C_postre.jpg",
+        "credit": "Juan Emilio Prades Bel · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juan Emilio Prades Bel",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Emilio_Prades_Bel",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21488",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "capital-cities",
+      "bundle": "chinese-base",
+      "description": "這條河流淌了這麼多個世紀，早就該領退休金了。",
+      "question": "這是臺伯河。它流經歐洲哪座首都城市？",
+      "answer": "羅馬",
+      "wrong_answers": [
+        "雅典",
+        "巴黎",
+        "維也納"
+      ],
+      "hints": [
+        "它是歐洲最古老的首都之一。",
+        "傳說它是由一對被母狼養大的雙胞胎兄弟建立的。",
+        "著名的鬥獸場就在這座城市。"
+      ],
+      "fun_fact": "臺伯河中央有一座臺伯島，古羅馬人曾在島上為醫藥之神修建了一座神廟。",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/0_Pont_et_ch%C3%A2teau_Sant%27Angelo_-_Rome_%281%29.JPG/3840px-0_Pont_et_ch%C3%A2teau_Sant%27Angelo_-_Rome_%281%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A0_Pont_et_ch%C3%A2teau_Sant%27Angelo_-_Rome_%281%29.JPG",
+        "credit": "Jean-Pol GRANDMONT · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jean-Pol GRANDMONT",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jean-Pol_GRANDMONT",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21493",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "countries",
+      "bundle": "chinese-base",
+      "description": "這道題外面有硬殼，裡面卻多汁。",
+      "question": "看起來不像，但椰子、桃子和橄欖其實屬於同一類果實。是哪一類？",
+      "answer": "核果",
+      "wrong_answers": [
+        "堅果",
+        "漿果",
+        "莢果"
+      ],
+      "hints": [
+        "從植物學上講，椰子並不是很多人以為的那種果實。",
+        "這類果實裡只有一粒種子，外面包著一層堅硬的內果皮。",
+        "芒果和櫻桃也屬於這一類。"
+      ],
+      "fun_fact": "椰子能在海上漂浮好幾個月，衝上另一片海灘後還能發芽，所以熱帶各地的海島上都長著椰子樹。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Koh_Mak_%28island%29%2C_Thailand%2C_Palm_trees_on_the_beach.jpg/3840px-Koh_Mak_%28island%29%2C_Thailand%2C_Palm_trees_on_the_beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKoh_Mak_%28island%29%2C_Thailand%2C_Palm_trees_on_the_beach.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21498",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "volcanoes",
+      "bundle": "chinese-base",
+      "description": "這張照片裡誰都不是本來的顏色，連火山也不例外。",
+      "question": "有一種相機能拍出物體有多熱，冷的顯示成藍色，熱的顯示成黃色。它叫什麼？",
+      "answer": "熱成像相機",
+      "wrong_answers": [
+        "地震波相機",
+        "X光相機",
+        "針孔相機"
+      ],
+      "hints": [
+        "消防員也用它透過濃煙找人。",
+        "半夜裡，它也能找到躲起來的動物。",
+        "它能看見溫暖物體發出的看不見的紅外線。"
+      ],
+      "fun_fact": "火山學家用熱成像相機，能在火山噴發前發現火山口正在升溫。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Nevado_del_Ruiz_by_Edgar.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANevado_del_Ruiz_by_Edgar.png",
+        "credit": "Edgar from Ibagué, Colombia · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Edgar from Ibagué, Colombia",
+        "author_url": "https://www.flickr.com/people/63488671@N00",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21500",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "planet-earth",
+      "bundle": "chinese-base",
+      "description": "這種鯊魚慢得出奇，連樹懶在它旁邊都顯得急匆匆的。",
+      "question": "格陵蘭睡鯊大約能活多少年？",
+      "answer": "約400年",
+      "wrong_answers": [
+        "約15年",
+        "約50年",
+        "約3000年"
+      ],
+      "hints": [
+        "它比任何人都活得久，而且久得多。",
+        "如今在海裡游的一些格陵蘭睡鯊，可能在莫札特寫曲子的時候就已經出生了。",
+        "有好幾個世紀，但還不到幾千年。"
+      ],
+      "fun_fact": "格陵蘭睡鯊是已知壽命最長的脊椎動物，它每年只長大約1釐米。",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Iceberg_in_the_Arctic_with_its_underside_exposed.jpg/3840px-Iceberg_in_the_Arctic_with_its_underside_exposed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIceberg_in_the_Arctic_with_its_underside_exposed.jpg",
+        "credit": "AWeith · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "AWeith",
+        "author_url": "https://commons.wikimedia.org/wiki/User:AWeith",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21503",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "environment",
+      "bundle": "chinese-base",
+      "description": "個頭小小，能量滿滿，收場卻特別嬌氣：就像派對結束後的五歲小表弟。",
+      "question": "猜一猜：我住在遙控器和玩具裡，給它們提供能量；我用完了，可不能扔進普通垃圾桶。我是什麼？",
+      "answer": "電池",
+      "wrong_answers": [
+        "燈泡",
+        "塑膠瓶",
+        "易拉罐"
+      ],
+      "hints": [
+        "我有好多種大小：5號、7號、方形的，還有像紐扣一樣小的圓形。",
+        "玩具開不了機的時候，多半是該換我了。",
+        "我的一頭是“+”，另一頭是“−”。"
+      ],
+      "fun_fact": "電池裡含有鋅、錳、鋰等金屬，送到回收點就能把它們重新利用起來。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Colourful_row_of_recycling_plastic_dustbins.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AColourful_row_of_recycling_plastic_dustbins.jpg",
+        "credit": "Dave Goodman · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Dave Goodman",
+        "author_url": "https://www.flickr.com/people/22464562@N00",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21528",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "medicine-and-health",
+      "bundle": "chinese-base",
+      "description": "黏糊糊、油乎乎，偏偏還對你有好處。",
+      "question": "你擦破了膝蓋，從小管子裡擠出一種又稠又油的藥塗上去。這種藥叫什麼？",
+      "answer": "藥膏",
+      "wrong_answers": [
+        "糖漿",
+        "藥片",
+        "吸入器"
+      ],
+      "hints": [
+        "它不是用來吃的。",
+        "它直接塗在皮膚上。",
+        "它有點像護手霜，只是更稠、更油。"
+      ],
+      "fun_fact": "古埃及人會把蜂蜜抹在傷口上，如今有些醫院還在用特製的醫用蜂蜜。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Wound-106374_1280.jpg/3840px-Wound-106374_1280.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWound-106374_1280.jpg",
+        "credit": "saulhm · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "saulhm",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21542",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "prehistory",
+      "bundle": "chinese-base",
+      "description": "這張桌子太沉了，全家一起上陣也挪不動，桌底下的灰只好永遠掃不著。",
+      "question": "你站在一座支石墓前：幾塊大石頭豎著，頂上蓋一塊平石板。歐洲最早的支石墓建於多久以前？",
+      "answer": "約6500年前",
+      "wrong_answers": [
+        "約650年前",
+        "約6.5萬年前",
+        "約65萬年前"
+      ],
+      "hints": [
+        "它們比埃及金字塔還要古老。",
+        "它們建於新石器時代，那時人們已經會種地了。",
+        "有幾千年了，但還不到一萬年。"
+      ],
+      "fun_fact": "英文 dolmen 一詞來自布列塔尼語，意思是“石桌”。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Tella_-_Dolmen_de_Tella_06.jpg/3840px-Tella_-_Dolmen_de_Tella_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATella_-_Dolmen_de_Tella_06.jpg",
+        "credit": "Basotxerri · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Basotxerri",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Basotxerri",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21543",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "dinosaurs",
+      "bundle": "chinese-base",
+      "description": "一架真正的飛機，只不過長著喙、皮膜做的翅膀，脾氣還特別壞。",
+      "question": "巨型飛行爬行動物哈特茲哥翼龍，可能曾在今羅馬尼亞的一座島上捕食小型恐龍。它生活在哪個時期？",
+      "answer": "白堊紀",
+      "wrong_answers": [
+        "侏羅紀",
+        "三疊紀",
+        "二疊紀"
+      ],
+      "hints": [
+        "它是翼龍，和翼手龍是親戚，並不是恐龍。",
+        "它和霸王龍生活在同一時代，只是霸王龍住在另一塊大陸上。",
+        "這個時期在6600萬年前因小行星撞擊地球而結束。"
+      ],
+      "fun_fact": "它張開的翅膀寬約10米，站在地上時和長頸鹿一樣高。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Hatszeg_latkepe_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHatszeg_latkepe_%28cropped%29.jpg",
+        "credit": "Oguszt · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Oguszt",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Oguszt",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21548",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "world-war-ii",
+      "bundle": "chinese-base",
+      "description": "這個德語詞念起來像打了個噴嚏，可惜沒人接一句“有人在想你”。",
+      "question": "第二次世界大戰期間，德國的“Wehrmacht”是什麼？",
+      "answer": "德國武裝部隊",
+      "wrong_answers": [
+        "德國秘密警察",
+        "德國國家電臺",
+        "德國國家鐵路"
+      ],
+      "hints": [
+        "它從1935年存在到1945年。",
+        "它的名字意思是“防衛力量”。",
+        "1939年入侵波蘭的就是它。"
+      ],
+      "fun_fact": "德國空軍（Luftwaffe）也是 Wehrmacht 的一部分，中文通常把 Wehrmacht 譯作“國防軍”。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Brandenburger_Tor_morgens.jpg/3840px-Brandenburger_Tor_morgens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABrandenburger_Tor_morgens.jpg",
+        "credit": "Thomas Wolf, www.foto-tw.de · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Thomas Wolf, www.foto-tw.de",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Der_Wolf_im_Wald",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21584",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "languages-of-the-world",
+      "bundle": "chinese-base",
+      "description": "這個國家大得驚人，連鸚鵡都會跳桑巴，足球運動員個個都會變魔術。",
+      "question": "巴西的官方語言是什麼？",
+      "answer": "葡萄牙語",
+      "wrong_answers": [
+        "西班牙語",
+        "巴西語",
+        "法語"
+      ],
+      "hints": [
+        "在南美洲的大國裡，只有這個國家的主要語言不是西班牙語。",
+        "巴西曾經是一個歐洲國家的殖民地，那個國家就在西班牙旁邊。",
+        "這種語言是用C羅的祖國命名的。"
+      ],
+      "fun_fact": "巴西說葡萄牙語的人比葡萄牙本國多得多：超過2億，而葡萄牙只有約1000萬。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Redentor_Over_Clouds_1.jpg/3840px-Redentor_Over_Clouds_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARedentor_Over_Clouds_1.jpg",
+        "credit": "Donatas Dabravolskas · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Donatas Dabravolskas",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Donatas_Dabravolskas&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21595",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "famous-landmarks",
+      "bundle": "chinese-base",
+      "description": "這座城市實在太重要，名字多得像一條被三戶人家合養的狗。",
+      "question": "這座建築近1500年前作為基督教堂建成。當時它所在的城市叫什麼？",
+      "answer": "君士坦丁堡",
+      "wrong_answers": [
+        "耶路撒冷",
+        "亞歷山大港",
+        "雅典"
+      ],
+      "hints": [
+        "這座城市位於一條著名的海峽邊，兩個大洲在這裡相遇。",
+        "後來另一個帝國給它改了名，如今它是所在國家最大的城市。",
+        "城名取自一位羅馬皇帝，正是他把帝國首都遷到了這裡。"
+      ],
+      "fun_fact": "聖索菲亞大教堂近一千年裡一直是世界上最大的大教堂。",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Hagia_Sophia_Mars_2013.jpg/3840px-Hagia_Sophia_Mars_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHagia_Sophia_Mars_2013.jpg",
+        "credit": "Arild Vågen · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Arild Vågen",
+        "author_url": "https://commons.wikimedia.org/wiki/User:ArildV",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21597",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "famous-bridges",
+      "bundle": "chinese-base",
+      "description": "一座專為勇敢者準備的橋，晃得比廣場舞還帶勁。",
+      "question": "一座藏式吊橋橫跨山間深谷，人走上去會搖搖晃晃。它主要是用什麼做的？",
+      "answer": "繩子",
+      "wrong_answers": [
+        "磚塊",
+        "混凝土",
+        "石頭"
+      ],
+      "hints": [
+        "這種材料可以彎曲。",
+        "體育課上拔河也要用到它。",
+        "你可以在它上面打結。"
+      ],
+      "fun_fact": "在安第斯山脈，印加人用草編織吊橋；秘魯的克斯瓦恰卡橋至今每年都要重新編織一次。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Mountains_in_snow%2C_Mountain_lake%2C_Chola_Valley%2C_Nepal%2C_Himalayas.jpg/3840px-Mountains_in_snow%2C_Mountain_lake%2C_Chola_Valley%2C_Nepal%2C_Himalayas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMountains_in_snow%2C_Mountain_lake%2C_Chola_Valley%2C_Nepal%2C_Himalayas.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21598",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "world-currencies",
+      "bundle": "chinese-base",
+      "description": "這枚硬幣輕得不像話，一不留神就自己從口袋裡飄走了。",
+      "question": "我是日本面值最小的硬幣，重量正好1克。我是用什麼金屬做的？",
+      "answer": "鋁",
+      "wrong_answers": [
+        "銅",
+        "鎳",
+        "黃銅"
+      ],
+      "hints": [
+        "這是一種很輕的銀白色金屬。",
+        "很多易拉罐就是用它做的。",
+        "廚房裡用來包食物烤東西的“錫紙”，其實大多也是它。"
+      ],
+      "fun_fact": "這枚硬幣輕到可以靠水的表面張力浮在水面上。",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Japan_known_coin_types_from_708_to_958.jpg/3840px-Japan_known_coin_types_from_708_to_958.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJapan_known_coin_types_from_708_to_958.jpg",
+        "credit": "PHGCOM · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "PHGCOM",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PHGCOM",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21603",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "famous-philosophers",
+      "bundle": "chinese-base",
+      "description": "有人把整個世界簡化成了“是”或“否”，你的手機至今還在感謝他。",
+      "question": "哪位19世紀的英國數學家創立了一種“非真即假”的代數，奠定了今天計算機的基礎？",
+      "answer": "喬治·布爾",
+      "wrong_answers": [
+        "艾倫·圖靈",
+        "查爾斯·巴貝奇",
+        "艾薩克·牛頓"
+      ],
+      "hints": [
+        "他曾在愛爾蘭當大學教授。",
+        "程式設計裡只能取“真”或“假”的變數型別，就是以他的姓氏命名的。",
+        "程式設計師每天都要敲他的英文姓氏，只是縮成了四個字母。"
+      ],
+      "fun_fact": "布爾幾乎完全靠自學成才：他很小就離開了學校，一邊當老師一邊自學數學。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Woman_teaching_geometry.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWoman_teaching_geometry.jpg",
+        "credit": "Attributed to Meliacin Master · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Attributed to Meliacin Master",
+        "author_url": "https://www.wikidata.org/wiki/Q26809207",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21609",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "fast-food",
+      "bundle": "chinese-base",
+      "description": "一隻長得像熱狗麵包的狗，還是一個長得像狗的熱狗麵包？",
+      "question": "臘腸犬身子長、腿很短，它來自哪個國家？",
+      "answer": "德國",
+      "wrong_answers": [
+        "墨西哥",
+        "英國",
+        "中國"
+      ],
+      "hints": [
+        "這是一個以香腸出名的歐洲國家。",
+        "這個品種原來的名字意思是“獾狗”，因為它當初是用來鑽洞抓獾的。",
+        "這個國家的首都是柏林。"
+      ],
+      "fun_fact": "在美國，熱狗最早被叫作“臘腸犬香腸”，因為它看起來很像這種狗。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Teckel_-_39.jpg/3840px-Teckel_-_39.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATeckel_-_39.jpg",
+        "credit": "CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Another one of my pictures:\n\n\n\nThis photograph was taken by Medium69 (William Crochot) and released under the license stated below. You are free to use it for any purpose as long as you credit the author (William Crochot), the Source (Wikimedia Commons) and the license (CC-BY-SA 4.0) in close relation to the image.\n\n\n\n\n\nPlease do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source RAW. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+        "author_url": "https://commons.wikimedia.org/wiki/File:Salix_babylonica_(Saule_pleureur)_-_20150810_10h23_(11045).jpg",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21611",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "drinks",
+      "bundle": "chinese-base",
+      "description": "完美的派對：沒有禮物，沒有蛋糕，也完全沒有道理。",
+      "question": "我戴著一頂大帽子，和一隻野兔一起喝茶，還和愛麗絲慶祝“非生日快樂”。我是誰？",
+      "answer": "瘋帽子",
+      "wrong_answers": [
+        "白兔",
+        "柴郡貓",
+        "紅心王后"
+      ],
+      "hints": [
+        "我住在仙境裡。",
+        "我的茶會永遠不會結束。",
+        "我的名字說出了我做的東西……還有我腦袋裡是什麼狀況。"
+      ],
+      "fun_fact": "在書裡，瘋帽子的茶會永遠停在六點鐘，正好是下午茶時間。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Imre_Giszinger_-_1164072bf4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AImre_Giszinger_-_1164072bf4.jpg",
+        "credit": "Imre Giszinger · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Imre Giszinger",
+        "author_url": "https://www.wikidata.org/wiki/Q43130830",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21616",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "flags",
+      "bundle": "chinese-base",
+      "description": "一項以每小時300公里飛馳、五彩繽紛的運動，偏偏愛用這麼多黑和白。",
+      "question": "你在看一場F1賽車比賽，有人揮動了黑白格子旗。這是在比賽的什麼時候？",
+      "answer": "比賽結束時",
+      "wrong_answers": [
+        "比賽開始時",
+        "開始下雨時",
+        "比賽進行到一半時"
+      ],
+      "hints": [
+        "冠軍最愛看到它。",
+        "看到它之後，車手們會放慢速度開始慶祝。",
+        "領先的車手衝過終點線時，它就會出現。"
+      ],
+      "fun_fact": "早在20世紀初，黑白格子旗就已經出現在賽車運動中了。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Vodafone_McLaren_Mercedes_Formula_1_Car_%287322753674%29.jpg/3840px-Vodafone_McLaren_Mercedes_Formula_1_Car_%287322753674%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVodafone_McLaren_Mercedes_Formula_1_Car_%287322753674%29.jpg",
+        "credit": "William Murphy from Dublin, Ireland · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "William Murphy from Dublin, Ireland",
+        "author_url": "https://www.flickr.com/people/80824546@N00",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21617",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "rivers",
+      "bundle": "chinese-base",
+      "description": "這條河護照上蓋的入境章，比飛行員的還多。",
+      "question": "哪條歐洲河流流經10個國家，是世界上流經國家最多的河流？",
+      "answer": "多瑙河",
+      "wrong_answers": [
+        "萊茵河",
+        "易北河",
+        "羅訥河"
+      ],
+      "hints": [
+        "它發源於德國，最後注入黑海。",
+        "它流經奧地利首都維也納和匈牙利首都布達佩斯。",
+        "一首非常有名的圓舞曲以它命名，曲名裡有“藍色”二字。"
+      ],
+      "fun_fact": "多瑙河流經維也納、布拉迪斯拉發、布達佩斯和貝爾格萊德四座首都，是世界上流經首都最多的河流。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Budapest_Parliament_4604.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABudapest_Parliament_4604.JPG",
+        "credit": "Dirk Beyer · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Dirk Beyer",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Dirk_Beyer",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21618",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "mountains",
+      "bundle": "chinese-base",
+      "description": "這個俱樂部門檻極高，腦袋得伸到雲彩上面才能進去。",
+      "question": "世界上海拔超過8000米的山峰一共有多少座？",
+      "answer": "14座",
+      "wrong_answers": [
+        "9座",
+        "21座",
+        "30座"
+      ],
+      "hints": [
+        "數量少到登山愛好者都能把名單背下來。",
+        "它們全都在亞洲，分佈在喜馬拉雅山脈和喀喇崑崙山脈。",
+        "比10座多，但比20座少。"
+      ],
+      "fun_fact": "這些山峰被稱為“八千米級山峰”，1986年，義大利登山家梅斯納爾成為第一個登頂全部14座的人。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Himalayas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHimalayas.jpg",
+        "credit": "NASA · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21623",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "natural-phenomena",
+      "bundle": "chinese-base",
+      "description": "這地方黑得連手電筒都幫不了你找到出口。",
+      "question": "油鴟在漆黑的山洞裡築巢，在岩石間飛來飛去卻從不撞上。它靠什麼認路？",
+      "answer": "靠自己叫聲的回聲",
+      "wrong_answers": [
+        "靠岩石散發的熱量",
+        "靠成熟水果的氣味",
+        "靠發出的紅外線光"
+      ],
+      "hints": [
+        "問的是它怎麼在什麼都看不見的時候認路。",
+        "它會發出聲音，再聽聽傳回來的動靜。",
+        "蝙蝠和海豚也靠這種本領在黑暗中認路。"
+      ],
+      "fun_fact": "油鴟是世界上唯一在夜裡吃果子的飛鳥，1799年洪堡曾在委內瑞拉的瓜查羅洞裡研究過它。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Cueva_del_Guacharo_por_dentro.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACueva_del_Guacharo_por_dentro.JPG",
+        "credit": "Jiberch · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jiberch",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jiberch&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21628",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "plants",
+      "bundle": "chinese-base",
+      "description": "這個地方又冷又隱蔽，再勇敢的快遞小哥也不敢上門派件。",
+      "question": "謎語：我住在北極附近一座挪威海島的冰凍山體裡，人們叫我“末日地窖”。我儲存的是什麼？",
+      "answer": "世界各地的農作物種子",
+      "wrong_answers": [
+        "瀕危動物的DNA樣本",
+        "各國儲備的金條",
+        "應對未來大流行的疫苗"
+      ],
+      "hints": [
+        "我儲存的東西，能幫人類在一場大災難之後重新開始。",
+        "世界上幾乎每個國家都送來過東西讓我保管。",
+        "開啟我，你會看到豆子、大米、玉米和小麥……都是生的，隨時可以種下去。"
+      ],
+      "fun_fact": "種子庫建在斯瓦爾巴群島，是因為那裡有永久凍土，就算停電，種子也能一直保持冰凍。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Snowy_mountains.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASnowy_mountains.jpg",
+        "credit": "Billy Lindblom · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Billy Lindblom",
+        "author_url": "https://www.flickr.com/photos/41502344@N02",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21632",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "strange-creatures",
+      "bundle": "chinese-base",
+      "description": "大自然裡最成功的萬聖節裝扮，一年365天都不換下來。",
+      "question": "一種無害的蝴蝶模仿難吃蝴蝶的體色，讓鳥不敢吃它。這種現象以一位英國博物學家命名，叫什麼？",
+      "answer": "貝茨擬態",
+      "wrong_answers": [
+        "繆勒擬態",
+        "達爾文擬態",
+        "華萊士擬態"
+      ],
+      "hints": [
+        "這位博物學家在亞馬孫雨林裡採集了11年昆蟲。",
+        "他和華萊士一起去了亞馬孫，但這種現象不是以華萊士命名的。",
+        "他的名字是亨利·沃爾特。"
+      ],
+      "fun_fact": "亨利·沃爾特·貝茨在亞馬孫採集了約1.47萬種動物，其中約8000種是科學界從未見過的新物種。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Common_longwing_%28Heliconius_erato_amazona%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACommon_longwing_%28Heliconius_erato_amazona%29.JPG",
+        "credit": "Charles J. Sharp · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Charles J. Sharp",
+        "author_url": "https://www.wikidata.org/wiki/Q54800218",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21642",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "farm-animals",
+      "bundle": "chinese-base",
+      "description": "這種動物一輩子都踮著腳尖走路，活像一位芭蕾舞演員。",
+      "question": "馬的每條腿上有幾個腳趾？",
+      "answer": "1",
+      "wrong_answers": [
+        "2",
+        "3",
+        "5"
+      ],
+      "hints": [
+        "比你一隻手上的手指少。",
+        "馬蹄和你的指甲是同一種材料做的。",
+        "牛的蹄子分成兩瓣，馬的蹄子卻是完整的一塊。"
+      ],
+      "fun_fact": "幾千萬年前，馬的祖先只有狗那麼大，每隻腳上有好幾個腳趾。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Horses_grazing_at_Trunkol_meadow%2C_Jammu_and_Kashmir%2C_India_%28crop%29.jpg/3840px-Horses_grazing_at_Trunkol_meadow%2C_Jammu_and_Kashmir%2C_India_%28crop%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHorses_grazing_at_Trunkol_meadow%2C_Jammu_and_Kashmir%2C_India_%28crop%29.jpg",
+        "credit": "UnpetitproleX · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "UnpetitproleX",
+        "author_url": "https://commons.wikimedia.org/wiki/User:UnpetitproleX",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21654",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "human-body",
+      "bundle": "chinese-base",
+      "description": "你身體裡藏著一張小蹦床，每呼吸一次就上下彈一回，哪怕你根本沒察覺。",
+      "question": "肺的下方有一塊幫助我們呼吸的大肌肉，它叫什麼？",
+      "answer": "橫膈膜",
+      "wrong_answers": [
+        "甲狀腺",
+        "扁桃體",
+        "淋巴結"
+      ],
+      "hints": [
+        "它把胸腔和腹腔隔開，就像樓房上下兩層之間的地板。",
+        "它不聽指揮地亂動時，你就會打嗝。",
+        "每次吸氣，它都會變平、向下移動。"
+      ],
+      "fun_fact": "打嗝就是橫膈膜突然自己收緊造成的，完全不受你控制。",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/US_Navy_110630-F-ET173-201_Hospitalman_James_Allen_blows_up_a_balloon_for_a_patient_at_the_Los_Angeles_surgical_screening_site.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUS_Navy_110630-F-ET173-201_Hospitalman_James_Allen_blows_up_a_balloon_for_a_patient_at_the_Los_Angeles_surgical_screening_site.jpg",
+        "credit": "U.S. Air Force photo by Staff Sgt. Alesia Goosic · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Air Force photo by Staff Sgt. Alesia Goosic",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21674",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "pyramids",
+      "bundle": "chinese-base",
+      "description": "世界上最古老的工作日誌，可惜當年沒人幫它檢查錯別字。",
+      "question": "我是埃及現存最古老的有字紙莎草，記錄了督察官梅勒的日常工作。他的隊伍在運送什麼？",
+      "answer": "建造大金字塔的石灰岩塊",
+      "wrong_answers": [
+        "卡納克方尖碑用的花崗岩",
+        "造王家船隻的黎巴嫩雪松",
+        "獻給法老寶庫的努比亞黃金"
+      ],
+      "hints": [
+        "我於2013年在紅海邊的一座古港口被發現。",
+        "我寫於法老胡夫在位的時代。",
+        "我的隊伍從圖拉採石場出發，渡過尼羅河前往吉薩。"
+      ],
+      "fun_fact": "《梅勒日誌》顯示，石塊是用船沿尼羅河的運河運到吉薩的，並不是一路拖過整片沙漠。",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Edwin_Smith_Papyrus_v2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEdwin_Smith_Papyrus_v2.jpg",
+        "credit": "Jeff Dahl · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jeff Dahl",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jeff_Dahl",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21682",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "legends-and-superstitions",
+      "bundle": "chinese-base",
+      "description": "這隻鳥永遠飛不起來，可只要你夠有耐心，它就能幫你實現願望。",
+      "question": "有一種傳統說法：折滿一千隻圖中這樣的紙折作品，就能許下一個願望。這個傳統來自哪個國家？",
+      "answer": "日本",
+      "wrong_answers": [
+        "越南",
+        "韓國",
+        "泰國"
+      ],
+      "hints": [
+        "這是一個由島嶼組成的國家。",
+        "在那裡，鶴象徵長壽和好運。",
+        "它的國旗是白底，中間有一個紅色圓形。"
+      ],
+      "fun_fact": "傳說鶴能活一千年，所以人們要折一千隻，這一整串在日語裡叫“千羽鶴”。",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Cranes_made_by_Origami_paper.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACranes_made_by_Origami_paper.jpg",
+        "credit": "Laitche · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Laitche",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Laitche",
+        "excerpt": null
+      },
+      "background": null
+    }
+  ]
+}

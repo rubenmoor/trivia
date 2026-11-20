@@ -1807,6 +1807,8 @@ def cmd_batch(args):
     `--from base` (plan 230): the fit pass and its copies into another base bundle (fit.py)."""
     if getattr(args, "from_bundle", None):
         return cmd_fit_batch(args)
+    if args.translate == "zh-Hant":  # converted from zh-Hans, no prompt of its own (decision 762)
+        return cmd_convert_batch(args)
     if args.translate:
         f = PROMPTS / f"locale-{args.translate}.md"
         if not (args.dry_run or f.exists() or (PROMPTS / f"locale-{args.translate.split('-')[0]}.md").exists()):
@@ -2153,7 +2155,7 @@ from review_steps import BATCH_SLOTS, REVIEW_MODEL, batch_questions, cmd_fix, cm
 from rework import cmd_rework
 import spotcheck  # authoring/tools/spotcheck.py: `qgen spotcheck` (plan 141)
 from taxonomy import cmd_bundle_new, cmd_remap, cmd_taxonomy
-from translate import LANGUAGES, cmd_translate_batch, in_locale, media_title, merge_translations, run_bundle, run_locale, text_locale, translated_drafts
+from translate import LANGUAGES, cmd_convert_batch, cmd_translate_batch, in_locale, media_title, merge_translations, run_bundle, run_locale, text_locale, translated_drafts
 from validate import cmd_validate, validate_pool
 
 
