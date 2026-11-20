@@ -11,7 +11,7 @@ It runs its steps in a fixed order (concepts, draft, rate, factcheck, revise, me
 
     qgen concepts [--subcategories "slug,slug"] [--top-up] [--fill]   # concept lists (D-37)
     qgen bundle new <id> --name … --description … --kind region|theme --language <L> --country <CC> --icon <name> --rule … --voice …   # an empty bundle (D-41)
-    qgen taxonomy --bundle <id> [--apply work/taxonomy/<id>/proposal.json]   # a regional or theme bundle's categories (plans 138, 184)
+    qgen taxonomy --bundle <id> [--apply work/taxonomy/<id>/proposal.json]   # a regional, theme or further base bundle's categories (plans 138, 184, 231)
     qgen remap --bundle <id> [--apply work/remap/<id>/proposal.json]   # its questions onto a new taxonomy (plan 138)
     qgen batch-report --run <run>   # a run's report
     qgen audit [--batch <batch>]    # a second LLM reader of a seeded sample (plan 16); changes nothing
