@@ -69,6 +69,23 @@ class Han(unittest.TestCase):
         found = qgen.overlap_candidates(a, [b, c], {}, "zh-Hans")
         self.assertEqual([p for p, *_ in found], [b])
 
+    def test_overlap_answer_in_text(self):  # rank 3 with 2-character answers
+        a = {"question": "唐朝最有名的诗人是谁？", "answer": "李白", "fun_fact": ""}
+        b = {"question": "李白生活在哪个朝代？", "answer": "唐朝", "fun_fact": ""}
+        self.assertEqual([r for _, _, r in qgen.overlap_candidates(a, [b], {}, "zh-Hans")], [3])
+        c = {"question": "万里长城大约有多长？", "answer": "两万公里", "fun_fact": ""}
+        self.assertEqual([r for _, _, r in qgen.overlap_candidates({**a, "answer": "长城"}, [c], {}, "zh-Hans")], [3])
+
+    def test_overlap_similar_answer(self):  # rank 1: 长城 inside 万里长城
+        a = {"question": "哪座建筑在中国北方？", "answer": "长城", "fun_fact": ""}
+        b = {"question": "哪个古迹可以从山海关走起？", "answer": "万里长城", "fun_fact": ""}
+        self.assertEqual([r for _, _, r in qgen.overlap_candidates(a, [b], {}, "zh-Hans")], [1])
+
+    def test_overlap_single_character_no_hit(self):  # one Han character is too short to count
+        a = {"question": "中国哪座名山最高？", "answer": "山", "fun_fact": ""}
+        b = {"question": "泰山在哪个省？", "answer": "山东", "fun_fact": ""}
+        self.assertEqual(qgen.overlap_candidates(a, [b], {}, "zh-Hans"), [])
+
 
 if __name__ == "__main__":
     unittest.main()
