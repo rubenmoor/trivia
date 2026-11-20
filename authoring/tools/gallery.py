@@ -1142,6 +1142,11 @@ def timed(r):
     r.wait("main .screen.round", 10000)  # Sofía's cracked heart (no answer this round), Max out
     r.settle(1.2)
     r.shot("timed-round")
+    timed_on(r, "timed-idle", 10)
+    r.clock("timed-idle", 31)  # the idle round's end: all hearts crack, the red frame
+    r.wait("main .screen.round .red-frame", 10000)
+    r.settle(1.5)
+    r.shot("timed-idle-round")
     timed_on(r, "timed-heart", 10)
     r.shot("timed-last-heart")
     timed_on(r, "timed-risk", 10)
@@ -1236,7 +1241,7 @@ STEPS = [
     (["level-rr-coop", "select-rr-coop", "correct-rr-coop", "wrong-rr-coop", "victory-rr-coop", "level-rr-competitive",
       "turn-rr-coop", "tower-rr-competitive", "turn-rr-competitive", "wrong-rr-competitive", "victory-rr-competitive", "victory-last-standing"], round_robin),
     (["timed-question", "timed-claimed", "timed-claim-last", "timed-paused", "timed-time-up", "timed-round",
-      "timed-last-heart", "timed-all-at-risk", "timed-nobody-wins", "timed-sudden-death", "victory-timed"], timed),
+      "timed-idle-round", "timed-last-heart", "timed-all-at-risk", "timed-nobody-wins", "timed-sudden-death", "victory-timed"], timed),
     (["timed-question-long", "timed-question-8", "timed-nobody-wins-8", "victory-timed-8"], timed_long),
 ]
 
