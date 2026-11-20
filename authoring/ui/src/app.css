@@ -23,6 +23,12 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.45;
 }
+:lang(zh-Hans) {
+  font-family: "Noto Sans CJK SC", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+}
+:lang(zh-Hant) {
+  font-family: "Noto Sans CJK TC", "Microsoft JhengHei", "PingFang TC", system-ui, sans-serif;
+}
 
 *,
 *::before,

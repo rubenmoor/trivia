@@ -494,10 +494,10 @@
         <SourcePanel question={current} source={current.source} {blind} />
         <p class="muted">Media and bundle live on the source: <a href={`/review?id=${encodeURIComponent(current.id)}`}>change them in the source view</a>.</p>
       {:else}
-        <p class="description">{current.description}</p>
-        <h1 class="question">{current.question}</h1>
+        <p class="description" lang={current.locale}>{current.description}</p>
+        <h1 class="question" lang={current.locale}>{current.question}</h1>
 
-        <ol class="options">
+        <ol class="options" lang={current.locale}>
           {#each options as option, i}
             <li class:correct={i === 0}>{option}</li>
           {/each}
@@ -533,11 +533,11 @@
         {#if !locale}
           <section>
             <h2>Hints</h2>
-            <ol>
+            <ol lang={current.locale}>
               {#each current.hints as hint}<li>{hint}</li>{/each}
             </ol>
             <h2>Fun fact</h2>
-            <p>{current.fun_fact}</p>
+            <p lang={current.locale}>{current.fun_fact}</p>
           </section>
         {/if}
 

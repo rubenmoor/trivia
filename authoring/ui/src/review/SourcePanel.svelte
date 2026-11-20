@@ -12,31 +12,31 @@
   <h2>Source {source.locale} · difficulty {source.difficulty} · {source.status.replace("_", " ")}</h2>
   <h2>{question.locale} · difficulty {question.difficulty}{blind ? "" : ` · ${question.status.replace("_", " ")}`}</h2>
 
-  <p class="description">{source.description}</p>
-  <p class="description">{question.description}</p>
+  <p class="description" lang={source.locale}>{source.description}</p>
+  <p class="description" lang={question.locale}>{question.description}</p>
 
-  <p class="question">{source.question}</p>
-  <p class="question">{question.question}</p>
+  <p class="question" lang={source.locale}>{source.question}</p>
+  <p class="question" lang={question.locale}>{question.question}</p>
 
-  <p class="option correct">{source.answer}</p>
-  <p class="option correct">{question.answer}</p>
+  <p class="option correct" lang={source.locale}>{source.answer}</p>
+  <p class="option correct" lang={question.locale}>{question.answer}</p>
 
   {#each indexes(source.wrong_answers, question.wrong_answers) as i}
-    <p class="option">{source.wrong_answers[i] ?? ""}</p>
-    <p class="option">{question.wrong_answers[i] ?? ""}</p>
+    <p class="option" lang={source.locale}>{source.wrong_answers[i] ?? ""}</p>
+    <p class="option" lang={question.locale}>{question.wrong_answers[i] ?? ""}</p>
   {/each}
 
   <h2>Hints</h2>
   <h2>Hints</h2>
   {#each indexes(source.hints, question.hints) as i}
-    <p>{source.hints[i] ? `${i + 1}. ${source.hints[i]}` : ""}</p>
-    <p>{question.hints[i] ? `${i + 1}. ${question.hints[i]}` : ""}</p>
+    <p lang={source.locale}>{source.hints[i] ? `${i + 1}. ${source.hints[i]}` : ""}</p>
+    <p lang={question.locale}>{question.hints[i] ? `${i + 1}. ${question.hints[i]}` : ""}</p>
   {/each}
 
   <h2>Fun fact</h2>
   <h2>Fun fact</h2>
-  <p>{source.fun_fact}</p>
-  <p>{question.fun_fact}</p>
+  <p lang={source.locale}>{source.fun_fact}</p>
+  <p lang={question.locale}>{question.fun_fact}</p>
 </div>
 
 <style>

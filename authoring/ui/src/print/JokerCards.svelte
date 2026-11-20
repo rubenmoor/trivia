@@ -2,7 +2,7 @@
   // Printable joker cards (plans/09-jokers.md, JK-11): one sheet with 4 × the hint joker and
   // 2 × each other joker, 12 cards of 2.5 in in a 3 × 4 grid, with dashed cut lines. White
   // cards to save ink; the token, name and key match the game's tray (JokerTray.svelte).
-  // `?lang=es|es-ES|en|de` (LUI-5): texts from the app catalogs; Letter for es/en, A4 for de/es-ES.
+  // `?lang=<UI language>` (LUI-5): texts from the app catalogs; Letter for es/en, A4 for every other locale.
   import "$app/game/theme.css"; // the fonts (Baloo 2, Nunito, the zh faces)
   import Icon from "$app/game/Icon.svelte";
   import { TOKENS } from "$app/game/jokers.ts";
@@ -18,14 +18,12 @@
     snipe: "#d6304e",
   };
   const COPIES: Record<JokerName, number> = { hint: 4, skip: 2, easier: 2, category: 2, snipe: 2 };
-  /** `@page`: the grid is 7.5 × 10 in; A4 (8.27 × 11.69 in) leaves less side margin. */
+  /** `@page`: the grid is 7.5 × 10 in; A4 (8.27 × 11.69 in) leaves less side margin; any locale not listed gets A4. */
   const PAGE: Record<string, string> = {
     es: "size: letter; margin: 0.5in",
     en: "size: letter; margin: 0.5in",
     "es-ES": "size: A4; margin: 0.84in 0.38in",
     de: "size: A4; margin: 0.84in 0.38in",
-    "zh-Hans": "size: A4; margin: 0.84in 0.38in",
-    "zh-Hant": "size: A4; margin: 0.84in 0.38in",
   };
 
   const q = new URLSearchParams(location.search).get("lang");
@@ -33,7 +31,7 @@
   const c = catalogFor(lang);
   const [before, after] = fill(c.cards.intro, { hint: c.joker.hint.name }).split("{scale}");
   $effect(() => {
-    const page = Object.assign(document.createElement("style"), { textContent: `@page { ${PAGE[lang] ?? PAGE.en}; }` });
+    const page = Object.assign(document.createElement("style"), { textContent: `@page { ${PAGE[lang] ?? PAGE["es-ES"]}; }` });
     document.head.append(page);
     return () => page.remove();
   });
