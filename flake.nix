@@ -225,6 +225,8 @@
               (pkgs.steam.override { extraLibraries = p: with p; [ nss nspr gtk3 atk at-spi2-atk at-spi2-core libxcomposite ]; }).run
             ]
               ++ nixpkgs.lib.optional (pm.packages ? ${pkgs.stdenv.hostPlatform.system}) pm.packages.${pkgs.stdenv.hostPlatform.system}.default;
+            # CJK glyphs for review pages, gallery, screenshots (zh); keeps system fonts too
+            FONTCONFIG_FILE = pkgs.makeFontsConf { fontDirectories = [ pkgs.noto-fonts-cjk-sans ]; };
           };
         });
     };

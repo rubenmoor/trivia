@@ -24,10 +24,10 @@ body {
   line-height: 1.45;
 }
 :lang(zh-Hans) {
-  font-family: system-ui, "Noto Sans CJK SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-family: "Noto Sans CJK SC", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
 }
 :lang(zh-Hant) {
-  font-family: system-ui, "Noto Sans CJK TC", "Microsoft JhengHei", "PingFang TC", sans-serif;
+  font-family: "Noto Sans CJK TC", "Microsoft JhengHei", "PingFang TC", system-ui, sans-serif;
 }
 
 *,

@@ -48,9 +48,9 @@
           {#each changes as [field, old]}
             <tr>
               <th>{LABELS[field] ?? field}</th>
-              <td class="old">{show(old)}</td>
+              <td class="old" lang={question.locale}>{show(old)}</td>
               <td class="arrow">→</td>
-              <td class="new">{show(current(field))}</td>
+              <td class="new" lang={question.locale}>{show(current(field))}</td>
             </tr>
           {/each}
         </tbody>

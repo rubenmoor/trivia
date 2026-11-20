@@ -2,7 +2,7 @@
   // Printable joker cards (plans/09-jokers.md, JK-11): one sheet with 4 × the hint joker and
   // 2 × each other joker, 12 cards of 2.5 in in a 3 × 4 grid, with dashed cut lines. White
   // cards to save ink; the token, name and key match the game's tray (JokerTray.svelte).
-  // `?lang=es|es-ES|en|de` (LUI-5): texts from the app catalogs; Letter for es/en, A4 for every other locale.
+  // `?lang=<UI language>` (LUI-5): texts from the app catalogs; Letter for es/en, A4 for every other locale.
   import "$app/game/theme.css"; // the fonts (Baloo 2, Nunito, the zh faces)
   import Icon from "$app/game/Icon.svelte";
   import { TOKENS } from "$app/game/jokers.ts";
