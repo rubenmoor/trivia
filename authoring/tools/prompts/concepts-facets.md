@@ -10,7 +10,7 @@ Split the subcategory into 8–12 **facets**: the different areas it covers. Eac
 
 Together, the facets cover the whole subcategory, not just its school-book core. Think of things, living beings, people and characters, places, events, tools, words, customs, and the subcategory in everyday life, in films and games, and in history, wherever these really belong to it.
 
-Facets follow the bundle (under "Bundle"). For `base`, the house style's "International angle": the subcategory around the whole world, no facet about one country or language area (no "… in Latin America", "… in Spain", "American …"), unless the subcategory itself is about it; a facet that spans the world ("Festivals around the world") may hold concepts from everywhere. A regional bundle's facets cover its region.
+Facets follow the bundle (under "Bundle"). For `base`, the house style's "International angle": the subcategory around the whole world, no facet about one country or language area (no "… in Latin America", "… in Spain", "American …"), unless the subcategory itself is about it; a facet that spans the world ("Festivals around the world") may hold concepts from everywhere. A regional bundle's facets cover its region. For `chinese-base`: facets a Chinese family knows, Chinese places, people, works and customs first, the world at the share a Chinese school teaches it.
 
 ## 2. Axis fit
 For every value of the axes `move`, `stimulus` and `lens`, score how well it fits this subcategory, 1–5:
