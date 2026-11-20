@@ -31,7 +31,7 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
   manual    the rows of MANUAL, asked y/n/note or read from --manual FILE (`<row>: <answer>` per line);
             "n…" fails, "y…" passes (deck: also "no Deck…", decision 125), anything else is a note and
             counts as skipped; on a content-only patch full-only rows are answered "skipped: content-only since <tag>"; beta-save only when
-            SAVE_VERSION changed (plans/11-steam.md "Release checklist (ST-4)")
+            SAVE_VERSION changed, locale only when a zh pool is new since the previous tag (plans/11-steam.md "Release checklist (ST-4)")
 
 --demo (plan 177, decision 342): the demo build. Steps tag, checks, licenses, desktop (trivia-desktop-build --dir --demo, trivia-steam
 stage --demo), media-budget (stage-media.mjs --check --demo), credits (on release/demo/*-unpacked), smoke (smoke.mjs --demo --trace a),
@@ -95,7 +95,7 @@ STATE_TS = "app/client/src/engine/state.ts"
 OFFLINE = ("beta install from Steam, network off (Steam offline mode: Steam → Go Offline while online, then network off), "
            "start from Steam")
 # Row → (scope, check, check on a content-only patch); scope: always, full (full release only), save
-# (only when SAVE_VERSION changed). Steps: plans/11-steam.md "Release checklist (ST-4)".
+# (only when SAVE_VERSION changed), locale (only when a zh pool is new since the previous tag). Steps: plans/11-steam.md "Release checklist (ST-4)".
 MANUAL = {
     "offline": ("always", f"{OFFLINE}: full game to level 12 or a won checkpoint; quit and restart: save is there; "
                 "flag a question and send: fails cleanly (no hang, failed state), copy fallback copies the report text",
@@ -123,6 +123,10 @@ MANUAL = {
                          "present, through Join to the first turn change or claim; every pad joins (note how many), each "
                          "acts only for its seat", None),
     "beta-save": ("save", "save version changed: testers stay on beta until this build is on default", None),
+    "locale": ("locale", "Steam client language set to the new zh locale (Steam → Settings → Interface), start `beta` from "
+               "Steam: first start guesses the zh locale, only `chinese-base` offered, a game to level 3, text without "
+               "tofu or overflow, the Steam store/library page shows the language; then English: both base tiles, "
+               "picking one deselects the other (decision 752)", None),
     "signoff": ("always", "the family plays the candidate from beta", "the developer's OK"),
 }
 # The demo's rows (plan 177). Decision 337 (minimal): Cloud on; mods, Workshop, telemetry, reports, achievements off, so no modkit/mods steps and no
@@ -176,6 +180,20 @@ def kind(prev: str | None, rev: str | None = "HEAD") -> str:
     changed = git("diff", "--name-only", prev, *([rev] if rev else [])).splitlines()
     code = [f for f in changed if f.startswith(SHIPPED) and not f.startswith("app/data/")]
     return "full" if code else "content-only"
+
+
+def zh_pools(rev: str | None) -> set[str]:
+    """Paths of the zh pools (app/data/pool.zh-*.json, bundles/<id>/pool.zh-*.json) at rev (None: working tree)."""
+    if rev:
+        names = git("ls-tree", "-r", "--name-only", rev, "app/data/").splitlines()
+    else:
+        names = [str(f.relative_to(REPO)) for f in (REPO / "app" / "data").rglob("pool.zh-*.json")]
+    return {n for n in names if re.fullmatch(r"app/data/(bundles/[^/]+/)?pool\.zh-[^/]+\.json", n)}
+
+
+def new_zh_pool(prev: str | None, rev: str | None = "HEAD") -> bool:
+    """A zh pool exists at rev that the previous tag didn't have (no earlier tag: any zh pool)."""
+    return bool(zh_pools(rev) - (zh_pools(prev) if prev else set()))
 
 
 def save_version(rev: str | None) -> int | None:
@@ -278,11 +296,13 @@ def matrix(log, cmds: list[list[str]], out: Path) -> str | None:
     return f"runs a and b differ: {diff}" if diff else None
 
 
-def checklist(kd: str, prev: str | None, save_changed: bool, table: dict = MANUAL) -> dict[str, tuple[str, str | None]]:
+def checklist(kd: str, prev: str | None, save_changed: bool, table: dict = MANUAL, zh_new: bool = False) -> dict[str, tuple[str, str | None]]:
     """Manual rows for this candidate: row → (check, automatic answer or None)."""
     rows = {}
     for k, (scope, text, patch) in table.items():
         if scope == "save" and not save_changed:
+            continue
+        if scope == "locale" and not zh_new:
             continue
         auto = f"skipped: content-only since {prev}" if scope == "full" and kd == "content-only" else None
         rows[k] = (patch if patch and kd == "content-only" else text, auto)
@@ -397,7 +417,7 @@ def main() -> None:
     if "manual" in args.skip:
         steps.append(("manual", "skipped", 0, "--skip"))
     else:
-        todo = checklist(kd, prev, save["changed"], manual_rows)
+        todo = checklist(kd, prev, save["changed"], manual_rows, new_zh_pool(prev))
         answers = manual(todo, args.manual, all(s != "✗" for _, s, _, _ in steps), manual_rows)
         for k, a in answers.items():
             ok_prefix = k in PASS and a.lower().startswith(PASS[k])
