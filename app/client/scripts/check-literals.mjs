@@ -132,6 +132,8 @@ const CATALOGS = {
   "es-ES": (await import("../src/locales/es-ES.ts")).esES,
   en: (await import("../src/locales/en.ts")).en,
   de: (await import("../src/locales/de.ts")).de,
+  "zh-Hans": (await import("../src/locales/zh-Hans.ts")).zhHans,
+  "zh-Hant": (await import("../src/locales/zh-Hant.ts")).zhHant,
 };
 /** Shortcut keys live together; `flag.key` works on every screen. `join` binds no catalog key. A dialog's keys join the
  * screen it opens over (the flag dialog over Question, Mods and the badge page over Start / Player). */

@@ -23,7 +23,7 @@ Mods change the game: new question bundles, a new look, changed rules, or a whol
   - `description` (required): up to 2000 characters (may be empty)
   - `version` (required): your version, 1–32 characters, e.g. `1.0.0`
   - `game` (required): the game version you made it for, `x.y.z`, e.g. `0.1.0`; another version only warns
-  - `languages`: UI languages your mod has text for, from `es`, `es-ES`, `en`, `de`
+  - `languages`: UI languages your mod has text for, from `es`, `es-ES`, `en`, `de`, `zh-Hans`, `zh-Hant`
   - `entry`: a `.js` or `.mjs` file inside the mod: makes it a code add-on
   - `kind`: any of `bundle`, `theme`, `code`, `conversion`; left out → derived:
     - `data/bundles/` or `data/bundles.json` → `bundle`
@@ -61,7 +61,7 @@ Mods change the game: new question bundles, a new look, changed rules, or a whol
     "description": { "type": "string", "maxLength": 2000 },
     "version": { "type": "string", "minLength": 1, "maxLength": 32 },
     "game": { "type": "string", "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$" },
-    "languages": { "type": "array", "items": { "type": "string", "enum": ["es", "es-ES", "en", "de"] } },
+    "languages": { "type": "array", "items": { "type": "string", "enum": ["es", "es-ES", "en", "de", "zh-Hans", "zh-Hant"] } },
     "entry": { "type": "string", "pattern": "\\.m?js$" },
     "kind": {
       "type": "array",
@@ -219,7 +219,7 @@ export default async function setup(trivia) {
   - `--changenote "…"`: the change note on the item page
   - Visibility changes only with `--visibility`
 - `workshopId`: keep it in `mod.json` (the next publish updates that item); delete it for a new item; a failed first publish keeps it (the next run fills the empty item)
-- Tags: from `kind` and `languages` (`bundle`, `theme`, `code`, `conversion`, `es`, `en`, `de`)
+- Tags: from `kind` and `languages` (`bundle`, `theme`, `code`, `conversion`, `es`, `en`, `de`, `schinese`, `tchinese`)
 - Only the item's owner can update it
 - Windows: no console; output goes to `<id>-publish.log` beside the mod folder, the result to a message box
 - Exit 0 ok, 1 failed, 2 usage

@@ -8,7 +8,7 @@ export const ID = /^[a-z0-9][a-z0-9-]{1,63}$/;
 const SEMVER = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/;
 const WORKSHOP_ID = /^[1-9]\d{0,19}$/;
 // UI_LANGS in app/client/src/lib/i18n.ts.
-const LANGS = new Set(["es", "es-ES", "en", "de"]);
+const LANGS = new Set(["es", "es-ES", "en", "de", "zh-Hans", "zh-Hant"]);
 const KINDS = ["bundle", "theme", "code", "conversion"];
 const KEYS = new Set(["id", "name", "description", "version", "game", "languages", "entry", "kind", "workshopId"]);
 

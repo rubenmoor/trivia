@@ -31,7 +31,7 @@ A question bundle is a set of questions the family can switch on before a game, 
     - `region`: an add-on for people with a connection to one country; needs `country`
   - `country`: only with `kind: "region"`, required there: the country's two-letter ISO 3166-1 code in capitals, e.g. `"CO"`; the bundle shows its flag (a globe if the game has no drawing of it); a row without it is skipped
   - `icon`: optional, not with `kind: "region"`: the tile's symbol, one of `book`, `pin`, `puzzle`, `flask`, `ball`, `scroll`, `reel`, `globe`, `film`, `heart`, `mic`, `headphones`; left out or unknown → the puzzle (`--check-mod` warns on an unknown one)
-  - `languages`: question languages, from `es`, `es-ES`, `en`, `de`; a language without its pool file isn't offered
+  - `languages`: question languages, from `es`, `es-ES`, `en`, `de`, `zh-Hans`, `zh-Hant`; a language without its pool file isn't offered
   - `name`, `description`: plain text in your main language, shown in the bundle selector; translations in `names.<locale>.json`
 - In the game your ids become `<mod id>:<id>`, e.g. `template-bundle:solar-system`; your bundle is marked player-made.
 

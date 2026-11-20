@@ -8,7 +8,9 @@ import { readManifest } from "./mods.mjs";
 import { contained } from "./resolve.mjs";
 
 // Decision 135's proposed list (unanswered): kinds + locales, as entered in Steamworks.
-const WORKSHOP_TAGS = ["bundle", "theme", "code", "conversion", "es", "en", "de"];
+const WORKSHOP_TAGS = ["bundle", "theme", "code", "conversion", "es", "en", "de", "schinese", "tchinese"];
+// Steam's language names for the Chinese tags; the others are the language subtag.
+const LANG_TAGS = { "zh-Hans": "schinese", "zh-Hant": "tchinese" };
 export const VISIBILITY = { public: 0, friends: 1, private: 2, unlisted: 3 };
 const PREVIEWS = ["preview.png", "preview.jpg", "preview.gif"];
 const MB = 1024 * 1024;
@@ -101,7 +103,7 @@ export async function preparePublish(folder, gameVersion, roots) {
     return { error: `staging failed: ${err.message}`, warnings };
   }
 
-  const langs = (m.languages ?? []).map((l) => l.split("-")[0]);
+  const langs = (m.languages ?? []).map((l) => LANG_TAGS[l] ?? l.split("-")[0]);
   const tags = [];
   for (const tag of new Set([...mod.kind, ...langs]))
     if (WORKSHOP_TAGS.includes(tag)) tags.push(tag);

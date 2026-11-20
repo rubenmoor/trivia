@@ -42,3 +42,13 @@ test("in-game Question (task 2115): Enter submits whatever has the ring, Space l
   assert.equal(activation("confirm", "no", false), "confirm"); // armed joker, Francotirador: Enter fires
   assert.equal(activation("press", "no", false), "confirm"); // and so does Space
 });
+
+test("an IME's Process or a non-Latin key falls back to e.code (plan 142)", () => {
+  const ime = (code: string, k = "Process") => ({ ...key(k), code, isComposing: true });
+  assert.deepEqual(toIntent(ime("KeyG"), { g: { type: "letter", key: "g" } }), { type: "letter", key: "g" });
+  assert.deepEqual(toIntent(ime("Digit3")), { type: "pick", n: 3 });
+  assert.deepEqual(toIntent({ ...key("ち"), code: "KeyA" }, { a: { type: "pick", n: 1 } }), { type: "pick", n: 1 });
+  assert.equal(toIntent(ime("KeyG"), { g: { type: "letter", key: "g" } }, true), null);
+  assert.equal(toIntent(ime("Comma")), null);
+  assert.deepEqual(toIntent({ ...key("a"), code: "KeyQ" }, { a: { type: "letter", key: "a" } }), { type: "letter", key: "a" }); // AZERTY: e.key wins
+});

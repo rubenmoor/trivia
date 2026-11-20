@@ -8,7 +8,7 @@ import { gameLocale, newest, type EngineData, type Io, type Language, type SaveD
 import { GameError, messageOf } from "./http.ts";
 import { availableLocales, loadEngineData, loadOldKeys } from "./data.ts";
 import { desktop, steam, validUser } from "./desktop.ts";
-import { UI_LANGS } from "./i18n.ts";
+import { GATED_LANGS, UI_LANGS } from "./i18n.ts";
 import { useNames } from "./names.svelte.ts";
 import { FileStore, MemoryStore, type SaveNotice } from "./store.ts";
 import { telemetryCheckpoint, telemetryLoad } from "./telemetry.ts";
@@ -35,8 +35,7 @@ const STEAM_LANGS = new Map([
   ["english", "en"],
   ["german", "de"],
   ["schinese", "zh-Hans"],
-  ["russian", "ru"],
-  ["brazilian", "pt-BR"],
+  ["tchinese", "zh-Hant"],
 ]);
 
 function fromSteam(name: string | null): string | null {
@@ -62,7 +61,7 @@ function ready(): Promise<Loaded> {
 async function load(): Promise<Loaded> {
   const [stored, locales, oldKeys] = await Promise.all([store.load(), availableLocales(), loadOldKeys()]);
   const save = mapOldKeys(stored, oldKeys); // slug keys (decision 259); written with the next action
-  const language = save.language ?? defaultLanguage(await guessTag(), UI_LANGS);
+  const language = save.language ?? defaultLanguage(await guessTag(), await offered(save, locales));
   const fresh = !save.language;
   const loaded = { save: { ...save, language }, locales, fresh };
   const data = await dataFor(loaded, "game"); // a missing data file fails here, not on the first action
@@ -113,8 +112,17 @@ function exclusive<T>(fn: () => Promise<T>): Promise<T> {
 /** The stored language (fresh save: the default), the options a player can pick from, and whether
  * the first-start screen asks (a fresh save with something to pick). */
 export async function language(): Promise<{ language: Language; options: string[]; ask: boolean }> {
-  const { save, fresh } = await ready();
-  return { language: save.language, options: UI_LANGS, ask: fresh && UI_LANGS.length > 1 };
+  const { save, fresh, locales } = await ready();
+  const options = await offered(save, locales);
+  return { language: save.language, options, ask: fresh && options.length > 1 };
+}
+
+/** The UI languages to pick from: a gated one only if its pool ships and its default bundles' supply passes (decision 222). */
+async function offered(save: SaveData, locales: string[]): Promise<string[]> {
+  const out: string[] = [];
+  for (const l of UI_LANGS)
+    if (!GATED_LANGS.includes(l) || (locales.includes(l) && supply(save, await loadEngineData(l)).ok)) out.push(l);
+  return out;
 }
 
 /** The questions of `lang` (plan 126): its own pool if it has one whose default bundles' supply passes, else es. */
