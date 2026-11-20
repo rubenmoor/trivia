@@ -20,6 +20,9 @@ const NAMES = {
   en: { above: "Living Room", main: "Trivia" },
   es: { main: "Trivia", below: "en Familia" },
   de: { above: "Wohnzimmer-", main: "Quiz" },
+  // zh (decision 770: «Living Room 知识竞赛», Traditional 知識競賽); `lang` picks the CJK face (:lang() below, plan 142's fonts)
+  "zh-Hans": { above: "Living Room", main: "知识竞赛", lang: "zh-Hans" },
+  "zh-Hant": { above: "Living Room", main: "知識競賽", lang: "zh-Hant" },
 };
 
 // Valve's asset list (17a "Capsules and icon"). text: logotype on it, per language; art: no words, once.
@@ -70,6 +73,12 @@ const BLOCKS = [C.stone, C.stone, C.stone, C.brick, C.brick, C.brick, C.marble, 
 
 const CSS = `
 @font-face { font-family: "Baloo 2"; src: url("/fonts/baloo-2.woff2") format("woff2"); font-weight: 400 800; }
+/* The game's CJK faces (theme.css): same files, only the CJK blocks. */
+@font-face { font-family: "Han Rounded SC"; src: url("/fonts/zh-rhr-sc-bold.woff2") format("woff2"); font-weight: 600 900; unicode-range: U+2E80-9FFF, U+F900-FAFF, U+3000-303F, U+FF00-FFEF; }
+@font-face { font-family: "Han Rounded TC"; src: url("/fonts/zh-rhr-tc-bold.woff2") format("woff2"); font-weight: 600 900; unicode-range: U+2E80-9FFF, U+F900-FAFF, U+3000-303F, U+FF00-FFEF; }
+.logo:lang(zh-Hans) { font-family: "Baloo 2", "Han Rounded SC"; }
+.logo:lang(zh-Hant) { font-family: "Baloo 2", "Han Rounded TC"; }
+.logo:lang(zh-Hans) .main, .logo:lang(zh-Hant) .main { line-height: 1.1; }
 * { box-sizing: border-box; margin: 0; }
 html, body { width: 100%; height: 100%; background: transparent; overflow: hidden; }
 .stage { position: relative; overflow: hidden; background: radial-gradient(ellipse at 50% 30%, ${C.night800}, ${C.night900} 75%); }
@@ -108,7 +117,7 @@ function marks(w, h, u) {
 
 function logotype(name, pack) {
   const main = `<div class="main">${name.main}</div>`;
-  return `<div class="logo">${name.above ? `<div class="side">${name.above}</div>` : ""}${main}${name.below ? `<div class="side">${name.below}</div>` : ""}${pack ? `<div class="pack">${pack}</div>` : ""}</div>`;
+  return `<div class="logo"${name.lang ? ` lang="${name.lang}"` : ""}>${name.above ? `<div class="side">${name.above}</div>` : ""}${main}${name.below ? `<div class="side">${name.below}</div>` : ""}${pack ? `<div class="pack">${pack}</div>` : ""}</div>`;
 }
 
 /** One asset as a page; layout by aspect: landscape tower right, portrait tower below, small capsule logo only. */
@@ -191,7 +200,7 @@ const written = [];
 async function render(file, w, h, html, { fit, logo, format = "png" } = {}) {
   if (only && !file.includes(only)) return;
   await evaluate(`(() => { document.head.innerHTML = ${JSON.stringify(`<style>${CSS}</style>`)}; document.body.innerHTML = ${JSON.stringify(html)}; })()`);
-  await evaluate(`document.fonts.ready.then(() => document.fonts.load("800 40px 'Baloo 2'"))`);
+  await evaluate(`document.fonts.ready.then(() => Promise.all(["800 40px 'Baloo 2'", "800 40px 'Han Rounded SC'", "800 40px 'Han Rounded TC'"].map((f) => document.fonts.load(f, "知識竞赛"))))`);
   if (fit) await evaluate(`(${FIT})(${JSON.stringify(fit)})`);
   if (logo) {
     [w, h] = await evaluate(`(${LOGO_FIT})()`);

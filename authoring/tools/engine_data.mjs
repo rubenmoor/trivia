@@ -10,6 +10,9 @@ const DATA = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", ".
 
 /** Null if the locale has no pool; `dir`: another data directory of app/data's layout; `demo`: the demo's pool (demo/),
  * base only, no packs (data.ts's load() in a demo build). */
+/** The pool locale of a UI tag: zh keeps its script (pool.zh-Hans.json), es-ES reads es. */
+export const poolLocale = (ui) => (ui.startsWith("zh") ? ui : ui.split("-")[0]);
+
 export function loadData(locale, dir = DATA, demo = false) {
   const json = (file) => JSON.parse(readFileSync(path.join(dir, file), "utf8"));
   const file = (demo ? "demo/" : "") + poolFile(locale);

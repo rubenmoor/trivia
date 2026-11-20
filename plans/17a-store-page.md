@@ -1401,7 +1401,8 @@ Typographic capsules, library art and the game icon (decision 77: store capsule 
 | `app-icon-184.jpg` | Community/client: app icon |
 | `icon-16.png` | Legibility check only, not uploaded |
 
-- `<lang>`: `en`, `es` (also for Spanish – Spain), `de`; upload as localized versions per store language
+- `<lang>`: `en`, `es` (also for Spanish – Spain), `de`, `zh-Hans`, `zh-Hant`; upload as localized versions per store language
+- zh (`task 2315`, decision 770): logotype «Living Room» above «知识竞赛» (`zh-Hant`: «知識競賽»), `NAMES` in `capsules.mjs`; the logo's `lang` picks the game's Han Rounded face (`:lang()` chain, same woff2 files as `theme.css`); no DLC capsules (zh offers only `chinese-base`)
 - AI note for `task 667: AI disclosure text (Steam survey + store wording)`: the template (layout, tower, icon) was designed and coded by Claude; the font, Baloo 2, is people's work (OFL); no image generation; per decision 77 disclosed as AI-assisted store art
 
 ## System requirements, languages, controller
@@ -1460,7 +1461,7 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
 - Deck compatibility: plan 90, not here
 
 ## Screenshots
-- Rendered, not hand-made: `node authoring/store/screenshots.mjs [--lang en,es,es-ES,de] [--visible]` from the dev shell (`npm run build` and `trivia-media sync --status approved` first)
+- Rendered, not hand-made: `node authoring/store/screenshots.mjs [--lang en,es,es-ES,de,zh-Hans,zh-Hant] [--visible]` from the dev shell (`npm run build` and `trivia-media sync --status approved` first)
 - Shell at 1920×1080 under Xvfb, raw CDP, a throw-away demo save per shot (made-up players), offline
 - `TRIVIA_DEV_STEAM_USER=1`: valid user under the save gate (plan 87), so the demo save loads; no "progress needs Steam" notice, flag action shown
 - Output: `authoring/store/out/screenshots/<lang>/NN-<screen>.png` (gitignored)
@@ -1474,10 +1475,11 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
   7. `joker-presets`: configure screen, preset «Sin límite»
 - en/de until their pools (decision 80): only 3–7, numbered 01–05; the question shots skip with a message
 - Questions per shot: `Q` in the script (es: approved, short, image cached)
+- zh (`task 2315`): `--lang zh-Hans|zh-Hant`; `Q` gets `chinese-base` ids from `pool.<zh>.json` once it exists (sensitivity rule: no maps, flags, politics), until then the 2 question shots skip; shot 4 `bundles` is replaced by `age-groups` (the Choice screen: zh offers only `chinese-base`, one tile would say nothing)
 - Re-run after every visual change; the chosen set re-rendered before upload
 
 ## Trailer
-- Rendered, not edited by hand: `trivia-trailer [--lang es,es-ES,en,de]` from the dev shell (`npm run build` and `trivia-media sync --status approved` first); final videos late, with the screenshots: `task 845: Store media: render screenshots and trailers for approval`
+- Rendered, not edited by hand: `trivia-trailer [--lang es,es-ES,en,de,zh-Hans,zh-Hant]` from the dev shell (`npm run build` and `trivia-media sync --status approved` first); final videos late, with the screenshots: `task 845: Store media: render screenshots and trailers for approval`
 - Shell under Xvfb (X11, 1920×1080), `TRIVIA_DEV_STEAM_USER=1`, `TRIVIA_SOUND=1`, a throw-away demo save (made-up players), offline
 - Sound: a private PulseAudio with a null sink (own runtime dir, no session bus), never the desktop's sound server; ffmpeg grabs the display (x11grab) and the sink's monitor
 - Scripted game, fixed questions and seed (es: q-0030, q-0019; `Q` in the script):
@@ -1499,6 +1501,7 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
   - per-language trailers via Advanced Settings; the base video should be the English one (en waits for its pool, decision 80)
   - no length limit stated; no autoplay/mute rule stated on the page
 - en/de: refuse with a message until `pool.en.json` / `pool.de.json` (decision 80); then add their two questions to `Q`
+- zh-Hans / zh-Hant: same refusal until `pool.<zh>.json`; then add two `chinese-base` questions (short, image cached, sensitivity rule) to `Q` under the tag
 - Re-run after any UI change; the developer approves before upload (`task 845`)
 
 ## Entry checklist
