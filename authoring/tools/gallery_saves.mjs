@@ -273,7 +273,8 @@ scene("timed-12-claim", timedScene(last, { right: timedRight(last) }));
 // screens with 8.
 scene("timed-q-long", timedScene(timedSession(4, round(by(3, false), by(0), by(1), shown), 1)));
 scene("timed-q8", timedScene(timedSession(8, round(by(7, false), by(0), by(1), shown), 3)));
-scene("timed-risk8", timedScene(timedSession(8, [...round(by(0, false), timeUp, timeUp, shown)], 3)));
+const idle = (n) => Array.from({ length: n }, () => timeUp);
+scene("timed-risk8", timedScene(timedSession(8, [...round(by(0, false), ...idle(7)), ...round(...idle(7)), ...round(...idle(6), shown)], 3)));
 const last8 = claim(shown(timedSession(8, Array.from({ length: 11 }, () => round(...Array.from({ length: 8 }, (_, i) => by(i)))).flat(), 3)), data, tio(3000), 0).save;
 scene("timed-12-claim8", timedScene(last8, { right: timedRight(last8) }));
 
