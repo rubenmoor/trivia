@@ -28,7 +28,7 @@ def _read(p):
     return atomic.read_json(p) if p.is_file() else None
 
 
-REWORKS = ("rework", "tighten", "neutralize")
+REWORKS = ("rework", "tighten", "neutralize", "fit")
 
 
 def _settled(run, questions):

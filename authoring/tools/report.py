@@ -568,7 +568,7 @@ def report_career(args):
 
 
 RUN_KINDS = [("batch", r"batch-\d+"), ("translation", r"tr-[A-Za-z-]+-\d+"), ("rework", r"rework-\d+"),
-             ("tighten", r"tighten-\d+"), ("neutralize", r"neutralize-\d+"), ("concepts", r"concepts")]
+             ("tighten", r"tighten-\d+"), ("neutralize", r"neutralize-\d+"), ("fit", r"fit-\d+"), ("concepts", r"concepts")]
 
 
 def run_kind(run):

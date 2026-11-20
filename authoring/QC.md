@@ -45,6 +45,16 @@ The steps run in order; a pm worker raises each decision and never waits on it (
 - Batch health (`batch_health.media-first` in `targets.json`, over the base thresholds): `media share` not applied; new rows `giveaway-step drop rate` (drafts the giveaway step removed, of those designed) and `mechanical-check rate` (questions with a hard mechanical finding at record); `$ per approved` ≤ $0.60. Starting numbers from the pilot and trial: adjust after the first runs.
 - Findings → proposals (step 4) as above; the media prompts are `review.md` and `audit.md` media-first sections and `media-design.md`.
 
+## Fit runs
+
+A `qgen batch --bundle chinese-base --from base` run (`fit-<n>`, plan 230) judges `base` questions for `chinese-base` and copies what fits. Its check is the developer's read of the lists and samples, and the flips that correct the pass; there is no agreement bar beyond the review sample's.
+
+- Report: `authoring/reports/fit-<n>.md`: judged, kept, adapted, dropped, by rule, not copyable, per `base` category and subcategory, drop reasons, the copies left `needs_work`, the audit of the adapted copies, cost.
+- Lists: the copies at `http://127.0.0.1:8001/review?batch=fit-<n>`; verdicts in `authoring/data/bundles/chinese-base/fit.json`; the fit view with flips (`/review?fit=chinese-base`) is `task 2344: Fit view and flips on the review page`.
+- Samples: a spot check over kept and adapted copies and a drop sample (about 30) to see the pass doesn't drop too much (task 2344); until then `&sample=1` draws from the adapted copies only (the audit's sample).
+- Flips: drop → keep (the next run copies it, no fit call); keep → drop (the copy `rejected`); adapt ↔ keep only through the copy's own review. Flips are `by: developer` in `fit.json`.
+- Prompt changes only after a decision on `prompts/fit.md` (D-36).
+
 ## Translation runs
 
 A `qgen batch --translate <locale>` run (D-87; `es`, `es-ES`, `en`, `de`, from sources in any other locale, D-107) has no QC steps. The LLM translation review (D-32, D-33) is its only review (milestone 9, developer 2026-10-16): no spot check, no QC decision, no pilot go/no-go.

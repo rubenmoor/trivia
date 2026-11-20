@@ -13,7 +13,7 @@ One command does all the work: choosing subcategories, drafting, rating, fact-ch
    qgen batch
    ```
 
-   Outside the dev shell, use `nix develop -c qgen batch`. This writes questions for the `base` bundle, drafted in English (plan 148). Give it no arguments, with one exception: if the user names a bundle ("make Colombia questions", "a batch for the colombia bundle"), run `qgen batch --bundle <id>` with that bundle's id from `app/data/bundles.json`. If the user names a language ("translate questions into German", "Spanish questions"), run `qgen batch --translate <locale>` with that language's locale instead (D-87): `es` (Latin American Spanish, also plain "Spanish"), `es-ES` (Spain's Spanish), `en`, `de`; if they name a bundle too ("translate the Colombia questions into English"), add `--bundle <id>`. If the user asks for sound or video questions ("multimedia questions", "questions with audio", "from Commons media"), run `qgen batch --media-first` instead (see "Media-first batches" below); it takes no other arguments. Use the same command, with the same `--bundle`, `--translate` or `--media-first`, every time you rerun it in step 3. It takes from several minutes to an hour; let it finish. When Claude's usage limit is hit, it says so, waits until 5 minutes after the reset (possibly hours) and continues by itself; let it wait.
+   Outside the dev shell, use `nix develop -c qgen batch`. This writes questions for the `base` bundle, drafted in English (plan 148). Give it no arguments, with one exception: if the user names a bundle ("make Colombia questions", "a batch for the colombia bundle"), run `qgen batch --bundle <id>` with that bundle's id from `app/data/bundles.json`. If the user names a language ("translate questions into German", "Spanish questions"), run `qgen batch --translate <locale>` with that language's locale instead (D-87): `es` (Latin American Spanish, also plain "Spanish"), `es-ES` (Spain's Spanish), `en`, `de`; if they name a bundle too ("translate the Colombia questions into English"), add `--bundle <id>`. If the user asks for sound or video questions ("multimedia questions", "questions with audio", "from Commons media"), run `qgen batch --media-first` instead (see "Media-first batches" below); it takes no other arguments. If the developer asks to copy `base` questions into `chinese-base` (the fit pass), run `qgen batch --bundle chinese-base --from base` (see "Copy into chinese-base" below). Use the same command, with the same `--bundle`, `--translate`, `--media-first` or `--from`, every time you rerun it in step 3. It takes from several minutes to an hour; let it finish. When Claude's usage limit is hit, it says so, waits until 5 minutes after the reset (possibly hours) and continues by itself; let it wait.
 3. **Act on the exit code:**
 
    | Exit code | Meaning | What you do |
@@ -66,7 +66,7 @@ A pm worker (environment `PM_WORKER=1`) follows the steps above with these chang
 - Edit `authoring/data/questions.json`, `app/data/pool.json` or anything in `work/` by hand.
 - Pick, change or judge media yourself, or search Commons yourself.
 - Change prompts, `qgen.py`, `media.py` or the subcategory list to get past a failure.
-- Run `qgen concepts`, or pass arguments to `qgen batch` other than a `--bundle`, `--translate` or `--media-first` the user named. `--files` and `--until` (media-first) are the developer's. They exist for the developer's debugging.
+- Run `qgen concepts`, or pass arguments to `qgen batch` other than a `--bundle`, `--translate`, `--media-first` or `--from base` the user named. `--files` and `--until` (media-first) are the developer's. They exist for the developer's debugging.
 - Create bundles (`qgen bundle new`), run `qgen taxonomy`, or edit any bundle's categories or category names (`names.<locale>.json`). That is the developer's call.
 - Approve, reject or revise questions that `qgen batch` marked `needs_work`. The developer decides those in the review tool, or asks for `qgen rework`: then run exactly that (with `--batch` only if the user names one), act on the exit code as in step 3, and commit what it prints.
 
@@ -82,6 +82,20 @@ A pm worker (environment `PM_WORKER=1`) follows the steps above with these chang
 - Never touch the ledger `work/media-first/files.jsonl` or the survey `work/media-survey/`; the batch maintains them.
 - After the merge the run deletes the cached files it downloaded that no pool pick (any checkout's pools, `app/data/`, `mods/`) or other unfinished run uses (task 2140; prints count and GB freed); `trivia-media sync --prune` does the same for the whole cache (picks of every git worktree incl. `../trivia-review`, `app/data/` and `mods/` are kept).
 - After a batch's spot check and QC (`authoring/QC.md`), `qgen gc` (`--dry-run` first) deletes that batch's `work/<batch>/sheets/` (finished rework runs too, once every question they touched has a human review or a later one) and the frames, thumbs and pictures of probes only finished, checked batches use (`probe.json`, `speech.txt`, `ocr.txt` stay); the review page then shows no picture for them.
+
+## Copy into chinese-base
+
+`qgen batch --bundle chinese-base --from base` is the fit pass (plan 230, `milestone 12: To China!`): it reads approved `base` questions in English and decides per question whether a Chinese family would find it fair and familiar, then copies the ones that fit into `chinese-base`. Run it only when the developer asks. Same steps 1 to 5, same exit codes; commit what it prints.
+
+- One command, no other arguments; `--dry-run` first when the developer asks for counts and cost (next run's sources by subcategory, no calls, nothing written).
+- Refuses (a stop, step 3) without `prompts/fit.md`, without the bundle's `rule`/`voice`, or when `authoring/data/bundles/chinese-base/from-base.json` misses a `base` subcategory with approved questions.
+- Run `fit-<n>` (`run.json` mode `fit`), resumed while unfinished; 600 sources per run, spread over the `base` subcategories; the rest in later runs.
+- Steps: select → fit → copy → fix → giveaway → media → sheets → review → research → sheets → review → record → audit → export → sync → validate (fix to record and audit only when the run adapted something).
+  - *select*: approved `base` sources with English text (an `en` source's own, an `es` source's approved, current `en` translation; else "not copyable yet", picked up by a later run); a subcategory the map sends to `null` and `translatable: false` sources are dropped by rule without a call; judged sources are skipped, except the developer's keep flips without a copy.
+  - *fit*: `prompts/fit.md` in calls of 50 (opus): `keep` / `adapt` (with an issue for the reviser) / `drop` (with a reason).
+  - *copy*: a copy per keep and adapt (`authoring/tools/copies.py`: own id, `bundle: chinese-base`, `locale: en`, `copied_from`, the mapped subcategory, the source's media record; `batch: fit-<n>`). Keep → approved (a near-duplicate of a question already in `chinese-base` → `needs_work`); adapt → `needs_work` with "adapt for a Chinese family: <issue>", then the rework steps; ends approved or `needs_work`.
+- Verdicts: `authoring/data/bundles/chinese-base/fit.json` (verdict, reason, note, run, `by`: fit, map, rule or developer, copy id); commit it with the run.
+- Report: `authoring/reports/fit-<n>.md` (judged, kept, adapted, dropped, by rule, not copyable, per `base` category and subcategory, drop reasons, needs work, cost). QC: `authoring/QC.md` "Fit runs".
 
 ## What the batch does (for reference)
 

@@ -1175,13 +1175,9 @@ def as_locale(questions, locale):
 
 
 def fit_text(q, tr=None):
-    """A base source's approved English text (plan 230): an en source's own, else its approved en translation;
-    None: not copyable yet. `tr`: {id: en translation}, loaded if None."""
-    if translations.source_locale(q) == "en":
-        return {k: q[k] for k in translations.TEXT_FIELDS}
-    tr = {t["id"]: t for t in translations.load("en")["questions"]} if tr is None else tr
-    t = tr.get(q["id"])
-    return {k: t[k] for k in translations.TEXT_FIELDS} if t and t["status"] == "approved" else None
+    """A base source's English text and difficulty, the copy's (plan 230, copies.english): an en source's own, else its
+    approved, current en translation; None: not copyable yet. `tr`: {id: en translation}, loaded if None."""
+    return copies.english(q, tr)
 
 
 def fit_item(q, text):
@@ -1190,7 +1186,7 @@ def fit_item(q, text):
     m = q.get("media") or {}
     return {"id": q["id"],
             "subcategory": f"{categories.display('base', sub, 'en')} (broad category: {categories.category_name('base', sub, 'en')})",
-            "difficulty": q["difficulty"],
+            "difficulty": text.get("difficulty", q["difficulty"]),
             **{k: text[k] for k in ("description", "question", "answer", "wrong_answers", "hints", "fun_fact")},
             "media": {"type": m.get("type"), "title": media_title(q) if m.get("file_url") else None,
                       "credit": m.get("credit")} if m else None}
@@ -1703,7 +1699,10 @@ def lock_run(d):
 
 def cmd_batch(args):
     """The whole pipeline in a fixed order (D-36). Rerunning it continues where it stopped.
-    `--media-first` (plan 203): from surveyed Commons files instead of topics, base only."""
+    `--media-first` (plan 203): from surveyed Commons files instead of topics, base only.
+    `--from base` (plan 230): the fit pass and its copies into another base bundle (fit.py)."""
+    if getattr(args, "from_bundle", None):
+        return cmd_fit_batch(args)
     if args.translate:
         f = PROMPTS / f"locale-{args.translate}.md"
         if not (args.dry_run or f.exists() or (PROMPTS / f"locale-{args.translate.split('-')[0]}.md").exists()):
@@ -2017,7 +2016,9 @@ def main():
     b.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
     b.add_argument("--translate", metavar="LOCALE", choices=translations.LOCALES,
                    help="translate the bundle's approved questions into this locale (plan 66); only when the user names a language")
-    b.add_argument("--dry-run", action="store_true", help="with --translate: print the next run's sources, no LLM calls")
+    b.add_argument("--from", dest="from_bundle", metavar="BUNDLE",
+                   help="with --bundle <base bundle>: copy what fits from this base bundle (only base; plan 230)")
+    b.add_argument("--dry-run", action="store_true", help="with --translate or --from: print the next run's sources, no LLM calls")
     b.add_argument("--ids", help=argparse.SUPPRESS)  # with --translate: these source ids (tests and debugging only)
     b.add_argument("--media-first", action="store_true",
                    help="base questions built around surveyed Commons audio and video files (plan 203)")
@@ -2035,6 +2036,7 @@ def main():
 
 # the command groups, after every name they import from here
 from audit import audit_section, cmd_audit
+from fit import cmd_fit_batch
 from player_reports import cmd_flag, cmd_telemetry
 from report import REVIEW_GAP_MIN, cmd_report, count, qc_section
 from review_steps import BATCH_SLOTS, REVIEW_MODEL, batch_questions, cmd_fix, cmd_media, cmd_record, cmd_research, cmd_review, cmd_sheets, slots_of

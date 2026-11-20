@@ -62,6 +62,11 @@ def from_base(bundle):
     return BUNDLE_SOURCES / bundle / "from-base.json"
 
 
+def fit(bundle):
+    """authoring/data/bundles/<id>/fit.json: a further base bundle's fit verdict per `base` source (plan 230)."""
+    return BUNDLE_SOURCES / bundle / "fit.json"
+
+
 def translations(locale):
     """authoring/data/questions.<locale>.json: one locale's translations of the source (D-81)."""
     return AUTHORING / "data" / f"questions.{locale}.json"

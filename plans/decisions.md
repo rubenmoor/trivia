@@ -1171,3 +1171,12 @@ Template:
 - Consequences: nothing waits for a sheet (pm decisions 414, 754); the sheet sits beside, not in, the review tool
 - Supersedes / related: D-33, QT-6; pm decisions 221, 754, 414; plans 141, 229
 
+## D-116: Fit pass copies: review fields and the mark of adapted copies
+- Date: 2026-11-20
+- Context: `qgen batch --bundle chinese-base --from base` (plan 230, task 2343) copies `base` questions it judges fit; the review page needs to tell fit copies and adapted ones apart, and a copy's review should say where it came from
+- Decision:
+  - **Mark:** a fit copy's `batch` is its run (`fit-<n>`); kept vs adapted is the verdict in `authoring/data/bundles/<id>/fit.json`, never a field on the question (no `fit: "adapted"`)
+  - **Review of a copy:** `review.fit` (the fit run) and `review.source_review` (`id`, `reviewer`, `model`, `reviewed_on` of the source's review) besides the usual fields; reviewer `llm` with the fit call's model, `human` for a developer flip
+  - **Adapted copies:** `needs_work` with feedback "adapt for a Chinese family: <issue>", then `qgen rework`'s revise steps (run mode `fit` counts as a rework mode); the fit review becomes `previous`
+- Consequences: filters on adapted copies read `fit.json`; `qgen validate` ties copies and verdicts together
+- Supersedes / related: D-33, D-114; pm decision 217; plan 230

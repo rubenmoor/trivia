@@ -34,6 +34,7 @@ def validate_pool():
     bundle_of = {b["id"]: b for b in bundles}
     errors += taxonomy_problems()
     errors += from_base_problems(data["questions"])
+    errors += fit_problems(data["questions"])
     e, w = slug_problems({q.get("bundle") or "base" for q in data["questions"]})
     errors += e
     warnings += w
@@ -546,6 +547,45 @@ def from_base_problems(questions, ids=None, subs=None, path=layout.from_base):
                 errors.append(f"{rel}: {k}: a null target needs reason and by")
             elif to is not None and to not in own:
                 errors.append(f"{rel}: {k}: {to!r} is not a {b} subcategory")
+    return errors
+
+
+def fit_problems(questions, ids=None, path=layout.fit):
+    """A further base bundle's fit.json (plan 230): entries are base sources with a known verdict, reason and `by`;
+    every copy in the bundle has a keep/adapt entry naming it; every keep/adapt entry has its copy (any status),
+    except a developer flip the next `--from base` run copies; a developer's keep → drop names its rejected copy."""
+    by_id, errors = {q.get("id"): q for q in questions}, []
+    for b in ids or [i for i in categories.bundle_ids() if i != "base"]:
+        f = path(b)
+        copied = {q["id"]: q["copied_from"] for q in questions if q.get("bundle") == b and q.get("copied_from")}
+        rejected = {q["id"] for q in questions if q.get("id") in copied and q.get("status") == "rejected"}
+        if not f.exists():
+            errors += [f"{qid}: copy in {b} without {f.name}" for qid in copied]
+            continue
+        rel = f.relative_to(ROOT) if f.is_relative_to(ROOT) else f
+        got = (load_json(f, {}) or {}).get("sources")
+        if not isinstance(got, dict):
+            errors.append(f"{rel}: needs a sources object")
+            continue
+        for i, e in got.items():
+            src = by_id.get(i)
+            if src is None or src.get("bundle") != "base" or src.get("copied_from"):
+                errors.append(f"{rel}: {i} is not a base source")
+            if e.get("verdict") not in ("keep", "adapt", "drop") or e.get("by") not in ("fit", "map", "rule", "developer"):
+                errors.append(f"{rel}: {i}: verdict keep/adapt/drop and by fit/map/rule/developer needed")
+            elif e["verdict"] == "drop" and not e.get("reason"):
+                errors.append(f"{rel}: {i}: a drop needs a reason")
+            elif e["verdict"] != "drop" and e.get("copy") is None and e["by"] != "developer":
+                errors.append(f"{rel}: {i}: {e['verdict']} without a copy")
+            elif e.get("copy") is not None and copied.get(e["copy"]) != i:
+                errors.append(f"{rel}: {i}: copy {e['copy']} is not its copy in {b}")
+            elif e["verdict"] == "drop" and e.get("copy") is not None and (e["by"] != "developer" or e["copy"] not in rejected):
+                errors.append(f"{rel}: {i}: a drop names a copy only as the developer's flip, the copy rejected")
+        for qid, src in sorted(copied.items()):
+            e = got.get(src) or {}
+            flip = e.get("verdict") == "drop" and e.get("by") == "developer" and qid in rejected
+            if not (e.get("verdict") in ("keep", "adapt") or flip) or e.get("copy") != qid:
+                errors.append(f"{rel}: copy {qid} of {src} has no keep/adapt entry naming it")
     return errors
 
 

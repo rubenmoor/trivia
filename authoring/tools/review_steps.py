@@ -57,6 +57,9 @@ def run_mode(run):
     return (load_json(WORK / run / "run.json", {}) or {}).get("mode")
 
 
+REWORK_MODES = ("rework", "fit")  # runs over pool questions: the issue is the needs_work feedback (QG-23; fit: plan 230)
+
+
 def update_pool(changes):
     """Apply {qid: change(q)} to the source pool in one write."""
     with atomic.locked(POOL):
@@ -185,7 +188,7 @@ def cmd_review(args):
     names = ["house-style", "review", *(["translate-review"] if locale else [])]
     notes = translator_notes(d) if locale else {}
     mode = run_mode(args.run)
-    rework = mode == "rework"
+    rework = mode in REWORK_MODES
     todo, done = [], 0
     for q in batch_questions(args.run):
         r = load_json(reviews / f"{q['id']}.json", {})
@@ -273,7 +276,7 @@ def cmd_fix(args):
     difficulty are taken (media stays the source's), `fix.previous` keeps the old text."""
     d = run_dir(args)
     mode = run_mode(args.run)
-    rework = mode == "rework"
+    rework = mode in REWORK_MODES
     locale = run_locale(d)
     tmp_of = tmp_ids(d)
     _, checks = collect(d)
@@ -400,6 +403,8 @@ def fix_issue(q, r, rework):
         review = q.get("review") or {}
         if q["status"] != "needs_work" or not (review.get("feedback") or "").strip():
             return None
+        if review.get("fit"):  # a fit pass's adapt issue, prefixed (plan 230)
+            return review["feedback"].strip()
         who = "final reviewer" if review.get("reviewer") == "llm" else "developer feedback"
         return f"{who}: {review['feedback'].strip()}"
     r1 = r.get("round1") or {}
