@@ -1,4 +1,404 @@
 {
   "about": "Categories of the chinese-base bundle (D-41, D-43): structure only, keyed by English slugs unique within the bundle (decision 259); names in names.<locale>.json.",
-  "categories": []
+  "categories": [
+    {
+      "slug": "festivals-and-customs",
+      "subject": "geography",
+      "subcategories": [
+        "spring-festival",
+        "mid-autumn-festival",
+        "other-traditional-festivals",
+        "calendar-and-solar-terms",
+        "chinese-zodiac",
+        "customs-and-etiquette",
+        "school-and-daily-life",
+        "celebrations-around-the-world"
+      ]
+    },
+    {
+      "slug": "chinese-food",
+      "subject": "geography",
+      "subcategories": [
+        "eight-cuisines",
+        "city-snacks",
+        "noodles-and-dumplings",
+        "tea-and-drinks",
+        "chinese-kitchen"
+      ]
+    },
+    {
+      "slug": "world-food",
+      "subject": "geography",
+      "subcategories": [
+        "world-cuisines",
+        "fast-food",
+        "drinks",
+        "sweets-and-chocolate",
+        "vegetables"
+      ]
+    },
+    {
+      "slug": "geography-of-china",
+      "subject": "geography",
+      "subcategories": [
+        "provinces",
+        "chinese-cities",
+        "chinese-rivers-and-lakes",
+        "chinese-mountains",
+        "landforms-and-deserts",
+        "climate-and-regions",
+        "ethnic-groups"
+      ]
+    },
+    {
+      "slug": "world-geography",
+      "subject": "geography",
+      "subcategories": [
+        "continents",
+        "countries",
+        "capital-cities",
+        "flags",
+        "rivers",
+        "mountains",
+        "deserts"
+      ]
+    },
+    {
+      "slug": "landmarks-and-heritage",
+      "subject": "geography",
+      "subcategories": [
+        "world-heritage-sites",
+        "scenic-areas",
+        "traditional-architecture",
+        "wonders-of-the-world",
+        "famous-landmarks",
+        "skyscrapers",
+        "famous-bridges"
+      ]
+    },
+    {
+      "slug": "money",
+      "subject": "geography",
+      "subcategories": [
+        "renminbi-and-old-coins",
+        "world-currencies",
+        "history-of-money",
+        "economy-and-stock-market"
+      ]
+    },
+    {
+      "slug": "chinese-history",
+      "subject": "history",
+      "subcategories": [
+        "dynasties-overview",
+        "early-china",
+        "qin-and-han",
+        "three-kingdoms-to-sui",
+        "tang-dynasty",
+        "song-and-yuan",
+        "ming-dynasty",
+        "qing-dynasty",
+        "late-qing-and-republic",
+        "peoples-republic",
+        "silk-road-and-voyages",
+        "imperial-exams-and-gaokao"
+      ]
+    },
+    {
+      "slug": "world-history",
+      "subject": "history",
+      "subcategories": [
+        "history",
+        "prehistory",
+        "dinosaurs",
+        "pyramids",
+        "explorers-and-discoveries",
+        "world-war-ii"
+      ]
+    },
+    {
+      "slug": "myths-and-legends",
+      "subject": "history",
+      "subcategories": [
+        "creation-myths",
+        "folktales",
+        "gods-and-immortals",
+        "mythical-creatures",
+        "greek-gods",
+        "legends-and-superstitions"
+      ]
+    },
+    {
+      "slug": "philosophy-and-religion",
+      "subject": "history",
+      "subcategories": [
+        "confucianism",
+        "daoism",
+        "hundred-schools",
+        "chinese-buddhism",
+        "world-religions",
+        "famous-philosophers"
+      ]
+    },
+    {
+      "slug": "chinese-language",
+      "subject": "history",
+      "subcategories": [
+        "chinese-characters",
+        "idiom-stories",
+        "dialects",
+        "languages-of-the-world"
+      ]
+    },
+    {
+      "slug": "planet-earth",
+      "subject": "nature",
+      "subcategories": [
+        "planet-earth",
+        "the-sea",
+        "weather-and-climate",
+        "natural-phenomena",
+        "volcanoes",
+        "rocks-and-minerals"
+      ]
+    },
+    {
+      "slug": "animals",
+      "subject": "nature",
+      "subcategories": [
+        "mammals",
+        "birds",
+        "reptiles",
+        "fish",
+        "insects",
+        "strange-creatures",
+        "farm-animals",
+        "cats"
+      ]
+    },
+    {
+      "slug": "nature-of-china",
+      "subject": "nature",
+      "subcategories": [
+        "giant-panda",
+        "chinese-land-animals",
+        "chinese-birds-and-water-life",
+        "chinese-plants-and-flowers",
+        "farming-and-silk",
+        "nature-reserves-and-hazards"
+      ]
+    },
+    {
+      "slug": "plants-and-environment",
+      "subject": "nature",
+      "subcategories": [
+        "plants",
+        "trees",
+        "environment"
+      ]
+    },
+    {
+      "slug": "human-body",
+      "subject": "nature",
+      "subcategories": [
+        "human-body",
+        "medicine-and-health",
+        "brain-and-mind"
+      ]
+    },
+    {
+      "slug": "science-and-maths",
+      "subject": "science",
+      "subcategories": [
+        "science",
+        "maths",
+        "chemistry",
+        "physics",
+        "famous-scientists"
+      ]
+    },
+    {
+      "slug": "chinese-science",
+      "subject": "science",
+      "subcategories": [
+        "ancient-chinese-maths",
+        "four-great-inventions",
+        "ancient-science-and-engineering",
+        "chinese-medicine-history",
+        "chinese-scientists",
+        "mega-projects"
+      ]
+    },
+    {
+      "slug": "space",
+      "subject": "science",
+      "subcategories": [
+        "space",
+        "solar-system",
+        "space-race-and-astronauts",
+        "stars-and-galaxies",
+        "crewed-spaceflight",
+        "lunar-and-planetary-missions"
+      ]
+    },
+    {
+      "slug": "technology-and-transport",
+      "subject": "science",
+      "subcategories": [
+        "inventions",
+        "technology",
+        "artificial-intelligence",
+        "internet",
+        "cars",
+        "planes",
+        "trains",
+        "ships-and-boats",
+        "china-transport"
+      ]
+    },
+    {
+      "slug": "chinese-literature",
+      "subject": "arts",
+      "subcategories": [
+        "tang-poems",
+        "song-ci",
+        "classical-prose",
+        "journey-to-the-west",
+        "romance-of-the-three-kingdoms",
+        "water-margin",
+        "dream-of-the-red-chamber",
+        "modern-chinese-literature",
+        "popular-chinese-fiction"
+      ]
+    },
+    {
+      "slug": "childrens-stories-and-rhymes",
+      "subject": "arts",
+      "subcategories": [
+        "chinese-fables",
+        "nursery-rhymes",
+        "fairy-tales"
+      ]
+    },
+    {
+      "slug": "world-art-and-literature",
+      "subject": "arts",
+      "subcategories": [
+        "art",
+        "colours",
+        "literature",
+        "traditional-dress",
+        "product-design"
+      ]
+    },
+    {
+      "slug": "music-and-opera",
+      "subject": "arts",
+      "subcategories": [
+        "chinese-folk-music",
+        "chinese-opera",
+        "c-pop",
+        "musical-instruments",
+        "classical-music",
+        "pop-music"
+      ]
+    },
+    {
+      "slug": "chinese-art-and-crafts",
+      "subject": "arts",
+      "subcategories": [
+        "calligraphy",
+        "chinese-painting",
+        "bronzes-and-porcelain",
+        "folk-crafts"
+      ]
+    },
+    {
+      "slug": "chinese-screen",
+      "subject": "media",
+      "subcategories": [
+        "chinese-cartoons",
+        "chinese-animated-films",
+        "classic-tv-series",
+        "modern-tv-dramas",
+        "chinese-cinema",
+        "hong-kong-cinema",
+        "spring-festival-gala"
+      ]
+    },
+    {
+      "slug": "world-film-and-tv",
+      "subject": "media",
+      "subcategories": [
+        "film",
+        "disney-films",
+        "anime",
+        "cartoons",
+        "marvel-superheroes",
+        "science-fiction",
+        "harry-potter"
+      ]
+    },
+    {
+      "slug": "games-and-apps",
+      "subject": "media",
+      "subcategories": [
+        "chinese-video-games",
+        "apps-and-online-life",
+        "video-games",
+        "video-game-characters",
+        "consoles-and-game-companies"
+      ]
+    },
+    {
+      "slug": "brands",
+      "subject": "media",
+      "subcategories": [
+        "chinese-tech-brands",
+        "chinese-consumer-brands",
+        "famous-logos",
+        "brand-origins"
+      ]
+    },
+    {
+      "slug": "chinese-sport",
+      "subject": "sport",
+      "subcategories": [
+        "china-at-the-olympics",
+        "table-tennis-and-badminton",
+        "diving-and-gymnastics",
+        "team-sports-in-china",
+        "chinese-sports-stars",
+        "martial-arts",
+        "traditional-sports"
+      ]
+    },
+    {
+      "slug": "world-sport",
+      "subject": "sport",
+      "subcategories": [
+        "football",
+        "world-cups",
+        "basketball",
+        "tennis",
+        "swimming",
+        "athletics",
+        "summer-olympics",
+        "winter-olympics"
+      ]
+    },
+    {
+      "slug": "games-and-pastimes",
+      "subject": "sport",
+      "subcategories": [
+        "board-and-tile-games",
+        "traditional-puzzles",
+        "childrens-games",
+        "toys",
+        "board-games",
+        "magic",
+        "guinness-world-records"
+      ]
+    }
+  ]
 }
