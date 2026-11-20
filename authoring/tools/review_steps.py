@@ -10,6 +10,7 @@ import media as media_tool  # authoring/tools/media.py: candidates, sheets, pick
 import media_first  # authoring/tools/media_first.py: probe aids (plan 203)
 import providers  # authoring/tools/providers/: where candidates come from (D-45)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
+import copies  # authoring/tools/copies.py: copies into another bundle (decision 217)
 
 from qgen import PROBLEMS, FACT_FIELDS, FACT_SCHEMA, QUESTION_FIELDS, REVISE_SCHEMA, STR, UsageLimit, as_locale, check_question_shape, claude, collect, failed, for_review, load_age_groups, load_json, locale_chunks, named, norm, overlap_norm, parallel, prompt, revise_in_pool, run_dir, save_json  # authoring/tools/qgen.py
 
@@ -139,7 +140,7 @@ def related_questions(q, pool, pool_en=None):
     a = overlap_norm(q["answer"], "en") if en else norm(q["answer"])
     ranked = []
     for i, (p, k) in enumerate(zip(pool, keys)):
-        if p["id"] == q["id"] or p["status"] == "rejected":
+        if p["id"] == q["id"] or p["status"] == "rejected" or copies.related(q, p):
             continue
         b = overlap_norm(k["answer"], "en") if en else norm(p["answer"])
         ratio = 1.0 if a == b else difflib.SequenceMatcher(None, a, b).ratio()
