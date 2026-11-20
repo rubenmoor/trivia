@@ -27,7 +27,7 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per questi
 ## Target (decided, D-75)
 - **6000 approved per question locale** (es, es-ES, en, de; D-107), with D-53's per-level mix (`authoring/data/targets.json`).
 - No games-per-player number (pm decision 21). Estimate at 5000, strong player, old Normal joker budget: ≥ 80 games in every age group (bottleneck: adults, difficulty 13–15).
-- Later languages (zh-Hans, ru, pt-BR, milestone 12): no target now.
+- Later languages (zh-Hans, zh-Hant, milestone 12): no target now; ru, pt-BR no longer planned.
 - **Regional packs:** 2000 approved each, D-53's mix scaled (`targets.json` `colombia`: 100 … 50), per locale (region's language + en); progress: `qgen report --bundle <id> [--locale L]` (D-101).
 - **Theme bundles** (plan 184: `stem`, `sports`, `history`, `movies`, `geography`): 2000 approved each per question locale (es, es-ES, en, de), the same scaled mix (`targets.json`); progress: `qgen report --bundle <id> [--locale L]`. Shipping rule (decision 520): none of the five ships before all five have 2000+ approved (`plans/22-bundles.md` "Shipping non-base bundles").
 - Translations count: a locale's 6000 = approved sources in it + its playing translations (re-rated, fact-checked, reviewed, 15b; decision 235).
