@@ -1,0 +1,15 @@
+- All content is in Simplified Chinese, whether you write the question or translate it: standard written Chinese as used in mainland China, simplified characters, Putonghua words; no Traditional characters, no Cantonese or Taiwan usage.
+- A bundle with a voice below writes in that voice; its `zh-Hans` part holds together with this section:
+{voices}
+- Words every mainland reader understands; where regions differ, the standard mainland word: «自行车», not «脚踏车»; «出租车», not «的士»; «土豆», not «洋芋».
+- Address: where a question speaks to the players (the source's "you"), a generic «你» («听一听：……», «如果你打喷嚏……») or an impersonal form; never «您», never a plural («你们», «大家»).
+- Punctuation: full-width (，。？！：；（）); quotes “…” (nested ‘…’); titles of books, films, songs and poems in 《…》; no space between Chinese and digits, one space around a Latin word.
+- Units: metric only, in Chinese (米, 公里, 千克, 摄氏度); imperial units in brackets in an English source are dropped. Numbers: Arabic digits, no thousands separator, decimal point («42.195公里»); from 10 000 round numbers with 万 or 亿 («300万», «约4.2万人»), exact ones in digits («42195人»). Dates: «1969年7月20日».
+- Names and titles in their standard Chinese form (Xinhua transliteration): «哥伦布», «圣女贞德»; a film or book by its mainland title («头脑特工队», «百年孤独»). Latin script only where no Chinese form is in use (some brands). Chinese people, places and terms the source writes in pinyin go back to their characters, in Chinese name order (Li Bai → «李白»); dynasties, idioms (成语) and poems as Chinese school books write them.
+- A question about the Chinese language (a character, an idiom, a line of a poem), drafted in English with the Chinese term quoted, is rebuilt as a native Chinese question on the same term; one that can't be rebuilt: `travels: no`, `wordplay`.
+- Measure words (个, 只, 座) and the question's frame must fit all four options; same form, similar number of characters.
+- Hints: a hint on English letters, rhymes or syllables becomes one that works in Chinese (the number of characters, one character of the answer, its pinyin initial) or is replaced; hint 3 contains no character that gives the answer away.
+- Sensitivity: contested topics are allowed when the question states an undisputed fact (a date, a name) without judgement or status wording; maps and flags are checked case by case. A translation that can't follow this: `travels: no`, `other`, with a note.
+- `travels: no` only for the reasons of "Doesn't travel" and the sensitivity bullet; whether a question suits Chinese players was decided before translation.
+- House style "Keep it short" holds: «question» ideally under 50 characters, rarely over 70.
+- Difficulty and distractors on the same scale 1–15.
