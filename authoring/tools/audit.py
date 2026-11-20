@@ -73,15 +73,45 @@ def audit_size(run):
     return max(AUDIT_SAMPLE, spot_check_size(run))
 
 
+def llm_review(r):
+    """The first LLM review in a review chain (the newest is first), else None."""
+    while r is not None and r.get("reviewer") != "llm":
+        r = r.get("previous")
+    return r
+
+
+def spot_decisions(run):
+    """llm_decisions, and for a fit run (plan 230) also its kept copies: the fit pass's decision on each copy of
+    the run with an LLM review; a developer's flip (a human review only) isn't checked."""
+    dec = llm_decisions(run)
+    if (load_json(WORK / run / "run.json", {}) or {}).get("mode") != "fit":
+        return dec
+    for q in load_json(POOL)["questions"]:
+        if q.get("batch") == run and q.get("copied_from") and q["id"] not in dec and (r := llm_review(q.get("review"))):
+            dec[q["id"]] = r["decision"]
+    return dec
+
+
+def spot_sample(run, n):
+    """The run's spot-check ids: the first n of the audit order; a fit run's over all its copies (kept and adapted,
+    the audit reads only the adapted), drawn once into work/<run>/spot-sample.json."""
+    if (load_json(WORK / run / "run.json", {}) or {}).get("mode") != "fit":
+        return audit_sample(run, n)
+    return sample_order(run, WORK / run / "spot-sample.json", spot_decisions(run))[:n]
+
+
 def audit_sample(run, n=AUDIT_SAMPLE):
-    """The first n ids of the run's audit order (plan 16), seeded by the run's name: LLM-approved and
-    needs_work questions interleaved in proportion, so every prefix is a proportional sample and the
-    spot check's smaller one is a subset. Drawn once into work/<run>/audit/sample.json."""
-    path = WORK / run / "audit" / "sample.json"
+    """The first n ids of the run's audit order (plan 16): see sample_order. Drawn once into work/<run>/audit/sample.json."""
+    return sample_order(run, WORK / run / "audit" / "sample.json", None)[:n]
+
+
+def sample_order(run, path, decisions):
+    """The run's seeded order of {id: decision} (default llm_decisions): approved and needs_work questions
+    interleaved in proportion, so every prefix is a proportional sample and a smaller one a subset; saved to path."""
     order = load_json(path)
     if order is None:
         rng, strata = random.Random(run), {}
-        for i, dec in sorted(llm_decisions(run).items()):
+        for i, dec in sorted((llm_decisions(run) if decisions is None else decisions).items()):
             strata.setdefault(dec, []).append(i)
         keyed = []
         for _, ids in sorted(strata.items()):
@@ -90,7 +120,7 @@ def audit_sample(run, n=AUDIT_SAMPLE):
         order = [i for *_, i in sorted(keyed)]
         if order:
             save_json(path, order)
-    return order[:n]
+    return order
 
 
 def audits(run):

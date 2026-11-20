@@ -2,12 +2,11 @@
 keep → drop rejecting the copy, refusals. Reuses test_fit_batch's fixture."""
 import json, sys
 from pathlib import Path
-from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).parent))
 sys.path.insert(0, str(Path(__file__).parent.parent / "server"))
 import test_fit_batch as tb  # noqa: E402
-import fit, fit_view, reviews, validate  # noqa: E402
+import audit, fit_view, reviews, spot_checks, validate  # noqa: E402
 
 
 class FitView(tb.Fixture):
@@ -15,6 +14,7 @@ class FitView(tb.Fixture):
         super().setUp()
         self.patch(reviews, "POOL", self.pool)
         self.patch(reviews, "save_pool", lambda d: self.pool.write_text(json.dumps(d)))
+        self.patch(audit, "POOL", self.pool)
         self.run_batch()
 
     def check(self):
@@ -28,6 +28,15 @@ class FitView(tb.Fixture):
         self.assertEqual(rows["q-0002"]["source"]["question"], "Question q-0002 about a vegetable?")
         self.assertEqual(out["runs"], ["fit-1"])
         self.assertEqual(out["drop_sample"], {"fit-1": ["q-0003"]})  # fit drops only, not the rule's
+
+    def test_spot_check_sample_kept_and_adapted(self):
+        v = self.verdicts()
+        kept, adapted = v["q-0001"]["copy"], v["q-0002"]["copy"]
+        self.assertEqual(audit.audit_sample("fit-1", 30), [adapted])  # the audit reads the adapted copies only
+        got = spot_checks.sample("fit-1")
+        self.assertIn(kept, got)
+        self.assertIn(adapted, got)
+        self.assertEqual(audit.spot_decisions("fit-1")[kept], "approved")
 
     def test_drop_to_keep_next_run_copies_without_call(self):
         e = fit_view.flip(tb.B, "q-0003", "keep")
