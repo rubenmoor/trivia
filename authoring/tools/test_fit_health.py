@@ -1,5 +1,5 @@
 """Health and `qgen health ack` of fit runs (task 2424). Reuses test_fit_batch's fixture."""
-import argparse, json, sys
+import argparse, json, sys, unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -33,3 +33,7 @@ class FitHealth(tb.Fixture):
         self.assertIn("| judged | 4 |", (self.tmp / "batches.md").read_text())
         with self.assertRaises(SystemExit):
             qgen.cmd_health_ack(argparse.Namespace(batch="fit-9", note="x"))
+
+
+if __name__ == "__main__":
+    unittest.main()
