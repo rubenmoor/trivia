@@ -378,3 +378,35 @@ export interface SoundCandidate {
   excerpt_start_s?: number;
   tension_note?: string;
 }
+
+/** GET /api/fit (authoring/server/fit_view.py, plan 230). */
+export type FitVerdict = "keep" | "adapt" | "drop";
+export interface FitEntry {
+  verdict: FitVerdict;
+  reason: string | null;
+  note: string;
+  run: string;
+  by: "fit" | "map" | "rule" | "developer";
+}
+export interface FitText {
+  question: string;
+  answer: string;
+  wrong_answers: string[];
+  hints: string[];
+  fun_fact: string | null;
+  difficulty: number;
+}
+export interface FitRow extends FitEntry {
+  id: string;
+  category: string;
+  subcategory: string;
+  issue?: string | null;
+  source: FitText;
+  copy: (FitText & { id: string; status: string }) | null;
+}
+export interface FitData {
+  bundle: string;
+  rows: FitRow[];
+  runs: string[];
+  drop_sample: Record<string, string[]>;
+}

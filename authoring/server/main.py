@@ -58,6 +58,8 @@ API:
                                                    question's human review; {"undo": true} removes it (plan 16);
                                                    <batch> may be a back-audit run (plan 57) or a translation run
                                                    tr-<locale>-<n>: its translation, item with "locale" (plan 67)
+    GET  /api/fit?bundle=chinese-base              the fit pass's verdict per base source with texts, runs, drop sample (plan 230)
+    POST /api/fit/<bundle>/<source id>             body {"verdict": "keep"|"drop", "reason"?}: the developer's flip (fit_view.flip)
     GET  /api/overview                             what the start page shows (RV-12, authoring/server/overview.py);
                                                    rows per locale and its tr-* runs (plan 67)
     GET  /api/stats/media?bundle=colombia          approved questions per media role and image resolution
@@ -98,6 +100,7 @@ import download  # noqa: E402  (authoring/tools/download.py)
 import media  # noqa: E402  (authoring/tools/media.py)
 import media_first  # noqa: E402  (authoring/tools/media_first.py)
 import media_cache  # noqa: E402  (authoring/tools/media_cache.py)
+import fit_view  # noqa: E402  (authoring/server/fit_view.py)
 import media_stats  # noqa: E402  (authoring/server/media_stats.py)
 import sounds  # noqa: E402  (authoring/server/sounds.py)
 import ui_flags  # noqa: E402  (authoring/server/ui_flags.py)
@@ -389,6 +392,7 @@ GET_API = {
     "/api/spot-checks": lambda query: {"size": spot_checks.size(), "problems": PROBLEMS, "checks": spot_checks.load()},
     "/api/overview": lambda query: overview.build(load_pool()["questions"]),
     "/api/stats/media": media_stats_of,
+    "/api/fit": fit_view.build,
     "/api/age-groups": lambda query: load_age_groups(),
     "/api/bundles": lambda query: load_bundles(),
     "/api/names": names_of,
@@ -474,6 +478,12 @@ class Handler(BaseHandler):
         if parts == ["api", "gallery", "flags"]:
             try:
                 return self.send_json(200, ui_flags.change(self.read_body()))
+            except (ValueError, TypeError, AttributeError) as e:
+                return self.send_json(400, {"error": str(e)})
+        if len(parts) == 4 and parts[:2] == ["api", "fit"]:  # a flip (plan 230)
+            try:
+                body = self.read_body()
+                return self.send_json(200, fit_view.flip(parts[2], parts[3], body.get("verdict"), body.get("reason")))
             except (ValueError, TypeError, AttributeError) as e:
                 return self.send_json(400, {"error": str(e)})
         if len(parts) == 4 and parts[:2] == ["api", "spot-checks"]:

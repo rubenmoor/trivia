@@ -42,7 +42,8 @@ def args(**kw):
     return argparse.Namespace(**(a | kw))
 
 
-class FitBatch(unittest.TestCase):
+class Fixture(unittest.TestCase):
+    """The fixture pool, patched paths and stubs (test_fit_view reuses it)."""
     def setUp(self):
         self.tmp = Path(tempfile.mkdtemp())
         self.work, self.pool, self.fitfile = self.tmp / "work", self.tmp / "questions.json", self.tmp / "fit.json"
@@ -101,6 +102,8 @@ class FitBatch(unittest.TestCase):
     def verdicts(self):
         return json.loads(self.fitfile.read_text())["sources"]
 
+
+class FitBatch(Fixture):
     def check_end_state(self):
         v, pool = self.verdicts(), self.data()
         self.assertEqual(sorted(v), ["q-0001", "q-0002", "q-0003", "q-0005", "q-0006", "q-0007"])  # q-0004 not copyable
