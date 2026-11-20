@@ -25,7 +25,7 @@
       "project": ["authoring/**/*.{ts,mjs}!", "modding/**/*.js!", "report-server/**/*.{ts,mjs}!", "!authoring/ui/**"]
     },
     "app/desktop": {
-      "entry": ["{main,after-pack,stage-media,steam-libs}.mjs!", "preload.cjs!", "*.test.mjs"],
+      "entry": ["{main,after-pack,stage-media,steam-libs,subset-fonts}.mjs!", "preload.cjs!", "*.test.mjs"],
       "project": ["*.{mjs,cjs}!"]
     },
     "app/client": {

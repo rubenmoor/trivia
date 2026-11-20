@@ -125,7 +125,6 @@ def licence_verdict(slot):
 def licence_fields(candidate):
     """A pick's licence record (plans/26 "Slot fields")."""
     p = provider_of(candidate)
-    pd = licence_kind(candidate.get("license")) == "public-domain"
     extra = {"author_url": candidate.get("author_url"), "restrictions": candidate.get("restrictions", []),
              "pd_reasons": pd_reasons(candidate)}
     record = {"provider": p.ID, **{k: candidate.get(k) for k in ("license", "license_url", "author")}, **extra}
