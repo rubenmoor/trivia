@@ -50,6 +50,12 @@ def copy_question(src_id, bundle, subcategory, questions, batch, status="needs_w
     return new
 
 
+def media_fixed(q):
+    """The question's `media` is fixed, never searched or picked again: a media-first question's file (plan 203)
+    or a copy's, shared with its source."""
+    return bool(q.get("media_first") or q.get("copied_from"))
+
+
 def related(a, b):
     """a and b are a source and its copy (either way, ids or tmp ids): not duplicates of each other."""
     ia, ib = a.get("id"), b.get("id")

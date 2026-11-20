@@ -92,6 +92,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
 import layout  # noqa: E402  (authoring/tools/layout.py)
 import atomic  # noqa: E402  (authoring/tools/atomic.py)
 import categories  # noqa: E402  (authoring/tools/categories.py)
+import copies  # noqa: E402  (authoring/tools/copies.py)
 from http_base import BaseHandler  # noqa: E402  (authoring/tools/http_base.py)
 import download  # noqa: E402  (authoring/tools/download.py)
 import media  # noqa: E402  (authoring/tools/media.py)
@@ -296,8 +297,15 @@ def find_question(qid):
     raise NoQuestion(qid)
 
 
+def refuse_fixed(q, slot):
+    if slot == "media" and copies.media_fixed(q):
+        raise ValueError(f"{q['id']}: its media file is fixed (a copy's or media-first), no new pick or search")
+
+
 def pick_media(qid, index, slot):
-    target(find_question(qid), slot)
+    q = find_question(qid)
+    target(q, slot)
+    refuse_fixed(q, slot)
     found = media.load_candidates(qid, slot)
     if not found or not 0 <= index < len(found["candidates"]):
         raise ValueError(f"no candidate {index + 1}")
@@ -309,7 +317,9 @@ def search_media(qid, query, slot, every=False):
     query = (query or "").strip()
     if not query:
         raise ValueError("empty search term")
-    target(find_question(qid), slot)
+    q = find_question(qid)
+    target(q, slot)
+    refuse_fixed(q, slot)
     q = update_question(qid, lambda q: target(q, slot).update(query=query))
     media.fetch_for(q, slot, every)
     return q
