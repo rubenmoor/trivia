@@ -1,5 +1,5 @@
 """Translation runs: `qgen batch --translate` (plan 66, decision 45). Never ships (D-35)."""
-import argparse, datetime, json, re, sys, time, unicodedata, urllib.parse
+import argparse, datetime, json, re, sys, time, urllib.parse
 from decimal import Decimal
 from collections import Counter
 
@@ -40,13 +40,11 @@ def run_bundle(d):
 _ZH_DIGITS = {c: i for i, c in enumerate("零一二三四五六七八九")} | {"〇": 0, "两": 2}
 _ZH_UNITS, _ZH_BIG = {"十": 10, "百": 100, "千": 1000}, {"万": 10 ** 4, "亿": 10 ** 8}
 _ZH_RUN = re.compile("[零〇一二两三四五六七八九十百千万亿]+")
+_FULLWIDTH = str.maketrans("０１２３４５６７８９，．", "0123456789,.")
 
 
 def _zh_value(run):
-    """A Chinese numeral run as an integer string (一九六九 = 1969, 三万 = 30000); a lone 一 or 两 is None
-    (统一, 一些: not a number)."""
-    if len(run) == 1 and run in "一两":
-        return None
+    """A Chinese numeral run as an integer string: 一九六九 = 1969, 二十一 = 21, 三万 = 30000."""
     if all(c in _ZH_DIGITS for c in run):
         return "".join(str(_ZH_DIGITS[c]) for c in run)
     total = sect = num = 0
@@ -61,13 +59,19 @@ def _zh_value(run):
 
 
 def numbers(text):
-    """The numbers in text, thousands separators and decimal marks dropped: «42 195» = «42,195»;
-    fullwidth digits, 万/亿 («4.2万») and Chinese numerals («三») count as the digits they write."""
-    text = unicodedata.normalize("NFKC", text)
-    text = re.sub(r"(\d+(?:\.\d+)?)\s*([万亿])",
-                  lambda m: str(int(Decimal(m[1]) * _ZH_BIG[m[2]])), text)
-    text = _ZH_RUN.sub(lambda m: f"\n{_zh_value(m[0]) or m[0]}\n", text)
-    return sorted(re.findall(r"\d+", re.sub(r"(?<=\d)[ ,.  '](?=\d)", "", text)))
+    """(digit numbers, Chinese numeral runs) in text; separators and decimal marks dropped («42 195» =
+    «42,195»), fullwidth digits and «4.2万» as digits. Not expanded: English number words, «3.5 million»."""
+    text = re.sub(r"(\d+(?:\.\d+)?)\s*([万亿])", lambda m: str(int(Decimal(m[1]) * _ZH_BIG[m[2]])),
+                  text.translate(_FULLWIDTH))
+    zh = Counter(_zh_value(r) for r in _ZH_RUN.findall(text))
+    return Counter(re.findall(r"\d+", re.sub(r"(?<=\d)[ ,.  '](?=\d)", "", _ZH_RUN.sub(" ", text)))), zh
+
+
+def same_numbers(a, b):
+    """Each digit number of one text is in the other, as digits or as a Chinese numeral («3» = «三»);
+    a numeral with no digit counterpart is ignored: it is usually a word (四川, 十分, 第二次)."""
+    (da, za), (db, zb) = numbers(a), numbers(b)
+    return not (da - db - zb) and not (db - da - za)
 
 
 def fact_text(q):
@@ -77,7 +81,7 @@ def fact_text(q):
 def translation_needs_check(t, q):
     """A translation changed a number, unit or date (imperial added included), the translator doubts a
     fact, or the source wasn't fact-checked; the rest inherits the source's check."""
-    return bool(numbers(fact_text(t)) != numbers(fact_text(q)) or not q.get("fact_checked")
+    return bool(not same_numbers(fact_text(t), fact_text(q)) or not q.get("fact_checked")
             or re.search(r"\bfacts?\b|doubt", t["notes"], re.I))
 
 
