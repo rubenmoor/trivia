@@ -264,6 +264,8 @@ scene("timed-heart", timedScene(timedSession(3, [
 ])));
 // Four seats, Luna out, then two idle rounds: the other three are on one heart each, round 3's last question on screen.
 scene("timed-risk", timedScene(timedSession(4, [...round(by(0, false), timeUp, timeUp, timeUp), ...round(timeUp, timeUp, timeUp), ...round(timeUp, timeUp, shown)])));
+// Three seats, nobody answered round 1 (task 2412): its last question on screen; its time-out ends the round, every heart cracks, red frame.
+scene("timed-idle", timedScene(timedSession(3, round(timeUp, timeUp, shown))));
 // Two seats right every round up to round 12: the sudden-death round screen; its question claimed by Luna.
 const toTwelve = Array.from({ length: 11 }, () => round(by(0), by(1))).flat();
 scene("timed-12", timedScene(timedSession(2, toTwelve)));
