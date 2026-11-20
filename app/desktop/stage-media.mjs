@@ -1,6 +1,7 @@
 // Pool media → build/media for a packaged build (plan 56): encoded under shippedName (decision 185),
 // hard links (or copies) from the encode cache work/ship-media/.
 // build/pack-media.json: per shipped bundle folder, the media only it uses (its DLC depot carries them, decision 66; [] without a pool).
+// A `kind: base` pack (decision 753) is no DLC: its pools (every locale) and media go in the content depot, no pack-media.json entry; media shared with base stay once.
 // build/data/: app/data/ without topic bundle pools until all five topics have 2000 approved per locale (decision 520).
 // Audio and video sound is levelled to -18 LUFS after the cut (loudness.mjs).
 // Excerpt questions (decision 644): the build's pools point at `<url>#t=start,end`, one cut file per window; the media is cut to it.
@@ -10,14 +11,15 @@
 // no packs, no pack-media.json; budget `demo.content`. Also build/data-demo/: app/data/ without bundles/ and the full pools, with demo/.
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
-import { copyFileSync, cpSync, existsSync, linkSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { copyFileSync, cpSync, linkSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { availableParallelism } from "node:os";
 import { FFMPEG_THREADS, run } from "./niced.mjs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { filter, measure, TARGET_LUFS, TRUE_PEAK } from "./loudness.mjs";
 import { VIDEO } from "./media-formats.mjs";
-import { cacheName, excerptOf, poolUrls, shipPool, shippedName, sourceUrl } from "./resolve.mjs";
+import { cacheName, excerptOf, shipPool, shippedName, sourceUrl } from "./resolve.mjs";
+import { stageUrls } from "./stage-urls.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(HERE, "..", "..");
@@ -111,32 +113,7 @@ async function encode(src, name, excerpt) {
 }
 
 const DATA = path.join(REPO, "app", "data");
-// Topic bundles ship only when all five have TOPIC_BAR questions per locale (decision 520); pool.json = es.
-const TOPIC_BAR = 2000;
-const poolLocale = (f) => /^pool(?:\.([\w-]+))?\.json$/.exec(f)?.[1] ?? (f === "pool.json" ? "es" : null);
-const topics = JSON.parse(readFileSync(path.join(DATA, "bundles.json"), "utf8")).bundles.filter((b) => b.kind === "theme").map((b) => b.id);
-const topicCount = (b, f) => JSON.parse(readFileSync(path.join(DATA, "bundles", b, f), "utf8")).questions.filter((q) => q.status === "approved").length;
-const atBar = (f) => topics.every((b) => existsSync(path.join(DATA, "bundles", b, f)) && topicCount(b, f) >= TOPIC_BAR);
-const shipsPool = (b, f) => !topics.includes(b) || atBar(f);
-const read = (file) => poolUrls(shipPool(JSON.parse(readFileSync(file, "utf8"))));
-const urls = new Set();
-const packMedia = {};
-if (demo) {
-  const dir = path.join(DATA, "demo");
-  for (const f of readdirSync(dir).filter((f) => /^pool(\.[\w-]+)?\.json$/.test(f))) for (const u of read(path.join(dir, f))) urls.add(u);
-} else {
-  const packs = readdirSync(path.join(DATA, "bundles"))
-    .filter((b) => statSync(path.join(DATA, "bundles", b), { throwIfNoEntry: false })?.isDirectory())
-    .map((b) => [b, existsSync(path.join(DATA, "bundles", b, "pool.json")) && shipsPool(b, "pool.json") ? read(path.join(DATA, "bundles", b, "pool.json")) : new Set()]); // no pool yet: a pack without media
-  for (const u of read(path.join(DATA, "pool.json"))) urls.add(u);
-  const owners = new Map();
-  for (const [b, own] of packs) for (const u of own) owners.set(u, urls.has(u) || owners.has(u) ? null : b);
-  for (const [b] of packs) packMedia[b] = [];
-  for (const [u, b] of [...owners].sort()) {
-    urls.add(u);
-    if (b) packMedia[b].push(shippedName(u));
-  }
-}
+const { urls, packMedia, baseMedia, shipsPool, poolLocale } = stageUrls(DATA, demo);
 
 // Budgets in MB (media-budget.json): per depot, per file (videos `video`).
 if (check) {
@@ -149,6 +126,7 @@ if (check) {
   const inPack = new Set(Object.values(shipped).flat());
   // No size line for the base content or the packs (decision 653); only the demo has one.
   const depots = [["content", [...size.keys()].filter((f) => !inPack.has(f)), demo ? budget.demo.content : null]];
+  for (const [b, names] of baseMedia) console.log(`  content includes base pack ${b}: ${new Set(names).size} media files`);
   for (const [b, files] of Object.entries(shipped)) depots.push([`dlc ${b}`, files, null]);
   for (const [name, files, max] of depots) {
     const mb = files.reduce((n, f) => n + (size.get(f) ?? 0), 0) / MB;

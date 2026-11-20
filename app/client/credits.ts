@@ -3,16 +3,14 @@ import { existsSync, readdirSync, readFileSync, rmSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import type { Plugin } from "vite";
 import { demo } from "./devserver.ts";
+import { poolFiles } from "./poolFiles.ts";
 import type { Credits, CreditKind as Kind, AssetCredit, MediaCredit } from "./src/lib/types.ts";
 
 const client = fileURLToPath(new URL(".", import.meta.url));
 const repo = `${client}../../`;
 const dataDir = `${client}../data/`;
-/** es pool files: base's and every pack's (decision 66); the demo build's the demo's, every locale (it ships their media, decision 342). */
-const pools = (): string[] => demo ? readdirSync(`${dataDir}demo`).filter((f) => /^pool(\.[\w-]+)?\.json$/.test(f)).map((f) => `${dataDir}demo/${f}`) : [
-  `${dataDir}pool.json`,
-  ...readdirSync(`${dataDir}bundles`).map((b) => `${dataDir}bundles/${b}/pool.json`).filter((f) => existsSync(f)),
-];
+/** Pool files with shipped media (poolFiles.ts); the demo build's the demo's, every locale (it ships their media, decision 342). */
+const pools = (): string[] => demo ? readdirSync(`${dataDir}demo`).filter((f) => /^pool(\.[\w-]+)?\.json$/.test(f)).map((f) => `${dataDir}demo/${f}`) : poolFiles(dataDir);
 
 const KINDS: Kind[] = ["image", "audio", "video", "background"];
 // Same file rules as authoring/steam/credits_check.mjs.
