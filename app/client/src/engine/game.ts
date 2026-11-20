@@ -927,8 +927,8 @@ function questionEnd(c: Timed, e: Ending): void {
     const left = seatsIn(row);
     if (left.length === 1) return timedEnd(c, left[0]);
   } else {
-    // unclaimed time-out: every seat in loses a life, none more at the round end (decision 772)
-    const hit = seatsIn(row);
+    // unclaimed time-out: seats in without an answer this round lose a life, none more at the round end (decision 773)
+    const hit = seatsIn(row).filter((i) => !t.round_correct.includes(i));
     for (const i of hit) loseLife(row.seats![i]);
     t.round_lost = [...new Set([...(t.round_lost ?? []), ...hit])];
     const left = seatsIn(row);
@@ -1263,6 +1263,7 @@ function timedView(row: GameRow, t: TimedState, state: GameState, data: EngineDa
   const live = row.result === null && state.phase === "question";
   const paused = t.paused_at !== null;
   const q = state.current === null ? undefined : data.byId.get(state.current);
+  const chance = (i: number) => t.round_done === t.round_size - 1 && !t.round_correct.includes(i);
   const left = seatsIn(row);
   const ms = paceMs(state.settings.pace);
   return {
@@ -1273,7 +1274,7 @@ function timedView(row: GameRow, t: TimedState, state: GameState, data: EngineDa
     deadline: live && !paused && !t.claim && t.shown_at !== null ? t.shown_at + ms.question : null,
     claim: live && !paused && t.claim ? { seat: t.claim.seat, deadline: t.claim.at + ms.claim, question_left: Math.max(0, ms.question - (t.claim.at - (t.shown_at ?? t.claim.at))) } : null,
     paused, hints_shown: live && !paused && q ? timedHints(t, msOf(io), q.hints.length, ms.hint) : null,
-    all_at_risk: live && left.length > 0 && left.every((i) => row.seats![i].lives === 1), // a time-out would end them all
+    all_at_risk: live && left.length > 0 && left.every((i) => row.seats![i].lives === 1 && chance(i)),
   };
 }
 
@@ -1310,7 +1311,7 @@ export function view(save: SaveData, data: EngineData, io: Io): Game | null {
         const own = seatState(row, i);
         const base = { player: named(seat.player_id), status, level: own.level, age_group: gameChoice(own, data).age_group ?? null, jokers_left: jokersLeft(own), ...(seat.device ? { device: seat.device } : {}) };
         if (!t) return base;
-        const last_chance = result === null && !seat.out && t.round_done === t.round_size - 1 && !t.round_correct.includes(i) && !t.round_lost?.includes(i);
+        const last_chance = result === null && !seat.out && t.round_done === t.round_size - 1 && !t.round_correct.includes(i);
         return { ...base, lives: seat.lives ?? LIVES, correct_this_round: t.round_correct.includes(i), last_chance };
       }),
       ...(t ? { timed: timedView(row, t, state, data, io) } : {}),

@@ -332,7 +332,7 @@
   });
   /** The seat that answered, once revealed: ✓ or out on the strip. */
   const answered = $derived(held && revealed && held.last.seat !== undefined ? held.last : null);
-  /** An unclaimed time-out, once revealed: every seat in loses a heart. */
+  /** An unclaimed time-out, once revealed: seats still in without a correct answer this round lose a heart (decision 773). */
   const timeUp = $derived(!!held && revealed && held.last.unclaimed === true);
 </script>
 
@@ -400,7 +400,7 @@
 
   <div class="strip">
     {#each session.seats as s, i (i)}
-      {@const lost = timeUp && s.status === "playing" ? 1 : 0}
+      {@const lost = timeUp && s.status === "playing" && !s.correct_this_round ? 1 : 0}
       {@const out = s.status !== "playing" || (answered?.seat === i && !answered.correct) || (lost > 0 && (s.lives ?? LIVES) <= 1)}
       {@const ok = s.correct_this_round || (answered?.seat === i && answered.correct)}
       {@const dropped = answered?.seat === i && !answered.correct}

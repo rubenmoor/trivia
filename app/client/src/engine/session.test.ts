@@ -208,26 +208,24 @@ test("timed: claims, a claim run out, an unclaimed question, the round end's liv
   save = timed(save, "claim", { seat: 2 }, flow(save).shown_at! + game.QUESTION_MS + 1).save; // too late: settled, no claim
   assert.equal(row(save).state.history.at(-1)!.unclaimed, true);
   assert.equal(row(save).state.history.at(-1)!.correct, undefined);
-  // the unclaimed time-out: Ana and Cami, still in, lose a life; the round end takes no second one from Cami; round 2
+  // the unclaimed time-out: only Cami (no answer yet) loses a life, Ana answered (decision 773); no second one at the end; round 2
   // has the two seats still in (decision 276)
-  assert.deepEqual(row(save).seats!.map((x) => x.lives), [2, 3, 2]);
+  assert.deepEqual(row(save).seats!.map((x) => x.lives), [3, 3, 2]);
   assert.deepEqual([row(save).state.level, flow(save).round_size, flow(save).round_done, flow(save).claim], [2, 2, 0, null]);
   assert.equal(save.seen.filter((x) => x.game_id === row(save).id).length, 3);
   assert.equal(new Set(row(save).state.offered).size, 4);
 });
 
-test("timed: an unclaimed time-out takes a life from every seat in, at once (task 2402)", () => {
+test("timed: an unclaimed time-out costs a life only seats without an answer this round (task 2409)", () => {
   let save = startTimed(["Ana", "Beto"]);
   const expire = (s: SaveData) => timed(s, "expire", {}, flow(s).shown_at! + game.QUESTION_MS + 1).save;
+  save = claimAnswer(save, 0, true, T0 + 1000); // Ana answered; Beto did not
   save = expire(save);
-  assert.deepEqual(row(save).seats!.map((x) => x.lives), [2, 2]);
-  assert.deepEqual([row(save).state.last!.unclaimed, row(save).state.last!.seat, flow(save).round_lost], [true, undefined, [0, 1]]);
-  const v = game.view(save, data, { ...io(1), ms: flow(save).shown_at! })!.session!;
-  assert.deepEqual(v.seats.map((s) => s.last_chance), [false, false]); // the round end takes nothing more
-  save = claimAnswer(save, 0, true, flow(save).shown_at! + 1000);
-  assert.deepEqual([row(save).state.level, row(save).seats!.map((x) => x.lives), flow(save).round_lost], [2, [2, 2], []]);
-  save = expire(expire(save)); // round 2 idle: two more lives each, round end none
-  assert.deepEqual([row(save).result, row(save).seats!.map((x) => [x.lives, x.out])], ["lost", [[0, true], [0, true]]]);
+  assert.deepEqual(row(save).seats!.map((x) => x.lives), [3, 2]);
+  assert.deepEqual(flow(save).round_lost ?? [], []); // the round ended: reset
+  assert.deepEqual([row(save).state.level, flow(save).round_size], [2, 2]);
+  save = expire(expire(save)); // round 2 idle: a life each per time-out, none more at the round end
+  assert.deepEqual(row(save).seats!.map((x) => x.lives), [1, 0].map((n, i) => (i ? 0 : n)));
 });
 
 test("timed: a correct answer in round 12 wins", () => {
@@ -258,7 +256,7 @@ test("timed: round 12 without a correct answer repeats, everyone out means nobod
   save = idleRound(save);
   assert.deepEqual([row(save).state.level, flow(save).repeat, flow(save).round_size], [12, 1, 2]);
   assert.deepEqual(row(save).seats!.map((x) => x.lives), [1, 1]); // a life per unclaimed time-out, none more at the end
-  assert.equal(game.view(save, data, { ...io(1), ms: flow(save).shown_at! })!.session!.timed!.all_at_risk, true); // one heart each
+  assert.equal(game.view(save, data, { ...io(1), ms: flow(save).shown_at! })!.session!.timed!.all_at_risk, false); // not on the last question
   save = idleRound(idleRound(save));
   assert.deepEqual([row(save).result, row(save).state.phase], ["lost", "lost"]);
   assert.deepEqual(row(save).seats!.map((x) => [x.lives, x.out, x.result]), [[0, true, "lost"], [0, true, "lost"]]);
