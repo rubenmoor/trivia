@@ -141,6 +141,13 @@
   line-break: strict;
   word-break: normal;
 }
+/* No tracking on CJK: spaced-out kickers and headings (scoped component rules) split the characters. */
+.game:lang(zh-Hans),
+.game:lang(zh-Hant),
+.game :lang(zh-Hans),
+.game :lang(zh-Hant) {
+  letter-spacing: 0 !important;
+}
 
 /* Long German compounds (LUI-5); not `es`: Chromium would hyphenate Spanish line ends too. */
 .game:lang(de),
