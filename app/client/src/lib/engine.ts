@@ -3,6 +3,7 @@ import type { ErrorBody, Reply } from "../engine/api.ts";
 import { actionRng } from "../engine/rng.ts";
 import { behind, catchUp } from "../engine/career.ts";
 import { repair, supply } from "../engine/game.ts";
+import { localeFor } from "../engine/pool.ts";
 import { defaultLanguage, mapOldKeys } from "../engine/save.ts";
 import { gameLocale, newest, type EngineData, type Io, type Language, type SaveData } from "../engine/state.ts";
 import { GameError, messageOf } from "./http.ts";
@@ -122,10 +123,8 @@ const offered = (save: SaveData, locales: string[]): Promise<string[]> =>
   pickable(async (l) => locales.includes(l) && supply(save, await loadEngineData(l)).ok, steam?.dev === true);
 
 /** The questions of `lang` (plan 126): its own pool if it has one whose default bundles' supply passes, else es. */
-async function localeOf({ save, locales }: Loaded, lang: Language): Promise<string> {
-  if (lang === "es" || !locales.includes(lang)) return "es";
-  return supply(save, await loadEngineData(lang)).ok ? lang : "es";
-}
+const localeOf = ({ save, locales }: Loaded, lang: Language): Promise<string> =>
+  localeFor(lang, locales, async (l) => supply(save, await loadEngineData(l)).ok);
 
 /** The question locale of the save's language: what a new game plays. */
 export async function nextLocale(): Promise<string> {

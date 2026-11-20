@@ -274,12 +274,41 @@ export const packsFor = (bundles: Bundle[], locale: string): Bundle[] =>
   bundles.filter((b) => b.id !== "base" && b.languages.includes(locale));
 
 /** Our base bundles (kind base, not mods) listing `locale`: `base` itself and packs like chinese-base. */
-export const baseBundlesFor = (bundles: Bundle[], locale: string): Bundle[] =>
+const baseBundlesFor = (bundles: Bundle[], locale: string): Bundle[] =>
   bundles.filter((b) => b.kind === "base" && b.source !== "mod" && b.languages.includes(locale));
 
 /** Whether base's own pool file must exist for `locale`: only when `base` lists it (zh pools live in packs). */
 export const baseListsLocale = (bundles: Bundle[], locale: string): boolean =>
   bundles.some((b) => b.id === "base" && b.languages.includes(locale));
+
+/** Locales of `locales` with questions (es always): base's pool file (`baseFile`), else the pool of one of our base
+ * packs listing it (zh: chinese-base); `has`: whether a data file exists (lib/data.ts availableLocales). */
+export async function poolLocales(
+  locales: readonly string[], bundles: Bundle[], has: (file: string) => Promise<boolean>, baseFile = poolFile,
+): Promise<string[]> {
+  const found = await Promise.all(locales.map(async (l) => {
+    if (l === "es" || (await has(baseFile(l)))) return true;
+    const packs = baseBundlesFor(bundles, l).filter((b) => b.id !== "base");
+    return (await Promise.all(packs.map((b) => has(poolFile(l, b.id))))).some(Boolean);
+  }));
+  return locales.filter((_, i) => found[i]);
+}
+
+/** base's pool JSON of `locale` via `read` (null: no file); null only where base doesn't list the locale and not
+ * `required` (the demo's), else an Error (lib/data.ts load). */
+export async function readBasePool(
+  bundles: Bundle[], locale: string, read: (file: string) => Promise<unknown>, file = poolFile(locale), required = false,
+): Promise<unknown> {
+  const pool = await read(file);
+  if (pool === null && (required || baseListsLocale(bundles, locale))) throw new Error(`/data/${file}: missing — run \`qgen export\`?`);
+  return pool;
+}
+
+/** The question locale of a language (plan 126): its own if it has a pool whose default bundles' supply passes, else es. */
+export async function localeFor(lang: string, locales: readonly string[], ok: (locale: string) => Promise<boolean>): Promise<string> {
+  if (lang === "es" || !locales.includes(lang)) return "es";
+  return (await ok(lang)) ? lang : "es";
+}
 
 /** base's pool plus the packs' pools of `locale` (packsFor order); a pack without a file (null) isn't
  * offered there: `locale` leaves its languages, so a stored choice naming it reads as the defaults. */

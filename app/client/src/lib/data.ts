@@ -1,6 +1,6 @@
 // The game data from /data/ (app/data/, read-only: app/server/main.py or the desktop protocol; plan 50, PORT-7).
 import {
-  baseBundlesFor, baseListsLocale, type Bundle, bundleFile, loadCategories, modPool, modSubcategories, packsFor, parseAgeGroups, parseBundles, parsePool, poolFile, poolHash, withPacks,
+  type Bundle, bundleFile, loadCategories, modPool, modSubcategories, packsFor, parseAgeGroups, parseBundles, parsePool, poolFile, poolHash, poolLocales, readBasePool, withPacks,
 } from "../engine/pool.ts";
 import type { OldKeys } from "../engine/save.ts";
 import { engineData, mergeNames, namesFiles, type EngineData, type Names } from "../engine/state.ts";
@@ -57,13 +57,7 @@ async function exists(file: string): Promise<boolean> {
  * the body isn't read. The demo has base's own list only. */
 export async function availableLocales(): Promise<string[]> {
   const ours = buildInfo().demo ? [] : parseBundles(await get("bundles.json"));
-  const found = await Promise.all(LOCALES.map(async (l) => {
-    if (l === "es") return true;
-    if (await exists(basePoolFile(l))) return true;
-    const packs = baseBundlesFor(ours, l).filter((b) => b.id !== "base");
-    return (await Promise.all(packs.map((b) => exists(poolFile(l, b.id))))).some(Boolean);
-  }));
-  return LOCALES.filter((_, i) => found[i]);
+  return poolLocales(LOCALES, ours, exists, basePoolFile);
 }
 
 /** A problem with a mod bundle at load, for the mods screen (plan 115). */
@@ -102,8 +96,7 @@ interface Loaded {
  * a broken one is left out like a pack without a file, its issues in modIssues(). Then the mods' data hooks (plan 117). */
 async function load(locale: string): Promise<Loaded> {
   const [bundles, ageGroups, subjectsFile] = await Promise.all(["bundles.json", "age-groups.json", "subjects.json"].map((f) => get(f)));
-  // base's pool may be missing where base doesn't list the locale (zh: only chinese-base's pack)
-  const pool = await get(basePoolFile(locale), !buildInfo().demo && !baseListsLocale(parseBundles(bundles), locale));
+  const pool = await readBasePool(parseBundles(bundles), locale, (f) => get(f, true), basePoolFile(locale), buildInfo().demo);
   const subjects = subjectIds(subjectsFile);
   const all = parseBundles(bundles).filter((b) => !buildInfo().demo || b.id === "base").map((b) => {
     if (b.source !== "mod") return b;
