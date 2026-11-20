@@ -88,6 +88,7 @@ THEME_TAXONOMY_SCHEMA = {"type": "object", "required": ["categories"], "properti
                 "type": "object", "required": [*KEYED, "scope", "reason", "base_related", "samples"], "properties": {
                     **KEYED, "scope": STR, "reason": STR, "base_related": {"type": "array", "items": STR},
                     "samples": SAMPLES}}}}}}}}
+BASE_TAXONOMY_TIMEOUT = 3600  # seconds: one long call
 BASE_BUNDLE_TAXONOMY_SCHEMA = {"type": "object", "required": ["categories", "from_base", "expected_keep"], "properties": {
     "categories": {"type": "array", "items": {
         "type": "object", "required": [*KEYED, "origin", "scope", "reason", *SUBJECT, "subcategories"], "properties": {
@@ -332,7 +333,8 @@ def base_prompts(b, total):
 def base_taxonomy(b, total, d, args):
     """The proposal run of a further base bundle (plan 231): one call, proposal.{json,md} in work/taxonomy/<id>/."""
     system, user = base_prompts(b, total)
-    out = claude(system, user, BASE_BUNDLE_TAXONOMY_SCHEMA, args.model, d)
+    out = claude(system, user, BASE_BUNDLE_TAXONOMY_SCHEMA, args.model, d, timeout=BASE_TAXONOMY_TIMEOUT,
+                 env={"CLAUDE_CODE_MAX_OUTPUT_TOKENS": "128000"})  # chinese-base: 30 min, 206k output tokens (task 2382)
     for c in out["categories"]:
         c["slug"] = slug(c["slug"])
         for s in c["subcategories"]:

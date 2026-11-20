@@ -42,7 +42,7 @@ live in work/<run>/ and every step skips what is already done, so a run can be r
 goes to work/<run>/calls.jsonl; a command that called Claude ends with a `claude:` totals line (decision 208).
 
 """
-import argparse, atexit, concurrent.futures, datetime, difflib, fcntl, hashlib, json, random, re, subprocess, sys, threading, time, unicodedata
+import argparse, atexit, concurrent.futures, datetime, difflib, fcntl, hashlib, json, os, random, re, subprocess, sys, threading, time, unicodedata
 from pathlib import Path
 from collections import Counter
 
@@ -417,9 +417,10 @@ class Calls:
 CALLS = Calls()
 
 
-def claude(system, user, schema, model, cwd, web=False, retries=2, read=False, with_model=False):
+def claude(system, user, schema, model, cwd, web=False, retries=2, read=False, with_model=False, timeout=None, env=None):
     """One fresh `claude -p` session returning structured output (and the model id if asked).
     read=True lets the session open files under cwd with the Read tool (contact sheets).
+    timeout: seconds per attempt (default CLAUDE_TIMEOUT); env: extra variables for the subprocess.
     Every attempt goes to <cwd>/calls.jsonl and CALLS (decision 208)."""
     cmd = ["claude", "-p", "--output-format", "json", "--no-session-persistence",
            "--model", model, "--system-prompt", system, "--json-schema", json.dumps(schema),
@@ -430,6 +431,8 @@ def claude(system, user, schema, model, cwd, web=False, retries=2, read=False, w
         cmd += ["--tools", "Read", "--allowedTools", "Read"]
     else:
         cmd += ["--tools", ""]
+    timeout = timeout or CLAUDE_TIMEOUT
+    sub_env = {**os.environ, **env} if env else None
     last = None
     for attempt in range(retries + 1):
         if attempt and _interrupted.is_set():
@@ -437,7 +440,11 @@ def claude(system, user, schema, model, cwd, web=False, retries=2, read=False, w
         with progress.waiting(f"claude {model}") as call:
             t = time.monotonic()
             try:
-                p = subprocess.run(cmd, input=user, capture_output=True, text=True, cwd=cwd, timeout=CLAUDE_TIMEOUT)
+                p = subprocess.run(cmd, input=user, capture_output=True, text=True, cwd=cwd, timeout=timeout, env=sub_env)
+            except subprocess.TimeoutExpired:
+                CALLS.log(cwd, model, "failed", None, time.monotonic() - t)
+                raise RuntimeError(f"claude {model} call timed out after {timeout}s (cwd {cwd}); no result, cost not reported."
+                                   " Rerun the same command; for a long single call pass a larger timeout= to claude()") from None
             except BaseException:  # timeout, Ctrl-C: still a call
                 CALLS.log(cwd, model, "failed", None, time.monotonic() - t)
                 raise

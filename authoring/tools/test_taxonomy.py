@@ -138,5 +138,31 @@ class BaseBundle(unittest.TestCase):
         self.assertNotIn("{", system.replace("{}", ""))
 
 
+class ClaudeTimeout(unittest.TestCase):
+    def run_claude(self, side_effect=None, **kw):
+        ok = mock.Mock(stdout='{"structured_output": {"a": 1}}', stderr="", returncode=0)
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(qgen.subprocess, "run", side_effect=side_effect, return_value=ok) as run:
+            try:
+                return run, qgen.claude("s", "u", {}, "opus", d, **kw), (Path(d) / "calls.jsonl").read_text()
+            except RuntimeError as e:
+                return run, e, (Path(d) / "calls.jsonl").read_text()
+
+    def test_default_and_override_reach_subprocess(self):
+        run, *_ = self.run_claude()
+        self.assertEqual(run.call_args.kwargs["timeout"], qgen.CLAUDE_TIMEOUT)
+        run, *_ = self.run_claude(timeout=99, env={"X": "1"})
+        self.assertEqual(run.call_args.kwargs["timeout"], 99)
+        self.assertEqual(run.call_args.kwargs["env"]["X"], "1")
+
+    def test_base_taxonomy_passes_long_timeout(self):
+        self.assertGreater(taxonomy.BASE_TAXONOMY_TIMEOUT, qgen.CLAUDE_TIMEOUT)
+
+    def test_timeout_is_explained_and_logged(self):
+        boom = qgen.subprocess.TimeoutExpired("claude", 5)
+        _, err, log = self.run_claude(side_effect=boom, timeout=5)
+        self.assertIn("timed out after 5s", str(err))
+        self.assertIn('"outcome": "failed"', log)
+
+
 if __name__ == "__main__":
     unittest.main()
