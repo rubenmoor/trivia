@@ -40,6 +40,9 @@ def run_bundle(d):
 _ZH_DIGITS = {c: i for i, c in enumerate("零一二三四五六七八九")} | {"〇": 0, "两": 2}
 _ZH_UNITS, _ZH_BIG = {"十": 10, "百": 100, "千": 1000}, {"万": 10 ** 4, "亿": 10 ** 8}
 _ZH_RUN = re.compile("[零〇一二两三四五六七八九十百千万亿]+")
+_ZH_MEASURE = set("个位年月日号次种条只名人岁米克斤吨度倍块元本部座项届世层级天周分秒首张件颗枚家国省市洲大颁倍百千万亿")
+_ZH_LEAD = set("第约共近仅只有是为达超过逾了到成")  # before a numeral that is a number, not a word's part
+_HAN = re.compile("[\u4e00-\u9fff]")
 _FULLWIDTH = str.maketrans("０１２３４５６７８９，．", "0123456789,.")
 
 
@@ -58,18 +61,31 @@ def _zh_value(run):
     return str(total + sect + num)
 
 
+def _zh_counts(text):
+    """Numeral runs that are a quantity or date, not part of a word: two or more characters, or one
+    followed by a measure word or a non-Han character and not led by a Han character (四川, 统一 aren't)."""
+    out = Counter()
+    for m in _ZH_RUN.finditer(text):
+        nxt, prev = text[m.end():m.end() + 1], text[m.start() - 1:m.start()] if m.start() else ""
+        if len(m[0]) > 1 or ((not nxt or nxt in _ZH_MEASURE or not _HAN.match(nxt))
+                             and (not prev or prev in _ZH_LEAD or not _HAN.match(prev))):
+            out[_zh_value(m[0])] += 1
+    return out
+
+
 def numbers(text):
     """(digit numbers, Chinese numeral runs) in text; separators and decimal marks dropped («42 195» =
     «42,195»), fullwidth digits and «4.2万» as digits. Not expanded: English number words, «3.5 million»."""
     text = re.sub(r"(\d+(?:\.\d+)?)\s*([万亿])", lambda m: str(int(Decimal(m[1]) * _ZH_BIG[m[2]])),
                   text.translate(_FULLWIDTH))
-    zh = Counter(_zh_value(r) for r in _ZH_RUN.findall(text))
-    return Counter(re.findall(r"\d+", re.sub(r"(?<=\d)[ ,.  '](?=\d)", "", _ZH_RUN.sub(" ", text)))), zh
+    zh = _zh_counts(text)
+    return Counter(re.findall(r"\d+", re.sub(r"(?<=\d)[ ,.  '](?=\d{3}(?!\d))", "", _ZH_RUN.sub(" ", text)))), zh
 
 
 def same_numbers(a, b):
     """Each digit number of one text is in the other, as digits or as a Chinese numeral («3» = «三»);
-    a numeral with no digit counterpart is ignored: it is usually a word (四川, 十分, 第二次)."""
+    a numeral with no digit counterpart is ignored (it is usually a word: 四川, 十分), and a numeral
+    inside a word covers no digit."""
     (da, za), (db, zb) = numbers(a), numbers(b)
     return not (da - db - zb) and not (db - da - za)
 
