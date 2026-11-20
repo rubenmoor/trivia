@@ -118,11 +118,11 @@ qgen spotcheck export --release zh-Hans                        # work/spotcheck/
 qgen spotcheck export --subcategory <key>… --locale zh-Hans    # all approved translations there
 # reviewer: opens the file, «Download verdicts» → <name>.verdicts.json, mails it back
 qgen spotcheck import <name>.verdicts.json [--dry-run]         # in ../trivia-review, then merge
-qgen report --qc                                               # "controls caught" row
+qgen report --qc                                               # "Native sheets" table: controls caught per sheet
 ```
 
 - Blind sheet: English source beside the translation, no LLM review, audit or status; brief from `authoring/NATIVE-REVIEW.md` on top
-- Controls (default 3 for zh, else 0): faulty copies `control-<k>`, never in a pool; scored at import in `authoring/data/spot-controls.json`
+- Controls (default 3 for zh, else 0): faulty copies `control-<k>`, never in a pool; listed in `work/…/spotcheck-controls.json`; scored at import (unanswered = missed) in `authoring/data/spot-controls.json`
 - A source not in English is skipped and listed at export
 
 ### Make new questions

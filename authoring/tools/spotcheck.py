@@ -2,7 +2,7 @@
 
 One self-contained, blind HTML file per job; the reviewer's verdict file comes back by e-mail and the developer
 imports it (in ../trivia-review): human reviews of the translations, spot checks, scored controls. Never ships (D-35)."""
-import datetime, hashlib, html, json, random, re, sys
+import base64, datetime, hashlib, html, json, random, re, subprocess, sys
 
 import layout  # authoring/tools/layout.py
 from layout import REPO as ROOT, WORK
@@ -23,7 +23,7 @@ DECISIONS = {"approve": "approved", "needs_work": "needs_work", "reject": "rejec
 NO_TRAVEL = "no viaja"
 CONTROLS_FILE = layout.AUTHORING / "data" / "spot-controls.json"  # scored controls per sheet (tracked)
 FIELDS = ["question", "answer", "wrong_answers", "hints", "description", "fun_fact"]
-IMAGE_MAX = 60_000  # bytes: a cached image up to this size is embedded
+THUMB = "480x360"  # inline image size (magick -thumbnail)
 
 
 def sheet_hash(name, ids):
@@ -31,8 +31,9 @@ def sheet_hash(name, ids):
 
 
 def sheet_files(name, run=None):
+    """(sheet, manifest, controls file) of a sheet; the controls file lists every sheet's planted controls in its folder."""
     d = WORK / (run or "spotcheck")
-    return d / f"{name}.html", d / f"{name}.manifest.json"
+    return d / f"{name}.html", d / f"{name}.manifest.json", d / "spotcheck-controls.json"
 
 
 # --- controls -------------------------------------------------------------------
@@ -85,11 +86,20 @@ def media_of(src):
         return None
     out = {"type": m["type"], "name": m.get("query") or m.get("source_url") or ""}
     if m["type"] == "image" and m.get("file_url"):
-        import base64, mimetypes
         p = media_cache.cache_path(m["file_url"])
-        if p.is_file() and p.stat().st_size <= IMAGE_MAX:
-            out["img"] = f"data:{mimetypes.guess_type(p.name)[0] or 'image/jpeg'};base64,{base64.b64encode(p.read_bytes()).decode()}"
+        if p.is_file() and (jpg := thumbnail(p)):
+            out["img"] = "data:image/jpeg;base64," + base64.b64encode(jpg).decode()
     return out
+
+
+def thumbnail(path):
+    """A small JPEG of a cached image (first frame), or None if magick fails or is missing (dev shell)."""
+    try:
+        r = subprocess.run(["magick", f"{path}[0]", "-auto-orient", "-thumbnail", f"{THUMB}>", "-background", "white",
+                            "-flatten", "-strip", "-quality", "70", "jpg:-"], capture_output=True)
+    except FileNotFoundError:
+        return None
+    return r.stdout if r.returncode == 0 and r.stdout else None
 
 
 def item_of(t, src):
@@ -110,10 +120,12 @@ def pick(locale, mode, arg=None, size=None):
               and translations.plays(by_id[i], q)]
         if mode == "subcategory":
             picked = [(t, q) for t, q in ok if q.get("subcategory") in arg]
-        else:
+        else:  # sampled among English sources: a full 30
             picked = sorted(ok, key=lambda x: x[0]["id"])
+            skipped = [t["id"] for t, q in picked if not english_of(q)]
+            picked = [(t, q) for t, q in picked if english_of(q)]
             random.Random(f"release-{locale}").shuffle(picked)
-            picked = picked[:size or RELEASE_SIZE]
+            return picked[:size or RELEASE_SIZE], skipped
     keep = [(t, q) for t, q in picked if english_of(q)]
     return keep, [t["id"] for t, q in picked if not english_of(q)]
 
@@ -212,11 +224,15 @@ def write_sheet(name, locale, items, planted, run=None):
     blob = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
     page = (PAGE.replace("__TITLE__", html.escape(name)).replace("__BRIEF__", md_to_html(BRIEF.read_text(encoding="utf-8")))
             .replace("__DATA__", blob))
-    page_path, manifest_path = sheet_files(name, run)
+    page_path, manifest_path, controls_path = sheet_files(name, run)
     page_path.parent.mkdir(parents=True, exist_ok=True)
     atomic.write_text(page_path, page)
-    atomic.write_json(manifest_path, {"name": name, "hash": h, "locale": locale, "run": run, "ids": ids, "controls": planted})
-    return page_path, manifest_path
+    atomic.write_json(manifest_path, {"name": name, "hash": h, "locale": locale, "run": run, "ids": ids})
+    with atomic.locked(controls_path):
+        data = load_json(controls_path, {}) or {}
+        data[name] = {"hash": h, "controls": planted}
+        atomic.write_json(controls_path, data)
+    return page_path, manifest_path, controls_path
 
 
 def cmd_export(args):
@@ -239,15 +255,18 @@ def cmd_export(args):
     if locale not in translations.LOCALES:
         sys.exit(f"unknown locale {locale}")
     picked, skipped = pick(locale, mode, arg, args.size)
+    if skipped:
+        print(f"skipped, source not in English ({len(skipped)}): {', '.join(skipped)}")
     if not picked:
-        sys.exit("nothing to check: no approved translations match")
+        sys.exit("nothing to check: every picked source is not in English" if skipped
+                 else "nothing to check: no approved translations match")
     controls = args.controls if args.controls is not None else DEFAULT_CONTROLS if locale in ZH_LOCALES else 0
     items, planted = build_items(name, picked, controls)
-    page, manifest = write_sheet(name, locale, items, planted, run)
-    print(f"sheet: {page.relative_to(ROOT) if page.is_relative_to(ROOT) else page} ({len(picked)} questions, {len(planted)} controls)")
-    print(f"manifest and controls: {manifest}")
-    if skipped:
-        print(f"skipped, source not in English: {', '.join(skipped)}")
+    page, manifest, controls_path = write_sheet(name, locale, items, planted, run)
+    rel = lambda p: p.relative_to(ROOT) if p.is_relative_to(ROOT) else p
+    print(f"sheet: {rel(page)} ({len(picked)} questions, {len(planted)} controls,"
+          f" {sum(bool((i['media'] or {}).get('img')) for i in items)} images inline)")
+    print(f"manifest: {rel(manifest)}; controls: {rel(controls_path)}")
     print(f"raise: pm decision add \"Spot check {name} done?\" (body: the sheet path, `qgen spotcheck import <name>.verdicts.json` in ../trivia-review)")
 
 
@@ -280,10 +299,10 @@ def check_verdicts(doc, manifest, known):
     return errors
 
 
-def score_controls(verdicts):
-    """(caught, n): a planted control is caught by any verdict but approve; an undecided one counts as not seen."""
-    ctl = {i: v for i, v in verdicts.items() if i.startswith("control-")}
-    return sum(v["decision"] != "approve" for v in ctl.values()), len(ctl)
+def score_controls(ids, verdicts):
+    """(caught, n) over the sheet's planted controls: caught = any verdict but approve; undecided = not caught."""
+    ctl = [i for i in ids if i.startswith("control-")]
+    return sum((verdicts.get(i) or {}).get("decision") not in (None, "approve") for i in ctl), len(ctl)
 
 
 def review_of(v):
@@ -319,11 +338,14 @@ def cmd_import(args):
     errors = check_verdicts(doc, manifest, known)
     if errors:
         sys.exit("verdict file refused:\n  " + "\n  ".join(errors))
-    caught, n = score_controls(doc["verdicts"])
+    caught, n = score_controls(doc["ids"], doc["verdicts"])
     real = {i: v for i, v in doc["verdicts"].items() if not i.startswith("control-")}
     print(f"{doc['sheet']}: {len(real)} verdicts of {len([i for i in doc['ids'] if not i.startswith('control-')])} questions"
           f"{'' if manifest else ' (no export record here: ids checked against the locale only)'}")
     print(f"controls caught {caught}/{n}")
+    planted = ((load_json(sheet_files(doc["sheet"], (manifest or {}).get("run"))[2], {}) or {}).get(doc["sheet"]) or {}).get("controls") or {}
+    for i in (i for i in doc["ids"] if i.startswith("control-") and (doc["verdicts"].get(i) or {}).get("decision") in (None, "approve")):
+        print(f"  missed {i}" + (f": {planted[i]['kind']} of {planted[i]['of']}" if i in planted else ""))
     for i, v in real.items():
         rv = review_of(v)
         if args.dry_run:
@@ -343,15 +365,20 @@ def cmd_import(args):
     if n:
         with atomic.locked(CONTROLS_FILE):
             data = load_json(CONTROLS_FILE, {}) or {}
-            data[doc["sheet"]] = {"run": (manifest or {}).get("run"), "caught": caught, "n": n,
+            data[doc["sheet"]] = {"run": (manifest or {}).get("run"), "locale": doc["locale"], "caught": caught, "n": n,
                                   "on": datetime.date.today().isoformat()}
             atomic.write_json(CONTROLS_FILE, data)
 
 
-def controls_caught(run):
-    """(caught, n) over the scored sheets of a run, or None."""
-    rows = [r for r in (load_json(CONTROLS_FILE, {}) or {}).values() if r.get("run") == run]
-    return (sum(r["caught"] for r in rows), sum(r["n"] for r in rows)) if rows else None
+def controls_section():
+    """`qgen report --qc`: controls caught per imported native sheet (run, release and subcategory sheets); [] if none."""
+    data = load_json(CONTROLS_FILE, {}) or {}
+    if not data:
+        return []
+    return ["", "Native sheets, planted controls (plan 141):", "", "| sheet | run | locale | controls caught | imported |",
+            "|---|---|---|---:|---|",
+            *[f"| {k} | {r.get('run') or '–'} | {r.get('locale') or '–'} | {r['caught']}/{r['n']} | {r.get('on', '–')} |"
+              for k, r in sorted(data.items())]]
 
 
 def add_parser(sub):

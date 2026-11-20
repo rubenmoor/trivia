@@ -47,7 +47,11 @@ class Checks(unittest.TestCase):
 class Controls(unittest.TestCase):
     def test_scoring(self):
         v = {"control-1": {"decision": "approve"}, "control-2": {"decision": "reject"}, "q-1": {"decision": "approve"}}
-        self.assertEqual(spotcheck.score_controls(v), (1, 2))
+        self.assertEqual(spotcheck.score_controls(["control-1", "control-2", "q-1"], v), (1, 2))
+
+    def test_undecided_control_not_caught(self):
+        ids = ["control-1", "control-2", "control-3", "q-1"]
+        self.assertEqual(spotcheck.score_controls(ids, {"control-1": {"decision": "reject"}}), (1, 3))
 
     def test_make_control_differs_and_keeps_shape(self):
         for seed in range(20):

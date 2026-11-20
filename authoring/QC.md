@@ -57,7 +57,7 @@ A `qgen batch --translate <locale>` run (D-87; `es`, `es-ES`, `en`, `de`, from s
 - Native check, zh only (decision 754: Native checks of Chinese translation runs: pilot and release sample, not every run): the pilot run, the Chinese-language subcategories and one release sample go to a volunteer as an offline sheet; nothing waits for it (decision 414).
   - Export: `qgen spotcheck export <run> [--controls N]` → `work/<run>/spotcheck-<run>.html`; `--release <zh>` or `--subcategory <key>… --locale <zh>` → `work/spotcheck/<name>.html`; brief `authoring/NATIVE-REVIEW.md`.
   - A pm worker that exports raises `pm decision add "Spot check <sheet> done?"` (body: sheet path, `qgen spotcheck import <name>.verdicts.json`), never `pm task-pending-decision`.
-  - Import (the developer, in `../trivia-review`): `qgen spotcheck import <file> [--dry-run]` → human reviews (`by: native`) and spot checks; `qgen report --qc` shows "controls caught k/N".
+  - Import (the developer, in `../trivia-review`): `qgen spotcheck import <file> [--dry-run]` → human reviews (`by: native`) and spot checks; `qgen report --qc` shows "controls caught k/N" per sheet.
 - Player reports: `qgen flag` sets `needs_work` (below).
 - Prompt changes only in a change task: `prompts/translate.md`, `translate-review.md`, `locale-<locale>.md`, `rate.md`.
 
