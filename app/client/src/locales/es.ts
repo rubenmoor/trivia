@@ -310,8 +310,8 @@ const es = {
     groups: "Dificultad",
     /** Timed mode: the clocks, normal = double hectic. */
     pace: "Ritmo",
-    paceNormal: "tranquilo",
-    paceHectic: "frenético",
+    paceNormal: "Tranquilo",
+    paceHectic: "Frenético",
     paceNormalAbout: "El doble de tiempo para responder",
     paceHecticAbout: "El reloj aprieta",
     paceNormalKey: "T",
