@@ -251,7 +251,7 @@ export const zhHant = {
   },
   cards: {
     title: "可列印的錦囊卡",
-    intro: "一張 Letter 紙：{hint} 4張，其他錦囊各2張。按{scale}列印（不要選「適應頁面」），然後沿線剪開。",
+    intro: "一張 A4 紙：{hint} 4張，其他錦囊各2張。按{scale}列印（不要選「適應頁面」），然後沿線剪開。",
     print: "列印",
   },
   bundles: {

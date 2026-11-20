@@ -251,7 +251,7 @@ export const zhHans = {
   },
   cards: {
     title: "可打印的锦囊卡",
-    intro: "一张 Letter 纸：{hint} 4张，其他锦囊各2张。按{scale}打印（不要选“适应页面”），然后沿线剪开。",
+    intro: "一张 A4 纸：{hint} 4张，其他锦囊各2张。按{scale}打印（不要选“适应页面”），然后沿线剪开。",
     print: "打印",
   },
   bundles: {
