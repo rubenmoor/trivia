@@ -1,6 +1,6 @@
 // The game data from /data/ (app/data/, read-only: app/server/main.py or the desktop protocol; plan 50, PORT-7).
 import {
-  type Bundle, bundleFile, loadCategories, modPool, modSubcategories, packsFor, parseAgeGroups, parseBundles, parsePool, poolFile, poolHash, withPacks,
+  type Bundle, bundleFile, loadCategories, modPool, modSubcategories, packsFor, parseAgeGroups, parseBundles, parsePool, poolFile, poolHash, poolLocales, readBasePool, withPacks,
 } from "../engine/pool.ts";
 import type { OldKeys } from "../engine/save.ts";
 import { engineData, mergeNames, namesFiles, type EngineData, type Names } from "../engine/state.ts";
@@ -46,15 +46,18 @@ export function loadEngineData(locale = "es", ui = locale): Promise<EngineData> 
   });
 }
 
-/** Locales of LOCALES whose pool file exists; the body isn't read. */
+/** Whether a data file exists; the body isn't read. */
+async function exists(file: string): Promise<boolean> {
+  const res = await call(`/data/${file}`);
+  await res.body?.cancel();
+  return res.ok;
+}
+
+/** Locales of LOCALES with a pool file: base's, or the pool of one of our base bundles listing it (zh: chinese-base);
+ * the body isn't read. The demo has base's own list only. */
 export async function availableLocales(): Promise<string[]> {
-  const found = await Promise.all(LOCALES.map(async (l) => {
-    if (l === "es") return true;
-    const res = await call(`/data/${basePoolFile(l)}`);
-    await res.body?.cancel();
-    return res.ok;
-  }));
-  return LOCALES.filter((_, i) => found[i]);
+  const ours = buildInfo().demo ? [] : parseBundles(await get("bundles.json"));
+  return poolLocales(LOCALES, ours, exists, basePoolFile);
 }
 
 /** A problem with a mod bundle at load, for the mods screen (plan 115). */
@@ -92,9 +95,8 @@ interface Loaded {
  * without a pool file isn't offered (withPacks). Mod bundles (decision 128) are packs checked by modPool;
  * a broken one is left out like a pack without a file, its issues in modIssues(). Then the mods' data hooks (plan 117). */
 async function load(locale: string): Promise<Loaded> {
-  const [pool, bundles, ageGroups, subjectsFile] = await Promise.all(
-    [basePoolFile(locale), "bundles.json", "age-groups.json", "subjects.json"].map((f) => get(f)),
-  );
+  const [bundles, ageGroups, subjectsFile] = await Promise.all(["bundles.json", "age-groups.json", "subjects.json"].map((f) => get(f)));
+  const pool = await readBasePool(parseBundles(bundles), locale, (f) => get(f, true), basePoolFile(locale), buildInfo().demo);
   const subjects = subjectIds(subjectsFile);
   const all = parseBundles(bundles).filter((b) => !buildInfo().demo || b.id === "base").map((b) => {
     if (b.source !== "mod") return b;
@@ -130,7 +132,7 @@ async function load(locale: string): Promise<Loaded> {
     packs[b.id] = { version: 1, questions: out.questions };
     byBundle[b.id] = catFile;
   });
-  const packed = withPacks(parsePool(pool), all, locale, packs);
+  const packed = withPacks(pool ? parsePool(pool) : [], all, locale, packs);
   const { questions, bundles: parsed, ageGroups: groups } = runDataHooks({
     locale, questions: packed.pool, bundles: packed.bundles, ageGroups: parseAgeGroups(ageGroups),
   });
