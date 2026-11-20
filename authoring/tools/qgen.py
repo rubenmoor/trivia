@@ -166,11 +166,21 @@ def bundle_row(bundle):
     return next(b for b in load_bundles() if b["id"] == bundle)
 
 
-def bundle_text(bundle, locale="es"):
+def bundle_text(bundle, locale="es", who="you write"):
     """The one bundle a batch writes for, as a content limit for the drafter (D-41); its voice for text in its voice's locale."""
     b = bundle_row(bundle)
     voice = f"\nVoice: {b.get('voice') or VOICE}" if locale in voice_locales(b) else ""
-    return f"Every question you write is in the `{bundle}` bundle: {b['rule']}{voice}"
+    return f"Every question {who} is in the `{bundle}` bundle: {b['rule']}{voice}"
+
+
+def further_base(bundle):
+    """A base bundle other than `base` (chinese-base, plan 227)."""
+    return bundle != "base" and targets.kind_of(bundle) == "base"
+
+
+def rule_section(bundle, locale):
+    """A further base bundle's rule and voice for the judging calls (rate, review, revise, fix; decision 757); else empty."""
+    return f"\n\n## Bundle\n{bundle_text(bundle, locale, 'here')}" if further_base(bundle) else ""
 
 
 def check_bundle(bundle):
@@ -576,15 +586,36 @@ RELATED_CAP = 60  # base questions a theme subcategory's avoid list and concept 
 
 
 def related_text(pool, bundle, sub):
-    """The concept calls' "already in the game" section for a theme subcategory; empty without base_related."""
-    qs = related_base({"questions": pool}, bundle, sub, "en")
-    return ("\n\n## Already in the game (base questions on the same topics: don't list these concepts)\n"
+    """The concept calls' "already in the game" section: a theme's base_related or a further base bundle's
+    neighbours (related.json); empty without them."""
+    qs = neighbours({"questions": pool}, bundle, sub, "en")
+    what = "questions of neighbouring subcategories" if further_base(bundle) else "base questions on the same topics"
+    return (f"\n\n## Already in the game ({what}: don't list these concepts)\n"
             + "\n".join(f"- {q['answer']} ({q['question'][:80]})" for q in qs)) if qs else ""
 
 
+def scope_of(bundle, sub):
+    """The subcategory's entry in its bundle's scopes.json (plan 231), or None."""
+    return ((load_json(layout.scopes(bundle), {}) or {}).get("subcategories") or {}).get(sub) if bundle != "base" else None
+
+
 def subcategory_header(bundle, sub, locale):
+    sc = scope_of(bundle, sub)
     return (f"## Subcategory\n{categories.display(bundle, sub, locale)} "
-            f"(broad category: {categories.category_name(bundle, sub, locale)})")
+            f"(broad category: {categories.category_name(bundle, sub, locale)})"
+            + (f"\nScope: {sc['scope']}" if sc and sc.get("scope") else ""))
+
+
+def samples_text(bundle, sub):
+    """The concept calls' sample concepts from the taxonomy (scopes.json); empty without them."""
+    sc = scope_of(bundle, sub) or {}
+    return ("\n\n## Sample concepts (from the taxonomy)\n" + "\n".join(f"- {x}" for x in sc["samples"])) if sc.get("samples") else ""
+
+
+def concept_intro(bundle, sub, loc, axes_def):
+    """The concept calls' user message start: subcategory (scope), samples, bundle, axes."""
+    return (subcategory_header(bundle, sub, loc) + samples_text(bundle, sub) + "\n\n## Bundle\n" + bundle_text(bundle, loc)
+            + "\n\n## Question axes\n" + concepts.axes_text(axes_def))
 
 
 def cmd_concepts(args):
@@ -615,8 +646,7 @@ def cmd_concepts(args):
         r = load_json(path, {})
         axes_def = concepts.load_axes(bundle)
         loc = translations.draft_locale(bundle_row(bundle))
-        intro = (subcategory_header(bundle, sub, loc) + "\n\n## Bundle\n" + bundle_text(bundle, loc)
-                 + "\n\n## Question axes\n" + concepts.axes_text(axes_def))
+        intro = concept_intro(bundle, sub, loc, axes_def)
         if "facets" not in r:
             r.update(claude(prompt("house-style", "concepts-facets", locale=loc, bundle=bundle), intro, facets_schema(axes_def), args.model, d))
             save_json(path, r)
@@ -671,7 +701,47 @@ def cmd_concepts(args):
     errors += parallel(top_up, low, args.jobs, "top-up", "lists")
     for b in bundles:
         finalize_concepts(d, b)
+        seed_copies(b)
     return errors
+
+
+def seed_copies(bundle):
+    """Copies (`copied_from`) without a concept in a subcategory that has a list get their source's concept and axes,
+    added to the list when missing (plan 232), so drafts don't repeat them; a list made after the copies tags them
+    in its own call (`existing`)."""
+    with atomic.locked(POOL):
+        data = load_json(POOL)
+        by_id = {q["id"]: q for q in data["questions"]}
+        lists, changed, n = {}, set(), 0
+        for q in data["questions"]:
+            src = by_id.get(q.get("copied_from"))
+            if q.get("bundle") != bundle or q.get("concept") or not (src and src.get("concept")):
+                continue
+            sub = q["subcategory"]
+            if sub not in lists:
+                lists[sub] = concepts.load(bundle, sub)
+            lst = lists[sub]
+            if lst is None:
+                continue
+            have = {concepts.key(c["name"]): c["name"] for c in lst["concepts"]}
+            name = have.get(concepts.key(src["concept"]))
+            if name is None:
+                known = next((c["known_at"] for c in (concepts.load(*categories.key(src)) or {}).get("concepts", [])
+                              if c["name"] == src["concept"]), src["difficulty"])
+                name = src["concept"].strip()
+                if "Other" not in lst["facets"]:
+                    lst["facets"].append("Other")
+                lst["concepts"].append({"name": name, "facet": "Other", "known_at": known})
+                changed.add(sub)
+            q["concept"] = name
+            if not q.get("axes") and src.get("axes"):
+                q["axes"] = src["axes"]
+            n += 1
+        for sub in changed:
+            concepts.save(bundle, sub, lists[sub])
+        if n:
+            save_json(POOL, data)
+            print(f"  seeded {n} {bundle} cop{'y' if n == 1 else 'ies'} with their source's concept")
 
 
 def finalize_concepts(d, bundle):
@@ -864,21 +934,61 @@ def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base", locale="e
     return plan
 
 
-def related_base(pool, bundle, sub, locale):
-    """A theme subcategory's base_related questions (base-related.json, plan 184), not rejected, in `locale`
-    (as_locale), the first RELATED_CAP by id; none without the file or for another kind."""
-    rel = (load_json(layout.base_related(bundle), {}) or {}).get("subcategories", {}).get(sub) if bundle != "base" else None
-    keys = {("base", r) for r in rel or []}
+def neighbours(pool, bundle, sub, locale):
+    """Questions on neighbouring ground, not rejected, in `locale` (as_locale), the first RELATED_CAP by id: a theme
+    subcategory's base_related ones (base-related.json, plan 184), a further base bundle's neighbours in the bundle
+    (related.json, plan 231, copies included); none without the file or for base."""
+    own = further_base(bundle)
+    f = layout.related(bundle) if own else layout.base_related(bundle)
+    rel = (load_json(f, {}) or {}).get("subcategories", {}).get(sub) if bundle != "base" else None
+    keys = {(bundle if own else "base", r) for r in rel or []}
     qs = sorted((q for q in pool["questions"] if categories.key(q) in keys and q["status"] != "rejected"),
                 key=lambda q: q["id"])[:RELATED_CAP]
     return as_locale(qs, locale)
 
 
 def existing_answers(pool, bundle, sub, locale="es"):
-    """The subcategory's own pool questions, all statuses (PE-4), and a theme's base_related ones, in `locale`
-    (as_locale); merge's `duplicates()` and the review's `related` list still check the whole pool."""
+    """The subcategory's own pool questions, all statuses (PE-4; copies too), and its neighbours' (`neighbours`), in
+    `locale` (as_locale); merge's `duplicates()` and the review's `related` list still check the whole pool."""
     own = as_locale([q for q in pool["questions"] if categories.key(q) == (bundle, sub)], locale)
-    return sorted({f"{q['answer']} ({q['question'][:60]})" for q in [*own, *related_base(pool, bundle, sub, locale)]})
+    return sorted({f"{q['answer']} ({q['question'][:60]})" for q in [*own, *neighbours(pool, bundle, sub, locale)]})
+
+
+def draft_user(pool, bundle, sub, slots, axes_def, locale):
+    """The draft call's user message for one subcategory's slots."""
+    shown = {a: {o[a] for sl in slots for o in sl["options"]} for a in concepts.AXES}
+    avoid = "\n".join(f"- {a}" for a in existing_answers(pool, bundle, sub, locale)) or "none yet"
+    return (subcategory_header(bundle, sub, locale) + "\n\n## Question axes (the values in these options)\n"
+            + concepts.axes_text(axes_def, shown) + "\n\n## Slots\n" + json.dumps(slots, ensure_ascii=False)
+            + f"\n\n## Already in the pool for this subcategory (don't repeat these facts)\n{avoid}"
+            + "\n\n## Bundle\n" + bundle_text(bundle, locale))
+
+
+def dry_run_batch(args):
+    """`qgen batch [--bundle <id>] --dry-run`: the next run's subcategories and size, and the first concept call's and
+    draft call's user messages as they'd be sent (a missing list: the concept call only); no calls, nothing written."""
+    if args.media_first:
+        sys.exit("--dry-run: not for --media-first")
+    check_bundle(args.bundle)
+    pool = load_json(POOL)
+    subs = sub_keys(args.subcategories, args.bundle) if args.subcategories else batches.subcategories(pool["questions"], args.count, args.bundle)
+    first = not (args.subcategories or args.count) and batches.pilot(pool["questions"], args.bundle)
+    n = batches.PILOT_SLOTS if first else BATCH_SLOTS
+    locale, axes_def = translations.draft_locale(bundle_row(args.bundle)), concepts.load_axes(args.bundle)
+    have = Counter(q["subcategory"] for q in pool["questions"] if q.get("bundle") == args.bundle and q["status"] == "approved")
+    print(f"Next run for bundle {args.bundle} in {LANGUAGES[locale]}: {len(subs)} subcategories × {n} slots = {len(subs) * n}"
+          + (" (the bundle's first draft run, a pilot)" if first else ""))
+    for s in subs:
+        print(f"  {s}: {have[s]} approved, concept list {'yes' if concepts.load(args.bundle, s) else 'to make'}")
+    sub = subs[0]
+    print(f"\n== concept call ({sub}), user message start\n{concept_intro(args.bundle, sub, locale, axes_def)}{related_text(pool['questions'], args.bundle, sub)}")
+    with_list = next((s for s in subs if concepts.load(args.bundle, s)), None)
+    if with_list:
+        slots = draw_slots([with_list], pool["questions"], axes_def, n, 1, args.bundle, locale)[with_list]
+        print(f"\n== draft call ({with_list}), system prompt {len(prompt('house-style', 'draft', locale=locale, bundle=args.bundle))} "
+              f"characters, user message\n{draft_user(pool, args.bundle, with_list, slots, axes_def, locale)}")
+    else:
+        print("\n(no draft call shown: none of these subcategories has a concept list yet; the run's concepts step makes them)")
 
 
 def cmd_draft(args):
@@ -895,7 +1005,7 @@ def cmd_draft(args):
     locale = text_locale(d)
     plan = load_json(d / "slots.json")
     if plan is None:  # drawn once, so a rerun drafts the same slots
-        plan = draw_slots(subs, pool["questions"], axes_def, BATCH_SLOTS, 1, bundle, locale)
+        plan = draw_slots(subs, pool["questions"], axes_def, cfg.get("slots", BATCH_SLOTS), 1, bundle, locale)
         save_json(d / "slots.json", plan)
     drawn = Counter(sl["target_difficulty"] for slots in plan.values() for sl in slots)
     print("target difficulty: " + "  ".join(f"{lvl}×{c}" for lvl, c in sorted(drawn.items())), flush=True)
@@ -905,13 +1015,7 @@ def cmd_draft(args):
 
     def work(sub):
         slots = plan[sub]
-        shown = {a: {o[a] for sl in slots for o in sl["options"]} for a in concepts.AXES}
-        avoid = "\n".join(f"- {a}" for a in existing_answers(pool, bundle, sub, locale)) or "none yet"
-        user = (subcategory_header(bundle, sub, locale) + "\n\n## Question axes (the values in these options)\n"
-                + concepts.axes_text(axes_def, shown) + "\n\n## Slots\n" + json.dumps(slots, ensure_ascii=False)
-                + f"\n\n## Already in the pool for this subcategory (don't repeat these facts)\n{avoid}"
-                + "\n\n## Bundle\n" + bundle_text(bundle, locale))
-        out = claude(system, user, DRAFT_SCHEMA, args.model, d)
+        out = claude(system, draft_user(pool, bundle, sub, slots, axes_def, locale), DRAFT_SCHEMA, args.model, d)
         good = []
         for q in out["questions"]:
             problems = check_question_shape(q)
@@ -1050,7 +1154,7 @@ def cmd_rate(args):
                         source_locale=qs[0].get("source_locale"))
 
         def ask(its):
-            user = "## Questions\n" + json.dumps(its, ensure_ascii=False)
+            user = "## Questions\n" + json.dumps(its, ensure_ascii=False) + rule_section(run_bundle(d), text_locale(d))
             return {r["id"]: r for r in claude(system, user, RATE_SCHEMA, args.model, d)["ratings"]}
 
         got = ask(items)
@@ -1431,7 +1535,7 @@ def cmd_revise(args):
 
     def work(group):
         items = [it for _, its in group for it in its]
-        user = "## Questions with issues\n" + json.dumps(items, ensure_ascii=False)
+        user = "## Questions with issues\n" + json.dumps(items, ensure_ascii=False) + rule_section(run_bundle(d), text_locale(d))
         out = claude(system, user, REVISE_SCHEMA, args.model, d)
         got = {r["id"]: r for r in out["results"]}
         missing = []
@@ -1708,8 +1812,10 @@ def cmd_batch(args):
         if not (args.dry_run or f.exists() or (PROMPTS / f"locale-{args.translate.split('-')[0]}.md").exists()):
             sys.exit(f"no translation prompt for {args.translate}: {f.relative_to(ROOT)} is missing (plan 140)")
         return cmd_translate_batch(args)
-    if args.ids or args.dry_run:
-        sys.exit("--ids and --dry-run need --translate")
+    if args.ids:
+        sys.exit("--ids needs --translate")
+    if args.dry_run:
+        return dry_run_batch(args)
     mode = "media-first" if args.media_first else "batch"
     if not args.media_first and (args.files or args.until):
         sys.exit("--files and --until need --media-first")
@@ -1741,7 +1847,9 @@ def cmd_batch(args):
                 sys.exit(f"Not in {categories.path(args.bundle).relative_to(ROOT)}: {', '.join(unknown)}")
         else:
             subs = batches.subcategories(load_json(POOL)["questions"], args.count, args.bundle)  # D-46, D-54
+        first = not (args.media_first or args.subcategories or args.count) and batches.pilot(load_json(POOL)["questions"], args.bundle)
         save_json(d / "run.json", {"mode": mode, "bundle": args.bundle, "subcategories": subs,
+                                   **({"pilot": True, "slots": batches.PILOT_SLOTS} if first else {}),
                                    "draft_locale": "en" if args.media_first else translations.draft_locale(bundle_row(args.bundle)),
                                    **({"files": args.files} if args.media_first else {}),
                                    "started": datetime.date.today().isoformat()})
@@ -1749,7 +1857,8 @@ def cmd_batch(args):
     subs, locale = cfg["subcategories"], text_locale(d)
     progress.verbose = False  # one summary per step, no detail line per item (QG-20)
     what = (f"from surveyed Commons files ({cfg['files'] or 'up to ' + str(media_first.MF_DESIGNED) + ' designed'})"
-            if args.media_first else f"for bundle {args.bundle} in {LANGUAGES[locale]}: {len(subs)} subcategories")
+            if args.media_first else f"for bundle {args.bundle} in {LANGUAGES[locale]}: {len(subs)} subcategories"
+            + (f" × {cfg['slots']} slots (the bundle's first draft run, a pilot)" if cfg.get("pilot") else ""))
     print(f"{'Resuming' if resuming else 'Starting'} {run} {what}. This takes from several minutes to an hour.", flush=True)
 
     def ns(**kw):
@@ -2019,7 +2128,7 @@ def main():
                    help="translate the bundle's approved questions into this locale (plan 66); only when the user names a language")
     b.add_argument("--from", dest="from_bundle", metavar="BUNDLE",
                    help="with --bundle <base bundle>: copy what fits from this base bundle (only base; plan 230)")
-    b.add_argument("--dry-run", action="store_true", help="with --translate or --from: print the next run's sources, no LLM calls")
+    b.add_argument("--dry-run", action="store_true", help="print the next run's sources (with --translate or --from) or subcategories and prompts, no LLM calls")
     b.add_argument("--ids", help=argparse.SUPPRESS)  # with --translate: these source ids (tests and debugging only)
     b.add_argument("--media-first", action="store_true",
                    help="base questions built around surveyed Commons audio and video files (plan 203)")

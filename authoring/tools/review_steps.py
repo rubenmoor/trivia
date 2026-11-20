@@ -12,7 +12,7 @@ import providers  # authoring/tools/providers/: where candidates come from (D-45
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 import copies  # authoring/tools/copies.py: copies into another bundle (decision 217)
 
-from qgen import PROBLEMS, FACT_FIELDS, FACT_SCHEMA, QUESTION_FIELDS, REVISE_SCHEMA, STR, UsageLimit, as_locale, check_question_shape, claude, collect, failed, for_review, load_age_groups, load_json, locale_chunks, named, norm, overlap_norm, parallel, prompt, revise_in_pool, run_dir, save_json  # authoring/tools/qgen.py
+from qgen import PROBLEMS, FACT_FIELDS, FACT_SCHEMA, QUESTION_FIELDS, REVISE_SCHEMA, STR, UsageLimit, as_locale, check_question_shape, claude, collect, failed, for_review, load_age_groups, load_json, locale_chunks, named, norm, overlap_norm, parallel, prompt, revise_in_pool, rule_section, run_dir, save_json  # authoring/tools/qgen.py
 
 
 # --- the LLM batch's steps: media, sheets, review, fix, research, record (D-36) 
@@ -243,7 +243,7 @@ def cmd_review(args):
         }
         if q.get("media_first") and not locale:
             payload["media_first"] = media_first.review_input(q)
-        user = "## Question to review\n" + json.dumps(payload, ensure_ascii=False)
+        user = "## Question to review\n" + json.dumps(payload, ensure_ascii=False) + rule_section(run_bundle(d), locale or translations.source_locale(q))
         system = prompt(*names, *(["media-first-checks"] if "media_first" in payload else []),
                         locale=locale or translations.source_locale(q), bundle=run_bundle(d),
                         source_locale=q.get("source_locale"))
@@ -304,8 +304,8 @@ def cmd_fix(args):
         system = prompt("house-style", "revise", *(["media-first-checks"] if mf else []),
                         locale=translations.source_locale(group[0][0]), bundle=run_bundle(d),
                         source_locale=group[0][0].get("source_locale"))
-        out = claude(system, "## Questions with issues\n" + json.dumps(items, ensure_ascii=False), REVISE_SCHEMA,
-                     args.model, d, read=mf)
+        out = claude(system, "## Questions with issues\n" + json.dumps(items, ensure_ascii=False)
+                     + rule_section(run_bundle(d), translations.source_locale(group[0][0])), REVISE_SCHEMA, args.model, d, read=mf)
         got = {x["id"]: x for x in out["results"]}
         answered = []
         for q, path, r, _ in group:

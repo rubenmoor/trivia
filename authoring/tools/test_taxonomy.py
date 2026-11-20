@@ -104,9 +104,12 @@ class BaseBundle(unittest.TestCase):
              mock.patch.object(taxonomy, "save_json", side_effect=lambda f, d: saved.__setitem__(Path(f).name, d)), \
              mock.patch.object(taxonomy, "off_list", return_value={}), mock.patch.object(taxonomy, "validate_pool", return_value=([], 0)), \
              mock.patch.object(taxonomy, "bundle_row", return_value={"kind": "base"}), \
-             mock.patch.object(taxonomy.layout, "related", return_value=Path("/x/related.json")):
+             mock.patch.object(taxonomy.layout, "related", return_value=Path("/x/related.json")), \
+             mock.patch.object(taxonomy.layout, "scopes", return_value=Path("/x/scopes.json")):
             taxonomy.apply_taxonomy("chinese-base", Path("p.json"), Path("/tmp") / "d")
         self.assertEqual(saved["related.json"]["subcategories"], {"mammals": [], "solar-terms": ["mammals"]})
+        self.assertEqual(saved["scopes.json"]["subcategories"]["solar-terms"],
+                         {"scope": "s", "origin": "new", "language": False, "samples": []})
         self.assertEqual(saved["from-base.json"]["subcategories"]["castles"], {"to": None, "reason": "euro_centric"})
         self.assertEqual(saved["from-base.json"]["subcategories"]["mammals"]["to"], "mammals")
 

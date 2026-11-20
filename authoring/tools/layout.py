@@ -57,6 +57,11 @@ def related(bundle):
     return BUNDLE_SOURCES / bundle / "related.json"
 
 
+def scopes(bundle):
+    """authoring/data/bundles/<id>/scopes.json: a further base bundle's subcategory → scope, origin, language, samples (plan 231)."""
+    return BUNDLE_SOURCES / bundle / "scopes.json"
+
+
 def from_base(bundle):
     """authoring/data/bundles/<id>/from-base.json: a further base bundle's map base subcategory → its own, or null (plan 230)."""
     return BUNDLE_SOURCES / bundle / "from-base.json"

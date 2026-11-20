@@ -488,7 +488,7 @@ def spot_check_problems(questions, scale):
 
 def taxonomy_problems():
     """Every bundle's categories file belongs to a bundle; names and slugs are unique within a bundle (D-43, D-99);
-    a theme's base-related.json names its own and base's subcategories (plan 184)."""
+    a theme's base-related.json names its own and base's subcategories (plan 184), related.json and scopes.json its own (plan 231)."""
     errors, ids = [], categories.bundle_ids()
     if ids[:1] != ["base"]:
         errors.append("app/data/bundles.json: base must come first")
@@ -518,6 +518,12 @@ def taxonomy_problems():
             if s not in own:
                 errors.append(f"{f.relative_to(ROOT)}: {s!r} is not a {b} subcategory")
             errors += [f"{f.relative_to(ROOT)}: {s}: {r!r} is not a base subcategory" for r in rs if r not in base]
+        for f in (layout.related(b), layout.scopes(b)):  # a further base bundle's (plan 231)
+            for s, v in ((load_json(f, {}) or {}).get("subcategories") or {}).items():
+                if s not in own:
+                    errors.append(f"{f.relative_to(ROOT)}: {s!r} is not a {b} subcategory")
+                if f == layout.related(b):
+                    errors += [f"{f.relative_to(ROOT)}: {s}: {r!r} is not a {b} subcategory" for r in v if r not in own]
     return errors
 
 
