@@ -8,7 +8,7 @@ import { gameLocale, newest, type EngineData, type Io, type Language, type SaveD
 import { GameError, messageOf } from "./http.ts";
 import { availableLocales, loadEngineData, loadOldKeys } from "./data.ts";
 import { desktop, steam, validUser } from "./desktop.ts";
-import { GATED_LANGS, UI_LANGS } from "./i18n.ts";
+import { pickable } from "./i18n.ts";
 import { useNames } from "./names.svelte.ts";
 import { FileStore, MemoryStore, type SaveNotice } from "./store.ts";
 import { telemetryCheckpoint, telemetryLoad } from "./telemetry.ts";
@@ -117,13 +117,9 @@ export async function language(): Promise<{ language: Language; options: string[
   return { language: save.language, options, ask: fresh && options.length > 1 };
 }
 
-/** The UI languages to pick from: a gated one only if its pool ships and its default bundles' supply passes (decision 222). */
-async function offered(save: SaveData, locales: string[]): Promise<string[]> {
-  const out: string[] = [];
-  for (const l of UI_LANGS)
-    if (!GATED_LANGS.includes(l) || (locales.includes(l) && supply(save, await loadEngineData(l)).ok)) out.push(l);
-  return out;
-}
+/** A gated language ships once its pool does and its default bundles' supply passes (decision 222). */
+const offered = (save: SaveData, locales: string[]): Promise<string[]> =>
+  pickable(async (l) => locales.includes(l) && supply(save, await loadEngineData(l)).ok, steam?.dev === true);
 
 /** The questions of `lang` (plan 126): its own pool if it has one whose default bundles' supply passes, else es. */
 async function localeOf({ save, locales }: Loaded, lang: Language): Promise<string> {

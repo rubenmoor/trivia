@@ -25,8 +25,15 @@ const CATALOGS: Record<string, Catalog> = { es, "es-ES": merge(es, esES), en, de
 /** Every UI language with a catalog (plan 68); `xx` joins `CATALOGS` only later, in dev. */
 export const UI_LANGS = Object.keys(CATALOGS);
 
-/** Offered only once their question pool ships (decision 222); until then `?lang=` in dev. */
-export const GATED_LANGS: readonly string[] = ["zh-Hans", "zh-Hant"];
+/** Offered only once their question pool ships (decision 222); until then `?lang=` in dev, the picker for the dev Steam user. */
+const GATED_LANGS: readonly string[] = ["zh-Hans", "zh-Hant"];
+
+/** The UI languages to pick from: a gated one if `ships(l)` or for the dev Steam user (`TRIVIA_DEV_STEAM_USER`). */
+export async function pickable(ships: (l: string) => Promise<boolean>, devUser: boolean): Promise<string[]> {
+  const out: string[] = [];
+  for (const l of UI_LANGS) if (!GATED_LANGS.includes(l) || devUser || (await ships(l))) out.push(l);
+  return out;
+}
 
 /** A shipping catalog by tag, `es` if unknown; for pages that show one language without `initLang` (`/comodines`). */
 export const catalogFor = (l: string): Catalog => CATALOGS[l] ?? es;
