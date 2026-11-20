@@ -57,6 +57,11 @@ def related(bundle):
     return BUNDLE_SOURCES / bundle / "related.json"
 
 
+def from_base(bundle):
+    """authoring/data/bundles/<id>/from-base.json: a further base bundle's map base subcategory → its own, or null (plan 230)."""
+    return BUNDLE_SOURCES / bundle / "from-base.json"
+
+
 def translations(locale):
     """authoring/data/questions.<locale>.json: one locale's translations of the source (D-81)."""
     return AUTHORING / "data" / f"questions.{locale}.json"

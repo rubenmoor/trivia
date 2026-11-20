@@ -33,6 +33,7 @@ def validate_pool():
     bundle_ids = {b["id"] for b in bundles}
     bundle_of = {b["id"]: b for b in bundles}
     errors += taxonomy_problems()
+    errors += from_base_problems(data["questions"])
     e, w = slug_problems({q.get("bundle") or "base" for q in data["questions"]})
     errors += e
     warnings += w
@@ -516,6 +517,35 @@ def taxonomy_problems():
             if s not in own:
                 errors.append(f"{f.relative_to(ROOT)}: {s!r} is not a {b} subcategory")
             errors += [f"{f.relative_to(ROOT)}: {s}: {r!r} is not a base subcategory" for r in rs if r not in base]
+    return errors
+
+
+def from_base_problems(questions, ids=None, subs=None, path=layout.from_base):
+    """A further base bundle's from-base.json (plan 230): every `base` subcategory with approved questions is mapped,
+    targets exist in the bundle's categories, no unknown keys, a null target has a reason and `by`."""
+    errors = []
+    base = {q["subcategory"] for q in questions if (q.get("bundle") or "base") == "base" and q["status"] == "approved"}
+    for b in ids or [i for i in categories.bundle_ids() if i != "base"]:
+        f = path(b)
+        if not f.exists():
+            continue
+        rel = f.relative_to(ROOT) if f.is_relative_to(ROOT) else f
+        got = (load_json(f, {}) or {}).get("subcategories")
+        if not isinstance(got, dict):
+            errors.append(f"{rel}: needs a subcategories object")
+            continue
+        own = set(subs[b] if subs else categories.subcategories(b))
+        all_base = set(subs["base"] if subs else categories.subcategories("base"))
+        errors += [f"{rel}: {k!r} is not a base subcategory" for k in got if k not in all_base]
+        errors += [f"{rel}: base subcategory {k!r} (approved questions) is not mapped" for k in sorted(base - set(got))]
+        for k, v in got.items():
+            to = v.get("to") if isinstance(v, dict) else 0
+            if to == 0 or to is not None and not isinstance(to, str):
+                errors.append(f"{rel}: {k}: needs {{\"to\": <subcategory or null>}}")
+            elif to is None and not (v.get("reason") and v.get("by")):
+                errors.append(f"{rel}: {k}: a null target needs reason and by")
+            elif to is not None and to not in own:
+                errors.append(f"{rel}: {k}: {to!r} is not a {b} subcategory")
     return errors
 
 
