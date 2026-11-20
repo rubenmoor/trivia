@@ -1,6 +1,7 @@
 """Copies into another bundle (decision 217): the helper, validate's rules, the duplicate exemption."""
-import sys, unittest
+import json, sys, tempfile, unittest
 from pathlib import Path
+from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).parent))
 import copies, qgen, review_steps, validate  # noqa: E402
@@ -61,6 +62,19 @@ class Rules(unittest.TestCase):
         self.assertEqual(len(validate.copy_problems([a, ok, q("q-0003", "stem", copied_from="q-0002")])), 1)  # copy of a copy
         self.assertEqual(len(validate.copy_problems([a, ok, q("q-0003", "chinese-base", copied_from="q-0001")])), 1)  # two copies
         self.assertEqual(len(validate.copy_problems([a, q("q-0004", "base", copied_from="q-0001")])), 1)  # same bundle
+
+    def test_translation_entry(self):
+        src = q("q-0001", locale="es")
+        with tempfile.TemporaryDirectory() as d, \
+                mock.patch.object(validate.layout, "translations", lambda l: Path(d) / f"questions.{l}.json"), \
+                mock.patch.object(validate, "ROOT", Path(d)), \
+                mock.patch.object(validate, "names_problems", lambda data: []), \
+                mock.patch.object(validate, "names_warnings", lambda data: []):
+            def errors(entry):
+                (Path(d) / "questions.en.json").write_text(json.dumps({"version": 1, "locale": "en", "questions": [entry]}))
+                return [e for e in validate.translation_problems({"questions": [src]})[0] if "copied_from" in e]
+            self.assertEqual(errors(en_entry(src)), [])
+            self.assertEqual(len(errors({**en_entry(src), "copied_from": "q-0009"})), 1)
 
     def test_duplicates(self):
         a, c = q("q-0001"), q("q-0002", "chinese-base", copied_from="q-0001")
