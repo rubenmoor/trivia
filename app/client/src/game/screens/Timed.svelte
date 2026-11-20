@@ -575,7 +575,7 @@
   }
   .strip {
     display: grid;
-    grid-template-columns: repeat(auto-fit, calc(30 * var(--u)));
+    grid-template-columns: repeat(auto-fit, calc(25 * var(--u)));
     justify-content: center;
     gap: calc(0.6 * var(--u)) calc(0.8 * var(--u));
     max-width: 100%;
