@@ -273,6 +273,14 @@ export const poolFile = (locale: string, bundle = "base"): string =>
 export const packsFor = (bundles: Bundle[], locale: string): Bundle[] =>
   bundles.filter((b) => b.id !== "base" && b.languages.includes(locale));
 
+/** Our base bundles (kind base, not mods) listing `locale`: `base` itself and packs like chinese-base. */
+export const baseBundlesFor = (bundles: Bundle[], locale: string): Bundle[] =>
+  bundles.filter((b) => b.kind === "base" && b.source !== "mod" && b.languages.includes(locale));
+
+/** Whether base's own pool file must exist for `locale`: only when `base` lists it (zh pools live in packs). */
+export const baseListsLocale = (bundles: Bundle[], locale: string): boolean =>
+  bundles.some((b) => b.id === "base" && b.languages.includes(locale));
+
 /** base's pool plus the packs' pools of `locale` (packsFor order); a pack without a file (null) isn't
  * offered there: `locale` leaves its languages, so a stored choice naming it reads as the defaults. */
 export function withPacks(
