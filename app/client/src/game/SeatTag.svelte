@@ -15,7 +15,7 @@
 {#if s}
   <span class="seat-tag glass" class:small class:out={!alive && (struck || s.status === "out" || (s.status === "lost" && session.mode !== "rr-coop"))} style:--seat={seatColor(seat)}>
     {#if s.status === "won"}<Icon name="crown" />{:else}<span class="dot" aria-hidden="true"></span>{/if}
-    <span class="name" style:font-size="{nameScale(String(s.player ?? seat + 1))}em">{s.player ?? seat + 1}</span>
+    <span class="name"><span style:font-size="{nameScale(String(s.player ?? seat + 1))}em">{s.player ?? seat + 1}</span></span>
     <span class="device"><SeatDevice binding={seating.binding[seat] ?? null} /></span>
   </span>
 {/if}
@@ -48,6 +48,7 @@
     border-radius: 50%;
     background: var(--seat);
   }
+  /* one fixed width whatever the name (decision 774); the font shrinks inside it */
   .name {
     width: 8em;
     overflow: hidden;

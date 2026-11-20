@@ -1162,6 +1162,24 @@ def timed(r):
     r.shot("victory-timed")
 
 
+def timed_long(r):
+    """Decision 774: the seat strip with one name at the cap, 4 and 8 seats; nobody wins and victory with 8."""
+    timed_on(r, "timed-q-long", 10)
+    r.shot("timed-question-long")
+    timed_on(r, "timed-q8", 10)
+    r.shot("timed-question-8")
+    timed_on(r, "timed-risk8", 10)
+    r.clock("timed-risk8", 31)  # the time-out takes the seven last hearts
+    r.wait("main .result.wrong", 30000)
+    r.settle(2.5)
+    r.shot("timed-nobody-wins-8")
+    timed_on(r, "timed-12-claim8", 2)
+    r.answer(r.meta["timed-12-claim8"]["right"], final=False)
+    r.wait("main .result.victory", 30000)
+    r.settle(3.5)
+    r.shot("victory-timed-8")
+
+
 def demo_language(r):
     r.scene(None, consent=None, ready="main .language .option")  # no consent screen in the demo (decision 337)
     r.shot("language")
@@ -1219,6 +1237,7 @@ STEPS = [
       "turn-rr-coop", "tower-rr-competitive", "turn-rr-competitive", "wrong-rr-competitive", "victory-rr-competitive", "victory-last-standing"], round_robin),
     (["timed-question", "timed-claimed", "timed-claim-last", "timed-paused", "timed-time-up", "timed-round",
       "timed-last-heart", "timed-all-at-risk", "timed-nobody-wins", "timed-sudden-death", "victory-timed"], timed),
+    (["timed-question-long", "timed-question-8", "timed-nobody-wins-8", "victory-timed-8"], timed_long),
 ]
 
 

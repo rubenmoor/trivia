@@ -11,6 +11,7 @@
   import ScoreCount from "../ScoreCount.svelte";
   import SeatTag from "../SeatTag.svelte";
   import Tower from "../Tower.svelte";
+  import { MANY_SEATS } from "../seats.ts";
 
   let {
     game,
@@ -36,7 +37,7 @@
   const knockout = $derived(game.session?.mode === "rr-competitive" && last.seat !== undefined);
 </script>
 
-<section class="screen result wrong">
+<section class="screen result wrong" class:many={(game.session?.seats.length ?? 0) > MANY_SEATS}>
   <div class="columns">
     <Tower filled={blocks} {levels} small crumble />
     <div class="stack">
@@ -93,6 +94,10 @@
     flex-direction: column;
     align-items: center;
     gap: calc(1.4 * var(--u));
+  }
+  .many,
+  .many .stack {
+    gap: calc(0.8 * var(--u));
   }
   .consolation {
     max-width: calc(56 * var(--u));

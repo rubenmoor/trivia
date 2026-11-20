@@ -15,6 +15,9 @@ export interface SeatDraft {
  * names are capped at MAX_NAME (letters.ts) on every screen. */
 export const nameScale = (name: string, fit = 10): number => Math.max(0.55, Math.min(1, fit / Math.max(1, [...name].length)));
 
+/** More seats than this: end screens go compact so all fit a Deck screen (decision 774). */
+export const MANY_SEATS = 4;
+
 /** By join order, repeating past the end; each ≥ 8:1 on `--night-900`. */
 const SEAT_COLORS = ["var(--amber)", "var(--sky)", "var(--mint)", "var(--pink)", "#ff9a52", "#b7a4ff", "#d2ee4a", "var(--quit-line)"];
 
