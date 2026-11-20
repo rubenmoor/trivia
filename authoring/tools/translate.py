@@ -40,8 +40,9 @@ def run_bundle(d):
 _ZH_DIGITS = {c: i for i, c in enumerate("零一二三四五六七八九")} | {"〇": 0, "两": 2}
 _ZH_UNITS, _ZH_BIG = {"十": 10, "百": 100, "千": 1000}, {"万": 10 ** 4, "亿": 10 ** 8}
 _ZH_RUN = re.compile("[零〇一二两三四五六七八九十百千万亿]+")
-_ZH_MEASURE = set("个位年月日号次种条只名人岁米克斤吨度倍块元本部座项届世层级天周分秒首张件颗枚家国省市洲大颁倍百千万亿")
-_ZH_LEAD = set("第约共近仅只有是为达超过逾了到成")  # before a numeral that is a number, not a word's part
+_ZH_MEASURE = set("个位年月日号次种条只名人岁米克斤吨度倍块元本部座项届世层级天周秒首张件颗枚家省市洲大公")
+# words with a numeral that is no number; masked before counting
+_ZH_WORDS = re.compile("四川|三国|十分|万分|统一|万一|唯一|一些|一起|一样|一直|一定|一般|一切|一旦|一致|一同|一共|一边|一点|万里|千万")
 _HAN = re.compile("[\u4e00-\u9fff]")
 _FULLWIDTH = str.maketrans("０１２３４５６７８９，．", "0123456789,.")
 
@@ -62,13 +63,12 @@ def _zh_value(run):
 
 
 def _zh_counts(text):
-    """Numeral runs that are a quantity or date, not part of a word: two or more characters, or one
-    followed by a measure word or a non-Han character and not led by a Han character (四川, 统一 aren't)."""
-    out = Counter()
+    """Numeral runs that are a quantity or date, not part of a known word (四川, 十分): two or more
+    characters, or one followed by a measure word, a non-Han character or the end."""
+    out, text = Counter(), _ZH_WORDS.sub(lambda m: "的" * len(m[0]), text)
     for m in _ZH_RUN.finditer(text):
-        nxt, prev = text[m.end():m.end() + 1], text[m.start() - 1:m.start()] if m.start() else ""
-        if len(m[0]) > 1 or ((not nxt or nxt in _ZH_MEASURE or not _HAN.match(nxt))
-                             and (not prev or prev in _ZH_LEAD or not _HAN.match(prev))):
+        nxt = text[m.end():m.end() + 1]
+        if len(m[0]) > 1 or not nxt or nxt in _ZH_MEASURE or not _HAN.match(nxt):
             out[_zh_value(m[0])] += 1
     return out
 

@@ -15,11 +15,15 @@ same = [("42,195 km", "42195公里"), ("42,000", "4.2万"),
         ("Sichuan", "四川"), ("the Great Wall", "万里长城"), ("Romance of the Three Kingdoms", "三国演义"),
         ("very famous", "十分有名"), ("May Fourth Movement", "五四运动"), ("World War II", "第二次世界大战"),
         ("seven continents", "七大洲"), ("Sichuan has 3 cities", "四川有三个城市"),
-        ("Sichuan, 1969", "1969年，四川"), ("1, 2", "1，2"), ("4 cities", "四个城市")]
+        ("Sichuan, 1969", "1969年，四川"), ("1, 2", "1，2"), ("4 cities", "四个城市"),
+        ("3", "历时三年"), ("3", "他三岁时"), ("8 km, very famous", "这个湖长八公里，十分有名")]
 differ = [("42,000", "4.3万"), ("3", "四"), ("1969", "1970年"), ("7", "统一"), ("3", "三十"),
           ("3 cities", "4个城市"), ("Sichuan", "四川有3个城市"),
           ("3.5 million", "350万"), ("Sichuan has 4 cities", "四川有三个城市"),
-          ("1", "统一"), ("1", "一些"), ("1,2", "12"), ("1，2", "12")]  # English million/billion words are not expanded: a fact-check
+          ("1", "统一"), ("1", "一些"), ("1,2", "12"), ("1，2", "12"),
+          ("3", "三国演义"), ("10", "十分有名"), ("Liu Bei swore brotherhood with 3 men", "三国时期，刘备与两人结拜"),
+          ("The lake is 10 km long and very famous", "这个湖长八公里，十分有名")]
+# «3.5 million» vs «350万»: English million/billion words are not expanded, a fact-check
 
 
 class Numbers(unittest.TestCase):
