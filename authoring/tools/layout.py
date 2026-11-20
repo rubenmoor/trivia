@@ -52,6 +52,11 @@ def base_related(bundle):
     return BUNDLE_SOURCES / bundle / "base-related.json"
 
 
+def related(bundle):
+    """authoring/data/bundles/<id>/related.json: a further base bundle's subcategory → its neighbours (plan 231)."""
+    return BUNDLE_SOURCES / bundle / "related.json"
+
+
 def translations(locale):
     """authoring/data/questions.<locale>.json: one locale's translations of the source (D-81)."""
     return AUTHORING / "data" / f"questions.{locale}.json"
