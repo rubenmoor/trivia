@@ -3,7 +3,7 @@ import type { GameMode, JokerName } from "../lib/types.ts";
 import { BADGE_NAMES, careerUnlocks } from "./career.ts";
 import { DEFAULT_AGE_GROUP } from "./choice.ts";
 import { BUILT_MODES, gameMode, jokersUsed } from "./game.ts";
-import { categoryOf, isModId } from "./pool.ts";
+import { catKey, categoryOf, isModId, isOurs } from "./pool.ts";
 import { LEVELS, PER_LEVEL } from "./selection.ts";
 import type { EngineData, GameRow, GameState, SaveData } from "./state.ts";
 import { gameLocale, rowStates } from "./state.ts";
@@ -153,10 +153,14 @@ export function earned(save: SaveData, data: EngineData): AchievementId[] {
     if (modeWin) out.add(modeWin);
   }
 
-  const base = data.categories.filter((c) => c.bundle === "base").map((c) => c.slug);
   const offered = new Set(data.pool.filter((q) => q.status === "approved").map(cat));
   const hit = count(correct, cat);
-  if (base.some((c) => offered.has(c)) && base.every((c) => !offered.has(c) || hit.has(c))) out.add("ALL_CATEGORIES");
+  // one of our base bundles of the locale, all of it (plan 227); a base pack alone counts
+  const bases = data.bundles.filter((b) => b.kind === "base" && isOurs(b.id) && b.languages.includes(data.locale)).map((b) => b.id);
+  if (bases.some((id) => {
+    const slugs = data.categories.filter((c) => c.bundle === id).map(catKey);
+    return slugs.some((c) => offered.has(c)) && slugs.every((c) => !offered.has(c) || hit.has(c));
+  })) out.add("ALL_CATEGORIES");
   if ([...hit.values()].some((n) => n >= MANY)) out.add("SPECIALIST");
   if (new Set(states.flatMap((s) => (s.history ?? []).map((h) => h.question_id))).size >= SEEN) out.add("QUESTIONS_1000");
   if (new Set(won.map((w) => gameLocale(w.row))).size >= LANGUAGES) out.add("POLYGLOT");
