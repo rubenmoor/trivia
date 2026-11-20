@@ -1473,9 +1473,9 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
   5. `customize`: «Personalizar partida»
   6. `configure`: gamemaster mode's configure screen
   7. `joker-presets`: configure screen, preset «Sin límite»
-- en/de until their pools (decision 80): only 3–7, numbered 01–05; the question shots skip with a message
-- Questions per shot: `Q` in the script (es: approved, short, image cached)
-- zh (`task 2315`): `--lang zh-Hans|zh-Hant`; `Q` gets `chinese-base` ids from `pool.<zh>.json` once it exists (sensitivity rule: no maps, flags, politics), until then the 2 question shots skip; the `bundles` shot is replaced by `career`, taken last (the first player's badge page, the gallery's `career` save values: zh offers only `chinese-base`, a bundles shot would show one tile; the Choice screen is already behind `customize`); its subject names come from the zh names file, Spanish until it has categories
+- A UI language without its question pool (decision 80; en/de had theirs by 2026-11-18, now only zh): only 3–7, numbered 01–05; the question shots skip with a message
+- Questions per shot: `Q` in the script (approved, short, image cached; ids shared by the es, en and de pools), zh its own `ZH_Q`
+- zh (`task 2315`): `--lang zh-Hans|zh-Hant`; `ZH_Q` gets `chinese-base` ids from `pool.<zh>.json` once it exists (sensitivity rule: no maps, flags, politics), until then the 2 question shots skip; the `bundles` shot is replaced by `career`, taken last (the first player's badge page, the gallery's `career` save values: zh offers only `chinese-base`, a bundles shot would show one tile; the Choice screen is already behind `customize`); its subject names come from the zh names file, Spanish until it has categories
 - Re-run after every visual change; the chosen set re-rendered before upload
 
 ## Trailer

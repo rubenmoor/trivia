@@ -19,9 +19,12 @@ const MEDIA = process.env.TRIVIA_MEDIA || path.join(REPO, "media"); // as the sh
 const W = 1920;
 const H = 1080;
 
-// Gameplay shots' questions per pool: approved, short, an image each. zh: pick from `chinese-base` once pool.zh-Hans.json exists
-// (plan 144, sensitivity rule: no maps, flags, politics); until then its question shots skip like en/de did.
-const Q = { es: { locked: "q-0030", joker: "q-0019" } };
+// Gameplay shots' questions: approved, short, an image each; ids shared by the es, en and de pools. zh: its own
+// `chinese-base` ids under its tag once pool.<zh>.json exists (plan 144, sensitivity rule: no maps, flags, politics);
+// until then its question shots skip.
+const Q = { locked: "q-0030", joker: "q-0019" };
+const ZH_Q = {};
+const questionsFor = (locale) => (locale.startsWith("zh") ? ZH_Q[locale] : Q);
 
 const args = process.argv.slice(2);
 const opt = (name) => {
@@ -174,7 +177,7 @@ async function menus(lang, saveDir, data, ui) {
 async function main() {
   if (!existsSync(path.join(REPO, "app", "client", "dist", "index.html"))) throw new Error("client not built: npm run build");
   const es = loadData("es");
-  for (const id of Object.values(Q.es)) {
+  for (const id of Object.values(Q)) {
     const url = es.byId.get(id)?.media?.file_url;
     if (!url) throw new Error(`${id}: not in the pool or no media; pick another in Q`);
     if (!existsSync(path.join(MEDIA, cacheName(url)))) throw new Error(`${id}: media not cached: trivia-media sync --status approved`);
@@ -196,7 +199,7 @@ async function main() {
       const locale = poolLocale(ui);
       const own = loadData(locale);
       const data = own ?? es; // menu shots on the es pool show no question text
-      if (own && Q[locale]) await gameplay(ui, tmp, data, ui, Q[locale]);
+      if (own && questionsFor(locale)) await gameplay(ui, tmp, data, ui, questionsFor(locale));
       else followUp.push(ui);
       await menus(ui, tmp, data, ui);
     }
