@@ -1,5 +1,5 @@
 // Traditional Chinese catalog (plans/15a-ui-translation.md): OpenCC s2twp of zh-Hans plus a Taiwan vocabulary pass (decision 762), no native-speaker check yet (plan 141).
-// Style guide: style/zh-Hant.md. Joker names: the recommended ones of the pending joker-name decision.
+// Style guide: style/zh-Hant.md. Joker names: decision 775 (Set A), final.
 import type { Catalog } from "./es.ts";
 
 export const zhHant = {
