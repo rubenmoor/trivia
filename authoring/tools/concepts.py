@@ -32,12 +32,22 @@ def slug(text):
 STOP_WORDS = {"el", "la", "los", "las", "un", "una", "de", "del", "der", "die", "das"}  # es, de; Latin text only
 
 
+def _with_base(text):
+    """(char, its base letter: the last non-mark character), so a letter's second mark (ồ, ễ) folds too."""
+    base = " "
+    for c in text:
+        if not unicodedata.category(c).startswith("M"):
+            base = c
+        yield c, base
+
+
 def key(name):
     """Normalized name: what has to be unique across subcategories (OQ-40). Unicode: NFKD, accents folded,
     casefold, letters and digits of any script kept (Han too); es/de stop words dropped."""
     text = unicodedata.normalize("NFKD", name.replace("ß", "ss"))  # ß: de
-    text = "".join(c for i, c in enumerate(text) if not (unicodedata.category(c) == "Mn" and text[i - 1].isascii()))  # Latin accents only
+    text = "".join(c for c, base in _with_base(text) if not (unicodedata.category(c) == "Mn" and base.isascii()))  # Latin accents only
     text = unicodedata.normalize("NFKC", text).casefold()
+    text = re.sub(r"[\u02b0-\u02ff]", "", text)  # modifier letters (ʻokina, ʼ) vanish, as before: Kauaʻi = Kauai
     # ASCII punctuation separates words; other punctuation (’ – «) vanishes, as before
     words = "".join(c if c.isalnum() else " " if c.isascii() else "" for c in text).split()
     return " ".join(w for w in words if w not in STOP_WORDS)

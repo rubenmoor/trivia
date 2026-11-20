@@ -17,6 +17,23 @@ class Latin(unittest.TestCase):
         self.assertEqual(concepts.key("Straße, der Große"), "strasse grosse")
         self.assertEqual(concepts.key("Año 1492!"), "ano 1492")
 
+    def test_two_marks_fold(self):  # Vietnamese: a letter's second mark folds too
+        self.assertEqual(concepts.key("Hồ Chí Minh"), concepts.key("Ho Chi Minh"))
+        self.assertEqual(concepts.key("Nguyễn"), "nguyen")
+        self.assertEqual(concepts.key("Ệ"), "e")
+
+    def test_modifier_letters_vanish(self):  # ʻokina, as before
+        self.assertEqual(concepts.key("Kauaʻi"), concepts.key("Kauai"))
+        self.assertEqual(concepts.key("ʻOhana"), "ohana")
+
+    def test_letters_kept(self):  # changed: the ASCII fold deleted these letters
+        self.assertEqual(concepts.key("Søren Kierkegaard"), "søren kierkegaard")
+        self.assertEqual(concepts.key("Đà Nẵng"), "đa nang")
+        self.assertEqual(concepts.key("Sacré-Cœur"), "sacre cœur")
+        self.assertEqual(concepts.key("Ægir"), "ægir")
+        self.assertEqual(concepts.key("Lech Wałęsa"), "lech wałesa")
+        self.assertEqual(concepts.key("Москва"), "москва")
+
     def test_slug_ascii(self):
         self.assertEqual(concepts.slug("Música y Cine"), "musica-y-cine")
 

@@ -938,7 +938,7 @@ def retire(bundle, sub, slots, skipped):
 
 
 def option_key(text):
-    """norm(), or the casefolded text where norm() drops everything (ß, Ø, Cyrillic)."""
+    """norm(), or the casefolded text where norm() drops everything (punctuation only)."""
     text = re.sub(r"(?<![\w)])[-−–]\s?(?=\d)", "neg ", text)  # "-100" ≠ "100"
     return norm(text) or unicodedata.normalize("NFKC", text).casefold().strip()
 
