@@ -26,7 +26,8 @@ const FONTS = [
 ];
 const PUNCT = "，。？！：；、“”‘’「」『』（）…—《》·％＋－～＝＜＞／＆";
 const BASIC = Array.from({ length: 95 }, (_, i) => String.fromCharCode(32 + i)).join("");
-const CJK = /[⺀-鿿豈-﫿　-〿＀-￯‐-‧]/gu;
+// theme.css `unicode-range` of the zh faces, General Punctuation only as far as PUNCT: –, † stay Baloo / Nunito (decision 767).
+const CJK = new RegExp(`[\u2e80-\u9fff\uf900-\ufaff\u3000-\u303f\uff00-\uffef${[...PUNCT].filter((c) => c >= "\u2010" && c <= "\u2027").join("")}]`, "gu");
 
 /** Every character of a legacy double-byte range (GB 2312 level 1: B0–D7; Big5 common: A4–C6). */
 function range(enc, hi0, hi1, lo0, lo1) {
