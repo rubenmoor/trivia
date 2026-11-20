@@ -14,7 +14,7 @@ API:
     GET  /api/categories                           every bundle's broad categories with subcategories (D-19, D-43)
     GET  /api/bundles                              app/data/bundles.json: the question bundles (D-39)
     GET  /api/names?locale=en                      categories.load_names: bundle, category, subcategory names (plan 67;
-                                                   no locale: es, decision 259)
+                                                   no locale: es, decision 259; gaps filled from en)
     GET  /api/age-groups                           app/data/age-groups.json: the difficulty scale and age groups (D-38)
     GET  /api/targets                              authoring/data/targets.json: pool targets per bundle (D-53, plan 12)
     GET  /api/questions?batch=pilot&status=draft   matching questions (all filters optional;
@@ -273,7 +273,7 @@ def media_stats_of(query):
 
 
 def names_of(query):
-    return categories.load_names(locale_of(query.get("locale")) or "es")
+    return categories.load_names(locale_of(query.get("locale")) or "es", "en")  # en: a bundle without names in the locale
 
 
 def slot_of(body):

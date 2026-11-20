@@ -116,7 +116,7 @@ qgen batch               # one new batch: concepts, drafts, rating, fact-check, 
 qgen batch --bundle colombia   # the same for another bundle's subcategories
 qgen health ack <batch> "<note>"  # records the developer's look at a batch that failed the health thresholds (no stop either way, decision 414)
 qgen rework              # every needs_work question with feedback once more: Claude fixes it, fact-checks, reviews (--batch <batch>)
-qgen bundle new <id> --name … --description … --kind region|theme --rule …   # an empty bundle; then fill app/data/bundles/<id>/categories.json (region, theme: qgen taxonomy)
+qgen bundle new <id> --name … --description … --kind region|theme|base --rule …   # an empty bundle; base: --language zh-Hans,zh-Hant,en --voice …, base's 6000 target, entry after the base bundles; then fill app/data/bundles/<id>/categories.json (region, theme: qgen taxonomy)
 qgen taxonomy --bundle <id>    # a regional or theme bundle's categories and subcategories proposed (English slugs + en and own-language names; a theme's also `base_related`) → work/taxonomy/<id>/proposal.md
 qgen taxonomy --bundle <id> --apply work/taxonomy/<id>/proposal.json   # writes them (proposal edited to the developer's answer): slugs to categories.json, missing en/es/de names drafted into names.<locale>.json
 qgen remap --bundle <id> [--apply work/remap/<id>/proposal.json]   # its questions onto a new list: proposal → work/remap/<id>/proposal.md, then applied
