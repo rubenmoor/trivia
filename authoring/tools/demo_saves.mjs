@@ -26,6 +26,12 @@ export function withExtraPlayers(save) {
   return save;
 }
 
+/** Career badges `names` as earned; `shown`: celebrated already. */
+export const earned = (names, shown = true) =>
+  Object.fromEntries(names.map((n, i) => [n, { on: `2026-10-${String(1 + (i % 28)).padStart(2, "0")}`, ...(shown ? { shown } : {}) }]));
+/** A few badges of a young career: gallery careers, the zh store's career shot. */
+export const SOME = ["CAREER_HISTORY_ELEMENTARY", "CAREER_NATURE_ELEMENTARY", "CAREER_SPORT_ELEMENTARY", "CAREER_SCIENCE_ELEMENTARY", "CAREER_HISTORY_MIDDLE", "CAREER_SCORE_100", "CAREER_SCORE_250", "CAREER_YEAR_ADULTS"];
+
 export const latestState = (save) => save.games.at(-1).state;
 
 /** The right answer's index on the current question. */

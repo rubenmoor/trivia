@@ -9,7 +9,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { cacheName } from "../../app/desktop/resolve.mjs";
 import { launchShell, pageHelpers, sleep, visibleEl } from "../tools/cdp.mjs";
-import { baseSave, gameAt, latestState } from "../tools/demo_saves.mjs";
+import { catchUp, emptyCareer } from "../../app/client/src/engine/career.ts";
+import { baseSave, earned, gameAt, latestState, SOME } from "../tools/demo_saves.mjs";
 import { loadData, poolLocale } from "../tools/engine_data.mjs";
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
@@ -114,8 +115,26 @@ async function toChoice(saveDir, data, ui, mode, shot) {
 
 const focus = (sel) => evaluate(`document.querySelector(${JSON.stringify(sel)}).focus()`);
 
+/** zh's 5th shot: the first player's badge page (gallery's `career` scene). */
+async function career(lang, saveDir, data, ui) {
+  const save = catchUp(baseSave(ui, data.locale), data);
+  save.players[0].career = { ...emptyCareer(), score: 312, ranks: [5, 6, 6], badges: earned(SOME) };
+  await load(saveDir, save);
+  await click("button.candy");
+  await waitFor(visibleEl('[data-focus-id="kind-single"]'), "mode screen");
+  await click('[data-focus-id="kind-single"]');
+  await click('[data-focus-id="next"]');
+  await waitFor(visibleEl('[data-focus-id="mode-solo"]'), "mode screen, single");
+  await click('[data-focus-id="next"]');
+  await waitFor(visibleEl(".player .badges"), "player screen");
+  await click(".player .badges");
+  await waitFor(visibleEl(".career"), "career page");
+  await sleep(1500);
+  await shoot(lang, "career");
+}
+
 /** The 5 informative shots (decision 79): modes, Customize game, configure screen, joker presets, bundles (the last screen before the game).
- *  zh offers only chinese-base, so a bundles shot would show one tile: the age groups instead. */
+ *  zh offers only chinese-base, so a bundles shot would show one tile: the badge page instead. */
 async function menus(lang, saveDir, data, ui) {
   await toChoice(saveDir, data, ui, "solo", { lang, name: "modes" });
   await click('[data-focus-id="group-young_teens"]');
@@ -136,10 +155,7 @@ async function menus(lang, saveDir, data, ui) {
   await shoot(lang, "joker-presets");
 
   if (ui.startsWith("zh")) {
-    await toChoice(saveDir, data, ui, "solo");
-    await click('[data-focus-id="group-young_teens"]');
-    await sleep(1200);
-    await shoot(lang, "age-groups");
+    await career(lang, saveDir, data, ui);
     return;
   }
   await click('[data-focus-id="next"]');
