@@ -7,7 +7,7 @@
   import { sfx } from "./sound.svelte.ts";
   import { reducedMotion } from "./timing.ts";
 
-  let { from = null, to, name, still = false }: { from?: number | null; to: number; name?: string; still?: boolean } = $props();
+  let { from = null, to, name, still = false, compact = false }: { from?: number | null; to: number; name?: string; still?: boolean; compact?: boolean } = $props();
 
   /** After the end screen's title arrives. */
   const DELAY_MS = 800;
@@ -50,10 +50,10 @@
   onDestroy(() => (cancelAnimationFrame(frame), clearTimeout(timer)));
 </script>
 
-<div class="rank glass" class:still data-rank>
+<div class="rank glass" class:still class:compact data-rank>
   <div class="line">
     {#if name}<span class="who">{name}</span>{/if}
-    <span class="label">{t("career.rank")}</span>
+    {#if !compact}<span class="label">{t("career.rank")}</span>{/if}
     {#if shown !== null}
       {#key shown}
         <span class="now" class:pop={!still}><span class="value">{shown}</span> <span class="name">{rankText(shown, lang)}</span></span>
@@ -86,9 +86,37 @@
     min-height: calc(2.6 * var(--u));
   }
   .who {
+    min-width: 0;
+    max-width: 12em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     font-size: calc(1.4 * var(--u));
     font-weight: 700;
     color: var(--paper);
+  }
+  /* many seats (decision 774): one short line each, the name cut */
+  .compact {
+    gap: calc(0.3 * var(--u));
+    padding: calc(0.4 * var(--u)) calc(1 * var(--u)) calc(0.5 * var(--u));
+  }
+  .compact .line {
+    min-height: 0;
+  }
+  .compact .who {
+    flex: 1;
+    max-width: none;
+    text-align: left;
+    font-size: calc(1.2 * var(--u));
+  }
+  .compact .value {
+    font-size: calc(1.5 * var(--u));
+  }
+  .compact .name {
+    font-size: calc(1.2 * var(--u));
+  }
+  .compact .track {
+    height: calc(0.5 * var(--u));
   }
   .label {
     font-size: calc(1.2 * var(--u));

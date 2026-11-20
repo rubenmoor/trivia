@@ -240,9 +240,12 @@ function claims(save, seat, rightly = true) {
   save = claim(shown(save), data, tio(3000), seat).save;
   return answer(save, data, tio(1000), (timedRight(save) + (rightly ? 0 : 1)) % 4, seat).save;
 }
-/** A timed session of `n` seats; `steps` run in order on it. */
-function timedSession(n, steps) {
-  let save = newSession(structuredClone(done), data, tio(0), PLAYERS.slice(0, n), { mode: "timed" }).save;
+/** A timed session of `n` seats; `steps` run in order on it; `long`: that seat's name is LONG (8 known names). */
+function timedSession(n, steps, long = -1) {
+  const base = structuredClone(long < 0 ? done : saves.crowd);
+  const names = [...PLAYERS, ...EXTRA_PLAYERS].slice(0, n).map((x, i) => (i === long ? LONG : x));
+  if (long >= 0) base.players.find((p) => p.name === [...PLAYERS, ...EXTRA_PLAYERS][long]).name = LONG;
+  let save = newSession(base, data, tio(0), names, { mode: "timed" }).save;
   for (const step of steps) save = step(save);
   return save;
 }
@@ -266,6 +269,13 @@ const toTwelve = Array.from({ length: 11 }, () => round(by(0), by(1))).flat();
 scene("timed-12", timedScene(timedSession(2, toTwelve)));
 const last = claim(shown(saves["timed-12"]), data, tio(3000), 0).save;
 scene("timed-12-claim", timedScene(last, { right: timedRight(last) }));
+// Decision 774: equal seat cards with one name at the cap (Mateo's seat), 4 and 8 seats; the nobody-wins and victory
+// screens with 8.
+scene("timed-q-long", timedScene(timedSession(4, round(by(3, false), by(0), by(1), shown), 1)));
+scene("timed-q8", timedScene(timedSession(8, round(by(7, false), by(0), by(1), shown), 3)));
+scene("timed-risk8", timedScene(timedSession(8, [...round(by(0, false), timeUp, timeUp, shown)], 3)));
+const last8 = claim(shown(timedSession(8, Array.from({ length: 11 }, () => round(...Array.from({ length: 8 }, (_, i) => by(i)))).flat(), 3)), data, tio(3000), 0).save;
+scene("timed-12-claim8", timedScene(last8, { right: timedRight(last8) }));
 
 // Plan 214: a picture behind the question, blurred until the answer: a decorative image, an audio question's background.
 const blurredQ = {

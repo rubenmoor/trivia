@@ -431,7 +431,7 @@
     display: grid;
     grid-template-rows: auto auto auto 1fr auto auto;
     justify-items: center;
-    padding: var(--safe-y) var(--safe-x) calc(var(--safe-y) * 0.6);
+    padding: var(--safe-y) var(--safe-x) calc(var(--safe-y) * 0.3 + 2.4 * var(--u)); /* the strip clears Media's credit */
     gap: calc(1 * var(--u));
   }
   .top {

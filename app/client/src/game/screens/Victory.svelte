@@ -11,7 +11,7 @@
   import SeatTag from "../SeatTag.svelte";
   import Tower from "../Tower.svelte";
   import Tracks from "../Tracks.svelte";
-  import { seatBlocks, seatNames } from "../seats.ts";
+  import { MANY_SEATS, seatBlocks, seatNames } from "../seats.ts";
 
   let { game, levels, busy, onhome }: { game: Game; levels: number; busy: boolean; onhome: () => void } = $props();
 
@@ -28,7 +28,7 @@
 </script>
 
 <Fireworks mode="finale" />
-<section class="screen result victory">
+<section class="screen result victory" class:many={(session?.seats.length ?? 0) > MANY_SEATS}>
   {#if timed && session && winner >= 0}
     <div class="stack">
       <Tower filled={standing ? game.level - 1 : levels} {levels} drop={!standing} />
@@ -104,6 +104,12 @@
     flex-direction: column;
     align-items: center;
     gap: calc(1.4 * var(--u));
+  }
+  .many .stack {
+    gap: calc(0.8 * var(--u));
+  }
+  .many .title.big {
+    font-size: calc(5.5 * var(--u));
   }
   .victory {
     flex-direction: row;

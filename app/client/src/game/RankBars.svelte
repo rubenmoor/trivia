@@ -6,6 +6,7 @@
   import { fetchRankSteps } from "../lib/api.ts";
   import { buildInfo } from "../lib/build.ts";
   import RankBar from "./RankBar.svelte";
+  import { MANY_SEATS } from "./seats.ts";
 
   let { names = false }: { names?: boolean } = $props();
 
@@ -19,7 +20,7 @@
 
 {#if steps.length}
   <div class="ranks">
-    {#each steps as s (s.name)}<RankBar from={s.from} to={s.to} name={names ? s.name : undefined} />{/each}
+    {#each steps as s (s.name)}<RankBar from={s.from} to={s.to} name={names ? s.name : undefined} compact={steps.length > MANY_SEATS} />{/each}
   </div>
 {/if}
 
