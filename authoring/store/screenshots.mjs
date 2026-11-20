@@ -20,7 +20,7 @@ const W = 1920;
 const H = 1080;
 
 // Gameplay shots' questions: approved, short, an image each; ids shared by the es, en and de pools. zh: its own
-// `chinese-base` ids under its tag once pool.<zh>.json exists (plan 144, sensitivity rule: no maps, flags, politics);
+// `chinese-base` ids under its tag once pool.<zh>.json exists (plan 144, decision 757: undisputed facts only, maps and flags case by case);
 // until then its question shots skip.
 const Q = { locked: "q-0030", joker: "q-0019" };
 const ZH_Q = {};

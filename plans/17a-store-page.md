@@ -1475,7 +1475,7 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
   7. `joker-presets`: configure screen, preset «Sin límite»
 - A UI language without its question pool (decision 80; en/de had theirs by 2026-11-18, now only zh): only 3–7, numbered 01–05; the question shots skip with a message
 - Questions per shot: `Q` in the script (approved, short, image cached; ids shared by the es, en and de pools), zh its own `ZH_Q`
-- zh (`task 2315`): `--lang zh-Hans|zh-Hant`; `ZH_Q` gets `chinese-base` ids from `pool.<zh>.json` once it exists (sensitivity rule: no maps, flags, politics), until then the 2 question shots skip; the `bundles` shot is replaced by `career`, taken last (the first player's badge page, the gallery's `career` save values: zh offers only `chinese-base`, a bundles shot would show one tile; the Choice screen is already behind `customize`); its subject names come from the zh names file, Spanish until it has categories
+- zh (`task 2315`): `--lang zh-Hans|zh-Hant`; `ZH_Q` gets `chinese-base` ids from `pool.<zh>.json` once it exists (`decision 757: Sensitivity rule for Chinese content: how do drafting, the fit pass and zh translation treat contested political topics?`: undisputed facts only, maps and flags checked case by case), until then the 2 question shots skip; the `bundles` shot is replaced by `career`, taken last (the first player's badge page, the gallery's `career` save values: zh offers only `chinese-base`, a bundles shot would show one tile; the Choice screen is already behind `customize`); its subject names come from the zh names file, Spanish until it has categories
 - Re-run after every visual change; the chosen set re-rendered before upload
 
 ## Trailer
@@ -1501,7 +1501,7 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
   - per-language trailers via Advanced Settings; the base video should be the English one (en waits for its pool, decision 80)
   - no length limit stated; no autoplay/mute rule stated on the page
 - en/de: refuse with a message until `pool.en.json` / `pool.de.json` (decision 80); then add their two questions to `Q`
-- zh-Hans / zh-Hant: same refusal until `pool.<zh>.json`; then add two `chinese-base` questions (short, image cached, sensitivity rule) to `Q` under the tag
+- zh-Hans / zh-Hant: same refusal until `pool.<zh>.json`; then add two `chinese-base` questions (short, image cached, `decision 757: Sensitivity rule for Chinese content: how do drafting, the fit pass and zh translation treat contested political topics?`, each map or flag checked case by case) to `Q` under the tag
 - Re-run after any UI change; the developer approves before upload (`task 845`)
 
 ## Entry checklist
