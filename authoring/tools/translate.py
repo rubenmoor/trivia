@@ -1,5 +1,6 @@
 """Translation runs: `qgen batch --translate` (plan 66, decision 45). Never ships (D-35)."""
-import argparse, datetime, json, re, sys, time, urllib.parse
+import argparse, datetime, json, re, sys, time, unicodedata, urllib.parse
+from decimal import Decimal
 from collections import Counter
 
 import layout  # paths (D-35)
@@ -36,9 +37,37 @@ def run_bundle(d):
     return load_json(d / "run.json")["bundle"]
 
 
+_ZH_DIGITS = {c: i for i, c in enumerate("零一二三四五六七八九")} | {"〇": 0, "两": 2}
+_ZH_UNITS, _ZH_BIG = {"十": 10, "百": 100, "千": 1000}, {"万": 10 ** 4, "亿": 10 ** 8}
+_ZH_RUN = re.compile("[零〇一二两三四五六七八九十百千万亿]+")
+
+
+def _zh_value(run):
+    """A Chinese numeral run as an integer string (一九六九 = 1969, 三万 = 30000); a lone 一 or 两 is None
+    (统一, 一些: not a number)."""
+    if len(run) == 1 and run in "一两":
+        return None
+    if all(c in _ZH_DIGITS for c in run):
+        return "".join(str(_ZH_DIGITS[c]) for c in run)
+    total = sect = num = 0
+    for c in run:
+        if c in _ZH_DIGITS:
+            num = _ZH_DIGITS[c]
+        elif c in _ZH_UNITS:
+            sect, num = sect + (num or 1) * _ZH_UNITS[c], 0
+        else:
+            total, sect, num = total + (sect + num or 1) * _ZH_BIG[c], 0, 0
+    return str(total + sect + num)
+
+
 def numbers(text):
-    """The numbers in text, thousands separators and decimal marks dropped: «42 195» = «42,195»."""
-    return sorted(re.findall(r"\d+", re.sub(r"(?<=\d)[ ,.  '](?=\d)", "", text)))
+    """The numbers in text, thousands separators and decimal marks dropped: «42 195» = «42,195»;
+    fullwidth digits, 万/亿 («4.2万») and Chinese numerals («三») count as the digits they write."""
+    text = unicodedata.normalize("NFKC", text)
+    text = re.sub(r"(\d+(?:\.\d+)?)\s*([万亿])",
+                  lambda m: str(int(Decimal(m[1]) * _ZH_BIG[m[2]])), text)
+    text = _ZH_RUN.sub(lambda m: f"\n{_zh_value(m[0]) or m[0]}\n", text)
+    return sorted(re.findall(r"\d+", re.sub(r"(?<=\d)[ ,.  '](?=\d)", "", text)))
 
 
 def fact_text(q):
