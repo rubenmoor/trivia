@@ -63,8 +63,14 @@ def conf() -> dict:
 SHIP_ALL = False  # placeholder IDs (--depots, --dry-run): every bundle gets a depot
 
 
+def base_packs() -> set[str]:
+    """Base bundles in a pack folder: they ship in the content depot, not as DLC (decision 753)."""
+    return {b["id"] for b in json.loads((REPO / "app" / "data" / "bundles.json").read_text())["bundles"] if b["kind"] == "base"} - {"base"}
+
+
 def bundles() -> list[str]:
-    return sorted(d.name for d in (REPO / "app" / "data" / "bundles").iterdir() if d.is_dir())
+    """The DLC candidates: pack folders but the base packs'."""
+    return sorted(d.name for d in (REPO / "app" / "data" / "bundles").iterdir() if d.is_dir() and d.name not in base_packs())
 
 
 TOPIC_BAR = 2000  # stage-media.mjs TOPIC_BAR (decision 520)
@@ -212,7 +218,7 @@ def link(src: Path, dst: Path) -> None:
 
 def stage_dlc(linux: Path, media_root: Path) -> dict[str, dict[str, int]]:
     """Each pack's depot folder in build/dlc/<id>/ (hard links); {pack: tree}."""
-    shipped = {p.name for p in (linux / "resources" / "data" / "bundles").iterdir() if p.is_dir()}
+    shipped = {p.name for p in (linux / "resources" / "data" / "bundles").iterdir() if p.is_dir()} - base_packs()
     media = pack_media()
     ids = {b for b, d in conf()["dlc"].items() if all(d.values())}
     if shipped != set(bundles()) or set(media) != shipped or not set(packs()) <= shipped or not (SHIP_ALL or ids <= shipped):

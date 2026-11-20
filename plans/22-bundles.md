@@ -71,7 +71,7 @@ The developer's direction (2026-10-07): a batch writes for **one bundle, chosen 
 | Pool (ship, `qgen export`, D-94) | `app/data/pool.json`, `pool.<locale>.json` (`base`'s questions only) | `app/data/bundles/<id>/pool.json`, `pool.<locale>.json`; missing = not offered (optional install, pm decision 66) |
 | Demo pool (ship, `qgen export`, decision 339) | `app/data/demo/pool.json`, `pool.<locale>.json`: `base`'s entries of the listed ids; no list, no files | none |
 | Names (ship) | `app/data/names.<locale>.json` | `app/data/bundles/<id>/names.<locale>.json` |
-| Media | content depot | `build/pack-media.json` lists the media only it uses (`stage-media.mjs`) |
+| Media | content depot | `build/pack-media.json` lists the media only it uses (`stage-media.mjs`); a `kind: base` pack (`chinese-base`) is no DLC (decision 753): all its pools and media in the content depot, no entry, media shared with `base` once (cache, encode and `build/media/` are keyed by URL) |
 | Concept lists | `authoring/data/concepts/` | `authoring/data/bundles/<id>/concepts/` |
 | Base-related subcategories (authoring only, never shipped) | none | `authoring/data/bundles/<id>/base-related.json`, a theme's: subcategory → the base subcategories it goes beyond (`qgen taxonomy --apply`; optional) |
 | Question axes | `authoring/data/question-axes.json` | `authoring/data/bundles/<id>/question-axes.json`, if present; otherwise `base`'s |

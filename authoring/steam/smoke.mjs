@@ -95,7 +95,13 @@ function which(cmd) {
 /** Packs whose pool file for `locale` is in the build (as data.ts poolFile). */
 const packsFor = (locale) =>
   packs().filter((b) => existsSync(path.join(DIR, BUNDLES, b, locale === "es" ? "pool.json" : `pool.${locale}.json`)));
-const packs = () => (existsSync(path.join(DIR, BUNDLES)) ? readdirSync(path.join(DIR, BUNDLES)) : []);
+// DLC packs only: a base pack ships in the content depot (decision 753).
+const packs = () => {
+  if (!existsSync(path.join(DIR, BUNDLES))) return [];
+  const { bundles } = JSON.parse(readFileSync(path.join(DIR, "resources", "data", "bundles.json"), "utf8"));
+  const base = new Set(bundles.filter((b) => b.kind === "base").map((b) => b.id));
+  return readdirSync(path.join(DIR, BUNDLES)).filter((b) => !base.has(b));
+};
 
 /** The first question per media type in the shipped pool of `locale` (as data.ts poolFile); their media files. */
 function pickQuestions(locale) {
