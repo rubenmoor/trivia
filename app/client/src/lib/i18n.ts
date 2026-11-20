@@ -3,6 +3,8 @@ import { de } from "../locales/de.ts";
 import { en } from "../locales/en.ts";
 import es, { type Catalog, type Override, type Plural, type TextKey, type VariantsKey } from "../locales/es.ts";
 import { esES } from "../locales/es-ES.ts";
+import { zhHans } from "../locales/zh-Hans.ts";
+import { zhHant } from "../locales/zh-Hant.ts";
 
 export type Params = Record<string, string | number>;
 
@@ -18,10 +20,20 @@ function merge(base: Catalog, over: Override): Catalog {
 }
 
 /** Shipping catalogs (LUI-5, D-78): `es` is neutral Latin American Spanish, `es-ES` overrides it. */
-const CATALOGS: Record<string, Catalog> = { es, "es-ES": merge(es, esES), en, de };
+const CATALOGS: Record<string, Catalog> = { es, "es-ES": merge(es, esES), en, de, "zh-Hans": zhHans, "zh-Hant": zhHant };
 
-/** UI languages a player can pick (plan 68); `xx` joins `CATALOGS` only later, in dev. */
+/** Every UI language with a catalog (plan 68); `xx` joins `CATALOGS` only later, in dev. */
 export const UI_LANGS = Object.keys(CATALOGS);
+
+/** Offered only once their question pool ships (decision 222); until then `?lang=` in dev, the picker for the dev Steam user. */
+const GATED_LANGS: readonly string[] = ["zh-Hans", "zh-Hant"];
+
+/** The UI languages to pick from: a gated one if `ships(l)` or for the dev Steam user (`TRIVIA_DEV_STEAM_USER`). */
+export async function pickable(ships: (l: string) => Promise<boolean>, devUser: boolean): Promise<string[]> {
+  const out: string[] = [];
+  for (const l of UI_LANGS) if (!GATED_LANGS.includes(l) || devUser || (await ships(l))) out.push(l);
+  return out;
+}
 
 /** A shipping catalog by tag, `es` if unknown; for pages that show one language without `initLang` (`/comodines`). */
 export const catalogFor = (l: string): Catalog => CATALOGS[l] ?? es;
@@ -61,6 +73,8 @@ const ENDONYMS: Record<string, string> = {
   "es-ES": "Español (España)",
   en: "English",
   de: "Deutsch",
+  "zh-Hans": "简体中文",
+  "zh-Hant": "繁體中文",
 };
 
 /** A mod's catalog (plan 117): merged over a UI language, or a new UI language on `base` (default `en`).

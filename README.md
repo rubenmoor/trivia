@@ -186,7 +186,7 @@ trivia & npm run dev -w app/client                 # game UI with hot reload
 trivia-authoring & npm run dev -w authoring/ui     # authoring UI with hot reload (port 5174)
 npm run check                                      # type-check both clients (strict tsconfig flags) + on-screen literals + knip (unused exports, files, deps; knip.jsonc) + ruff (Python, ruff.toml)
 npm test                                           # game engine tests (node:test)
-npm run check:literals -w app/client               # on-screen literals outside the UI catalog (src/game by default)
+npm run check:literals -w app/client               # on-screen literals outside the UI catalog (src/game by default); zh fonts cover every zh catalog character (subset-fonts.mjs --check)
 npm run build -w app/client && trivia-desktop      # the game in the Electron desktop shell, no Python (no Steam: nothing saved; TRIVIA_DEV_STEAM_USER=1: state/desktop/dev/game.json; `--rp-probe`: throw-away Remote Play probe, log in `<userData>/rp-probe.log`, plan 168; `--lag-probe`: throw-away input-lag probe page, log in `<userData>/lag-probe.log`, plan 170)
 TRIVIA_DEMO=1 npm run dev -w app/client            # the demo client (also `serve`, which previews dist-demo/ after `TRIVIA_DEMO=1 npm run build -w app/client`)
 TRIVIA_DEMO=1 npm run build -w app/client && TRIVIA_DEMO=1 trivia-desktop   # the demo in the desktop shell (see "Run the demo")
@@ -200,7 +200,7 @@ Environment variables (empty = unset):
 - `TRIVIA_SAVE_DIR`: the desktop shell's save folder
 - `TRIVIA_DEVTOOLS=1`: the desktop shell allows its built-in devtools (`webPreferences.devTools`); nothing opens them (no menu, no shortcut); to inspect the page: `--remote-debugging-port=9222` + `chrome://inspect`, works without this variable
 - `TRIVIA_STEAM_APPID`: the desktop shell's Steam App ID in dev (a Steam launch's `SteamAppId` wins; default 480)
-- `TRIVIA_DEV_STEAM_USER=1`: the desktop shell counts as a valid Steam user without Steam (saves and flags on; dev runs and checks only, decision 111); also dev mode: Esc menu row «Ir a pregunta…» (question id or number → that question on screen)
+- `TRIVIA_DEV_STEAM_USER=1`: the desktop shell counts as a valid Steam user without Steam (saves and flags on; dev runs and checks only, decision 111); also dev mode: Esc menu row «Ir a pregunta…» (question id or number → that question on screen); the language picker also lists gated UI languages (zh, decision 222)
 - `TRIVIA_STEAM_SDK`: Steamworks SDK libs (set by the flake)
 - `TRIVIA_STEAM_ACCOUNT`: `trivia-steam upload`'s Steam login; `TRIVIA_STEAMCMD_HOME`: SteamCMD's home (default `$XDG_DATA_HOME/trivia/steamcmd`)
 - `VITE_AUTHORING_URL` (build time): the game's links to the authoring pages; `""` hides them (default: same host, port 8001)

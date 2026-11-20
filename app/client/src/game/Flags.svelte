@@ -1,7 +1,7 @@
 <script lang="ts" module>
   // National flags per language tag (plans/10-visual-design.md, VD-8) or one country (a regional bundle, plan 151):
   // own simplified drawings of the public-domain designs, fixed colours. Unknown tags and countries show the globe.
-  const DRAWN = ["mx", "co", "ar", "es", "gb", "us", "de", "at", "ch"] as const;
+  const DRAWN = ["mx", "co", "ar", "es", "gb", "us", "de", "at", "ch", "cn"] as const;
   type Flag = (typeof DRAWN)[number];
 
   const SETS: Record<string, Flag[]> = {
@@ -9,6 +9,7 @@
     "es-ES": ["es"],
     en: ["gb", "us"],
     de: ["de", "at", "ch"],
+    "zh-Hans": ["cn"],
   };
 </script>
 
@@ -69,6 +70,12 @@
           {:else if f === "ch"}
             <rect width="20" height="20" fill="#da291c" />
             <path d="M8.1 3.8h3.8v4.3h4.3v3.8h-4.3v4.3H8.1v-4.3H3.8V8.1h4.3z" fill="#fff" />
+          {:else if f === "cn"}
+            <rect width="30" height="20" fill="#de2910" />
+            <path d="M0-3l.88 2.7 2.84.02-2.3 1.66.87 2.7L0 2.4l-2.29 1.68.87-2.7-2.3-1.66 2.84-.02z" fill="#ffde00" transform="translate(5 5) scale(1.4)" />
+            <g fill="#ffde00">
+              <circle cx="10" cy="2" r="0.7" /><circle cx="12" cy="4" r="0.7" /><circle cx="12" cy="7" r="0.7" /><circle cx="10" cy="9" r="0.7" />
+            </g>
           {/if}
         </svg>
       </span>

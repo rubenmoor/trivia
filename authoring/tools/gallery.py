@@ -40,7 +40,7 @@ if DEMO:
     os.environ["TRIVIA_DEMO"] = "1"  # the build, the server and the saves script read it
 DIST = "dist-demo" if DEMO else "dist"
 OUT = layout.GALLERY_DEMO if DEMO else layout.GALLERY  # honours TRIVIA_WORK
-LOCALES = ["en", "es", "es-ES", "de"]
+LOCALES = ["en", "es", "es-ES", "de", "zh-Hans", "zh-Hant"]
 DEMO_LOCALES = [x for x in LOCALES if layout.DEMO_POOL(x).exists()]  # decision 339: the demo's pools
 DEFAULT_SIZE = (1920, 1080)
 

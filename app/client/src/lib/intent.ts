@@ -4,7 +4,16 @@ import type { Dir, Intent, Keys } from "./input.svelte.ts";
 
 const ARROWS: Record<string, Dir> = { ArrowUp: "up", ArrowDown: "down", ArrowLeft: "left", ArrowRight: "right" };
 
-export type Key = Pick<KeyboardEvent, "key" | "ctrlKey" | "metaKey" | "altKey">;
+export type Key = Pick<KeyboardEvent, "key" | "ctrlKey" | "metaKey" | "altKey"> & Partial<Pick<KeyboardEvent, "code" | "isComposing">>;
+
+/** The key's Latin letter or digit: `e.key`, or `e.code` (`KeyA` → `a`, `Digit1` → `1`) when an IME makes `e.key`
+ * `Process` or a non-Latin character (Chinese keyboards, plan 142). */
+export function latinKey(e: Key): string {
+  const plain = !/^\p{L}$/u.test(e.key) || /^\p{Script=Latin}$/u.test(e.key);
+  if (plain && !e.isComposing && e.key !== "Process") return e.key;
+  const m = /^(?:Key([A-Z])|Digit([0-9]))$/.exec(e.code ?? "");
+  return m ? (m[1] ?? m[2]).toLowerCase() : e.key;
+}
 
 /** Key + scope keys → intent; `text`: a text field has focus (letters and Space go into it). Enter is `confirm`
  * everywhere, Space `press` (a scope key for Space wins, e.g. a `timed` claim). */
@@ -17,7 +26,7 @@ export function toIntent(e: Key, keys: Keys = {}, text = false, flagKey = ""): I
   if (e.ctrlKey || e.metaKey || e.altKey) return null;
   if (e.key === " ") return keys[" "] ?? { type: "press" };
   if (e.key === "Backspace") return { type: "back" };
-  const k = e.key.toLowerCase();
+  const k = latinKey(e).toLowerCase();
   if (k in keys) return keys[k];
   if (/^[1-9]$/.test(k)) return { type: "pick", n: Number(k) };
   if (flagKey && k === flagKey.toLowerCase()) return { type: "flag" };

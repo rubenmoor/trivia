@@ -4,7 +4,7 @@
 import { untrack } from "svelte";
 import { forget, keyPressed, navigate, opener, pressTarget, show, track } from "./focus.ts";
 import { t } from "./i18n.ts";
-import { activation, toIntent } from "./intent.ts";
+import { activation, latinKey, toIntent } from "./intent.ts";
 import { may, seatOf, type Source } from "./seats.ts";
 import { acting, seating } from "./seats.svelte.ts";
 import type { JokerName } from "./types.ts";
@@ -228,7 +228,7 @@ function keydown(e: KeyboardEvent, first: () => void) {
   lastDevice.current = "keyboard";
   resetTravel();
   if (intent && dispatch({ ...intent, device: "keyboard", source: "keyboard" })) {
-    if (intent.type === "peek") holdKey = e.key.toLowerCase();
+    if (intent.type === "peek") holdKey = latinKey(e).toLowerCase();
     return e.preventDefault();
   }
   if (text || busy() || e.key.length !== 1 || !/\p{L}/u.test(e.key) || e.ctrlKey || e.metaKey) return;
@@ -277,7 +277,7 @@ export function listen(opts: { busy: () => boolean; first: () => void }): () => 
   busy = opts.busy;
   const onkey = (e: KeyboardEvent) => keydown(e, opts.first);
   const onpointer = () => gate("mouse").ok && (lastDevice.current = "mouse");
-  const onkeyup = (e: KeyboardEvent) => e.key.toLowerCase() === holdKey && release();
+  const onkeyup = (e: KeyboardEvent) => latinKey(e).toLowerCase() === holdKey && release();
   const onhidden = () => document.hidden && release();
   const untrackFocus = track();
   window.addEventListener("pointerdown", gateClick, true);
