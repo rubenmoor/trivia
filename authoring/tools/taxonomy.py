@@ -88,6 +88,7 @@ THEME_TAXONOMY_SCHEMA = {"type": "object", "required": ["categories"], "properti
                 "type": "object", "required": [*KEYED, "scope", "reason", "base_related", "samples"], "properties": {
                     **KEYED, "scope": STR, "reason": STR, "base_related": {"type": "array", "items": STR},
                     "samples": SAMPLES}}}}}}}}
+BASE_TAXONOMY_TIMEOUT = 3600  # seconds: one long call
 BASE_BUNDLE_TAXONOMY_SCHEMA = {"type": "object", "required": ["categories", "from_base", "expected_keep"], "properties": {
     "categories": {"type": "array", "items": {
         "type": "object", "required": [*KEYED, "origin", "scope", "reason", *SUBJECT, "subcategories"], "properties": {
@@ -106,6 +107,8 @@ RELATED_ABOUT = ("A base bundle's subcategory → its neighbours in the bundle (
                  "questions. Authoring only, never exported.")
 FROM_BASE_ABOUT = ("A base bundle's draft map (plan 231): every `base` subcategory → the bundle's subcategory its copies go to, "
                    "or null with the reason it is dropped. Written by `qgen taxonomy --apply`, read by the map's task.")
+SCOPES_ABOUT = ("A base bundle's subcategory → its scope, origin (reused: a base slug; new), language flag and sample concepts "
+                "from the applied taxonomy (plan 231); concept calls and drafts show them. Authoring only, never exported.")
 BASE_RELATED_ABOUT = ("A theme bundle's subcategory → the base subcategories it goes beyond (plan 184); its concept lists "
                       "and drafts keep away from their questions. Authoring only, never exported.")
 
@@ -313,14 +316,27 @@ def base_user(b, total, per, research, bases, approved):
     return "\n\n".join(parts)
 
 
+def base_per_subcategory():
+    """Approved per subcategory a further base bundle is sized for: base's target / base's subcategories (plan 231: 6000 / 198 ≈ 30)."""
+    return round(targets.load_targets("base")["total"] / len(categories.subcategories("base")))
+
+
+def base_prompts(b, total):
+    """(system, user) of a further base bundle's taxonomy call, rendered without a call."""
+    per = base_per_subcategory()
+    system = (PROMPTS / "taxonomy-base.md").read_text(encoding="utf-8").replace("{per_sub}", str(per)).replace(
+        "{subs}", str(round(total / per))).replace("{subjects}", subjects_text())
+    research = layout.BUNDLE_SOURCES / b["id"] / "research.md"
+    user = base_user(b, total, per, research.read_text(encoding="utf-8") if research.exists() else "",
+                     categories.load("base"), base_approved())
+    return system, user
+
+
 def base_taxonomy(b, total, d, args):
     """The proposal run of a further base bundle (plan 231): one call, proposal.{json,md} in work/taxonomy/<id>/."""
-    system = (PROMPTS / "taxonomy-base.md").read_text(encoding="utf-8").replace("{per_sub}", str(PER_SUBCATEGORY)).replace(
-        "{subs}", str(round(total / PER_SUBCATEGORY))).replace("{subjects}", subjects_text())
-    research = layout.BUNDLE_SOURCES / b["id"] / "research.md"
-    user = base_user(b, total, PER_SUBCATEGORY, research.read_text(encoding="utf-8") if research.exists() else "",
-                     categories.load("base"), base_approved())
-    out = claude(system, user, BASE_BUNDLE_TAXONOMY_SCHEMA, args.model, d)
+    system, user = base_prompts(b, total)
+    out = claude(system, user, BASE_BUNDLE_TAXONOMY_SCHEMA, args.model, d, timeout=BASE_TAXONOMY_TIMEOUT,
+                 env={"CLAUDE_CODE_MAX_OUTPUT_TOKENS": "128000"})  # chinese-base: 30 min, 206k output tokens (task 2382)
     for c in out["categories"]:
         c["slug"] = slug(c["slug"])
         for s in c["subcategories"]:
@@ -390,6 +406,13 @@ def base_taxonomy_md(p, bases, approved):
     return "\n".join(lines) + "\n"
 
 
+def scopes_of(p):
+    """{slug: {scope, origin, language, samples}} of a base bundle's proposal (scopes.json)."""
+    return {s["slug"]: {"scope": s["scope"], "origin": s["origin"], "language": bool(s.get("language")),
+                        "samples": [x["name"] for x in s.get("samples") or []]}
+            for c in p["categories"] for s in c["subcategories"]}
+
+
 def apply_taxonomy(bundle, src, d):
     """Writes the bundle's categories.json and its names files (stale entries dropped, missing ones drafted)."""
     p = load_json(src)
@@ -401,6 +424,7 @@ def apply_taxonomy(bundle, src, d):
     if bundle != "base" and bundle_row(bundle)["kind"] == "base":
         rel = {s["slug"]: s.get("related") or [] for c in p["categories"] for s in c["subcategories"]}
         save_json(layout.related(bundle), {"about": RELATED_ABOUT, "subcategories": rel})
+        save_json(layout.scopes(bundle), {"about": SCOPES_ABOUT, "subcategories": scopes_of(p)})
         save_json(d / "from-base.json", {"about": FROM_BASE_ABOUT, "expected_keep": p["expected_keep"],
                                          "subcategories": {r["base"]: {"to": r["to"], "reason": r["reason"]} for r in p["from_base"]}})
         print(f"{layout.related(bundle).relative_to(ROOT)}: {sum(map(bool, rel.values()))} of {len(rel)} subcategories have neighbours; "

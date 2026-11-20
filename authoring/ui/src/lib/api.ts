@@ -1,6 +1,6 @@
 // The authoring server's question API (authoring/server/main.py, port 8001).
 import { call, json, post } from "$app/lib/http.ts";
-import type { AgeGroups, Bundle, Category, GalleryManifest, MediaStats, Names, SoundCandidate, Overview, Question, Review, Slot, SpotCheckItem, SpotChecks, Status, Targets, UiFlag } from "./types.ts";
+import type { AgeGroups, FitData, FitEntry, Bundle, Category, GalleryManifest, MediaStats, Names, SoundCandidate, Overview, Question, Review, Slot, SpotCheckItem, SpotChecks, Status, Targets, UiFlag } from "./types.ts";
 
 const SERVER = "the authoring server (`trivia-authoring`)";
 
@@ -143,4 +143,14 @@ export async function changeUiFlag(
 /** The audition candidates of work/sound-brief/manifest.json, null before there is one (plan 220). */
 export async function fetchSounds(): Promise<SoundCandidate[] | null> {
   return get("/api/sounds");
+}
+
+/** The fit pass's verdicts per `base` source with their texts, runs and drop sample (plan 230). */
+export async function fetchFit(bundle: string): Promise<FitData> {
+  return get(`/api/fit?bundle=${encodeURIComponent(bundle)}`);
+}
+
+/** The developer's flip drop ↔ keep of one source (`by: developer`); returns its new entry. */
+export async function flipFit(bundle: string, id: string, verdict: "keep" | "drop", reason?: string): Promise<FitEntry> {
+  return send(`/api/fit/${encodeURIComponent(bundle)}/${encodeURIComponent(id)}`, { verdict, reason });
 }

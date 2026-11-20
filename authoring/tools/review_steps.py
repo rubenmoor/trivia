@@ -12,7 +12,7 @@ import providers  # authoring/tools/providers/: where candidates come from (D-45
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 import copies  # authoring/tools/copies.py: copies into another bundle (decision 217)
 
-from qgen import PROBLEMS, FACT_FIELDS, FACT_SCHEMA, QUESTION_FIELDS, REVISE_SCHEMA, STR, UsageLimit, as_locale, check_question_shape, claude, collect, failed, for_review, load_age_groups, load_json, locale_chunks, named, norm, overlap_norm, parallel, prompt, revise_in_pool, run_dir, save_json  # authoring/tools/qgen.py
+from qgen import PROBLEMS, FACT_FIELDS, FACT_SCHEMA, QUESTION_FIELDS, REVISE_SCHEMA, STR, UsageLimit, as_locale, check_question_shape, claude, collect, failed, for_review, load_age_groups, load_json, locale_chunks, named, norm, overlap_norm, parallel, prompt, revise_in_pool, rule_section, run_dir, save_json  # authoring/tools/qgen.py
 
 
 # --- the LLM batch's steps: media, sheets, review, fix, research, record (D-36) 
@@ -55,6 +55,9 @@ def batch_questions(run, statuses=("draft",)):
 
 def run_mode(run):
     return (load_json(WORK / run / "run.json", {}) or {}).get("mode")
+
+
+REWORK_MODES = ("rework", "fit")  # runs over pool questions: the issue is the needs_work feedback (QG-23; fit: plan 230)
 
 
 def update_pool(changes):
@@ -185,7 +188,7 @@ def cmd_review(args):
     names = ["house-style", "review", *(["translate-review"] if locale else [])]
     notes = translator_notes(d) if locale else {}
     mode = run_mode(args.run)
-    rework = mode == "rework"
+    rework = mode in REWORK_MODES
     todo, done = [], 0
     for q in batch_questions(args.run):
         r = load_json(reviews / f"{q['id']}.json", {})
@@ -240,7 +243,7 @@ def cmd_review(args):
         }
         if q.get("media_first") and not locale:
             payload["media_first"] = media_first.review_input(q)
-        user = "## Question to review\n" + json.dumps(payload, ensure_ascii=False)
+        user = "## Question to review\n" + json.dumps(payload, ensure_ascii=False) + rule_section(run_bundle(d), locale or translations.source_locale(q))
         system = prompt(*names, *(["media-first-checks"] if "media_first" in payload else []),
                         locale=locale or translations.source_locale(q), bundle=run_bundle(d),
                         source_locale=q.get("source_locale"))
@@ -273,7 +276,7 @@ def cmd_fix(args):
     difficulty are taken (media stays the source's), `fix.previous` keeps the old text."""
     d = run_dir(args)
     mode = run_mode(args.run)
-    rework = mode == "rework"
+    rework = mode in REWORK_MODES
     locale = run_locale(d)
     tmp_of = tmp_ids(d)
     _, checks = collect(d)
@@ -301,8 +304,8 @@ def cmd_fix(args):
         system = prompt("house-style", "revise", *(["media-first-checks"] if mf else []),
                         locale=translations.source_locale(group[0][0]), bundle=run_bundle(d),
                         source_locale=group[0][0].get("source_locale"))
-        out = claude(system, "## Questions with issues\n" + json.dumps(items, ensure_ascii=False), REVISE_SCHEMA,
-                     args.model, d, read=mf)
+        out = claude(system, "## Questions with issues\n" + json.dumps(items, ensure_ascii=False)
+                     + rule_section(run_bundle(d), translations.source_locale(group[0][0])), REVISE_SCHEMA, args.model, d, read=mf)
         got = {x["id"]: x for x in out["results"]}
         answered = []
         for q, path, r, _ in group:
@@ -400,6 +403,8 @@ def fix_issue(q, r, rework):
         review = q.get("review") or {}
         if q["status"] != "needs_work" or not (review.get("feedback") or "").strip():
             return None
+        if review.get("fit"):  # a fit pass's adapt issue, prefixed (plan 230)
+            return review["feedback"].strip()
         who = "final reviewer" if review.get("reviewer") == "llm" else "developer feedback"
         return f"{who}: {review['feedback'].strip()}"
     r1 = r.get("round1") or {}

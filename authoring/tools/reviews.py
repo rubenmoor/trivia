@@ -78,7 +78,7 @@ def set_review(qid, review, update=update_question, timed=True):
         review = {"decision": review["decision"], "feedback": feedback,
                   "reviewed_on": review.get("reviewed_on") or datetime.date.today().isoformat(),
                   "reviewer": review.get("reviewer", "human"), "model": review.get("model"),
-                  "previous": review.get("previous"), **({"problems": review["problems"]} if review.get("problems") else {})}
+                  "previous": review.get("previous"), **{k: review[k] for k in ("problems", "by") if review.get(k)}}
         at = review.get("reviewed_at") if restore else now() if timed else None
         if at:
             review["reviewed_at"] = at

@@ -108,6 +108,23 @@ git -C ../trivia push
 
 Also on the authoring server: stats at `/stats/categories`, `/stats/subcategories`, `/stats/difficulty` and `/stats/media`, and printable joker cards at `/comodines`.
 
+### Send a spot-check sheet to a native reviewer
+
+For outside native speakers (zh volunteers, decision 221, plan 141): an offline HTML sheet, a verdict file back by e-mail, the developer imports it.
+
+```sh
+qgen spotcheck export tr-zh-Hans-1 [--controls N] [--size N]   # work/<run>/spotcheck-<run>.html
+qgen spotcheck export --release zh-Hans                        # work/spotcheck/release-zh-Hans.html: 30 of chinese-base
+qgen spotcheck export --subcategory <key>… --locale zh-Hans    # all approved translations there
+# reviewer: opens the file, «Download verdicts» → <name>.verdicts.json, mails it back
+qgen spotcheck import <name>.verdicts.json [--dry-run]         # in ../trivia-review, then merge
+qgen report --qc                                               # "Native sheets" table: controls caught per sheet
+```
+
+- Blind sheet: English source beside the translation, no LLM review, audit or status; brief from `authoring/NATIVE-REVIEW.md` on top
+- Controls (default 3 for zh, else 0): faulty copies `control-<k>`, never in a pool; listed in `work/…/spotcheck-controls.json`; scored at import (unanswered = missed) in `authoring/data/spot-controls.json`
+- A source not in English is skipped and listed at export
+
 ### Make new questions
 
 ```sh

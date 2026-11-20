@@ -25,7 +25,7 @@ Decided: D-87 (pm plan 66). One command, `qgen batch --translate <locale>` (`aut
 - Locales: `es`, `es-ES`, `en`, `de`; sources in any locale but the target; `{source_language}` in the prompts; rate and factcheck for the target's market (`es`: Latin America, `es-ES`: Spain).
 - Selection: approved, translatable sources of one bundle (`base`, or `--bundle <id>`, plan 98) not in the target locale; stale translations first, then the `base` demo list's ids (`authoring/data/demo.json`, else `work/demo/proposal.json`; plan 174), then subcategories with the fewest approved translations, levels by the locale's deficit (D-84).
 - Steps: translate → rate → factcheck (changed facts only) → merge → review 1 → fix → review 2 → record → audit → export → report.
-- Prompts: `translate.md`, `translate-review.md`, `locale-<locale>.md` (spelling and usage: `en` US spelling, words US and UK share; `es` idiomatic Latin American; `es-ES` Spain; `de` as in Germany; no player location, decision 35, decision 167); a regional bundle adds `translate-region.md` (players with a link to the region, decision 167).
+- Prompts: `translate.md`, `translate-review.md`, `locale-<locale>.md` (spelling and usage: `en` US spelling, words US and UK share; `es` idiomatic Latin American; `es-ES` Spain; `de` as in Germany; `zh-Hans` mainland Simplified, decision 783; no player location, decision 35, decision 167); a regional bundle adds `translate-region.md` (players with a link to the region, decision 167).
 - Health: decision 45's subset of the batch thresholds; the LLM translation review is the only review, no spot check per run (milestone 9, 2026-10-16; `authoring/QC.md`).
 - Cost per approved translation in each run's report and `qgen report --cost` (CT-3).
 
@@ -68,7 +68,7 @@ Done (pm plan 67, RV-24..RV-26). The developer and native speakers review `quest
     | `tr-es-1` | en → es | 50 | 50 | 0 | 0 | 0 | $0.11 | 98.0 % ✓ | none |
 
   - Audit-agreement ✗ in en, de, es-ES (decision 45 threshold ≥ 90 %): mostly false "media missing" findings from `task 1492: Translation audit: media title missing in pm work trees` (6 en, 8 de; es-ES 12 media findings), not re-audited; `tr-es-1` ran after the fix. Their full runs already ran; no ack needed here.
-- [ ] QT-6 Full translation per question locale: `en`, `de`, `es`, `es-ES` (D-78, D-107); no native-speaker spot check (LLM review only, milestone 9); runs per pm plan 84. Later: `zh-Hans`, `zh-Hant` (milestone 12, plan 140); `ru`, `pt-BR` dropped.
+- [ ] QT-6 Full translation per question locale: `en`, `de`, `es`, `es-ES` (D-78, D-107); no native-speaker spot check (LLM review only, milestone 9); runs per pm plan 84; zh only: native spot check of the pilot, the Chinese-language subcategories and a release sample via `qgen spotcheck` (D-115, pm decision 754). Later: `zh-Hans`, `zh-Hant` (milestone 12, plan 140); `ru`, `pt-BR` dropped.
   - QT-6 progress `en`: `tr-en-2` (2026-10-24) 291 translated, 282 approved (9 not travelling); 4498 in the `en` pool (incl. en-sourced), target not met; next `tr-en-3`.
   - QT-6 progress `en`: `tr-en-3` (2026-10-29) 295 translated, 292 approved, 3 needs_work, 5 not travelling; 4789 in the `en` pool (incl. en-sourced), target not met; next `tr-en-4`.
   - QT-6 progress `en`: `tr-en-5` (2026-10-29) 300 selected, 289 translated, 288 approved, 1 needs_work, 11 not travelling; 5077 in the `en` pool (incl. en-sourced), target not met (levels 4-8 still missing 17-47 each); next `tr-en-6`.

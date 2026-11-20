@@ -36,7 +36,8 @@ test("real categories: base first, every subcategory once per bundle", () => {
   const cats = realCategories();
   const bundles = cats.map((c) => c.bundle);
   assert.equal(bundles[0], "base");
-  assert.equal(bundles.lastIndexOf("base") + 1, bundles.indexOf("colombia"));
+  assert.equal(bundles.lastIndexOf("base") + 1, bundles.findIndex((b) => b !== "base"));
+  assert.ok(bundles.indexOf("colombia") > bundles.lastIndexOf("base"));
   const subs = cats.flatMap((c) => c.subcategories);
   const broad = broadOf(cats);
   assert.equal(broad.size, subs.length);

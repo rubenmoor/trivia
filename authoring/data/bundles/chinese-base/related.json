@@ -1,0 +1,772 @@
+{
+  "about": "A base bundle's subcategory → its neighbours in the bundle (plan 231); drafting keeps away from their questions. Authoring only, never exported.",
+  "subcategories": {
+    "spring-festival": [
+      "other-traditional-festivals",
+      "spring-festival-gala",
+      "chinese-zodiac"
+    ],
+    "mid-autumn-festival": [
+      "creation-myths",
+      "tea-and-drinks"
+    ],
+    "other-traditional-festivals": [
+      "spring-festival",
+      "folktales",
+      "calendar-and-solar-terms"
+    ],
+    "calendar-and-solar-terms": [
+      "chinese-zodiac",
+      "other-traditional-festivals"
+    ],
+    "chinese-zodiac": [
+      "calendar-and-solar-terms",
+      "spring-festival"
+    ],
+    "customs-and-etiquette": [
+      "spring-festival",
+      "school-and-daily-life"
+    ],
+    "school-and-daily-life": [
+      "customs-and-etiquette",
+      "apps-and-online-life",
+      "imperial-exams-and-gaokao"
+    ],
+    "celebrations-around-the-world": [
+      "customs-and-etiquette"
+    ],
+    "eight-cuisines": [
+      "city-snacks",
+      "noodles-and-dumplings",
+      "chinese-kitchen"
+    ],
+    "city-snacks": [
+      "eight-cuisines",
+      "noodles-and-dumplings"
+    ],
+    "noodles-and-dumplings": [
+      "city-snacks",
+      "eight-cuisines"
+    ],
+    "tea-and-drinks": [
+      "chinese-consumer-brands",
+      "drinks"
+    ],
+    "chinese-kitchen": [
+      "eight-cuisines",
+      "vegetables"
+    ],
+    "world-cuisines": [
+      "fast-food"
+    ],
+    "fast-food": [
+      "world-cuisines",
+      "chinese-consumer-brands"
+    ],
+    "drinks": [
+      "tea-and-drinks"
+    ],
+    "sweets-and-chocolate": [
+      "chinese-consumer-brands"
+    ],
+    "vegetables": [
+      "chinese-kitchen",
+      "chinese-plants-and-flowers"
+    ],
+    "provinces": [
+      "chinese-cities"
+    ],
+    "chinese-cities": [
+      "provinces",
+      "scenic-areas"
+    ],
+    "chinese-rivers-and-lakes": [
+      "rivers",
+      "mega-projects"
+    ],
+    "chinese-mountains": [
+      "landforms-and-deserts",
+      "mountains",
+      "scenic-areas"
+    ],
+    "landforms-and-deserts": [
+      "chinese-mountains",
+      "climate-and-regions",
+      "deserts"
+    ],
+    "climate-and-regions": [
+      "landforms-and-deserts",
+      "weather-and-climate"
+    ],
+    "ethnic-groups": [
+      "traditional-architecture",
+      "traditional-dress"
+    ],
+    "continents": [
+      "countries"
+    ],
+    "countries": [
+      "capital-cities",
+      "flags"
+    ],
+    "capital-cities": [
+      "countries",
+      "provinces"
+    ],
+    "flags": [
+      "countries"
+    ],
+    "rivers": [
+      "chinese-rivers-and-lakes"
+    ],
+    "mountains": [
+      "chinese-mountains"
+    ],
+    "deserts": [
+      "landforms-and-deserts"
+    ],
+    "world-heritage-sites": [
+      "famous-landmarks",
+      "scenic-areas",
+      "traditional-architecture"
+    ],
+    "scenic-areas": [
+      "world-heritage-sites",
+      "chinese-mountains",
+      "nature-reserves-and-hazards"
+    ],
+    "traditional-architecture": [
+      "world-heritage-sites",
+      "chinese-buddhism",
+      "ethnic-groups"
+    ],
+    "wonders-of-the-world": [
+      "famous-landmarks",
+      "world-heritage-sites"
+    ],
+    "famous-landmarks": [
+      "wonders-of-the-world",
+      "scenic-areas"
+    ],
+    "skyscrapers": [
+      "mega-projects"
+    ],
+    "famous-bridges": [
+      "mega-projects",
+      "ancient-science-and-engineering"
+    ],
+    "renminbi-and-old-coins": [
+      "history-of-money",
+      "world-currencies"
+    ],
+    "world-currencies": [
+      "renminbi-and-old-coins"
+    ],
+    "history-of-money": [
+      "renminbi-and-old-coins"
+    ],
+    "economy-and-stock-market": [
+      "chinese-tech-brands"
+    ],
+    "dynasties-overview": [
+      "early-china",
+      "qin-and-han",
+      "tang-dynasty"
+    ],
+    "early-china": [
+      "dynasties-overview",
+      "creation-myths",
+      "bronzes-and-porcelain",
+      "hundred-schools"
+    ],
+    "qin-and-han": [
+      "dynasties-overview",
+      "silk-road-and-voyages",
+      "idiom-stories"
+    ],
+    "three-kingdoms-to-sui": [
+      "romance-of-the-three-kingdoms",
+      "dynasties-overview",
+      "imperial-exams-and-gaokao"
+    ],
+    "tang-dynasty": [
+      "tang-poems",
+      "silk-road-and-voyages",
+      "dynasties-overview"
+    ],
+    "song-and-yuan": [
+      "dynasties-overview",
+      "song-ci",
+      "four-great-inventions"
+    ],
+    "ming-dynasty": [
+      "dynasties-overview",
+      "silk-road-and-voyages"
+    ],
+    "qing-dynasty": [
+      "late-qing-and-republic",
+      "modern-tv-dramas"
+    ],
+    "late-qing-and-republic": [
+      "qing-dynasty",
+      "peoples-republic"
+    ],
+    "peoples-republic": [
+      "late-qing-and-republic",
+      "china-at-the-olympics",
+      "crewed-spaceflight"
+    ],
+    "silk-road-and-voyages": [
+      "explorers-and-discoveries",
+      "chinese-buddhism",
+      "journey-to-the-west"
+    ],
+    "imperial-exams-and-gaokao": [
+      "school-and-daily-life",
+      "three-kingdoms-to-sui"
+    ],
+    "history": [
+      "world-war-ii"
+    ],
+    "prehistory": [
+      "early-china"
+    ],
+    "dinosaurs": [
+      "prehistory"
+    ],
+    "pyramids": [
+      "history"
+    ],
+    "explorers-and-discoveries": [
+      "silk-road-and-voyages"
+    ],
+    "world-war-ii": [
+      "late-qing-and-republic",
+      "history"
+    ],
+    "creation-myths": [
+      "mid-autumn-festival",
+      "early-china",
+      "gods-and-immortals"
+    ],
+    "folktales": [
+      "creation-myths",
+      "gods-and-immortals",
+      "chinese-opera"
+    ],
+    "gods-and-immortals": [
+      "folktales",
+      "chinese-buddhism",
+      "daoism"
+    ],
+    "mythical-creatures": [
+      "creation-myths",
+      "gods-and-immortals"
+    ],
+    "greek-gods": [
+      "legends-and-superstitions"
+    ],
+    "legends-and-superstitions": [
+      "folktales",
+      "customs-and-etiquette"
+    ],
+    "confucianism": [
+      "hundred-schools",
+      "classical-prose"
+    ],
+    "daoism": [
+      "gods-and-immortals",
+      "martial-arts"
+    ],
+    "hundred-schools": [
+      "confucianism",
+      "daoism",
+      "early-china"
+    ],
+    "chinese-buddhism": [
+      "traditional-architecture",
+      "silk-road-and-voyages",
+      "world-religions"
+    ],
+    "world-religions": [
+      "chinese-buddhism"
+    ],
+    "famous-philosophers": [
+      "confucianism"
+    ],
+    "chinese-characters": [
+      "calligraphy",
+      "dialects",
+      "early-china"
+    ],
+    "idiom-stories": [
+      "chinese-fables",
+      "qin-and-han",
+      "romance-of-the-three-kingdoms"
+    ],
+    "dialects": [
+      "chinese-characters",
+      "languages-of-the-world"
+    ],
+    "languages-of-the-world": [
+      "dialects"
+    ],
+    "planet-earth": [
+      "natural-phenomena"
+    ],
+    "the-sea": [
+      "fish"
+    ],
+    "weather-and-climate": [
+      "climate-and-regions"
+    ],
+    "natural-phenomena": [
+      "nature-reserves-and-hazards",
+      "volcanoes"
+    ],
+    "volcanoes": [
+      "natural-phenomena"
+    ],
+    "rocks-and-minerals": [
+      "bronzes-and-porcelain"
+    ],
+    "mammals": [
+      "giant-panda",
+      "chinese-land-animals"
+    ],
+    "birds": [
+      "chinese-birds-and-water-life"
+    ],
+    "reptiles": [
+      "chinese-land-animals"
+    ],
+    "fish": [
+      "chinese-birds-and-water-life"
+    ],
+    "insects": [
+      "farming-and-silk"
+    ],
+    "strange-creatures": [
+      "mammals"
+    ],
+    "farm-animals": [
+      "farming-and-silk"
+    ],
+    "cats": [
+      "farm-animals"
+    ],
+    "giant-panda": [
+      "chinese-land-animals",
+      "mammals"
+    ],
+    "chinese-land-animals": [
+      "giant-panda",
+      "chinese-birds-and-water-life"
+    ],
+    "chinese-birds-and-water-life": [
+      "chinese-land-animals",
+      "birds",
+      "fish"
+    ],
+    "chinese-plants-and-flowers": [
+      "plants",
+      "trees",
+      "chinese-painting"
+    ],
+    "farming-and-silk": [
+      "farm-animals",
+      "insects",
+      "four-great-inventions"
+    ],
+    "nature-reserves-and-hazards": [
+      "scenic-areas",
+      "natural-phenomena",
+      "environment"
+    ],
+    "plants": [
+      "chinese-plants-and-flowers"
+    ],
+    "trees": [
+      "chinese-plants-and-flowers"
+    ],
+    "environment": [
+      "school-and-daily-life",
+      "nature-reserves-and-hazards"
+    ],
+    "human-body": [
+      "medicine-and-health"
+    ],
+    "medicine-and-health": [
+      "chinese-medicine-history"
+    ],
+    "brain-and-mind": [
+      "human-body"
+    ],
+    "science": [
+      "physics",
+      "chemistry"
+    ],
+    "maths": [
+      "ancient-chinese-maths"
+    ],
+    "chemistry": [
+      "science"
+    ],
+    "physics": [
+      "science"
+    ],
+    "famous-scientists": [
+      "chinese-scientists"
+    ],
+    "ancient-chinese-maths": [
+      "maths",
+      "chinese-scientists"
+    ],
+    "four-great-inventions": [
+      "inventions",
+      "ancient-science-and-engineering",
+      "bronzes-and-porcelain"
+    ],
+    "ancient-science-and-engineering": [
+      "four-great-inventions",
+      "famous-bridges",
+      "mega-projects"
+    ],
+    "chinese-medicine-history": [
+      "medicine-and-health",
+      "chinese-scientists"
+    ],
+    "chinese-scientists": [
+      "famous-scientists",
+      "crewed-spaceflight",
+      "ancient-chinese-maths"
+    ],
+    "mega-projects": [
+      "china-transport",
+      "famous-bridges",
+      "skyscrapers"
+    ],
+    "space": [
+      "solar-system"
+    ],
+    "solar-system": [
+      "lunar-and-planetary-missions"
+    ],
+    "space-race-and-astronauts": [
+      "crewed-spaceflight"
+    ],
+    "stars-and-galaxies": [
+      "space"
+    ],
+    "crewed-spaceflight": [
+      "space-race-and-astronauts",
+      "lunar-and-planetary-missions"
+    ],
+    "lunar-and-planetary-missions": [
+      "crewed-spaceflight",
+      "solar-system"
+    ],
+    "inventions": [
+      "four-great-inventions"
+    ],
+    "technology": [
+      "chinese-tech-brands"
+    ],
+    "artificial-intelligence": [
+      "technology"
+    ],
+    "internet": [
+      "apps-and-online-life"
+    ],
+    "cars": [
+      "chinese-tech-brands"
+    ],
+    "planes": [
+      "china-transport"
+    ],
+    "trains": [
+      "china-transport"
+    ],
+    "ships-and-boats": [
+      "traditional-sports"
+    ],
+    "china-transport": [
+      "trains",
+      "planes",
+      "mega-projects"
+    ],
+    "tang-poems": [
+      "song-ci",
+      "tang-dynasty"
+    ],
+    "song-ci": [
+      "tang-poems",
+      "classical-prose"
+    ],
+    "classical-prose": [
+      "song-ci",
+      "confucianism"
+    ],
+    "journey-to-the-west": [
+      "classic-tv-series",
+      "chinese-video-games",
+      "silk-road-and-voyages"
+    ],
+    "romance-of-the-three-kingdoms": [
+      "three-kingdoms-to-sui",
+      "idiom-stories"
+    ],
+    "water-margin": [
+      "song-and-yuan",
+      "classic-tv-series"
+    ],
+    "dream-of-the-red-chamber": [
+      "classic-tv-series",
+      "qing-dynasty"
+    ],
+    "modern-chinese-literature": [
+      "popular-chinese-fiction",
+      "literature"
+    ],
+    "popular-chinese-fiction": [
+      "modern-chinese-literature",
+      "modern-tv-dramas"
+    ],
+    "chinese-fables": [
+      "idiom-stories",
+      "fairy-tales",
+      "chinese-cartoons"
+    ],
+    "nursery-rhymes": [
+      "chinese-fables",
+      "c-pop"
+    ],
+    "fairy-tales": [
+      "chinese-fables"
+    ],
+    "art": [
+      "chinese-painting"
+    ],
+    "colours": [
+      "customs-and-etiquette"
+    ],
+    "literature": [
+      "modern-chinese-literature"
+    ],
+    "traditional-dress": [
+      "ethnic-groups",
+      "folk-crafts"
+    ],
+    "product-design": [
+      "famous-logos"
+    ],
+    "chinese-folk-music": [
+      "musical-instruments",
+      "chinese-opera"
+    ],
+    "chinese-opera": [
+      "chinese-folk-music",
+      "folktales",
+      "spring-festival-gala"
+    ],
+    "c-pop": [
+      "pop-music"
+    ],
+    "musical-instruments": [
+      "chinese-folk-music"
+    ],
+    "classical-music": [
+      "musical-instruments"
+    ],
+    "pop-music": [
+      "c-pop"
+    ],
+    "calligraphy": [
+      "chinese-characters",
+      "chinese-painting"
+    ],
+    "chinese-painting": [
+      "calligraphy",
+      "art",
+      "folk-crafts"
+    ],
+    "bronzes-and-porcelain": [
+      "four-great-inventions",
+      "rocks-and-minerals",
+      "early-china"
+    ],
+    "folk-crafts": [
+      "chinese-painting",
+      "spring-festival",
+      "traditional-dress"
+    ],
+    "chinese-cartoons": [
+      "chinese-animated-films",
+      "cartoons",
+      "chinese-fables"
+    ],
+    "chinese-animated-films": [
+      "chinese-cartoons",
+      "folktales"
+    ],
+    "classic-tv-series": [
+      "modern-tv-dramas",
+      "journey-to-the-west"
+    ],
+    "modern-tv-dramas": [
+      "classic-tv-series",
+      "popular-chinese-fiction"
+    ],
+    "chinese-cinema": [
+      "hong-kong-cinema",
+      "film"
+    ],
+    "hong-kong-cinema": [
+      "chinese-cinema",
+      "martial-arts"
+    ],
+    "spring-festival-gala": [
+      "spring-festival",
+      "c-pop",
+      "chinese-opera"
+    ],
+    "film": [
+      "chinese-cinema"
+    ],
+    "disney-films": [
+      "cartoons"
+    ],
+    "anime": [
+      "cartoons"
+    ],
+    "cartoons": [
+      "chinese-cartoons"
+    ],
+    "marvel-superheroes": [
+      "film"
+    ],
+    "science-fiction": [
+      "popular-chinese-fiction"
+    ],
+    "harry-potter": [
+      "science-fiction"
+    ],
+    "chinese-video-games": [
+      "video-games",
+      "journey-to-the-west"
+    ],
+    "apps-and-online-life": [
+      "internet",
+      "chinese-tech-brands",
+      "school-and-daily-life"
+    ],
+    "video-games": [
+      "chinese-video-games"
+    ],
+    "video-game-characters": [
+      "video-games"
+    ],
+    "consoles-and-game-companies": [
+      "chinese-video-games"
+    ],
+    "chinese-tech-brands": [
+      "apps-and-online-life",
+      "technology",
+      "cars"
+    ],
+    "chinese-consumer-brands": [
+      "tea-and-drinks",
+      "sweets-and-chocolate",
+      "famous-logos"
+    ],
+    "famous-logos": [
+      "brand-origins"
+    ],
+    "brand-origins": [
+      "famous-logos",
+      "chinese-tech-brands"
+    ],
+    "china-at-the-olympics": [
+      "summer-olympics",
+      "winter-olympics",
+      "chinese-sports-stars"
+    ],
+    "table-tennis-and-badminton": [
+      "chinese-sports-stars",
+      "tennis"
+    ],
+    "diving-and-gymnastics": [
+      "china-at-the-olympics",
+      "swimming"
+    ],
+    "team-sports-in-china": [
+      "basketball",
+      "football",
+      "chinese-sports-stars"
+    ],
+    "chinese-sports-stars": [
+      "china-at-the-olympics",
+      "table-tennis-and-badminton",
+      "athletics"
+    ],
+    "martial-arts": [
+      "hong-kong-cinema",
+      "daoism",
+      "traditional-sports"
+    ],
+    "traditional-sports": [
+      "martial-arts",
+      "childrens-games",
+      "other-traditional-festivals"
+    ],
+    "football": [
+      "world-cups",
+      "team-sports-in-china"
+    ],
+    "world-cups": [
+      "football"
+    ],
+    "basketball": [
+      "team-sports-in-china"
+    ],
+    "tennis": [
+      "chinese-sports-stars"
+    ],
+    "swimming": [
+      "chinese-sports-stars"
+    ],
+    "athletics": [
+      "chinese-sports-stars"
+    ],
+    "summer-olympics": [
+      "china-at-the-olympics"
+    ],
+    "winter-olympics": [
+      "china-at-the-olympics"
+    ],
+    "board-and-tile-games": [
+      "board-games",
+      "traditional-puzzles"
+    ],
+    "traditional-puzzles": [
+      "board-and-tile-games",
+      "toys"
+    ],
+    "childrens-games": [
+      "traditional-sports",
+      "traditional-puzzles"
+    ],
+    "toys": [
+      "traditional-puzzles"
+    ],
+    "board-games": [
+      "board-and-tile-games"
+    ],
+    "magic": [
+      "spring-festival-gala"
+    ],
+    "guinness-world-records": [
+      "strange-creatures"
+    ]
+  }
+}

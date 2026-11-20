@@ -33,7 +33,11 @@ def validate_pool():
     bundle_ids = {b["id"] for b in bundles}
     bundle_of = {b["id"]: b for b in bundles}
     errors += taxonomy_problems()
-    errors += slug_problems()
+    errors += from_base_problems(data["questions"])
+    errors += fit_problems(data["questions"])
+    e, w = slug_problems({q.get("bundle") or "base" for q in data["questions"]})
+    errors += e
+    warnings += w
     e, w = bundle_problems(bundles)
     errors += e
     warnings += w
@@ -484,7 +488,7 @@ def spot_check_problems(questions, scale):
 
 def taxonomy_problems():
     """Every bundle's categories file belongs to a bundle; names and slugs are unique within a bundle (D-43, D-99);
-    a theme's base-related.json names its own and base's subcategories (plan 184)."""
+    a theme's base-related.json names its own and base's subcategories (plan 184), related.json and scopes.json its own (plan 231)."""
     errors, ids = [], categories.bundle_ids()
     if ids[:1] != ["base"]:
         errors.append("app/data/bundles.json: base must come first")
@@ -514,16 +518,91 @@ def taxonomy_problems():
             if s not in own:
                 errors.append(f"{f.relative_to(ROOT)}: {s!r} is not a {b} subcategory")
             errors += [f"{f.relative_to(ROOT)}: {s}: {r!r} is not a base subcategory" for r in rs if r not in base]
+        for f in (layout.related(b), layout.scopes(b)):  # a further base bundle's (plan 231)
+            for s, v in ((load_json(f, {}) or {}).get("subcategories") or {}).items():
+                if s not in own:
+                    errors.append(f"{f.relative_to(ROOT)}: {s!r} is not a {b} subcategory")
+                if f == layout.related(b):
+                    errors += [f"{f.relative_to(ROOT)}: {s}: {r!r} is not a {b} subcategory" for r in v if r not in own]
     return errors
 
 
-def subject_problems():
-    """Errors: a category of base or a bundle without a known subject, a locale missing subject names (plan 194)."""
-    ids = categories.subject_ids()
+def from_base_problems(questions, ids=None, subs=None, path=layout.from_base):
+    """A further base bundle's from-base.json (plan 230): every `base` subcategory with approved questions is mapped,
+    targets exist in the bundle's categories, no unknown keys, a null target has a reason and `by`."""
     errors = []
+    base = {q["subcategory"] for q in questions if (q.get("bundle") or "base") == "base" and q["status"] == "approved"}
+    for b in ids or [i for i in categories.bundle_ids() if i != "base"]:
+        f = path(b)
+        if not f.exists():
+            continue
+        rel = f.relative_to(ROOT) if f.is_relative_to(ROOT) else f
+        got = (load_json(f, {}) or {}).get("subcategories")
+        if not isinstance(got, dict):
+            errors.append(f"{rel}: needs a subcategories object")
+            continue
+        own = set(subs[b] if subs else categories.subcategories(b))
+        all_base = set(subs["base"] if subs else categories.subcategories("base"))
+        errors += [f"{rel}: {k!r} is not a base subcategory" for k in got if k not in all_base]
+        errors += [f"{rel}: base subcategory {k!r} (approved questions) is not mapped" for k in sorted(base - set(got))]
+        for k, v in got.items():
+            to = v.get("to") if isinstance(v, dict) else 0
+            if to == 0 or to is not None and not isinstance(to, str):
+                errors.append(f"{rel}: {k}: needs {{\"to\": <subcategory or null>}}")
+            elif to is None and not (v.get("reason") and v.get("by")):
+                errors.append(f"{rel}: {k}: a null target needs reason and by")
+            elif to is not None and to not in own:
+                errors.append(f"{rel}: {k}: {to!r} is not a {b} subcategory")
+    return errors
+
+
+def fit_problems(questions, ids=None, path=layout.fit):
+    """A further base bundle's fit.json (plan 230): entries are base sources with a known verdict, reason and `by`;
+    every copy in the bundle has a keep/adapt entry naming it; every keep/adapt entry has its copy (any status),
+    except a developer flip the next `--from base` run copies; a developer's keep → drop names its rejected copy."""
+    by_id, errors = {q.get("id"): q for q in questions}, []
+    for b in ids or [i for i in categories.bundle_ids() if i != "base"]:
+        f = path(b)
+        copied = {q["id"]: q["copied_from"] for q in questions if q.get("bundle") == b and q.get("copied_from")}
+        rejected = {q["id"] for q in questions if q.get("id") in copied and q.get("status") == "rejected"}
+        if not f.exists():
+            errors += [f"{qid}: copy in {b} without {f.name}" for qid in copied]
+            continue
+        rel = f.relative_to(ROOT) if f.is_relative_to(ROOT) else f
+        got = (load_json(f, {}) or {}).get("sources")
+        if not isinstance(got, dict):
+            errors.append(f"{rel}: needs a sources object")
+            continue
+        for i, e in got.items():
+            src = by_id.get(i)
+            if src is None or src.get("bundle") != "base" or src.get("copied_from"):
+                errors.append(f"{rel}: {i} is not a base source")
+            if e.get("verdict") not in ("keep", "adapt", "drop") or e.get("by") not in ("fit", "map", "rule", "developer"):
+                errors.append(f"{rel}: {i}: verdict keep/adapt/drop and by fit/map/rule/developer needed")
+            elif e["verdict"] == "drop" and not e.get("reason"):
+                errors.append(f"{rel}: {i}: a drop needs a reason")
+            elif e["verdict"] != "drop" and e.get("copy") is None and e["by"] != "developer":
+                errors.append(f"{rel}: {i}: {e['verdict']} without a copy")
+            elif e.get("copy") is not None and copied.get(e["copy"]) != i:
+                errors.append(f"{rel}: {i}: copy {e['copy']} is not its copy in {b}")
+            elif e["verdict"] == "drop" and e.get("copy") is not None and (e["by"] != "developer" or e["copy"] not in rejected):
+                errors.append(f"{rel}: {i}: a drop names a copy only as the developer's flip, the copy rejected")
+        for qid, src in sorted(copied.items()):
+            e = got.get(src) or {}
+            flip = e.get("verdict") == "drop" and e.get("by") == "developer" and qid in rejected
+            if not (e.get("verdict") in ("keep", "adapt") or flip) or e.get("copy") != qid:
+                errors.append(f"{rel}: copy {qid} of {src} has no keep/adapt entry naming it")
+    return errors
+
+
+def subject_problems(used):
+    """(errors, warnings): a category of base or a bundle without a known subject, a locale missing subject names
+    (plan 194); no categories yet: a warning while the bundle (`used`: bundles with questions) has no questions."""
+    ids = categories.subject_ids()
+    errors, warnings = [], []
     for b in categories.bundle_ids():
         if not categories.load(b):  # `qgen bundle new` writes none: its taxonomy (with subjects) comes next
-            errors.append(f"{categories.path(b).relative_to(ROOT)}: no categories yet (`qgen taxonomy --bundle {b}`, then `--apply`)")
+            (errors if b in used else warnings).append(f"{categories.path(b).relative_to(ROOT)}: no categories yet (`qgen taxonomy --bundle {b}`, then `--apply`)")
         bad = [c["slug"] for c in categories.load(b) if c.get("subject") not in ids]
         if bad:
             errors.append(f"{categories.path(b).relative_to(ROOT)}: category without a subject or with an unknown one "
@@ -532,14 +611,14 @@ def subject_problems():
         got = (load_json(layout.NAMES(l), {}) or {}).get("subjects") or {}
         if missing := [i for i in ids if not (isinstance(got.get(i), str) and got[i].strip())]:
             errors.append(f"{layout.NAMES(l).relative_to(ROOT)}: subject name(s) missing: {first_ids(missing)}")
-    return errors
+    return errors, warnings
 
 
-def slug_problems():
-    """The slug rule (decision 259): keys are slugs, categories.json holds no names,
+def slug_problems(used):
+    """(errors, warnings): subject_problems, and the slug rule (decision 259): keys are slugs, categories.json holds no names,
     names files (categories.names_locales: en, es, de; a bundle with other languages en and its own) name every
     category and subcategory of every bundle (questions: validate_pool's key check)."""
-    errors = subject_problems()
+    errors, warnings = subject_problems(used)
     for b in categories.bundle_ids():
         cats = categories.load(b)
         rel = categories.path(b).relative_to(ROOT)
@@ -554,7 +633,7 @@ def slug_problems():
                        + [f"subcategory {s}" for s in categories.subcategories(b) if s not in (doc.get("subcategories") or {})])
             if missing:
                 errors.append(f"{layout.NAMES(l, b).relative_to(ROOT)}: {len(missing)} name(s) missing: {first_ids(missing)}")
-    return errors
+    return errors, warnings
 
 
 COUNTRY = r"[A-Z]{2}"  # a regional bundle's country (plan 151); COUNTRY in app/client/src/engine/pool.ts

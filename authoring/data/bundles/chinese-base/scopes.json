@@ -1,0 +1,2270 @@
+{
+  "about": "A base bundle's subcategory → its scope, origin (reused: a base slug; new), language flag and sample concepts from the applied taxonomy (plan 231); concept calls and drafts show them. Authoring only, never exported.",
+  "subcategories": {
+    "spring-festival": {
+      "scope": "Chinese New Year from Xiaonian to the fifth day: Nian beast, couplets and fu, red packets, reunion dinner, firecrackers, Chunyun; foods eaten at New Year; ask the custom, never a couplet's wording.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Red packets (红包)",
+        "Dumplings at New Year's Eve",
+        "Nian beast (年兽)",
+        "Upside-down fu (福)",
+        "Spring couplets (春联)",
+        "Staying up late (守岁)",
+        "Chunyun travel rush (春运)",
+        "Kitchen God on Xiaonian (小年)",
+        "Niangao (年糕)",
+        "Wang Anshi's poem Yuanri as New Year custom"
+      ]
+    },
+    "mid-autumn-festival": {
+      "scope": "中秋节 customs: mooncakes and fillings, moon-gazing, lanterns, the date in the lunar calendar; the Chang'e myth itself goes to creation-myths.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Mooncakes (月饼)",
+        "Full moon on the 15th of the 8th month",
+        "Jade Rabbit (玉兔) and the festival",
+        "Five-kernel mooncake (五仁)",
+        "Cantonese vs. Suzhou-style mooncakes",
+        "Yolk lotus-paste filling",
+        "Su Shi's Shuidiao Getou as Mid-Autumn poem",
+        "Mid-Autumn as public holiday since 2008",
+        "Lantern riddles at Mid-Autumn in Guangdong"
+      ]
+    },
+    "other-traditional-festivals": {
+      "scope": "Lantern, Qingming, Dragon Boat, Qixi, Ghost, Double Ninth and Laba festivals: dates, foods, customs; the legends behind them go to myths.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Zongzi at Dragon Boat Festival",
+        "Tangyuan at Lantern Festival",
+        "Qu Yuan and Duanwu",
+        "Tomb-sweeping at Qingming",
+        "Qixi and the magpie bridge",
+        "Laba porridge (腊八粥)",
+        "Climbing high at Double Ninth",
+        "Qingtuan (青团)",
+        "Zhongyuan Ghost Festival",
+        "Duanwu on UNESCO list 2009"
+      ]
+    },
+    "calendar-and-solar-terms": {
+      "scope": "The lunar calendar, leap months, the 24 solar terms and their customs, heavenly stems and earthly branches; zodiac animals go to chinese-zodiac.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Winter Solstice dumplings (冬至)",
+        "Number of solar terms: 24",
+        "Start of Spring (立春)",
+        "Qingming as a solar term",
+        "Awakening of Insects (惊蛰)",
+        "Leap month (闰月)",
+        "60-year cycle (甲子)",
+        "2026 as a Bingwu (丙午) year",
+        "Solar terms on UNESCO list 2016",
+        "Ten heavenly stems"
+      ]
+    },
+    "chinese-zodiac": {
+      "scope": "The 12 animals, their order, the race legend, birth-year animals, benmingnian customs and which year is which.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Rat first in the zodiac",
+        "Twelve zodiac animals",
+        "Rat riding on the ox",
+        "Why the cat is missing",
+        "2026 year of the Horse",
+        "Pig last in the zodiac",
+        "Red underwear in your benmingnian (本命年)",
+        "Zodiac animal after the dragon: snake",
+        "Zodiac matching in marriage"
+      ]
+    },
+    "customs-and-etiquette": {
+      "scope": "Lucky and unlucky numbers, colours, gift taboos, chopstick and table manners, weddings, birthdays and family titles.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Red for luck",
+        "Number 8 as lucky",
+        "Number 4 avoided",
+        "No chopsticks upright in rice",
+        "Never give a clock as a gift",
+        "White for mourning",
+        "Longevity noodles on birthdays",
+        "Serving tea at weddings (敬茶)",
+        "Zhuazhou first-birthday custom (抓周)",
+        "Tapping the table to thank for tea"
+      ]
+    },
+    "school-and-daily-life": {
+      "scope": "School routines, emergency numbers, traffic safety, rubbish sorting, modern holidays such as Teachers' Day, Golden Week, Singles' Day and 520; apps go to apps-and-online-life.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "110 for police",
+        "119 for fire",
+        "Eye exercises (眼保健操)",
+        "Radio calisthenics (广播体操)",
+        "Six years of primary school",
+        "Teachers' Day on 10 September",
+        "Four rubbish bins in Shanghai",
+        "Golden Week",
+        "Singles' Day 11 November",
+        "Zhongkao (中考)"
+      ]
+    },
+    "celebrations-around-the-world": {
+      "scope": "Copies: festivals, calendars and manners of other countries; new questions only on foreign festivals, never Chinese ones.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "eight-cuisines": {
+      "scope": "The eight cuisines and their signature restaurant dishes; street snacks go to city-snacks, noodles and dumplings to their own subcategory.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Peking duck",
+        "Mapo tofu: Sichuan",
+        "Kung Pao chicken",
+        "Sweet and sour pork ribs",
+        "Dongpo pork and Su Shi",
+        "Buddha Jumps Over the Wall: Fujian",
+        "West Lake vinegar fish",
+        "Squirrel-shaped mandarin fish: Jiangsu",
+        "Chopped-chilli fish head: Hunan",
+        "Stinky mandarin fish: Anhui"
+      ]
+    },
+    "city-snacks": {
+      "scope": "Street food, breakfasts and local snacks linked to a city or region, hot pot included; noodle and dumpling dishes go to noodles-and-dumplings.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Hot pot: Chongqing",
+        "Soy milk and youtiao",
+        "Stinky tofu: Changsha",
+        "Jianbing guozi: Tianjin",
+        "Roujiamo: Xi'an",
+        "Lamb skewers: Xinjiang",
+        "Rice noodle rolls: Guangzhou",
+        "Shaxian snacks",
+        "Sweet vs. salty tofu pudding debate",
+        "Yangrou paomo: Xi'an"
+      ]
+    },
+    "noodles-and-dumplings": {
+      "scope": "Staples: noodle dishes, rice dishes, dumplings, buns, wontons, northern wheat vs. southern rice.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Jiaozi",
+        "Steamed buns (包子)",
+        "Xiaolongbao: Shanghai",
+        "Lanzhou beef noodles",
+        "Hot dry noodles: Wuhan",
+        "Luosifen: Liuzhou",
+        "Goubuli buns: Tianjin",
+        "Biangbiang noodles",
+        "Guilin rice noodles",
+        "Yangzhou fried rice"
+      ]
+    },
+    "tea-and-drinks": {
+      "scope": "The six tea types, famous teas and their regions, Lu Yu, tea customs; Chinese liquor, yellow wine, herbal drinks, bubble tea; drink brands as companies go to chinese-consumer-brands.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Green tea",
+        "Bubble tea from Taiwan",
+        "Longjing tea: Hangzhou",
+        "Pu'er tea: Yunnan",
+        "Tieguanyin oolong",
+        "Six types of tea",
+        "Lu Yu, Sage of Tea",
+        "Shaoxing yellow wine",
+        "Gongfu tea",
+        "Tea Horse Road"
+      ]
+    },
+    "chinese-kitchen": {
+      "scope": "Ingredients, seasonings, tofu, cooking methods, kitchen tools and chopsticks; finished dishes go to the other food subcategories.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Chopsticks",
+        "Wok",
+        "Soy sauce",
+        "Tofu invented in China",
+        "Sichuan pepper numbness (麻)",
+        "Five-spice powder",
+        "Century egg",
+        "Stir-frying (炒)",
+        "Zhenjiang vinegar",
+        "Liu An and tofu legend"
+      ]
+    },
+    "world-cuisines": {
+      "scope": "Copies of world, Italian, Japanese cuisine and food history; new questions on foreign cuisines only.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "fast-food": {
+      "scope": "Copies on fast-food chains and dishes; new questions may add chains' history in China.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "drinks": {
+      "scope": "Copies on coffee, juices, soft drinks and world drinks; Chinese tea and liquor go to tea-and-drinks.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "sweets-and-chocolate": {
+      "scope": "Copies on chocolate, candy and desserts of the world; Chinese candy brands go to chinese-consumer-brands.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "vegetables": {
+      "scope": "Copies on vegetables; new questions may add fruit and vegetables common in Chinese markets (lychee, bok choy, lotus root).",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "provinces": {
+      "scope": "Mainland provincial-level divisions, their capitals, one-character abbreviations and nicknames; no division counts or status wording.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Sichuan",
+        "Capital of Guangdong: Guangzhou",
+        "Jing (京) for Beijing",
+        "Hu (沪) for Shanghai",
+        "Land of Abundance (天府之国)",
+        "Yue (粤) for Guangdong",
+        "Capital of Henan: Zhengzhou",
+        "Yu (豫) for Henan",
+        "Capital of Ningxia: Yinchuan",
+        "Qian (黔) for Guizhou"
+      ]
+    },
+    "chinese-cities": {
+      "scope": "Major cities, their nicknames, records and features, Hong Kong and Macau as cities; sights go to places subcategories.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Beijing",
+        "Shanghai",
+        "Chongqing: mountain city",
+        "Harbin: ice city",
+        "Xi'an as old capital",
+        "Kunming: spring city",
+        "Shenzhen: from fishing town",
+        "Wuhan: one of three furnaces",
+        "Urumqi: farthest city from sea"
+      ]
+    },
+    "chinese-rivers-and-lakes": {
+      "scope": "Yangtze, Yellow River, Pearl River and other rivers, the Grand Canal as waterway, lakes and waterfalls of China.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Yangtze River",
+        "Yellow River: mother river",
+        "West Lake: Hangzhou",
+        "Hukou Waterfall",
+        "Qinghai Lake largest lake",
+        "Poyang Lake largest freshwater",
+        "Grand Canal Beijing–Hangzhou",
+        "Pearl River",
+        "Heilongjiang River",
+        "Yarlung Tsangpo"
+      ]
+    },
+    "chinese-mountains": {
+      "scope": "Named mountains and ranges: Five Great Mountains, Huangshan, Emei, Lushan, Qinling, Everest's height; landforms like plateaus go to landforms-and-deserts.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Mount Everest (珠穆朗玛峰)",
+        "Mount Tai: Eastern Peak",
+        "Huangshan",
+        "Five Great Mountains",
+        "Everest at 8848.86 m",
+        "Mount Emei",
+        "Mount Hua: steepest",
+        "Qinling",
+        "Kunlun Mountains",
+        "Mount Heng (Hunan): Southern Peak"
+      ]
+    },
+    "landforms-and-deserts": {
+      "scope": "Four plateaus, four basins, plains, deserts, karst and the coastline in general terms; no disputed islands or sea claims.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Qinghai–Tibet Plateau: roof of the world",
+        "Sichuan Basin",
+        "Taklamakan Desert",
+        "Guilin karst",
+        "Loess Plateau",
+        "Tarim Basin largest",
+        "Turpan Basin lowest point",
+        "North China Plain",
+        "Inner Mongolia Plateau",
+        "Gobi"
+      ]
+    },
+    "climate-and-regions": {
+      "scope": "Monsoon, the Qinling–Huai line, north–south differences, Hu Line, hottest and coldest places, regions like Jiangnan and the Northeast.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Hainan: tropical island",
+        "Northeast winter cold",
+        "Flaming Mountain: Turpan heat",
+        "Plum rain season (梅雨)",
+        "Monsoon climate",
+        "Qinling–Huai River line",
+        "Jiangnan: land of fish and rice",
+        "Mohe: coldest town",
+        "Hu Huanyong Line"
+      ]
+    },
+    "ethnic-groups": {
+      "scope": "The officially recognised groups as bare facts, their festivals, food, dress, homes and music; no politics.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Mongolian yurt",
+        "Dai Water-Splashing Festival",
+        "56 recognised groups",
+        "Naadam festival",
+        "Yi Torch Festival",
+        "Zhuang March 3 festival",
+        "Miao silver jewellery",
+        "Zhuang as largest minority",
+        "Naxi Dongba script"
+      ]
+    },
+    "continents": {
+      "scope": "Copies on continents; China's place in Asia allowed.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "countries": {
+      "scope": "Copies on countries and islands; new questions on China's neighbours as countries; no Taiwan status wording.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "capital-cities": {
+      "scope": "Copies on world capitals; Chinese province capitals go to provinces.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "flags": {
+      "scope": "Copies on world flags; every flag, and any map with an Asian border, checked case by case (neutral facts only, no status wording).",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "rivers": {
+      "scope": "Copies on world rivers; Chinese rivers go to chinese-rivers-and-lakes.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "mountains": {
+      "scope": "Copies on world mountains; Chinese mountains go to chinese-mountains.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "deserts": {
+      "scope": "Copies on world deserts; Chinese deserts go to landforms-and-deserts.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "world-heritage-sites": {
+      "scope": "UNESCO sites in China beyond the Great Wall's and Forbidden City's headline facts: grottoes, tombs, old towns, palaces, inscription years.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Terracotta Army found 1974",
+        "Badaling Great Wall",
+        "Mogao Caves: Dunhuang",
+        "Summer Palace",
+        "Temple of Heaven",
+        "Potala Palace: Lhasa",
+        "Pingyao ancient city",
+        "Longmen Grottoes",
+        "Beijing Central Axis 2024",
+        "Quanzhou 2021"
+      ]
+    },
+    "scenic-areas": {
+      "scope": "Famous natural and urban sights for holidays: 5A areas, the Bund, Zhangjiajie, Li River, Sanya; UNESCO listing facts go to world-heritage-sites.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "The Bund: Shanghai",
+        "Oriental Pearl Tower",
+        "Li River on the 20-yuan note",
+        "Zhangjiajie and Avatar",
+        "Leshan Giant Buddha",
+        "Yalong Bay: Sanya",
+        "Harbin Ice and Snow World",
+        "Guilin scenery best under heaven",
+        "Number of 5A areas"
+      ]
+    },
+    "traditional-architecture": {
+      "scope": "Building types and famous examples: siheyuan, tulou, cave dwellings, classical gardens, pagodas, temples, towers like Yellow Crane Tower.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Siheyuan courtyard house",
+        "Suzhou gardens",
+        "Yellow Crane Tower: Wuhan",
+        "Hakka tulou",
+        "Cave dwellings (窑洞)",
+        "Shaolin Temple",
+        "Leifeng Pagoda",
+        "Yueyang Tower",
+        "Dougong brackets",
+        "Liuhe Pagoda: Hangzhou"
+      ]
+    },
+    "wonders-of-the-world": {
+      "scope": "Copies on ancient and new wonders, the Great Wall's headline facts included.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "famous-landmarks": {
+      "scope": "Copies on world landmarks; new Chinese sights go to the Chinese subcategories.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "skyscrapers": {
+      "scope": "Copies on tall buildings; new questions may add Shanghai Tower, Ping An, Canton Tower.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "famous-bridges": {
+      "scope": "Copies on world bridges; new questions may add Chinese bridges except Zhaozhou (ancient-science-and-engineering) and Hong Kong–Zhuhai–Macau (mega-projects).",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "renminbi-and-old-coins": {
+      "scope": "Renminbi notes and coins (backs as bare facts), units yuan–jiao–fen, ancient Chinese money: shells, spade and knife coins, round coins, jiaozi.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Yuan, jiao and fen",
+        "100-yuan note colour",
+        "Guilin on the 20-yuan back",
+        "Mount Tai on the 5-yuan back",
+        "Round coin with square hole",
+        "Shells as early money",
+        "Qin Banliang coin",
+        "Jiaozi: first paper money, Song",
+        "Knife money"
+      ]
+    },
+    "world-currencies": {
+      "scope": "Copies on currencies and banknotes of the world; renminbi goes to renminbi-and-old-coins.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "history-of-money": {
+      "scope": "Copies on money history worldwide; Chinese money history goes to renminbi-and-old-coins.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "economy-and-stock-market": {
+      "scope": "Copies on economy, banks and saving; no present policy questions.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "dynasties-overview": {
+      "scope": "Order of dynasties, durations, capitals across dynasties, dynasty song; details of one dynasty go to its own subcategory.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Tang before Song",
+        "Qing as last dynasty",
+        "Xia as first dynasty",
+        "Dynasty song (朝代歌)",
+        "Ming after Yuan",
+        "Chang'an as capital of Han and Tang",
+        "Northern vs. Southern Song",
+        "Longest dynasty: Zhou",
+        "Shortest unified dynasty: Qin or Sui"
+      ]
+    },
+    "early-china": {
+      "scope": "Peking Man to the Warring States: Neolithic sites, Yao, Shun, Yu as rulers, Xia, Shang, Zhou, oracle-bone era events, Spring and Autumn states; myths go to creation-myths.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Peking Man: Zhoukoudian",
+        "Yu the Great taming floods",
+        "Yellow Emperor",
+        "Banpo pottery village",
+        "Hemudu rice",
+        "Yinxu: Anyang",
+        "Seven Warring States",
+        "King Wu defeats Shang",
+        "Yuanmou Man",
+        "Haojing capital of Western Zhou"
+      ]
+    },
+    "qin-and-han": {
+      "scope": "Qin Shi Huang, unification 221 BC, standard script and measures, Liu Bang and Xiang Yu, Emperor Wu, Han figures; Zhang Qian goes to silk-road-and-voyages.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Qin Shi Huang",
+        "Unification in 221 BC",
+        "Liu Bang founds Han",
+        "Xiang Yu, Hegemon-King",
+        "Burning books, burying scholars",
+        "Emperor Wu of Han",
+        "Hongmen Banquet",
+        "Sima Qian's Records",
+        "Chen Sheng and Wu Guang",
+        "Wang Zhao jun"
+      ]
+    },
+    "three-kingdoms-to-sui": {
+      "scope": "Historical Three Kingdoms, Jin, Northern and Southern dynasties and Sui: rulers, battles, the Grand Canal's building; the novel goes to romance-of-the-three-kingdoms.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Wei, Shu and Wu",
+        "Battle of Red Cliffs 208",
+        "Cao Cao as historical figure",
+        "Sui builds Grand Canal",
+        "Emperor Yang of Sui",
+        "Hua Mulan's era",
+        "Battle of Fei River",
+        "Emperor Xiaowen's reforms",
+        "Sima Yan founds Jin"
+      ]
+    },
+    "tang-dynasty": {
+      "scope": "Tang rulers, Chang'an, Wu Zetian, Yang Guifei, An Lushan rebellion, Tang society; poets go to tang-poems, Xuanzang and Jianzhen to silk-road-and-voyages.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Chang'an capital",
+        "Wu Zetian only empress",
+        "Li Shimin, Emperor Taizong",
+        "Yang Guifei and lychees",
+        "Xuanwu Gate Incident",
+        "Zhenguan era",
+        "An Lushan rebellion",
+        "Princess Wencheng",
+        "Wei Zheng the mirror",
+        "Kaiyuan era"
+      ]
+    },
+    "song-and-yuan": {
+      "scope": "Song and Yuan dynasties: Zhao Kuangyin, Bao Zheng, Yue Fei, Kaifeng and Hangzhou, Genghis and Kublai Khan, Marco Polo's visit.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Judge Bao (包公)",
+        "Yue Fei",
+        "Genghis Khan",
+        "Kublai Khan founds Yuan",
+        "Marco Polo",
+        "Zhao Kuangyin's yellow robe",
+        "Kaifeng as Song capital",
+        "Yang family generals",
+        "Wang Anshi's reforms",
+        "Qin Hui"
+      ]
+    },
+    "ming-dynasty": {
+      "scope": "Ming rulers and figures: Zhu Yuanzhang, Yongle and the Forbidden City's building, Qi Jiguang, Wang Yangming, Hai Rui; Zheng He goes to silk-road-and-voyages.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Zhu Yuanzhang",
+        "Forbidden City finished 1420",
+        "Yongle moves capital to Beijing",
+        "Qi Jiguang fights pirates",
+        "Hai Rui",
+        "Ming Great Wall rebuilt",
+        "Thirteen Ming Tombs",
+        "Li Zicheng",
+        "Wang Yangming",
+        "Yongle Encyclopedia"
+      ]
+    },
+    "qing-dynasty": {
+      "scope": "Qing up to 1840: Kangxi, Yongzheng, Qianlong, queue hairstyle, Old Summer Palace's building, court life; 1840 onwards goes to late-qing-and-republic.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Emperor Kangxi",
+        "Emperor Qianlong",
+        "Queue hairstyle",
+        "Kangxi's 61-year reign",
+        "Yongzheng",
+        "Old Summer Palace built",
+        "Heshen",
+        "Siku Quanshu",
+        "Nurhaci",
+        "Manchu banners"
+      ]
+    },
+    "late-qing-and-republic": {
+      "scope": "1840–1949 as bare facts: Opium War, Lin Zexu, treaties, 1911 revolution, Sun Yat-sen, May Fourth, the war of 1937–1945 dates and places; no tolls, judgements or claims of legitimacy.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Sun Yat-sen",
+        "Lin Zexu destroys opium at Humen",
+        "Opium War 1840",
+        "Xinhai Revolution 1911",
+        "Puyi, last emperor",
+        "Old Summer Palace burnt 1860",
+        "May Fourth Movement 1919",
+        "Empress Dowager Cixi",
+        "Hundred Days' Reform 1898",
+        "Treaty of Nanjing 1842"
+      ]
+    },
+    "peoples-republic": {
+      "scope": "Bare dates and names only: founding on 1 October 1949, first atomic test, reform from 1978, Shenzhen zone 1980, Hong Kong 1997 and Macau 1999 handovers, 2008 Olympics; no leaders, campaigns, status or judgement.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "1 October 1949 founding",
+        "National flag: five stars",
+        "Hong Kong handover 1 July 1997",
+        "Macau handover 20 December 1999",
+        "Shenzhen special economic zone 1980",
+        "National anthem: March of the Volunteers",
+        "Reform and opening 1978",
+        "First atomic test 1964",
+        "Nie Er, composer of the anthem",
+        "Lei Feng Day 5 March"
+      ]
+    },
+    "silk-road-and-voyages": {
+      "scope": "Travel and contact: Zhang Qian, the Silk Road, Xuanzang's journey, Jianzhen to Japan, Zheng He's fleets, Maritime Silk Road; world explorers go to explorers-and-discoveries.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Silk Road",
+        "Zheng He's voyages",
+        "Zhang Qian to the Western Regions",
+        "Xuanzang to India",
+        "Jianzhen to Japan",
+        "Zheng He's seven voyages from 1405",
+        "Dunhuang as Silk Road hub",
+        "Ban Chao",
+        "Faxian"
+      ]
+    },
+    "imperial-exams-and-gaokao": {
+      "scope": "The keju from Sui to 1905, zhuangyuan, bangyan, tanhua, eight-legged essay; the gaokao's dates, history since 1977 and customs.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Gaokao in June",
+        "Zhuangyuan top scorer",
+        "Gaokao resumed 1977",
+        "Keju started under Sui",
+        "Keju abolished 1905",
+        "Bangyan and tanhua",
+        "Fan Jin passes the exam",
+        "Eight-legged essay",
+        "Gaokao essay topic as news",
+        "Juren and jinshi"
+      ]
+    },
+    "history": {
+      "scope": "Copies on general history, Rome and the Cold War; new questions on world history taught in China.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "prehistory": {
+      "scope": "Copies on human prehistory worldwide; Chinese early sites go to early-china.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "dinosaurs": {
+      "scope": "Copies on dinosaurs; new questions may add dinosaurs found in China (Lufengosaurus, feathered Liaoning finds).",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "pyramids": {
+      "scope": "Copies on pyramids, pharaohs and mummies.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "explorers-and-discoveries": {
+      "scope": "Copies on world explorers; Chinese travellers go to silk-road-and-voyages.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "world-war-ii": {
+      "scope": "Copies on the world war; the war in China, as bare facts, goes to late-qing-and-republic.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "creation-myths": {
+      "scope": "Pangu, Nüwa, Hou Yi, Chang'e, Jingwei, Kuafu, Shennong, Cangjie, Yugong; Chang'e's story here, the festival in mid-autumn-festival.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Pangu separates heaven and earth",
+        "Nüwa mends the sky",
+        "Hou Yi shoots nine suns",
+        "Chang'e flies to the moon",
+        "Jingwei fills the sea",
+        "Kuafu chases the sun",
+        "Yugong moves the mountains",
+        "Shennong tastes herbs",
+        "Cangjie invents writing",
+        "Wu Gang cuts the laurel"
+      ]
+    },
+    "folktales": {
+      "scope": "Four great folktales, Nezha, Lotus Lantern, Hua Mulan, Liaozhai ghosts and other legends; gods as figures go to gods-and-immortals.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Cowherd and Weaver Girl",
+        "Nezha conquers the Dragon King",
+        "Hua Mulan",
+        "Butterfly Lovers",
+        "Legend of the White Snake",
+        "Meng Jiangnü weeps at the Wall",
+        "Chenxiang and the Lotus Lantern",
+        "Xu Xian",
+        "Pu Songling's Liaozhai",
+        "Nie Xiaoqian"
+      ]
+    },
+    "gods-and-immortals": {
+      "scope": "Jade Emperor, Queen Mother of the West, Eight Immortals, door gods, God of Wealth, Kitchen God, Earth God, Matchmaker; Buddhist figures go to chinese-buddhism.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Jade Emperor",
+        "God of Wealth",
+        "Eight Immortals cross the sea",
+        "Queen Mother's peach banquet",
+        "Kitchen God",
+        "Door gods Qin Qiong and Yuchi Gong",
+        "Old Man Under the Moon (月老)",
+        "Iron-Crutch Li",
+        "Erlang Shen",
+        "Mazu"
+      ]
+    },
+    "mythical-creatures": {
+      "scope": "Dragons, phoenix, qilin, pixiu, Four Symbols, Shan Hai Jing beasts; the Nian beast goes to spring-festival.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Chinese dragon",
+        "Phoenix",
+        "Dragon King of the sea",
+        "Qilin",
+        "Pixiu for wealth",
+        "Azure Dragon and White Tiger",
+        "Classic of Mountains and Seas",
+        "Nine sons of the dragon",
+        "Nine-tailed fox",
+        "Taotie"
+      ]
+    },
+    "greek-gods": {
+      "scope": "Copies on Greek and Roman gods and heroes.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "legends-and-superstitions": {
+      "scope": "Copies on world legends and superstitions; Chinese ones go to Chinese subcategories.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "confucianism": {
+      "scope": "Confucius's life, disciples, Analects as a book, Qufu, Mencius and his mother, Confucian classics and values; quoted lines asked by source, not meaning.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Confucius",
+        "The Analects",
+        "Mencius's mother moves three times",
+        "Qufu hometown",
+        "Disciple Yan Hui",
+        "Four Books and Five Classics",
+        "72 accomplished disciples",
+        "Zhu Xi",
+        "Confucius Institute name"
+      ]
+    },
+    "daoism": {
+      "scope": "Laozi, Tao Te Ching, Zhuangzi and his butterfly dream, yin–yang and bagua, Daoist mountains like Wudang; folk gods go to gods-and-immortals.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Yin and yang symbol",
+        "Laozi rides an ox",
+        "Tao Te Ching",
+        "Zhuangzi's butterfly dream",
+        "Bagua",
+        "Wudang Mountains",
+        "Five elements",
+        "Zhang Daoling",
+        "Hangu Pass"
+      ]
+    },
+    "hundred-schools": {
+      "scope": "Mozi, Han Feizi, Xunzi, Sunzi and the Art of War, Legalism, Mohism, Guiguzi; Confucian and Daoist thinkers go to their own subcategories.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Sunzi's Art of War",
+        "Mozi",
+        "Han Feizi",
+        "Legalism",
+        "Xunzi: human nature is bad",
+        "Universal love (兼爱)",
+        "Shang Yang reforms",
+        "Guiguzi",
+        "Hundred Schools contending"
+      ]
+    },
+    "chinese-buddhism": {
+      "scope": "Buddhism's arrival and history in China, bodhisattvas like Guanyin and Maitreya, Chan masters, Four Sacred Mountains; buildings go to traditional-architecture.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Guanyin",
+        "Laughing Buddha (弥勒)",
+        "White Horse Temple: first temple",
+        "Bodhidharma at Shaolin",
+        "Chan Buddhism",
+        "Huineng, Sixth Patriarch",
+        "Mount Wutai",
+        "Jigong the mad monk",
+        "Four Sacred Buddhist Mountains"
+      ]
+    },
+    "world-religions": {
+      "scope": "Copies on world religions and sacred places.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "famous-philosophers": {
+      "scope": "Copies on Western and world philosophers and big questions; Chinese thinkers go to Chinese subcategories.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "chinese-characters": {
+      "scope": "Pictographs' origins, radicals, strokes, oracle bones, script evolution, Cangjie, pinyin and zhuyin, simplified and traditional use as facts; ask origin, history and form, never what a shown character means.",
+      "origin": "new",
+      "language": true,
+      "samples": [
+        "日 drawn from the sun",
+        "Water radical 氵",
+        "Pinyin",
+        "Oracle bones: turtle shells",
+        "Seal → clerical → regular script",
+        "Zhuyin in Taiwan",
+        "Pinyin adopted 1958",
+        "Simplified characters 1956",
+        "Shuowen Jiezi",
+        "Nüshu women's script"
+      ]
+    },
+    "idiom-stories": {
+      "scope": "Chengyu and sayings asked by the person, dynasty, book or animal behind them; never the idiom's meaning nor an idiom whose wording is the story; children's fables go to chinese-fables.",
+      "origin": "new",
+      "language": true,
+      "samples": [
+        "Three visits to the thatched cottage: Liu Bei",
+        "Breaking the cauldrons: Xiang Yu",
+        "Sleeping on brushwood: Goujian",
+        "Returning the jade: Lin Xiangru",
+        "Armchair strategist: Zhao Kuo",
+        "Rising at cockcrow: Zu Ti",
+        "Carrying thorns: Lian Po",
+        "Pointing at a deer: Zhao Gao",
+        "Han Xin under the crotch",
+        "Mao Sui recommends himself"
+      ]
+    },
+    "dialects": {
+      "scope": "Spoken varieties and where they are spoken, Putonghua, loanwords between Chinese and other languages; ask place and origin, never how a word is said.",
+      "origin": "new",
+      "language": true,
+      "samples": [
+        "Putonghua",
+        "Cantonese: Guangzhou and Hong Kong",
+        "Shanghainese as Wu",
+        "Hokkien in Fujian and Taiwan",
+        "Hakka",
+        "Ketchup from Hokkien",
+        "Typhoon's Chinese origin",
+        "Putonghua standard 1955",
+        "Jin Chinese in Shanxi"
+      ]
+    },
+    "languages-of-the-world": {
+      "scope": "Copies on world languages; new questions may add how Chinese compares by speakers.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "planet-earth": {
+      "scope": "Copies on Earth and nature's records.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "the-sea": {
+      "scope": "Copies on the sea and oceans; China's seas as names only.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "weather-and-climate": {
+      "scope": "Copies on weather; China's climate goes to climate-and-regions.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "natural-phenomena": {
+      "scope": "Copies on phenomena and earthquakes; events in China go to nature-reserves-and-hazards.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "volcanoes": {
+      "scope": "Copies on volcanoes worldwide; Changbai Mountain may be added.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "rocks-and-minerals": {
+      "scope": "Copies on rocks and minerals; jade may be added.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "mammals": {
+      "scope": "Copies on mammals and African wildlife; Chinese species go to nature-of-china.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "birds": {
+      "scope": "Copies on birds; Chinese species go to chinese-birds-and-water-life.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "reptiles": {
+      "scope": "Copies on reptiles and amphibians; Chinese giant salamander and alligator go to chinese-land-animals.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "fish": {
+      "scope": "Copies on fish; Chinese sturgeon and goldfish go to nature-of-china.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "insects": {
+      "scope": "Copies on insects; silkworms go to farming-and-silk.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "strange-creatures": {
+      "scope": "Copies on odd animals, animal records, unusual animals of rainforests.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "farm-animals": {
+      "scope": "Copies on farm animals; Chinese farming goes to farming-and-silk.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "cats": {
+      "scope": "Copies on cats, dogs and unusual pets; Chinese breeds like the Pekingese may be added.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "giant-panda": {
+      "scope": "Giant panda biology, Wolong and Chengdu bases, famous pandas, pandas abroad as bare facts; red panda included.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Eats bamboo",
+        "Black and white",
+        "Chengdu panda base",
+        "Newborn panda size",
+        "Wolong reserve",
+        "Panda's false thumb",
+        "Red panda",
+        "Huahua the famous panda",
+        "Sichuan, Shaanxi, Gansu range"
+      ]
+    },
+    "chinese-land-animals": {
+      "scope": "Native land animals other than pandas: golden monkey, tigers, Tibetan antelope, Asian elephants, Yangtze alligator, giant salamander.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Siberian tiger",
+        "Golden snub-nosed monkey",
+        "Tibetan antelope",
+        "Yunnan elephants walk north 2021",
+        "South China tiger",
+        "Yangtze alligator",
+        "Chinese giant salamander",
+        "Père David's deer (麋鹿)",
+        "Snow leopard",
+        "Bactrian camel"
+      ]
+    },
+    "chinese-birds-and-water-life": {
+      "scope": "Native birds and water animals: crested ibis, red-crowned crane, Chinese sturgeon, baiji, finless porpoise, goldfish and carp lore.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Goldfish bred in China",
+        "Red-crowned crane",
+        "Carp leaping the dragon gate",
+        "Mandarin duck",
+        "Crested ibis from 7 birds",
+        "Chinese sturgeon",
+        "Baiji river dolphin",
+        "Yangtze finless porpoise",
+        "Black-necked crane"
+      ]
+    },
+    "chinese-plants-and-flowers": {
+      "scope": "Native and symbolic plants: ginkgo, dawn redwood, bamboo, peony, lotus, plum, osmanthus, the Four Gentlemen, city flowers; tea as drink goes to tea-and-drinks.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Bamboo",
+        "Lotus",
+        "Peony: Luoyang",
+        "Plum blossom in winter",
+        "Ginkgo as living fossil",
+        "Four Gentlemen",
+        "Osmanthus",
+        "Dawn redwood",
+        "Dove tree",
+        "Chrysanthemum at Double Ninth"
+      ]
+    },
+    "farming-and-silk": {
+      "scope": "Rice and wheat farming, terraces, silkworms and sericulture, cormorant fishing, water buffalo, farm tools like the waterwheel.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Rice paddies",
+        "Silkworms eat mulberry leaves",
+        "Silkworm life cycle",
+        "Water buffalo",
+        "Yuanyang rice terraces",
+        "Cormorant fishing",
+        "Leizu and silk",
+        "Waterwheel",
+        "Longji terraces"
+      ]
+    },
+    "nature-reserves-and-hazards": {
+      "scope": "Reserves and ecosystems (Jiuzhaigou's lakes, Xishuangbanna, Sanjiangyuan), sandstorms, floods, the 2008 Wenchuan earthquake's date and magnitude; tourist sides go to scenic-areas.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Sandstorms in spring",
+        "Xishuangbanna rainforest",
+        "Jiuzhaigou lakes",
+        "Wenchuan earthquake 12 May 2008",
+        "Three-North Shelter Forest",
+        "Sanjiangyuan: source of three rivers",
+        "Yellow River floods",
+        "Saihanba forest",
+        "Typhoons in the southeast"
+      ]
+    },
+    "plants": {
+      "scope": "Copies on plants worldwide; Chinese plants go to chinese-plants-and-flowers.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "trees": {
+      "scope": "Copies on trees; ginkgo and dawn redwood go to chinese-plants-and-flowers.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "environment": {
+      "scope": "Copies on environment and recycling; rubbish sorting rules go to school-and-daily-life.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "human-body": {
+      "scope": "Copies on anatomy and body oddities.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "medicine-and-health": {
+      "scope": "Copies on modern medicine; Chinese medicine history goes to chinese-medicine-history.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "brain-and-mind": {
+      "scope": "Copies on brain and psychology.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "science": {
+      "scope": "Copies on general science.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "maths": {
+      "scope": "Copies on maths, numbers and shapes; Chinese maths history goes to ancient-chinese-maths.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "chemistry": {
+      "scope": "Copies on chemistry.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "physics": {
+      "scope": "Copies on physics.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "famous-scientists": {
+      "scope": "Copies on world scientists and Nobel Prizes; Chinese scientists go to chinese-scientists.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "ancient-chinese-maths": {
+      "scope": "Abacus, multiplication rhyme, counting rods, Nine Chapters, chickens-and-rabbits and other classic problems, Zu Chongzhi, Liu Hui, Yang Hui's triangle.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Abacus",
+        "Nine-nine multiplication rhyme",
+        "Chickens and rabbits in a cage",
+        "Zu Chongzhi and pi",
+        "Gougu theorem",
+        "Nine Chapters",
+        "Yang Hui's triangle",
+        "Han Xin counts soldiers",
+        "355/113",
+        "Liu Hui's circle division"
+      ]
+    },
+    "four-great-inventions": {
+      "scope": "Paper, printing, gunpowder, compass in depth (Cai Lun, Bi Sheng, sinan) and other Chinese firsts like porcelain making, silk weaving, kites.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Paper",
+        "Gunpowder",
+        "Compass",
+        "Printing",
+        "Cai Lun",
+        "Bi Sheng's movable type",
+        "Sinan spoon compass",
+        "Kites from China",
+        "Diamond Sutra printed 868",
+        "One sulphur, two saltpetre, three charcoal"
+      ]
+    },
+    "ancient-science-and-engineering": {
+      "scope": "Zhang Heng's seismograph, Mozi's optics, Shen Kuo, Guo Shoujing, Lu Ban, Dujiangyan, Zhaozhou Bridge, Huang Daopo.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Lu Ban and the saw",
+        "Zhang Heng's seismograph",
+        "Dujiangyan and Li Bing",
+        "Zhaozhou Bridge",
+        "Mozi's pinhole image",
+        "Shen Kuo's Dream Pool Essays",
+        "Huang Daopo and cotton",
+        "Guo Shoujing",
+        "Su Song's clock tower"
+      ]
+    },
+    "chinese-medicine-history": {
+      "scope": "Historic doctors and books: Bian Que, Hua Tuo, Zhang Zhongjing, Sun Simiao, Li Shizhen; acupuncture's history; never efficacy claims.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Hua Tuo",
+        "Li Shizhen",
+        "Compendium of Materia Medica",
+        "Bian Que and Duke Huan",
+        "Five Animal Exercises",
+        "Mafeisan anaesthetic",
+        "Zhang Zhongjing",
+        "Sun Simiao, King of Medicine",
+        "Acupuncture UNESCO 2010"
+      ]
+    },
+    "chinese-scientists": {
+      "scope": "Scientists and engineers since 1900: Zhan Tianyou, Hua Luogeng, Qian Xuesen, Deng Jiaxian, Yuan Longping, Tu Youyou, Yang Zhenning, Chen Jingrun, synthetic insulin; space people go to space subcategories.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Yuan Longping: hybrid rice",
+        "Tu Youyou: artemisinin",
+        "Qian Xuesen",
+        "Zhan Tianyou's railway",
+        "Hua Luogeng",
+        "Chen Jingrun and Goldbach",
+        "Deng Jiaxian",
+        "Yang Zhenning and Lee Tsung-dao",
+        "Synthetic insulin 1965",
+        "Cloned monkeys 2018"
+      ]
+    },
+    "mega-projects": {
+      "scope": "Modern engineering facts: Three Gorges Dam, Hong Kong–Zhuhai–Macau Bridge, FAST telescope, supercomputers, South–North water diversion; transport lines go to china-transport.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Three Gorges Dam",
+        "FAST Sky Eye telescope",
+        "Hong Kong–Zhuhai–Macau Bridge",
+        "FAST 500 m dish",
+        "South–North Water Diversion",
+        "Bridge opened 2018",
+        "Tianhe supercomputer",
+        "Mozi quantum satellite",
+        "Baihetan dam"
+      ]
+    },
+    "space": {
+      "scope": "Copies on space in general.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "solar-system": {
+      "scope": "Copies on planets and moons; Chinese names of planets may be added.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "space-race-and-astronauts": {
+      "scope": "Copies on Soviet and US spaceflight; Chinese spaceflight goes to crewed-spaceflight.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "stars-and-galaxies": {
+      "scope": "Copies on stars; Chinese star lore (Cowherd and Weaver stars) may be added.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "crewed-spaceflight": {
+      "scope": "Shenzhou missions, taikonauts, Tiangong station, Tiangong lessons, Long March rockets, launch sites.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Yang Liwei first taikonaut",
+        "Tiangong space station",
+        "Shenzhou 5 in 2003",
+        "Wang Yaping's space lesson",
+        "Long March rockets",
+        "Jiuquan launch centre",
+        "Wenchang launch site",
+        "Station completed 2022",
+        "Zhai Zhigang first spacewalk"
+      ]
+    },
+    "lunar-and-planetary-missions": {
+      "scope": "Chang'e probes, Yutu rovers, Tianwen-1 and Zhurong, Beidou navigation, other uncrewed missions.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Chang'e lunar probes",
+        "Yutu rover",
+        "Beidou navigation",
+        "Far-side landing 2019",
+        "Zhurong Mars rover",
+        "Tianwen-1 2021",
+        "Chang'e 5 samples 2020",
+        "Chang'e 6 far-side samples 2024",
+        "Queqiao relay satellite"
+      ]
+    },
+    "inventions": {
+      "scope": "Copies on inventions and inventors worldwide; Chinese ancient inventions go to four-great-inventions.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "technology": {
+      "scope": "Copies on technology; Chinese companies go to chinese-tech-brands.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "artificial-intelligence": {
+      "scope": "Copies on robots and AI; AlphaGo vs. Ke Jie goes to board-and-tile-games.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "internet": {
+      "scope": "Copies on the internet and social media; Chinese apps go to apps-and-online-life.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "cars": {
+      "scope": "Copies on cars; Chinese carmakers go to chinese-tech-brands.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "planes": {
+      "scope": "Copies on aviation; the C919 goes to china-transport.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "trains": {
+      "scope": "Copies on world trains; Chinese rail goes to china-transport.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "ships-and-boats": {
+      "scope": "Copies on ships; dragon boats go to traditional-sports.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "china-transport": {
+      "scope": "High-speed rail, Fuxing and Hexie trains, Qinghai–Tibet railway, maglev, metros, shared bikes, C919, historic railways.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "High-speed rail (高铁)",
+        "Fuxing trains",
+        "Shared bicycles",
+        "Shanghai maglev",
+        "Qinghai–Tibet railway 2006",
+        "C919 airliner",
+        "Beijing–Shanghai high-speed line",
+        "Beijing–Zhangjiakou railway 1909",
+        "Green-skin trains (绿皮车)"
+      ]
+    },
+    "tang-poems": {
+      "scope": "Tang poets and poems asked by author, dynasty, season, festival, place or nickname; never the next line or a word of the poem.",
+      "origin": "new",
+      "language": true,
+      "samples": [
+        "Quiet Night Thoughts: Li Bai",
+        "Ode to the Goose: Luo Binwang",
+        "Spring Dawn: Meng Haoran",
+        "Pity the Farmers: Li Shen",
+        "Li Bai, Poet Immortal",
+        "Du Fu, Poet Sage",
+        "Qingming: Du Mu",
+        "Wang Wei, Poet Buddha",
+        "Bai Juyi's Song of Everlasting Regret",
+        "Li Shangyin"
+      ]
+    },
+    "song-ci": {
+      "scope": "Ci and poetry outside the Tang: Su Shi, Li Qingzhao, Xin Qiji, Liu Yong, Lu You, Qu Yuan's Chu Ci, Tao Yuanming's poems; asked by author, place, occasion; never the words.",
+      "origin": "new",
+      "language": true,
+      "samples": [
+        "Su Shi",
+        "Su Shi's Mid-Autumn ci",
+        "Li Qingzhao",
+        "Yue Fei's Man Jiang Hong",
+        "Lu You",
+        "Xin Qiji",
+        "Qu Yuan's Li Sao",
+        "Tao Yuanming and chrysanthemums",
+        "Liu Yong",
+        "Nalan Xingde"
+      ]
+    },
+    "classical-prose": {
+      "scope": "Wenyan texts from the school lists: Peach Blossom Spring, Memorial on Sending Out the Troops, Yueyang Tower, Ode to the Lotus, Red Cliff fu; asked by author, dynasty, place; never the wording.",
+      "origin": "new",
+      "language": true,
+      "samples": [
+        "Peach Blossom Spring: Tao Yuanming",
+        "Chu Shi Biao: Zhuge Liang",
+        "Yueyang Tower: Fan Zhongyan",
+        "Ode to the Lotus: Zhou Dunyi",
+        "Humble Room: Liu Yuxi",
+        "Old Drunkard's Pavilion: Ouyang Xiu",
+        "On Teachers: Han Yu",
+        "Prince Teng Pavilion: Wang Bo",
+        "Eight Masters of Tang and Song",
+        "Epang Palace fu: Du Mu"
+      ]
+    },
+    "journey-to-the-west": {
+      "scope": "The novel: Sun Wukong, pilgrims, demons, episodes, author Wu Cheng'en; TV and film adaptations go to media.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Sun Wukong",
+        "Zhu Bajie",
+        "Tang Seng",
+        "Golden-hooped staff",
+        "Three fights with White Bone Demon",
+        "Flower Fruit Mountain",
+        "Sha Wujing",
+        "81 tribulations",
+        "Wu Cheng'en",
+        "Six-eared macaque"
+      ]
+    },
+    "romance-of-the-three-kingdoms": {
+      "scope": "The novel: oath brothers, Zhuge Liang's ploys, generals, episodes, Luo Guanzhong; real history goes to three-kingdoms-to-sui.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Zhuge Liang",
+        "Guan Yu's red face",
+        "Oath of the Peach Garden",
+        "Borrowing arrows with straw boats",
+        "Zhang Fei",
+        "Empty fort strategy",
+        "Luo Guanzhong",
+        "Zhao Yun saves Adou",
+        "Red Hare horse",
+        "Lü Bu and Diaochan"
+      ]
+    },
+    "water-margin": {
+      "scope": "The novel: the 108 outlaws of Liangshan, Wu Song, Lu Zhishen, Song Jiang, episodes, Shi Nai'an.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Wu Song kills the tiger",
+        "108 heroes",
+        "Liangshan",
+        "Lu Zhishen uproots a willow",
+        "Song Jiang",
+        "Li Kui",
+        "Shi Nai'an",
+        "Lin Chong",
+        "Pan Jinlian",
+        "Gao Qiu"
+      ]
+    },
+    "dream-of-the-red-chamber": {
+      "scope": "The novel: Jia Baoyu, Lin Daiyu, Xue Baochai, Grandmother Jia, Grand View Garden, Cao Xueqin, redology.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Lin Daiyu",
+        "Jia Baoyu",
+        "Daiyu buries flowers",
+        "Cao Xueqin",
+        "Xue Baochai",
+        "Grand View Garden",
+        "Granny Liu",
+        "Wang Xifeng",
+        "Twelve Beauties of Jinling",
+        "Redology (红学)"
+      ]
+    },
+    "modern-chinese-literature": {
+      "scope": "Textbook authors since 1900: Lu Xun, Zhu Ziqing, Lao She, Bing Xin, Ba Jin, Shen Congwen, and their works.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Lu Xun",
+        "Kong Yiji",
+        "Zhu Ziqing's Back View",
+        "Runtu in My Old Home",
+        "Lao She's Camel Xiangzi",
+        "Lu Xun's real name Zhou Shuren",
+        "Ah Q",
+        "Bing Xin",
+        "Ba Jin's Family",
+        "Shen Congwen's Border Town"
+      ]
+    },
+    "popular-chinese-fiction": {
+      "scope": "Wuxia, science fiction and bestsellers: Jin Yong, Gu Long, Liu Cixin, Mo Yan, Yu Hua, Qiong Yao, Sanmao, web novels.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Jin Yong",
+        "The Three-Body Problem",
+        "Liu Cixin",
+        "Guo Jing and Huang Rong",
+        "Mo Yan: Nobel 2012",
+        "Yu Hua's To Live",
+        "Linghu Chong",
+        "Qiong Yao",
+        "Gu Long",
+        "Sanmao"
+      ]
+    },
+    "chinese-fables": {
+      "scope": "Fables and model-child stories from primary textbooks and picture books, Zheng Yuanjie; asked by character, action or object, never by the idiom's own words; adult idiom stories go to idiom-stories.",
+      "origin": "new",
+      "language": true,
+      "samples": [
+        "Crow drinks water",
+        "Kong Rong gives up the pear",
+        "Sima Guang breaks the vat",
+        "Little horse crosses the river",
+        "Cao Chong weighs the elephant",
+        "Ma Liang's magic brush",
+        "Frog in the well",
+        "Fox borrows the tiger's might",
+        "Iron rod into a needle: Li Bai",
+        "Zheng Yuanjie's Pipilu"
+      ]
+    },
+    "nursery-rhymes": {
+      "scope": "Chinese children's songs and rhymes: asked by animal, character, story or occasion, never the next words.",
+      "origin": "new",
+      "language": true,
+      "samples": [
+        "Two Tigers",
+        "Little Rabbit, Be Good",
+        "Pulling the Radish",
+        "Counting Ducks",
+        "Little Swallow",
+        "Only Mum Is Good in the World",
+        "Finding Friends",
+        "Let Us Row the Oars",
+        "One Fen Coin",
+        "The Newspaper Seller's Song"
+      ]
+    },
+    "fairy-tales": {
+      "scope": "Copies on Andersen, Grimm and children's books; Chinese tales go to chinese-fables.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "art": {
+      "scope": "Copies on world art, museums and photography; Chinese art goes to chinese-art-and-crafts.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "colours": {
+      "scope": "Copies on colours; colour symbolism in China goes to customs-and-etiquette.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "literature": {
+      "scope": "Copies on world literature, Shakespeare and crime fiction.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "traditional-dress": {
+      "scope": "Copies on world dress; new questions on Chinese dress: hanfu, qipao, Tang suit, Zhongshan suit; minority dress goes to ethnic-groups.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "product-design": {
+      "scope": "Copies on product design, shoes and accessories.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "chinese-folk-music": {
+      "scope": "Erhu, guzheng, pipa, dizi, suona, bianzhong, pentatonic scale, folk songs and classic pieces like Erquan Yingyue and the Butterfly Lovers concerto.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Erhu",
+        "Guzheng",
+        "Jasmine Flower folk song",
+        "Pipa",
+        "Suona at weddings",
+        "Blind Abing's Erquan Yingyue",
+        "Butterfly Lovers violin concerto",
+        "Boya and Ziqi",
+        "Marquis Yi's bianzhong",
+        "Gong shang jue zhi yu"
+      ]
+    },
+    "chinese-opera": {
+      "scope": "Peking opera roles, face paint, masters, famous plays; Kunqu, Yue, Huangmei, Sichuan face-changing and other forms; crosstalk goes to spring-festival-gala.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Peking opera",
+        "Face-changing: Sichuan opera",
+        "Red face for loyalty",
+        "Mei Lanfang",
+        "Sheng, dan, jing, chou",
+        "Farewell My Concubine opera",
+        "Huangmei opera",
+        "Yue opera: Zhejiang",
+        "Kunqu oldest form",
+        "The Peony Pavilion"
+      ]
+    },
+    "c-pop": {
+      "scope": "Mandarin and Cantonese pop from Teresa Teng to today: singers, bands, hit songs, talent shows, square-dance hits.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Jay Chou",
+        "Little Apple",
+        "Teresa Teng",
+        "The Moon Represents My Heart",
+        "Phoenix Legend square dance",
+        "Four Heavenly Kings",
+        "Faye Wong",
+        "Beyond's Boundless Sky",
+        "Mayday",
+        "Super Girl 2005: Li Yuchun"
+      ]
+    },
+    "musical-instruments": {
+      "scope": "Copies on Western instruments; Chinese ones go to chinese-folk-music.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "classical-music": {
+      "scope": "Copies on Western classical music; Chinese performers like Lang Lang may be added.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "pop-music": {
+      "scope": "Copies on foreign pop and rock; C-pop goes to c-pop.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "calligraphy": {
+      "scope": "Calligraphers, their works and styles, the Four Treasures of the Study; script history goes to chinese-characters.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Brush",
+        "Four Treasures of the Study",
+        "Wang Xizhi, Sage of Calligraphy",
+        "Orchid Pavilion Preface",
+        "Yan Zhenqing",
+        "Xuan paper",
+        "Liu Gongquan",
+        "Huizhou ink",
+        "Cursive script (草书) Zhang Xu"
+      ]
+    },
+    "chinese-painting": {
+      "scope": "Ink painting, famous painters and scrolls: Qi Baishi, Xu Beihong, Along the River during Qingming, Dunhuang murals.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Qi Baishi's shrimp",
+        "Xu Beihong's horses",
+        "Along the River during Qingming",
+        "Zhang Zeduan",
+        "Flying apsaras of Dunhuang",
+        "A Thousand Li of Rivers and Mountains",
+        "Gu Kaizhi",
+        "Zheng Banqiao's bamboo",
+        "Wu Daozi"
+      ]
+    },
+    "bronzes-and-porcelain": {
+      "scope": "Ancient bronzes, Sanxingdui, jade, blue-and-white porcelain, Jingdezhen, famous kilns and museum treasures.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Blue-and-white porcelain",
+        "Jingdezhen porcelain capital",
+        "Houmuwu ding",
+        "Sanxingdui masks",
+        "Tang tricolour (唐三彩)",
+        "Four-ram square zun",
+        "Jade burial suit",
+        "Changxin Palace lamp",
+        "Five great Song kilns"
+      ]
+    },
+    "folk-crafts": {
+      "scope": "Paper-cutting, New Year pictures, shadow puppets, embroidery, kites, lanterns, dough figures, cloisonné.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Paper-cutting",
+        "Lanterns",
+        "Shadow puppets",
+        "Kites of Weifang",
+        "Chinese knots",
+        "Yangliuqing New Year pictures",
+        "Su embroidery",
+        "Cloisonné",
+        "Four great embroideries",
+        "Clay Figure Zhang"
+      ]
+    },
+    "chinese-cartoons": {
+      "scope": "Chinese TV cartoons and short animations from Shanghai Animation Film Studio to today; feature films go to chinese-animated-films.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Pleasant Goat and Big Big Wolf",
+        "Boonie Bears",
+        "Calabash Brothers",
+        "Black Cat Detective",
+        "Big Head Son, Small Head Dad",
+        "GG Bond",
+        "Blue Cat's 3000 Questions",
+        "Seven calabash brothers' colours",
+        "Tadpoles Looking for Mum 1960",
+        "Shanghai Animation Film Studio"
+      ]
+    },
+    "chinese-animated-films": {
+      "scope": "Animated features: Havoc in Heaven, Nezha Conquers the Dragon King 1979, Monkey King: Hero Is Back, Ne Zha 1 and 2, White Snake, Big Fish and Begonia.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Ne Zha 2",
+        "Ne Zha (2019)",
+        "Havoc in Heaven",
+        "Ao Bing",
+        "Monkey King: Hero Is Back",
+        "Ne Zha 2 highest-grossing animation",
+        "Nezha Conquers the Dragon King 1979",
+        "Big Fish and Begonia",
+        "Jiaozi, director of Ne Zha"
+      ]
+    },
+    "classic-tv-series": {
+      "scope": "TV series before 2010: the four classic-novel adaptations, My Fair Princess, Home with Kids, My Own Swordsman, theme songs and actors.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Journey to the West 1986",
+        "Liu Xiao Ling Tong as Monkey King",
+        "My Fair Princess",
+        "Home with Kids",
+        "Xiao Yanzi",
+        "My Own Swordsman",
+        "Red Chamber 1987",
+        "Three Kingdoms 1994",
+        "Water Margin 1998 theme"
+      ]
+    },
+    "modern-tv-dramas": {
+      "scope": "Series since 2010: palace dramas, xianxia, modern dramas like Empresses in the Palace, Nirvana in Fire, Joy of Life, Blossoms Shanghai.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Empresses in the Palace",
+        "Nirvana in Fire",
+        "Joy of Life",
+        "Story of Yanxi Palace",
+        "Blossoms Shanghai",
+        "Eternal Love",
+        "The Knockout",
+        "Nothing But Thirty",
+        "Wang Jiawei of Blossoms"
+      ]
+    },
+    "chinese-cinema": {
+      "scope": "Mainland and Taiwanese films and directors: Zhang Yimou, Chen Kaige, Ang Lee, Feng Xiaogang, The Wandering Earth, Hi, Mom; Hong Kong films go to hong-kong-cinema.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "The Wandering Earth",
+        "Zhang Yimou",
+        "Hi, Mom",
+        "Hero (2002)",
+        "Red Sorghum",
+        "Farewell My Concubine Palme d'Or",
+        "Crouching Tiger: Ang Lee",
+        "Feng Xiaogang New Year films",
+        "Gong Li",
+        "Jia Ling"
+      ]
+    },
+    "hong-kong-cinema": {
+      "scope": "Hong Kong films and stars: Bruce Lee, Jackie Chan, Stephen Chow, Jet Li, Donnie Yen's Ip Man, Infernal Affairs, Wong Kar-wai.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Jackie Chan",
+        "Bruce Lee",
+        "Stephen Chow",
+        "Kung Fu Hustle",
+        "Ip Man",
+        "Shaolin Soccer",
+        "A Chinese Odyssey",
+        "Infernal Affairs",
+        "Wong Kar-wai",
+        "Shaw Brothers"
+      ]
+    },
+    "spring-festival-gala": {
+      "scope": "The CMG Spring Festival Gala since 1983, sketches, crosstalk, performers and songs; variety and talent shows; singers' careers go to c-pop.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Spring Festival Gala",
+        "Zhao Benshan sketches",
+        "Unforgettable Tonight closing song",
+        "Crosstalk (相声)",
+        "Guo Degang",
+        "First Gala 1983",
+        "Robot dancers 2025",
+        "Happy Camp",
+        "Keep Running",
+        "Song Dandan"
+      ]
+    },
+    "film": {
+      "scope": "Copies on film, Oscars and villains; Chinese films go to chinese-cinema.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "disney-films": {
+      "scope": "Copies on Disney and Pixar films; Mulan may be added.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "anime": {
+      "scope": "Copies on Japanese anime.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "cartoons": {
+      "scope": "Copies on foreign TV cartoons such as Peppa Pig; Chinese cartoons go to chinese-cartoons.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "marvel-superheroes": {
+      "scope": "Copies on Marvel and DC heroes.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "science-fiction": {
+      "scope": "Copies on foreign sci-fi; Chinese sci-fi goes to popular-chinese-fiction and chinese-cinema.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "harry-potter": {
+      "scope": "Copies on Harry Potter, The Lord of the Rings and fantasy.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "chinese-video-games": {
+      "scope": "Games made or hugely popular in China: Honor of Kings, Genshin Impact, Black Myth: Wukong, Chinese Paladin, Onmyoji, casual phone games.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Honor of Kings",
+        "Black Myth: Wukong",
+        "Genshin Impact",
+        "Plants vs. Zombies popularity",
+        "Happy Elimination",
+        "Game Science studio",
+        "miHoYo: Shanghai",
+        "Chinese Paladin 1995",
+        "Game for Peace"
+      ]
+    },
+    "apps-and-online-life": {
+      "scope": "Chinese apps and online habits: WeChat, Alipay, QQ, Douyin, Bilibili, Taobao, food delivery, QR codes; companies as businesses go to chinese-tech-brands.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "WeChat",
+        "QR code payment",
+        "Douyin",
+        "QQ penguin",
+        "Taobao",
+        "WeChat red packets 2014",
+        "Bilibili bullet comments",
+        "Alipay 2004",
+        "Meituan delivery",
+        "QQ launched 1999"
+      ]
+    },
+    "video-games": {
+      "scope": "Copies on world and retro video games; Chinese games go to chinese-video-games.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "video-game-characters": {
+      "scope": "Copies on characters like Mario and Pikachu.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "consoles-and-game-companies": {
+      "scope": "Copies on consoles and companies; Tencent and NetEase may be added.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "chinese-tech-brands": {
+      "scope": "Chinese tech, car and appliance companies: Huawei, Xiaomi, Lenovo, BYD, DJI, Haier, Gree, Tencent, Alibaba, Baidu; apps as products go to apps-and-online-life.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Huawei",
+        "Xiaomi",
+        "BYD electric cars",
+        "DJI drones",
+        "Haier",
+        "Lenovo buys IBM PCs",
+        "Alibaba: Hangzhou",
+        "Baidu search",
+        "Tencent: Shenzhen",
+        "Gree air conditioners"
+      ]
+    },
+    "chinese-consumer-brands": {
+      "scope": "Food, drink, snack and clothing brands: White Rabbit, Lao Gan Ma, Moutai, Wang Laoji, Tsingtao, Mixue, Li-Ning, Anta, latiao; dishes go to food.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "White Rabbit candy",
+        "Spicy latiao",
+        "Mixue snowman",
+        "Li-Ning sportswear",
+        "Lao Gan Ma chilli sauce",
+        "Wang Laoji herbal tea",
+        "Tsingtao founded 1903",
+        "Moutai: Guizhou",
+        "Warrior (回力) shoes",
+        "Little Raccoon noodle snack cards"
+      ]
+    },
+    "famous-logos": {
+      "scope": "Copies on world logos and mascots; Chinese logos go to the Chinese brand subcategories.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "brand-origins": {
+      "scope": "Copies on brand origins and world companies.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "china-at-the-olympics": {
+      "scope": "China's Olympic history: first gold 1984, Beijing 2008 venues and mascots, Beijing 2022 Winter Games, medal milestones; athletes' careers go to their sport's subcategory.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Bird's Nest stadium",
+        "Bing Dwen Dwen",
+        "Fuwa mascots",
+        "Water Cube",
+        "Opening on 8 August 2008",
+        "Xu Haifeng first gold 1984",
+        "Five Fuwa names",
+        "Li Ning lights the cauldron",
+        "51 golds in 2008"
+      ]
+    },
+    "table-tennis-and-badminton": {
+      "scope": "China's national ball sports: players, titles, rules, history from Rong Guotuan to Ma Long, Lin Dan and Lee Chong Wei.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Table tennis as national ball",
+        "Ma Long",
+        "Sun Yingsha",
+        "Lin Dan",
+        "Fan Zhendong",
+        "Deng Yaping",
+        "Lin Dan vs. Lee Chong Wei",
+        "Zhang Yining",
+        "Rong Guotuan 1959",
+        "Ping-pong diplomacy 1971"
+      ]
+    },
+    "diving-and-gymnastics": {
+      "scope": "China's gold sports: diving, gymnastics, weightlifting, shooting; Quan Hongchan, Guo Jingjing, Li Ning, Fu Mingxia.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Quan Hongchan",
+        "Diving 'dream team'",
+        "Guo Jingjing",
+        "Li Ning, prince of gymnastics",
+        "Fu Mingxia",
+        "Zou Kai",
+        "Lü Xiaojun",
+        "Chen Yibing rings",
+        "Splash-free entry"
+      ]
+    },
+    "team-sports-in-china": {
+      "scope": "Women's volleyball, Chinese basketball and CBA, men's and women's football in China, Chinese Super League; world football and NBA go to reused subcategories.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Yao Ming",
+        "Women's volleyball team",
+        "Lang Ping",
+        "Yao Ming NBA no.1 pick 2002",
+        "Five titles in a row 1981–86",
+        "Zhu Ting",
+        "2002 World Cup appearance",
+        "CBA",
+        "Steel Roses women's football",
+        "Yi Jianlian"
+      ]
+    },
+    "chinese-sports-stars": {
+      "scope": "Chinese stars of athletics, swimming, tennis, snooker, skiing and others: Liu Xiang, Su Bingtian, Li Na, Ding Junhui, Zhang Yufei; table tennis, diving and team sports go elsewhere.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Liu Xiang 110 m hurdles",
+        "Li Na French Open 2011",
+        "Su Bingtian 9.83",
+        "Ding Junhui snooker",
+        "Gu Ailing's freeski golds",
+        "Zhang Yufei butterfly",
+        "Pan Zhanle 100 m freestyle",
+        "Zheng Qinwen 2024 gold",
+        "Wang Junxia"
+      ]
+    },
+    "martial-arts": {
+      "scope": "Wushu, taijiquan, Shaolin and Wudang kung fu, styles and masters as sport and tradition; martial-arts films go to hong-kong-cinema.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Kung fu",
+        "Taijiquan",
+        "Shaolin kung fu",
+        "Wing Chun",
+        "Wudang style",
+        "Huo Yuanjia",
+        "Taiji UNESCO 2020",
+        "Chen-style taiji",
+        "Wong Fei-hung"
+      ]
+    },
+    "traditional-sports": {
+      "scope": "Dragon boat racing, dragon and lion dance, shuttlecock kicking, diabolo, cuju, jump rope, polo and archery history.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Lion dance",
+        "Dragon dance",
+        "Shuttlecock kicking (毽子)",
+        "Dragon boat racing",
+        "Diabolo (空竹)",
+        "Cuju as early football",
+        "Gao Qiu and cuju",
+        "Southern vs. northern lion",
+        "Tang polo"
+      ]
+    },
+    "football": {
+      "scope": "Copies on football, its history and international teams; Chinese football goes to team-sports-in-china.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "world-cups": {
+      "scope": "Copies on World Cups.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "basketball": {
+      "scope": "Copies on NBA and basketball; Chinese basketball goes to team-sports-in-china.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "tennis": {
+      "scope": "Copies on tennis; Chinese players go to chinese-sports-stars.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "swimming": {
+      "scope": "Copies on swimming; Chinese swimmers go to chinese-sports-stars.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "athletics": {
+      "scope": "Copies on athletics; Chinese athletes go to chinese-sports-stars.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "summer-olympics": {
+      "scope": "Copies on the Summer Games; China's Olympics go to china-at-the-olympics.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "winter-olympics": {
+      "scope": "Copies on the Winter Games; Beijing 2022 goes to china-at-the-olympics.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "board-and-tile-games": {
+      "scope": "Go, Chinese chess, mahjong, Chinese checkers, card games like Dou Dizhu: rules, history, champions, AlphaGo vs. Ke Jie.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Chinese chess",
+        "Mahjong",
+        "Dou Dizhu card game",
+        "Chu River–Han border",
+        "Go board 19×19",
+        "Ke Jie vs. AlphaGo 2017",
+        "Mahjong 144 tiles",
+        "Nie Weiping",
+        "Elephant can't cross the river"
+      ]
+    },
+    "traditional-puzzles": {
+      "scope": "Tangram, Huarong Road, nine linked rings, Luban lock, and classic toys of Chinese childhood across generations.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Tangram",
+        "Seven tangram pieces",
+        "Huarong Road",
+        "Luban lock",
+        "Nine linked rings",
+        "Cao Cao in Huarong Road",
+        "Iron rolling hoop",
+        "Spinning tops (陀螺)"
+      ]
+    },
+    "childrens-games": {
+      "scope": "Playground games: Eagle Catches Chicks, rubber-band skipping, dropping the handkerchief, rock-paper-scissors, marbles, wooden man.",
+      "origin": "new",
+      "language": false,
+      "samples": [
+        "Eagle catches chicks",
+        "Rock-paper-scissors",
+        "Drop the handkerchief",
+        "Rubber-band skipping",
+        "Wooden man (木头人)",
+        "Marbles",
+        "Hopscotch (跳房子)",
+        "Cat's cradle (翻花绳)",
+        "Throwing sandbags (丢沙包)"
+      ]
+    },
+    "toys": {
+      "scope": "Copies on world toys; Chinese traditional toys go to traditional-puzzles.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "board-games": {
+      "scope": "Copies on world board games and chess; Chinese games go to board-and-tile-games.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "magic": {
+      "scope": "Copies on magic, tricks, optical illusions and circus; Chinese acrobatics and Liu Qian's Gala magic may be added.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    },
+    "guinness-world-records": {
+      "scope": "Copies on Guinness records; Chinese records may be added.",
+      "origin": "reused",
+      "language": false,
+      "samples": []
+    }
+  }
+}

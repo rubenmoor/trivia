@@ -45,6 +45,17 @@ The steps run in order; a pm worker raises each decision and never waits on it (
 - Batch health (`batch_health.media-first` in `targets.json`, over the base thresholds): `media share` not applied; new rows `giveaway-step drop rate` (drafts the giveaway step removed, of those designed) and `mechanical-check rate` (questions with a hard mechanical finding at record); `$ per approved` ≤ $0.60. Starting numbers from the pilot and trial: adjust after the first runs.
 - Findings → proposals (step 4) as above; the media prompts are `review.md` and `audit.md` media-first sections and `media-design.md`.
 
+## Fit runs
+
+A `qgen batch --bundle chinese-base --from base` run (`fit-<n>`, plan 230) judges `base` questions for `chinese-base` and copies what fits. Its check is the developer's read of the lists and samples, and the flips that correct the pass; there is no agreement bar beyond the review sample's.
+
+- Report: `authoring/reports/fit-<n>.md`: judged, kept, adapted, dropped, by rule, not copyable, per `base` category and subcategory, drop reasons, the copies left `needs_work`, the audit of the adapted copies, cost.
+- Lists: the copies at `http://127.0.0.1:8001/review?batch=fit-<n>`; verdicts in `authoring/data/bundles/chinese-base/fit.json`; the fit view with flips at `/review?fit=chinese-base` (filters verdict, reason, run; a drop sample of 30 per run; the spot-check sample of a run at `/review?batch=fit-<n>&sample=1`).
+- Samples: the spot check (`&sample=1`) over kept and adapted copies (the audit reads the adapted only); the fit view's drop sample (30 per run) to see the pass doesn't drop too much.
+- Flips: drop → keep (the next run copies it, no fit call); keep → drop (the copy `rejected` at once, in the fit view); adapt ↔ keep only through the copy's own review. Flips are `by: developer` in `fit.json`.
+- Health: `authoring/reports/batches.md` "Fit runs" (rates, $ per judged source; no thresholds, no gate); the developer records the look with `qgen health ack fit-<n> "<note>"`.
+- Prompt changes only after a decision on `prompts/fit.md` (D-36).
+
 ## Translation runs
 
 A `qgen batch --translate <locale>` run (D-87; `es`, `es-ES`, `en`, `de`, from sources in any other locale, D-107) has no QC steps. The LLM translation review (D-32, D-33) is its only review (milestone 9, developer 2026-10-16): no spot check, no QC decision, no pilot go/no-go.
@@ -54,6 +65,10 @@ A `qgen batch --translate <locale>` run (D-87; `es`, `es-ES`, `en`, `de`, from s
 - Optional review by the developer: `http://127.0.0.1:8001/review?batch=tr-<locale>-<n>&locale=<locale>`; source and translation side by side (plan 67).
   - Stale translation: no approve (the next run redoes it); a question that only works in its source language: "doesn't travel".
   - `&sample=1` (blind sample) still works by URL; existing records in `authoring/data/spot-checks.json` stay.
+- Native check, zh only (decision 754: Native checks of Chinese translation runs: pilot and release sample, not every run): the pilot run, the Chinese-language subcategories and one release sample go to a volunteer as an offline sheet; nothing waits for it (decision 414).
+  - Export: `qgen spotcheck export <run> [--controls N]` → `work/<run>/spotcheck-<run>.html`; `--release <zh>` or `--subcategory <key>… --locale <zh>` → `work/spotcheck/<name>.html`; brief `authoring/NATIVE-REVIEW.md`.
+  - A pm worker that exports raises `pm decision add "Spot check <sheet> done?"` (body: sheet path, `qgen spotcheck import <name>.verdicts.json`), never `pm task-pending-decision`.
+  - Import (the developer, in `../trivia-review`): `qgen spotcheck import <file> [--dry-run]` → human reviews (`by: native`) and spot checks; `qgen report --qc` shows "controls caught k/N" per sheet.
 - Player reports: `qgen flag` sets `needs_work` (below).
 - Prompt changes only in a change task: `prompts/translate.md`, `translate-review.md`, `locale-<locale>.md`, `rate.md`.
 

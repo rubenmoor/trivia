@@ -1,5 +1,6 @@
 """Translation runs: `qgen batch --translate` (plan 66, decision 45). Never ships (D-35)."""
 import argparse, datetime, json, re, sys, time, urllib.parse
+from decimal import Decimal
 from collections import Counter
 
 import layout  # paths (D-35)
@@ -36,9 +37,57 @@ def run_bundle(d):
     return load_json(d / "run.json")["bundle"]
 
 
+_ZH_DIGITS = {c: i for i, c in enumerate("零一二三四五六七八九")} | {"〇": 0, "两": 2}
+_ZH_UNITS, _ZH_BIG = {"十": 10, "百": 100, "千": 1000}, {"万": 10 ** 4, "亿": 10 ** 8}
+_ZH_RUN = re.compile("[零〇一二两三四五六七八九十百千万亿]+")
+_ZH_MEASURE = set("个位年月日号次种条只名人岁米克斤吨度倍块元本部座项届世层级天周秒首张件颗枚家省市洲大公")
+# words with a numeral that is no number; masked before counting
+_ZH_WORDS = re.compile("四川|三国|十分|万分|统一|万一|唯一|一些|一起|一样|一直|一定|一般|一切|一旦|一致|一同|一共|一边|一点|万里|千万")
+_HAN = re.compile("[\u4e00-\u9fff]")
+_FULLWIDTH = str.maketrans("０１２３４５６７８９，．", "0123456789,.")
+
+
+def _zh_value(run):
+    """A Chinese numeral run as an integer string: 一九六九 = 1969, 二十一 = 21, 三万 = 30000."""
+    if all(c in _ZH_DIGITS for c in run):
+        return "".join(str(_ZH_DIGITS[c]) for c in run)
+    total = sect = num = 0
+    for c in run:
+        if c in _ZH_DIGITS:
+            num = _ZH_DIGITS[c]
+        elif c in _ZH_UNITS:
+            sect, num = sect + (num or 1) * _ZH_UNITS[c], 0
+        else:
+            total, sect, num = total + (sect + num or 1) * _ZH_BIG[c], 0, 0
+    return str(total + sect + num)
+
+
+def _zh_counts(text):
+    """Numeral runs that are a quantity or date, not part of a known word (四川, 十分): two or more
+    characters, or one followed by a measure word, a non-Han character or the end."""
+    out, text = Counter(), _ZH_WORDS.sub(lambda m: "的" * len(m[0]), text)
+    for m in _ZH_RUN.finditer(text):
+        nxt = text[m.end():m.end() + 1]
+        if len(m[0]) > 1 or not nxt or nxt in _ZH_MEASURE or not _HAN.match(nxt):
+            out[_zh_value(m[0])] += 1
+    return out
+
+
 def numbers(text):
-    """The numbers in text, thousands separators and decimal marks dropped: «42 195» = «42,195»."""
-    return sorted(re.findall(r"\d+", re.sub(r"(?<=\d)[ ,.  '](?=\d)", "", text)))
+    """(digit numbers, Chinese numeral runs) in text; separators and decimal marks dropped («42 195» =
+    «42,195»), fullwidth digits and «4.2万» as digits. Not expanded: English number words, «3.5 million»."""
+    text = re.sub(r"(\d+(?:\.\d+)?)\s*([万亿])", lambda m: str(int(Decimal(m[1]) * _ZH_BIG[m[2]])),
+                  text.translate(_FULLWIDTH))
+    zh = _zh_counts(text)
+    return Counter(re.findall(r"\d+", re.sub(r"(?<=\d)[ ,.  '](?=\d{3}(?!\d))", "", _ZH_RUN.sub(" ", text)))), zh
+
+
+def same_numbers(a, b):
+    """Each digit number of one text is in the other, as digits or as a Chinese numeral («3» = «三»);
+    a numeral with no digit counterpart is ignored (it is usually a word: 四川, 十分), and a numeral
+    inside a word covers no digit."""
+    (da, za), (db, zb) = numbers(a), numbers(b)
+    return not (da - db - zb) and not (db - da - za)
 
 
 def fact_text(q):
@@ -48,7 +97,7 @@ def fact_text(q):
 def translation_needs_check(t, q):
     """A translation changed a number, unit or date (imperial added included), the translator doubts a
     fact, or the source wasn't fact-checked; the rest inherits the source's check."""
-    return bool(numbers(fact_text(t)) != numbers(fact_text(q)) or not q.get("fact_checked")
+    return bool(not same_numbers(fact_text(t), fact_text(q)) or not q.get("fact_checked")
             or re.search(r"\bfacts?\b|doubt", t["notes"], re.I))
 
 

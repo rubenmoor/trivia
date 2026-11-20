@@ -772,7 +772,7 @@ Template:
 - Date: 2026-10-12
 - Context: QT-2, QT-3 (plan 15b); plan 66 (tasks 437–441, 464); files per locale D-81; prompts and markets: decision 35: Translation prompts and markets per locale; thresholds and order: decision 45: Health thresholds and selection order for qgen batch --translate runs.
 - Decision:
-  - **Command:** `qgen batch --translate <locale>` (`es`, `es-ES`, `en`, `de` since D-107), one more exception to D-36's "no arguments", used only when the user names a language; `--bundle <id>` translates that bundle's sources instead of `base`'s (decision 110, plan 98 task 829), export to the pack's `app/data/bundles/<id>/pool.<locale>.json` (decision 112).
+  - **Command:** `qgen batch --translate <locale>` (`es`, `es-ES`, `en`, `de` since D-107, `zh-Hans` since pm decision 783), one more exception to D-36's "no arguments", used only when the user names a language; `--bundle <id>` translates that bundle's sources instead of `base`'s (decision 110, plan 98 task 829), export to the pack's `app/data/bundles/<id>/pool.<locale>.json` (decision 112).
   - **Run:** `tr-<locale>-<n>`, also the translations' `batch`; an unfinished run of that locale is resumed. `work/tr-<locale>-<n>/run.json` `{mode: "translate", locale, bundle, ids, stale, started, done}`; one run sequence per locale across bundles; an unfinished run of another bundle stops the command.
   - **Selection (code):** approved, translatable sources of the run's bundle (`base` by default) in another locale than the target (D-107) without an approved non-stale translation, not rejected in the locale. Stale translations first (old review kept as `previous`). Then one source at a time from the subcategory with the fewest approved translations (picks count; ties in `categories.json` order); within it the source whose level has the most locale deficit per pick (D-84), van der Corput order over difficulty as tie-break.
   - **Size:** `TRANSLATE_SIZE` 300 sources; the locale's first run (no `questions.<locale>.json` yet) is the pilot, `TRANSLATE_PILOT` 50 (QT-5).
@@ -1158,3 +1158,25 @@ Template:
   - **Overlap:** a copy and its source are no duplicates (`duplicates`, `overlap_candidates`, the review's `related`); a copy and another question of its own bundle are (normal rule)
 - Consequences: a copy never drives its source's `already_asked` or merge drops, nor the reverse
 - Supersedes / related: D-81, D-111; pm decisions 217, 751; plan 227
+
+## D-115: Offline spot-check sheet for outside native reviewers
+- Date: 2026-11-20
+- Context: the zh volunteers have no access to the review tool (127.0.0.1); pm decision 221 chose an offline sheet per job, a verdict file back by e-mail; plan 141, task 1172
+- Decision:
+  - **Export:** `qgen spotcheck export` (`authoring/tools/spotcheck.py`): one self-contained blind HTML file (inline JS/CSS, cached images as small inline JPEG thumbnails via `magick`, audio/video named); English source beside the translation; no LLM review, audit or status; the brief of `authoring/NATIVE-REVIEW.md` on top; progress in `localStorage`
+  - **Jobs:** a `tr-*` run's spot-check sample, `--release <locale>` (seeded 30 of `chinese-base`), `--subcategory … --locale`; a source not in English is skipped and listed; no machine gloss, no claude call
+  - **Verdict file:** `<name>.verdicts.json` with sheet name, hash over name and ids, locale, verdicts (approve / needs_work / reject / doesn't travel, problem kinds, English feedback, optional corrected text), comments; `work/…/<name>.manifest.json` keeps the export's ids; `work/…/spotcheck-controls.json` the planted controls per sheet; the release sample draws its 30 among English sources
+  - **Import:** checks name, hash, ids; each verdict is a human review with `by: native` (no name, public repo) and a spot-check record where the item is in its run's sample; corrected text goes into the feedback, never over the translation; `--dry-run` writes nothing
+  - **Controls:** default 3 for zh locales, else 0: faulty copies (wrong right answer, changed number, garbled option) `control-<k>`, never in a pool; caught = any verdict but approve, out of all planted (unanswered = missed); scored per sheet in `authoring/data/spot-controls.json`, shown by `qgen report --qc` as a table of all native sheets (run, release, subcategory)
+- Consequences: nothing waits for a sheet (pm decisions 414, 754); the sheet sits beside, not in, the review tool
+- Supersedes / related: D-33, QT-6; pm decisions 221, 754, 414; plans 141, 229
+
+## D-116: Fit pass copies: review fields and the mark of adapted copies
+- Date: 2026-11-20
+- Context: `qgen batch --bundle chinese-base --from base` (plan 230, task 2343) copies `base` questions it judges fit; the review page needs to tell fit copies and adapted ones apart, and a copy's review should say where it came from
+- Decision:
+  - **Mark:** a fit copy's `batch` is its run (`fit-<n>`); kept vs adapted is the verdict in `authoring/data/bundles/<id>/fit.json`, never a field on the question (no `fit: "adapted"`)
+  - **Review of a copy:** `review.fit` (the fit run) and `review.source_review` (`id`, `reviewer`, `model`, `reviewed_on` of the source's review) besides the usual fields; reviewer `llm` with the fit call's model, `human` for a developer flip
+  - **Adapted copies:** `needs_work` with feedback "adapt for a Chinese family: <issue>", then `qgen rework`'s revise steps (run mode `fit` counts as a rework mode); the fit review becomes `previous`
+- Consequences: filters on adapted copies read `fit.json`; `qgen validate` ties copies and verdicts together
+- Supersedes / related: D-33, D-114; pm decision 217; plan 230

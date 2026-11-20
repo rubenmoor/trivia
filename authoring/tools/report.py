@@ -411,7 +411,7 @@ def report_qc(batch, changes=None):
         return print("\n".join(qc_section(batch)))
     if changes is not None:
         sys.exit("--changes needs a batch")
-    lines = qc_trend()
+    lines = qc_trend() + controls_section()
     print("\n".join(lines) if lines else "no spot check or audit yet")
 
 
@@ -568,7 +568,7 @@ def report_career(args):
 
 
 RUN_KINDS = [("batch", r"batch-\d+"), ("translation", r"tr-[A-Za-z-]+-\d+"), ("rework", r"rework-\d+"),
-             ("tighten", r"tighten-\d+"), ("neutralize", r"neutralize-\d+"), ("concepts", r"concepts")]
+             ("tighten", r"tighten-\d+"), ("neutralize", r"neutralize-\d+"), ("fit", r"fit-\d+"), ("concepts", r"concepts")]
 
 
 def run_kind(run):
@@ -1004,4 +1004,5 @@ def cmd_report(args):
 
 # the other command groups, after everything here is defined (they import each other)
 from audit import audits, is_major, is_media_first, llm_decisions, run_questions, spot_check_size  # authoring/tools/audit.py
+from spotcheck import controls_section  # authoring/tools/spotcheck.py
 from translate import text_locale  # authoring/tools/translate.py

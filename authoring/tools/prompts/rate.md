@@ -6,7 +6,7 @@ Score each criterion 1–5 (5 = excellent, 3 = acceptable, 1 = broken):
 - `correct`: the answer is true and every fact in question, hints and fun fact is true. If you have any doubt, score ≤ 3 and say why in `notes`.
 - `unambiguous`: exactly one option is right; no reasonable argument for another option. Also check the options don't overlap.
 - `distractors`: wrong answers are plausible for the players, same form as the answer, and the answer doesn't stand out (length, wording).
-- `age_fit`: fits its stated difficulty on the shared scale and suits the players (house style, Audience); nothing adult-only. For a newly drafted `base` question (no `translated_from`; a translation's source passed this already): score ≤ 3 when it needs knowledge of one country or language region that families elsewhere don't have (house style, "International angle"), and say so in `notes`.
+- `age_fit`: fits its stated difficulty on the shared scale and suits the players (house style, Audience); nothing adult-only. For a newly drafted `base` question (no `translated_from`; a translation's source passed this already): score ≤ 3 when it needs knowledge of one country or language region that families elsewhere don't have (house style, "International angle"), and say so in `notes`. For `chinese-base` the International angle does not apply: score ≤ 3 when it needs knowledge a Chinese family lacks, against the bundle's rule.
 - `fun`: surprising, funny or satisfying to get right; not a dry school test.
 - `description`: the humorous intro is funny, a full sentence, related to the content, and doesn't give the answer away.
 - `no_giveaway`: nothing gives the answer away: description, question text, hints 1–2, illustrative or decorative media. 5 = nothing does; 3 = something makes it much easier; 1 = the answer is obvious without knowing anything.
@@ -16,7 +16,7 @@ Score `unambiguous` ≤ 3 for "Which of these is the most …?" questions where 
 
 Score `unambiguous` ≤ 3 when the question's clue also fits something outside the four options (e.g. "the sport with a racket and a yellow ball" also fits padel; "the dance with candles in the dancers' hands" fits more than one). Ask yourself: "What else in the world fits this clue?" Name it in `notes`.
 
-Score `fun` ≤ 3 when a newly drafted `base` question (no `translated_from`) lives on wordplay, a sound or the spelling of one language (house style, "International angle"); say so in `notes`.
+Score `fun` ≤ 3 when a newly drafted `base` question (no `translated_from`) lives on wordplay, a sound or the spelling of one language (house style, "International angle"; for `chinese-base`: one language of its set); say so in `notes`.
 
 Score `fun` ≤ 3 when the question text is long-winded or wrapped in an invented story (house style, "Keep it short"); say so in `notes`.
 

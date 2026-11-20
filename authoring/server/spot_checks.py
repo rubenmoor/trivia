@@ -17,8 +17,8 @@ def size(batch=None):
 
 
 def sample(batch):
-    """The batch's (or back-audit run's) spot-check ids in order: the first `size(batch)` of the audit sample."""
-    return audit.audit_sample(batch, size(batch))
+    """The batch's (or back-audit or fit run's) spot-check ids in order (audit.spot_sample)."""
+    return audit.spot_sample(batch, size(batch))
 
 
 def load():
@@ -43,7 +43,7 @@ def record(batch, q, media_changed):
         raise ValueError(f"{q['id']} is not in {batch}'s spot-check sample")
     if rv.get("reviewer") != "human":
         raise ValueError(f"{q['id']} has no human review yet")
-    llm = audit.llm_decisions(batch).get(q["id"])
+    llm = audit.spot_decisions(batch).get(q["id"])
     if llm is None:
         raise ValueError(f"{q['id']} has no recorded LLM review")
     a = audit.translation_audit_of(q) if locale else audit.audit_of(q)

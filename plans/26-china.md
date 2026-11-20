@@ -67,6 +67,7 @@ The milestone mentions "two or three main dialects of mainland China". Mandarin 
 - **What remains a real choice:** the script (Simplified vs. Traditional) and the regional vocabulary (mainland vs. Taiwan vs. HK). So: one or two written locales, not three dialects.
 - **Spoken varieties as content:** they make good `chinese-base` questions ("In which city is Wu Chinese spoken?") — part 6's taxonomy, not a locale.
 - **Taxonomy research:** curricula, family culture, per-topic subject, `known_at` and sensitivity status: `authoring/data/bundles/chinese-base/research.md`.
+- **Taxonomy applied:** `app/data/bundles/chinese-base/categories.json` (33 categories, 201 subcategories), `names.{en,zh-Hans,zh-Hant}.json`, `authoring/data/bundles/chinese-base/related.json` (`decision 786: chinese-base taxonomy: categories, subcategories and the map from base`).
 
 ## The Chinese audience
 

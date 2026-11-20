@@ -1,0 +1,681 @@
+{
+  "about": "Plan 230 step 1: every `base` subcategory → the `chinese-base` subcategory its copies go to, or null (dropped without calls: reason, by map). Decision 786.",
+  "subcategories": {
+    "christmas": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "celebrations-around-the-world": {
+      "to": "celebrations-around-the-world"
+    },
+    "calendars-and-new-year": {
+      "to": "celebrations-around-the-world"
+    },
+    "manners-and-customs": {
+      "to": "celebrations-around-the-world"
+    },
+    "vegetables": {
+      "to": "vegetables"
+    },
+    "italian-food": {
+      "to": "world-cuisines"
+    },
+    "mexican-food": {
+      "to": null,
+      "reason": "latam_centric",
+      "by": "map"
+    },
+    "japanese-food": {
+      "to": "world-cuisines"
+    },
+    "fast-food": {
+      "to": "fast-food"
+    },
+    "world-cuisines": {
+      "to": "world-cuisines"
+    },
+    "drinks": {
+      "to": "drinks"
+    },
+    "cheese": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "sweets-and-chocolate": {
+      "to": "sweets-and-chocolate"
+    },
+    "food-history": {
+      "to": "world-cuisines"
+    },
+    "continents": {
+      "to": "continents"
+    },
+    "countries": {
+      "to": "countries"
+    },
+    "capital-cities": {
+      "to": "capital-cities"
+    },
+    "flags": {
+      "to": "flags"
+    },
+    "rivers": {
+      "to": "rivers"
+    },
+    "mountains": {
+      "to": "mountains"
+    },
+    "deserts": {
+      "to": "deserts"
+    },
+    "islands": {
+      "to": "countries"
+    },
+    "planet-earth": {
+      "to": "planet-earth"
+    },
+    "the-sea": {
+      "to": "the-sea"
+    },
+    "oceans": {
+      "to": "the-sea"
+    },
+    "weather-and-climate": {
+      "to": "weather-and-climate"
+    },
+    "natural-phenomena": {
+      "to": "natural-phenomena"
+    },
+    "volcanoes": {
+      "to": "volcanoes"
+    },
+    "earthquakes": {
+      "to": "natural-phenomena"
+    },
+    "natures-records": {
+      "to": "planet-earth"
+    },
+    "rocks-and-minerals": {
+      "to": "rocks-and-minerals"
+    },
+    "plants": {
+      "to": "plants"
+    },
+    "trees": {
+      "to": "trees"
+    },
+    "environment": {
+      "to": "environment"
+    },
+    "recycling": {
+      "to": "environment"
+    },
+    "amazon-animals": {
+      "to": "strange-creatures"
+    },
+    "amazon-plants": {
+      "to": "plants"
+    },
+    "indigenous-peoples-of-the-amazon": {
+      "to": null,
+      "reason": "latam_centric",
+      "by": "map"
+    },
+    "amazon-history-and-exploration": {
+      "to": null,
+      "reason": "latam_centric",
+      "by": "map"
+    },
+    "mammals": {
+      "to": "mammals"
+    },
+    "birds": {
+      "to": "birds"
+    },
+    "reptiles": {
+      "to": "reptiles"
+    },
+    "amphibians": {
+      "to": "reptiles"
+    },
+    "fish": {
+      "to": "fish"
+    },
+    "insects": {
+      "to": "insects"
+    },
+    "strange-creatures": {
+      "to": "strange-creatures"
+    },
+    "animal-records": {
+      "to": "strange-creatures"
+    },
+    "african-wildlife": {
+      "to": "mammals"
+    },
+    "farm-animals": {
+      "to": "farm-animals"
+    },
+    "dogs": {
+      "to": "cats"
+    },
+    "cats": {
+      "to": "cats"
+    },
+    "unusual-pets": {
+      "to": "cats"
+    },
+    "science": {
+      "to": "science"
+    },
+    "maths": {
+      "to": "maths"
+    },
+    "numbers": {
+      "to": "maths"
+    },
+    "shapes": {
+      "to": "maths"
+    },
+    "chemistry": {
+      "to": "chemistry"
+    },
+    "physics": {
+      "to": "physics"
+    },
+    "famous-scientists": {
+      "to": "famous-scientists"
+    },
+    "nobel-prizes": {
+      "to": "famous-scientists"
+    },
+    "human-body": {
+      "to": "human-body"
+    },
+    "body-oddities": {
+      "to": "human-body"
+    },
+    "medicine-and-health": {
+      "to": "medicine-and-health"
+    },
+    "brain-and-mind": {
+      "to": "brain-and-mind"
+    },
+    "space": {
+      "to": "space"
+    },
+    "solar-system": {
+      "to": "solar-system"
+    },
+    "space-race-and-astronauts": {
+      "to": "space-race-and-astronauts"
+    },
+    "stars-and-galaxies": {
+      "to": "stars-and-galaxies"
+    },
+    "inventions": {
+      "to": "inventions"
+    },
+    "famous-inventors": {
+      "to": "inventions"
+    },
+    "accidental-inventions": {
+      "to": "inventions"
+    },
+    "technology": {
+      "to": "technology"
+    },
+    "robots": {
+      "to": "artificial-intelligence"
+    },
+    "artificial-intelligence": {
+      "to": "artificial-intelligence"
+    },
+    "internet": {
+      "to": "internet"
+    },
+    "social-media": {
+      "to": "internet"
+    },
+    "youtubers": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "cars": {
+      "to": "cars"
+    },
+    "planes": {
+      "to": "planes"
+    },
+    "trains": {
+      "to": "trains"
+    },
+    "ships-and-boats": {
+      "to": "ships-and-boats"
+    },
+    "history": {
+      "to": "history"
+    },
+    "prehistory": {
+      "to": "prehistory"
+    },
+    "dinosaurs": {
+      "to": "dinosaurs"
+    },
+    "pharaohs": {
+      "to": "pyramids"
+    },
+    "pyramids": {
+      "to": "pyramids"
+    },
+    "mummies": {
+      "to": "pyramids"
+    },
+    "knights": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "castles": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "pirates": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "roman-empire": {
+      "to": "history"
+    },
+    "french-revolution": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "explorers-and-discoveries": {
+      "to": "explorers-and-discoveries"
+    },
+    "world-war-ii": {
+      "to": "world-war-ii"
+    },
+    "cold-war": {
+      "to": "history"
+    },
+    "us-presidents": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "british-royals": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "famous-crimes": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "famous-scandals": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "greek-gods": {
+      "to": "greek-gods"
+    },
+    "greek-heroes": {
+      "to": "greek-gods"
+    },
+    "roman-mythology": {
+      "to": "greek-gods"
+    },
+    "norse-mythology": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "legends-and-superstitions": {
+      "to": "legends-and-superstitions"
+    },
+    "musical-instruments": {
+      "to": "musical-instruments"
+    },
+    "classical-music": {
+      "to": "classical-music"
+    },
+    "world-music": {
+      "to": null,
+      "reason": "latam_centric",
+      "by": "map"
+    },
+    "rock": {
+      "to": "pop-music"
+    },
+    "pop-music": {
+      "to": "pop-music"
+    },
+    "hip-hop-and-rap": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "eurovision": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "musicals": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "childrens-songs": {
+      "to": null,
+      "reason": "wordplay",
+      "by": "map"
+    },
+    "film": {
+      "to": "film"
+    },
+    "tv-series": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "disney-films": {
+      "to": "disney-films"
+    },
+    "pixar-films": {
+      "to": "disney-films"
+    },
+    "anime": {
+      "to": "anime"
+    },
+    "cartoons": {
+      "to": "cartoons"
+    },
+    "marvel-superheroes": {
+      "to": "marvel-superheroes"
+    },
+    "dc-superheroes": {
+      "to": "marvel-superheroes"
+    },
+    "famous-villains": {
+      "to": "film"
+    },
+    "oscars": {
+      "to": "film"
+    },
+    "science-fiction": {
+      "to": "science-fiction"
+    },
+    "fantasy": {
+      "to": "harry-potter"
+    },
+    "horror-films": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "reality-tv": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "telenovelas-and-soaps": {
+      "to": null,
+      "reason": "latam_centric",
+      "by": "map"
+    },
+    "james-bond": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "harry-potter": {
+      "to": "harry-potter"
+    },
+    "the-lord-of-the-rings": {
+      "to": "harry-potter"
+    },
+    "video-games": {
+      "to": "video-games"
+    },
+    "retro-games": {
+      "to": "video-games"
+    },
+    "video-game-characters": {
+      "to": "video-game-characters"
+    },
+    "consoles-and-game-companies": {
+      "to": "consoles-and-game-companies"
+    },
+    "football": {
+      "to": "football"
+    },
+    "world-cups": {
+      "to": "world-cups"
+    },
+    "football-history": {
+      "to": "football"
+    },
+    "international-football": {
+      "to": "football"
+    },
+    "basketball": {
+      "to": "basketball"
+    },
+    "tennis": {
+      "to": "tennis"
+    },
+    "swimming": {
+      "to": "swimming"
+    },
+    "athletics": {
+      "to": "athletics"
+    },
+    "extreme-sports": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "summer-olympics": {
+      "to": "summer-olympics"
+    },
+    "winter-olympics": {
+      "to": "winter-olympics"
+    },
+    "formula-1-and-motorsport": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "rugby": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "cricket": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "art": {
+      "to": "art"
+    },
+    "museums": {
+      "to": "art"
+    },
+    "colours": {
+      "to": "colours"
+    },
+    "literature": {
+      "to": "literature"
+    },
+    "fairy-tales": {
+      "to": "fairy-tales"
+    },
+    "childrens-books": {
+      "to": "fairy-tales"
+    },
+    "shakespeare": {
+      "to": "literature"
+    },
+    "poetry": {
+      "to": null,
+      "reason": "wordplay",
+      "by": "map"
+    },
+    "crime-fiction": {
+      "to": "literature"
+    },
+    "photography": {
+      "to": "art"
+    },
+    "language": {
+      "to": null,
+      "reason": "wordplay",
+      "by": "map"
+    },
+    "languages-of-the-world": {
+      "to": "languages-of-the-world"
+    },
+    "famous-quotes": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "proverbs-of-the-world": {
+      "to": null,
+      "reason": "wordplay",
+      "by": "map"
+    },
+    "toys": {
+      "to": "toys"
+    },
+    "board-games": {
+      "to": "board-games"
+    },
+    "magic": {
+      "to": "magic"
+    },
+    "tricks": {
+      "to": "magic"
+    },
+    "optical-illusions": {
+      "to": "magic"
+    },
+    "guinness-world-records": {
+      "to": "guinness-world-records"
+    },
+    "circus": {
+      "to": "magic"
+    },
+    "famous-duos": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "fashion-history": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "fashion-designers": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "traditional-dress": {
+      "to": "traditional-dress"
+    },
+    "shoes-and-accessories": {
+      "to": "product-design"
+    },
+    "product-design": {
+      "to": "product-design"
+    },
+    "wonders-of-the-world": {
+      "to": "wonders-of-the-world"
+    },
+    "famous-landmarks": {
+      "to": "famous-landmarks"
+    },
+    "skyscrapers": {
+      "to": "skyscrapers"
+    },
+    "famous-bridges": {
+      "to": "famous-bridges"
+    },
+    "temples-and-cathedrals": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "architectural-styles": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "world-currencies": {
+      "to": "world-currencies"
+    },
+    "banknotes": {
+      "to": "world-currencies"
+    },
+    "history-of-money": {
+      "to": "history-of-money"
+    },
+    "saving-and-banks": {
+      "to": "economy-and-stock-market"
+    },
+    "economy-and-stock-market": {
+      "to": "economy-and-stock-market"
+    },
+    "world-religions": {
+      "to": "world-religions"
+    },
+    "bible-stories": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    },
+    "sacred-places": {
+      "to": "world-religions"
+    },
+    "famous-philosophers": {
+      "to": "famous-philosophers"
+    },
+    "big-questions": {
+      "to": "famous-philosophers"
+    },
+    "famous-logos": {
+      "to": "famous-logos"
+    },
+    "advertising-slogans": {
+      "to": null,
+      "reason": "wordplay",
+      "by": "map"
+    },
+    "brand-mascots": {
+      "to": "famous-logos"
+    },
+    "brand-origins": {
+      "to": "brand-origins"
+    },
+    "famous-companies": {
+      "to": "brand-origins"
+    },
+    "supermarket-products": {
+      "to": null,
+      "reason": "euro_centric",
+      "by": "map"
+    }
+  }
+}
