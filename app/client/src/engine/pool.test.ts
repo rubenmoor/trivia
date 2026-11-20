@@ -93,10 +93,11 @@ test("parseAgeGroups: bad files throw", () => {
   assert.throws(() => parseAgeGroups({}));
 });
 
-test("parseBundles on the real file: base first, the only base bundle, in every launch language", () => {
+test("parseBundles on the real file: base first, then chinese-base (zh, en), in every launch language", () => {
   const bundles = parseBundles(data("bundles.json"));
   assert.equal(bundles[0].id, "base");
-  assert.deepEqual(bundles.filter((b) => b.kind === "base").map((b) => b.id), ["base"]);
+  assert.deepEqual(bundles.filter((b) => b.kind === "base").map((b) => b.id), ["base", "chinese-base"]);
+  assert.deepEqual(bundles[1].languages, ["zh-Hans", "zh-Hant", "en"]);
   assert.deepEqual(bundles[0].languages, ["es", "es-ES", "en", "de"]);
   assert.ok(bundles.every((b) => b.name && b.description && !("rule" in b) && !("voice" in b)));
   assert.throws(() => parseBundles({ bundles: [] }));

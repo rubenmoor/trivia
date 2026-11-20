@@ -49,6 +49,10 @@
     "geography": {
       "name": "Geography questions bundle",
       "description": "More geography questions: countries, cities, maps, flags, mountains, rivers and seas."
+    },
+    "chinese-base": {
+      "name": "Base bundle: China",
+      "description": "Questions centred on China: history, school, society and culture a Chinese family knows."
     }
   },
   "age_groups": {

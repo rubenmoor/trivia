@@ -16,6 +16,20 @@
       "voice": "idiomatic Latin American Spanish (es-419): words a family anywhere in Latin America uses; Spain has its own es-ES text"
     },
     {
+      "id": "chinese-base",
+      "kind": "base",
+      "icon": "scroll",
+      "languages": [
+        "zh-Hans",
+        "zh-Hant",
+        "en"
+      ],
+      "name": "Paquete básico: China",
+      "description": "Preguntas centradas en China: historia, escuela, sociedad y cultura que conoce una familia china.",
+      "rule": "China-centred: what a Chinese family knows or learns at school (language and literature, history, geography, science, society, daily life, culture, food, sport, media), answerable without any connection to Europe or the Americas; well-known facts about any country still belong in `base`. Contested political topics only as neutral facts: a question states an undisputed fact (a date, a name) without judgement or status wording; each map or flag is judged on its own.",
+      "voice": "English for a Chinese family: Chinese names in pinyin in Chinese order (family name first: Li Bai, Zhang Yimou), terms with characters in brackets where they help (Mid-Autumn Festival (中秋节)), metric units, dates as 1 October 1949; zh-Hans: standard mainland written Chinese in simplified characters (软件, 出租车); zh-Hant: Taiwan written Chinese in traditional characters (軟體, 計程車)"
+    },
+    {
       "id": "colombia",
       "kind": "region",
       "country": "CO",
