@@ -91,3 +91,10 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per questi
 - Media-first sources in es (plan 205): 2026-11-18, task 2201: `tr-es-24`, 102 translated, 101 approved, 1 need work, 0 not travelling, $0.12 per approved translation, audit agreement 48.3 %, health ✗; all approved media-first sources (batch-78 to batch-86) now in es.
 - Media-first sources in es-ES (plan 205): 2026-11-18, task 2202: `tr-es-ES-31`, 102 translated, 101 approved, 1 need work, 0 not travelling, $0.10 per approved translation, audit agreement 51.7 %, health ✗; all approved media-first sources (batch-78 to batch-86) now in es-ES.
 - Media-first sources in de (plan 205): 2026-11-18, task 2203: `tr-de-31`, 59 translated, 53 approved, 6 need work, 0 not travelling, $0.13 per approved translation, audit agreement 28.8 %, health ✗; all approved media-first sources (batch-78 to batch-86) now in de.
+
+## chinese-base media budget (2026-11-20, task 2324)
+- `stage-media.mjs --check` on the current staging: ✓ (content 6170 files / 6020 MB, no size line for base packs, decision 653; zh fonts 6.8 of 8 MB, audio 6.1 of 7 MB, horizon 0.5 of 2 MB; no file over its per-file cap).
+- chinese-base now: 962 approved in en, all with media, 950 distinct files, all shared with `base` (copies, plan 227); own files: 2 (not yet encoded). zh pools reuse the same files.
+- Estimate at 6000 per locale: base averages 0.96 MB/file, 0.88 MB per approved question (5.9 GB / 6724). Worst case every one of ~5040 new questions brings its own file: ≈ 4.4 GB extra (≈ 4.4 GB for en; zh adds none, same files). Likely less (not every new question has media).
+- Only budget that could bite: per-file caps (`file` 5 MB, `video` 32 MB) and the demo's `content` 110 MB (demo only). The content depot has no total cap (decision 653), so nothing is over budget now or by the estimate: no decision, `media-budget.json` unchanged.
+- Recheck with `stage-media.mjs --check` on a fresh staging once part 7's new questions land.
