@@ -7,6 +7,7 @@ import layout  # paths (D-35)
 from layout import REPO as ROOT, SOURCE_POOL as POOL, WORK
 import progress  # authoring/tools/progress.py: the plain log (QG-18, task 1131)
 import hant  # authoring/tools/hant.py: zh-Hant by conversion (decision 762)
+import vocab  # authoring/tools/vocab.py: the zh-Hant vocabulary pass (decision 797)
 import categories  # authoring/tools/categories.py: every bundle's categories (D-19, D-43)
 import media as media_tool  # authoring/tools/media.py: candidates, sheets, picks (`media` is the cache)
 import targets  # authoring/tools/targets.py: pool targets (D-53)
@@ -460,6 +461,8 @@ def cmd_convert_batch(args):
         done, gone = hant.sync(bundle, pool, dry_run=True)
         print(f"zh-Hant would convert {len(done)} {bundle} zh-Hans translations and withdraw {len(gone)}"
               + (": " + ", ".join(done[:20]) + (" …" if len(done) > 20 else "") if done else "") + ".")
+        print(f"The vocabulary pass would read {len(vocab.pending(bundle, pool, translations.load(hant.LOCALE)['questions']))} "
+              f"unread converted rows now (the pilot {vocab.PILOT} first).")
         return []
     result = {}
 
@@ -468,12 +471,24 @@ def cmd_convert_batch(args):
         print(f"  converted {len(result['done'])}, withdrew {len(result['gone'])} (zh-Hans no longer approved)")
         return []
 
-    t0 = run_steps([("convert", convert, None), ("export", lambda a: cmd_export(a) or [], argparse.Namespace())], again)
-    n = len(result["done"]) + len(result["gone"])
+    def vocabulary(_):
+        got = vocab.run_pass(bundle, pool, args.jobs, args.count)
+        result["vocab"] = got
+        return got[3] if got else []
+
+    t0 = run_steps([("convert", convert, None), ("vocab", vocabulary, None),
+                    ("export", lambda a: cmd_export(a) or [], argparse.Namespace())], again)
+    n = len(result["done"]) + len(result["gone"]) + len(result["vocab"][1] if result["vocab"] else [])
+    if result["vocab"]:
+        run, rep, terms, _ = result["vocab"]
+        print(f"vocabulary pass {run}: {len(rep)} rows read, {sum(r['verdict'] == 'fix' for r in rep.values())} fixed, "
+              f"{sum(r['verdict'] == 'flag' for r in rep.values())} flagged, {len(terms)} new exception terms "
+              f"(authoring/reports/{run}.md).")
     print(f"\nDone: zh-Hant: {len(result['done'])} converted from zh-Hans, {len(result['gone'])} withdrawn "
           f"(took {progress.duration(time.monotonic() - t0)}).")
     if n:
-        files = [translations.path(hant.LOCALE), layout.POOL_FILE(hant.LOCALE), layout.POOL_FILE(hant.LOCALE, bundle), layout.BUNDLE_DATA, layout.DEMO_DATA]
+        files = [translations.path(hant.LOCALE), layout.POOL_FILE(hant.LOCALE), layout.POOL_FILE(hant.LOCALE, bundle), layout.BUNDLE_DATA, layout.DEMO_DATA,
+                 hant.EXCEPTIONS, *([layout.REPORTS / f"{result['vocab'][0]}.md"] if result["vocab"] else [])]
         print("Commit exactly this:\n  git add " + " ".join(f.relative_to(ROOT).as_posix() for f in files) + "\n"
               f"  git commit -m \"zh-Hant: {len(result['done'])} {'' if bundle == 'base' else bundle + ' '}questions converted from zh-Hans "
               f"(qgen batch --translate)\"")

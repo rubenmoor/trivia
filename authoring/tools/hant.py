@@ -78,7 +78,9 @@ def convert_entries(entries, terms):
 
 def current(t, h, rules):
     """The converted entry `t` is up to date with the zh-Hans entry `h` and the exceptions list (hash `rules`)."""
-    return (t.get("converted_from") == {"locale": FROM, "text": translations.source_hash(h), "rules": rules}
+    cf = t.get("converted_from") or {}
+    return (cf.get("locale") == FROM and cf.get("text") == translations.source_hash(h)
+            and (cf.get("rules") == rules or bool(t.get("vocab")))  # a row the vocabulary pass read keeps its edits
             and t.get("source_hash") == h["source_hash"])
 
 

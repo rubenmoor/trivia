@@ -100,12 +100,15 @@ A pm worker (environment `PM_WORKER=1`) follows the steps above with these chang
 
 ## zh-Hant by conversion
 
-`qgen batch --translate zh-Hant [--bundle chinese-base]` converts the approved zh-Hans translations into zh-Hant (`decision 762: zh-Hant translation path: its own translation run, or conversion from zh-Hans?`, answer 2). It makes no LLM call, has no run directory and no `locale-zh-Hant.md` (that prompt exists only for the vocabulary pass, `task 2420: zh-Hant vocabulary pass prompt: draft, approval, pilot of 50, native read sheet`).
+`qgen batch --translate zh-Hant [--bundle chinese-base]` converts the approved zh-Hans translations into zh-Hant (`decision 762: zh-Hant translation path: its own translation run, or conversion from zh-Hans?`, answer 2). The conversion makes no LLM call and there is no `locale-zh-Hant.md`; the only prompt is the vocabulary pass `prompts/vocab-zh-Hant.md` (`decision 797: zh-Hant vocabulary pass prompt: approve the draft?`), which does call Claude.
 
 - One command, no other arguments; `--dry-run` lists what it would convert. Needs `opencc` (dev shell).
-- Steps: convert → export → validate. Exit codes as in step 3; it takes seconds. Commit the printed files (`questions.zh-Hant.json`, the pools).
+- Steps: convert → vocab → export → validate. Exit codes as in step 3; the conversion takes seconds, the pass minutes. Commit the printed files (`questions.zh-Hant.json`, the pools, the exceptions list, the pass's report).
 - Convert: OpenCC `s2twp` over question, answer, wrong answers, hints, description, fun fact, after the exceptions list `authoring/data/zh-hant-exceptions.json` (zh-Hans term → exact zh-Hant text, longest first; names, titles and one-to-many characters `s2twp` gets wrong; extended by the vocabulary pass and the native read).
 - Rows: `batch: conv-zh-Hant`, `review: null`, `converted_from` (hash of the zh-Hans text and of the exceptions list). A changed zh-Hans text, a changed exceptions list or a changed English source converts again (an entry the vocabulary pass edited is overwritten then); a zh-Hans row no longer approved or current sets its zh-Hant row to `needs_work` (out of the pool); a rejected row stays.
+- Vocabulary pass (`authoring/tools/vocab.py`, run `vocab-zh-Hant-<n>`, opus, 50 rows per call): reads each unread converted row (approved, no `vocab` key) next to its zh-Hans row and English source; fixes only Taiwan vocabulary, 「」 quotes, Taiwan titles and transliterations (`ok` / `fix` / `flag`); a `fix` that changes a count, a number or the answer's distinctness is asked again, after 3 tries the row stays as converted (`skip`, in the report). A `flag` (sensitivity, decision 757) sets the row to `needs_work`. Every row read gets `vocab: {run, on, verdict}`; it is not read again, and a changed exceptions list no longer re-converts it (a changed zh-Hans text or English source does, and the new row is unread again).
+- The pass adds whole recurring terms (two characters or more, in the Simplified text, no conflict) to `zh-hant-exceptions.json`; rows without `vocab` convert with them next time.
+- Pilot: the first run reads 50 rows, `--count N` overrides; the next run waits for `qgen health ack vocab-zh-Hant-1 "<note>"` and then reads all unread rows. An interrupted run resumes by the same command. Native read: `qgen spotcheck export --release zh-Hant --size 50` (decision 754, nothing waits for it).
 - UI and category names are not touched (their own catalogs and `names.zh-Hant.json`).
 
 ## What the batch does (for reference)
