@@ -134,5 +134,25 @@ class Vocab(unittest.TestCase):
                 self.assertEqual(vocab.apply({"q-1": {"verdict": "ok", "text": None, "note": "", "pairs": []}}, "r", "opus"), {})  # read once
 
 
+class VocabAck(unittest.TestCase):
+    def test_ack_opens_the_gate(self):
+        import argparse, health
+        with tempfile.TemporaryDirectory() as tmp:
+            work, acks = Path(tmp) / "work", Path(tmp) / "acks.json"
+            qgen.save_json(work / "vocab-zh-Hant-1" / "run.json", {"mode": "vocab", "ids": ["q-1"], "done": "2026-11-20"})
+            with mock.patch.object(qgen, "WORK", work), mock.patch.object(health, "WORK", work), \
+                    mock.patch.object(vocab, "WORK", work), mock.patch.object(health, "HEALTH_ACKS", acks), \
+                    mock.patch.object(qgen.layout, "HEALTH_ACKS", acks), mock.patch.object(translations, "load", lambda l: {"questions": []}), \
+                    mock.patch.object(vocab, "pending", return_value=[]) as pending, \
+                    mock.patch.object(health, "write_batches_md", return_value=qgen.ROOT / "x.md"):
+                self.assertIn("vocab-zh-Hant-1", health.vocab_runs())
+                self.assertIsNone(vocab.run_pass("chinese-base", [], 1))
+                pending.assert_not_called()  # pilot waits
+                qgen.cmd_health_ack(argparse.Namespace(batch="vocab-zh-Hant-1", note="looked"))
+                self.assertIn("vocab-zh-Hant-1", health.acks())
+                vocab.run_pass("chinese-base", [], 1)
+                pending.assert_called_once()
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1955,12 +1955,12 @@ def cmd_gc(args):
 def cmd_health_ack(args):
     """The developer has looked at a failing batch: records the look, a warning of `qgen batch` goes (decision 414)."""
     import health  # authoring/tools/health.py (imports qgen)
-    if args.batch not in health.batch_runs() + health.translation_runs() + health.fit_runs():
-        sys.exit(f"not a merged batch, translation or fit run: {args.batch}")
+    if args.batch not in health.batch_runs() + health.translation_runs() + health.fit_runs() + health.vocab_runs():
+        sys.exit(f"not a merged batch, translation or fit run, nor a done vocabulary run: {args.batch}")
     a = health.acks()
     a[args.batch] = {"date": datetime.date.today().isoformat(), "note": args.note}
     save_json(layout.HEALTH_ACKS, a)
-    nxt = (f" --translate {args.batch[3:].rsplit('-', 1)[0]}" if args.batch.startswith("tr-")
+    nxt = (f" --translate {args.batch.split('-', 1)[1].rsplit('-', 1)[0]}" if args.batch.startswith(("tr-", "vocab-"))
            else f" --bundle {health.run_bundle(args.batch)} --from base" if args.batch.startswith("fit-") else "")
     print(f"acked {args.batch}; `qgen batch{nxt}` may start the next run")
     print(f"  report: {health.write_batches_md().relative_to(ROOT)}")
