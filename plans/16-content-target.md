@@ -93,8 +93,11 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per questi
 - Media-first sources in de (plan 205): 2026-11-18, task 2203: `tr-de-31`, 59 translated, 53 approved, 6 need work, 0 not travelling, $0.13 per approved translation, audit agreement 28.8 %, health ✗; all approved media-first sources (batch-78 to batch-86) now in de.
 
 ## chinese-base media budget (2026-11-20, task 2324)
-- `stage-media.mjs --check` on the current staging: ✓ (content 6170 files / 6020 MB, no size line for base packs, decision 653; zh fonts 6.8 of 8 MB, audio 6.1 of 7 MB, horizon 0.5 of 2 MB; no file over its per-file cap).
-- chinese-base now: 962 approved in en, all with media, 950 distinct files, all shared with `base` (copies, plan 227); own files: 2 (not yet encoded). zh pools reuse the same files.
-- Estimate at 6000 per locale: base averages 0.96 MB/file, 0.88 MB per approved question (5.9 GB / 6724). Worst case every one of ~5040 new questions brings its own file: ≈ 4.4 GB extra (≈ 4.4 GB for en; zh adds none, same files). Likely less (not every new question has media).
-- Only budget that could bite: per-file caps (`file` 5 MB, `video` 32 MB) and the demo's `content` 110 MB (demo only). The content depot has no total cap (decision 653), so nothing is over budget now or by the estimate: no decision, `media-budget.json` unchanged.
-- Recheck with `stage-media.mjs --check` on a fresh staging once part 7's new questions land.
+- Fresh staging (`node stage-media.mjs` after `trivia-media sync --status approved`: 5 files were missing from the cache, 4 `colombia`, 1 `base`), then `stage-media.mjs --check`: ✗ 1 failure.
+  - ✓ content 6147 files / 5637 MB (no size line, decision 653), incl. base pack chinese-base 950 files; zh fonts 6.8 of 8 MB, audio 6.1 of 7 MB, horizon 0.5 of 2 MB
+  - ✗ `3bfc6750e872574b.webm` 32.2 MB > `video` 32 MB: q-20957 (`base`, not chinese-base); 30 s at the 8 Mbit/s ceiling + audio + VP9 overshoot; can recur with new videos → `decision 805` (pending)
+  - fixed: `.mpg` videos shipped unencoded (227.5 MB and 57.2 MB); `resolve.mjs` `SHIPPED` now maps `.mpg`/`.mpeg` → WebM: 4.1 and 6.3 MB
+- chinese-base now: 962 approved in en (50 each in zh-Hans, zh-Hant), all with media; 950 distinct files: 948 shared with `base` (copies, plan 227), 2 own (`6a32fb75660fb57b.webp` 1.1 MB, `fa5e1b1bdaf04690.webp` 0.9 MB); 479 MB in all. zh pools reuse the same files.
+- Estimate at 6000 per locale: ~5040 new en questions. Base: 0.84 MB per approved (5619 MB / 6724; images 3205 MB, audio 128 MB, video 291 clips 2619 MB). chinese-base so far 0.50 MB per approved (fewer videos). Own files ≈ 2.5 GB (chinese-base mix) to ≈ 4.2 GB (base mix, every question its own file); zh adds none.
+- No total line for the content depot (decision 653): the only budget that bites is the per-video line, decision 805; `media-budget.json` unchanged until its answer.
+- Recheck on a fresh staging once part 7's new questions land.
