@@ -157,7 +157,7 @@ export function cacheName(url) {
 const SHIPPED = {
   ...Object.fromEntries([".jpg", ".jpeg", ".png", ".tif", ".tiff", ".gif"].map((e) => [e, ".webp"])),
   ...Object.fromEntries([".mp3", ".ogg", ".oga", ".wav", ".flac", ".m4a"].map((e) => [e, ".opus"])),
-  ...Object.fromEntries([".mp4", ".mov", ".ogv", ".mkv"].map((e) => [e, ".webm"])),
+  ...Object.fromEntries([".mp4", ".mov", ".ogv", ".mkv", ".mpg", ".mpeg"].map((e) => [e, ".webm"])),
 };
 export function shippedName(url) {
   const name = cacheName(url);
