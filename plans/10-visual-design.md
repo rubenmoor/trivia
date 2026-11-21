@@ -153,7 +153,7 @@ The picture should stay visible; the interface floats over it.
 ## Tasks
 - [x] VD-1 Developer confirms the palette, fonts and type scale from the implementation (D-30). *2026-10-06: confirmed («visual design is great»).*
 - [x] VD-2 Theme file: tokens, `--u`, glass classes; replace raw colours and `vw` sizes in `app/client/src/game/`. *2026-10-06: `app/client/src/game/theme.css`, scoped to `.game`.*
-- [x] VD-3 Ship Baloo 2 and Nunito (`woff2` + OFL licence) in `app/client/public/fonts/`. *2026-10-06: variable fonts, Latin subset (from Fontsource), with `OFL-*.txt`.*
+- [x] VD-3 Ship Baloo 2 and Nunito (`woff2` + OFL licence) in `app/client/public/fonts/`. *2026-10-06: variable fonts, Latin subset (from Fontsource), with `OFL-*.txt`. 2026-11-20, plan 142: CJK faces beside them for zh (Han Rounded SC/TC, LXGW WenKai, Ma Shan Zheng; `unicode-range`, `:lang(zh-*)` stacks in `theme.css`; decisions 764, 767, 769; 15a "Fonts").*
 - [x] VD-4 Question screen layout: floating question card, 70 % answer grid, safe area, HUD chip, free strip for the joker tray (with UI-2, JK-4). *2026-10-06: `Question.svelte`, `Hud.svelte`; since plan 116 `game/screens/Question.svelte` + `game/question/`.*
 - [x] VD-5 Candy buttons and answer tile states, with ✓/✗ badges. *2026-10-06: also the envelope cards on Select.*
 - [x] VD-6 Stage backgrounds: spotlight, drifting «?», Correct/Wrong/Victory variants. *2026-10-06: `Stage.svelte`.*

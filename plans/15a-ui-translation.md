@@ -9,7 +9,7 @@ Sub-plan of [15](15-i18n.md). Translates everything on screen that isn't a quest
 - **Copy with variants** (`copy.ts`: several milestone and consolation lines per level) stays as arrays per language; translations don't have to match the count.
 - **Joker names are content, not labels:** playful names, made in English first to fit one shared symbol, then translated per language ("Joker names" below).
 - **Keyboard keys follow the names today** (`S` Soplo, `P` Paso, `F`, `T`, `X`). Options: language-dependent keys from the catalog, or neutral keys for all languages (e.g. `Q W E R T` in a row, or `F1`–`F5`). Decide in LUI-4. `A`–`D` stay for the answers everywhere.
-- **Fonts:** Baloo 2 and Nunito (VD-3) cover Latin scripts, including Vietnamese with Baloo 2. Cyrillic, Greek, CJK or Arabic would need other fonts and RTL work. The launch stays with Latin-script languages.
+- **Fonts:** Baloo 2 and Nunito (VD-3) cover Latin scripts, including Vietnamese with Baloo 2. Chinese (milestone 12, plan 142): own CJK faces, loaded only for CJK code points (`unicode-range` in `theme.css`, so a Latin page never fetches them): Han Rounded SC / TC (OFL, regular + bold) for text, LXGW WenKai for headings, Ma Shan Zheng for big `zh-Hans` captions (decisions 764, 767, 769; WenKai stands in where Ma Shan Zheng lacks Traditional glyphs); `:lang(zh-Hans|zh-Hant)` sets `--font-text`, `--font-display`, `--font-brush`, system CJK fonts last. Subsets made by `app/desktop/subset-fonts.mjs` (catalogs, names, pools, common set), checked by `check:literals`; budget in `app/desktop/media-budget.json`. Cyrillic, Greek, Arabic stay out (no RTL work; ru, pt-BR dropped).
 - **Text length:** German and French run 20–35 % longer than Spanish or English. Every screen gets a check with the longest language (pseudo-locale `xx` that pads strings by 40 % and adds accents, for testing).
 - **Printable cards** (`/comodines`, JK-11) and the review tool: the cards are translated with the rest; the review tool stays Spanish/English for the author.
 - **Translation work:** Claude drafts the catalogs; a native speaker checks each launch language (playtest, not only a read-through).
@@ -114,3 +114,9 @@ One native speaker per launch catalog (`es` the family, `es-ES`, `en`, `de`), ar
   - wrong register (`du`/`Sie`, `tú`/`usted`/`vosotros`, regionalisms)
   - unclear rule (joker or mode not understood without help)
   - anything else that reads like a translation
+
+## zh playtest (plan 142, task 2312)
+- Gallery checked by the developer for `zh-Hans` and `zh-Hant` (decisions 798, 800): approved.
+- Native playtest skipped for both (decisions 799, 801; native review is for later, decision 781): the zh catalogs, style guides (`locales/style/zh-*.md`) and joker names are as drafted; joker names stay revisable by a later volunteer read (catalog, glossary, Steam VDF blocks).
+- Steam's floating keyboard with a Chinese name: deferred (decisions 803, 804, decision 125); names go in by IME or the Latin pad picker.
+- CJK playtest rows for a later native pass: glyphs everywhere, Latin keys with an IME installed, name entry by IME / on-screen keyboard, `chinese-base` the only base offered in zh.
