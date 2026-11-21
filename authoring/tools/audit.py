@@ -123,9 +123,17 @@ def sample_order(run, path, decisions):
     return order
 
 
+def read_audit(p):
+    """The audit in p; None if missing or blank (an interrupted write: empty or NULs), so the audit step redoes it."""
+    if not p.exists() or not p.read_text(encoding="utf-8").strip(" \t\r\n\x00"):
+        return None
+    return load_json(p)
+
+
 def audits(run):
     """{id: audit} of the run's audited questions."""
-    return {p.stem: load_json(p) for p in sorted((WORK / run / "audit").glob("q-*.json"))}
+    found = {p.stem: read_audit(p) for p in sorted((WORK / run / "audit").glob("q-*.json"))}
+    return {i: a for i, a in found.items() if a is not None}
 
 
 _backaudits = ((), {})  # (folders with mtimes, index)
@@ -152,12 +160,12 @@ def audit_path(q):
 
 def audit_of(q):
     p = audit_path(q)
-    return load_json(p) if p else None
+    return read_audit(p) if p else None
 
 
 def translation_audit_of(t):
     """A translation's own audit: work/<t.batch>/audit/<id>.json (plan 67); never the source's back-audit."""
-    return load_json(WORK / t["batch"] / "audit" / f"{t['id']}.json") if t.get("batch") else None
+    return read_audit(WORK / t["batch"] / "audit" / f"{t['id']}.json") if t.get("batch") else None
 
 
 def run_number(name):
@@ -223,7 +231,7 @@ def audit_ids(run, ids, args):
     pool = run_questions(run)
     pool_en = as_locale(pool, "en")
     by_id = {q["id"]: q for q in pool}
-    todo = [by_id[i] for i in ids if i in by_id and not (d / f"{i}.json").exists()]
+    todo = [by_id[i] for i in ids if i in by_id and read_audit(d / f"{i}.json") is None]
     progress.resumed("audit", sum(i in by_id for i in ids) - len(todo), len(todo), "questions")
     locale = run_locale(WORK / run)
     names = ["house-style", "audit", *(["translate-review"] if locale else [])]

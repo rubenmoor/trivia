@@ -301,6 +301,21 @@ class FixedSlot(Base):
         self.assertNotIn("SECRET-VERDICT", raw)
         self.assertNotIn("review", inp)
 
+    def test_blank_audit_file_is_redone(self):
+        self.patch(audit, "WORK", self.work)
+        self.patch(audit, "POOL", self.pool)
+        self.patch(mf, "LEDGER", self.work / "media-first" / "files.jsonl")
+        self.review({"round1": {"decision": "approved", "feedback": "", "fix": "", "problems": []}})
+        d = self.work / "batch-1" / "audit"
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "q-0001.json").write_text("")  # an interrupted write
+        self.assertEqual(audit.audits("batch-1"), {})
+        out = {"verdict": "ok", "problems": [], "severity": "minor", "difficulty_estimate": 3, "notes": "n"}
+        self.patch(audit, "claude", lambda *a, **kw: (out, "opus"))
+        self.patch(audit, "related_questions", lambda *a: [])
+        audit.audit_ids("batch-1", ["q-0001"], argparse.Namespace(jobs=1, model="opus"))
+        self.assertEqual(audit.audits("batch-1")["q-0001"]["verdict"], "ok")
+
     def test_review_page_aids(self):
         sys.path.insert(0, str(Path(__file__).parent.parent / "server"))
         import main as server  # noqa: E402

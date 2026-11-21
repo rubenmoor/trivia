@@ -163,6 +163,14 @@ class ResumeRobustness(unittest.TestCase):
         self.assertEqual(self.path.read_text(), '{"title": "a"}\n{"title": "b", "ver\n{"title": "c"}\n')
         self.assertEqual([t["title"] for t in mf.read_jsonl(self.path)], ["a", "c"])
 
+    def test_nul_filled_line_is_skipped(self):
+        self.path.write_text('{"title": "a"}\n' + "\x00" * 262 + '\n{"title": "c"}\n' + "\x00" * 5 + '{"title": "d"}\n')
+        self.assertEqual([t["title"] for t in mf.read_jsonl(self.path)], ["a", "c", "d"])
+
+    def test_nul_padded_cut_off_row_is_skipped(self):
+        self.path.write_text('{"title": "a"}\n{"title": "x' + "\x00" * 5 + '\n{"title": "c"}\n')
+        self.assertEqual([t["title"] for t in mf.read_jsonl(self.path)], ["a", "c"])
+
     def test_bad_middle_line_fails(self):
         self.path.write_text('{"title": "a"}\n{oops\n{"title": "c"}\n')
         with self.assertRaises(ValueError):
