@@ -1,0 +1,1217 @@
+{
+  "subcategory": "provinces",
+  "facets": [
+    "North and Northeast provinces and capitals",
+    "East coast provinces and capitals",
+    "Central and South provinces and capitals",
+    "Southwest and Northwest provinces and capitals",
+    "Abbreviations from ancient states",
+    "Abbreviations from rivers, mountains and towns",
+    "Where province names come from",
+    "Provincial nicknames",
+    "Capital city nicknames",
+    "Provinces on the map",
+    "Abbreviations in everyday life",
+    "Signature landmarks of each province"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 4,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 5,
+      "odd_one_out": 4,
+      "who": 1,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 4,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Beijing",
+      "facet": "North and Northeast provinces and capitals",
+      "known_at": 1
+    },
+    {
+      "name": "Tianjin",
+      "facet": "North and Northeast provinces and capitals",
+      "known_at": 3
+    },
+    {
+      "name": "Hebei",
+      "facet": "North and Northeast provinces and capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Shanxi",
+      "facet": "North and Northeast provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Inner Mongolia",
+      "facet": "North and Northeast provinces and capitals",
+      "known_at": 3
+    },
+    {
+      "name": "Liaoning",
+      "facet": "North and Northeast provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Jilin",
+      "facet": "North and Northeast provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Heilongjiang",
+      "facet": "North and Northeast provinces and capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Capital of Hebei: Shijiazhuang",
+      "facet": "North and Northeast provinces and capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Capital of Shanxi: Taiyuan",
+      "facet": "North and Northeast provinces and capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Capital of Inner Mongolia: Hohhot",
+      "facet": "North and Northeast provinces and capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Capital of Liaoning: Shenyang",
+      "facet": "North and Northeast provinces and capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Capital of Jilin: Changchun",
+      "facet": "North and Northeast provinces and capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Capital of Heilongjiang: Harbin",
+      "facet": "North and Northeast provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Dalian",
+      "facet": "North and Northeast provinces and capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Three Northeastern Provinces (东三省)",
+      "facet": "North and Northeast provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Shanghai",
+      "facet": "East coast provinces and capitals",
+      "known_at": 1
+    },
+    {
+      "name": "Jiangsu",
+      "facet": "East coast provinces and capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Zhejiang",
+      "facet": "East coast provinces and capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Anhui",
+      "facet": "East coast provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Fujian",
+      "facet": "East coast provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Jiangxi",
+      "facet": "East coast provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Shandong",
+      "facet": "East coast provinces and capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Capital of Jiangsu: Nanjing",
+      "facet": "East coast provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Capital of Zhejiang: Hangzhou",
+      "facet": "East coast provinces and capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Capital of Anhui: Hefei",
+      "facet": "East coast provinces and capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Capital of Fujian: Fuzhou",
+      "facet": "East coast provinces and capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Capital of Jiangxi: Nanchang",
+      "facet": "East coast provinces and capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Capital of Shandong: Jinan",
+      "facet": "East coast provinces and capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Qingdao",
+      "facet": "East coast provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Henan",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Hubei",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Hunan",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Guangdong",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 3
+    },
+    {
+      "name": "Guangxi",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Hainan",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 3
+    },
+    {
+      "name": "Hong Kong",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 2
+    },
+    {
+      "name": "Macao",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 3
+    },
+    {
+      "name": "Capital of Henan: Zhengzhou",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Capital of Hubei: Wuhan",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Capital of Hunan: Changsha",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Capital of Guangdong: Guangzhou",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Capital of Guangxi: Nanning",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Capital of Hainan: Haikou",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Shenzhen",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Sanya",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Luoyang",
+      "facet": "Central and South provinces and capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Chongqing",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 3
+    },
+    {
+      "name": "Sichuan",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 3
+    },
+    {
+      "name": "Guizhou",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Yunnan",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Tibet",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 3
+    },
+    {
+      "name": "Shaanxi",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Gansu",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Qinghai",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Ningxia",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Xinjiang",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 3
+    },
+    {
+      "name": "Capital of Sichuan: Chengdu",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Capital of Guizhou: Guiyang",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Capital of Yunnan: Kunming",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Capital of Tibet: Lhasa",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Capital of Shaanxi: Xi'an",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Capital of Gansu: Lanzhou",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Capital of Qinghai: Xining",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Capital of Ningxia: Yinchuan",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Capital of Xinjiang: Urumqi",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Kashgar",
+      "facet": "Southwest and Northwest provinces and capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Jin (晋) for Shanxi",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 8
+    },
+    {
+      "name": "Lu (鲁) for Shandong",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 7
+    },
+    {
+      "name": "Qin (秦) for Shaanxi",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 9
+    },
+    {
+      "name": "Wan (皖) for Anhui",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 9
+    },
+    {
+      "name": "Dian (滇) for Yunnan",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 10
+    },
+    {
+      "name": "Shu (蜀) for Sichuan",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 8
+    },
+    {
+      "name": "Yue (粤) for Guangdong",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 6
+    },
+    {
+      "name": "Min (闽) for Fujian",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 9
+    },
+    {
+      "name": "Ji (冀) for Hebei",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 8
+    },
+    {
+      "name": "Yu (豫) for Henan",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 8
+    },
+    {
+      "name": "Qian (黔) for Guizhou",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 9
+    },
+    {
+      "name": "Chu (楚) for Hubei",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 10
+    },
+    {
+      "name": "Wu (吴) for Jiangsu",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 11
+    },
+    {
+      "name": "Ba (巴) for Chongqing",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 11
+    },
+    {
+      "name": "Qi (齐) for Shandong",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 11
+    },
+    {
+      "name": "Yan (燕) for Hebei",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 12
+    },
+    {
+      "name": "Nine Provinces (九州)",
+      "facet": "Abbreviations from ancient states",
+      "known_at": 10
+    },
+    {
+      "name": "Hu (沪) for Shanghai",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 5
+    },
+    {
+      "name": "Jin (津) for Tianjin",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 6
+    },
+    {
+      "name": "Xiang (湘) for Hunan",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 7
+    },
+    {
+      "name": "Gan (赣) for Jiangxi",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 9
+    },
+    {
+      "name": "Zhe (浙) for Zhejiang",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 6
+    },
+    {
+      "name": "Liao (辽) for Liaoning",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 6
+    },
+    {
+      "name": "Hei (黑) for Heilongjiang",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 5
+    },
+    {
+      "name": "Ji (吉) for Jilin",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 6
+    },
+    {
+      "name": "Yu (渝) for Chongqing",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 7
+    },
+    {
+      "name": "E (鄂) for Hubei",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 9
+    },
+    {
+      "name": "Su (苏) for Jiangsu",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 6
+    },
+    {
+      "name": "Gan (甘) for Gansu",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 7
+    },
+    {
+      "name": "Long (陇) for Gansu",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 11
+    },
+    {
+      "name": "Qiong (琼) for Hainan",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 10
+    },
+    {
+      "name": "Gui (桂) for Guangxi",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 8
+    },
+    {
+      "name": "Shaan (陕) for Shaanxi",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 7
+    },
+    {
+      "name": "Qing (青) for Qinghai",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 7
+    },
+    {
+      "name": "Chuan (川) for Sichuan",
+      "facet": "Abbreviations from rivers, mountains and towns",
+      "known_at": 4
+    },
+    {
+      "name": "License plate province character",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 4
+    },
+    {
+      "name": "Jing (京) for Beijing",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 3
+    },
+    {
+      "name": "Gang (港) for Hong Kong",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 5
+    },
+    {
+      "name": "Ao (澳) for Macao",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 6
+    },
+    {
+      "name": "Meng (蒙) for Inner Mongolia",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 6
+    },
+    {
+      "name": "Zang (藏) for Tibet",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 6
+    },
+    {
+      "name": "Xin (新) for Xinjiang",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 6
+    },
+    {
+      "name": "Ning (宁) for Ningxia",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 7
+    },
+    {
+      "name": "Jing-Jin-Ji (京津冀)",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 8
+    },
+    {
+      "name": "Guangdong–Hong Kong–Macao Greater Bay Area (粤港澳大湾区)",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 8
+    },
+    {
+      "name": "Beijing–Shanghai High-Speed Railway (京沪高铁)",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 6
+    },
+    {
+      "name": "Beijing–Guangzhou Railway (京广铁路)",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 8
+    },
+    {
+      "name": "Chuan-Yu (川渝)",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 8
+    },
+    {
+      "name": "Sichuan cuisine (川菜)",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 3
+    },
+    {
+      "name": "Cantonese cuisine (粤菜)",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 5
+    },
+    {
+      "name": "Shandong cuisine (鲁菜)",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 7
+    },
+    {
+      "name": "Hunan cuisine (湘菜)",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 6
+    },
+    {
+      "name": "Peking opera (京剧)",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 3
+    },
+    {
+      "name": "Yu opera (豫剧)",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 8
+    },
+    {
+      "name": "Cantonese opera (粤剧)",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 7
+    },
+    {
+      "name": "Qinqiang opera (秦腔)",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 10
+    },
+    {
+      "name": "Minnan dialect (闽南话)",
+      "facet": "Abbreviations in everyday life",
+      "known_at": 9
+    },
+    {
+      "name": "Yellow River",
+      "facet": "Where province names come from",
+      "known_at": 4
+    },
+    {
+      "name": "Dongting Lake",
+      "facet": "Where province names come from",
+      "known_at": 7
+    },
+    {
+      "name": "Taihang Mountains",
+      "facet": "Where province names come from",
+      "known_at": 9
+    },
+    {
+      "name": "Qinghai Lake",
+      "facet": "Where province names come from",
+      "known_at": 6
+    },
+    {
+      "name": "Liao River",
+      "facet": "Where province names come from",
+      "known_at": 10
+    },
+    {
+      "name": "Heilong River",
+      "facet": "Where province names come from",
+      "known_at": 7
+    },
+    {
+      "name": "Qiantang River",
+      "facet": "Where province names come from",
+      "known_at": 8
+    },
+    {
+      "name": "Western Xia",
+      "facet": "Where province names come from",
+      "known_at": 11
+    },
+    {
+      "name": "Origin of the name Anhui",
+      "facet": "Where province names come from",
+      "known_at": 11
+    },
+    {
+      "name": "Origin of the name Jiangsu",
+      "facet": "Where province names come from",
+      "known_at": 10
+    },
+    {
+      "name": "Origin of the name Fujian",
+      "facet": "Where province names come from",
+      "known_at": 12
+    },
+    {
+      "name": "Origin of the name Gansu",
+      "facet": "Where province names come from",
+      "known_at": 12
+    },
+    {
+      "name": "Origin of the name Yunnan",
+      "facet": "Where province names come from",
+      "known_at": 9
+    },
+    {
+      "name": "Origin of the name Xinjiang",
+      "facet": "Where province names come from",
+      "known_at": 10
+    },
+    {
+      "name": "Origin of the name Hainan",
+      "facet": "Where province names come from",
+      "known_at": 7
+    },
+    {
+      "name": "Origin of the name Sichuan",
+      "facet": "Where province names come from",
+      "known_at": 11
+    },
+    {
+      "name": "Origin of the names Guangdong and Guangxi",
+      "facet": "Where province names come from",
+      "known_at": 12
+    },
+    {
+      "name": "Origin of the name Jiangxi",
+      "facet": "Where province names come from",
+      "known_at": 12
+    },
+    {
+      "name": "Origin of the name Shaanxi",
+      "facet": "Where province names come from",
+      "known_at": 12
+    },
+    {
+      "name": "Land of Abundance (天府之国)",
+      "facet": "Provincial nicknames",
+      "known_at": 6
+    },
+    {
+      "name": "Land of Fish and Rice (鱼米之乡)",
+      "facet": "Provincial nicknames",
+      "known_at": 6
+    },
+    {
+      "name": "Province of a Thousand Lakes (千湖之省)",
+      "facet": "Provincial nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Kingdom of Plants and Animals (动植物王国)",
+      "facet": "Provincial nicknames",
+      "known_at": 7
+    },
+    {
+      "name": "Sea of Coal (煤海)",
+      "facet": "Provincial nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Roof of the World (世界屋脊)",
+      "facet": "Provincial nicknames",
+      "known_at": 5
+    },
+    {
+      "name": "Home of Melons and Fruit (瓜果之乡)",
+      "facet": "Provincial nicknames",
+      "known_at": 6
+    },
+    {
+      "name": "Great Northern Granary (北大仓)",
+      "facet": "Provincial nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Land of Qi and Lu (齐鲁大地)",
+      "facet": "Provincial nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Central Plains (中原)",
+      "facet": "Provincial nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Land of Hibiscus (芙蓉国)",
+      "facet": "Provincial nicknames",
+      "known_at": 12
+    },
+    {
+      "name": "Pearl of the Orient (东方之珠)",
+      "facet": "Provincial nicknames",
+      "known_at": 4
+    },
+    {
+      "name": "Magic City (魔都)",
+      "facet": "Provincial nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Mountain City (山城)",
+      "facet": "Provincial nicknames",
+      "known_at": 5
+    },
+    {
+      "name": "Eight Gui (八桂)",
+      "facet": "Provincial nicknames",
+      "known_at": 12
+    },
+    {
+      "name": "Three Qin (三秦)",
+      "facet": "Provincial nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "Eight Min (八闽)",
+      "facet": "Provincial nicknames",
+      "known_at": 12
+    },
+    {
+      "name": "China's Water Tower (中华水塔)",
+      "facet": "Provincial nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Imperial Capital (帝都)",
+      "facet": "Provincial nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Spring City (春城)",
+      "facet": "Capital city nicknames",
+      "known_at": 5
+    },
+    {
+      "name": "Ice City (冰城)",
+      "facet": "Capital city nicknames",
+      "known_at": 5
+    },
+    {
+      "name": "Star City (星城)",
+      "facet": "Capital city nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "Hibiscus City (蓉城)",
+      "facet": "Capital city nicknames",
+      "known_at": 7
+    },
+    {
+      "name": "Goat City (羊城)",
+      "facet": "Capital city nicknames",
+      "known_at": 7
+    },
+    {
+      "name": "City of Springs (泉城)",
+      "facet": "Capital city nicknames",
+      "known_at": 7
+    },
+    {
+      "name": "Jinling (金陵)",
+      "facet": "Capital city nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Paradise on Earth (人间天堂)",
+      "facet": "Capital city nicknames",
+      "known_at": 6
+    },
+    {
+      "name": "Banyan City (榕城)",
+      "facet": "Capital city nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "River City (江城)",
+      "facet": "Capital city nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Golden City (金城)",
+      "facet": "Capital city nicknames",
+      "known_at": 12
+    },
+    {
+      "name": "Sunlight City (日光城)",
+      "facet": "Capital city nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Chang'an (长安)",
+      "facet": "Capital city nicknames",
+      "known_at": 6
+    },
+    {
+      "name": "Green City (绿城)",
+      "facet": "Capital city nicknames",
+      "known_at": 12
+    },
+    {
+      "name": "Hero City (英雄城)",
+      "facet": "Capital city nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "Shengjing (盛京)",
+      "facet": "Capital city nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "Blue City (青城)",
+      "facet": "Capital city nicknames",
+      "known_at": 12
+    },
+    {
+      "name": "Dragon City (龙城)",
+      "facet": "Capital city nicknames",
+      "known_at": 12
+    },
+    {
+      "name": "Luzhou (庐州)",
+      "facet": "Capital city nicknames",
+      "known_at": 12
+    },
+    {
+      "name": "Forest City (林城)",
+      "facet": "Capital city nicknames",
+      "known_at": 12
+    },
+    {
+      "name": "Car City (汽车城)",
+      "facet": "Capital city nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Coconut City (椰城)",
+      "facet": "Capital city nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Summer Capital (夏都)",
+      "facet": "Capital city nicknames",
+      "known_at": 12
+    },
+    {
+      "name": "Rooster-shaped map of China (雄鸡)",
+      "facet": "Provinces on the map",
+      "known_at": 4
+    },
+    {
+      "name": "Largest province by area: Xinjiang",
+      "facet": "Provinces on the map",
+      "known_at": 5
+    },
+    {
+      "name": "Smallest provincial-level division: Macao",
+      "facet": "Provinces on the map",
+      "known_at": 8
+    },
+    {
+      "name": "Northernmost province: Heilongjiang",
+      "facet": "Provinces on the map",
+      "known_at": 5
+    },
+    {
+      "name": "Southernmost province: Hainan",
+      "facet": "Provinces on the map",
+      "known_at": 5
+    },
+    {
+      "name": "Westernmost province: Xinjiang",
+      "facet": "Provinces on the map",
+      "known_at": 6
+    },
+    {
+      "name": "Gansu's long narrow shape",
+      "facet": "Provinces on the map",
+      "known_at": 9
+    },
+    {
+      "name": "Province surrounding Beijing: Hebei",
+      "facet": "Provinces on the map",
+      "known_at": 6
+    },
+    {
+      "name": "Shandong Peninsula",
+      "facet": "Provinces on the map",
+      "known_at": 7
+    },
+    {
+      "name": "Liaodong Peninsula",
+      "facet": "Provinces on the map",
+      "known_at": 8
+    },
+    {
+      "name": "Leizhou Peninsula",
+      "facet": "Provinces on the map",
+      "known_at": 10
+    },
+    {
+      "name": "Qiongzhou Strait",
+      "facet": "Provinces on the map",
+      "known_at": 10
+    },
+    {
+      "name": "Bohai Sea",
+      "facet": "Provinces on the map",
+      "known_at": 7
+    },
+    {
+      "name": "Sichuan Basin",
+      "facet": "Provinces on the map",
+      "known_at": 7
+    },
+    {
+      "name": "Hexi Corridor",
+      "facet": "Provinces on the map",
+      "known_at": 10
+    },
+    {
+      "name": "Tarim Basin",
+      "facet": "Provinces on the map",
+      "known_at": 9
+    },
+    {
+      "name": "Qinling–Huaihe Line",
+      "facet": "Provinces on the map",
+      "known_at": 9
+    },
+    {
+      "name": "Pearl River Delta",
+      "facet": "Provinces on the map",
+      "known_at": 7
+    },
+    {
+      "name": "Yangtze River Delta",
+      "facet": "Provinces on the map",
+      "known_at": 7
+    },
+    {
+      "name": "Loess Plateau",
+      "facet": "Provinces on the map",
+      "known_at": 7
+    },
+    {
+      "name": "Qinghai–Tibet Plateau",
+      "facet": "Provinces on the map",
+      "known_at": 5
+    },
+    {
+      "name": "Forbidden City",
+      "facet": "Signature landmarks of each province",
+      "known_at": 2
+    },
+    {
+      "name": "The Bund",
+      "facet": "Signature landmarks of each province",
+      "known_at": 5
+    },
+    {
+      "name": "West Lake",
+      "facet": "Signature landmarks of each province",
+      "known_at": 4
+    },
+    {
+      "name": "Terracotta Army",
+      "facet": "Signature landmarks of each province",
+      "known_at": 4
+    },
+    {
+      "name": "Potala Palace",
+      "facet": "Signature landmarks of each province",
+      "known_at": 5
+    },
+    {
+      "name": "Mount Tai",
+      "facet": "Signature landmarks of each province",
+      "known_at": 5
+    },
+    {
+      "name": "Huangshan",
+      "facet": "Signature landmarks of each province",
+      "known_at": 5
+    },
+    {
+      "name": "Jiuzhaigou",
+      "facet": "Signature landmarks of each province",
+      "known_at": 6
+    },
+    {
+      "name": "Leshan Giant Buddha",
+      "facet": "Signature landmarks of each province",
+      "known_at": 7
+    },
+    {
+      "name": "Zhangjiajie",
+      "facet": "Signature landmarks of each province",
+      "known_at": 6
+    },
+    {
+      "name": "Li River",
+      "facet": "Signature landmarks of each province",
+      "known_at": 6
+    },
+    {
+      "name": "Mogao Caves",
+      "facet": "Signature landmarks of each province",
+      "known_at": 7
+    },
+    {
+      "name": "Shaolin Temple",
+      "facet": "Signature landmarks of each province",
+      "known_at": 4
+    },
+    {
+      "name": "Yellow Crane Tower",
+      "facet": "Signature landmarks of each province",
+      "known_at": 5
+    },
+    {
+      "name": "Humble Administrator's Garden",
+      "facet": "Signature landmarks of each province",
+      "known_at": 8
+    },
+    {
+      "name": "Stone Forest",
+      "facet": "Signature landmarks of each province",
+      "known_at": 7
+    },
+    {
+      "name": "Huangguoshu Waterfall",
+      "facet": "Signature landmarks of each province",
+      "known_at": 8
+    },
+    {
+      "name": "Mount Lu",
+      "facet": "Signature landmarks of each province",
+      "known_at": 6
+    },
+    {
+      "name": "Fujian Tulou",
+      "facet": "Signature landmarks of each province",
+      "known_at": 8
+    },
+    {
+      "name": "Yungang Grottoes",
+      "facet": "Signature landmarks of each province",
+      "known_at": 9
+    },
+    {
+      "name": "Chengde Mountain Resort",
+      "facet": "Signature landmarks of each province",
+      "known_at": 9
+    },
+    {
+      "name": "Changbai Mountain",
+      "facet": "Signature landmarks of each province",
+      "known_at": 7
+    },
+    {
+      "name": "Tianya Haijiao",
+      "facet": "Signature landmarks of each province",
+      "known_at": 6
+    },
+    {
+      "name": "Hongyadong",
+      "facet": "Signature landmarks of each province",
+      "known_at": 7
+    },
+    {
+      "name": "Ruins of St. Paul's",
+      "facet": "Signature landmarks of each province",
+      "known_at": 8
+    }
+  ]
+}

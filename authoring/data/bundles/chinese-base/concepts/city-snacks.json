@@ -1,0 +1,1087 @@
+{
+  "subcategory": "city-snacks",
+  "facets": [
+    "Breakfast classics",
+    "Hot pot styles",
+    "Grilled skewers and barbecue",
+    "Pancakes and flatbreads",
+    "Fried and stinky snacks",
+    "Cantonese morning tea snacks",
+    "Northwest Muslim street food",
+    "Sweet snacks and desserts",
+    "Tofu and bean snacks",
+    "Night markets and snack streets",
+    "Regional snack chains and brands",
+    "Snack customs and food debates"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Soy milk and youtiao",
+      "facet": "Breakfast classics",
+      "known_at": 1
+    },
+    {
+      "name": "Congee (白粥)",
+      "facet": "Breakfast classics",
+      "known_at": 1
+    },
+    {
+      "name": "Century egg and lean pork congee",
+      "facet": "Breakfast classics",
+      "known_at": 4
+    },
+    {
+      "name": "Tea eggs",
+      "facet": "Breakfast classics",
+      "known_at": 2
+    },
+    {
+      "name": "Ci fan tuan (粢饭团)",
+      "facet": "Breakfast classics",
+      "known_at": 7
+    },
+    {
+      "name": "Shanghai “Four Heavenly Kings” breakfast (四大金刚)",
+      "facet": "Breakfast classics",
+      "known_at": 11
+    },
+    {
+      "name": "Douzhi and jiaoquan (豆汁焦圈)",
+      "facet": "Breakfast classics",
+      "known_at": 8
+    },
+    {
+      "name": "Hulatang (胡辣汤)",
+      "facet": "Breakfast classics",
+      "known_at": 7
+    },
+    {
+      "name": "Guobacai (锅巴菜)",
+      "facet": "Breakfast classics",
+      "known_at": 12
+    },
+    {
+      "name": "Mantou",
+      "facet": "Breakfast classics",
+      "known_at": 1
+    },
+    {
+      "name": "Wuhan doupi (豆皮)",
+      "facet": "Breakfast classics",
+      "known_at": 9
+    },
+    {
+      "name": "Mianwo (面窝)",
+      "facet": "Breakfast classics",
+      "known_at": 11
+    },
+    {
+      "name": "Millet porridge",
+      "facet": "Breakfast classics",
+      "known_at": 3
+    },
+    {
+      "name": "Fuling zhacai (榨菜)",
+      "facet": "Breakfast classics",
+      "known_at": 6
+    },
+    {
+      "name": "Gaoyou salted duck eggs",
+      "facet": "Breakfast classics",
+      "known_at": 8
+    },
+    {
+      "name": "Hot pot: Chongqing",
+      "facet": "Hot pot styles",
+      "known_at": 2
+    },
+    {
+      "name": "Old Beijing copper pot hot pot (铜锅涮肉)",
+      "facet": "Hot pot styles",
+      "known_at": 5
+    },
+    {
+      "name": "Chaoshan beef hot pot",
+      "facet": "Hot pot styles",
+      "known_at": 7
+    },
+    {
+      "name": "Mandarin duck pot (鸳鸯锅)",
+      "facet": "Hot pot styles",
+      "known_at": 4
+    },
+    {
+      "name": "Malatang (麻辣烫)",
+      "facet": "Hot pot styles",
+      "known_at": 2
+    },
+    {
+      "name": "Chuanchuan xiang (串串香)",
+      "facet": "Hot pot styles",
+      "known_at": 6
+    },
+    {
+      "name": "Maocai (冒菜)",
+      "facet": "Hot pot styles",
+      "known_at": 8
+    },
+    {
+      "name": "Yunnan wild mushroom hot pot",
+      "facet": "Hot pot styles",
+      "known_at": 8
+    },
+    {
+      "name": "Hainan coconut chicken hot pot",
+      "facet": "Hot pot styles",
+      "known_at": 8
+    },
+    {
+      "name": "Guizhou sour soup fish (酸汤鱼)",
+      "facet": "Hot pot styles",
+      "known_at": 9
+    },
+    {
+      "name": "Northeast pickled cabbage and pork hot pot",
+      "facet": "Hot pot styles",
+      "known_at": 8
+    },
+    {
+      "name": "Da bin lou (打边炉)",
+      "facet": "Hot pot styles",
+      "known_at": 12
+    },
+    {
+      "name": "Mala xiang guo (麻辣香锅)",
+      "facet": "Hot pot styles",
+      "known_at": 5
+    },
+    {
+      "name": "Beef tallow hot pot base",
+      "facet": "Hot pot styles",
+      "known_at": 7
+    },
+    {
+      "name": "Maodu (毛肚)",
+      "facet": "Hot pot styles",
+      "known_at": 6
+    },
+    {
+      "name": "Duck blood (鸭血)",
+      "facet": "Hot pot styles",
+      "known_at": 6
+    },
+    {
+      "name": "Sichuan peppercorn (花椒)",
+      "facet": "Hot pot styles",
+      "known_at": 4
+    },
+    {
+      "name": "Shunde congee hot pot (粥底火锅)",
+      "facet": "Hot pot styles",
+      "known_at": 11
+    },
+    {
+      "name": "Self-heating hot pot (自热火锅)",
+      "facet": "Hot pot styles",
+      "known_at": 4
+    },
+    {
+      "name": "Yangxiezi lamb spine hot pot (羊蝎子)",
+      "facet": "Hot pot styles",
+      "known_at": 10
+    },
+    {
+      "name": "Lamb skewers: Xinjiang",
+      "facet": "Grilled skewers and barbecue",
+      "known_at": 2
+    },
+    {
+      "name": "Zibo barbecue",
+      "facet": "Grilled skewers and barbecue",
+      "known_at": 6
+    },
+    {
+      "name": "Jinzhou barbecue",
+      "facet": "Grilled skewers and barbecue",
+      "known_at": 11
+    },
+    {
+      "name": "Grilled oysters (烤生蚝)",
+      "facet": "Grilled skewers and barbecue",
+      "known_at": 5
+    },
+    {
+      "name": "Grilled chicken wings",
+      "facet": "Grilled skewers and barbecue",
+      "known_at": 1
+    },
+    {
+      "name": "Teppanyaki squid (铁板鱿鱼)",
+      "facet": "Grilled skewers and barbecue",
+      "known_at": 4
+    },
+    {
+      "name": "Grilled eggplant (烤茄子)",
+      "facet": "Grilled skewers and barbecue",
+      "known_at": 4
+    },
+    {
+      "name": "Cumin (孜然)",
+      "facet": "Grilled skewers and barbecue",
+      "known_at": 5
+    },
+    {
+      "name": "Grilled sausage (烤肠)",
+      "facet": "Grilled skewers and barbecue",
+      "known_at": 1
+    },
+    {
+      "name": "Kao lengmian (烤冷面)",
+      "facet": "Grilled skewers and barbecue",
+      "known_at": 6
+    },
+    {
+      "name": "Roast whole lamb (烤全羊)",
+      "facet": "Grilled skewers and barbecue",
+      "known_at": 6
+    },
+    {
+      "name": "Cantonese roast goose (烧鹅)",
+      "facet": "Grilled skewers and barbecue",
+      "known_at": 6
+    },
+    {
+      "name": "Yanbian barbecue",
+      "facet": "Grilled skewers and barbecue",
+      "known_at": 12
+    },
+    {
+      "name": "Wanzhou grilled fish (万州烤鱼)",
+      "facet": "Grilled skewers and barbecue",
+      "known_at": 8
+    },
+    {
+      "name": "Garlic vermicelli scallops (蒜蓉粉丝扇贝)",
+      "facet": "Grilled skewers and barbecue",
+      "known_at": 6
+    },
+    {
+      "name": "Dai-style barbecue (傣味烧烤)",
+      "facet": "Grilled skewers and barbecue",
+      "known_at": 13
+    },
+    {
+      "name": "Jianbing guozi: Tianjin",
+      "facet": "Pancakes and flatbreads",
+      "known_at": 3
+    },
+    {
+      "name": "Roujiamo: Xi'an",
+      "facet": "Pancakes and flatbreads",
+      "known_at": 3
+    },
+    {
+      "name": "Shandong jianbing with scallion",
+      "facet": "Pancakes and flatbreads",
+      "known_at": 6
+    },
+    {
+      "name": "Shaobing (烧饼)",
+      "facet": "Pancakes and flatbreads",
+      "known_at": 2
+    },
+    {
+      "name": "Huangqiao shaobing (黄桥烧饼)",
+      "facet": "Pancakes and flatbreads",
+      "known_at": 10
+    },
+    {
+      "name": "Scallion pancake (葱油饼)",
+      "facet": "Pancakes and flatbreads",
+      "known_at": 2
+    },
+    {
+      "name": "Jinyun shaobing (缙云烧饼)",
+      "facet": "Pancakes and flatbreads",
+      "known_at": 12
+    },
+    {
+      "name": "Guokui (锅盔)",
+      "facet": "Pancakes and flatbreads",
+      "known_at": 9
+    },
+    {
+      "name": "Jinan youxuan (油旋)",
+      "facet": "Pancakes and flatbreads",
+      "known_at": 12
+    },
+    {
+      "name": "Shouzhua bing (手抓饼)",
+      "facet": "Pancakes and flatbreads",
+      "known_at": 3
+    },
+    {
+      "name": "Donkey meat huoshao (驴肉火烧)",
+      "facet": "Pancakes and flatbreads",
+      "known_at": 8
+    },
+    {
+      "name": "Tujia jiangxiang bing (土家酱香饼)",
+      "facet": "Pancakes and flatbreads",
+      "known_at": 8
+    },
+    {
+      "name": "Jidan guanbing (鸡蛋灌饼)",
+      "facet": "Pancakes and flatbreads",
+      "known_at": 4
+    },
+    {
+      "name": "Xianbing meat pie (馅饼)",
+      "facet": "Pancakes and flatbreads",
+      "known_at": 3
+    },
+    {
+      "name": "Chunbing spring pancakes (春饼)",
+      "facet": "Pancakes and flatbreads",
+      "known_at": 8
+    },
+    {
+      "name": "Mendingrou bing (门钉肉饼)",
+      "facet": "Pancakes and flatbreads",
+      "known_at": 12
+    },
+    {
+      "name": "Stinky tofu: Changsha",
+      "facet": "Fried and stinky snacks",
+      "known_at": 3
+    },
+    {
+      "name": "Taiwanese fried chicken cutlet (大鸡排)",
+      "facet": "Fried and stinky snacks",
+      "known_at": 4
+    },
+    {
+      "name": "Taiwanese popcorn chicken (盐酥鸡)",
+      "facet": "Fried and stinky snacks",
+      "known_at": 5
+    },
+    {
+      "name": "Sanzi (馓子)",
+      "facet": "Fried and stinky snacks",
+      "known_at": 8
+    },
+    {
+      "name": "Erduoyan zhagao (耳朵眼炸糕)",
+      "facet": "Fried and stinky snacks",
+      "known_at": 11
+    },
+    {
+      "name": "Fried silkworm pupae",
+      "facet": "Fried and stinky snacks",
+      "known_at": 8
+    },
+    {
+      "name": "Xiaosurou (小酥肉)",
+      "facet": "Fried and stinky snacks",
+      "known_at": 6
+    },
+    {
+      "name": "Youdunzi (油墩子)",
+      "facet": "Fried and stinky snacks",
+      "known_at": 11
+    },
+    {
+      "name": "Guoba rice crust (锅巴)",
+      "facet": "Fried and stinky snacks",
+      "known_at": 4
+    },
+    {
+      "name": "Latiao (辣条)",
+      "facet": "Fried and stinky snacks",
+      "known_at": 1
+    },
+    {
+      "name": "Fried lotus root sandwiches (藕合)",
+      "facet": "Fried and stinky snacks",
+      "known_at": 8
+    },
+    {
+      "name": "Fried fish skin",
+      "facet": "Fried and stinky snacks",
+      "known_at": 8
+    },
+    {
+      "name": "Fried scorpion skewers",
+      "facet": "Fried and stinky snacks",
+      "known_at": 7
+    },
+    {
+      "name": "Shaoxing stinky amaranth stalks (臭苋菜梗)",
+      "facet": "Fried and stinky snacks",
+      "known_at": 13
+    },
+    {
+      "name": "Yum cha (饮茶)",
+      "facet": "Cantonese morning tea snacks",
+      "known_at": 3
+    },
+    {
+      "name": "Rice noodle rolls: Guangzhou",
+      "facet": "Cantonese morning tea snacks",
+      "known_at": 4
+    },
+    {
+      "name": "Char siu bao (叉烧包)",
+      "facet": "Cantonese morning tea snacks",
+      "known_at": 3
+    },
+    {
+      "name": "Egg tart (蛋挞)",
+      "facet": "Cantonese morning tea snacks",
+      "known_at": 1
+    },
+    {
+      "name": "Phoenix claws (凤爪)",
+      "facet": "Cantonese morning tea snacks",
+      "known_at": 5
+    },
+    {
+      "name": "Steamed spare ribs with black bean sauce",
+      "facet": "Cantonese morning tea snacks",
+      "known_at": 7
+    },
+    {
+      "name": "Lo mai gai (糯米鸡)",
+      "facet": "Cantonese morning tea snacks",
+      "known_at": 7
+    },
+    {
+      "name": "Malay sponge cake (马拉糕)",
+      "facet": "Cantonese morning tea snacks",
+      "known_at": 10
+    },
+    {
+      "name": "Zha liang (炸两)",
+      "facet": "Cantonese morning tea snacks",
+      "known_at": 11
+    },
+    {
+      "name": "Water chestnut cake (马蹄糕)",
+      "facet": "Cantonese morning tea snacks",
+      "known_at": 9
+    },
+    {
+      "name": "Liusha bao (流沙包)",
+      "facet": "Cantonese morning tea snacks",
+      "known_at": 4
+    },
+    {
+      "name": "Pu'er tea",
+      "facet": "Cantonese morning tea snacks",
+      "known_at": 7
+    },
+    {
+      "name": "Yi zhong liang jian (一盅两件)",
+      "facet": "Cantonese morning tea snacks",
+      "known_at": 11
+    },
+    {
+      "name": "Pineapple bun (菠萝包)",
+      "facet": "Cantonese morning tea snacks",
+      "known_at": 4
+    },
+    {
+      "name": "Hong Kong milk tea",
+      "facet": "Cantonese morning tea snacks",
+      "known_at": 5
+    },
+    {
+      "name": "Steamed beef balls (牛肉球)",
+      "facet": "Cantonese morning tea snacks",
+      "known_at": 10
+    },
+    {
+      "name": "Yangrou paomo: Xi'an",
+      "facet": "Northwest Muslim street food",
+      "known_at": 5
+    },
+    {
+      "name": "Huimin Street, Xi'an (回民街)",
+      "facet": "Northwest Muslim street food",
+      "known_at": 7
+    },
+    {
+      "name": "Naan (馕)",
+      "facet": "Northwest Muslim street food",
+      "known_at": 5
+    },
+    {
+      "name": "Big plate chicken (大盘鸡)",
+      "facet": "Northwest Muslim street food",
+      "known_at": 4
+    },
+    {
+      "name": "Hand-grabbed mutton (手抓羊肉)",
+      "facet": "Northwest Muslim street food",
+      "known_at": 7
+    },
+    {
+      "name": "Xinjiang pilaf (手抓饭)",
+      "facet": "Northwest Muslim street food",
+      "known_at": 7
+    },
+    {
+      "name": "Samsa baked buns (烤包子)",
+      "facet": "Northwest Muslim street food",
+      "known_at": 9
+    },
+    {
+      "name": "Hulutou paomo (葫芦头泡馍)",
+      "facet": "Northwest Muslim street food",
+      "known_at": 12
+    },
+    {
+      "name": "Mirror cake (镜糕)",
+      "facet": "Northwest Muslim street food",
+      "known_at": 11
+    },
+    {
+      "name": "Xi'an persimmon cake (黄桂柿子饼)",
+      "facet": "Northwest Muslim street food",
+      "known_at": 10
+    },
+    {
+      "name": "Babao tea (八宝茶)",
+      "facet": "Northwest Muslim street food",
+      "known_at": 9
+    },
+    {
+      "name": "Youxiang (油香)",
+      "facet": "Northwest Muslim street food",
+      "known_at": 13
+    },
+    {
+      "name": "Xinjiang yoghurt",
+      "facet": "Northwest Muslim street food",
+      "known_at": 6
+    },
+    {
+      "name": "Nangbaorou (馕包肉)",
+      "facet": "Northwest Muslim street food",
+      "known_at": 12
+    },
+    {
+      "name": "Shuipen yangrou (水盆羊肉)",
+      "facet": "Northwest Muslim street food",
+      "known_at": 12
+    },
+    {
+      "name": "Qingzhen halal (清真)",
+      "facet": "Northwest Muslim street food",
+      "known_at": 6
+    },
+    {
+      "name": "Tanghulu (冰糖葫芦)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 1
+    },
+    {
+      "name": "Wife cake (老婆饼)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 4
+    },
+    {
+      "name": "Mango pomelo sago (杨枝甘露)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 5
+    },
+    {
+      "name": "Double-skin milk (双皮奶)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 6
+    },
+    {
+      "name": "Ginger milk curd (姜撞奶)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 9
+    },
+    {
+      "name": "Lüdagun (驴打滚)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 7
+    },
+    {
+      "name": "Wandouhuang pea cake (豌豆黄)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 10
+    },
+    {
+      "name": "Aiwowo (艾窝窝)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 11
+    },
+    {
+      "name": "Tianjin mahua (麻花)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 5
+    },
+    {
+      "name": "Bingfen ice jelly (冰粉)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 5
+    },
+    {
+      "name": "Brown sugar ciba (红糖糍粑)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 5
+    },
+    {
+      "name": "Dragon's beard candy (龙须糖)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 8
+    },
+    {
+      "name": "Sugar painting (糖画)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 3
+    },
+    {
+      "name": "Egg waffles (鸡蛋仔)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 4
+    },
+    {
+      "name": "Pineapple cake (凤梨酥)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 5
+    },
+    {
+      "name": "Turtle jelly (龟苓膏)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 7
+    },
+    {
+      "name": "Grass jelly (仙草)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 6
+    },
+    {
+      "name": "Red bean soup (红豆沙)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 4
+    },
+    {
+      "name": "Bubble tea (珍珠奶茶)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 1
+    },
+    {
+      "name": "Hawthorn flakes (山楂片)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 3
+    },
+    {
+      "name": "Sour plum drink (酸梅汤)",
+      "facet": "Sweet snacks and desserts",
+      "known_at": 4
+    },
+    {
+      "name": "Tofu pudding (豆腐脑)",
+      "facet": "Tofu and bean snacks",
+      "known_at": 3
+    },
+    {
+      "name": "Huizhou hairy tofu (毛豆腐)",
+      "facet": "Tofu and bean snacks",
+      "known_at": 10
+    },
+    {
+      "name": "Jianshui grilled tofu (建水烤豆腐)",
+      "facet": "Tofu and bean snacks",
+      "known_at": 12
+    },
+    {
+      "name": "Spiced dried tofu (五香豆干)",
+      "facet": "Tofu and bean snacks",
+      "known_at": 4
+    },
+    {
+      "name": "Hakka stuffed tofu (酿豆腐)",
+      "facet": "Tofu and bean snacks",
+      "known_at": 9
+    },
+    {
+      "name": "Yuba tofu skin (腐竹)",
+      "facet": "Tofu and bean snacks",
+      "known_at": 6
+    },
+    {
+      "name": "Fried tofu puffs (油豆腐)",
+      "facet": "Tofu and bean snacks",
+      "known_at": 5
+    },
+    {
+      "name": "Liangfen bean jelly (凉粉)",
+      "facet": "Tofu and bean snacks",
+      "known_at": 6
+    },
+    {
+      "name": "Mung bean cake (绿豆糕)",
+      "facet": "Tofu and bean snacks",
+      "known_at": 3
+    },
+    {
+      "name": "Mung bean soup (绿豆汤)",
+      "facet": "Tofu and bean snacks",
+      "known_at": 2
+    },
+    {
+      "name": "Liu An",
+      "facet": "Tofu and bean snacks",
+      "known_at": 11
+    },
+    {
+      "name": "Fennel beans (茴香豆)",
+      "facet": "Tofu and bean snacks",
+      "known_at": 7
+    },
+    {
+      "name": "Orchid beans (兰花豆)",
+      "facet": "Tofu and bean snacks",
+      "known_at": 10
+    },
+    {
+      "name": "Douchi fermented black beans (豆豉)",
+      "facet": "Tofu and bean snacks",
+      "known_at": 8
+    },
+    {
+      "name": "Qianzhang tofu sheets (千张)",
+      "facet": "Tofu and bean snacks",
+      "known_at": 10
+    },
+    {
+      "name": "Frozen tofu (冻豆腐)",
+      "facet": "Tofu and bean snacks",
+      "known_at": 5
+    },
+    {
+      "name": "Wangfujing Snack Street",
+      "facet": "Night markets and snack streets",
+      "known_at": 6
+    },
+    {
+      "name": "Shilin Night Market",
+      "facet": "Night markets and snack streets",
+      "known_at": 7
+    },
+    {
+      "name": "Raohe Night Market",
+      "facet": "Night markets and snack streets",
+      "known_at": 12
+    },
+    {
+      "name": "Temple Street Night Market",
+      "facet": "Night markets and snack streets",
+      "known_at": 11
+    },
+    {
+      "name": "Nanluoguxiang",
+      "facet": "Night markets and snack streets",
+      "known_at": 8
+    },
+    {
+      "name": "Guijie, Beijing (簋街)",
+      "facet": "Night markets and snack streets",
+      "known_at": 10
+    },
+    {
+      "name": "Hubu Alley (户部巷)",
+      "facet": "Night markets and snack streets",
+      "known_at": 9
+    },
+    {
+      "name": "Kuanzhai Alley (宽窄巷子)",
+      "facet": "Night markets and snack streets",
+      "known_at": 8
+    },
+    {
+      "name": "Jinli Street (锦里)",
+      "facet": "Night markets and snack streets",
+      "known_at": 9
+    },
+    {
+      "name": "Fuzimiao, Nanjing (夫子庙)",
+      "facet": "Night markets and snack streets",
+      "known_at": 8
+    },
+    {
+      "name": "City God Temple, Shanghai (城隍庙)",
+      "facet": "Night markets and snack streets",
+      "known_at": 8
+    },
+    {
+      "name": "Pozi Street (坡子街)",
+      "facet": "Night markets and snack streets",
+      "known_at": 12
+    },
+    {
+      "name": "Hefang Street (河坊街)",
+      "facet": "Night markets and snack streets",
+      "known_at": 11
+    },
+    {
+      "name": "Kaifeng Gulou Night Market",
+      "facet": "Night markets and snack streets",
+      "known_at": 12
+    },
+    {
+      "name": "Tusundong sea worm jelly (土笋冻)",
+      "facet": "Night markets and snack streets",
+      "known_at": 11
+    },
+    {
+      "name": "Oyster omelette (蚵仔煎)",
+      "facet": "Night markets and snack streets",
+      "known_at": 6
+    },
+    {
+      "name": "Spicy crayfish (麻辣小龙虾)",
+      "facet": "Night markets and snack streets",
+      "known_at": 3
+    },
+    {
+      "name": "Spicy duck neck (鸭脖)",
+      "facet": "Night markets and snack streets",
+      "known_at": 3
+    },
+    {
+      "name": "Curry fish balls (咖喱鱼蛋)",
+      "facet": "Night markets and snack streets",
+      "known_at": 6
+    },
+    {
+      "name": "Braised pork rice (卤肉饭)",
+      "facet": "Night markets and snack streets",
+      "known_at": 4
+    },
+    {
+      "name": "Shaxian snacks",
+      "facet": "Regional snack chains and brands",
+      "known_at": 4
+    },
+    {
+      "name": "Haidilao",
+      "facet": "Regional snack chains and brands",
+      "known_at": 4
+    },
+    {
+      "name": "Zhou Hei Ya (周黑鸭)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 6
+    },
+    {
+      "name": "Juewei duck neck (绝味)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 6
+    },
+    {
+      "name": "Weilong (卫龙)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 4
+    },
+    {
+      "name": "Yang Guofu malatang (杨国福)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 7
+    },
+    {
+      "name": "Zhang Liang malatang (张亮)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 8
+    },
+    {
+      "name": "Mixue Bingcheng (蜜雪冰城)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 2
+    },
+    {
+      "name": "Heytea (喜茶)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 6
+    },
+    {
+      "name": "Chayan Yuese (茶颜悦色)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 8
+    },
+    {
+      "name": "Guifaxiang (桂发祥)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 12
+    },
+    {
+      "name": "Goubuli (狗不理)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 7
+    },
+    {
+      "name": "Lao Gan Ma (老干妈)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 3
+    },
+    {
+      "name": "White Rabbit candy (大白兔)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 2
+    },
+    {
+      "name": "Want Want (旺旺)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 2
+    },
+    {
+      "name": "Three Squirrels (三只松鼠)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 5
+    },
+    {
+      "name": "Xiabu Xiabu (呷哺呷哺)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 8
+    },
+    {
+      "name": "Guangzhou Restaurant (广州酒家)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 11
+    },
+    {
+      "name": "Tao Tao Ju (陶陶居)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 12
+    },
+    {
+      "name": "Bingfeng soda (冰峰)",
+      "facet": "Regional snack chains and brands",
+      "known_at": 10
+    },
+    {
+      "name": "Sweet vs. salty tofu pudding debate",
+      "facet": "Snack customs and food debates",
+      "known_at": 4
+    },
+    {
+      "name": "Sweet vs. salty zongzi debate",
+      "facet": "Snack customs and food debates",
+      "known_at": 5
+    },
+    {
+      "name": "Sweet vs. savory tangyuan debate",
+      "facet": "Snack customs and food debates",
+      "known_at": 7
+    },
+    {
+      "name": "Guozao (过早)",
+      "facet": "Snack customs and food debates",
+      "known_at": 9
+    },
+    {
+      "name": "Finger tapping to thank for tea (叩指礼)",
+      "facet": "Snack customs and food debates",
+      "known_at": 9
+    },
+    {
+      "name": "Late-night snack (夜宵)",
+      "facet": "Snack customs and food debates",
+      "known_at": 3
+    },
+    {
+      "name": "Chihuo foodie (吃货)",
+      "facet": "Snack customs and food debates",
+      "known_at": 3
+    },
+    {
+      "name": "Hot pot dipping sauce debate",
+      "facet": "Snack customs and food debates",
+      "known_at": 6
+    },
+    {
+      "name": "Seven up, eight down (七上八下)",
+      "facet": "Snack customs and food debates",
+      "known_at": 9
+    },
+    {
+      "name": "Coriander debate (香菜)",
+      "facet": "Snack customs and food debates",
+      "known_at": 4
+    },
+    {
+      "name": "Cracking melon seeds (嗑瓜子)",
+      "facet": "Snack customs and food debates",
+      "known_at": 2
+    },
+    {
+      "name": "Spice levels (微辣、中辣、特辣)",
+      "facet": "Snack customs and food debates",
+      "known_at": 4
+    },
+    {
+      "name": "Paying by skewer count",
+      "facet": "Snack customs and food debates",
+      "known_at": 7
+    },
+    {
+      "name": "Southern rice, northern wheat (南米北面)",
+      "facet": "Snack customs and food debates",
+      "known_at": 7
+    },
+    {
+      "name": "Breakfast stalls (早点摊)",
+      "facet": "Snack customs and food debates",
+      "known_at": 3
+    }
+  ]
+}

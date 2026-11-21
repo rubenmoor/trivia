@@ -1,0 +1,1072 @@
+{
+  "subcategory": "daoism",
+  "facets": [
+    "Laozi's life and legends",
+    "Tao Te Ching and its sayings",
+    "Zhuangzi and his parables",
+    "Yin and yang",
+    "Bagua and the Book of Changes",
+    "Five elements and their cycles",
+    "Daoist sacred mountains",
+    "Founders and masters of Daoist schools",
+    "Daoist temples, priests and rituals",
+    "Daoist practices: taiji, qigong, alchemy",
+    "Daoist ideas in idioms and daily life",
+    "Daoism in martial arts fiction and films"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 3,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Laozi rides an ox",
+      "facet": "Laozi's life and legends",
+      "known_at": 8
+    },
+    {
+      "name": "Hangu Pass",
+      "facet": "Laozi's life and legends",
+      "known_at": 11
+    },
+    {
+      "name": "Yin Xi",
+      "facet": "Laozi's life and legends",
+      "known_at": 13
+    },
+    {
+      "name": "Purple qi from the east (紫气东来)",
+      "facet": "Laozi's life and legends",
+      "known_at": 10
+    },
+    {
+      "name": "Confucius meets Laozi",
+      "facet": "Laozi's life and legends",
+      "known_at": 10
+    },
+    {
+      "name": "Li Er",
+      "facet": "Laozi's life and legends",
+      "known_at": 11
+    },
+    {
+      "name": "Lao Dan",
+      "facet": "Laozi's life and legends",
+      "known_at": 12
+    },
+    {
+      "name": "Keeper of the Zhou archives",
+      "facet": "Laozi's life and legends",
+      "known_at": 13
+    },
+    {
+      "name": "Laozi born with white hair",
+      "facet": "Laozi's life and legends",
+      "known_at": 12
+    },
+    {
+      "name": "Taishang Laojun",
+      "facet": "Laozi's life and legends",
+      "known_at": 8
+    },
+    {
+      "name": "Luyi County",
+      "facet": "Laozi's life and legends",
+      "known_at": 14
+    },
+    {
+      "name": "Laozi's journey west",
+      "facet": "Laozi's life and legends",
+      "known_at": 11
+    },
+    {
+      "name": "Records of the Grand Historian",
+      "facet": "Laozi's life and legends",
+      "known_at": 11
+    },
+    {
+      "name": "Zhou dynasty",
+      "facet": "Laozi's life and legends",
+      "known_at": 8
+    },
+    {
+      "name": "Tao Te Ching",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Five thousand characters (五千言)",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 11
+    },
+    {
+      "name": "81 chapters",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 12
+    },
+    {
+      "name": "道可道，非常道",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 10
+    },
+    {
+      "name": "上善若水",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 9
+    },
+    {
+      "name": "千里之行，始于足下",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Wu wei (无为)",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 11
+    },
+    {
+      "name": "道生一，一生二，二生三，三生万物",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 11
+    },
+    {
+      "name": "祸兮福之所倚",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 11
+    },
+    {
+      "name": "大器晚成",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 8
+    },
+    {
+      "name": "天网恢恢，疏而不漏",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 10
+    },
+    {
+      "name": "知人者智，自知者明",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 11
+    },
+    {
+      "name": "天长地久",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 8
+    },
+    {
+      "name": "功成身退",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 12
+    },
+    {
+      "name": "小国寡民",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 13
+    },
+    {
+      "name": "治大国若烹小鲜",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 13
+    },
+    {
+      "name": "柔弱胜刚强",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 12
+    },
+    {
+      "name": "道法自然",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Mawangdui silk texts",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Bi",
+      "facet": "Tao Te Ching and its sayings",
+      "known_at": 14
+    },
+    {
+      "name": "Zhuangzi's butterfly dream",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 8
+    },
+    {
+      "name": "Free and Easy Wandering (逍遥游)",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 10
+    },
+    {
+      "name": "Cook Ding carves an ox (庖丁解牛)",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 8
+    },
+    {
+      "name": "The happiness of fish (濠梁之辩)",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 10
+    },
+    {
+      "name": "井底之蛙",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 5
+    },
+    {
+      "name": "Autumn Floods (秋水)",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 13
+    },
+    {
+      "name": "The useless tree",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 14
+    },
+    {
+      "name": "The sacred turtle of Chu",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 12
+    },
+    {
+      "name": "邯郸学步",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 9
+    },
+    {
+      "name": "东施效颦",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 8
+    },
+    {
+      "name": "朝三暮四",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 8
+    },
+    {
+      "name": "相濡以沫",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 10
+    },
+    {
+      "name": "望洋兴叹",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 10
+    },
+    {
+      "name": "螳臂当车",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 9
+    },
+    {
+      "name": "Hundun (混沌)",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 13
+    },
+    {
+      "name": "Zhuang Zhou",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 12
+    },
+    {
+      "name": "True Classic of Nanhua (南华真经)",
+      "facet": "Zhuangzi and his parables",
+      "known_at": 14
+    },
+    {
+      "name": "Yin and yang symbol",
+      "facet": "Yin and yang",
+      "known_at": 3
+    },
+    {
+      "name": "Sun as yang",
+      "facet": "Yin and yang",
+      "known_at": 7
+    },
+    {
+      "name": "Moon as yin",
+      "facet": "Yin and yang",
+      "known_at": 7
+    },
+    {
+      "name": "Eyes of the yin-yang fish",
+      "facet": "Yin and yang",
+      "known_at": 9
+    },
+    {
+      "name": "Taiji (太极)",
+      "facet": "Yin and yang",
+      "known_at": 10
+    },
+    {
+      "name": "Wuji (无极)",
+      "facet": "Yin and yang",
+      "known_at": 13
+    },
+    {
+      "name": "Zhou Dunyi",
+      "facet": "Yin and yang",
+      "known_at": 14
+    },
+    {
+      "name": "Flag of South Korea",
+      "facet": "Yin and yang",
+      "known_at": 8
+    },
+    {
+      "name": "Yin and yang in traditional Chinese medicine",
+      "facet": "Yin and yang",
+      "known_at": 11
+    },
+    {
+      "name": "Odd numbers as yang",
+      "facet": "Yin and yang",
+      "known_at": 12
+    },
+    {
+      "name": "Winter solstice",
+      "facet": "Yin and yang",
+      "known_at": 7
+    },
+    {
+      "name": "Lunar calendar (阴历)",
+      "facet": "Yin and yang",
+      "known_at": 6
+    },
+    {
+      "name": "Taiyang (太阳)",
+      "facet": "Yin and yang",
+      "known_at": 5
+    },
+    {
+      "name": "Shady and sunny sides of a hill",
+      "facet": "Yin and yang",
+      "known_at": 12
+    },
+    {
+      "name": "Bagua",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 8
+    },
+    {
+      "name": "I Ching (易经)",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 9
+    },
+    {
+      "name": "Fu Xi",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 9
+    },
+    {
+      "name": "Qian (乾)",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 11
+    },
+    {
+      "name": "Kun (坤)",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 11
+    },
+    {
+      "name": "Kan (坎)",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 13
+    },
+    {
+      "name": "Li (离)",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 13
+    },
+    {
+      "name": "Trigram",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 12
+    },
+    {
+      "name": "64 hexagrams",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 12
+    },
+    {
+      "name": "Yao lines (爻)",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 13
+    },
+    {
+      "name": "Hetu and Luoshu",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 13
+    },
+    {
+      "name": "Luoshu magic square",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 12
+    },
+    {
+      "name": "Bagua mirror",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 10
+    },
+    {
+      "name": "Eight Trigrams Formation (八阵图)",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 10
+    },
+    {
+      "name": "Yarrow stalk divination",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 13
+    },
+    {
+      "name": "Qiankun (乾坤)",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 10
+    },
+    {
+      "name": "Luopan compass",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 12
+    },
+    {
+      "name": "Fuxi arrangement of the trigrams (先天八卦)",
+      "facet": "Bagua and the Book of Changes",
+      "known_at": 14
+    },
+    {
+      "name": "Five elements",
+      "facet": "Five elements and their cycles",
+      "known_at": 8
+    },
+    {
+      "name": "Metal (金)",
+      "facet": "Five elements and their cycles",
+      "known_at": 7
+    },
+    {
+      "name": "Wood (木)",
+      "facet": "Five elements and their cycles",
+      "known_at": 7
+    },
+    {
+      "name": "Water (水)",
+      "facet": "Five elements and their cycles",
+      "known_at": 7
+    },
+    {
+      "name": "Fire (火)",
+      "facet": "Five elements and their cycles",
+      "known_at": 7
+    },
+    {
+      "name": "Earth (土)",
+      "facet": "Five elements and their cycles",
+      "known_at": 7
+    },
+    {
+      "name": "Generating cycle (相生)",
+      "facet": "Five elements and their cycles",
+      "known_at": 11
+    },
+    {
+      "name": "Overcoming cycle (相克)",
+      "facet": "Five elements and their cycles",
+      "known_at": 11
+    },
+    {
+      "name": "Mars (火星)",
+      "facet": "Five elements and their cycles",
+      "known_at": 5
+    },
+    {
+      "name": "Jupiter (木星)",
+      "facet": "Five elements and their cycles",
+      "known_at": 8
+    },
+    {
+      "name": "Venus (金星)",
+      "facet": "Five elements and their cycles",
+      "known_at": 8
+    },
+    {
+      "name": "Mercury (水星)",
+      "facet": "Five elements and their cycles",
+      "known_at": 8
+    },
+    {
+      "name": "Saturn (土星)",
+      "facet": "Five elements and their cycles",
+      "known_at": 8
+    },
+    {
+      "name": "Five colours (五色)",
+      "facet": "Five elements and their cycles",
+      "known_at": 12
+    },
+    {
+      "name": "Five organs (五脏)",
+      "facet": "Five elements and their cycles",
+      "known_at": 13
+    },
+    {
+      "name": "Five flavours (五味)",
+      "facet": "Five elements and their cycles",
+      "known_at": 12
+    },
+    {
+      "name": "Five tones (宫商角徵羽)",
+      "facet": "Five elements and their cycles",
+      "known_at": 13
+    },
+    {
+      "name": "Five directions",
+      "facet": "Five elements and their cycles",
+      "known_at": 12
+    },
+    {
+      "name": "Naming by the five elements",
+      "facet": "Five elements and their cycles",
+      "known_at": 10
+    },
+    {
+      "name": "Wudang Mountains",
+      "facet": "Daoist sacred mountains",
+      "known_at": 6
+    },
+    {
+      "name": "Mount Longhu",
+      "facet": "Daoist sacred mountains",
+      "known_at": 12
+    },
+    {
+      "name": "Mount Qiyun",
+      "facet": "Daoist sacred mountains",
+      "known_at": 14
+    },
+    {
+      "name": "Mount Lao",
+      "facet": "Daoist sacred mountains",
+      "known_at": 9
+    },
+    {
+      "name": "Zhongnan Mountains",
+      "facet": "Daoist sacred mountains",
+      "known_at": 11
+    },
+    {
+      "name": "Mount Mao",
+      "facet": "Daoist sacred mountains",
+      "known_at": 11
+    },
+    {
+      "name": "Golden Summit of Wudang",
+      "facet": "Daoist sacred mountains",
+      "known_at": 12
+    },
+    {
+      "name": "Kunlun Mountains",
+      "facet": "Daoist sacred mountains",
+      "known_at": 8
+    },
+    {
+      "name": "Mount Luofu",
+      "facet": "Daoist sacred mountains",
+      "known_at": 14
+    },
+    {
+      "name": "Laojun Mountain",
+      "facet": "Daoist sacred mountains",
+      "known_at": 13
+    },
+    {
+      "name": "Grotto-heavens and blessed lands (洞天福地)",
+      "facet": "Daoist sacred mountains",
+      "known_at": 14
+    },
+    {
+      "name": "Zhang Daoling",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 11
+    },
+    {
+      "name": "Celestial Masters (天师道)",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 13
+    },
+    {
+      "name": "Way of the Five Pecks of Rice",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 13
+    },
+    {
+      "name": "Ge Hong",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 12
+    },
+    {
+      "name": "Tao Hongjing",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Chongyang",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 8
+    },
+    {
+      "name": "Quanzhen School",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 10
+    },
+    {
+      "name": "Qiu Chuji",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 9
+    },
+    {
+      "name": "Seven Masters of Quanzhen",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 9
+    },
+    {
+      "name": "Kou Qianzhi",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 15
+    },
+    {
+      "name": "Sun Simiao",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 10
+    },
+    {
+      "name": "Chen Tuan",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 12
+    },
+    {
+      "name": "Zhengyi School",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 13
+    },
+    {
+      "name": "Shangqing School",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 14
+    },
+    {
+      "name": "Huang-Lao",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 14
+    },
+    {
+      "name": "Yellow Emperor",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 5
+    },
+    {
+      "name": "Yellow Turban Rebellion",
+      "facet": "Founders and masters of Daoist schools",
+      "known_at": 9
+    },
+    {
+      "name": "White Cloud Temple (白云观)",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 11
+    },
+    {
+      "name": "Louguantai",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 13
+    },
+    {
+      "name": "Daoist temple (道观)",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 8
+    },
+    {
+      "name": "Daoist priest (道士)",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 6
+    },
+    {
+      "name": "Daoist nun (道姑)",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 10
+    },
+    {
+      "name": "Daoist topknot",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 12
+    },
+    {
+      "name": "Horsetail whisk (拂尘)",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 9
+    },
+    {
+      "name": "Talisman paper (符)",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 8
+    },
+    {
+      "name": "Peachwood sword",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 9
+    },
+    {
+      "name": "Jiao ritual (醮)",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 14
+    },
+    {
+      "name": "Incense burner",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 5
+    },
+    {
+      "name": "Purple Heaven Palace",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 13
+    },
+    {
+      "name": "Three Pure Ones",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 12
+    },
+    {
+      "name": "Daoist robe (道袍)",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 10
+    },
+    {
+      "name": "Xuanmiao Temple",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 13
+    },
+    {
+      "name": "Qingyang Palace",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 13
+    },
+    {
+      "name": "Fortune sticks (求签)",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 7
+    },
+    {
+      "name": "Wong Tai Sin Temple",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 10
+    },
+    {
+      "name": "Pace of Yu (禹步)",
+      "facet": "Daoist temples, priests and rituals",
+      "known_at": 15
+    },
+    {
+      "name": "Taijiquan",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 4
+    },
+    {
+      "name": "Qigong",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 8
+    },
+    {
+      "name": "Baduanjin",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 8
+    },
+    {
+      "name": "Inner alchemy (内丹)",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 13
+    },
+    {
+      "name": "External alchemy (外丹)",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 14
+    },
+    {
+      "name": "Dantian",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 11
+    },
+    {
+      "name": "Push hands",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 11
+    },
+    {
+      "name": "Wudang boxing",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 10
+    },
+    {
+      "name": "Baguazhang",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 11
+    },
+    {
+      "name": "Xingyiquan",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 12
+    },
+    {
+      "name": "Five Animals Play (五禽戏)",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 10
+    },
+    {
+      "name": "Sitting in forgetfulness (坐忘)",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 14
+    },
+    {
+      "name": "Bigu (辟谷)",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 14
+    },
+    {
+      "name": "Gunpowder",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 6
+    },
+    {
+      "name": "Chen-style taiji",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 11
+    },
+    {
+      "name": "Yang-style taiji",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 12
+    },
+    {
+      "name": "Yellow Emperor's Inner Classic",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 11
+    },
+    {
+      "name": "Cinnabar",
+      "facet": "Daoist practices: taiji, qigong, alchemy",
+      "known_at": 13
+    },
+    {
+      "name": "顺其自然",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 7
+    },
+    {
+      "name": "物极必反",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 10
+    },
+    {
+      "name": "塞翁失马",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 6
+    },
+    {
+      "name": "一人得道，鸡犬升天",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 9
+    },
+    {
+      "name": "道高一尺，魔高一丈",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 10
+    },
+    {
+      "name": "天人合一",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 11
+    },
+    {
+      "name": "返璞归真",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 12
+    },
+    {
+      "name": "炉火纯青",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 11
+    },
+    {
+      "name": "Feng shui",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 6
+    },
+    {
+      "name": "打太极",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Dao (道)",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 8
+    },
+    {
+      "name": "Yangsheng (养生)",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 8
+    },
+    {
+      "name": "知足常乐",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 6
+    },
+    {
+      "name": "修身养性",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Bazi (八字)",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 9
+    },
+    {
+      "name": "阴阳怪气",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 9
+    },
+    {
+      "name": "Shanghuo (上火)",
+      "facet": "Daoist ideas in idioms and daily life",
+      "known_at": 7
+    },
+    {
+      "name": "Jin Yong",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 7
+    },
+    {
+      "name": "The Heaven Sword and Dragon Saber",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 8
+    },
+    {
+      "name": "Zhang Wuji",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 8
+    },
+    {
+      "name": "Wudang Sect",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 7
+    },
+    {
+      "name": "The Legend of the Condor Heroes",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 7
+    },
+    {
+      "name": "The Return of the Condor Heroes",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 7
+    },
+    {
+      "name": "Xiaolongnü",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 8
+    },
+    {
+      "name": "Zhou Botong",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Hua Sword Contest (华山论剑)",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 9
+    },
+    {
+      "name": "The Smiling, Proud Wanderer",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 9
+    },
+    {
+      "name": "Laojun's Eight Trigrams Furnace",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 5
+    },
+    {
+      "name": "Five Elements Mountain",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 5
+    },
+    {
+      "name": "Crouching Tiger, Hidden Dragon",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 10
+    },
+    {
+      "name": "The Taoist of Laoshan (崂山道士)",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 7
+    },
+    {
+      "name": "The Tai Chi Master",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 11
+    },
+    {
+      "name": "Kunlun Sect",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 10
+    },
+    {
+      "name": "Xianxia",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese Paladin (仙剑奇侠传)",
+      "facet": "Daoism in martial arts fiction and films",
+      "known_at": 9
+    }
+  ]
+}

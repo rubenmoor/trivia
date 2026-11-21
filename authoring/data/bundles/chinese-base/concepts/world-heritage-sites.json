@@ -1,0 +1,1122 @@
+{
+  "subcategory": "world-heritage-sites",
+  "facets": [
+    "Grottoes and Buddhist cave art",
+    "Imperial tombs and mausoleums",
+    "Imperial palaces and gardens",
+    "Temples and sacred buildings",
+    "Ancient towns and villages",
+    "Sacred mountains",
+    "Natural heritage landscapes",
+    "Classical gardens of Suzhou",
+    "Ancient engineering and canals",
+    "Archaeological sites and early cities",
+    "Trade routes and port cities",
+    "Inscription years and new listings"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 4,
+      "history": 5,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Longmen Grottoes",
+      "facet": "Grottoes and Buddhist cave art",
+      "known_at": 8
+    },
+    {
+      "name": "Dazu Rock Carvings",
+      "facet": "Grottoes and Buddhist cave art",
+      "known_at": 11
+    },
+    {
+      "name": "Maijishan Grottoes",
+      "facet": "Grottoes and Buddhist cave art",
+      "known_at": 11
+    },
+    {
+      "name": "Kizil Caves",
+      "facet": "Grottoes and Buddhist cave art",
+      "known_at": 13
+    },
+    {
+      "name": "Bingling Temple Grottoes",
+      "facet": "Grottoes and Buddhist cave art",
+      "known_at": 14
+    },
+    {
+      "name": "Library Cave (藏经洞)",
+      "facet": "Grottoes and Buddhist cave art",
+      "known_at": 10
+    },
+    {
+      "name": "Diamond Sutra of Dunhuang",
+      "facet": "Grottoes and Buddhist cave art",
+      "known_at": 12
+    },
+    {
+      "name": "Wang Yuanlu",
+      "facet": "Grottoes and Buddhist cave art",
+      "known_at": 12
+    },
+    {
+      "name": "Feitian (飞天)",
+      "facet": "Grottoes and Buddhist cave art",
+      "known_at": 5
+    },
+    {
+      "name": "Nine-Colored Deer (九色鹿)",
+      "facet": "Grottoes and Buddhist cave art",
+      "known_at": 4
+    },
+    {
+      "name": "Fengxian Temple Vairocana Buddha",
+      "facet": "Grottoes and Buddhist cave art",
+      "known_at": 11
+    },
+    {
+      "name": "Tanyao Five Caves",
+      "facet": "Grottoes and Buddhist cave art",
+      "known_at": 14
+    },
+    {
+      "name": "Thousand-Armed Guanyin of Dazu",
+      "facet": "Grottoes and Buddhist cave art",
+      "known_at": 12
+    },
+    {
+      "name": "Nine-Storey Building of Mogao",
+      "facet": "Grottoes and Buddhist cave art",
+      "known_at": 12
+    },
+    {
+      "name": "Chang Shuhong",
+      "facet": "Grottoes and Buddhist cave art",
+      "known_at": 13
+    },
+    {
+      "name": "Fan Jinshi",
+      "facet": "Grottoes and Buddhist cave art",
+      "known_at": 12
+    },
+    {
+      "name": "Mausoleum of Qin Shi Huang",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 5
+    },
+    {
+      "name": "Kneeling Archer",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 9
+    },
+    {
+      "name": "Bronze Chariots and Horses of Qin",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 9
+    },
+    {
+      "name": "Yang Zhifa",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 12
+    },
+    {
+      "name": "Ming Tombs",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 8
+    },
+    {
+      "name": "Changling Tomb",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 12
+    },
+    {
+      "name": "Dingling Tomb",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 11
+    },
+    {
+      "name": "Wanli Emperor",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 10
+    },
+    {
+      "name": "Ming Xiaoling Mausoleum",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 9
+    },
+    {
+      "name": "Zhu Yuanzhang",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 6
+    },
+    {
+      "name": "Eastern Qing Tombs",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 11
+    },
+    {
+      "name": "Western Qing Tombs",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 12
+    },
+    {
+      "name": "Qianling Mausoleum",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 11
+    },
+    {
+      "name": "Wordless Stele",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 10
+    },
+    {
+      "name": "Wu Zetian",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 5
+    },
+    {
+      "name": "Sacred Way (神道)",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 11
+    },
+    {
+      "name": "Zhaoling Mausoleum",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 12
+    },
+    {
+      "name": "Six Steeds of Zhaoling",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 12
+    },
+    {
+      "name": "Xianling Tomb of Zhongxiang",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 14
+    },
+    {
+      "name": "Koguryo tombs of Ji'an",
+      "facet": "Imperial tombs and mausoleums",
+      "known_at": 13
+    },
+    {
+      "name": "Summer Palace",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 4
+    },
+    {
+      "name": "Long Corridor",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 8
+    },
+    {
+      "name": "Seventeen-Arch Bridge",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 7
+    },
+    {
+      "name": "Marble Boat",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 9
+    },
+    {
+      "name": "Kunming Lake",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 7
+    },
+    {
+      "name": "Longevity Hill",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 8
+    },
+    {
+      "name": "Tower of Buddhist Incense",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 10
+    },
+    {
+      "name": "Suzhou Street of the Summer Palace",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 11
+    },
+    {
+      "name": "Empress Dowager Cixi",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 6
+    },
+    {
+      "name": "Qianlong Emperor",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 5
+    },
+    {
+      "name": "Kangxi Emperor",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 5
+    },
+    {
+      "name": "Old Summer Palace (Yuanmingyuan)",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 5
+    },
+    {
+      "name": "Mukden Palace",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 9
+    },
+    {
+      "name": "Norbulingka",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 12
+    },
+    {
+      "name": "Hall of Supreme Harmony",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 7
+    },
+    {
+      "name": "Nine-Dragon Wall",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 8
+    },
+    {
+      "name": "Meridian Gate",
+      "facet": "Imperial palaces and gardens",
+      "known_at": 8
+    },
+    {
+      "name": "Temple of Heaven",
+      "facet": "Temples and sacred buildings",
+      "known_at": 4
+    },
+    {
+      "name": "Hall of Prayer for Good Harvests",
+      "facet": "Temples and sacred buildings",
+      "known_at": 8
+    },
+    {
+      "name": "Echo Wall",
+      "facet": "Temples and sacred buildings",
+      "known_at": 7
+    },
+    {
+      "name": "Circular Mound Altar",
+      "facet": "Temples and sacred buildings",
+      "known_at": 10
+    },
+    {
+      "name": "Temple of Confucius in Qufu",
+      "facet": "Temples and sacred buildings",
+      "known_at": 7
+    },
+    {
+      "name": "Kong Family Mansion",
+      "facet": "Temples and sacred buildings",
+      "known_at": 10
+    },
+    {
+      "name": "Cemetery of Confucius",
+      "facet": "Temples and sacred buildings",
+      "known_at": 11
+    },
+    {
+      "name": "Jokhang Temple",
+      "facet": "Temples and sacred buildings",
+      "known_at": 10
+    },
+    {
+      "name": "Princess Wencheng",
+      "facet": "Temples and sacred buildings",
+      "known_at": 6
+    },
+    {
+      "name": "Songyue Pagoda",
+      "facet": "Temples and sacred buildings",
+      "known_at": 13
+    },
+    {
+      "name": "Foguang Temple",
+      "facet": "Temples and sacred buildings",
+      "known_at": 13
+    },
+    {
+      "name": "Liang Sicheng",
+      "facet": "Temples and sacred buildings",
+      "known_at": 11
+    },
+    {
+      "name": "Yingxian Wooden Pagoda",
+      "facet": "Temples and sacred buildings",
+      "known_at": 11
+    },
+    {
+      "name": "Big Wild Goose Pagoda",
+      "facet": "Temples and sacred buildings",
+      "known_at": 6
+    },
+    {
+      "name": "Small Wild Goose Pagoda",
+      "facet": "Temples and sacred buildings",
+      "known_at": 10
+    },
+    {
+      "name": "Putuo Zongcheng Temple",
+      "facet": "Temples and sacred buildings",
+      "known_at": 13
+    },
+    {
+      "name": "Puning Temple",
+      "facet": "Temples and sacred buildings",
+      "known_at": 13
+    },
+    {
+      "name": "Kaiyuan Temple of Quanzhou",
+      "facet": "Temples and sacred buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Purple Heaven Palace of Wudang",
+      "facet": "Temples and sacred buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Pingyao",
+      "facet": "Ancient towns and villages",
+      "known_at": 8
+    },
+    {
+      "name": "Rishengchang",
+      "facet": "Ancient towns and villages",
+      "known_at": 12
+    },
+    {
+      "name": "Pingyao City Wall",
+      "facet": "Ancient towns and villages",
+      "known_at": 11
+    },
+    {
+      "name": "Lijiang Old Town",
+      "facet": "Ancient towns and villages",
+      "known_at": 6
+    },
+    {
+      "name": "Naxi people",
+      "facet": "Ancient towns and villages",
+      "known_at": 9
+    },
+    {
+      "name": "Dongba script",
+      "facet": "Ancient towns and villages",
+      "known_at": 10
+    },
+    {
+      "name": "Shuhe Ancient Town",
+      "facet": "Ancient towns and villages",
+      "known_at": 12
+    },
+    {
+      "name": "Hongcun",
+      "facet": "Ancient towns and villages",
+      "known_at": 9
+    },
+    {
+      "name": "Xidi",
+      "facet": "Ancient towns and villages",
+      "known_at": 10
+    },
+    {
+      "name": "Horse-head wall (马头墙)",
+      "facet": "Ancient towns and villages",
+      "known_at": 9
+    },
+    {
+      "name": "Hakka people",
+      "facet": "Ancient towns and villages",
+      "known_at": 7
+    },
+    {
+      "name": "Chengqi Lou",
+      "facet": "Ancient towns and villages",
+      "known_at": 13
+    },
+    {
+      "name": "Tianluokeng Tulou Cluster",
+      "facet": "Ancient towns and villages",
+      "known_at": 12
+    },
+    {
+      "name": "Kaiping Diaolou",
+      "facet": "Ancient towns and villages",
+      "known_at": 10
+    },
+    {
+      "name": "Historic Centre of Macao",
+      "facet": "Ancient towns and villages",
+      "known_at": 8
+    },
+    {
+      "name": "A-Ma Temple",
+      "facet": "Ancient towns and villages",
+      "known_at": 10
+    },
+    {
+      "name": "Senado Square",
+      "facet": "Ancient towns and villages",
+      "known_at": 11
+    },
+    {
+      "name": "Kulangsu (Gulangyu)",
+      "facet": "Ancient towns and villages",
+      "known_at": 7
+    },
+    {
+      "name": "Tusi sites",
+      "facet": "Ancient towns and villages",
+      "known_at": 14
+    },
+    {
+      "name": "Jade Emperor Peak",
+      "facet": "Sacred mountains",
+      "known_at": 9
+    },
+    {
+      "name": "Fengshan ceremony (封禅)",
+      "facet": "Sacred mountains",
+      "known_at": 11
+    },
+    {
+      "name": "Five Great Mountains (五岳)",
+      "facet": "Sacred mountains",
+      "known_at": 6
+    },
+    {
+      "name": "Mount Huangshan",
+      "facet": "Sacred mountains",
+      "known_at": 4
+    },
+    {
+      "name": "Welcoming-Guest Pine",
+      "facet": "Sacred mountains",
+      "known_at": 6
+    },
+    {
+      "name": "Mount Emei",
+      "facet": "Sacred mountains",
+      "known_at": 5
+    },
+    {
+      "name": "Golden Summit of Emei",
+      "facet": "Sacred mountains",
+      "known_at": 10
+    },
+    {
+      "name": "Mount Wutai",
+      "facet": "Sacred mountains",
+      "known_at": 8
+    },
+    {
+      "name": "Four Sacred Buddhist Mountains",
+      "facet": "Sacred mountains",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Wudang",
+      "facet": "Sacred mountains",
+      "known_at": 5
+    },
+    {
+      "name": "Zhang Sanfeng",
+      "facet": "Sacred mountains",
+      "known_at": 6
+    },
+    {
+      "name": "Mount Lushan",
+      "facet": "Sacred mountains",
+      "known_at": 5
+    },
+    {
+      "name": "Mount Qingcheng",
+      "facet": "Sacred mountains",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Song",
+      "facet": "Sacred mountains",
+      "known_at": 8
+    },
+    {
+      "name": "Mount Hua",
+      "facet": "Sacred mountains",
+      "known_at": 5
+    },
+    {
+      "name": "Mount Wuyi",
+      "facet": "Sacred mountains",
+      "known_at": 8
+    },
+    {
+      "name": "Da Hong Pao tea",
+      "facet": "Sacred mountains",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Sanqing",
+      "facet": "Sacred mountains",
+      "known_at": 12
+    },
+    {
+      "name": "Mount Fanjing",
+      "facet": "Sacred mountains",
+      "known_at": 11
+    },
+    {
+      "name": "Huanglong",
+      "facet": "Natural heritage landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "Wulingyuan (Zhangjiajie)",
+      "facet": "Natural heritage landscapes",
+      "known_at": 4
+    },
+    {
+      "name": "Stone Forest of Kunming",
+      "facet": "Natural heritage landscapes",
+      "known_at": 6
+    },
+    {
+      "name": "Guilin karst",
+      "facet": "Natural heritage landscapes",
+      "known_at": 4
+    },
+    {
+      "name": "South China Karst",
+      "facet": "Natural heritage landscapes",
+      "known_at": 12
+    },
+    {
+      "name": "Three Parallel Rivers of Yunnan",
+      "facet": "Natural heritage landscapes",
+      "known_at": 11
+    },
+    {
+      "name": "Sichuan Giant Panda Sanctuaries",
+      "facet": "Natural heritage landscapes",
+      "known_at": 5
+    },
+    {
+      "name": "Chengjiang fossil site",
+      "facet": "Natural heritage landscapes",
+      "known_at": 12
+    },
+    {
+      "name": "Hoh Xil",
+      "facet": "Natural heritage landscapes",
+      "known_at": 9
+    },
+    {
+      "name": "Tibetan antelope",
+      "facet": "Natural heritage landscapes",
+      "known_at": 6
+    },
+    {
+      "name": "Xinjiang Tianshan",
+      "facet": "Natural heritage landscapes",
+      "known_at": 9
+    },
+    {
+      "name": "Shennongjia",
+      "facet": "Natural heritage landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "China Danxia",
+      "facet": "Natural heritage landscapes",
+      "known_at": 10
+    },
+    {
+      "name": "Mount Danxia",
+      "facet": "Natural heritage landscapes",
+      "known_at": 11
+    },
+    {
+      "name": "Hani Rice Terraces",
+      "facet": "Natural heritage landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "Su Causeway",
+      "facet": "Natural heritage landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "Leifeng Pagoda",
+      "facet": "Natural heritage landscapes",
+      "known_at": 6
+    },
+    {
+      "name": "Zuojiang Huashan Rock Art",
+      "facet": "Natural heritage landscapes",
+      "known_at": 13
+    },
+    {
+      "name": "Lingering Garden",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 9
+    },
+    {
+      "name": "Master of the Nets Garden",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 11
+    },
+    {
+      "name": "Lion Grove Garden",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 10
+    },
+    {
+      "name": "Surging Waves Pavilion",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 12
+    },
+    {
+      "name": "Couple's Retreat Garden",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 13
+    },
+    {
+      "name": "Garden of Cultivation",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 14
+    },
+    {
+      "name": "Retreat and Reflection Garden",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 13
+    },
+    {
+      "name": "Cloud-Capped Peak (冠云峰)",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 12
+    },
+    {
+      "name": "Taihu stone",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 8
+    },
+    {
+      "name": "Moon gate",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 6
+    },
+    {
+      "name": "Lattice window (漏窗)",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 9
+    },
+    {
+      "name": "Borrowed scenery (借景)",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 11
+    },
+    {
+      "name": "Astor Court",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 14
+    },
+    {
+      "name": "Wen Zhengming",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 11
+    },
+    {
+      "name": "Zigzag bridge",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 7
+    },
+    {
+      "name": "Penjing",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 7
+    },
+    {
+      "name": "Ye Shengtao",
+      "facet": "Classical gardens of Suzhou",
+      "known_at": 10
+    },
+    {
+      "name": "Emperor Yang of Sui",
+      "facet": "Ancient engineering and canals",
+      "known_at": 7
+    },
+    {
+      "name": "Gongchen Bridge",
+      "facet": "Ancient engineering and canals",
+      "known_at": 12
+    },
+    {
+      "name": "Tongzhou canal port",
+      "facet": "Ancient engineering and canals",
+      "known_at": 13
+    },
+    {
+      "name": "Dujiangyan",
+      "facet": "Ancient engineering and canals",
+      "known_at": 6
+    },
+    {
+      "name": "Li Bing",
+      "facet": "Ancient engineering and canals",
+      "known_at": 8
+    },
+    {
+      "name": "Fish Mouth levee (鱼嘴)",
+      "facet": "Ancient engineering and canals",
+      "known_at": 11
+    },
+    {
+      "name": "Bottle-Neck Channel (宝瓶口)",
+      "facet": "Ancient engineering and canals",
+      "known_at": 12
+    },
+    {
+      "name": "Lingqu Canal",
+      "facet": "Ancient engineering and canals",
+      "known_at": 11
+    },
+    {
+      "name": "Zhaozhou Bridge",
+      "facet": "Ancient engineering and canals",
+      "known_at": 6
+    },
+    {
+      "name": "Li Chun",
+      "facet": "Ancient engineering and canals",
+      "known_at": 9
+    },
+    {
+      "name": "Karez wells of Turpan",
+      "facet": "Ancient engineering and canals",
+      "known_at": 9
+    },
+    {
+      "name": "Badaling Great Wall",
+      "facet": "Ancient engineering and canals",
+      "known_at": 5
+    },
+    {
+      "name": "Mutianyu Great Wall",
+      "facet": "Ancient engineering and canals",
+      "known_at": 9
+    },
+    {
+      "name": "Jiayu Pass",
+      "facet": "Ancient engineering and canals",
+      "known_at": 7
+    },
+    {
+      "name": "Shanhai Pass",
+      "facet": "Ancient engineering and canals",
+      "known_at": 7
+    },
+    {
+      "name": "Old Dragon's Head (老龙头)",
+      "facet": "Ancient engineering and canals",
+      "known_at": 10
+    },
+    {
+      "name": "Zhan Tianyou",
+      "facet": "Ancient engineering and canals",
+      "known_at": 6
+    },
+    {
+      "name": "Yinxu",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 9
+    },
+    {
+      "name": "Oracle bone script",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 5
+    },
+    {
+      "name": "Houmuwu Ding",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 8
+    },
+    {
+      "name": "Fu Hao",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 12
+    },
+    {
+      "name": "Zhoukoudian",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 8
+    },
+    {
+      "name": "Peking Man",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 6
+    },
+    {
+      "name": "Liangzhu",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 9
+    },
+    {
+      "name": "Jade cong",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 11
+    },
+    {
+      "name": "Sanxingdui",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 6
+    },
+    {
+      "name": "Sanxingdui bronze mask",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 6
+    },
+    {
+      "name": "Golden Sun Bird of Jinsha",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 9
+    },
+    {
+      "name": "Erlitou",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 12
+    },
+    {
+      "name": "Banpo",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 8
+    },
+    {
+      "name": "Hemudu",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 8
+    },
+    {
+      "name": "Xanadu (Shangdu)",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 10
+    },
+    {
+      "name": "Kublai Khan",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 6
+    },
+    {
+      "name": "Mawangdui",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 10
+    },
+    {
+      "name": "Changsha Mawangdui silk garment",
+      "facet": "Archaeological sites and early cities",
+      "known_at": 12
+    },
+    {
+      "name": "Silk Road",
+      "facet": "Trade routes and port cities",
+      "known_at": 4
+    },
+    {
+      "name": "Chang'an-Tianshan Corridor",
+      "facet": "Trade routes and port cities",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Qian",
+      "facet": "Trade routes and port cities",
+      "known_at": 6
+    },
+    {
+      "name": "Xuanzang",
+      "facet": "Trade routes and port cities",
+      "known_at": 4
+    },
+    {
+      "name": "Yumen Pass",
+      "facet": "Trade routes and port cities",
+      "known_at": 7
+    },
+    {
+      "name": "Yang Pass",
+      "facet": "Trade routes and port cities",
+      "known_at": 8
+    },
+    {
+      "name": "Jiaohe Ruins",
+      "facet": "Trade routes and port cities",
+      "known_at": 12
+    },
+    {
+      "name": "Gaochang Ruins",
+      "facet": "Trade routes and port cities",
+      "known_at": 11
+    },
+    {
+      "name": "Daming Palace",
+      "facet": "Trade routes and port cities",
+      "known_at": 9
+    },
+    {
+      "name": "Zayton",
+      "facet": "Trade routes and port cities",
+      "known_at": 13
+    },
+    {
+      "name": "Laozi statue of Qingyuan Mountain",
+      "facet": "Trade routes and port cities",
+      "known_at": 12
+    },
+    {
+      "name": "Luoyang Bridge",
+      "facet": "Trade routes and port cities",
+      "known_at": 12
+    },
+    {
+      "name": "Zheng He",
+      "facet": "Trade routes and port cities",
+      "known_at": 5
+    },
+    {
+      "name": "Marco Polo",
+      "facet": "Trade routes and port cities",
+      "known_at": 5
+    },
+    {
+      "name": "Ancient Tea Horse Road",
+      "facet": "Trade routes and port cities",
+      "known_at": 9
+    },
+    {
+      "name": "Bactrian camel",
+      "facet": "Trade routes and port cities",
+      "known_at": 4
+    },
+    {
+      "name": "Bell and Drum Towers of Beijing",
+      "facet": "Inscription years and new listings",
+      "known_at": 8
+    },
+    {
+      "name": "Yongding Gate",
+      "facet": "Inscription years and new listings",
+      "known_at": 11
+    },
+    {
+      "name": "Old Tea Forests of Jingmai Mountain",
+      "facet": "Inscription years and new listings",
+      "known_at": 12
+    },
+    {
+      "name": "Badain Jaran Desert",
+      "facet": "Inscription years and new listings",
+      "known_at": 11
+    },
+    {
+      "name": "Xixia Imperial Tombs",
+      "facet": "Inscription years and new listings",
+      "known_at": 11
+    },
+    {
+      "name": "Migratory Bird Sanctuaries of the Yellow Sea",
+      "facet": "Inscription years and new listings",
+      "known_at": 13
+    },
+    {
+      "name": "Red-crowned crane",
+      "facet": "Inscription years and new listings",
+      "known_at": 5
+    },
+    {
+      "name": "World Heritage List",
+      "facet": "Inscription years and new listings",
+      "known_at": 5
+    },
+    {
+      "name": "UNESCO",
+      "facet": "Inscription years and new listings",
+      "known_at": 6
+    },
+    {
+      "name": "World Heritage Committee 2004 Suzhou session",
+      "facet": "Inscription years and new listings",
+      "known_at": 14
+    },
+    {
+      "name": "China's first World Heritage inscriptions of 1987",
+      "facet": "Inscription years and new listings",
+      "known_at": 12
+    },
+    {
+      "name": "Mixed heritage site",
+      "facet": "Inscription years and new listings",
+      "known_at": 11
+    },
+    {
+      "name": "Cultural landscape",
+      "facet": "Inscription years and new listings",
+      "known_at": 12
+    },
+    {
+      "name": "World Heritage emblem",
+      "facet": "Inscription years and new listings",
+      "known_at": 11
+    },
+    {
+      "name": "Hou Renzhi",
+      "facet": "Inscription years and new listings",
+      "known_at": 14
+    },
+    {
+      "name": "Cultural and Natural Heritage Day",
+      "facet": "Inscription years and new listings",
+      "known_at": 12
+    }
+  ]
+}

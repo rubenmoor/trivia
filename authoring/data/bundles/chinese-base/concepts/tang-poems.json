@@ -1,0 +1,1057 @@
+{
+  "subcategory": "tang-poems",
+  "facets": [
+    "Great Tang poets and nicknames",
+    "School primer poems (古诗)",
+    "Seasons and nature scenes",
+    "Festivals and customs in poems",
+    "Places and landmarks in poems",
+    "Frontier and war poems",
+    "Farewell and friendship poems",
+    "Homesickness and moon poems",
+    "Long narrative poems",
+    "Poet life stories and anecdotes",
+    "Poetry forms and Tang periods",
+    "Tang poems in idioms and culture"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Bai Juyi (白居易)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 3
+    },
+    {
+      "name": "Meng Haoran (孟浩然)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 3
+    },
+    {
+      "name": "Du Mu (杜牧)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 5
+    },
+    {
+      "name": "Li Shangyin (李商隐)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 7
+    },
+    {
+      "name": "Wang Changling (王昌龄)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 6
+    },
+    {
+      "name": "Wang Zhihuan (王之涣)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 4
+    },
+    {
+      "name": "Luo Binwang (骆宾王)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 3
+    },
+    {
+      "name": "He Zhizhang (贺知章)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 4
+    },
+    {
+      "name": "Liu Yuxi (刘禹锡)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 7
+    },
+    {
+      "name": "Liu Zongyuan (柳宗元)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 6
+    },
+    {
+      "name": "Cen Shen (岑参)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Gao Shi (高适)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Li He (李贺)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Bo (王勃)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 7
+    },
+    {
+      "name": "Chen Zi'ang (陈子昂)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Meng Jiao (孟郊)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 5
+    },
+    {
+      "name": "Jia Dao (贾岛)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 7
+    },
+    {
+      "name": "Yuan Zhen (元稹)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Ji (张继)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 7
+    },
+    {
+      "name": "Shangguan Wan'er (上官婉儿)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "Little Li-Du (小李杜)",
+      "facet": "Great Tang poets and nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "Ode to the Goose (咏鹅)",
+      "facet": "School primer poems (古诗)",
+      "known_at": 1
+    },
+    {
+      "name": "Spring Dawn (春晓)",
+      "facet": "School primer poems (古诗)",
+      "known_at": 1
+    },
+    {
+      "name": "Pity the Farmers (悯农)",
+      "facet": "School primer poems (古诗)",
+      "known_at": 1
+    },
+    {
+      "name": "Climbing Stork Tower (登鹳雀楼)",
+      "facet": "School primer poems (古诗)",
+      "known_at": 2
+    },
+    {
+      "name": "Ode to the Willow (咏柳)",
+      "facet": "School primer poems (古诗)",
+      "known_at": 3
+    },
+    {
+      "name": "Grass (赋得古原草送别)",
+      "facet": "School primer poems (古诗)",
+      "known_at": 3
+    },
+    {
+      "name": "Wind (风)",
+      "facet": "School primer poems (古诗)",
+      "known_at": 4
+    },
+    {
+      "name": "Song of the Wandering Son (游子吟)",
+      "facet": "School primer poems (古诗)",
+      "known_at": 3
+    },
+    {
+      "name": "Night Stay at the Mountain Temple (夜宿山寺)",
+      "facet": "School primer poems (古诗)",
+      "known_at": 3
+    },
+    {
+      "name": "Seeking the Hermit Unfound (寻隐者不遇)",
+      "facet": "School primer poems (古诗)",
+      "known_at": 5
+    },
+    {
+      "name": "Two Yellow Orioles (两个黄鹂鸣翠柳)",
+      "facet": "School primer poems (古诗)",
+      "known_at": 3
+    },
+    {
+      "name": "Little Boy Fishing (小儿垂钓)",
+      "facet": "School primer poems (古诗)",
+      "known_at": 4
+    },
+    {
+      "name": "On the Pond (池上)",
+      "facet": "School primer poems (古诗)",
+      "known_at": 4
+    },
+    {
+      "name": "The Bee (蜂)",
+      "facet": "School primer poems (古诗)",
+      "known_at": 6
+    },
+    {
+      "name": "Deer Park (鹿柴)",
+      "facet": "School primer poems (古诗)",
+      "known_at": 5
+    },
+    {
+      "name": "Happy Rain on a Spring Night (春夜喜雨)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 5
+    },
+    {
+      "name": "Mountain Walk (山行)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 5
+    },
+    {
+      "name": "Climbing High (登高)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 8
+    },
+    {
+      "name": "River Snow (江雪)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 4
+    },
+    {
+      "name": "Early Spring (早春呈水部张十八员外)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 7
+    },
+    {
+      "name": "Autumn Evening in the Mountains (山居秋暝)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 8
+    },
+    {
+      "name": "Bird-Calling Stream (鸟鸣涧)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 8
+    },
+    {
+      "name": "Peach Blossoms at Dalin Temple (大林寺桃花)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 7
+    },
+    {
+      "name": "Autumn Song (秋词)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 9
+    },
+    {
+      "name": "Strolling Alone by the River for Flowers (江畔独步寻花)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 7
+    },
+    {
+      "name": "Staying with the Host of Furong Mountain in Snow (逢雪宿芙蓉山主人)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 9
+    },
+    {
+      "name": "Evening River Song (暮江吟)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 6
+    },
+    {
+      "name": "Bamboo Grove Retreat (竹里馆)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 8
+    },
+    {
+      "name": "Climbing Leyou Plain (登乐游原)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 7
+    },
+    {
+      "name": "West Stream at Chuzhou (滁州西涧)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 10
+    },
+    {
+      "name": "Admiring Peonies (赏牡丹)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 10
+    },
+    {
+      "name": "Chrysanthemums (菊花)",
+      "facet": "Seasons and nature scenes",
+      "known_at": 10
+    },
+    {
+      "name": "Qingming (清明)",
+      "facet": "Festivals and customs in poems",
+      "known_at": 3
+    },
+    {
+      "name": "Thinking of My Brothers on the Double Ninth (九月九日忆山东兄弟)",
+      "facet": "Festivals and customs in poems",
+      "known_at": 4
+    },
+    {
+      "name": "Gazing at the Moon on the Fifteenth Night (十五夜望月)",
+      "facet": "Festivals and customs in poems",
+      "known_at": 8
+    },
+    {
+      "name": "Begging for Skill (乞巧)",
+      "facet": "Festivals and customs in poems",
+      "known_at": 6
+    },
+    {
+      "name": "Autumn Evening (秋夕)",
+      "facet": "Festivals and customs in poems",
+      "known_at": 9
+    },
+    {
+      "name": "Written on New Year's Eve (除夜作)",
+      "facet": "Festivals and customs in poems",
+      "known_at": 11
+    },
+    {
+      "name": "Cold Food Festival (寒食节)",
+      "facet": "Festivals and customs in poems",
+      "known_at": 8
+    },
+    {
+      "name": "Mid-Autumn Festival (中秋节)",
+      "facet": "Festivals and customs in poems",
+      "known_at": 2
+    },
+    {
+      "name": "Dogwood (茱萸)",
+      "facet": "Festivals and customs in poems",
+      "known_at": 7
+    },
+    {
+      "name": "Chrysanthemum wine (菊花酒)",
+      "facet": "Festivals and customs in poems",
+      "known_at": 9
+    },
+    {
+      "name": "Herd Boy and Weaver Girl (牛郎织女)",
+      "facet": "Festivals and customs in poems",
+      "known_at": 3
+    },
+    {
+      "name": "Spring outing (踏青)",
+      "facet": "Festivals and customs in poems",
+      "known_at": 6
+    },
+    {
+      "name": "Viewing the Waterfall at Mount Lu (望庐山瀑布)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 3
+    },
+    {
+      "name": "Yellow Crane Tower (黄鹤楼)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 5
+    },
+    {
+      "name": "Tengwang Pavilion (滕王阁)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 8
+    },
+    {
+      "name": "Night Mooring by Maple Bridge (枫桥夜泊)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 6
+    },
+    {
+      "name": "Early Departure from Baidi City (早发白帝城)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 5
+    },
+    {
+      "name": "Gazing at Tianmen Mountain (望天门山)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 5
+    },
+    {
+      "name": "Gazing at Mount Tai (望岳)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 7
+    },
+    {
+      "name": "Spring Walk by Qiantang Lake (钱塘湖春行)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 9
+    },
+    {
+      "name": "Yangzhou (扬州)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 7
+    },
+    {
+      "name": "Gazing at Dongting Lake (望洞庭)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 7
+    },
+    {
+      "name": "Wuyi Lane (乌衣巷)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 10
+    },
+    {
+      "name": "Song of the Moon over Mount Emei (峨眉山月歌)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 8
+    },
+    {
+      "name": "Red Cliff (赤壁)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 9
+    },
+    {
+      "name": "Passing Huaqing Palace (过华清宫)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 10
+    },
+    {
+      "name": "Spring in Jiangnan (江南春)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 7
+    },
+    {
+      "name": "Mooring on the Qinhuai River (泊秦淮)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 9
+    },
+    {
+      "name": "Du Fu Thatched Cottage (杜甫草堂)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 7
+    },
+    {
+      "name": "Remembering Jiangnan (忆江南)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 6
+    },
+    {
+      "name": "Climbing Youzhou Terrace (登幽州台歌)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 10
+    },
+    {
+      "name": "Liangzhou Song (凉州词)",
+      "facet": "Frontier and war poems",
+      "known_at": 6
+    },
+    {
+      "name": "Out of the Frontier (出塞)",
+      "facet": "Frontier and war poems",
+      "known_at": 6
+    },
+    {
+      "name": "Joining the Army (从军行)",
+      "facet": "Frontier and war poems",
+      "known_at": 8
+    },
+    {
+      "name": "Song of White Snow (白雪歌送武判官归京)",
+      "facet": "Frontier and war poems",
+      "known_at": 9
+    },
+    {
+      "name": "Spring View (春望)",
+      "facet": "Frontier and war poems",
+      "known_at": 7
+    },
+    {
+      "name": "Envoy to the Frontier (使至塞上)",
+      "facet": "Frontier and war poems",
+      "known_at": 9
+    },
+    {
+      "name": "Hearing the Army Has Recovered Henan and Hebei (闻官军收河南河北)",
+      "facet": "Frontier and war poems",
+      "known_at": 10
+    },
+    {
+      "name": "Frontier Song (塞下曲)",
+      "facet": "Frontier and war poems",
+      "known_at": 8
+    },
+    {
+      "name": "Qiang flute (羌笛)",
+      "facet": "Frontier and war poems",
+      "known_at": 9
+    },
+    {
+      "name": "Li Guang, the Flying General (飞将军李广)",
+      "facet": "Frontier and war poems",
+      "known_at": 10
+    },
+    {
+      "name": "Luminous cup (夜光杯)",
+      "facet": "Frontier and war poems",
+      "known_at": 9
+    },
+    {
+      "name": "Frontier poetry school (边塞诗派)",
+      "facet": "Frontier and war poems",
+      "known_at": 10
+    },
+    {
+      "name": "Loulan (楼兰)",
+      "facet": "Frontier and war poems",
+      "known_at": 10
+    },
+    {
+      "name": "Moon over the Mountain Pass (关山月)",
+      "facet": "Frontier and war poems",
+      "known_at": 12
+    },
+    {
+      "name": "Song of Yan (燕歌行)",
+      "facet": "Frontier and war poems",
+      "known_at": 13
+    },
+    {
+      "name": "Seeing Off Meng Haoran at Yellow Crane Tower (黄鹤楼送孟浩然之广陵)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 5
+    },
+    {
+      "name": "To Wang Lun (赠汪伦)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 4
+    },
+    {
+      "name": "Seeing Off Yuan Er to Anxi (送元二使安西)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 7
+    },
+    {
+      "name": "Farewell to Du Shaofu (送杜少府之任蜀州)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 8
+    },
+    {
+      "name": "Farewell to Dong Da (别董大)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 8
+    },
+    {
+      "name": "Seeing Off Xin Jian at Furong Tower (芙蓉楼送辛渐)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 8
+    },
+    {
+      "name": "Snapping willow branches (折柳)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 8
+    },
+    {
+      "name": "Three Refrains of Yangguan (阳关三叠)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 12
+    },
+    {
+      "name": "Yuan-Bai friendship (元白)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 11
+    },
+    {
+      "name": "Dreaming of Li Bai (梦李白)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 11
+    },
+    {
+      "name": "Seeing Off a Friend (送友人)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 10
+    },
+    {
+      "name": "Farewell at Jingmen Ferry (渡荆门送别)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 10
+    },
+    {
+      "name": "Visiting an Old Friend's Farm (过故人庄)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 7
+    },
+    {
+      "name": "Sent North on a Rainy Night (夜雨寄北)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 8
+    },
+    {
+      "name": "For Wang Changling, Demoted to Longbiao (闻王昌龄左迁龙标遥有此寄)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 9
+    },
+    {
+      "name": "To Meng Haoran (赠孟浩然)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 11
+    },
+    {
+      "name": "Meeting Li Guinian in Jiangnan (江南逢李龟年)",
+      "facet": "Farewell and friendship poems",
+      "known_at": 11
+    },
+    {
+      "name": "Ancient Moon Song (古朗月行)",
+      "facet": "Homesickness and moon poems",
+      "known_at": 3
+    },
+    {
+      "name": "Returning Home (回乡偶书)",
+      "facet": "Homesickness and moon poems",
+      "known_at": 4
+    },
+    {
+      "name": "Drinking Alone under the Moon (月下独酌)",
+      "facet": "Homesickness and moon poems",
+      "known_at": 7
+    },
+    {
+      "name": "Moonlit Night (月夜)",
+      "facet": "Homesickness and moon poems",
+      "known_at": 11
+    },
+    {
+      "name": "Remembering My Brothers on a Moonlit Night (月夜忆舍弟)",
+      "facet": "Homesickness and moon poems",
+      "known_at": 9
+    },
+    {
+      "name": "Gazing at the Moon, Longing for One Far Away (望月怀远)",
+      "facet": "Homesickness and moon poems",
+      "known_at": 9
+    },
+    {
+      "name": "Spring River on a Flowery Moonlit Night (春江花月夜)",
+      "facet": "Homesickness and moon poems",
+      "known_at": 10
+    },
+    {
+      "name": "Chang'e (嫦娥)",
+      "facet": "Homesickness and moon poems",
+      "known_at": 3
+    },
+    {
+      "name": "Autumn Thoughts (秋思)",
+      "facet": "Homesickness and moon poems",
+      "known_at": 10
+    },
+    {
+      "name": "Night on the Jiande River (宿建德江)",
+      "facet": "Homesickness and moon poems",
+      "known_at": 9
+    },
+    {
+      "name": "Hearing a Flute on a Spring Night in Luoyang (春夜洛城闻笛)",
+      "facet": "Homesickness and moon poems",
+      "known_at": 9
+    },
+    {
+      "name": "Hearing a Flute on the Wall of Shouxiang City (夜上受降城闻笛)",
+      "facet": "Homesickness and moon poems",
+      "known_at": 12
+    },
+    {
+      "name": "Early Journey on Mount Shang (商山早行)",
+      "facet": "Homesickness and moon poems",
+      "known_at": 11
+    },
+    {
+      "name": "Crossing the Han River (渡汉江)",
+      "facet": "Homesickness and moon poems",
+      "known_at": 11
+    },
+    {
+      "name": "Night Thoughts While Travelling (旅夜书怀)",
+      "facet": "Homesickness and moon poems",
+      "known_at": 12
+    },
+    {
+      "name": "Song of Everlasting Regret (长恨歌)",
+      "facet": "Long narrative poems",
+      "known_at": 8
+    },
+    {
+      "name": "Song of the Pipa (琵琶行)",
+      "facet": "Long narrative poems",
+      "known_at": 9
+    },
+    {
+      "name": "The Old Charcoal Seller (卖炭翁)",
+      "facet": "Long narrative poems",
+      "known_at": 8
+    },
+    {
+      "name": "Song of the Wagons (兵车行)",
+      "facet": "Long narrative poems",
+      "known_at": 10
+    },
+    {
+      "name": "The Officer at Shihao Village (石壕吏)",
+      "facet": "Long narrative poems",
+      "known_at": 9
+    },
+    {
+      "name": "My Thatched Hut Torn by the Autumn Wind (茅屋为秋风所破歌)",
+      "facet": "Long narrative poems",
+      "known_at": 9
+    },
+    {
+      "name": "Yang Guifei (杨贵妃)",
+      "facet": "Long narrative poems",
+      "known_at": 6
+    },
+    {
+      "name": "Watching the Wheat Reapers (观刈麦)",
+      "facet": "Long narrative poems",
+      "known_at": 11
+    },
+    {
+      "name": "Lament of the Lady of Qin (秦妇吟)",
+      "facet": "Long narrative poems",
+      "known_at": 14
+    },
+    {
+      "name": "Mawei Slope (马嵬坡)",
+      "facet": "Long narrative poems",
+      "known_at": 11
+    },
+    {
+      "name": "Sword Dance of Lady Gongsun's Pupil (观公孙大娘弟子舞剑器行)",
+      "facet": "Long narrative poems",
+      "known_at": 13
+    },
+    {
+      "name": "Song of Fair Ladies (丽人行)",
+      "facet": "Long narrative poems",
+      "known_at": 12
+    },
+    {
+      "name": "Rainbow Skirt and Feather Dress Dance (霓裳羽衣曲)",
+      "facet": "Long narrative poems",
+      "known_at": 10
+    },
+    {
+      "name": "Jiangzhou Sima (江州司马)",
+      "facet": "Long narrative poems",
+      "known_at": 11
+    },
+    {
+      "name": "Dream Journey to Mount Tianmu (梦游天姥吟留别)",
+      "facet": "Long narrative poems",
+      "known_at": 10
+    },
+    {
+      "name": "Li Bai catching the moon (李白捉月)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 8
+    },
+    {
+      "name": "Grinding an iron rod into a needle (铁杵磨成针)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 4
+    },
+    {
+      "name": "Gao Lishi removing Li Bai's boots (力士脱靴)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 10
+    },
+    {
+      "name": "Bai Juyi reading poems to an old woman (老妪能解)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 9
+    },
+    {
+      "name": "Li He's brocade bag (锦囊)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 12
+    },
+    {
+      "name": "Meng Haoran meeting Emperor Xuanzong (不才明主弃)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 13
+    },
+    {
+      "name": "Suyab (碎叶城)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Zongyuan in Yongzhou (永州)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 11
+    },
+    {
+      "name": "Han Yu's exile to Chaozhou (潮州)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 12
+    },
+    {
+      "name": "Eight Immortals of the Wine Cup (饮中八仙)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 11
+    },
+    {
+      "name": "Meeting of Li Bai and Du Fu (李杜相会)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 10
+    },
+    {
+      "name": "Banished Immortal (谪仙人)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 10
+    },
+    {
+      "name": "Hanlin Academy (翰林院)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 11
+    },
+    {
+      "name": "After Passing the Exam (登科后)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 10
+    },
+    {
+      "name": "Living in Chang'an Is Not Easy (长安居大不易)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 11
+    },
+    {
+      "name": "Wall Poems at the Flag Pavilion (旗亭画壁)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 14
+    },
+    {
+      "name": "Xue Tao paper (薛涛笺)",
+      "facet": "Poet life stories and anecdotes",
+      "known_at": 13
+    },
+    {
+      "name": "Jueju (绝句)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 6
+    },
+    {
+      "name": "Lüshi (律诗)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 8
+    },
+    {
+      "name": "Five-character verse (五言)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 5
+    },
+    {
+      "name": "Seven-character verse (七言)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 5
+    },
+    {
+      "name": "Parallel couplet (对仗)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 10
+    },
+    {
+      "name": "Yuefu (乐府)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 10
+    },
+    {
+      "name": "Old-style verse (古体诗)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 11
+    },
+    {
+      "name": "Modern-style verse (近体诗)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 11
+    },
+    {
+      "name": "Early Tang (初唐)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 9
+    },
+    {
+      "name": "High Tang (盛唐)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 8
+    },
+    {
+      "name": "Mid Tang (中唐)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 10
+    },
+    {
+      "name": "Late Tang (晚唐)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 10
+    },
+    {
+      "name": "Four Paragons of the Early Tang (初唐四杰)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 10
+    },
+    {
+      "name": "Landscape and pastoral school (山水田园诗派)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 10
+    },
+    {
+      "name": "New Yuefu Movement (新乐府运动)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 12
+    },
+    {
+      "name": "Classical Prose Movement (古文运动)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 11
+    },
+    {
+      "name": "Complete Tang Poems (全唐诗)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 11
+    },
+    {
+      "name": "Kaiyuan golden age (开元盛世)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 10
+    },
+    {
+      "name": "Ci (词)",
+      "facet": "Poetry forms and Tang periods",
+      "known_at": 9
+    },
+    {
+      "name": "Three Hundred Tang Poems (唐诗三百首)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 4
+    },
+    {
+      "name": "Push or knock (推敲)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 7
+    },
+    {
+      "name": "Riding the spring breeze (春风得意)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 9
+    },
+    {
+      "name": "Bring In the Wine (将进酒)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 9
+    },
+    {
+      "name": "Inscription on a Humble Dwelling (陋室铭)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 7
+    },
+    {
+      "name": "Painting within poetry (诗中有画)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 10
+    },
+    {
+      "name": "Having seen the vast sea (曾经沧海)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 12
+    },
+    {
+      "name": "Hearts linked like a rhino horn (心有灵犀)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 9
+    },
+    {
+      "name": "Fiery trees and silver flowers (火树银花)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Xu's wild cursive (张旭草书)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese Poetry Conference (中国诗词大会)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 7
+    },
+    {
+      "name": "Honor of Kings (王者荣耀)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 5
+    },
+    {
+      "name": "Chang'an (长安三万里)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 6
+    },
+    {
+      "name": "Gone like the yellow crane (杳如黄鹤)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 11
+    },
+    {
+      "name": "A face among peach blossoms (人面桃花)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 11
+    },
+    {
+      "name": "Longing (相思)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 7
+    },
+    {
+      "name": "A thousand sails pass the sunken ship (沉舟侧畔千帆过)",
+      "facet": "Tang poems in idioms and culture",
+      "known_at": 12
+    }
+  ]
+}

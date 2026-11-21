@@ -1,0 +1,1092 @@
+{
+  "subcategory": "board-and-tile-games",
+  "facets": [
+    "Go board, stones and rules",
+    "Go history and legends",
+    "Go champions and players",
+    "AlphaGo and computer Go",
+    "Xiangqi pieces and moves",
+    "Xiangqi board, rules and strategy",
+    "Xiangqi history and masters",
+    "Mahjong tiles and suits",
+    "Mahjong rules, hands and regional styles",
+    "Chinese card games and Dou Dizhu",
+    "Chinese checkers and other folk board games",
+    "Board game words, idioms and stories"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 5,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 4,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Go board 19×19",
+      "facet": "Go board, stones and rules",
+      "known_at": 5
+    },
+    {
+      "name": "Black and white stones",
+      "facet": "Go board, stones and rules",
+      "known_at": 2
+    },
+    {
+      "name": "Liberty (气)",
+      "facet": "Go board, stones and rules",
+      "known_at": 7
+    },
+    {
+      "name": "Capturing stones (提子)",
+      "facet": "Go board, stones and rules",
+      "known_at": 6
+    },
+    {
+      "name": "Ko (劫)",
+      "facet": "Go board, stones and rules",
+      "known_at": 10
+    },
+    {
+      "name": "Eye (眼)",
+      "facet": "Go board, stones and rules",
+      "known_at": 9
+    },
+    {
+      "name": "Star point (星位)",
+      "facet": "Go board, stones and rules",
+      "known_at": 9
+    },
+    {
+      "name": "Tengen (天元)",
+      "facet": "Go board, stones and rules",
+      "known_at": 9
+    },
+    {
+      "name": "Komi (贴目)",
+      "facet": "Go board, stones and rules",
+      "known_at": 11
+    },
+    {
+      "name": "Territory (地)",
+      "facet": "Go board, stones and rules",
+      "known_at": 7
+    },
+    {
+      "name": "Atari (打吃)",
+      "facet": "Go board, stones and rules",
+      "known_at": 10
+    },
+    {
+      "name": "Ladder (征子)",
+      "facet": "Go board, stones and rules",
+      "known_at": 11
+    },
+    {
+      "name": "Seki (双活)",
+      "facet": "Go board, stones and rules",
+      "known_at": 13
+    },
+    {
+      "name": "Handicap stones (让子)",
+      "facet": "Go board, stones and rules",
+      "known_at": 11
+    },
+    {
+      "name": "Go bowls (棋罐)",
+      "facet": "Go board, stones and rules",
+      "known_at": 6
+    },
+    {
+      "name": "Yunzi stones (云子)",
+      "facet": "Go board, stones and rules",
+      "known_at": 13
+    },
+    {
+      "name": "Area scoring (数子法)",
+      "facet": "Go board, stones and rules",
+      "known_at": 13
+    },
+    {
+      "name": "Snapback (倒扑)",
+      "facet": "Go board, stones and rules",
+      "known_at": 13
+    },
+    {
+      "name": "Joseki (定式)",
+      "facet": "Go board, stones and rules",
+      "known_at": 12
+    },
+    {
+      "name": "Black plays first",
+      "facet": "Go board, stones and rules",
+      "known_at": 5
+    },
+    {
+      "name": "Weiqi (围棋)",
+      "facet": "Go history and legends",
+      "known_at": 3
+    },
+    {
+      "name": "Emperor Yao and Danzhu legend",
+      "facet": "Go history and legends",
+      "known_at": 10
+    },
+    {
+      "name": "Lanke legend (烂柯)",
+      "facet": "Go history and legends",
+      "known_at": 11
+    },
+    {
+      "name": "Yi Qiu (弈秋)",
+      "facet": "Go history and legends",
+      "known_at": 8
+    },
+    {
+      "name": "Xie An at the Battle of Fei River",
+      "facet": "Go history and legends",
+      "known_at": 13
+    },
+    {
+      "name": "Guan Yu playing Go during bone scraping (刮骨疗毒)",
+      "facet": "Go history and legends",
+      "known_at": 9
+    },
+    {
+      "name": "Dunhuang Go Classic (敦煌棋经)",
+      "facet": "Go history and legends",
+      "known_at": 14
+    },
+    {
+      "name": "Classic of Go in Thirteen Chapters (棋经十三篇)",
+      "facet": "Go history and legends",
+      "known_at": 14
+    },
+    {
+      "name": "Xuanxuan Qijing (玄玄棋经)",
+      "facet": "Go history and legends",
+      "known_at": 14
+    },
+    {
+      "name": "Wang Jixin (王积薪)",
+      "facet": "Go history and legends",
+      "known_at": 14
+    },
+    {
+      "name": "Huang Longshi (黄龙士)",
+      "facet": "Go history and legends",
+      "known_at": 14
+    },
+    {
+      "name": "Fan Xiping and Shi Xiangxia (范西屏、施襄夏)",
+      "facet": "Go history and legends",
+      "known_at": 14
+    },
+    {
+      "name": "Qidaizhao (棋待诏)",
+      "facet": "Go history and legends",
+      "known_at": 15
+    },
+    {
+      "name": "Honinbo house (本因坊)",
+      "facet": "Go history and legends",
+      "known_at": 13
+    },
+    {
+      "name": "Baduk (Korean Go)",
+      "facet": "Go history and legends",
+      "known_at": 12
+    },
+    {
+      "name": "Go in the Asian Games",
+      "facet": "Go history and legends",
+      "known_at": 12
+    },
+    {
+      "name": "Nie Weiping",
+      "facet": "Go champions and players",
+      "known_at": 9
+    },
+    {
+      "name": "Ke Jie",
+      "facet": "Go champions and players",
+      "known_at": 7
+    },
+    {
+      "name": "Gu Li",
+      "facet": "Go champions and players",
+      "known_at": 11
+    },
+    {
+      "name": "Chang Hao",
+      "facet": "Go champions and players",
+      "known_at": 12
+    },
+    {
+      "name": "Ma Xiaochun",
+      "facet": "Go champions and players",
+      "known_at": 12
+    },
+    {
+      "name": "Chen Zude",
+      "facet": "Go champions and players",
+      "known_at": 13
+    },
+    {
+      "name": "Wu Qingyuan (Go Seigen)",
+      "facet": "Go champions and players",
+      "known_at": 12
+    },
+    {
+      "name": "Lee Sedol",
+      "facet": "Go champions and players",
+      "known_at": 9
+    },
+    {
+      "name": "Lee Chang-ho",
+      "facet": "Go champions and players",
+      "known_at": 12
+    },
+    {
+      "name": "Cho Hunhyun",
+      "facet": "Go champions and players",
+      "known_at": 13
+    },
+    {
+      "name": "Shin Jinseo",
+      "facet": "Go champions and players",
+      "known_at": 13
+    },
+    {
+      "name": "Rui Naiwei",
+      "facet": "Go champions and players",
+      "known_at": 13
+    },
+    {
+      "name": "Kong Jie",
+      "facet": "Go champions and players",
+      "known_at": 13
+    },
+    {
+      "name": "Mi Yuting",
+      "facet": "Go champions and players",
+      "known_at": 14
+    },
+    {
+      "name": "Yang Dingxin",
+      "facet": "Go champions and players",
+      "known_at": 14
+    },
+    {
+      "name": "Iyama Yuta",
+      "facet": "Go champions and players",
+      "known_at": 14
+    },
+    {
+      "name": "China–Japan Super Go (中日围棋擂台赛)",
+      "facet": "Go champions and players",
+      "known_at": 12
+    },
+    {
+      "name": "Ing Cup (应氏杯)",
+      "facet": "Go champions and players",
+      "known_at": 13
+    },
+    {
+      "name": "Nongshim Cup",
+      "facet": "Go champions and players",
+      "known_at": 13
+    },
+    {
+      "name": "Qisheng title (棋圣)",
+      "facet": "Go champions and players",
+      "known_at": 11
+    },
+    {
+      "name": "AlphaGo",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 6
+    },
+    {
+      "name": "DeepMind",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 10
+    },
+    {
+      "name": "Ke Jie vs. AlphaGo 2017",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 8
+    },
+    {
+      "name": "Lee Sedol vs. AlphaGo 2016",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 9
+    },
+    {
+      "name": "Fan Hui vs. AlphaGo 2015",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 13
+    },
+    {
+      "name": "Move 37",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 13
+    },
+    {
+      "name": "Move 78 (神之一手)",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 13
+    },
+    {
+      "name": "AlphaGo Master (Master's 60 wins)",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 11
+    },
+    {
+      "name": "AlphaGo Zero",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 11
+    },
+    {
+      "name": "AlphaZero",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 12
+    },
+    {
+      "name": "Demis Hassabis",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 13
+    },
+    {
+      "name": "Deep Blue",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 10
+    },
+    {
+      "name": "Monte Carlo tree search",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 14
+    },
+    {
+      "name": "Neural network",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 10
+    },
+    {
+      "name": "Fine Art (绝艺)",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 13
+    },
+    {
+      "name": "KataGo",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 14
+    },
+    {
+      "name": "Wuzhen Future of Go Summit",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 12
+    },
+    {
+      "name": "Google",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 5
+    },
+    {
+      "name": "Reinforcement learning",
+      "facet": "AlphaGo and computer Go",
+      "known_at": 13
+    },
+    {
+      "name": "General (帅/将)",
+      "facet": "Xiangqi pieces and moves",
+      "known_at": 3
+    },
+    {
+      "name": "Advisor (仕/士)",
+      "facet": "Xiangqi pieces and moves",
+      "known_at": 5
+    },
+    {
+      "name": "Elephant (相/象)",
+      "facet": "Xiangqi pieces and moves",
+      "known_at": 4
+    },
+    {
+      "name": "Horse (马)",
+      "facet": "Xiangqi pieces and moves",
+      "known_at": 3
+    },
+    {
+      "name": "Chariot (车)",
+      "facet": "Xiangqi pieces and moves",
+      "known_at": 4
+    },
+    {
+      "name": "Cannon (炮)",
+      "facet": "Xiangqi pieces and moves",
+      "known_at": 4
+    },
+    {
+      "name": "Soldier (兵/卒)",
+      "facet": "Xiangqi pieces and moves",
+      "known_at": 3
+    },
+    {
+      "name": "Elephant can't cross the river",
+      "facet": "Xiangqi pieces and moves",
+      "known_at": 6
+    },
+    {
+      "name": "Hobbling the horse's leg (蹩马腿)",
+      "facet": "Xiangqi pieces and moves",
+      "known_at": 8
+    },
+    {
+      "name": "Blocking the elephant's eye (塞象眼)",
+      "facet": "Xiangqi pieces and moves",
+      "known_at": 10
+    },
+    {
+      "name": "Cannon screen (炮架)",
+      "facet": "Xiangqi pieces and moves",
+      "known_at": 8
+    },
+    {
+      "name": "Soldier crossing the river",
+      "facet": "Xiangqi pieces and moves",
+      "known_at": 7
+    },
+    {
+      "name": "Flying general (将帅对面)",
+      "facet": "Xiangqi pieces and moves",
+      "known_at": 10
+    },
+    {
+      "name": "32 pieces",
+      "facet": "Xiangqi pieces and moves",
+      "known_at": 6
+    },
+    {
+      "name": "Red and black sides",
+      "facet": "Xiangqi pieces and moves",
+      "known_at": 3
+    },
+    {
+      "name": "Chu River–Han border",
+      "facet": "Xiangqi board, rules and strategy",
+      "known_at": 6
+    },
+    {
+      "name": "Nine palace (九宫)",
+      "facet": "Xiangqi board, rules and strategy",
+      "known_at": 7
+    },
+    {
+      "name": "9×10 board",
+      "facet": "Xiangqi board, rules and strategy",
+      "known_at": 8
+    },
+    {
+      "name": "Red moves first",
+      "facet": "Xiangqi board, rules and strategy",
+      "known_at": 7
+    },
+    {
+      "name": "Check (将军)",
+      "facet": "Xiangqi board, rules and strategy",
+      "known_at": 4
+    },
+    {
+      "name": "Checkmate (将死)",
+      "facet": "Xiangqi board, rules and strategy",
+      "known_at": 6
+    },
+    {
+      "name": "Stalemate (困毙)",
+      "facet": "Xiangqi board, rules and strategy",
+      "known_at": 12
+    },
+    {
+      "name": "Perpetual check rule (长将)",
+      "facet": "Xiangqi board, rules and strategy",
+      "known_at": 12
+    },
+    {
+      "name": "Central cannon opening (当头炮)",
+      "facet": "Xiangqi board, rules and strategy",
+      "known_at": 9
+    },
+    {
+      "name": "Screen horses defence (屏风马)",
+      "facet": "Xiangqi board, rules and strategy",
+      "known_at": 12
+    },
+    {
+      "name": "Elephant opening (飞相局)",
+      "facet": "Xiangqi board, rules and strategy",
+      "known_at": 13
+    },
+    {
+      "name": "Endgame (残局)",
+      "facet": "Xiangqi board, rules and strategy",
+      "known_at": 9
+    },
+    {
+      "name": "Seven Stars Gathering (七星聚会)",
+      "facet": "Xiangqi board, rules and strategy",
+      "known_at": 14
+    },
+    {
+      "name": "Xiangqi notation (炮二平五)",
+      "facet": "Xiangqi board, rules and strategy",
+      "known_at": 12
+    },
+    {
+      "name": "Blindfold xiangqi (盲棋)",
+      "facet": "Xiangqi board, rules and strategy",
+      "known_at": 11
+    },
+    {
+      "name": "Street endgame stalls (街头残局)",
+      "facet": "Xiangqi board, rules and strategy",
+      "known_at": 10
+    },
+    {
+      "name": "Chu–Han Contention (楚汉相争)",
+      "facet": "Xiangqi history and masters",
+      "known_at": 8
+    },
+    {
+      "name": "Liu Bang",
+      "facet": "Xiangqi history and masters",
+      "known_at": 8
+    },
+    {
+      "name": "Xiang Yu",
+      "facet": "Xiangqi history and masters",
+      "known_at": 8
+    },
+    {
+      "name": "Song dynasty xiangqi",
+      "facet": "Xiangqi history and masters",
+      "known_at": 13
+    },
+    {
+      "name": "Secrets in the Tangerine (橘中秘)",
+      "facet": "Xiangqi history and masters",
+      "known_at": 14
+    },
+    {
+      "name": "Plum Blossom Manual (梅花谱)",
+      "facet": "Xiangqi history and masters",
+      "known_at": 14
+    },
+    {
+      "name": "Hu Ronghua",
+      "facet": "Xiangqi history and masters",
+      "known_at": 11
+    },
+    {
+      "name": "Xu Yinchuan",
+      "facet": "Xiangqi history and masters",
+      "known_at": 13
+    },
+    {
+      "name": "Lü Qin",
+      "facet": "Xiangqi history and masters",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Tianyi",
+      "facet": "Xiangqi history and masters",
+      "known_at": 13
+    },
+    {
+      "name": "Zhao Guorong",
+      "facet": "Xiangqi history and masters",
+      "known_at": 13
+    },
+    {
+      "name": "Yang Guanlin",
+      "facet": "Xiangqi history and masters",
+      "known_at": 14
+    },
+    {
+      "name": "Xie Xiaxun",
+      "facet": "Xiangqi history and masters",
+      "known_at": 14
+    },
+    {
+      "name": "Xie Jing",
+      "facet": "Xiangqi history and masters",
+      "known_at": 13
+    },
+    {
+      "name": "Grandmaster title (特级大师)",
+      "facet": "Xiangqi history and masters",
+      "known_at": 12
+    },
+    {
+      "name": "Janggi (Korean chess)",
+      "facet": "Xiangqi history and masters",
+      "known_at": 13
+    },
+    {
+      "name": "Shogi (Japanese chess)",
+      "facet": "Xiangqi history and masters",
+      "known_at": 11
+    },
+    {
+      "name": "Chaturanga",
+      "facet": "Xiangqi history and masters",
+      "known_at": 14
+    },
+    {
+      "name": "Xiangqi at the Asian Games",
+      "facet": "Xiangqi history and masters",
+      "known_at": 13
+    },
+    {
+      "name": "Mahjong",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 2
+    },
+    {
+      "name": "Mahjong 144 tiles",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 9
+    },
+    {
+      "name": "Characters suit (万子)",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 6
+    },
+    {
+      "name": "Bamboo suit (条子)",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 6
+    },
+    {
+      "name": "Dots suit (筒子)",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 6
+    },
+    {
+      "name": "Wind tiles (风牌)",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 7
+    },
+    {
+      "name": "East wind (东风)",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 7
+    },
+    {
+      "name": "Red dragon (红中)",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 6
+    },
+    {
+      "name": "Green dragon (发财)",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 6
+    },
+    {
+      "name": "White dragon (白板)",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 6
+    },
+    {
+      "name": "Flower tiles (花牌)",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 9
+    },
+    {
+      "name": "Season tiles",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 11
+    },
+    {
+      "name": "One of Bamboo bird (幺鸡)",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 8
+    },
+    {
+      "name": "Mahjong dice",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 7
+    },
+    {
+      "name": "Automatic mahjong table",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 7
+    },
+    {
+      "name": "Wild tile (财神/百搭)",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 10
+    },
+    {
+      "name": "Bone and bamboo tiles",
+      "facet": "Mahjong tiles and suits",
+      "known_at": 12
+    },
+    {
+      "name": "Pung (碰)",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 6
+    },
+    {
+      "name": "Chow (吃)",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 7
+    },
+    {
+      "name": "Kong (杠)",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 7
+    },
+    {
+      "name": "Winning hand (胡)",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 5
+    },
+    {
+      "name": "Self-drawn win (自摸)",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 8
+    },
+    {
+      "name": "Ready hand (听牌)",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 9
+    },
+    {
+      "name": "Seven pairs (七对)",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 10
+    },
+    {
+      "name": "Thirteen orphans (十三幺)",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 11
+    },
+    {
+      "name": "All pungs (碰碰胡)",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 11
+    },
+    {
+      "name": "Pure one suit (清一色)",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 10
+    },
+    {
+      "name": "Dealer (庄家)",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 8
+    },
+    {
+      "name": "Sichuan mahjong (血战到底)",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 10
+    },
+    {
+      "name": "Missing one suit (缺一门)",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 12
+    },
+    {
+      "name": "Cantonese mahjong",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 11
+    },
+    {
+      "name": "Taiwanese 16-tile mahjong",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 12
+    },
+    {
+      "name": "Japanese riichi mahjong",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese Official Mahjong (国标麻将)",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 13
+    },
+    {
+      "name": "Mahjong solitaire",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 7
+    },
+    {
+      "name": "Ningbo mahjong origin",
+      "facet": "Mahjong rules, hands and regional styles",
+      "known_at": 14
+    },
+    {
+      "name": "Dou Dizhu card game",
+      "facet": "Chinese card games and Dou Dizhu",
+      "known_at": 5
+    },
+    {
+      "name": "Landlord (地主)",
+      "facet": "Chinese card games and Dou Dizhu",
+      "known_at": 5
+    },
+    {
+      "name": "Peasants (农民)",
+      "facet": "Chinese card games and Dou Dizhu",
+      "known_at": 6
+    },
+    {
+      "name": "Rocket (王炸)",
+      "facet": "Chinese card games and Dou Dizhu",
+      "known_at": 6
+    },
+    {
+      "name": "Bomb (炸弹)",
+      "facet": "Chinese card games and Dou Dizhu",
+      "known_at": 6
+    },
+    {
+      "name": "Big and small jokers (大王、小王)",
+      "facet": "Chinese card games and Dou Dizhu",
+      "known_at": 4
+    },
+    {
+      "name": "Airplane (飞机)",
+      "facet": "Chinese card games and Dou Dizhu",
+      "known_at": 9
+    },
+    {
+      "name": "Straight (顺子)",
+      "facet": "Chinese card games and Dou Dizhu",
+      "known_at": 7
+    },
+    {
+      "name": "Bidding for landlord (叫地主)",
+      "facet": "Chinese card games and Dou Dizhu",
+      "known_at": 8
+    },
+    {
+      "name": "Guandan (掼蛋)",
+      "facet": "Chinese card games and Dou Dizhu",
+      "known_at": 10
+    },
+    {
+      "name": "Shengji / Tractor (升级/拖拉机)",
+      "facet": "Chinese card games and Dou Dizhu",
+      "known_at": 9
+    },
+    {
+      "name": "Paodekuai (跑得快)",
+      "facet": "Chinese card games and Dou Dizhu",
+      "known_at": 9
+    },
+    {
+      "name": "Big Two (锄大地)",
+      "facet": "Chinese card games and Dou Dizhu",
+      "known_at": 11
+    },
+    {
+      "name": "Leaf game (叶子戏)",
+      "facet": "Chinese card games and Dou Dizhu",
+      "known_at": 14
+    },
+    {
+      "name": "54-card deck",
+      "facet": "Chinese card games and Dou Dizhu",
+      "known_at": 6
+    },
+    {
+      "name": "Happy Dou Dizhu (欢乐斗地主)",
+      "facet": "Chinese card games and Dou Dizhu",
+      "known_at": 6
+    },
+    {
+      "name": "Chinese checkers (跳棋)",
+      "facet": "Chinese checkers and other folk board games",
+      "known_at": 2
+    },
+    {
+      "name": "Six-pointed star board",
+      "facet": "Chinese checkers and other folk board games",
+      "known_at": 4
+    },
+    {
+      "name": "Halma",
+      "facet": "Chinese checkers and other folk board games",
+      "known_at": 14
+    },
+    {
+      "name": "Animal chess (斗兽棋)",
+      "facet": "Chinese checkers and other folk board games",
+      "known_at": 4
+    },
+    {
+      "name": "Army chess (军棋)",
+      "facet": "Chinese checkers and other folk board games",
+      "known_at": 5
+    },
+    {
+      "name": "Flight chess (飞行棋)",
+      "facet": "Chinese checkers and other folk board games",
+      "known_at": 2
+    },
+    {
+      "name": "Liubo (六博)",
+      "facet": "Chinese checkers and other folk board games",
+      "known_at": 14
+    },
+    {
+      "name": "Chinese dominoes (骨牌)",
+      "facet": "Chinese checkers and other folk board games",
+      "known_at": 11
+    },
+    {
+      "name": "Huarong Road puzzle (华容道)",
+      "facet": "Chinese checkers and other folk board games",
+      "known_at": 5
+    },
+    {
+      "name": "Luban lock (鲁班锁)",
+      "facet": "Chinese checkers and other folk board games",
+      "known_at": 6
+    },
+    {
+      "name": "Reversi (黑白棋)",
+      "facet": "Chinese checkers and other folk board games",
+      "known_at": 6
+    },
+    {
+      "name": "Tiger and goats game",
+      "facet": "Chinese checkers and other folk board games",
+      "known_at": 14
+    },
+    {
+      "name": "举棋不定 (jǔ qí bù dìng)",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 7
+    },
+    {
+      "name": "观棋不语真君子 (guān qí bù yǔ zhēn jūnzǐ)",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 8
+    },
+    {
+      "name": "落子无悔 (luò zǐ wú huǐ)",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 8
+    },
+    {
+      "name": "当局者迷，旁观者清 (dāng jú zhě mí, páng guān zhě qīng)",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 9
+    },
+    {
+      "name": "棋逢对手 (qí féng duì shǒu)",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 8
+    },
+    {
+      "name": "一着不慎，满盘皆输 (yī zhāo bù shèn, mǎn pán jiē shū)",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 9
+    },
+    {
+      "name": "棋高一着 (qí gāo yī zhāo)",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 9
+    },
+    {
+      "name": "马后炮 (mǎ hòu pào)",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 7
+    },
+    {
+      "name": "丢车保帅 (diū jū bǎo shuài)",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 9
+    },
+    {
+      "name": "过河卒子 (guò hé zúzi)",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 11
+    },
+    {
+      "name": "星罗棋布 (xīng luó qí bù)",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 9
+    },
+    {
+      "name": "博弈 (bóyì)",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 11
+    },
+    {
+      "name": "Hikaru no Go",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 8
+    },
+    {
+      "name": "Fujiwara no Sai",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 10
+    },
+    {
+      "name": "The Chess King (棋王) by Ah Cheng",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 13
+    },
+    {
+      "name": "The Go Master (吴清源) film",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 14
+    },
+    {
+      "name": "Go Boy (围棋少年) cartoon",
+      "facet": "Board game words, idioms and stories",
+      "known_at": 9
+    }
+  ]
+}

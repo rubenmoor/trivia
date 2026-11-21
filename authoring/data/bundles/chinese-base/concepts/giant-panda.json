@@ -1,0 +1,1042 @@
+{
+  "subcategory": "giant-panda",
+  "facets": [
+    "Panda body and anatomy",
+    "Bamboo diet and digestion",
+    "Panda cubs and growing up",
+    "Daily life and behaviour",
+    "Wild habitat and mountain range",
+    "Wolong and nature reserves",
+    "Chengdu base and conservation",
+    "Famous pandas and their stories",
+    "Panda diplomacy and pandas abroad",
+    "Red panda",
+    "Panda names, symbols and mascots",
+    "Panda history and science discoveries"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 4,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 4,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Black and white",
+      "facet": "Panda body and anatomy",
+      "known_at": 1
+    },
+    {
+      "name": "Black eye patches",
+      "facet": "Panda body and anatomy",
+      "known_at": 1
+    },
+    {
+      "name": "Panda's false thumb",
+      "facet": "Panda body and anatomy",
+      "known_at": 9
+    },
+    {
+      "name": "Round face",
+      "facet": "Panda body and anatomy",
+      "known_at": 3
+    },
+    {
+      "name": "Strong jaw muscles",
+      "facet": "Panda body and anatomy",
+      "known_at": 7
+    },
+    {
+      "name": "Flat molar teeth",
+      "facet": "Panda body and anatomy",
+      "known_at": 8
+    },
+    {
+      "name": "Thick oily fur",
+      "facet": "Panda body and anatomy",
+      "known_at": 6
+    },
+    {
+      "name": "Short tail",
+      "facet": "Panda body and anatomy",
+      "known_at": 4
+    },
+    {
+      "name": "Panda paw",
+      "facet": "Panda body and anatomy",
+      "known_at": 3
+    },
+    {
+      "name": "Adult panda weight",
+      "facet": "Panda body and anatomy",
+      "known_at": 6
+    },
+    {
+      "name": "Bear family",
+      "facet": "Panda body and anatomy",
+      "known_at": 5
+    },
+    {
+      "name": "Pigeon-toed walk",
+      "facet": "Panda body and anatomy",
+      "known_at": 11
+    },
+    {
+      "name": "Slit-shaped pupils",
+      "facet": "Panda body and anatomy",
+      "known_at": 12
+    },
+    {
+      "name": "Panda claws",
+      "facet": "Panda body and anatomy",
+      "known_at": 4
+    },
+    {
+      "name": "Albino panda",
+      "facet": "Panda body and anatomy",
+      "known_at": 9
+    },
+    {
+      "name": "Brown panda",
+      "facet": "Panda body and anatomy",
+      "known_at": 9
+    },
+    {
+      "name": "Black ears",
+      "facet": "Panda body and anatomy",
+      "known_at": 2
+    },
+    {
+      "name": "Bamboo shoots",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 3
+    },
+    {
+      "name": "Bamboo leaves",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 3
+    },
+    {
+      "name": "Bamboo stems",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 4
+    },
+    {
+      "name": "Arrow bamboo",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 12
+    },
+    {
+      "name": "Umbrella bamboo",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 13
+    },
+    {
+      "name": "Hours spent eating each day",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 5
+    },
+    {
+      "name": "Daily bamboo amount",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 6
+    },
+    {
+      "name": "Carnivore digestive system",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 9
+    },
+    {
+      "name": "Short gut",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 10
+    },
+    {
+      "name": "Gut bacteria",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 10
+    },
+    {
+      "name": "Panda droppings",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 5
+    },
+    {
+      "name": "Drinking from streams",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 7
+    },
+    {
+      "name": "Bamboo flowering die-off",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 12
+    },
+    {
+      "name": "Wowotou panda bread",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 9
+    },
+    {
+      "name": "Apples as treats",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 4
+    },
+    {
+      "name": "Carrots",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 4
+    },
+    {
+      "name": "Low-energy lifestyle",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 8
+    },
+    {
+      "name": "Occasional meat eating",
+      "facet": "Bamboo diet and digestion",
+      "known_at": 10
+    },
+    {
+      "name": "Newborn panda size",
+      "facet": "Panda cubs and growing up",
+      "known_at": 5
+    },
+    {
+      "name": "Pink hairless newborn",
+      "facet": "Panda cubs and growing up",
+      "known_at": 6
+    },
+    {
+      "name": "Panda twins",
+      "facet": "Panda cubs and growing up",
+      "known_at": 5
+    },
+    {
+      "name": "Panda mother",
+      "facet": "Panda cubs and growing up",
+      "known_at": 2
+    },
+    {
+      "name": "Birth season",
+      "facet": "Panda cubs and growing up",
+      "known_at": 11
+    },
+    {
+      "name": "Mating season",
+      "facet": "Panda cubs and growing up",
+      "known_at": 11
+    },
+    {
+      "name": "Delayed implantation",
+      "facet": "Panda cubs and growing up",
+      "known_at": 14
+    },
+    {
+      "name": "Pregnancy length",
+      "facet": "Panda cubs and growing up",
+      "known_at": 11
+    },
+    {
+      "name": "Cub opens its eyes",
+      "facet": "Panda cubs and growing up",
+      "known_at": 8
+    },
+    {
+      "name": "First steps",
+      "facet": "Panda cubs and growing up",
+      "known_at": 7
+    },
+    {
+      "name": "Weaning",
+      "facet": "Panda cubs and growing up",
+      "known_at": 9
+    },
+    {
+      "name": "Black patches appearing",
+      "facet": "Panda cubs and growing up",
+      "known_at": 8
+    },
+    {
+      "name": "Panda kindergarten",
+      "facet": "Panda cubs and growing up",
+      "known_at": 5
+    },
+    {
+      "name": "Incubator",
+      "facet": "Panda cubs and growing up",
+      "known_at": 7
+    },
+    {
+      "name": "Twin swapping",
+      "facet": "Panda cubs and growing up",
+      "known_at": 11
+    },
+    {
+      "name": "Pseudopregnancy",
+      "facet": "Panda cubs and growing up",
+      "known_at": 13
+    },
+    {
+      "name": "Age of independence",
+      "facet": "Panda cubs and growing up",
+      "known_at": 9
+    },
+    {
+      "name": "Panda lifespan",
+      "facet": "Panda cubs and growing up",
+      "known_at": 7
+    },
+    {
+      "name": "Solitary life",
+      "facet": "Daily life and behaviour",
+      "known_at": 7
+    },
+    {
+      "name": "Tree climbing",
+      "facet": "Daily life and behaviour",
+      "known_at": 3
+    },
+    {
+      "name": "Sleeping in trees",
+      "facet": "Daily life and behaviour",
+      "known_at": 4
+    },
+    {
+      "name": "Swimming",
+      "facet": "Daily life and behaviour",
+      "known_at": 8
+    },
+    {
+      "name": "Bleating call",
+      "facet": "Daily life and behaviour",
+      "known_at": 10
+    },
+    {
+      "name": "Scent marking",
+      "facet": "Daily life and behaviour",
+      "known_at": 9
+    },
+    {
+      "name": "Handstand marking",
+      "facet": "Daily life and behaviour",
+      "known_at": 11
+    },
+    {
+      "name": "Rolling somersaults",
+      "facet": "Daily life and behaviour",
+      "known_at": 3
+    },
+    {
+      "name": "No hibernation",
+      "facet": "Daily life and behaviour",
+      "known_at": 8
+    },
+    {
+      "name": "Sitting upright to eat",
+      "facet": "Daily life and behaviour",
+      "known_at": 3
+    },
+    {
+      "name": "Playing in snow",
+      "facet": "Daily life and behaviour",
+      "known_at": 3
+    },
+    {
+      "name": "Home range",
+      "facet": "Daily life and behaviour",
+      "known_at": 11
+    },
+    {
+      "name": "Resting time",
+      "facet": "Daily life and behaviour",
+      "known_at": 5
+    },
+    {
+      "name": "Hollow tree dens",
+      "facet": "Daily life and behaviour",
+      "known_at": 9
+    },
+    {
+      "name": "Sense of smell",
+      "facet": "Daily life and behaviour",
+      "known_at": 8
+    },
+    {
+      "name": "Sichuan, Shaanxi, Gansu range",
+      "facet": "Wild habitat and mountain range",
+      "known_at": 5
+    },
+    {
+      "name": "Qinling Mountains",
+      "facet": "Wild habitat and mountain range",
+      "known_at": 9
+    },
+    {
+      "name": "Minshan Mountains",
+      "facet": "Wild habitat and mountain range",
+      "known_at": 12
+    },
+    {
+      "name": "Qionglai Mountains",
+      "facet": "Wild habitat and mountain range",
+      "known_at": 12
+    },
+    {
+      "name": "Daxiangling and Xiaoxiangling",
+      "facet": "Wild habitat and mountain range",
+      "known_at": 14
+    },
+    {
+      "name": "Liangshan Mountains",
+      "facet": "Wild habitat and mountain range",
+      "known_at": 12
+    },
+    {
+      "name": "Bamboo forest",
+      "facet": "Wild habitat and mountain range",
+      "known_at": 2
+    },
+    {
+      "name": "Cloud forest",
+      "facet": "Wild habitat and mountain range",
+      "known_at": 10
+    },
+    {
+      "name": "Altitude range",
+      "facet": "Wild habitat and mountain range",
+      "known_at": 10
+    },
+    {
+      "name": "Habitat fragmentation",
+      "facet": "Wild habitat and mountain range",
+      "known_at": 11
+    },
+    {
+      "name": "Wildlife corridors",
+      "facet": "Wild habitat and mountain range",
+      "known_at": 11
+    },
+    {
+      "name": "Wild panda population",
+      "facet": "Wild habitat and mountain range",
+      "known_at": 8
+    },
+    {
+      "name": "National giant panda census",
+      "facet": "Wild habitat and mountain range",
+      "known_at": 12
+    },
+    {
+      "name": "2008 Sichuan earthquake",
+      "facet": "Wild habitat and mountain range",
+      "known_at": 8
+    },
+    {
+      "name": "Golden snub-nosed monkey",
+      "facet": "Wild habitat and mountain range",
+      "known_at": 6
+    },
+    {
+      "name": "Takin",
+      "facet": "Wild habitat and mountain range",
+      "known_at": 11
+    },
+    {
+      "name": "Wolong reserve",
+      "facet": "Wolong and nature reserves",
+      "known_at": 6
+    },
+    {
+      "name": "Shenshuping base",
+      "facet": "Wolong and nature reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Hetaoping",
+      "facet": "Wolong and nature reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Giant Panda National Park",
+      "facet": "Wolong and nature reserves",
+      "known_at": 9
+    },
+    {
+      "name": "Foping reserve",
+      "facet": "Wolong and nature reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Tangjiahe reserve",
+      "facet": "Wolong and nature reserves",
+      "known_at": 14
+    },
+    {
+      "name": "Wanglang reserve",
+      "facet": "Wolong and nature reserves",
+      "known_at": 14
+    },
+    {
+      "name": "Baishuijiang reserve",
+      "facet": "Wolong and nature reserves",
+      "known_at": 14
+    },
+    {
+      "name": "Mount Siguniang",
+      "facet": "Wolong and nature reserves",
+      "known_at": 11
+    },
+    {
+      "name": "Wenchuan",
+      "facet": "Wolong and nature reserves",
+      "known_at": 9
+    },
+    {
+      "name": "Release into the wild",
+      "facet": "Wolong and nature reserves",
+      "known_at": 7
+    },
+    {
+      "name": "Wild training",
+      "facet": "Wolong and nature reserves",
+      "known_at": 9
+    },
+    {
+      "name": "Keepers in panda costumes",
+      "facet": "Wolong and nature reserves",
+      "known_at": 7
+    },
+    {
+      "name": "Camera traps",
+      "facet": "Wolong and nature reserves",
+      "known_at": 9
+    },
+    {
+      "name": "Xiang Xiang (first released panda)",
+      "facet": "Wolong and nature reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Chengdu panda base",
+      "facet": "Chengdu base and conservation",
+      "known_at": 4
+    },
+    {
+      "name": "Sunshine Nursery",
+      "facet": "Chengdu base and conservation",
+      "known_at": 10
+    },
+    {
+      "name": "Panda keeper",
+      "facet": "Chengdu base and conservation",
+      "known_at": 4
+    },
+    {
+      "name": "Dujiangyan panda base",
+      "facet": "Chengdu base and conservation",
+      "known_at": 11
+    },
+    {
+      "name": "Bifengxia base",
+      "facet": "Chengdu base and conservation",
+      "known_at": 12
+    },
+    {
+      "name": "China Conservation and Research Center for the Giant Panda",
+      "facet": "Chengdu base and conservation",
+      "known_at": 12
+    },
+    {
+      "name": "Captive breeding",
+      "facet": "Chengdu base and conservation",
+      "known_at": 8
+    },
+    {
+      "name": "Artificial insemination",
+      "facet": "Chengdu base and conservation",
+      "known_at": 12
+    },
+    {
+      "name": "Captive panda population",
+      "facet": "Chengdu base and conservation",
+      "known_at": 10
+    },
+    {
+      "name": "Vulnerable status",
+      "facet": "Chengdu base and conservation",
+      "known_at": 10
+    },
+    {
+      "name": "Endangered species",
+      "facet": "Chengdu base and conservation",
+      "known_at": 5
+    },
+    {
+      "name": "National first-class protected animal",
+      "facet": "Chengdu base and conservation",
+      "known_at": 7
+    },
+    {
+      "name": "Panda volunteer programme",
+      "facet": "Chengdu base and conservation",
+      "known_at": 11
+    },
+    {
+      "name": "iPanda live channel",
+      "facet": "Chengdu base and conservation",
+      "known_at": 8
+    },
+    {
+      "name": "Panda studbook",
+      "facet": "Chengdu base and conservation",
+      "known_at": 14
+    },
+    {
+      "name": "Founding of the Chengdu base in 1987",
+      "facet": "Chengdu base and conservation",
+      "known_at": 13
+    },
+    {
+      "name": "Huahua the famous panda",
+      "facet": "Famous pandas and their stories",
+      "known_at": 4
+    },
+    {
+      "name": "Fu Bao",
+      "facet": "Famous pandas and their stories",
+      "known_at": 8
+    },
+    {
+      "name": "Menglan",
+      "facet": "Famous pandas and their stories",
+      "known_at": 8
+    },
+    {
+      "name": "Xiang Xiang (Ueno Zoo)",
+      "facet": "Famous pandas and their stories",
+      "known_at": 10
+    },
+    {
+      "name": "Tuan Tuan and Yuan Yuan",
+      "facet": "Famous pandas and their stories",
+      "known_at": 8
+    },
+    {
+      "name": "Yuan Zai",
+      "facet": "Famous pandas and their stories",
+      "known_at": 11
+    },
+    {
+      "name": "Su Lin",
+      "facet": "Famous pandas and their stories",
+      "known_at": 13
+    },
+    {
+      "name": "Chi Chi",
+      "facet": "Famous pandas and their stories",
+      "known_at": 13
+    },
+    {
+      "name": "Basi",
+      "facet": "Famous pandas and their stories",
+      "known_at": 10
+    },
+    {
+      "name": "Pan Pan",
+      "facet": "Famous pandas and their stories",
+      "known_at": 12
+    },
+    {
+      "name": "Jia Jia",
+      "facet": "Famous pandas and their stories",
+      "known_at": 13
+    },
+    {
+      "name": "Qizai",
+      "facet": "Famous pandas and their stories",
+      "known_at": 11
+    },
+    {
+      "name": "Gu Gu",
+      "facet": "Famous pandas and their stories",
+      "known_at": 11
+    },
+    {
+      "name": "Tai Shan",
+      "facet": "Famous pandas and their stories",
+      "known_at": 13
+    },
+    {
+      "name": "Fu Long",
+      "facet": "Famous pandas and their stories",
+      "known_at": 14
+    },
+    {
+      "name": "Mei Xiang and Tian Tian",
+      "facet": "Famous pandas and their stories",
+      "known_at": 12
+    },
+    {
+      "name": "Hehua's sisters He Ye",
+      "facet": "Famous pandas and their stories",
+      "known_at": 12
+    },
+    {
+      "name": "Panda diplomacy",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 8
+    },
+    {
+      "name": "Ling Ling and Xing Xing",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 12
+    },
+    {
+      "name": "Nixon's 1972 visit to China",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 11
+    },
+    {
+      "name": "Kang Kang and Lan Lan",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 13
+    },
+    {
+      "name": "Wu Zetian's bear gift to Japan",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 13
+    },
+    {
+      "name": "Ueno Zoo",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 9
+    },
+    {
+      "name": "Smithsonian National Zoo",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 12
+    },
+    {
+      "name": "Edinburgh Zoo",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 13
+    },
+    {
+      "name": "Adelaide Zoo",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 13
+    },
+    {
+      "name": "Pairi Daiza",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 14
+    },
+    {
+      "name": "Zoo Berlin",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 12
+    },
+    {
+      "name": "Taipei Zoo",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 9
+    },
+    {
+      "name": "Ocean Park Hong Kong",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 8
+    },
+    {
+      "name": "Panda loan agreement",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 11
+    },
+    {
+      "name": "Cubs returning to China",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 9
+    },
+    {
+      "name": "San Diego Zoo",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 12
+    },
+    {
+      "name": "Chapultepec Zoo",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 14
+    },
+    {
+      "name": "Moscow Zoo",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 12
+    },
+    {
+      "name": "Zoo Negara Kuala Lumpur",
+      "facet": "Panda diplomacy and pandas abroad",
+      "known_at": 13
+    },
+    {
+      "name": "Red panda",
+      "facet": "Red panda",
+      "known_at": 4
+    },
+    {
+      "name": "Ailuridae",
+      "facet": "Red panda",
+      "known_at": 14
+    },
+    {
+      "name": "Ringed tail",
+      "facet": "Red panda",
+      "known_at": 5
+    },
+    {
+      "name": "Firefox",
+      "facet": "Red panda",
+      "known_at": 9
+    },
+    {
+      "name": "Master Shifu",
+      "facet": "Red panda",
+      "known_at": 6
+    },
+    {
+      "name": "Turning Red",
+      "facet": "Red panda",
+      "known_at": 6
+    },
+    {
+      "name": "Futa the standing red panda",
+      "facet": "Red panda",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese red panda",
+      "facet": "Red panda",
+      "known_at": 12
+    },
+    {
+      "name": "Himalayan red panda",
+      "facet": "Red panda",
+      "known_at": 12
+    },
+    {
+      "name": "Standing defence pose",
+      "facet": "Red panda",
+      "known_at": 8
+    },
+    {
+      "name": "Frédéric Cuvier",
+      "facet": "Red panda",
+      "known_at": 14
+    },
+    {
+      "name": "Nepal",
+      "facet": "Red panda",
+      "known_at": 9
+    },
+    {
+      "name": "Gaoligong Mountains",
+      "facet": "Red panda",
+      "known_at": 13
+    },
+    {
+      "name": "Raccoon",
+      "facet": "Red panda",
+      "known_at": 8
+    },
+    {
+      "name": "Original owner of the name panda",
+      "facet": "Red panda",
+      "known_at": 11
+    },
+    {
+      "name": "Bing Dwen Dwen",
+      "facet": "Panda names, symbols and mascots",
+      "known_at": 3
+    },
+    {
+      "name": "Panpan mascot",
+      "facet": "Panda names, symbols and mascots",
+      "known_at": 11
+    },
+    {
+      "name": "Jingjing",
+      "facet": "Panda names, symbols and mascots",
+      "known_at": 7
+    },
+    {
+      "name": "Fuwa",
+      "facet": "Panda names, symbols and mascots",
+      "known_at": 7
+    },
+    {
+      "name": "WWF logo",
+      "facet": "Panda names, symbols and mascots",
+      "known_at": 7
+    },
+    {
+      "name": "Kung Fu Panda",
+      "facet": "Panda names, symbols and mascots",
+      "known_at": 3
+    },
+    {
+      "name": "Po",
+      "facet": "Panda names, symbols and mascots",
+      "known_at": 4
+    },
+    {
+      "name": "National treasure (国宝)",
+      "facet": "Panda names, symbols and mascots",
+      "known_at": 3
+    },
+    {
+      "name": "Xiongmao (熊猫)",
+      "facet": "Panda names, symbols and mascots",
+      "known_at": 2
+    },
+    {
+      "name": "Maoxiong (猫熊)",
+      "facet": "Panda names, symbols and mascots",
+      "known_at": 9
+    },
+    {
+      "name": "Panda stamps",
+      "facet": "Panda names, symbols and mascots",
+      "known_at": 10
+    },
+    {
+      "name": "Panda eyes (熊猫眼)",
+      "facet": "Panda names, symbols and mascots",
+      "known_at": 5
+    },
+    {
+      "name": "Wu Zuoren",
+      "facet": "Panda names, symbols and mascots",
+      "known_at": 14
+    },
+    {
+      "name": "Rongbao",
+      "facet": "Panda names, symbols and mascots",
+      "known_at": 12
+    },
+    {
+      "name": "Panda blood (熊猫血)",
+      "facet": "Panda names, symbols and mascots",
+      "known_at": 10
+    },
+    {
+      "name": "Armand David",
+      "facet": "Panda history and science discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Shitieshou (食铁兽)",
+      "facet": "Panda history and science discoveries",
+      "known_at": 10
+    },
+    {
+      "name": "Zouyu (驺虞)",
+      "facet": "Panda history and science discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Ailuropoda melanoleuca",
+      "facet": "Panda history and science discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Ailuropoda microta",
+      "facet": "Panda history and science discoveries",
+      "known_at": 15
+    },
+    {
+      "name": "Panda fossils",
+      "facet": "Panda history and science discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Living fossil",
+      "facet": "Panda history and science discoveries",
+      "known_at": 8
+    },
+    {
+      "name": "Panda genome",
+      "facet": "Panda history and science discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "DNA classification as a bear",
+      "facet": "Panda history and science discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "Ruth Harkness",
+      "facet": "Panda history and science discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Hu Jinchu",
+      "facet": "Panda history and science discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "George Schaller",
+      "facet": "Panda history and science discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Panda skull in a Han dynasty tomb",
+      "facet": "Panda history and science discoveries",
+      "known_at": 15
+    },
+    {
+      "name": "Baoxing County",
+      "facet": "Panda history and science discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Ice Age panda range",
+      "facet": "Panda history and science discoveries",
+      "known_at": 12
+    }
+  ]
+}

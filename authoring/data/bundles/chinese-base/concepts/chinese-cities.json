@@ -1,0 +1,1007 @@
+{
+  "subcategory": "chinese-cities",
+  "facets": [
+    "Capitals and municipalities",
+    "City nicknames (别称)",
+    "Ancient capitals and old names",
+    "Provincial capitals",
+    "Hong Kong and Macau",
+    "Special economic zones and boomtowns",
+    "Climate and weather records",
+    "Rivers, ports and coastal cities",
+    "Famous foods of cities",
+    "City records and superlatives",
+    "Border and frontier cities",
+    "Cities in poems and stories"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 5,
+      "origin": 4,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Municipality directly under the central government (直辖市)",
+      "facet": "Capitals and municipalities",
+      "known_at": 9
+    },
+    {
+      "name": "Pudong",
+      "facet": "Capitals and municipalities",
+      "known_at": 7
+    },
+    {
+      "name": "Lujiazui",
+      "facet": "Capitals and municipalities",
+      "known_at": 10
+    },
+    {
+      "name": "Xiong'an New Area",
+      "facet": "Capitals and municipalities",
+      "known_at": 10
+    },
+    {
+      "name": "Binhai New Area",
+      "facet": "Capitals and municipalities",
+      "known_at": 13
+    },
+    {
+      "name": "Hutong (胡同)",
+      "facet": "Capitals and municipalities",
+      "known_at": 5
+    },
+    {
+      "name": "Shikumen (石库门)",
+      "facet": "Capitals and municipalities",
+      "known_at": 11
+    },
+    {
+      "name": "Beijing Subway",
+      "facet": "Capitals and municipalities",
+      "known_at": 7
+    },
+    {
+      "name": "Liziba Station",
+      "facet": "Capitals and municipalities",
+      "known_at": 10
+    },
+    {
+      "name": "Yuzhong District",
+      "facet": "Capitals and municipalities",
+      "known_at": 13
+    },
+    {
+      "name": "Tianjin Eye",
+      "facet": "Capitals and municipalities",
+      "known_at": 10
+    },
+    {
+      "name": "Zhongguancun",
+      "facet": "Capitals and municipalities",
+      "known_at": 10
+    },
+    {
+      "name": "Beijing Central Axis",
+      "facet": "Capitals and municipalities",
+      "known_at": 11
+    },
+    {
+      "name": "Rong City (蓉城)",
+      "facet": "City nicknames (别称)",
+      "known_at": 8
+    },
+    {
+      "name": "Spring Water City (泉城)",
+      "facet": "City nicknames (别称)",
+      "known_at": 8
+    },
+    {
+      "name": "Egret Island (鹭岛)",
+      "facet": "City nicknames (别称)",
+      "known_at": 11
+    },
+    {
+      "name": "Porcelain Capital (瓷都)",
+      "facet": "City nicknames (别称)",
+      "known_at": 8
+    },
+    {
+      "name": "Stone City (石头城)",
+      "facet": "City nicknames (别称)",
+      "known_at": 10
+    },
+    {
+      "name": "Steel Capital (钢都)",
+      "facet": "City nicknames (别称)",
+      "known_at": 13
+    },
+    {
+      "name": "Coal Capital (煤都)",
+      "facet": "City nicknames (别称)",
+      "known_at": 13
+    },
+    {
+      "name": "Hu (沪)",
+      "facet": "City nicknames (别称)",
+      "known_at": 6
+    },
+    {
+      "name": "Yu (渝)",
+      "facet": "City nicknames (别称)",
+      "known_at": 8
+    },
+    {
+      "name": "Jing (京)",
+      "facet": "City nicknames (别称)",
+      "known_at": 3
+    },
+    {
+      "name": "Kite Capital (风筝都)",
+      "facet": "City nicknames (别称)",
+      "known_at": 11
+    },
+    {
+      "name": "Xi'an",
+      "facet": "Ancient capitals and old names",
+      "known_at": 3
+    },
+    {
+      "name": "Kaifeng",
+      "facet": "Ancient capitals and old names",
+      "known_at": 8
+    },
+    {
+      "name": "Bianjing (汴京)",
+      "facet": "Ancient capitals and old names",
+      "known_at": 10
+    },
+    {
+      "name": "Nanjing",
+      "facet": "Ancient capitals and old names",
+      "known_at": 3
+    },
+    {
+      "name": "Lin'an (临安)",
+      "facet": "Ancient capitals and old names",
+      "known_at": 11
+    },
+    {
+      "name": "Beiping (北平)",
+      "facet": "Ancient capitals and old names",
+      "known_at": 9
+    },
+    {
+      "name": "Dadu (大都)",
+      "facet": "Ancient capitals and old names",
+      "known_at": 11
+    },
+    {
+      "name": "Yanjing (燕京)",
+      "facet": "Ancient capitals and old names",
+      "known_at": 10
+    },
+    {
+      "name": "Fengtian (奉天)",
+      "facet": "Ancient capitals and old names",
+      "known_at": 12
+    },
+    {
+      "name": "Anyang",
+      "facet": "Ancient capitals and old names",
+      "known_at": 10
+    },
+    {
+      "name": "Xianyang",
+      "facet": "Ancient capitals and old names",
+      "known_at": 9
+    },
+    {
+      "name": "Four Great Ancient Capitals (四大古都)",
+      "facet": "Ancient capitals and old names",
+      "known_at": 9
+    },
+    {
+      "name": "Peking",
+      "facet": "Ancient capitals and old names",
+      "known_at": 8
+    },
+    {
+      "name": "Canton",
+      "facet": "Ancient capitals and old names",
+      "known_at": 11
+    },
+    {
+      "name": "Wuhan",
+      "facet": "Provincial capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Kunming",
+      "facet": "Provincial capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Harbin",
+      "facet": "Provincial capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Lhasa",
+      "facet": "Provincial capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Hohhot",
+      "facet": "Provincial capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Nanning",
+      "facet": "Provincial capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Guiyang",
+      "facet": "Provincial capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Lanzhou",
+      "facet": "Provincial capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Xining",
+      "facet": "Provincial capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Yinchuan",
+      "facet": "Provincial capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Zhengzhou",
+      "facet": "Provincial capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Shijiazhuang",
+      "facet": "Provincial capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Taiyuan",
+      "facet": "Provincial capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Hefei",
+      "facet": "Provincial capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Nanchang",
+      "facet": "Provincial capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Haikou",
+      "facet": "Provincial capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Shenyang",
+      "facet": "Provincial capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Changchun",
+      "facet": "Provincial capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Macau",
+      "facet": "Hong Kong and Macau",
+      "known_at": 4
+    },
+    {
+      "name": "Victoria Harbour",
+      "facet": "Hong Kong and Macau",
+      "known_at": 8
+    },
+    {
+      "name": "Victoria Peak",
+      "facet": "Hong Kong and Macau",
+      "known_at": 9
+    },
+    {
+      "name": "Kowloon",
+      "facet": "Hong Kong and Macau",
+      "known_at": 8
+    },
+    {
+      "name": "Hong Kong Island",
+      "facet": "Hong Kong and Macau",
+      "known_at": 7
+    },
+    {
+      "name": "New Territories",
+      "facet": "Hong Kong and Macau",
+      "known_at": 11
+    },
+    {
+      "name": "Hong Kong–Zhuhai–Macau Bridge",
+      "facet": "Hong Kong and Macau",
+      "known_at": 6
+    },
+    {
+      "name": "Return of Hong Kong (香港回归)",
+      "facet": "Hong Kong and Macau",
+      "known_at": 6
+    },
+    {
+      "name": "Return of Macau (澳门回归)",
+      "facet": "Hong Kong and Macau",
+      "known_at": 8
+    },
+    {
+      "name": "Bauhinia (紫荆花)",
+      "facet": "Hong Kong and Macau",
+      "known_at": 8
+    },
+    {
+      "name": "Lotus flower emblem of Macau",
+      "facet": "Hong Kong and Macau",
+      "known_at": 10
+    },
+    {
+      "name": "Star Ferry",
+      "facet": "Hong Kong and Macau",
+      "known_at": 11
+    },
+    {
+      "name": "Cantonese",
+      "facet": "Hong Kong and Macau",
+      "known_at": 6
+    },
+    {
+      "name": "Macanese pataca",
+      "facet": "Hong Kong and Macau",
+      "known_at": 13
+    },
+    {
+      "name": "Hong Kong dollar",
+      "facet": "Hong Kong and Macau",
+      "known_at": 8
+    },
+    {
+      "name": "Tsim Sha Tsui",
+      "facet": "Hong Kong and Macau",
+      "known_at": 12
+    },
+    {
+      "name": "Taipa",
+      "facet": "Hong Kong and Macau",
+      "known_at": 13
+    },
+    {
+      "name": "Special Administrative Region",
+      "facet": "Hong Kong and Macau",
+      "known_at": 8
+    },
+    {
+      "name": "Zhuhai",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 7
+    },
+    {
+      "name": "Shantou",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 10
+    },
+    {
+      "name": "Hainan Special Economic Zone",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 10
+    },
+    {
+      "name": "Reform and Opening-up (改革开放)",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 8
+    },
+    {
+      "name": "Deng Xiaoping",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 6
+    },
+    {
+      "name": "Shenzhen Speed (深圳速度)",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 12
+    },
+    {
+      "name": "Shekou",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 13
+    },
+    {
+      "name": "Huaqiangbei",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 11
+    },
+    {
+      "name": "Yiwu",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 9
+    },
+    {
+      "name": "Dongguan",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 8
+    },
+    {
+      "name": "Foshan",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 8
+    },
+    {
+      "name": "Guangdong-Hong Kong-Macao Greater Bay Area",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 10
+    },
+    {
+      "name": "The Story of Spring (春天的故事)",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 11
+    },
+    {
+      "name": "Qianhai",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 13
+    },
+    {
+      "name": "Hengqin",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 13
+    },
+    {
+      "name": "Ordos",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 12
+    },
+    {
+      "name": "Suzhou Industrial Park",
+      "facet": "Special economic zones and boomtowns",
+      "known_at": 13
+    },
+    {
+      "name": "Three Furnaces (三大火炉)",
+      "facet": "Climate and weather records",
+      "known_at": 9
+    },
+    {
+      "name": "Turpan",
+      "facet": "Climate and weather records",
+      "known_at": 8
+    },
+    {
+      "name": "Mohe",
+      "facet": "Climate and weather records",
+      "known_at": 8
+    },
+    {
+      "name": "Fog Capital (雾都)",
+      "facet": "Climate and weather records",
+      "known_at": 10
+    },
+    {
+      "name": "Rain City (雨城)",
+      "facet": "Climate and weather records",
+      "known_at": 13
+    },
+    {
+      "name": "Plum rain (梅雨)",
+      "facet": "Climate and weather records",
+      "known_at": 8
+    },
+    {
+      "name": "Typhoon",
+      "facet": "Climate and weather records",
+      "known_at": 4
+    },
+    {
+      "name": "Harbin Ice and Snow Festival",
+      "facet": "Climate and weather records",
+      "known_at": 5
+    },
+    {
+      "name": "Jilin rime (雾凇)",
+      "facet": "Climate and weather records",
+      "known_at": 10
+    },
+    {
+      "name": "Haze (雾霾)",
+      "facet": "Climate and weather records",
+      "known_at": 7
+    },
+    {
+      "name": "Sandstorm",
+      "facet": "Climate and weather records",
+      "known_at": 6
+    },
+    {
+      "name": "Monsoon",
+      "facet": "Climate and weather records",
+      "known_at": 8
+    },
+    {
+      "name": "Central heating (暖气)",
+      "facet": "Climate and weather records",
+      "known_at": 7
+    },
+    {
+      "name": "Yangtze River",
+      "facet": "Rivers, ports and coastal cities",
+      "known_at": 2
+    },
+    {
+      "name": "Pearl River",
+      "facet": "Rivers, ports and coastal cities",
+      "known_at": 7
+    },
+    {
+      "name": "Huangpu River",
+      "facet": "Rivers, ports and coastal cities",
+      "known_at": 7
+    },
+    {
+      "name": "Haihe River",
+      "facet": "Rivers, ports and coastal cities",
+      "known_at": 11
+    },
+    {
+      "name": "Qiantang River tidal bore",
+      "facet": "Rivers, ports and coastal cities",
+      "known_at": 9
+    },
+    {
+      "name": "Port of Shanghai",
+      "facet": "Rivers, ports and coastal cities",
+      "known_at": 10
+    },
+    {
+      "name": "Ningbo-Zhoushan Port",
+      "facet": "Rivers, ports and coastal cities",
+      "known_at": 12
+    },
+    {
+      "name": "Yantai",
+      "facet": "Rivers, ports and coastal cities",
+      "known_at": 10
+    },
+    {
+      "name": "Three Towns of Wuhan (武汉三镇)",
+      "facet": "Rivers, ports and coastal cities",
+      "known_at": 11
+    },
+    {
+      "name": "Chaotianmen",
+      "facet": "Rivers, ports and coastal cities",
+      "known_at": 12
+    },
+    {
+      "name": "Yichang",
+      "facet": "Rivers, ports and coastal cities",
+      "known_at": 10
+    },
+    {
+      "name": "Grand Canal",
+      "facet": "Rivers, ports and coastal cities",
+      "known_at": 6
+    },
+    {
+      "name": "Treaty port (通商口岸)",
+      "facet": "Rivers, ports and coastal cities",
+      "known_at": 12
+    },
+    {
+      "name": "Maritime Silk Road",
+      "facet": "Rivers, ports and coastal cities",
+      "known_at": 8
+    },
+    {
+      "name": "Beihai",
+      "facet": "Rivers, ports and coastal cities",
+      "known_at": 11
+    },
+    {
+      "name": "Peking duck",
+      "facet": "Famous foods of cities",
+      "known_at": 2
+    },
+    {
+      "name": "Xiaolongbao",
+      "facet": "Famous foods of cities",
+      "known_at": 4
+    },
+    {
+      "name": "Chongqing hot pot",
+      "facet": "Famous foods of cities",
+      "known_at": 4
+    },
+    {
+      "name": "Lanzhou beef noodles",
+      "facet": "Famous foods of cities",
+      "known_at": 5
+    },
+    {
+      "name": "Dim sum",
+      "facet": "Famous foods of cities",
+      "known_at": 5
+    },
+    {
+      "name": "Goubuli baozi (狗不理包子)",
+      "facet": "Famous foods of cities",
+      "known_at": 8
+    },
+    {
+      "name": "Roujiamo (肉夹馍)",
+      "facet": "Famous foods of cities",
+      "known_at": 7
+    },
+    {
+      "name": "Hot dry noodles (热干面)",
+      "facet": "Famous foods of cities",
+      "known_at": 7
+    },
+    {
+      "name": "Changsha stinky tofu",
+      "facet": "Famous foods of cities",
+      "known_at": 7
+    },
+    {
+      "name": "Luosifen (螺蛳粉)",
+      "facet": "Famous foods of cities",
+      "known_at": 6
+    },
+    {
+      "name": "Guilin rice noodles",
+      "facet": "Famous foods of cities",
+      "known_at": 8
+    },
+    {
+      "name": "Mapo tofu",
+      "facet": "Famous foods of cities",
+      "known_at": 6
+    },
+    {
+      "name": "West Lake vinegar fish",
+      "facet": "Famous foods of cities",
+      "known_at": 11
+    },
+    {
+      "name": "Nanjing salted duck",
+      "facet": "Famous foods of cities",
+      "known_at": 9
+    },
+    {
+      "name": "Portuguese egg tart",
+      "facet": "Famous foods of cities",
+      "known_at": 7
+    },
+    {
+      "name": "Hairy crab",
+      "facet": "Famous foods of cities",
+      "known_at": 9
+    },
+    {
+      "name": "Zhajiangmian (炸酱面)",
+      "facet": "Famous foods of cities",
+      "known_at": 6
+    },
+    {
+      "name": "Yangzhou fried rice",
+      "facet": "Famous foods of cities",
+      "known_at": 5
+    },
+    {
+      "name": "Jinhua ham",
+      "facet": "Famous foods of cities",
+      "known_at": 11
+    },
+    {
+      "name": "Longjing tea",
+      "facet": "Famous foods of cities",
+      "known_at": 8
+    },
+    {
+      "name": "Jianbing guozi (煎饼果子)",
+      "facet": "Famous foods of cities",
+      "known_at": 7
+    },
+    {
+      "name": "Shanghai Tower",
+      "facet": "City records and superlatives",
+      "known_at": 8
+    },
+    {
+      "name": "Canton Tower",
+      "facet": "City records and superlatives",
+      "known_at": 8
+    },
+    {
+      "name": "Oriental Pearl Tower",
+      "facet": "City records and superlatives",
+      "known_at": 5
+    },
+    {
+      "name": "Ping An Finance Center",
+      "facet": "City records and superlatives",
+      "known_at": 13
+    },
+    {
+      "name": "Shanghai Maglev",
+      "facet": "City records and superlatives",
+      "known_at": 9
+    },
+    {
+      "name": "Beijing Daxing International Airport",
+      "facet": "City records and superlatives",
+      "known_at": 9
+    },
+    {
+      "name": "Megacity",
+      "facet": "City records and superlatives",
+      "known_at": 10
+    },
+    {
+      "name": "Urbanization (城镇化)",
+      "facet": "City records and superlatives",
+      "known_at": 10
+    },
+    {
+      "name": "Tier-one city (一线城市)",
+      "facet": "City records and superlatives",
+      "known_at": 9
+    },
+    {
+      "name": "Wuhan Yangtze River Bridge",
+      "facet": "City records and superlatives",
+      "known_at": 10
+    },
+    {
+      "name": "Expo 2010 Shanghai",
+      "facet": "City records and superlatives",
+      "known_at": 9
+    },
+    {
+      "name": "2008 Beijing Olympics",
+      "facet": "City records and superlatives",
+      "known_at": 4
+    },
+    {
+      "name": "2022 Beijing Winter Olympics",
+      "facet": "City records and superlatives",
+      "known_at": 5
+    },
+    {
+      "name": "2022 Hangzhou Asian Games",
+      "facet": "City records and superlatives",
+      "known_at": 8
+    },
+    {
+      "name": "Urumqi",
+      "facet": "Border and frontier cities",
+      "known_at": 7
+    },
+    {
+      "name": "Khorgas (霍尔果斯)",
+      "facet": "Border and frontier cities",
+      "known_at": 13
+    },
+    {
+      "name": "Erenhot",
+      "facet": "Border and frontier cities",
+      "known_at": 13
+    },
+    {
+      "name": "Manzhouli",
+      "facet": "Border and frontier cities",
+      "known_at": 12
+    },
+    {
+      "name": "Heihe",
+      "facet": "Border and frontier cities",
+      "known_at": 12
+    },
+    {
+      "name": "Suifenhe",
+      "facet": "Border and frontier cities",
+      "known_at": 13
+    },
+    {
+      "name": "Dandong",
+      "facet": "Border and frontier cities",
+      "known_at": 11
+    },
+    {
+      "name": "Ruili",
+      "facet": "Border and frontier cities",
+      "known_at": 13
+    },
+    {
+      "name": "Hekou",
+      "facet": "Border and frontier cities",
+      "known_at": 14
+    },
+    {
+      "name": "Friendship Pass (友谊关)",
+      "facet": "Border and frontier cities",
+      "known_at": 13
+    },
+    {
+      "name": "Dunhuang",
+      "facet": "Border and frontier cities",
+      "known_at": 7
+    },
+    {
+      "name": "Jiayuguan",
+      "facet": "Border and frontier cities",
+      "known_at": 9
+    },
+    {
+      "name": "Shigatse",
+      "facet": "Border and frontier cities",
+      "known_at": 12
+    },
+    {
+      "name": "Hunchun",
+      "facet": "Border and frontier cities",
+      "known_at": 14
+    },
+    {
+      "name": "Hotan",
+      "facet": "Border and frontier cities",
+      "known_at": 12
+    },
+    {
+      "name": "Jinghong",
+      "facet": "Border and frontier cities",
+      "known_at": 11
+    },
+    {
+      "name": "Yanji",
+      "facet": "Border and frontier cities",
+      "known_at": 11
+    },
+    {
+      "name": "Altay",
+      "facet": "Border and frontier cities",
+      "known_at": 12
+    },
+    {
+      "name": "Baidicheng (白帝城)",
+      "facet": "Cities in poems and stories",
+      "known_at": 8
+    },
+    {
+      "name": "A Night Mooring by Maple Bridge (枫桥夜泊)",
+      "facet": "Cities in poems and stories",
+      "known_at": 8
+    },
+    {
+      "name": "Liangzhou (凉州)",
+      "facet": "Cities in poems and stories",
+      "known_at": 10
+    },
+    {
+      "name": "Yumen Pass (玉门关)",
+      "facet": "Cities in poems and stories",
+      "known_at": 9
+    },
+    {
+      "name": "Yangguan (阳关)",
+      "facet": "Cities in poems and stories",
+      "known_at": 10
+    },
+    {
+      "name": "Qinhuai River",
+      "facet": "Cities in poems and stories",
+      "known_at": 10
+    },
+    {
+      "name": "Heaven above, Suzhou and Hangzhou below (上有天堂，下有苏杭)",
+      "facet": "Cities in poems and stories",
+      "known_at": 7
+    },
+    {
+      "name": "Jiangnan (江南)",
+      "facet": "Cities in poems and stories",
+      "known_at": 7
+    },
+    {
+      "name": "Along the River During the Qingming Festival (清明上河图)",
+      "facet": "Cities in poems and stories",
+      "known_at": 8
+    },
+    {
+      "name": "Twelve Beauties of Jinling (金陵十二钗)",
+      "facet": "Cities in poems and stories",
+      "known_at": 11
+    },
+    {
+      "name": "Border Town (边城)",
+      "facet": "Cities in poems and stories",
+      "known_at": 11
+    },
+    {
+      "name": "Rickshaw Boy (骆驼祥子)",
+      "facet": "Cities in poems and stories",
+      "known_at": 9
+    },
+    {
+      "name": "Chang'an (长安三万里) film",
+      "facet": "Cities in poems and stories",
+      "known_at": 8
+    },
+    {
+      "name": "Chentang Pass (陈塘关)",
+      "facet": "Cities in poems and stories",
+      "known_at": 6
+    },
+    {
+      "name": "Preface to the Pavilion of Prince Teng (滕王阁序)",
+      "facet": "Cities in poems and stories",
+      "known_at": 11
+    },
+    {
+      "name": "Guilin",
+      "facet": "Cities in poems and stories",
+      "known_at": 5
+    },
+    {
+      "name": "The Road to Shu Is Hard (蜀道难)",
+      "facet": "Cities in poems and stories",
+      "known_at": 10
+    }
+  ]
+}

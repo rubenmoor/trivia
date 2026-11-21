@@ -1,0 +1,882 @@
+{
+  "subcategory": "renminbi-and-old-coins",
+  "facets": [
+    "Yuan, jiao and fen units",
+    "Renminbi note colours and values",
+    "Landscapes on note backs",
+    "Renminbi coins and their designs",
+    "Note features and anti-counterfeiting",
+    "Shells and the earliest money",
+    "Spade and knife coins",
+    "Qin Banliang and round coins",
+    "Wuzhu and Tongbao coins",
+    "Jiaozi and early paper money",
+    "Silver ingots and old trade money",
+    "Money words, idioms and customs"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 1,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Yuan (元)",
+      "facet": "Yuan, jiao and fen units",
+      "known_at": 1
+    },
+    {
+      "name": "Jiao (角)",
+      "facet": "Yuan, jiao and fen units",
+      "known_at": 2
+    },
+    {
+      "name": "Fen (分)",
+      "facet": "Yuan, jiao and fen units",
+      "known_at": 3
+    },
+    {
+      "name": "Kuai (块)",
+      "facet": "Yuan, jiao and fen units",
+      "known_at": 1
+    },
+    {
+      "name": "Mao (毛)",
+      "facet": "Yuan, jiao and fen units",
+      "known_at": 2
+    },
+    {
+      "name": "Renminbi (人民币)",
+      "facet": "Yuan, jiao and fen units",
+      "known_at": 2
+    },
+    {
+      "name": "Yuan sign ¥",
+      "facet": "Yuan, jiao and fen units",
+      "known_at": 4
+    },
+    {
+      "name": "CNY currency code",
+      "facet": "Yuan, jiao and fen units",
+      "known_at": 10
+    },
+    {
+      "name": "People's Bank of China",
+      "facet": "Yuan, jiao and fen units",
+      "known_at": 6
+    },
+    {
+      "name": "Digital renminbi (e-CNY)",
+      "facet": "Yuan, jiao and fen units",
+      "known_at": 9
+    },
+    {
+      "name": "Li (厘)",
+      "facet": "Yuan, jiao and fen units",
+      "known_at": 11
+    },
+    {
+      "name": "Capital numerals (大写数字)",
+      "facet": "Yuan, jiao and fen units",
+      "known_at": 8
+    },
+    {
+      "name": "Yuan (圆) on banknotes",
+      "facet": "Yuan, jiao and fen units",
+      "known_at": 9
+    },
+    {
+      "name": "Small change (零钱)",
+      "facet": "Yuan, jiao and fen units",
+      "known_at": 2
+    },
+    {
+      "name": "Price tag",
+      "facet": "Yuan, jiao and fen units",
+      "known_at": 3
+    },
+    {
+      "name": "50-yuan note",
+      "facet": "Renminbi note colours and values",
+      "known_at": 3
+    },
+    {
+      "name": "20-yuan note",
+      "facet": "Renminbi note colours and values",
+      "known_at": 4
+    },
+    {
+      "name": "10-yuan note",
+      "facet": "Renminbi note colours and values",
+      "known_at": 3
+    },
+    {
+      "name": "5-yuan note",
+      "facet": "Renminbi note colours and values",
+      "known_at": 4
+    },
+    {
+      "name": "1-yuan note",
+      "facet": "Renminbi note colours and values",
+      "known_at": 3
+    },
+    {
+      "name": "1-jiao note",
+      "facet": "Renminbi note colours and values",
+      "known_at": 6
+    },
+    {
+      "name": "2-yuan note",
+      "facet": "Renminbi note colours and values",
+      "known_at": 10
+    },
+    {
+      "name": "Mao Zedong portrait",
+      "facet": "Renminbi note colours and values",
+      "known_at": 2
+    },
+    {
+      "name": "First series of the renminbi",
+      "facet": "Renminbi note colours and values",
+      "known_at": 11
+    },
+    {
+      "name": "Second series of the renminbi",
+      "facet": "Renminbi note colours and values",
+      "known_at": 13
+    },
+    {
+      "name": "Third series of the renminbi",
+      "facet": "Renminbi note colours and values",
+      "known_at": 12
+    },
+    {
+      "name": "Fourth series of the renminbi",
+      "facet": "Renminbi note colours and values",
+      "known_at": 10
+    },
+    {
+      "name": "Fifth series of the renminbi",
+      "facet": "Renminbi note colours and values",
+      "known_at": 8
+    },
+    {
+      "name": "2019 edition of the renminbi",
+      "facet": "Renminbi note colours and values",
+      "known_at": 8
+    },
+    {
+      "name": "Four leaders on the old 100-yuan note",
+      "facet": "Renminbi note colours and values",
+      "known_at": 11
+    },
+    {
+      "name": "Tractor driver on the 1-yuan note",
+      "facet": "Renminbi note colours and values",
+      "known_at": 13
+    },
+    {
+      "name": "2008 Olympic commemorative 10-yuan note",
+      "facet": "Renminbi note colours and values",
+      "known_at": 9
+    },
+    {
+      "name": "Great Hall of the People",
+      "facet": "Landscapes on note backs",
+      "known_at": 5
+    },
+    {
+      "name": "Li River in Guilin",
+      "facet": "Landscapes on note backs",
+      "known_at": 5
+    },
+    {
+      "name": "Kuimen of the Three Gorges",
+      "facet": "Landscapes on note backs",
+      "known_at": 8
+    },
+    {
+      "name": "Mount Qomolangma (Everest)",
+      "facet": "Landscapes on note backs",
+      "known_at": 5
+    },
+    {
+      "name": "Jinggang Mountains",
+      "facet": "Landscapes on note backs",
+      "known_at": 10
+    },
+    {
+      "name": "Wu Gorge",
+      "facet": "Landscapes on note backs",
+      "known_at": 11
+    },
+    {
+      "name": "Nantian Pillar in Sanya",
+      "facet": "Landscapes on note backs",
+      "known_at": 12
+    },
+    {
+      "name": "Great Wall",
+      "facet": "Landscapes on note backs",
+      "known_at": 2
+    },
+    {
+      "name": "Bird's Nest stadium",
+      "facet": "Landscapes on note backs",
+      "known_at": 5
+    },
+    {
+      "name": "1-yuan coin",
+      "facet": "Renminbi coins and their designs",
+      "known_at": 1
+    },
+    {
+      "name": "5-jiao coin",
+      "facet": "Renminbi coins and their designs",
+      "known_at": 3
+    },
+    {
+      "name": "1-jiao coin",
+      "facet": "Renminbi coins and their designs",
+      "known_at": 3
+    },
+    {
+      "name": "1-fen coin",
+      "facet": "Renminbi coins and their designs",
+      "known_at": 6
+    },
+    {
+      "name": "2-fen coin",
+      "facet": "Renminbi coins and their designs",
+      "known_at": 8
+    },
+    {
+      "name": "5-fen coin",
+      "facet": "Renminbi coins and their designs",
+      "known_at": 7
+    },
+    {
+      "name": "Chrysanthemum on the 1-yuan coin",
+      "facet": "Renminbi coins and their designs",
+      "known_at": 5
+    },
+    {
+      "name": "Lotus on the 5-jiao coin",
+      "facet": "Renminbi coins and their designs",
+      "known_at": 5
+    },
+    {
+      "name": "Orchid on the 1-jiao coin",
+      "facet": "Renminbi coins and their designs",
+      "known_at": 6
+    },
+    {
+      "name": "Peony coin",
+      "facet": "Renminbi coins and their designs",
+      "known_at": 9
+    },
+    {
+      "name": "Plum blossom coin",
+      "facet": "Renminbi coins and their designs",
+      "known_at": 8
+    },
+    {
+      "name": "Great Wall coins",
+      "facet": "Renminbi coins and their designs",
+      "known_at": 11
+    },
+    {
+      "name": "National emblem of China",
+      "facet": "Renminbi coins and their designs",
+      "known_at": 4
+    },
+    {
+      "name": "Panda gold coin",
+      "facet": "Renminbi coins and their designs",
+      "known_at": 8
+    },
+    {
+      "name": "Aluminium coin",
+      "facet": "Renminbi coins and their designs",
+      "known_at": 8
+    },
+    {
+      "name": "Watermark",
+      "facet": "Note features and anti-counterfeiting",
+      "known_at": 5
+    },
+    {
+      "name": "Mao Zedong watermark",
+      "facet": "Note features and anti-counterfeiting",
+      "known_at": 7
+    },
+    {
+      "name": "Flower watermarks",
+      "facet": "Note features and anti-counterfeiting",
+      "known_at": 10
+    },
+    {
+      "name": "Security thread",
+      "facet": "Note features and anti-counterfeiting",
+      "known_at": 7
+    },
+    {
+      "name": "Colour-changing ink",
+      "facet": "Note features and anti-counterfeiting",
+      "known_at": 7
+    },
+    {
+      "name": "Intaglio printing",
+      "facet": "Note features and anti-counterfeiting",
+      "known_at": 11
+    },
+    {
+      "name": "Serial number",
+      "facet": "Note features and anti-counterfeiting",
+      "known_at": 5
+    },
+    {
+      "name": "Microprinting",
+      "facet": "Note features and anti-counterfeiting",
+      "known_at": 10
+    },
+    {
+      "name": "Latent image",
+      "facet": "Note features and anti-counterfeiting",
+      "known_at": 11
+    },
+    {
+      "name": "See-through register (对印图案)",
+      "facet": "Note features and anti-counterfeiting",
+      "known_at": 11
+    },
+    {
+      "name": "Tactile marks for blind people",
+      "facet": "Note features and anti-counterfeiting",
+      "known_at": 8
+    },
+    {
+      "name": "Ultraviolet fluorescence",
+      "facet": "Note features and anti-counterfeiting",
+      "known_at": 9
+    },
+    {
+      "name": "Banknote counting machine (点钞机)",
+      "facet": "Note features and anti-counterfeiting",
+      "known_at": 5
+    },
+    {
+      "name": "Minority scripts on banknotes",
+      "facet": "Note features and anti-counterfeiting",
+      "known_at": 8
+    },
+    {
+      "name": "Pinyin on banknotes",
+      "facet": "Note features and anti-counterfeiting",
+      "known_at": 7
+    },
+    {
+      "name": "Counterfeit note",
+      "facet": "Note features and anti-counterfeiting",
+      "known_at": 4
+    },
+    {
+      "name": "Cowrie shell",
+      "facet": "Shells and the earliest money",
+      "known_at": 5
+    },
+    {
+      "name": "Bei (贝) radical",
+      "facet": "Shells and the earliest money",
+      "known_at": 6
+    },
+    {
+      "name": "Barter",
+      "facet": "Shells and the earliest money",
+      "known_at": 5
+    },
+    {
+      "name": "Shang dynasty",
+      "facet": "Shells and the earliest money",
+      "known_at": 7
+    },
+    {
+      "name": "Bronze cowrie",
+      "facet": "Shells and the earliest money",
+      "known_at": 11
+    },
+    {
+      "name": "Bone cowrie",
+      "facet": "Shells and the earliest money",
+      "known_at": 12
+    },
+    {
+      "name": "Peng (朋) string of shells",
+      "facet": "Shells and the earliest money",
+      "known_at": 13
+    },
+    {
+      "name": "Ant-nose money (蚁鼻钱)",
+      "facet": "Shells and the earliest money",
+      "known_at": 12
+    },
+    {
+      "name": "Tomb of Fu Hao",
+      "facet": "Shells and the earliest money",
+      "known_at": 11
+    },
+    {
+      "name": "Yinxu (Ruins of Yin)",
+      "facet": "Shells and the earliest money",
+      "known_at": 9
+    },
+    {
+      "name": "Silk as payment",
+      "facet": "Shells and the earliest money",
+      "known_at": 10
+    },
+    {
+      "name": "Grain as payment",
+      "facet": "Shells and the earliest money",
+      "known_at": 9
+    },
+    {
+      "name": "Xia dynasty",
+      "facet": "Shells and the earliest money",
+      "known_at": 8
+    },
+    {
+      "name": "Spade money (布币)",
+      "facet": "Spade and knife coins",
+      "known_at": 8
+    },
+    {
+      "name": "Knife money (刀币)",
+      "facet": "Spade and knife coins",
+      "known_at": 8
+    },
+    {
+      "name": "Hollow-handle spade",
+      "facet": "Spade and knife coins",
+      "known_at": 13
+    },
+    {
+      "name": "Pointed-foot spade",
+      "facet": "Spade and knife coins",
+      "known_at": 14
+    },
+    {
+      "name": "Square-foot spade",
+      "facet": "Spade and knife coins",
+      "known_at": 14
+    },
+    {
+      "name": "Qi knife",
+      "facet": "Spade and knife coins",
+      "known_at": 12
+    },
+    {
+      "name": "Ming knife of Yan",
+      "facet": "Spade and knife coins",
+      "known_at": 13
+    },
+    {
+      "name": "State of Zhao",
+      "facet": "Spade and knife coins",
+      "known_at": 10
+    },
+    {
+      "name": "State of Qi",
+      "facet": "Spade and knife coins",
+      "known_at": 9
+    },
+    {
+      "name": "Warring States period",
+      "facet": "Spade and knife coins",
+      "known_at": 8
+    },
+    {
+      "name": "Spring and Autumn period",
+      "facet": "Spade and knife coins",
+      "known_at": 8
+    },
+    {
+      "name": "Gold-inlaid knife of Wang Mang",
+      "facet": "Spade and knife coins",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Mang",
+      "facet": "Spade and knife coins",
+      "known_at": 11
+    },
+    {
+      "name": "Farm spade",
+      "facet": "Spade and knife coins",
+      "known_at": 3
+    },
+    {
+      "name": "Ring coin (圜钱)",
+      "facet": "Spade and knife coins",
+      "known_at": 13
+    },
+    {
+      "name": "Qin Banliang (半两)",
+      "facet": "Qin Banliang and round coins",
+      "known_at": 9
+    },
+    {
+      "name": "Qin Shi Huang",
+      "facet": "Qin Banliang and round coins",
+      "known_at": 4
+    },
+    {
+      "name": "Round coin with square hole",
+      "facet": "Qin Banliang and round coins",
+      "known_at": 3
+    },
+    {
+      "name": "Unification of currency under Qin",
+      "facet": "Qin Banliang and round coins",
+      "known_at": 8
+    },
+    {
+      "name": "Zhu (铢)",
+      "facet": "Qin Banliang and round coins",
+      "known_at": 11
+    },
+    {
+      "name": "String of cash (贯)",
+      "facet": "Qin Banliang and round coins",
+      "known_at": 8
+    },
+    {
+      "name": "Bronze",
+      "facet": "Qin Banliang and round coins",
+      "known_at": 4
+    },
+    {
+      "name": "Coin mould",
+      "facet": "Qin Banliang and round coins",
+      "known_at": 10
+    },
+    {
+      "name": "Round heaven, square earth (天圆地方)",
+      "facet": "Qin Banliang and round coins",
+      "known_at": 10
+    },
+    {
+      "name": "Elm-seed coin (榆荚钱)",
+      "facet": "Qin Banliang and round coins",
+      "known_at": 14
+    },
+    {
+      "name": "Han Banliang",
+      "facet": "Qin Banliang and round coins",
+      "known_at": 13
+    },
+    {
+      "name": "Iron coin",
+      "facet": "Qin Banliang and round coins",
+      "known_at": 10
+    },
+    {
+      "name": "Wuzhu coin (五铢)",
+      "facet": "Wuzhu and Tongbao coins",
+      "known_at": 10
+    },
+    {
+      "name": "Emperor Wu of Han",
+      "facet": "Wuzhu and Tongbao coins",
+      "known_at": 7
+    },
+    {
+      "name": "Kaiyuan Tongbao (开元通宝)",
+      "facet": "Wuzhu and Tongbao coins",
+      "known_at": 10
+    },
+    {
+      "name": "Li Yuan (Emperor Gaozu of Tang)",
+      "facet": "Wuzhu and Tongbao coins",
+      "known_at": 9
+    },
+    {
+      "name": "Ouyang Xun",
+      "facet": "Wuzhu and Tongbao coins",
+      "known_at": 10
+    },
+    {
+      "name": "Paired coins (对钱)",
+      "facet": "Wuzhu and Tongbao coins",
+      "known_at": 14
+    },
+    {
+      "name": "Slender gold script coins of Huizong",
+      "facet": "Wuzhu and Tongbao coins",
+      "known_at": 12
+    },
+    {
+      "name": "Yongle Tongbao",
+      "facet": "Wuzhu and Tongbao coins",
+      "known_at": 13
+    },
+    {
+      "name": "Kangxi Tongbao",
+      "facet": "Wuzhu and Tongbao coins",
+      "known_at": 9
+    },
+    {
+      "name": "Qianlong Tongbao",
+      "facet": "Wuzhu and Tongbao coins",
+      "known_at": 9
+    },
+    {
+      "name": "Five Emperors coins (五帝钱)",
+      "facet": "Wuzhu and Tongbao coins",
+      "known_at": 12
+    },
+    {
+      "name": "Manchu script on Qing coins",
+      "facet": "Wuzhu and Tongbao coins",
+      "known_at": 12
+    },
+    {
+      "name": "Huoquan (货泉)",
+      "facet": "Wuzhu and Tongbao coins",
+      "known_at": 14
+    },
+    {
+      "name": "Wen (文)",
+      "facet": "Wuzhu and Tongbao coins",
+      "known_at": 6
+    },
+    {
+      "name": "Copper cash coin (铜钱)",
+      "facet": "Wuzhu and Tongbao coins",
+      "known_at": 3
+    },
+    {
+      "name": "Jiaozi (交子)",
+      "facet": "Jiaozi and early paper money",
+      "known_at": 7
+    },
+    {
+      "name": "Northern Song dynasty",
+      "facet": "Jiaozi and early paper money",
+      "known_at": 7
+    },
+    {
+      "name": "Sichuan iron coins",
+      "facet": "Jiaozi and early paper money",
+      "known_at": 11
+    },
+    {
+      "name": "Jiaozi Office (交子务)",
+      "facet": "Jiaozi and early paper money",
+      "known_at": 13
+    },
+    {
+      "name": "Sixteen wealthy merchants of Chengdu",
+      "facet": "Jiaozi and early paper money",
+      "known_at": 13
+    },
+    {
+      "name": "Huizi (会子)",
+      "facet": "Jiaozi and early paper money",
+      "known_at": 13
+    },
+    {
+      "name": "Guanzi (关子)",
+      "facet": "Jiaozi and early paper money",
+      "known_at": 14
+    },
+    {
+      "name": "Zhongtong Chao (中统钞)",
+      "facet": "Jiaozi and early paper money",
+      "known_at": 14
+    },
+    {
+      "name": "Da Ming Baochao (大明宝钞)",
+      "facet": "Jiaozi and early paper money",
+      "known_at": 13
+    },
+    {
+      "name": "Woodblock printing",
+      "facet": "Jiaozi and early paper money",
+      "known_at": 6
+    },
+    {
+      "name": "Mulberry bark paper",
+      "facet": "Jiaozi and early paper money",
+      "known_at": 12
+    },
+    {
+      "name": "Inflation",
+      "facet": "Jiaozi and early paper money",
+      "known_at": 9
+    },
+    {
+      "name": "Yuanbao (元宝)",
+      "facet": "Silver ingots and old trade money",
+      "known_at": 3
+    },
+    {
+      "name": "Tael (两)",
+      "facet": "Silver ingots and old trade money",
+      "known_at": 6
+    },
+    {
+      "name": "Silver dollar (银元)",
+      "facet": "Silver ingots and old trade money",
+      "known_at": 7
+    },
+    {
+      "name": "Yuan Datou (袁大头)",
+      "facet": "Silver ingots and old trade money",
+      "known_at": 10
+    },
+    {
+      "name": "Sun Xiaotou (孙小头)",
+      "facet": "Silver ingots and old trade money",
+      "known_at": 13
+    },
+    {
+      "name": "Dragon dollar (龙洋)",
+      "facet": "Silver ingots and old trade money",
+      "known_at": 12
+    },
+    {
+      "name": "Piaohao (票号)",
+      "facet": "Silver ingots and old trade money",
+      "known_at": 11
+    },
+    {
+      "name": "Shanxi merchants",
+      "facet": "Silver ingots and old trade money",
+      "known_at": 10
+    },
+    {
+      "name": "Qianzhuang (钱庄)",
+      "facet": "Silver ingots and old trade money",
+      "known_at": 10
+    },
+    {
+      "name": "Pawnshop (当铺)",
+      "facet": "Silver ingots and old trade money",
+      "known_at": 7
+    },
+    {
+      "name": "Fabi (法币)",
+      "facet": "Silver ingots and old trade money",
+      "known_at": 13
+    },
+    {
+      "name": "Gold yuan certificate (金圆券)",
+      "facet": "Silver ingots and old trade money",
+      "known_at": 13
+    },
+    {
+      "name": "Gold bar",
+      "facet": "Silver ingots and old trade money",
+      "known_at": 3
+    },
+    {
+      "name": "Hongbao (红包)",
+      "facet": "Money words, idioms and customs",
+      "known_at": 1
+    },
+    {
+      "name": "Kong Fang Xiong (孔方兄)",
+      "facet": "Money words, idioms and customs",
+      "known_at": 12
+    },
+    {
+      "name": "Three-legged money toad (金蟾)",
+      "facet": "Money words, idioms and customs",
+      "known_at": 8
+    },
+    {
+      "name": "Coin in a Spring Festival dumpling",
+      "facet": "Money words, idioms and customs",
+      "known_at": 3
+    },
+    {
+      "name": "Abacus (算盘)",
+      "facet": "Money words, idioms and customs",
+      "known_at": 4
+    },
+    {
+      "name": "Yi wen bu zhi (一文不值)",
+      "facet": "Money words, idioms and customs",
+      "known_at": 8
+    },
+    {
+      "name": "Yi zi qian jin (一字千金)",
+      "facet": "Money words, idioms and customs",
+      "known_at": 9
+    },
+    {
+      "name": "Yi cun guangyin yi cun jin (一寸光阴一寸金)",
+      "facet": "Money words, idioms and customs",
+      "known_at": 5
+    },
+    {
+      "name": "Zhaocai jinbao (招财进宝)",
+      "facet": "Money words, idioms and customs",
+      "known_at": 6
+    },
+    {
+      "name": "Digital red envelope",
+      "facet": "Money words, idioms and customs",
+      "known_at": 4
+    },
+    {
+      "name": "Piggy bank (存钱罐)",
+      "facet": "Money words, idioms and customs",
+      "known_at": 1
+    },
+    {
+      "name": "Mobile payment QR code",
+      "facet": "Money words, idioms and customs",
+      "known_at": 3
+    }
+  ]
+}

@@ -1,0 +1,1047 @@
+{
+  "subcategory": "eight-cuisines",
+  "facets": [
+    "Sichuan cuisine (川菜)",
+    "Cantonese cuisine (粤菜)",
+    "Shandong cuisine (鲁菜)",
+    "Jiangsu cuisine (苏菜)",
+    "Zhejiang cuisine (浙菜)",
+    "Fujian cuisine (闽菜)",
+    "Hunan cuisine (湘菜)",
+    "Anhui cuisine (徽菜)",
+    "Cooking techniques and knife work",
+    "Seasonings and signature flavours",
+    "Famous people and dish legends",
+    "Imperial and banquet dishes"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mapo tofu (麻婆豆腐)",
+      "facet": "Sichuan cuisine (川菜)",
+      "known_at": 3
+    },
+    {
+      "name": "Kung Pao chicken (宫保鸡丁)",
+      "facet": "Sichuan cuisine (川菜)",
+      "known_at": 3
+    },
+    {
+      "name": "Twice-cooked pork (回锅肉)",
+      "facet": "Sichuan cuisine (川菜)",
+      "known_at": 5
+    },
+    {
+      "name": "Fish-fragrant shredded pork (鱼香肉丝)",
+      "facet": "Sichuan cuisine (川菜)",
+      "known_at": 3
+    },
+    {
+      "name": "Boiled fish in chilli oil (水煮鱼)",
+      "facet": "Sichuan cuisine (川菜)",
+      "known_at": 5
+    },
+    {
+      "name": "Boiled beef slices (水煮牛肉)",
+      "facet": "Sichuan cuisine (川菜)",
+      "known_at": 7
+    },
+    {
+      "name": "Pickled cabbage fish (酸菜鱼)",
+      "facet": "Sichuan cuisine (川菜)",
+      "known_at": 4
+    },
+    {
+      "name": "Husband and wife lung slices (夫妻肺片)",
+      "facet": "Sichuan cuisine (川菜)",
+      "known_at": 7
+    },
+    {
+      "name": "Mouth-watering chicken (口水鸡)",
+      "facet": "Sichuan cuisine (川菜)",
+      "known_at": 6
+    },
+    {
+      "name": "Chongqing chilli chicken (辣子鸡)",
+      "facet": "Sichuan cuisine (川菜)",
+      "known_at": 6
+    },
+    {
+      "name": "Dry-fried green beans (干煸四季豆)",
+      "facet": "Sichuan cuisine (川菜)",
+      "known_at": 6
+    },
+    {
+      "name": "Tea-smoked duck (樟茶鸭)",
+      "facet": "Sichuan cuisine (川菜)",
+      "known_at": 11
+    },
+    {
+      "name": "Boiling water cabbage (开水白菜)",
+      "facet": "Sichuan cuisine (川菜)",
+      "known_at": 10
+    },
+    {
+      "name": "Maoxuewang (毛血旺)",
+      "facet": "Sichuan cuisine (川菜)",
+      "known_at": 8
+    },
+    {
+      "name": "Chongqing hot pot (重庆火锅)",
+      "facet": "Sichuan cuisine (川菜)",
+      "known_at": 2
+    },
+    {
+      "name": "Chengdu",
+      "facet": "Sichuan cuisine (川菜)",
+      "known_at": 3
+    },
+    {
+      "name": "Char siu (叉烧)",
+      "facet": "Cantonese cuisine (粤菜)",
+      "known_at": 3
+    },
+    {
+      "name": "White cut chicken (白切鸡)",
+      "facet": "Cantonese cuisine (粤菜)",
+      "known_at": 5
+    },
+    {
+      "name": "Roast goose (烧鹅)",
+      "facet": "Cantonese cuisine (粤菜)",
+      "known_at": 5
+    },
+    {
+      "name": "Yum cha (饮早茶)",
+      "facet": "Cantonese cuisine (粤菜)",
+      "known_at": 4
+    },
+    {
+      "name": "Steamed fish (清蒸鱼)",
+      "facet": "Cantonese cuisine (粤菜)",
+      "known_at": 4
+    },
+    {
+      "name": "Gulou pork (咕噜肉)",
+      "facet": "Cantonese cuisine (粤菜)",
+      "known_at": 7
+    },
+    {
+      "name": "Claypot rice (煲仔饭)",
+      "facet": "Cantonese cuisine (粤菜)",
+      "known_at": 5
+    },
+    {
+      "name": "Slow-cooked Cantonese soup (老火靓汤)",
+      "facet": "Cantonese cuisine (粤菜)",
+      "known_at": 7
+    },
+    {
+      "name": "Roast suckling pig (烤乳猪)",
+      "facet": "Cantonese cuisine (粤菜)",
+      "known_at": 8
+    },
+    {
+      "name": "Salt-baked chicken (盐焗鸡)",
+      "facet": "Cantonese cuisine (粤菜)",
+      "known_at": 7
+    },
+    {
+      "name": "Chaoshan beef hot pot (潮汕牛肉火锅)",
+      "facet": "Cantonese cuisine (粤菜)",
+      "known_at": 7
+    },
+    {
+      "name": "Chaozhou braised goose (潮州卤鹅)",
+      "facet": "Cantonese cuisine (粤菜)",
+      "known_at": 10
+    },
+    {
+      "name": "Steamed spare ribs with black beans (豉汁蒸排骨)",
+      "facet": "Cantonese cuisine (粤菜)",
+      "known_at": 8
+    },
+    {
+      "name": "Tingzai congee (艇仔粥)",
+      "facet": "Cantonese cuisine (粤菜)",
+      "known_at": 10
+    },
+    {
+      "name": "Guangzhou",
+      "facet": "Cantonese cuisine (粤菜)",
+      "known_at": 3
+    },
+    {
+      "name": "Shunde",
+      "facet": "Cantonese cuisine (粤菜)",
+      "known_at": 11
+    },
+    {
+      "name": "Nine-turn braised intestines (九转大肠)",
+      "facet": "Shandong cuisine (鲁菜)",
+      "known_at": 9
+    },
+    {
+      "name": "Sweet and sour Yellow River carp (糖醋鲤鱼)",
+      "facet": "Shandong cuisine (鲁菜)",
+      "known_at": 8
+    },
+    {
+      "name": "Dezhou braised chicken (德州扒鸡)",
+      "facet": "Shandong cuisine (鲁菜)",
+      "known_at": 8
+    },
+    {
+      "name": "Braised sea cucumber with scallion (葱烧海参)",
+      "facet": "Shandong cuisine (鲁菜)",
+      "known_at": 9
+    },
+    {
+      "name": "Candied sweet potato (拔丝地瓜)",
+      "facet": "Shandong cuisine (鲁菜)",
+      "known_at": 5
+    },
+    {
+      "name": "Oil-exploded double crisp (油爆双脆)",
+      "facet": "Shandong cuisine (鲁菜)",
+      "known_at": 12
+    },
+    {
+      "name": "Braised prawns (油焖大虾)",
+      "facet": "Shandong cuisine (鲁菜)",
+      "known_at": 7
+    },
+    {
+      "name": "Milk-white soup with cattail shoots (奶汤蒲菜)",
+      "facet": "Shandong cuisine (鲁菜)",
+      "known_at": 12
+    },
+    {
+      "name": "Pan-fried stuffed tofu (锅塌豆腐)",
+      "facet": "Shandong cuisine (鲁菜)",
+      "known_at": 11
+    },
+    {
+      "name": "Sweet and sour pork tenderloin (糖醋里脊)",
+      "facet": "Shandong cuisine (鲁菜)",
+      "known_at": 4
+    },
+    {
+      "name": "Shandong scallion (章丘大葱)",
+      "facet": "Shandong cuisine (鲁菜)",
+      "known_at": 8
+    },
+    {
+      "name": "Jinan",
+      "facet": "Shandong cuisine (鲁菜)",
+      "known_at": 5
+    },
+    {
+      "name": "Fushan (福山)",
+      "facet": "Shandong cuisine (鲁菜)",
+      "known_at": 13
+    },
+    {
+      "name": "Squirrel-shaped mandarin fish (松鼠鳜鱼)",
+      "facet": "Jiangsu cuisine (苏菜)",
+      "known_at": 7
+    },
+    {
+      "name": "Lion's head meatballs (狮子头)",
+      "facet": "Jiangsu cuisine (苏菜)",
+      "known_at": 4
+    },
+    {
+      "name": "Yangzhou fried rice (扬州炒饭)",
+      "facet": "Jiangsu cuisine (苏菜)",
+      "known_at": 3
+    },
+    {
+      "name": "Wensi tofu soup (文思豆腐)",
+      "facet": "Jiangsu cuisine (苏菜)",
+      "known_at": 10
+    },
+    {
+      "name": "Nanjing salted duck (盐水鸭)",
+      "facet": "Jiangsu cuisine (苏菜)",
+      "known_at": 7
+    },
+    {
+      "name": "Sweet and sour pork ribs (糖醋排骨)",
+      "facet": "Jiangsu cuisine (苏菜)",
+      "known_at": 3
+    },
+    {
+      "name": "Huaiyang cuisine (淮扬菜)",
+      "facet": "Jiangsu cuisine (苏菜)",
+      "known_at": 9
+    },
+    {
+      "name": "Boiled dried tofu shreds (大煮干丝)",
+      "facet": "Jiangsu cuisine (苏菜)",
+      "known_at": 11
+    },
+    {
+      "name": "Three-sets duck (三套鸭)",
+      "facet": "Jiangsu cuisine (苏菜)",
+      "known_at": 13
+    },
+    {
+      "name": "Crystal pork jelly (水晶肴肉)",
+      "facet": "Jiangsu cuisine (苏菜)",
+      "known_at": 12
+    },
+    {
+      "name": "Braised eel strips (软兜长鱼)",
+      "facet": "Jiangsu cuisine (苏菜)",
+      "known_at": 13
+    },
+    {
+      "name": "Yangcheng Lake (阳澄湖)",
+      "facet": "Jiangsu cuisine (苏菜)",
+      "known_at": 8
+    },
+    {
+      "name": "Yangzhou",
+      "facet": "Jiangsu cuisine (苏菜)",
+      "known_at": 5
+    },
+    {
+      "name": "Suzhou",
+      "facet": "Jiangsu cuisine (苏菜)",
+      "known_at": 4
+    },
+    {
+      "name": "West Lake vinegar fish (西湖醋鱼)",
+      "facet": "Zhejiang cuisine (浙菜)",
+      "known_at": 6
+    },
+    {
+      "name": "Dongpo pork (东坡肉)",
+      "facet": "Zhejiang cuisine (浙菜)",
+      "known_at": 5
+    },
+    {
+      "name": "Longjing shrimp (龙井虾仁)",
+      "facet": "Zhejiang cuisine (浙菜)",
+      "known_at": 8
+    },
+    {
+      "name": "Beggar's chicken (叫花鸡)",
+      "facet": "Zhejiang cuisine (浙菜)",
+      "known_at": 6
+    },
+    {
+      "name": "Song Sao fish soup (宋嫂鱼羹)",
+      "facet": "Zhejiang cuisine (浙菜)",
+      "known_at": 11
+    },
+    {
+      "name": "Braised spring bamboo shoots (油焖春笋)",
+      "facet": "Zhejiang cuisine (浙菜)",
+      "known_at": 9
+    },
+    {
+      "name": "Pork with preserved mustard greens (梅干菜扣肉)",
+      "facet": "Zhejiang cuisine (浙菜)",
+      "known_at": 7
+    },
+    {
+      "name": "Jinhua ham (金华火腿)",
+      "facet": "Zhejiang cuisine (浙菜)",
+      "known_at": 8
+    },
+    {
+      "name": "Drunken chicken (醉鸡)",
+      "facet": "Zhejiang cuisine (浙菜)",
+      "known_at": 8
+    },
+    {
+      "name": "Yellow croaker soup with pickled greens (雪菜大汤黄鱼)",
+      "facet": "Zhejiang cuisine (浙菜)",
+      "known_at": 12
+    },
+    {
+      "name": "Deep-fried bean curd rolls (干炸响铃)",
+      "facet": "Zhejiang cuisine (浙菜)",
+      "known_at": 12
+    },
+    {
+      "name": "West Lake beef soup (西湖牛肉羹)",
+      "facet": "Zhejiang cuisine (浙菜)",
+      "known_at": 10
+    },
+    {
+      "name": "Hangzhou",
+      "facet": "Zhejiang cuisine (浙菜)",
+      "known_at": 3
+    },
+    {
+      "name": "Ningbo",
+      "facet": "Zhejiang cuisine (浙菜)",
+      "known_at": 7
+    },
+    {
+      "name": "Shaoxing",
+      "facet": "Zhejiang cuisine (浙菜)",
+      "known_at": 7
+    },
+    {
+      "name": "Buddha Jumps Over the Wall (佛跳墙)",
+      "facet": "Fujian cuisine (闽菜)",
+      "known_at": 6
+    },
+    {
+      "name": "Lychee pork (荔枝肉)",
+      "facet": "Fujian cuisine (闽菜)",
+      "known_at": 9
+    },
+    {
+      "name": "Fuzhou fish balls (福州鱼丸)",
+      "facet": "Fujian cuisine (闽菜)",
+      "known_at": 7
+    },
+    {
+      "name": "Ginger duck (姜母鸭)",
+      "facet": "Fujian cuisine (闽菜)",
+      "known_at": 10
+    },
+    {
+      "name": "Red vinasse chicken (红糟鸡)",
+      "facet": "Fujian cuisine (闽菜)",
+      "known_at": 12
+    },
+    {
+      "name": "Sea clam in chicken soup (鸡汤汆海蚌)",
+      "facet": "Fujian cuisine (闽菜)",
+      "known_at": 13
+    },
+    {
+      "name": "Taiji taro paste (太极芋泥)",
+      "facet": "Fujian cuisine (闽菜)",
+      "known_at": 11
+    },
+    {
+      "name": "Drunken spare ribs (醉排骨)",
+      "facet": "Fujian cuisine (闽菜)",
+      "known_at": 12
+    },
+    {
+      "name": "Fujian fried rice (福建炒饭)",
+      "facet": "Fujian cuisine (闽菜)",
+      "known_at": 9
+    },
+    {
+      "name": "Shacha noodle soup (沙茶面)",
+      "facet": "Fujian cuisine (闽菜)",
+      "known_at": 10
+    },
+    {
+      "name": "Fujian soups (一汤十变)",
+      "facet": "Fujian cuisine (闽菜)",
+      "known_at": 13
+    },
+    {
+      "name": "Fuzhou",
+      "facet": "Fujian cuisine (闽菜)",
+      "known_at": 6
+    },
+    {
+      "name": "Xiamen",
+      "facet": "Fujian cuisine (闽菜)",
+      "known_at": 5
+    },
+    {
+      "name": "Quanzhou",
+      "facet": "Fujian cuisine (闽菜)",
+      "known_at": 9
+    },
+    {
+      "name": "Wuyi rock tea (武夷岩茶)",
+      "facet": "Fujian cuisine (闽菜)",
+      "known_at": 9
+    },
+    {
+      "name": "Chopped-chilli fish head (剁椒鱼头)",
+      "facet": "Hunan cuisine (湘菜)",
+      "known_at": 5
+    },
+    {
+      "name": "Mao-style red braised pork (毛氏红烧肉)",
+      "facet": "Hunan cuisine (湘菜)",
+      "known_at": 7
+    },
+    {
+      "name": "Stir-fried pork with chilli (辣椒炒肉)",
+      "facet": "Hunan cuisine (湘菜)",
+      "known_at": 4
+    },
+    {
+      "name": "Steamed preserved meats (腊味合蒸)",
+      "facet": "Hunan cuisine (湘菜)",
+      "known_at": 10
+    },
+    {
+      "name": "Dong'an chicken (东安子鸡)",
+      "facet": "Hunan cuisine (湘菜)",
+      "known_at": 11
+    },
+    {
+      "name": "General Tso's chicken (左宗棠鸡)",
+      "facet": "Hunan cuisine (湘菜)",
+      "known_at": 9
+    },
+    {
+      "name": "Spicy crayfish (口味虾)",
+      "facet": "Hunan cuisine (湘菜)",
+      "known_at": 5
+    },
+    {
+      "name": "Xiangxi smoked pork (湘西腊肉)",
+      "facet": "Hunan cuisine (湘菜)",
+      "known_at": 8
+    },
+    {
+      "name": "Yongzhou blood duck (永州血鸭)",
+      "facet": "Hunan cuisine (湘菜)",
+      "known_at": 12
+    },
+    {
+      "name": "Lotus seeds in rock sugar syrup (冰糖湘莲)",
+      "facet": "Hunan cuisine (湘菜)",
+      "known_at": 11
+    },
+    {
+      "name": "Liuyang steamed dishes (浏阳蒸菜)",
+      "facet": "Hunan cuisine (湘菜)",
+      "known_at": 12
+    },
+    {
+      "name": "Fried pepper with century egg (擂辣椒皮蛋)",
+      "facet": "Hunan cuisine (湘菜)",
+      "known_at": 11
+    },
+    {
+      "name": "Changsha",
+      "facet": "Hunan cuisine (湘菜)",
+      "known_at": 5
+    },
+    {
+      "name": "Chopped salted chilli (剁辣椒)",
+      "facet": "Hunan cuisine (湘菜)",
+      "known_at": 7
+    },
+    {
+      "name": "Duck with dried tofu (酱板鸭)",
+      "facet": "Hunan cuisine (湘菜)",
+      "known_at": 9
+    },
+    {
+      "name": "Stinky mandarin fish (臭鳜鱼)",
+      "facet": "Anhui cuisine (徽菜)",
+      "known_at": 8
+    },
+    {
+      "name": "Hairy tofu (毛豆腐)",
+      "facet": "Anhui cuisine (徽菜)",
+      "known_at": 8
+    },
+    {
+      "name": "Fuliji roast chicken (符离集烧鸡)",
+      "facet": "Anhui cuisine (徽菜)",
+      "known_at": 12
+    },
+    {
+      "name": "Bagongshan tofu (八公山豆腐)",
+      "facet": "Anhui cuisine (徽菜)",
+      "known_at": 12
+    },
+    {
+      "name": "Jixi one-pot (绩溪一品锅)",
+      "facet": "Anhui cuisine (徽菜)",
+      "known_at": 13
+    },
+    {
+      "name": "Wenzheng mountain bamboo shoots (问政山笋)",
+      "facet": "Anhui cuisine (徽菜)",
+      "known_at": 14
+    },
+    {
+      "name": "Clear-stewed soft-shell turtle (清炖马蹄鳖)",
+      "facet": "Anhui cuisine (徽菜)",
+      "known_at": 14
+    },
+    {
+      "name": "Huangshan stone frog (黄山石鸡)",
+      "facet": "Anhui cuisine (徽菜)",
+      "known_at": 13
+    },
+    {
+      "name": "Wuwei smoked duck (无为板鸭)",
+      "facet": "Anhui cuisine (徽菜)",
+      "known_at": 13
+    },
+    {
+      "name": "Li Hongzhang hodgepodge (李鸿章杂烩)",
+      "facet": "Anhui cuisine (徽菜)",
+      "known_at": 12
+    },
+    {
+      "name": "Huizhou merchants (徽商)",
+      "facet": "Anhui cuisine (徽菜)",
+      "known_at": 10
+    },
+    {
+      "name": "Huangshan (黄山)",
+      "facet": "Anhui cuisine (徽菜)",
+      "known_at": 4
+    },
+    {
+      "name": "Huizhou (徽州)",
+      "facet": "Anhui cuisine (徽菜)",
+      "known_at": 9
+    },
+    {
+      "name": "Hongcun village (宏村)",
+      "facet": "Anhui cuisine (徽菜)",
+      "known_at": 10
+    },
+    {
+      "name": "Huangshan Maofeng tea (黄山毛峰)",
+      "facet": "Anhui cuisine (徽菜)",
+      "known_at": 9
+    },
+    {
+      "name": "Stir-frying (炒)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 2
+    },
+    {
+      "name": "Steaming (蒸)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 2
+    },
+    {
+      "name": "Red braising (红烧)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 4
+    },
+    {
+      "name": "Deep-frying (炸)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 3
+    },
+    {
+      "name": "Quick-frying (爆)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 9
+    },
+    {
+      "name": "Stewing (炖)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 4
+    },
+    {
+      "name": "Smoking (熏)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 8
+    },
+    {
+      "name": "Dry-frying (干煸)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 9
+    },
+    {
+      "name": "Spun sugar (拔丝)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 7
+    },
+    {
+      "name": "Master stock braising (卤)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 8
+    },
+    {
+      "name": "Blanching (焯水)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 8
+    },
+    {
+      "name": "Velveting (上浆)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 12
+    },
+    {
+      "name": "Starch thickening (勾芡)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 9
+    },
+    {
+      "name": "Heat control (火候)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 8
+    },
+    {
+      "name": "Wok hei (锅气)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 11
+    },
+    {
+      "name": "Wok (炒锅)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 1
+    },
+    {
+      "name": "Chinese cleaver (菜刀)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 2
+    },
+    {
+      "name": "Shredding (切丝)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 5
+    },
+    {
+      "name": "Decorative scoring (花刀)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 10
+    },
+    {
+      "name": "Bamboo steamer (蒸笼)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 2
+    },
+    {
+      "name": "Eight methods of cooking (烹饪八法)",
+      "facet": "Cooking techniques and knife work",
+      "known_at": 13
+    },
+    {
+      "name": "Sichuan pepper (花椒)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 3
+    },
+    {
+      "name": "Pixian broad bean paste (郫县豆瓣)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 8
+    },
+    {
+      "name": "Mala (麻辣)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 3
+    },
+    {
+      "name": "Fish-fragrant flavour (鱼香味)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 8
+    },
+    {
+      "name": "Sweet and sour flavour (糖醋味)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 4
+    },
+    {
+      "name": "Soy sauce (酱油)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 1
+    },
+    {
+      "name": "Zhenjiang vinegar (镇江香醋)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 7
+    },
+    {
+      "name": "Shanxi mature vinegar (山西老陈醋)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 6
+    },
+    {
+      "name": "Shaoxing wine (绍兴黄酒)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 8
+    },
+    {
+      "name": "Oyster sauce (蚝油)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 4
+    },
+    {
+      "name": "Five-spice powder (五香粉)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 6
+    },
+    {
+      "name": "Star anise (八角)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 5
+    },
+    {
+      "name": "Fermented black beans (豆豉)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 7
+    },
+    {
+      "name": "Chilli oil (红油)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 4
+    },
+    {
+      "name": "Sesame oil (香油)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 3
+    },
+    {
+      "name": "MSG (味精)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 4
+    },
+    {
+      "name": "Hoisin sauce (海鲜酱)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 9
+    },
+    {
+      "name": "Shacha sauce (沙茶酱)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 9
+    },
+    {
+      "name": "Red yeast rice (红曲米)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 11
+    },
+    {
+      "name": "Fermented bean curd (腐乳)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 5
+    },
+    {
+      "name": "Dried tangerine peel (陈皮)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 6
+    },
+    {
+      "name": "Scallion, ginger and garlic (葱姜蒜)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 3
+    },
+    {
+      "name": "Rock sugar (冰糖)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 3
+    },
+    {
+      "name": "Xian, the savoury taste (鲜)",
+      "facet": "Seasonings and signature flavours",
+      "known_at": 6
+    },
+    {
+      "name": "Ding Baozhen (丁宝桢)",
+      "facet": "Famous people and dish legends",
+      "known_at": 11
+    },
+    {
+      "name": "Chen Mapo (陈麻婆)",
+      "facet": "Famous people and dish legends",
+      "known_at": 9
+    },
+    {
+      "name": "Qianlong Emperor (乾隆)",
+      "facet": "Famous people and dish legends",
+      "known_at": 6
+    },
+    {
+      "name": "Zuo Zongtang (左宗棠)",
+      "facet": "Famous people and dish legends",
+      "known_at": 10
+    },
+    {
+      "name": "Li Hongzhang (李鸿章)",
+      "facet": "Famous people and dish legends",
+      "known_at": 9
+    },
+    {
+      "name": "Yuan Mei (袁枚)",
+      "facet": "Famous people and dish legends",
+      "known_at": 12
+    },
+    {
+      "name": "Recipes from the Sui Garden (随园食单)",
+      "facet": "Famous people and dish legends",
+      "known_at": 13
+    },
+    {
+      "name": "Yi Yin (伊尹)",
+      "facet": "Famous people and dish legends",
+      "known_at": 13
+    },
+    {
+      "name": "Confucius (孔子)",
+      "facet": "Famous people and dish legends",
+      "known_at": 3
+    },
+    {
+      "name": "Empress Dowager Cixi (慈禧太后)",
+      "facet": "Famous people and dish legends",
+      "known_at": 7
+    },
+    {
+      "name": "Liu An (刘安)",
+      "facet": "Famous people and dish legends",
+      "known_at": 12
+    },
+    {
+      "name": "Shennong (神农)",
+      "facet": "Famous people and dish legends",
+      "known_at": 6
+    },
+    {
+      "name": "Lee Kum Sheung (李锦裳)",
+      "facet": "Famous people and dish legends",
+      "known_at": 13
+    },
+    {
+      "name": "A Bite of China (舌尖上的中国)",
+      "facet": "Famous people and dish legends",
+      "known_at": 6
+    },
+    {
+      "name": "Peng Changgui (彭长贵)",
+      "facet": "Famous people and dish legends",
+      "known_at": 14
+    },
+    {
+      "name": "Peking duck (北京烤鸭)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 1
+    },
+    {
+      "name": "Manchu Han Imperial Feast (满汉全席)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 6
+    },
+    {
+      "name": "Bird's nest soup (燕窝)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 7
+    },
+    {
+      "name": "Abalone (鲍鱼)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 6
+    },
+    {
+      "name": "Sea cucumber (海参)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 5
+    },
+    {
+      "name": "Imperial Kitchen (御膳房)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 9
+    },
+    {
+      "name": "Fangshan Restaurant (仿膳饭庄)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 13
+    },
+    {
+      "name": "Quanjude (全聚德)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 6
+    },
+    {
+      "name": "Founding state banquet (开国第一宴)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 12
+    },
+    {
+      "name": "Confucius Mansion banquet (孔府宴)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 11
+    },
+    {
+      "name": "Luoyang water banquet (洛阳水席)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 12
+    },
+    {
+      "name": "Qiexiang, the eggplant dish from Dream of the Red Chamber (茄鲞)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 12
+    },
+    {
+      "name": "The Night Revels of Han Xizai (韩熙载夜宴图)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 11
+    },
+    {
+      "name": "Lazy Susan (餐桌转盘)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 4
+    },
+    {
+      "name": "Eight Immortals table (八仙桌)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 8
+    },
+    {
+      "name": "Carved cold platter (冷拼)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 10
+    },
+    {
+      "name": "Wedding banquet (喜宴)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 3
+    },
+    {
+      "name": "Eight great cuisines (八大菜系)",
+      "facet": "Imperial and banquet dishes",
+      "known_at": 7
+    }
+  ]
+}

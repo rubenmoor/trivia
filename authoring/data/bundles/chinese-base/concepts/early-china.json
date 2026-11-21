@@ -1,0 +1,1297 @@
+{
+  "subcategory": "early-china",
+  "facets": [
+    "Early humans in China",
+    "Neolithic villages and cultures",
+    "Legendary sage rulers",
+    "Xia dynasty and Yu's floods",
+    "Shang kings and capitals",
+    "Oracle bones and early writing",
+    "Bronze vessels and artefacts",
+    "Western Zhou and its rites",
+    "Spring and Autumn states",
+    "Warring States and reforms",
+    "Hundred Schools of Thought",
+    "Ancient sayings and their stories"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 5,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Yuanmou Man",
+      "facet": "Early humans in China",
+      "known_at": 6
+    },
+    {
+      "name": "Lantian Man",
+      "facet": "Early humans in China",
+      "known_at": 7
+    },
+    {
+      "name": "Upper Cave Man",
+      "facet": "Early humans in China",
+      "known_at": 7
+    },
+    {
+      "name": "Use of fire",
+      "facet": "Early humans in China",
+      "known_at": 4
+    },
+    {
+      "name": "Stone tools",
+      "facet": "Early humans in China",
+      "known_at": 3
+    },
+    {
+      "name": "Bone needle",
+      "facet": "Early humans in China",
+      "known_at": 7
+    },
+    {
+      "name": "Homo erectus",
+      "facet": "Early humans in China",
+      "known_at": 8
+    },
+    {
+      "name": "Hand axe",
+      "facet": "Early humans in China",
+      "known_at": 6
+    },
+    {
+      "name": "Dingcun Man",
+      "facet": "Early humans in China",
+      "known_at": 10
+    },
+    {
+      "name": "Dali Man",
+      "facet": "Early humans in China",
+      "known_at": 11
+    },
+    {
+      "name": "Liujiang Man",
+      "facet": "Early humans in China",
+      "known_at": 11
+    },
+    {
+      "name": "Pei Wenzhong",
+      "facet": "Early humans in China",
+      "known_at": 11
+    },
+    {
+      "name": "Lost Peking Man fossils",
+      "facet": "Early humans in China",
+      "known_at": 11
+    },
+    {
+      "name": "Harbin skull (Dragon Man)",
+      "facet": "Early humans in China",
+      "known_at": 12
+    },
+    {
+      "name": "Denisovans",
+      "facet": "Early humans in China",
+      "known_at": 13
+    },
+    {
+      "name": "Tianyuan Man",
+      "facet": "Early humans in China",
+      "known_at": 13
+    },
+    {
+      "name": "Jinniushan Man",
+      "facet": "Early humans in China",
+      "known_at": 13
+    },
+    {
+      "name": "Nihewan Basin",
+      "facet": "Early humans in China",
+      "known_at": 13
+    },
+    {
+      "name": "Banpo village",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 5
+    },
+    {
+      "name": "Hemudu culture",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 5
+    },
+    {
+      "name": "Yangshao culture",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 7
+    },
+    {
+      "name": "Longshan culture",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 7
+    },
+    {
+      "name": "Liangzhu culture",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 8
+    },
+    {
+      "name": "Hongshan culture",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 10
+    },
+    {
+      "name": "Majiayao culture",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 11
+    },
+    {
+      "name": "Dawenkou culture",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 11
+    },
+    {
+      "name": "Taosi site",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 12
+    },
+    {
+      "name": "Shimao site",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 12
+    },
+    {
+      "name": "Jiahu bone flutes",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 11
+    },
+    {
+      "name": "Painted pottery",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 5
+    },
+    {
+      "name": "Black pottery",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 7
+    },
+    {
+      "name": "Stilt houses",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 6
+    },
+    {
+      "name": "Rice farming",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 4
+    },
+    {
+      "name": "Millet",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 6
+    },
+    {
+      "name": "Hongshan jade dragon",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 11
+    },
+    {
+      "name": "Human-faced fish basin",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 8
+    },
+    {
+      "name": "Liangzhu dams",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 13
+    },
+    {
+      "name": "Neolithic Age",
+      "facet": "Neolithic villages and cultures",
+      "known_at": 6
+    },
+    {
+      "name": "Yellow Emperor (Huangdi)",
+      "facet": "Legendary sage rulers",
+      "known_at": 3
+    },
+    {
+      "name": "Yan Emperor",
+      "facet": "Legendary sage rulers",
+      "known_at": 4
+    },
+    {
+      "name": "Yao",
+      "facet": "Legendary sage rulers",
+      "known_at": 4
+    },
+    {
+      "name": "Shun",
+      "facet": "Legendary sage rulers",
+      "known_at": 4
+    },
+    {
+      "name": "Shennong",
+      "facet": "Legendary sage rulers",
+      "known_at": 4
+    },
+    {
+      "name": "Fuxi",
+      "facet": "Legendary sage rulers",
+      "known_at": 5
+    },
+    {
+      "name": "Chiyou",
+      "facet": "Legendary sage rulers",
+      "known_at": 6
+    },
+    {
+      "name": "Battle of Zhuolu",
+      "facet": "Legendary sage rulers",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Banquan",
+      "facet": "Legendary sage rulers",
+      "known_at": 12
+    },
+    {
+      "name": "Abdication system (禅让)",
+      "facet": "Legendary sage rulers",
+      "known_at": 9
+    },
+    {
+      "name": "Three Sovereigns and Five Emperors",
+      "facet": "Legendary sage rulers",
+      "known_at": 7
+    },
+    {
+      "name": "Descendants of Yan and Huang (炎黄子孙)",
+      "facet": "Legendary sage rulers",
+      "known_at": 5
+    },
+    {
+      "name": "Cangjie",
+      "facet": "Legendary sage rulers",
+      "known_at": 5
+    },
+    {
+      "name": "Leizu",
+      "facet": "Legendary sage rulers",
+      "known_at": 6
+    },
+    {
+      "name": "Suiren",
+      "facet": "Legendary sage rulers",
+      "known_at": 7
+    },
+    {
+      "name": "Youchao",
+      "facet": "Legendary sage rulers",
+      "known_at": 11
+    },
+    {
+      "name": "Zhuanxu",
+      "facet": "Legendary sage rulers",
+      "known_at": 12
+    },
+    {
+      "name": "Emperor Ku",
+      "facet": "Legendary sage rulers",
+      "known_at": 13
+    },
+    {
+      "name": "Ehuang and Nüying",
+      "facet": "Legendary sage rulers",
+      "known_at": 12
+    },
+    {
+      "name": "Danzhu",
+      "facet": "Legendary sage rulers",
+      "known_at": 13
+    },
+    {
+      "name": "Mausoleum of the Yellow Emperor",
+      "facet": "Legendary sage rulers",
+      "known_at": 10
+    },
+    {
+      "name": "South-pointing chariot",
+      "facet": "Legendary sage rulers",
+      "known_at": 9
+    },
+    {
+      "name": "Yu the Great",
+      "facet": "Xia dynasty and Yu's floods",
+      "known_at": 3
+    },
+    {
+      "name": "Gun",
+      "facet": "Xia dynasty and Yu's floods",
+      "known_at": 7
+    },
+    {
+      "name": "Great Flood",
+      "facet": "Xia dynasty and Yu's floods",
+      "known_at": 4
+    },
+    {
+      "name": "Flood dredging",
+      "facet": "Xia dynasty and Yu's floods",
+      "known_at": 6
+    },
+    {
+      "name": "Qi of Xia",
+      "facet": "Xia dynasty and Yu's floods",
+      "known_at": 9
+    },
+    {
+      "name": "Jie of Xia",
+      "facet": "Xia dynasty and Yu's floods",
+      "known_at": 9
+    },
+    {
+      "name": "Nine Tripod Cauldrons",
+      "facet": "Xia dynasty and Yu's floods",
+      "known_at": 8
+    },
+    {
+      "name": "Erlitou site",
+      "facet": "Xia dynasty and Yu's floods",
+      "known_at": 11
+    },
+    {
+      "name": "Tribute of Yu (禹贡)",
+      "facet": "Xia dynasty and Yu's floods",
+      "known_at": 13
+    },
+    {
+      "name": "Mausoleum of Yu the Great",
+      "facet": "Xia dynasty and Yu's floods",
+      "known_at": 11
+    },
+    {
+      "name": "Kuaiji",
+      "facet": "Xia dynasty and Yu's floods",
+      "known_at": 12
+    },
+    {
+      "name": "Taikang",
+      "facet": "Xia dynasty and Yu's floods",
+      "known_at": 13
+    },
+    {
+      "name": "Shaokang",
+      "facet": "Xia dynasty and Yu's floods",
+      "known_at": 13
+    },
+    {
+      "name": "Tushan",
+      "facet": "Xia dynasty and Yu's floods",
+      "known_at": 13
+    },
+    {
+      "name": "Xia–Shang–Zhou Chronology Project",
+      "facet": "Xia dynasty and Yu's floods",
+      "known_at": 13
+    },
+    {
+      "name": "Longmen (Dragon Gate)",
+      "facet": "Xia dynasty and Yu's floods",
+      "known_at": 8
+    },
+    {
+      "name": "Tang of Shang",
+      "facet": "Shang kings and capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Yi Yin",
+      "facet": "Shang kings and capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Pan Geng",
+      "facet": "Shang kings and capitals",
+      "known_at": 9
+    },
+    {
+      "name": "King Zhou of Shang",
+      "facet": "Shang kings and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Daji",
+      "facet": "Shang kings and capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Wu Ding",
+      "facet": "Shang kings and capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Bi Gan",
+      "facet": "Shang kings and capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Jizi",
+      "facet": "Shang kings and capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Weizi",
+      "facet": "Shang kings and capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Mingtiao",
+      "facet": "Shang kings and capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Bo (Shang capital)",
+      "facet": "Shang kings and capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Zhengzhou Shang City",
+      "facet": "Shang kings and capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Huanbei Shang City",
+      "facet": "Shang kings and capitals",
+      "known_at": 14
+    },
+    {
+      "name": "Erligang culture",
+      "facet": "Shang kings and capitals",
+      "known_at": 14
+    },
+    {
+      "name": "Investiture of the Gods (封神演义)",
+      "facet": "Shang kings and capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Shang ancestor worship",
+      "facet": "Shang kings and capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Yirong",
+      "facet": "Oracle bones and early writing",
+      "known_at": 9
+    },
+    {
+      "name": "Turtle shell",
+      "facet": "Oracle bones and early writing",
+      "known_at": 5
+    },
+    {
+      "name": "Ox shoulder blade",
+      "facet": "Oracle bones and early writing",
+      "known_at": 10
+    },
+    {
+      "name": "Divination",
+      "facet": "Oracle bones and early writing",
+      "known_at": 7
+    },
+    {
+      "name": "Dragon bones (龙骨)",
+      "facet": "Oracle bones and early writing",
+      "known_at": 9
+    },
+    {
+      "name": "Luo Zhenyu",
+      "facet": "Oracle bones and early writing",
+      "known_at": 12
+    },
+    {
+      "name": "Wang Guowei",
+      "facet": "Oracle bones and early writing",
+      "known_at": 11
+    },
+    {
+      "name": "Guo Moruo",
+      "facet": "Oracle bones and early writing",
+      "known_at": 11
+    },
+    {
+      "name": "Dong Zuobin",
+      "facet": "Oracle bones and early writing",
+      "known_at": 13
+    },
+    {
+      "name": "Four Hall of oracle bones (甲骨四堂)",
+      "facet": "Oracle bones and early writing",
+      "known_at": 14
+    },
+    {
+      "name": "Bronze inscriptions (金文)",
+      "facet": "Oracle bones and early writing",
+      "known_at": 9
+    },
+    {
+      "name": "Pictographs (象形字)",
+      "facet": "Oracle bones and early writing",
+      "known_at": 5
+    },
+    {
+      "name": "Six categories of characters (六书)",
+      "facet": "Oracle bones and early writing",
+      "known_at": 11
+    },
+    {
+      "name": "Large seal script (大篆)",
+      "facet": "Oracle bones and early writing",
+      "known_at": 11
+    },
+    {
+      "name": "Bamboo slips",
+      "facet": "Oracle bones and early writing",
+      "known_at": 6
+    },
+    {
+      "name": "Guodian bamboo slips",
+      "facet": "Oracle bones and early writing",
+      "known_at": 13
+    },
+    {
+      "name": "Tsinghua bamboo slips",
+      "facet": "Oracle bones and early writing",
+      "known_at": 14
+    },
+    {
+      "name": "Jiahu symbols",
+      "facet": "Oracle bones and early writing",
+      "known_at": 13
+    },
+    {
+      "name": "Dawenkou pottery signs",
+      "facet": "Oracle bones and early writing",
+      "known_at": 13
+    },
+    {
+      "name": "Four-Ram Square Zun (四羊方尊)",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 9
+    },
+    {
+      "name": "Ding",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 6
+    },
+    {
+      "name": "Bronze Age",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 6
+    },
+    {
+      "name": "Sanxingdui bronze masks",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 6
+    },
+    {
+      "name": "Sanxingdui bronze standing figure",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 9
+    },
+    {
+      "name": "Sanxingdui bronze sacred tree",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 9
+    },
+    {
+      "name": "Jinsha site",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 9
+    },
+    {
+      "name": "Golden Sun Bird (太阳神鸟)",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 8
+    },
+    {
+      "name": "Taotie motif",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 11
+    },
+    {
+      "name": "Chime bells of Marquis Yi of Zeng",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 7
+    },
+    {
+      "name": "Zun-pan of Marquis Yi of Zeng",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 13
+    },
+    {
+      "name": "Sword of Goujian",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 6
+    },
+    {
+      "name": "Spear of Fuchai",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 12
+    },
+    {
+      "name": "Lost-wax casting",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 12
+    },
+    {
+      "name": "Piece-mould casting",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 14
+    },
+    {
+      "name": "He Zun (何尊)",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 11
+    },
+    {
+      "name": "Mao Gong Ding",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 11
+    },
+    {
+      "name": "Li Gui",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 13
+    },
+    {
+      "name": "Da Yu Ding",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 13
+    },
+    {
+      "name": "Jue (wine vessel)",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 11
+    },
+    {
+      "name": "Bronze mirror",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 7
+    },
+    {
+      "name": "Copper and tin",
+      "facet": "Bronze vessels and artefacts",
+      "known_at": 8
+    },
+    {
+      "name": "King Wen of Zhou",
+      "facet": "Western Zhou and its rites",
+      "known_at": 6
+    },
+    {
+      "name": "King Wu of Zhou",
+      "facet": "Western Zhou and its rites",
+      "known_at": 6
+    },
+    {
+      "name": "Duke of Zhou",
+      "facet": "Western Zhou and its rites",
+      "known_at": 5
+    },
+    {
+      "name": "Jiang Ziya",
+      "facet": "Western Zhou and its rites",
+      "known_at": 4
+    },
+    {
+      "name": "Battle of Muye",
+      "facet": "Western Zhou and its rites",
+      "known_at": 8
+    },
+    {
+      "name": "Haojing",
+      "facet": "Western Zhou and its rites",
+      "known_at": 10
+    },
+    {
+      "name": "Luoyi (Chengzhou)",
+      "facet": "Western Zhou and its rites",
+      "known_at": 11
+    },
+    {
+      "name": "Well-field system (井田制)",
+      "facet": "Western Zhou and its rites",
+      "known_at": 10
+    },
+    {
+      "name": "Rites and music (礼乐)",
+      "facet": "Western Zhou and its rites",
+      "known_at": 9
+    },
+    {
+      "name": "Patrilineal clan system (宗法制)",
+      "facet": "Western Zhou and its rites",
+      "known_at": 12
+    },
+    {
+      "name": "Mandate of Heaven",
+      "facet": "Western Zhou and its rites",
+      "known_at": 10
+    },
+    {
+      "name": "King Cheng of Zhou",
+      "facet": "Western Zhou and its rites",
+      "known_at": 11
+    },
+    {
+      "name": "Rebellion of the Three Guards",
+      "facet": "Western Zhou and its rites",
+      "known_at": 13
+    },
+    {
+      "name": "King Mu of Zhou",
+      "facet": "Western Zhou and its rites",
+      "known_at": 12
+    },
+    {
+      "name": "Gonghe Regency",
+      "facet": "Western Zhou and its rites",
+      "known_at": 11
+    },
+    {
+      "name": "King You of Zhou",
+      "facet": "Western Zhou and its rites",
+      "known_at": 8
+    },
+    {
+      "name": "Bao Si",
+      "facet": "Western Zhou and its rites",
+      "known_at": 8
+    },
+    {
+      "name": "Bo Yi and Shu Qi",
+      "facet": "Western Zhou and its rites",
+      "known_at": 10
+    },
+    {
+      "name": "I Ching (周易)",
+      "facet": "Western Zhou and its rites",
+      "known_at": 8
+    },
+    {
+      "name": "Five Hegemons",
+      "facet": "Spring and Autumn states",
+      "known_at": 8
+    },
+    {
+      "name": "Duke Huan of Qi",
+      "facet": "Spring and Autumn states",
+      "known_at": 8
+    },
+    {
+      "name": "Guan Zhong",
+      "facet": "Spring and Autumn states",
+      "known_at": 8
+    },
+    {
+      "name": "Duke Wen of Jin (Chong'er)",
+      "facet": "Spring and Autumn states",
+      "known_at": 9
+    },
+    {
+      "name": "King Zhuang of Chu",
+      "facet": "Spring and Autumn states",
+      "known_at": 9
+    },
+    {
+      "name": "Duke Mu of Qin",
+      "facet": "Spring and Autumn states",
+      "known_at": 11
+    },
+    {
+      "name": "Goujian",
+      "facet": "Spring and Autumn states",
+      "known_at": 5
+    },
+    {
+      "name": "Fuchai",
+      "facet": "Spring and Autumn states",
+      "known_at": 7
+    },
+    {
+      "name": "Wu Zixu",
+      "facet": "Spring and Autumn states",
+      "known_at": 8
+    },
+    {
+      "name": "Xi Shi",
+      "facet": "Spring and Autumn states",
+      "known_at": 5
+    },
+    {
+      "name": "Fan Li",
+      "facet": "Spring and Autumn states",
+      "known_at": 9
+    },
+    {
+      "name": "Cao Gui",
+      "facet": "Spring and Autumn states",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Changshao",
+      "facet": "Spring and Autumn states",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Chengpu",
+      "facet": "Spring and Autumn states",
+      "known_at": 12
+    },
+    {
+      "name": "Spring and Autumn Annals",
+      "facet": "Spring and Autumn states",
+      "known_at": 9
+    },
+    {
+      "name": "Zuo Zhuan",
+      "facet": "Spring and Autumn states",
+      "known_at": 11
+    },
+    {
+      "name": "State of Lu",
+      "facet": "Spring and Autumn states",
+      "known_at": 8
+    },
+    {
+      "name": "State of Jin",
+      "facet": "Spring and Autumn states",
+      "known_at": 8
+    },
+    {
+      "name": "State of Chu",
+      "facet": "Spring and Autumn states",
+      "known_at": 6
+    },
+    {
+      "name": "Zichan",
+      "facet": "Spring and Autumn states",
+      "known_at": 12
+    },
+    {
+      "name": "Jie Zitui",
+      "facet": "Spring and Autumn states",
+      "known_at": 8
+    },
+    {
+      "name": "Seven Warring States",
+      "facet": "Warring States and reforms",
+      "known_at": 6
+    },
+    {
+      "name": "State of Qin",
+      "facet": "Warring States and reforms",
+      "known_at": 4
+    },
+    {
+      "name": "Partition of Jin",
+      "facet": "Warring States and reforms",
+      "known_at": 12
+    },
+    {
+      "name": "Shang Yang",
+      "facet": "Warring States and reforms",
+      "known_at": 6
+    },
+    {
+      "name": "Li Kui",
+      "facet": "Warring States and reforms",
+      "known_at": 13
+    },
+    {
+      "name": "Wu Qi",
+      "facet": "Warring States and reforms",
+      "known_at": 12
+    },
+    {
+      "name": "King Wuling of Zhao",
+      "facet": "Warring States and reforms",
+      "known_at": 10
+    },
+    {
+      "name": "Battle of Changping",
+      "facet": "Warring States and reforms",
+      "known_at": 8
+    },
+    {
+      "name": "Bai Qi",
+      "facet": "Warring States and reforms",
+      "known_at": 9
+    },
+    {
+      "name": "Lian Po",
+      "facet": "Warring States and reforms",
+      "known_at": 8
+    },
+    {
+      "name": "Lin Xiangru",
+      "facet": "Warring States and reforms",
+      "known_at": 8
+    },
+    {
+      "name": "Qu Yuan",
+      "facet": "Warring States and reforms",
+      "known_at": 2
+    },
+    {
+      "name": "Four Lords of the Warring States",
+      "facet": "Warring States and reforms",
+      "known_at": 11
+    },
+    {
+      "name": "Lord Mengchang",
+      "facet": "Warring States and reforms",
+      "known_at": 11
+    },
+    {
+      "name": "Ximen Bao",
+      "facet": "Warring States and reforms",
+      "known_at": 9
+    },
+    {
+      "name": "Zhengguo Canal",
+      "facet": "Warring States and reforms",
+      "known_at": 11
+    },
+    {
+      "name": "Jing Ke",
+      "facet": "Warring States and reforms",
+      "known_at": 6
+    },
+    {
+      "name": "Su Qin",
+      "facet": "Warring States and reforms",
+      "known_at": 10
+    },
+    {
+      "name": "Zhang Yi",
+      "facet": "Warring States and reforms",
+      "known_at": 11
+    },
+    {
+      "name": "Vertical and Horizontal Alliances (合纵连横)",
+      "facet": "Warring States and reforms",
+      "known_at": 11
+    },
+    {
+      "name": "Sun Bin",
+      "facet": "Warring States and reforms",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Maling",
+      "facet": "Warring States and reforms",
+      "known_at": 11
+    },
+    {
+      "name": "Spade and knife money",
+      "facet": "Warring States and reforms",
+      "known_at": 10
+    },
+    {
+      "name": "Confucius",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 2
+    },
+    {
+      "name": "Laozi",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 3
+    },
+    {
+      "name": "Mencius",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 4
+    },
+    {
+      "name": "Zhuangzi",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 6
+    },
+    {
+      "name": "Mozi",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 7
+    },
+    {
+      "name": "Xunzi",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 9
+    },
+    {
+      "name": "Han Feizi",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 9
+    },
+    {
+      "name": "The Art of War",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 5
+    },
+    {
+      "name": "Analects (论语)",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 5
+    },
+    {
+      "name": "Tao Te Ching (道德经)",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 6
+    },
+    {
+      "name": "Confucianism",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 6
+    },
+    {
+      "name": "Daoism",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 6
+    },
+    {
+      "name": "Mohism",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 10
+    },
+    {
+      "name": "Legalism",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 9
+    },
+    {
+      "name": "Yin-Yang School",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 11
+    },
+    {
+      "name": "Gongsun Long",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 13
+    },
+    {
+      "name": "Hui Shi",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 12
+    },
+    {
+      "name": "Zou Yan",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 13
+    },
+    {
+      "name": "Jixia Academy",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 13
+    },
+    {
+      "name": "Ren (仁)",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 8
+    },
+    {
+      "name": "Universal love (兼爱)",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 11
+    },
+    {
+      "name": "Yan Hui",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 10
+    },
+    {
+      "name": "Six Arts (六艺)",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 11
+    },
+    {
+      "name": "Book of Songs (诗经)",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 7
+    },
+    {
+      "name": "Songs of Chu (楚辞)",
+      "facet": "Hundred Schools of Thought",
+      "known_at": 10
+    },
+    {
+      "name": "卧薪尝胆 (wò xīn cháng dǎn)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 5
+    },
+    {
+      "name": "完璧归赵 (wán bì guī zhào)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 7
+    },
+    {
+      "name": "负荆请罪 (fù jīng qǐng zuì)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 6
+    },
+    {
+      "name": "纸上谈兵 (zhǐ shàng tán bīng)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 6
+    },
+    {
+      "name": "退避三舍 (tuì bì sān shè)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 10
+    },
+    {
+      "name": "一鼓作气 (yī gǔ zuò qì)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 6
+    },
+    {
+      "name": "唇亡齿寒 (chún wáng chǐ hán)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 8
+    },
+    {
+      "name": "老马识途 (lǎo mǎ shí tú)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 7
+    },
+    {
+      "name": "围魏救赵 (wéi wèi jiù zhào)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 9
+    },
+    {
+      "name": "毛遂自荐 (máo suì zì jiàn)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 7
+    },
+    {
+      "name": "鸡鸣狗盗 (jī míng gǒu dào)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 9
+    },
+    {
+      "name": "守株待兔 (shǒu zhū dài tù)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 3
+    },
+    {
+      "name": "掩耳盗铃 (yǎn ěr dào líng)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 4
+    },
+    {
+      "name": "画蛇添足 (huà shé tiān zú)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 3
+    },
+    {
+      "name": "刻舟求剑 (kè zhōu qiú jiàn)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 3
+    },
+    {
+      "name": "自相矛盾 (zì xiāng máo dùn)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 4
+    },
+    {
+      "name": "揠苗助长 (yà miáo zhù zhǎng)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 3
+    },
+    {
+      "name": "狐假虎威 (hú jiǎ hǔ wēi)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 4
+    },
+    {
+      "name": "三过家门而不入 (sān guò jiā mén ér bù rù)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 6
+    },
+    {
+      "name": "田忌赛马 (tián jì sài mǎ)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 4
+    },
+    {
+      "name": "管鲍之交 (guǎn bào zhī jiāo)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 10
+    },
+    {
+      "name": "酒池肉林 (jiǔ chí ròu lín)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 9
+    },
+    {
+      "name": "庄周梦蝶 (zhuāng zhōu mèng dié)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 9
+    },
+    {
+      "name": "邯郸学步 (hán dān xué bù)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 8
+    },
+    {
+      "name": "杞人忧天 (qǐ rén yōu tiān)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 5
+    },
+    {
+      "name": "孟母三迁 (mèng mǔ sān qiān)",
+      "facet": "Ancient sayings and their stories",
+      "known_at": 4
+    }
+  ]
+}
