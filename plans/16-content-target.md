@@ -95,9 +95,10 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per questi
 ## chinese-base media budget (2026-11-20, task 2324)
 - Fresh staging (`node stage-media.mjs` after `trivia-media sync --status approved`: 5 files were missing from the cache, 4 `colombia`, 1 `base`), then `stage-media.mjs --check`: ✗ 1 failure.
   - ✓ content 6147 files / 5637 MB (no size line, decision 653), incl. base pack chinese-base 950 files; zh fonts 6.8 of 8 MB, audio 6.1 of 7 MB, horizon 0.5 of 2 MB
-  - ✗ `3bfc6750e872574b.webm` 32.2 MB > `video` 32 MB: q-20957 (`base`, not chinese-base); 30 s at the 8 Mbit/s ceiling + audio + VP9 overshoot; can recur with new videos → `decision 805` (pending)
+  - ✗ `3bfc6750e872574b.webm` 32.2 MB > `video` 32 MB: q-20957 (`base`, not chinese-base); 30 s at the 8 Mbit/s ceiling + audio + VP9 overshoot; can recur with new videos → `decision 805: Shipped videos: one 30 s clip encodes to 32.2 MB, over the 32 MB per-video line: raise the line, tighten the encode, or re-encode only files over it?`: `video` line raised to 34 MB, encode unchanged (2026-11-21)
   - fixed: `.mpg` videos shipped unencoded (227.5 MB and 57.2 MB); `resolve.mjs` `SHIPPED` now maps `.mpg`/`.mpeg` → WebM: 4.1 and 6.3 MB
 - chinese-base now: 962 approved in en (50 each in zh-Hans, zh-Hant), all with media; 950 distinct files: 948 shared with `base` (copies, plan 227), 2 own (`6a32fb75660fb57b.webp` 1.1 MB, `fa5e1b1bdaf04690.webp` 0.9 MB); 479 MB in all. zh pools reuse the same files.
 - Estimate at 6000 per locale: ~5040 new en questions. Base: 0.84 MB per approved (5619 MB / 6724; images 3205 MB, audio 128 MB, video 291 clips 2619 MB). chinese-base so far 0.50 MB per approved (fewer videos). Own files ≈ 2.5 GB (chinese-base mix) to ≈ 4.2 GB (base mix, every question its own file); zh adds none.
-- No total line for the content depot (decision 653): the only budget that bites is the per-video line, decision 805; `media-budget.json` unchanged until its answer.
+- No total line for the content depot (decision 653): the only budget that bit is the per-video line, now 34 MB (decision 805).
+- After decision 805 (2026-11-21): `stage-media.mjs --check` ✓, 0 failures; largest video 32.2 MB of 34 MB.
 - Recheck on a fresh staging once part 7's new questions land.
