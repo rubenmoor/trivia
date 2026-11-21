@@ -1180,3 +1180,15 @@ Template:
   - **Adapted copies:** `needs_work` with feedback "adapt for a Chinese family: <issue>", then `qgen rework`'s revise steps (run mode `fit` counts as a rework mode); the fit review becomes `previous`
 - Consequences: filters on adapted copies read `fit.json`; `qgen validate` ties copies and verdicts together
 - Supersedes / related: D-33, D-114; pm decision 217; plan 230
+
+## D-117: Chinese UI: CJK fonts, non-Latin key fallback, offer gate
+- Date: 2026-11-20
+- Context: plan 142 (UI in Chinese) closes; Baloo 2 and Nunito have no CJK glyphs, Chinese IMEs change `keydown`, and the zh locales must not appear before their pool ships
+- Decision:
+  - **Fonts:** Han Rounded SC/TC for text, LXGW WenKai headings, Ma Shan Zheng big zh-Hans captions (pm decisions 764, 767, 769), all OFL, subset by `app/desktop/subset-fonts.mjs`, loaded by `unicode-range` only for CJK; `check:literals` fails a zh catalog character the subset lacks
+  - **Keys:** key letters stay Latin in zh; `lib/intent.ts` falls back to `e.code` (`KeyA` → `a`, `Digit1` → `1`) when an IME makes `e.key` `Process` or non-Latin; chips stay fixed labels (decision 671)
+  - **Gate:** `GATED_LANGS` (`zh-Hans`, `zh-Hant`) in `lib/i18n.ts`: picker offers them only once the pool ships (pm decision 222) or for the dev Steam user; `?lang=` always in dev
+  - **Checks:** gallery approved per locale (pm decisions 798, 800); native playtest skipped, native review later (pm decisions 799, 801, 781)
+- Consequences: Latin pages load no CJK font; a new zh leaf needs a re-subset
+- Supersedes / related: D-91, D-96; pm decisions 53, 222, 671; plans 142, 26
+
