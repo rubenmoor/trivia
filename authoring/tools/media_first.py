@@ -46,10 +46,10 @@ ZERO_YIELD = {
 def read_jsonl(path):
     """The rows of a jsonl file; a cut-off line (it ends where the text ends) is ignored, any other bad line in the middle fails.
     A glued line (a cut-off prefix, then a full row) keeps its complete row.
-    NUL bytes (a zero-filled block of an interrupted write) are stripped from the start of a line; a line of only NULs is skipped."""
+    NUL bytes (a zero-filled block of an interrupted write) are stripped from both ends of a line; a line of only NULs is skipped."""
     if not path.exists():
         return []
-    lines = [l for l in (l.lstrip("\x00") for l in path.read_text(encoding="utf-8").split("\n")) if l]
+    lines = [l for l in (l.strip("\x00") for l in path.read_text(encoding="utf-8").split("\n")) if l]
     rows = []
     for i, l in enumerate(lines):
         try:
