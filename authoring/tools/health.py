@@ -363,6 +363,11 @@ def fit_runs():
             and (load(WORK / r / "run.json") or {}).get("mode") == "fit"]
 
 
+def vocab_runs():
+    """work/vocab-<locale>-N whose run.json (vocab.py) is done, oldest first."""
+    return [r for r in qgen.work_runs(r"vocab-[A-Za-z-]+-\d+", "run.json") if (load(WORK / r / "run.json", {}) or {}).get("done")]
+
+
 def fit_health(run, pool=None):
     """{metric: value} of one fit run; None = n/a."""
     import fit  # authoring/tools/fit.py (imports qgen)
