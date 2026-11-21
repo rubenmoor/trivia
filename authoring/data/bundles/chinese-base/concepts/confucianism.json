@@ -1,0 +1,1097 @@
+{
+  "subcategory": "confucianism",
+  "facets": [
+    "Confucius's life story",
+    "Confucius's disciples",
+    "The Analects as a book",
+    "Mencius's life and mother",
+    "Mencius's ideas and book",
+    "Four Books and Five Classics",
+    "Core Confucian virtues",
+    "Qufu and Confucian sites",
+    "Later Confucian scholars",
+    "Famous lines and their sources",
+    "Confucian customs and rites",
+    "Confucius in modern culture"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Kong Qiu (孔丘)",
+      "facet": "Confucius's life story",
+      "known_at": 7
+    },
+    {
+      "name": "Zhongni (仲尼)",
+      "facet": "Confucius's life story",
+      "known_at": 9
+    },
+    {
+      "name": "State of Lu (鲁国)",
+      "facet": "Confucius's life story",
+      "known_at": 8
+    },
+    {
+      "name": "Spring and Autumn period (春秋时期)",
+      "facet": "Confucius's life story",
+      "known_at": 7
+    },
+    {
+      "name": "Shuliang He (叔梁纥)",
+      "facet": "Confucius's life story",
+      "known_at": 13
+    },
+    {
+      "name": "Yan Zhengzai (颜徵在)",
+      "facet": "Confucius's life story",
+      "known_at": 14
+    },
+    {
+      "name": "Mount Ni (尼山)",
+      "facet": "Confucius's life story",
+      "known_at": 12
+    },
+    {
+      "name": "Travels through the states (周游列国)",
+      "facet": "Confucius's life story",
+      "known_at": 8
+    },
+    {
+      "name": "Confucius asks Laozi about rites (孔子问礼)",
+      "facet": "Confucius's life story",
+      "known_at": 10
+    },
+    {
+      "name": "Out of food between Chen and Cai (陈蔡绝粮)",
+      "facet": "Confucius's life story",
+      "known_at": 12
+    },
+    {
+      "name": "Minister of Crime of Lu (大司寇)",
+      "facet": "Confucius's life story",
+      "known_at": 13
+    },
+    {
+      "name": "Private school (私学)",
+      "facet": "Confucius's life story",
+      "known_at": 9
+    },
+    {
+      "name": "Three thousand students (弟子三千)",
+      "facet": "Confucius's life story",
+      "known_at": 8
+    },
+    {
+      "name": "Capture of the qilin (西狩获麟)",
+      "facet": "Confucius's life story",
+      "known_at": 14
+    },
+    {
+      "name": "Kong Li (孔鲤)",
+      "facet": "Confucius's life story",
+      "known_at": 13
+    },
+    {
+      "name": "Confucius learns the qin from Shi Xiang (孔子学琴)",
+      "facet": "Confucius's life story",
+      "known_at": 13
+    },
+    {
+      "name": "Duke Ding of Lu (鲁定公)",
+      "facet": "Confucius's life story",
+      "known_at": 14
+    },
+    {
+      "name": "72 accomplished disciples (七十二贤)",
+      "facet": "Confucius's disciples",
+      "known_at": 8
+    },
+    {
+      "name": "Yan Hui (颜回)",
+      "facet": "Confucius's disciples",
+      "known_at": 8
+    },
+    {
+      "name": "Zilu (子路)",
+      "facet": "Confucius's disciples",
+      "known_at": 9
+    },
+    {
+      "name": "Zigong (子贡)",
+      "facet": "Confucius's disciples",
+      "known_at": 10
+    },
+    {
+      "name": "Zengzi (曾子)",
+      "facet": "Confucius's disciples",
+      "known_at": 8
+    },
+    {
+      "name": "Zengzi kills the pig (曾子杀猪)",
+      "facet": "Confucius's disciples",
+      "known_at": 6
+    },
+    {
+      "name": "Zixia (子夏)",
+      "facet": "Confucius's disciples",
+      "known_at": 12
+    },
+    {
+      "name": "Ziyou (子游)",
+      "facet": "Confucius's disciples",
+      "known_at": 13
+    },
+    {
+      "name": "Zizhang (子张)",
+      "facet": "Confucius's disciples",
+      "known_at": 13
+    },
+    {
+      "name": "Ran You (冉有)",
+      "facet": "Confucius's disciples",
+      "known_at": 13
+    },
+    {
+      "name": "Zai Yu (宰予)",
+      "facet": "Confucius's disciples",
+      "known_at": 12
+    },
+    {
+      "name": "Min Ziqian (闵子骞)",
+      "facet": "Confucius's disciples",
+      "known_at": 12
+    },
+    {
+      "name": "Youzi (有子)",
+      "facet": "Confucius's disciples",
+      "known_at": 13
+    },
+    {
+      "name": "Ten Wise Disciples (孔门十哲)",
+      "facet": "Confucius's disciples",
+      "known_at": 12
+    },
+    {
+      "name": "Gongye Chang (公冶长)",
+      "facet": "Confucius's disciples",
+      "known_at": 14
+    },
+    {
+      "name": "Tantai Mieming (澹台灭明)",
+      "facet": "Confucius's disciples",
+      "known_at": 14
+    },
+    {
+      "name": "The Analects (论语)",
+      "facet": "The Analects as a book",
+      "known_at": 2
+    },
+    {
+      "name": "Twenty chapters of the Analects",
+      "facet": "The Analects as a book",
+      "known_at": 9
+    },
+    {
+      "name": "Xue Er chapter (学而篇)",
+      "facet": "The Analects as a book",
+      "known_at": 9
+    },
+    {
+      "name": "Wei Zheng chapter (为政篇)",
+      "facet": "The Analects as a book",
+      "known_at": 12
+    },
+    {
+      "name": "Quotation style (语录体)",
+      "facet": "The Analects as a book",
+      "known_at": 9
+    },
+    {
+      "name": "The Master said (子曰)",
+      "facet": "The Analects as a book",
+      "known_at": 5
+    },
+    {
+      "name": "Half the Analects to rule the world (半部论语治天下)",
+      "facet": "The Analects as a book",
+      "known_at": 11
+    },
+    {
+      "name": "Zhao Pu (赵普)",
+      "facet": "The Analects as a book",
+      "known_at": 13
+    },
+    {
+      "name": "Collected Commentaries on the Analects (论语集注)",
+      "facet": "The Analects as a book",
+      "known_at": 13
+    },
+    {
+      "name": "Yu Dan's Insights into the Analects (于丹《论语》心得)",
+      "facet": "The Analects as a book",
+      "known_at": 11
+    },
+    {
+      "name": "Twelve Passages from the Analects (论语十二章)",
+      "facet": "The Analects as a book",
+      "known_at": 8
+    },
+    {
+      "name": "Bamboo slips (竹简)",
+      "facet": "The Analects as a book",
+      "known_at": 6
+    },
+    {
+      "name": "Qi Analects and Lu Analects (齐论语、鲁论语)",
+      "facet": "The Analects as a book",
+      "known_at": 15
+    },
+    {
+      "name": "James Legge",
+      "facet": "The Analects as a book",
+      "known_at": 14
+    },
+    {
+      "name": "Xiang Dang chapter (乡党篇)",
+      "facet": "The Analects as a book",
+      "known_at": 15
+    },
+    {
+      "name": "Mencius (孟子)",
+      "facet": "Mencius's life and mother",
+      "known_at": 3
+    },
+    {
+      "name": "Meng Ke (孟轲)",
+      "facet": "Mencius's life and mother",
+      "known_at": 9
+    },
+    {
+      "name": "Mencius's mother moves three times (孟母三迁)",
+      "facet": "Mencius's life and mother",
+      "known_at": 4
+    },
+    {
+      "name": "Mencius's mother cuts the weaving (断机教子)",
+      "facet": "Mencius's life and mother",
+      "known_at": 7
+    },
+    {
+      "name": "Mother of Mencius (孟母)",
+      "facet": "Mencius's life and mother",
+      "known_at": 5
+    },
+    {
+      "name": "State of Zou (邹国)",
+      "facet": "Mencius's life and mother",
+      "known_at": 11
+    },
+    {
+      "name": "Zoucheng (邹城)",
+      "facet": "Mencius's life and mother",
+      "known_at": 11
+    },
+    {
+      "name": "Warring States period (战国时期)",
+      "facet": "Mencius's life and mother",
+      "known_at": 7
+    },
+    {
+      "name": "King Hui of Liang (梁惠王)",
+      "facet": "Mencius's life and mother",
+      "known_at": 11
+    },
+    {
+      "name": "King Xuan of Qi (齐宣王)",
+      "facet": "Mencius's life and mother",
+      "known_at": 12
+    },
+    {
+      "name": "Jixia Academy (稷下学宫)",
+      "facet": "Mencius's life and mother",
+      "known_at": 13
+    },
+    {
+      "name": "Second Sage (亚圣)",
+      "facet": "Mencius's life and mother",
+      "known_at": 9
+    },
+    {
+      "name": "Temple of Mencius (孟庙)",
+      "facet": "Mencius's life and mother",
+      "known_at": 12
+    },
+    {
+      "name": "Wan Zhang (万章)",
+      "facet": "Mencius's life and mother",
+      "known_at": 14
+    },
+    {
+      "name": "Gongsun Chou (公孙丑)",
+      "facet": "Mencius's life and mother",
+      "known_at": 14
+    },
+    {
+      "name": "Si-Meng school (思孟学派)",
+      "facet": "Mencius's life and mother",
+      "known_at": 14
+    },
+    {
+      "name": "The Mencius (《孟子》)",
+      "facet": "Mencius's ideas and book",
+      "known_at": 6
+    },
+    {
+      "name": "Human nature is good (性善论)",
+      "facet": "Mencius's ideas and book",
+      "known_at": 9
+    },
+    {
+      "name": "Benevolent government (仁政)",
+      "facet": "Mencius's ideas and book",
+      "known_at": 9
+    },
+    {
+      "name": "People first, ruler last (民贵君轻)",
+      "facet": "Mencius's ideas and book",
+      "known_at": 10
+    },
+    {
+      "name": "Four sprouts (四端)",
+      "facet": "Mencius's ideas and book",
+      "known_at": 13
+    },
+    {
+      "name": "Child about to fall into a well (孺子将入于井)",
+      "facet": "Mencius's ideas and book",
+      "known_at": 13
+    },
+    {
+      "name": "Flood-like qi (浩然之气)",
+      "facet": "Mencius's ideas and book",
+      "known_at": 11
+    },
+    {
+      "name": "Great man (大丈夫)",
+      "facet": "Mencius's ideas and book",
+      "known_at": 9
+    },
+    {
+      "name": "Fish and bear's paw (鱼与熊掌)",
+      "facet": "Mencius's ideas and book",
+      "known_at": 7
+    },
+    {
+      "name": "Pulling up seedlings to help them grow (揠苗助长)",
+      "facet": "Mencius's ideas and book",
+      "known_at": 4
+    },
+    {
+      "name": "Fifty paces laughing at a hundred (五十步笑百步)",
+      "facet": "Mencius's ideas and book",
+      "known_at": 6
+    },
+    {
+      "name": "Yi Qiu teaches chess (弈秋诲弈)",
+      "facet": "Mencius's ideas and book",
+      "known_at": 8
+    },
+    {
+      "name": "One chicken a month (月攘一鸡)",
+      "facet": "Mencius's ideas and book",
+      "known_at": 12
+    },
+    {
+      "name": "Climbing a tree to catch fish (缘木求鱼)",
+      "facet": "Mencius's ideas and book",
+      "known_at": 9
+    },
+    {
+      "name": "Innate knowledge (良知良能)",
+      "facet": "Mencius's ideas and book",
+      "known_at": 13
+    },
+    {
+      "name": "Four Books and Five Classics (四书五经)",
+      "facet": "Four Books and Five Classics",
+      "known_at": 7
+    },
+    {
+      "name": "Great Learning (大学)",
+      "facet": "Four Books and Five Classics",
+      "known_at": 9
+    },
+    {
+      "name": "Doctrine of the Mean (中庸)",
+      "facet": "Four Books and Five Classics",
+      "known_at": 9
+    },
+    {
+      "name": "Book of Documents (尚书)",
+      "facet": "Four Books and Five Classics",
+      "known_at": 10
+    },
+    {
+      "name": "Book of Music (乐经)",
+      "facet": "Four Books and Five Classics",
+      "known_at": 13
+    },
+    {
+      "name": "Six Classics (六经)",
+      "facet": "Four Books and Five Classics",
+      "known_at": 11
+    },
+    {
+      "name": "Thirteen Classics (十三经)",
+      "facet": "Four Books and Five Classics",
+      "known_at": 13
+    },
+    {
+      "name": "Zuo Zhuan (左传)",
+      "facet": "Four Books and Five Classics",
+      "known_at": 10
+    },
+    {
+      "name": "Classic of Filial Piety (孝经)",
+      "facet": "Four Books and Five Classics",
+      "known_at": 10
+    },
+    {
+      "name": "Eight-legged essay (八股文)",
+      "facet": "Four Books and Five Classics",
+      "known_at": 10
+    },
+    {
+      "name": "Imperial examination (科举)",
+      "facet": "Four Books and Five Classics",
+      "known_at": 6
+    },
+    {
+      "name": "Qin burning of books (焚书)",
+      "facet": "Four Books and Five Classics",
+      "known_at": 9
+    },
+    {
+      "name": "Xiping Stone Classics (熹平石经)",
+      "facet": "Four Books and Five Classics",
+      "known_at": 14
+    },
+    {
+      "name": "Eight trigrams (八卦)",
+      "facet": "Four Books and Five Classics",
+      "known_at": 6
+    },
+    {
+      "name": "Guan Ju (关雎)",
+      "facet": "Four Books and Five Classics",
+      "known_at": 8
+    },
+    {
+      "name": "Ren, benevolence (仁)",
+      "facet": "Core Confucian virtues",
+      "known_at": 8
+    },
+    {
+      "name": "Yi, righteousness (义)",
+      "facet": "Core Confucian virtues",
+      "known_at": 8
+    },
+    {
+      "name": "Li, ritual propriety (礼)",
+      "facet": "Core Confucian virtues",
+      "known_at": 8
+    },
+    {
+      "name": "Zhi, wisdom (智)",
+      "facet": "Core Confucian virtues",
+      "known_at": 9
+    },
+    {
+      "name": "Xin, trustworthiness (信)",
+      "facet": "Core Confucian virtues",
+      "known_at": 9
+    },
+    {
+      "name": "Filial piety (孝)",
+      "facet": "Core Confucian virtues",
+      "known_at": 5
+    },
+    {
+      "name": "Loyalty (忠)",
+      "facet": "Core Confucian virtues",
+      "known_at": 7
+    },
+    {
+      "name": "Shu, reciprocity (恕)",
+      "facet": "Core Confucian virtues",
+      "known_at": 12
+    },
+    {
+      "name": "Junzi, the gentleman (君子)",
+      "facet": "Core Confucian virtues",
+      "known_at": 7
+    },
+    {
+      "name": "Xiaoren, the petty person (小人)",
+      "facet": "Core Confucian virtues",
+      "known_at": 8
+    },
+    {
+      "name": "Harmony (和)",
+      "facet": "Core Confucian virtues",
+      "known_at": 10
+    },
+    {
+      "name": "Five Constants (五常)",
+      "facet": "Core Confucian virtues",
+      "known_at": 11
+    },
+    {
+      "name": "Three Bonds (三纲)",
+      "facet": "Core Confucian virtues",
+      "known_at": 13
+    },
+    {
+      "name": "Five Relationships (五伦)",
+      "facet": "Core Confucian virtues",
+      "known_at": 12
+    },
+    {
+      "name": "Rectification of names (正名)",
+      "facet": "Core Confucian virtues",
+      "known_at": 14
+    },
+    {
+      "name": "Teaching without discrimination (有教无类)",
+      "facet": "Core Confucian virtues",
+      "known_at": 9
+    },
+    {
+      "name": "Teaching according to aptitude (因材施教)",
+      "facet": "Core Confucian virtues",
+      "known_at": 7
+    },
+    {
+      "name": "Respect for teachers (尊师重道)",
+      "facet": "Core Confucian virtues",
+      "known_at": 6
+    },
+    {
+      "name": "Cultivate, regulate, govern, pacify (修身齐家治国平天下)",
+      "facet": "Core Confucian virtues",
+      "known_at": 10
+    },
+    {
+      "name": "Qufu (曲阜)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 7
+    },
+    {
+      "name": "Three Kongs (三孔)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 11
+    },
+    {
+      "name": "Temple of Confucius in Qufu (孔庙)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 7
+    },
+    {
+      "name": "Kong Family Mansion (孔府)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 11
+    },
+    {
+      "name": "Cemetery of Confucius (孔林)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 11
+    },
+    {
+      "name": "Dacheng Hall (大成殿)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 12
+    },
+    {
+      "name": "Apricot Altar (杏坛)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 11
+    },
+    {
+      "name": "Shandong Province (山东)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 5
+    },
+    {
+      "name": "Mount Tai (泰山)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 4
+    },
+    {
+      "name": "Beijing Confucius Temple (北京孔庙)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 11
+    },
+    {
+      "name": "Guozijian (国子监)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 11
+    },
+    {
+      "name": "Fuzimiao in Nanjing (夫子庙)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 9
+    },
+    {
+      "name": "Yuelu Academy (岳麓书院)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 10
+    },
+    {
+      "name": "White Deer Grotto Academy (白鹿洞书院)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 11
+    },
+    {
+      "name": "Songyang Academy (嵩阳书院)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 13
+    },
+    {
+      "name": "Kuiwen Pavilion (奎文阁)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 14
+    },
+    {
+      "name": "Taipei Confucius Temple (台北孔庙)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 12
+    },
+    {
+      "name": "Temple of Literature in Hanoi",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 13
+    },
+    {
+      "name": "Sungkyunkwan in Seoul",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 14
+    },
+    {
+      "name": "Juniper planted by Confucius (先师手植桧)",
+      "facet": "Qufu and Confucian sites",
+      "known_at": 14
+    },
+    {
+      "name": "Xunzi (荀子)",
+      "facet": "Later Confucian scholars",
+      "known_at": 9
+    },
+    {
+      "name": "Human nature is evil (性恶论)",
+      "facet": "Later Confucian scholars",
+      "known_at": 11
+    },
+    {
+      "name": "Zisi (子思)",
+      "facet": "Later Confucian scholars",
+      "known_at": 12
+    },
+    {
+      "name": "Dong Zhongshu (董仲舒)",
+      "facet": "Later Confucian scholars",
+      "known_at": 10
+    },
+    {
+      "name": "Only Confucianism is honored (罢黜百家，独尊儒术)",
+      "facet": "Later Confucian scholars",
+      "known_at": 10
+    },
+    {
+      "name": "Han Yu (韩愈)",
+      "facet": "Later Confucian scholars",
+      "known_at": 9
+    },
+    {
+      "name": "Zhu Xi (朱熹)",
+      "facet": "Later Confucian scholars",
+      "known_at": 10
+    },
+    {
+      "name": "Cheng brothers (二程)",
+      "facet": "Later Confucian scholars",
+      "known_at": 13
+    },
+    {
+      "name": "Neo-Confucianism (理学)",
+      "facet": "Later Confucian scholars",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Yangming (王阳明)",
+      "facet": "Later Confucian scholars",
+      "known_at": 10
+    },
+    {
+      "name": "Lu Jiuyuan (陆九渊)",
+      "facet": "Later Confucian scholars",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Zai (张载)",
+      "facet": "Later Confucian scholars",
+      "known_at": 13
+    },
+    {
+      "name": "Zhou Dunyi (周敦颐)",
+      "facet": "Later Confucian scholars",
+      "known_at": 10
+    },
+    {
+      "name": "Gu Yanwu (顾炎武)",
+      "facet": "Later Confucian scholars",
+      "known_at": 11
+    },
+    {
+      "name": "Huang Zongxi (黄宗羲)",
+      "facet": "Later Confucian scholars",
+      "known_at": 13
+    },
+    {
+      "name": "Kang Youwei (康有为)",
+      "facet": "Later Confucian scholars",
+      "known_at": 11
+    },
+    {
+      "name": "Unity of knowledge and action (知行合一)",
+      "facet": "Later Confucian scholars",
+      "known_at": 10
+    },
+    {
+      "name": "Investigating things to gain knowledge (格物致知)",
+      "facet": "Later Confucian scholars",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Yangming studies the bamboo (守仁格竹)",
+      "facet": "Later Confucian scholars",
+      "known_at": 13
+    },
+    {
+      "name": "Goose Lake Meeting (鹅湖之会)",
+      "facet": "Later Confucian scholars",
+      "known_at": 14
+    },
+    {
+      "name": "学而时习之 (xué ér shí xí zhī)",
+      "facet": "Famous lines and their sources",
+      "known_at": 6
+    },
+    {
+      "name": "有朋自远方来 (yǒu péng zì yuǎn fāng lái)",
+      "facet": "Famous lines and their sources",
+      "known_at": 4
+    },
+    {
+      "name": "三人行，必有我师焉 (sān rén xíng, bì yǒu wǒ shī yān)",
+      "facet": "Famous lines and their sources",
+      "known_at": 4
+    },
+    {
+      "name": "己所不欲，勿施于人 (jǐ suǒ bù yù, wù shī yú rén)",
+      "facet": "Famous lines and their sources",
+      "known_at": 6
+    },
+    {
+      "name": "温故而知新 (wēn gù ér zhī xīn)",
+      "facet": "Famous lines and their sources",
+      "known_at": 5
+    },
+    {
+      "name": "学而不思则罔 (xué ér bù sī zé wǎng)",
+      "facet": "Famous lines and their sources",
+      "known_at": 7
+    },
+    {
+      "name": "知之为知之 (zhī zhī wéi zhī zhī)",
+      "facet": "Famous lines and their sources",
+      "known_at": 6
+    },
+    {
+      "name": "三十而立 (sān shí ér lì)",
+      "facet": "Famous lines and their sources",
+      "known_at": 7
+    },
+    {
+      "name": "逝者如斯夫 (shì zhě rú sī fú)",
+      "facet": "Famous lines and their sources",
+      "known_at": 9
+    },
+    {
+      "name": "岁寒，然后知松柏之后凋也 (suì hán, rán hòu zhī sōng bǎi zhī hòu diāo yě)",
+      "facet": "Famous lines and their sources",
+      "known_at": 9
+    },
+    {
+      "name": "吾日三省吾身 (wú rì sān xǐng wú shēn)",
+      "facet": "Famous lines and their sources",
+      "known_at": 8
+    },
+    {
+      "name": "朝闻道，夕死可矣 (zhāo wén dào, xī sǐ kě yǐ)",
+      "facet": "Famous lines and their sources",
+      "known_at": 11
+    },
+    {
+      "name": "君子和而不同 (jūn zǐ hé ér bù tóng)",
+      "facet": "Famous lines and their sources",
+      "known_at": 11
+    },
+    {
+      "name": "老吾老以及人之老 (lǎo wú lǎo yǐ jí rén zhī lǎo)",
+      "facet": "Famous lines and their sources",
+      "known_at": 9
+    },
+    {
+      "name": "富贵不能淫 (fù guì bù néng yín)",
+      "facet": "Famous lines and their sources",
+      "known_at": 9
+    },
+    {
+      "name": "生于忧患，死于安乐 (shēng yú yōu huàn, sǐ yú ān lè)",
+      "facet": "Famous lines and their sources",
+      "known_at": 9
+    },
+    {
+      "name": "得道者多助 (dé dào zhě duō zhù)",
+      "facet": "Famous lines and their sources",
+      "known_at": 9
+    },
+    {
+      "name": "天时不如地利 (tiān shí bù rú dì lì)",
+      "facet": "Famous lines and their sources",
+      "known_at": 8
+    },
+    {
+      "name": "天将降大任于是人也 (tiān jiāng jiàng dà rèn yú shì rén yě)",
+      "facet": "Famous lines and their sources",
+      "known_at": 8
+    },
+    {
+      "name": "尽信书，则不如无书 (jìn xìn shū, zé bù rú wú shū)",
+      "facet": "Famous lines and their sources",
+      "known_at": 11
+    },
+    {
+      "name": "苟日新，日日新 (gǒu rì xīn, rì rì xīn)",
+      "facet": "Famous lines and their sources",
+      "known_at": 13
+    },
+    {
+      "name": "天行健，君子以自强不息 (tiān xíng jiàn, jūn zǐ yǐ zì qiáng bù xī)",
+      "facet": "Famous lines and their sources",
+      "known_at": 11
+    },
+    {
+      "name": "Apprenticeship ceremony (拜师礼)",
+      "facet": "Confucian customs and rites",
+      "known_at": 9
+    },
+    {
+      "name": "First writing ceremony (开笔礼)",
+      "facet": "Confucian customs and rites",
+      "known_at": 9
+    },
+    {
+      "name": "Bundle of dried meat as tuition (束脩)",
+      "facet": "Confucian customs and rites",
+      "known_at": 12
+    },
+    {
+      "name": "Memorial ceremony for Confucius (祭孔大典)",
+      "facet": "Confucian customs and rites",
+      "known_at": 9
+    },
+    {
+      "name": "Capping ceremony (冠礼)",
+      "facet": "Confucian customs and rites",
+      "known_at": 12
+    },
+    {
+      "name": "Hairpin ceremony (笄礼)",
+      "facet": "Confucian customs and rites",
+      "known_at": 13
+    },
+    {
+      "name": "Ancestral hall (祠堂)",
+      "facet": "Confucian customs and rites",
+      "known_at": 8
+    },
+    {
+      "name": "Family genealogy (家谱)",
+      "facet": "Confucian customs and rites",
+      "known_at": 8
+    },
+    {
+      "name": "Kong family genealogy (孔子世家谱)",
+      "facet": "Confucian customs and rites",
+      "known_at": 12
+    },
+    {
+      "name": "Generation names (字辈)",
+      "facet": "Confucian customs and rites",
+      "known_at": 11
+    },
+    {
+      "name": "Courtesy name (字)",
+      "facet": "Confucian customs and rites",
+      "known_at": 10
+    },
+    {
+      "name": "Kowtow (叩头)",
+      "facet": "Confucian customs and rites",
+      "known_at": 6
+    },
+    {
+      "name": "Twenty-four Filial Exemplars (二十四孝)",
+      "facet": "Confucian customs and rites",
+      "known_at": 9
+    },
+    {
+      "name": "Kong Rong gives up the pears (孔融让梨)",
+      "facet": "Confucian customs and rites",
+      "known_at": 3
+    },
+    {
+      "name": "Huang Xiang warms the bed (黄香温席)",
+      "facet": "Confucian customs and rites",
+      "known_at": 8
+    },
+    {
+      "name": "Standards for Students (弟子规)",
+      "facet": "Confucian customs and rites",
+      "known_at": 7
+    },
+    {
+      "name": "Zuoyi bow with joined hands (作揖)",
+      "facet": "Confucian customs and rites",
+      "known_at": 6
+    },
+    {
+      "name": "Confucius Institute (孔子学院)",
+      "facet": "Confucius in modern culture",
+      "known_at": 9
+    },
+    {
+      "name": "Confucius (2010 film)",
+      "facet": "Confucius in modern culture",
+      "known_at": 11
+    },
+    {
+      "name": "Teachers' Day on 28 September in Taiwan",
+      "facet": "Confucius in modern culture",
+      "known_at": 12
+    },
+    {
+      "name": "Kong Decheng (孔德成)",
+      "facet": "Confucius in modern culture",
+      "known_at": 14
+    },
+    {
+      "name": "Cai Zhizhong's comics (蔡志忠漫画)",
+      "facet": "Confucius in modern culture",
+      "known_at": 12
+    },
+    {
+      "name": "Nishan Forum on World Civilizations (尼山世界文明论坛)",
+      "facet": "Confucius in modern culture",
+      "known_at": 14
+    },
+    {
+      "name": "UNESCO Confucius Prize for Literacy",
+      "facet": "Confucius in modern culture",
+      "known_at": 14
+    },
+    {
+      "name": "Portrait of Confucius teaching by Wu Daozi (先师孔子行教像)",
+      "facet": "Confucius in modern culture",
+      "known_at": 13
+    },
+    {
+      "name": "Latin name Confucius",
+      "facet": "Confucius in modern culture",
+      "known_at": 13
+    },
+    {
+      "name": "Matteo Ricci (利玛窦)",
+      "facet": "Confucius in modern culture",
+      "known_at": 11
+    },
+    {
+      "name": "Lecture Room (百家讲坛)",
+      "facet": "Confucius in modern culture",
+      "known_at": 10
+    },
+    {
+      "name": "Kong Yiji (孔乙己)",
+      "facet": "Confucius in modern culture",
+      "known_at": 9
+    },
+    {
+      "name": "Down with the Confucius shop (打倒孔家店)",
+      "facet": "Confucius in modern culture",
+      "known_at": 12
+    },
+    {
+      "name": "China International Confucius Cultural Festival (国际孔子文化节)",
+      "facet": "Confucius in modern culture",
+      "known_at": 12
+    },
+    {
+      "name": "Fan Jin passes the exam (范进中举)",
+      "facet": "Confucius in modern culture",
+      "known_at": 9
+    }
+  ]
+}

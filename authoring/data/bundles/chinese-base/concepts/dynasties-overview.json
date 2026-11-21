@@ -1,0 +1,1087 @@
+{
+  "subcategory": "dynasties-overview",
+  "facets": [
+    "Earliest dynasties: Xia, Shang, Zhou",
+    "Western and Eastern Zhou periods",
+    "Qin and Han unification",
+    "Three Kingdoms to Southern and Northern",
+    "Sui, Tang and Five Dynasties",
+    "Song, Liao, Jin and Yuan",
+    "Ming and Qing, the last dynasties",
+    "Dynasty lengths and records",
+    "Capitals across the dynasties",
+    "Dynasty names and founders' order",
+    "Dynasty song and memory aids",
+    "Splits and reunifications of China"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 3,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 1,
+      "cause_effect": 3,
+      "sequence": 5,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "body_senses": 1,
+      "colombia": 1,
+      "educational_media": 3,
+      "everyday": 2,
+      "history": 5,
+      "language": 3,
+      "nature": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "school": 5,
+      "science_news": 1,
+      "university": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Xia dynasty (夏朝)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 3
+    },
+    {
+      "name": "Shang dynasty (商朝)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 4
+    },
+    {
+      "name": "Yu the Great (大禹)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 3
+    },
+    {
+      "name": "Qi of Xia (夏启)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 10
+    },
+    {
+      "name": "Jie of Xia (夏桀)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 9
+    },
+    {
+      "name": "Tang of Shang (商汤)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 8
+    },
+    {
+      "name": "King Zhou of Shang (商纣王)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 6
+    },
+    {
+      "name": "King Wen of Zhou (周文王)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 7
+    },
+    {
+      "name": "King Wu of Zhou (周武王)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 7
+    },
+    {
+      "name": "Jiang Ziya (姜子牙)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 6
+    },
+    {
+      "name": "Duke of Zhou (周公)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 8
+    },
+    {
+      "name": "Battle of Muye (牧野之战)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 11
+    },
+    {
+      "name": "Oracle bone script (甲骨文)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 6
+    },
+    {
+      "name": "Yin Ruins (殷墟)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 8
+    },
+    {
+      "name": "Houmuwu ding (后母戊鼎)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 8
+    },
+    {
+      "name": "Erlitou site (二里头遗址)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 12
+    },
+    {
+      "name": "Pan Geng's move to Yin (盘庚迁殷)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 11
+    },
+    {
+      "name": "Xia–Shang–Zhou Chronology Project (夏商周断代工程)",
+      "facet": "Earliest dynasties: Xia, Shang, Zhou",
+      "known_at": 13
+    },
+    {
+      "name": "Western Zhou (西周)",
+      "facet": "Western and Eastern Zhou periods",
+      "known_at": 7
+    },
+    {
+      "name": "Eastern Zhou (东周)",
+      "facet": "Western and Eastern Zhou periods",
+      "known_at": 7
+    },
+    {
+      "name": "Spring and Autumn period (春秋)",
+      "facet": "Western and Eastern Zhou periods",
+      "known_at": 6
+    },
+    {
+      "name": "Warring States period (战国)",
+      "facet": "Western and Eastern Zhou periods",
+      "known_at": 6
+    },
+    {
+      "name": "King You of Zhou (周幽王)",
+      "facet": "Western and Eastern Zhou periods",
+      "known_at": 8
+    },
+    {
+      "name": "Beacon fires to fool the lords (烽火戏诸侯)",
+      "facet": "Western and Eastern Zhou periods",
+      "known_at": 7
+    },
+    {
+      "name": "King Ping's move east (平王东迁)",
+      "facet": "Western and Eastern Zhou periods",
+      "known_at": 10
+    },
+    {
+      "name": "770 BC",
+      "facet": "Western and Eastern Zhou periods",
+      "known_at": 11
+    },
+    {
+      "name": "Five Hegemons of the Spring and Autumn period (春秋五霸)",
+      "facet": "Western and Eastern Zhou periods",
+      "known_at": 9
+    },
+    {
+      "name": "Seven Warring States (战国七雄)",
+      "facet": "Western and Eastern Zhou periods",
+      "known_at": 8
+    },
+    {
+      "name": "Duke Huan of Qi (齐桓公)",
+      "facet": "Western and Eastern Zhou periods",
+      "known_at": 10
+    },
+    {
+      "name": "Gonghe Regency (共和行政)",
+      "facet": "Western and Eastern Zhou periods",
+      "known_at": 12
+    },
+    {
+      "name": "841 BC",
+      "facet": "Western and Eastern Zhou periods",
+      "known_at": 13
+    },
+    {
+      "name": "Partition of Jin (三家分晋)",
+      "facet": "Western and Eastern Zhou periods",
+      "known_at": 11
+    },
+    {
+      "name": "Spring and Autumn Annals (春秋)",
+      "facet": "Western and Eastern Zhou periods",
+      "known_at": 11
+    },
+    {
+      "name": "Fengjian system (分封制)",
+      "facet": "Western and Eastern Zhou periods",
+      "known_at": 10
+    },
+    {
+      "name": "Qin Shi Huang (秦始皇)",
+      "facet": "Qin and Han unification",
+      "known_at": 2
+    },
+    {
+      "name": "Qin dynasty (秦朝)",
+      "facet": "Qin and Han unification",
+      "known_at": 3
+    },
+    {
+      "name": "221 BC",
+      "facet": "Qin and Han unification",
+      "known_at": 8
+    },
+    {
+      "name": "Qin Er Shi (秦二世)",
+      "facet": "Qin and Han unification",
+      "known_at": 9
+    },
+    {
+      "name": "Chen Sheng and Wu Guang uprising (陈胜吴广起义)",
+      "facet": "Qin and Han unification",
+      "known_at": 7
+    },
+    {
+      "name": "Liu Bang (刘邦)",
+      "facet": "Qin and Han unification",
+      "known_at": 5
+    },
+    {
+      "name": "Xiang Yu (项羽)",
+      "facet": "Qin and Han unification",
+      "known_at": 5
+    },
+    {
+      "name": "Chu–Han Contention (楚汉之争)",
+      "facet": "Qin and Han unification",
+      "known_at": 7
+    },
+    {
+      "name": "Hongmen Banquet (鸿门宴)",
+      "facet": "Qin and Han unification",
+      "known_at": 7
+    },
+    {
+      "name": "Western Han (西汉)",
+      "facet": "Qin and Han unification",
+      "known_at": 7
+    },
+    {
+      "name": "Eastern Han (东汉)",
+      "facet": "Qin and Han unification",
+      "known_at": 7
+    },
+    {
+      "name": "Emperor Wu of Han (汉武帝)",
+      "facet": "Qin and Han unification",
+      "known_at": 6
+    },
+    {
+      "name": "Wang Mang (王莽)",
+      "facet": "Qin and Han unification",
+      "known_at": 10
+    },
+    {
+      "name": "Xin dynasty (新朝)",
+      "facet": "Qin and Han unification",
+      "known_at": 11
+    },
+    {
+      "name": "Emperor Guangwu of Han (汉光武帝)",
+      "facet": "Qin and Han unification",
+      "known_at": 9
+    },
+    {
+      "name": "Yellow Turban Rebellion (黄巾起义)",
+      "facet": "Qin and Han unification",
+      "known_at": 8
+    },
+    {
+      "name": "Three Kingdoms (三国)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 3
+    },
+    {
+      "name": "Cao Wei (曹魏)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 6
+    },
+    {
+      "name": "Shu Han (蜀汉)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 6
+    },
+    {
+      "name": "Eastern Wu (东吴)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 6
+    },
+    {
+      "name": "Cao Cao (曹操)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 3
+    },
+    {
+      "name": "Liu Bei (刘备)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 3
+    },
+    {
+      "name": "Sun Quan (孙权)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 5
+    },
+    {
+      "name": "Battle of Red Cliffs (赤壁之战)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 5
+    },
+    {
+      "name": "Sima Yi (司马懿)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 7
+    },
+    {
+      "name": "Sima Yan (司马炎)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 10
+    },
+    {
+      "name": "Western Jin (西晋)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 8
+    },
+    {
+      "name": "Eastern Jin (东晋)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 8
+    },
+    {
+      "name": "War of the Eight Princes (八王之乱)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 12
+    },
+    {
+      "name": "Sixteen Kingdoms (十六国)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of Fei River (淝水之战)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 10
+    },
+    {
+      "name": "Southern and Northern Dynasties (南北朝)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 8
+    },
+    {
+      "name": "Song, Qi, Liang, Chen (宋齐梁陈)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 11
+    },
+    {
+      "name": "Northern Wei (北魏)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 10
+    },
+    {
+      "name": "Emperor Xiaowen of Northern Wei (北魏孝文帝)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 11
+    },
+    {
+      "name": "Northern Zhou (北周)",
+      "facet": "Three Kingdoms to Southern and Northern",
+      "known_at": 12
+    },
+    {
+      "name": "Sui dynasty (隋朝)",
+      "facet": "Sui, Tang and Five Dynasties",
+      "known_at": 5
+    },
+    {
+      "name": "Emperor Wen of Sui (隋文帝)",
+      "facet": "Sui, Tang and Five Dynasties",
+      "known_at": 9
+    },
+    {
+      "name": "Emperor Yang of Sui (隋炀帝)",
+      "facet": "Sui, Tang and Five Dynasties",
+      "known_at": 8
+    },
+    {
+      "name": "Grand Canal (大运河)",
+      "facet": "Sui, Tang and Five Dynasties",
+      "known_at": 5
+    },
+    {
+      "name": "Li Yuan (李渊)",
+      "facet": "Sui, Tang and Five Dynasties",
+      "known_at": 9
+    },
+    {
+      "name": "Emperor Taizong of Tang (唐太宗)",
+      "facet": "Sui, Tang and Five Dynasties",
+      "known_at": 5
+    },
+    {
+      "name": "Xuanwu Gate Incident (玄武门之变)",
+      "facet": "Sui, Tang and Five Dynasties",
+      "known_at": 8
+    },
+    {
+      "name": "Wu Zetian (武则天)",
+      "facet": "Sui, Tang and Five Dynasties",
+      "known_at": 5
+    },
+    {
+      "name": "Wu Zhou (武周)",
+      "facet": "Sui, Tang and Five Dynasties",
+      "known_at": 11
+    },
+    {
+      "name": "An Lushan Rebellion (安史之乱)",
+      "facet": "Sui, Tang and Five Dynasties",
+      "known_at": 9
+    },
+    {
+      "name": "Huang Chao (黄巢)",
+      "facet": "Sui, Tang and Five Dynasties",
+      "known_at": 11
+    },
+    {
+      "name": "Zhu Wen (朱温)",
+      "facet": "Sui, Tang and Five Dynasties",
+      "known_at": 12
+    },
+    {
+      "name": "Five Dynasties and Ten Kingdoms (五代十国)",
+      "facet": "Sui, Tang and Five Dynasties",
+      "known_at": 8
+    },
+    {
+      "name": "Later Liang (后梁)",
+      "facet": "Sui, Tang and Five Dynasties",
+      "known_at": 12
+    },
+    {
+      "name": "Later Zhou (后周)",
+      "facet": "Sui, Tang and Five Dynasties",
+      "known_at": 12
+    },
+    {
+      "name": "Chai Rong (柴荣)",
+      "facet": "Sui, Tang and Five Dynasties",
+      "known_at": 13
+    },
+    {
+      "name": "Northern Song (北宋)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 6
+    },
+    {
+      "name": "Southern Song (南宋)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 6
+    },
+    {
+      "name": "Zhao Kuangyin (赵匡胤)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 6
+    },
+    {
+      "name": "Chenqiao Mutiny (陈桥兵变)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 8
+    },
+    {
+      "name": "Liao dynasty (辽朝)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 8
+    },
+    {
+      "name": "Western Xia (西夏)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 9
+    },
+    {
+      "name": "Jin dynasty of the Jurchens (金朝)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 8
+    },
+    {
+      "name": "Wanyan Aguda (完颜阿骨打)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 12
+    },
+    {
+      "name": "Treaty of Chanyuan (澶渊之盟)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 12
+    },
+    {
+      "name": "Jingkang Incident (靖康之变)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 9
+    },
+    {
+      "name": "Emperor Gaozong of Song (宋高宗)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 10
+    },
+    {
+      "name": "Yue Fei (岳飞)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 4
+    },
+    {
+      "name": "Genghis Khan (成吉思汗)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 3
+    },
+    {
+      "name": "Mongol Empire (蒙古帝国)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 5
+    },
+    {
+      "name": "Kublai Khan (忽必烈)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 6
+    },
+    {
+      "name": "Yuan dynasty (元朝)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 4
+    },
+    {
+      "name": "Battle of Yamen (崖山海战)",
+      "facet": "Song, Liao, Jin and Yuan",
+      "known_at": 13
+    },
+    {
+      "name": "Yongle Emperor (永乐帝)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 7
+    },
+    {
+      "name": "Chongzhen Emperor (崇祯帝)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 8
+    },
+    {
+      "name": "Li Zicheng (李自成)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 8
+    },
+    {
+      "name": "Wu Sangui (吴三桂)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 9
+    },
+    {
+      "name": "Shanhai Pass (山海关)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 9
+    },
+    {
+      "name": "1644",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 10
+    },
+    {
+      "name": "Southern Ming (南明)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 12
+    },
+    {
+      "name": "Nurhaci (努尔哈赤)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 8
+    },
+    {
+      "name": "Later Jin (后金)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 10
+    },
+    {
+      "name": "Hong Taiji (皇太极)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 10
+    },
+    {
+      "name": "Shunzhi Emperor (顺治帝)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 10
+    },
+    {
+      "name": "Qing dynasty (清朝)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 2
+    },
+    {
+      "name": "Kangxi Emperor (康熙帝)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 4
+    },
+    {
+      "name": "Qianlong Emperor (乾隆帝)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 4
+    },
+    {
+      "name": "Puyi (溥仪)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 5
+    },
+    {
+      "name": "Xinhai Revolution (辛亥革命)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 6
+    },
+    {
+      "name": "Sun Yat-sen (孙中山)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 4
+    },
+    {
+      "name": "Qing abdication edict (清帝退位诏书)",
+      "facet": "Ming and Qing, the last dynasties",
+      "known_at": 11
+    },
+    {
+      "name": "Longest-lasting dynasty",
+      "facet": "Dynasty lengths and records",
+      "known_at": 7
+    },
+    {
+      "name": "Shortest unified dynasty",
+      "facet": "Dynasty lengths and records",
+      "known_at": 8
+    },
+    {
+      "name": "Eight hundred years of Zhou (周八百年)",
+      "facet": "Dynasty lengths and records",
+      "known_at": 9
+    },
+    {
+      "name": "Qin dynasty length",
+      "facet": "Dynasty lengths and records",
+      "known_at": 8
+    },
+    {
+      "name": "Sui dynasty length",
+      "facet": "Dynasty lengths and records",
+      "known_at": 10
+    },
+    {
+      "name": "Han dynasty length",
+      "facet": "Dynasty lengths and records",
+      "known_at": 9
+    },
+    {
+      "name": "Western Han length",
+      "facet": "Dynasty lengths and records",
+      "known_at": 12
+    },
+    {
+      "name": "Tang dynasty length",
+      "facet": "Dynasty lengths and records",
+      "known_at": 11
+    },
+    {
+      "name": "Song dynasty length",
+      "facet": "Dynasty lengths and records",
+      "known_at": 12
+    },
+    {
+      "name": "Northern Song length",
+      "facet": "Dynasty lengths and records",
+      "known_at": 13
+    },
+    {
+      "name": "Yuan dynasty length",
+      "facet": "Dynasty lengths and records",
+      "known_at": 10
+    },
+    {
+      "name": "Ming dynasty length",
+      "facet": "Dynasty lengths and records",
+      "known_at": 11
+    },
+    {
+      "name": "Qing dynasty length",
+      "facet": "Dynasty lengths and records",
+      "known_at": 11
+    },
+    {
+      "name": "Later Han of the Five Dynasties (后汉)",
+      "facet": "Dynasty lengths and records",
+      "known_at": 14
+    },
+    {
+      "name": "Longest-reigning emperor",
+      "facet": "Dynasty lengths and records",
+      "known_at": 8
+    },
+    {
+      "name": "Taichang Emperor (泰昌帝)",
+      "facet": "Dynasty lengths and records",
+      "known_at": 13
+    },
+    {
+      "name": "Two thousand years of imperial rule",
+      "facet": "Dynasty lengths and records",
+      "known_at": 9
+    },
+    {
+      "name": "Xi'an (西安)",
+      "facet": "Capitals across the dynasties",
+      "known_at": 3
+    },
+    {
+      "name": "Haojing (镐京)",
+      "facet": "Capitals across the dynasties",
+      "known_at": 10
+    },
+    {
+      "name": "Xianyang (咸阳)",
+      "facet": "Capitals across the dynasties",
+      "known_at": 8
+    },
+    {
+      "name": "Luoyang (洛阳)",
+      "facet": "Capitals across the dynasties",
+      "known_at": 6
+    },
+    {
+      "name": "Anyang (安阳)",
+      "facet": "Capitals across the dynasties",
+      "known_at": 10
+    },
+    {
+      "name": "Kaifeng (开封)",
+      "facet": "Capitals across the dynasties",
+      "known_at": 8
+    },
+    {
+      "name": "Hangzhou (杭州)",
+      "facet": "Capitals across the dynasties",
+      "known_at": 5
+    },
+    {
+      "name": "Jiankang (建康)",
+      "facet": "Capitals across the dynasties",
+      "known_at": 11
+    },
+    {
+      "name": "Nanjing (南京)",
+      "facet": "Capitals across the dynasties",
+      "known_at": 5
+    },
+    {
+      "name": "Shangdu (上都)",
+      "facet": "Capitals across the dynasties",
+      "known_at": 12
+    },
+    {
+      "name": "Zhongdu (中都)",
+      "facet": "Capitals across the dynasties",
+      "known_at": 13
+    },
+    {
+      "name": "Beijing (北京)",
+      "facet": "Capitals across the dynasties",
+      "known_at": 1
+    },
+    {
+      "name": "Forbidden City (紫禁城)",
+      "facet": "Capitals across the dynasties",
+      "known_at": 2
+    },
+    {
+      "name": "Shenyang (沈阳)",
+      "facet": "Capitals across the dynasties",
+      "known_at": 10
+    },
+    {
+      "name": "Ancient capital of thirteen dynasties (十三朝古都)",
+      "facet": "Capitals across the dynasties",
+      "known_at": 9
+    },
+    {
+      "name": "Yao (尧)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 5
+    },
+    {
+      "name": "Shun (舜)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 5
+    },
+    {
+      "name": "Abdication system (禅让制)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 9
+    },
+    {
+      "name": "Hereditary rule (家天下)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 9
+    },
+    {
+      "name": "Mandate of Heaven (天命)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 9
+    },
+    {
+      "name": "Dynastic cycle",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 11
+    },
+    {
+      "name": "Huangdi title (皇帝)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 8
+    },
+    {
+      "name": "Era name (年号)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 10
+    },
+    {
+      "name": "Temple name (庙号)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 11
+    },
+    {
+      "name": "Book of Changes (易经)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 10
+    },
+    {
+      "name": "Huaxia (华夏)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 9
+    },
+    {
+      "name": "Han Chinese (汉族)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 5
+    },
+    {
+      "name": "Hanfu (汉服)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 5
+    },
+    {
+      "name": "Tang suit (唐装)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 7
+    },
+    {
+      "name": "Chinatown (唐人街)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 6
+    },
+    {
+      "name": "Merchant (商人)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 9
+    },
+    {
+      "name": "Mongols (蒙古族)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 5
+    },
+    {
+      "name": "Manchu (满族)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 7
+    },
+    {
+      "name": "Khitan (契丹)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 9
+    },
+    {
+      "name": "Jurchen (女真)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 9
+    },
+    {
+      "name": "Xianbei (鲜卑)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 10
+    },
+    {
+      "name": "Tangut (党项)",
+      "facet": "Dynasty names and founders' order",
+      "known_at": 12
+    },
+    {
+      "name": "Dynasty song (朝代歌)",
+      "facet": "Dynasty song and memory aids",
+      "known_at": 6
+    },
+    {
+      "name": "夏商与西周 (xià shāng yǔ xī zhōu)",
+      "facet": "Dynasty song and memory aids",
+      "known_at": 6
+    },
+    {
+      "name": "东周分两段 (dōng zhōu fēn liǎng duàn)",
+      "facet": "Dynasty song and memory aids",
+      "known_at": 7
+    },
+    {
+      "name": "春秋和战国 (chūn qiū hé zhàn guó)",
+      "facet": "Dynasty song and memory aids",
+      "known_at": 7
+    },
+    {
+      "name": "一统秦两汉 (yī tǒng qín liǎng hàn)",
+      "facet": "Dynasty song and memory aids",
+      "known_at": 8
+    },
+    {
+      "name": "三分魏蜀吴 (sān fēn wèi shǔ wú)",
+      "facet": "Dynasty song and memory aids",
+      "known_at": 7
+    },
+    {
+      "name": "二晋前后延 (èr jìn qián hòu yán)",
+      "facet": "Dynasty song and memory aids",
+      "known_at": 9
+    },
+    {
+      "name": "南北朝并立 (nán běi cháo bìng lì)",
+      "facet": "Dynasty song and memory aids",
+      "known_at": 9
+    },
+    {
+      "name": "隋唐五代传 (suí táng wǔ dài chuán)",
+      "facet": "Dynasty song and memory aids",
+      "known_at": 8
+    },
+    {
+      "name": "宋元明清后 (sòng yuán míng qīng hòu)",
+      "facet": "Dynasty song and memory aids",
+      "known_at": 7
+    },
+    {
+      "name": "皇朝至此完 (huáng cháo zhì cǐ wán)",
+      "facet": "Dynasty song and memory aids",
+      "known_at": 8
+    },
+    {
+      "name": "Three Character Classic (三字经)",
+      "facet": "Dynasty song and memory aids",
+      "known_at": 5
+    },
+    {
+      "name": "唐尧虞舜夏商周 (táng yáo yú shùn xià shāng zhōu)",
+      "facet": "Dynasty song and memory aids",
+      "known_at": 10
+    },
+    {
+      "name": "Timeline of Chinese history",
+      "facet": "Dynasty song and memory aids",
+      "known_at": 5
+    },
+    {
+      "name": "Romance of the Three Kingdoms opening line (天下大势，分久必合，合久必分)",
+      "facet": "Dynasty song and memory aids",
+      "known_at": 8
+    },
+    {
+      "name": "Qin unification of China (秦统一六国)",
+      "facet": "Splits and reunifications of China",
+      "known_at": 5
+    },
+    {
+      "name": "Standardised script (书同文)",
+      "facet": "Splits and reunifications of China",
+      "known_at": 7
+    },
+    {
+      "name": "Unified weights and measures (统一度量衡)",
+      "facet": "Splits and reunifications of China",
+      "known_at": 6
+    },
+    {
+      "name": "Battle of Changping (长平之战)",
+      "facet": "Splits and reunifications of China",
+      "known_at": 9
+    },
+    {
+      "name": "End of the Han dynasty",
+      "facet": "Splits and reunifications of China",
+      "known_at": 8
+    },
+    {
+      "name": "Western Jin reunification (280)",
+      "facet": "Splits and reunifications of China",
+      "known_at": 12
+    },
+    {
+      "name": "Upheaval of the Five Barbarians (五胡乱华)",
+      "facet": "Splits and reunifications of China",
+      "known_at": 13
+    },
+    {
+      "name": "Southward migration of the Jin court (衣冠南渡)",
+      "facet": "Splits and reunifications of China",
+      "known_at": 12
+    },
+    {
+      "name": "Period of Disunity",
+      "facet": "Splits and reunifications of China",
+      "known_at": 12
+    },
+    {
+      "name": "Sui conquest of Chen (隋灭陈)",
+      "facet": "Splits and reunifications of China",
+      "known_at": 11
+    },
+    {
+      "name": "Song reunification of the Central Plains",
+      "facet": "Splits and reunifications of China",
+      "known_at": 12
+    },
+    {
+      "name": "Treaty of Shaoxing (绍兴和议)",
+      "facet": "Splits and reunifications of China",
+      "known_at": 13
+    },
+    {
+      "name": "Huai River border (淮河)",
+      "facet": "Splits and reunifications of China",
+      "known_at": 11
+    },
+    {
+      "name": "Yuan conquest of the Southern Song",
+      "facet": "Splits and reunifications of China",
+      "known_at": 11
+    },
+    {
+      "name": "Unified dynasty (大一统王朝)",
+      "facet": "Splits and reunifications of China",
+      "known_at": 8
+    }
+  ]
+}

@@ -1,0 +1,1127 @@
+{
+  "subcategory": "chinese-tech-brands",
+  "facets": [
+    "Smartphones and phone makers",
+    "Computers and PC brands",
+    "Electric cars and car makers",
+    "Batteries and new energy",
+    "Drones and consumer gadgets",
+    "Home appliances and air conditioners",
+    "Internet giants and their founders",
+    "Company headquarters and tech cities",
+    "Brand names and their meanings",
+    "Logos, mascots and slogans",
+    "Company history and milestones",
+    "Chips, telecom and 5G"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 4,
+      "count": 1,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 3,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Huawei",
+      "facet": "Smartphones and phone makers",
+      "known_at": 2
+    },
+    {
+      "name": "Xiaomi",
+      "facet": "Smartphones and phone makers",
+      "known_at": 2
+    },
+    {
+      "name": "OPPO",
+      "facet": "Smartphones and phone makers",
+      "known_at": 4
+    },
+    {
+      "name": "vivo",
+      "facet": "Smartphones and phone makers",
+      "known_at": 4
+    },
+    {
+      "name": "Honor",
+      "facet": "Smartphones and phone makers",
+      "known_at": 5
+    },
+    {
+      "name": "Redmi",
+      "facet": "Smartphones and phone makers",
+      "known_at": 6
+    },
+    {
+      "name": "OnePlus",
+      "facet": "Smartphones and phone makers",
+      "known_at": 9
+    },
+    {
+      "name": "Realme",
+      "facet": "Smartphones and phone makers",
+      "known_at": 9
+    },
+    {
+      "name": "Meizu",
+      "facet": "Smartphones and phone makers",
+      "known_at": 10
+    },
+    {
+      "name": "iQOO",
+      "facet": "Smartphones and phone makers",
+      "known_at": 10
+    },
+    {
+      "name": "Nubia",
+      "facet": "Smartphones and phone makers",
+      "known_at": 11
+    },
+    {
+      "name": "Coolpad",
+      "facet": "Smartphones and phone makers",
+      "known_at": 12
+    },
+    {
+      "name": "Transsion",
+      "facet": "Smartphones and phone makers",
+      "known_at": 13
+    },
+    {
+      "name": "Huawei Mate series",
+      "facet": "Smartphones and phone makers",
+      "known_at": 6
+    },
+    {
+      "name": "Huawei P series",
+      "facet": "Smartphones and phone makers",
+      "known_at": 8
+    },
+    {
+      "name": "Huawei Mate X",
+      "facet": "Smartphones and phone makers",
+      "known_at": 9
+    },
+    {
+      "name": "Xiaomi Mi 1",
+      "facet": "Smartphones and phone makers",
+      "known_at": 12
+    },
+    {
+      "name": "HarmonyOS",
+      "facet": "Smartphones and phone makers",
+      "known_at": 6
+    },
+    {
+      "name": "MIUI",
+      "facet": "Smartphones and phone makers",
+      "known_at": 10
+    },
+    {
+      "name": "Lenovo",
+      "facet": "Computers and PC brands",
+      "known_at": 4
+    },
+    {
+      "name": "ThinkPad",
+      "facet": "Computers and PC brands",
+      "known_at": 8
+    },
+    {
+      "name": "Lenovo Legion",
+      "facet": "Computers and PC brands",
+      "known_at": 9
+    },
+    {
+      "name": "Lenovo Yoga",
+      "facet": "Computers and PC brands",
+      "known_at": 11
+    },
+    {
+      "name": "Huawei MateBook",
+      "facet": "Computers and PC brands",
+      "known_at": 8
+    },
+    {
+      "name": "Founder Group",
+      "facet": "Computers and PC brands",
+      "known_at": 12
+    },
+    {
+      "name": "Hasee",
+      "facet": "Computers and PC brands",
+      "known_at": 11
+    },
+    {
+      "name": "Great Wall Computer",
+      "facet": "Computers and PC brands",
+      "known_at": 13
+    },
+    {
+      "name": "Tsinghua Tongfang",
+      "facet": "Computers and PC brands",
+      "known_at": 13
+    },
+    {
+      "name": "Sugon",
+      "facet": "Computers and PC brands",
+      "known_at": 13
+    },
+    {
+      "name": "Inspur",
+      "facet": "Computers and PC brands",
+      "known_at": 13
+    },
+    {
+      "name": "Tianhe-2",
+      "facet": "Computers and PC brands",
+      "known_at": 11
+    },
+    {
+      "name": "Sunway TaihuLight",
+      "facet": "Computers and PC brands",
+      "known_at": 12
+    },
+    {
+      "name": "Wubi input method",
+      "facet": "Computers and PC brands",
+      "known_at": 9
+    },
+    {
+      "name": "WPS Office",
+      "facet": "Computers and PC brands",
+      "known_at": 7
+    },
+    {
+      "name": "Wang Xuan",
+      "facet": "Computers and PC brands",
+      "known_at": 11
+    },
+    {
+      "name": "BYD",
+      "facet": "Electric cars and car makers",
+      "known_at": 3
+    },
+    {
+      "name": "NIO",
+      "facet": "Electric cars and car makers",
+      "known_at": 6
+    },
+    {
+      "name": "Xpeng",
+      "facet": "Electric cars and car makers",
+      "known_at": 7
+    },
+    {
+      "name": "Li Auto",
+      "facet": "Electric cars and car makers",
+      "known_at": 7
+    },
+    {
+      "name": "Geely",
+      "facet": "Electric cars and car makers",
+      "known_at": 5
+    },
+    {
+      "name": "Great Wall Motor",
+      "facet": "Electric cars and car makers",
+      "known_at": 7
+    },
+    {
+      "name": "Haval",
+      "facet": "Electric cars and car makers",
+      "known_at": 8
+    },
+    {
+      "name": "Chery",
+      "facet": "Electric cars and car makers",
+      "known_at": 7
+    },
+    {
+      "name": "SAIC Motor",
+      "facet": "Electric cars and car makers",
+      "known_at": 11
+    },
+    {
+      "name": "Wuling Hongguang Mini EV",
+      "facet": "Electric cars and car makers",
+      "known_at": 6
+    },
+    {
+      "name": "Hongqi",
+      "facet": "Electric cars and car makers",
+      "known_at": 4
+    },
+    {
+      "name": "Changan",
+      "facet": "Electric cars and car makers",
+      "known_at": 8
+    },
+    {
+      "name": "Zeekr",
+      "facet": "Electric cars and car makers",
+      "known_at": 10
+    },
+    {
+      "name": "Aito",
+      "facet": "Electric cars and car makers",
+      "known_at": 8
+    },
+    {
+      "name": "Xiaomi SU7",
+      "facet": "Electric cars and car makers",
+      "known_at": 5
+    },
+    {
+      "name": "BYD Han",
+      "facet": "Electric cars and car makers",
+      "known_at": 8
+    },
+    {
+      "name": "BYD Seagull",
+      "facet": "Electric cars and car makers",
+      "known_at": 9
+    },
+    {
+      "name": "Yangwang U8",
+      "facet": "Electric cars and car makers",
+      "known_at": 9
+    },
+    {
+      "name": "Leapmotor",
+      "facet": "Electric cars and car makers",
+      "known_at": 10
+    },
+    {
+      "name": "GAC Aion",
+      "facet": "Electric cars and car makers",
+      "known_at": 11
+    },
+    {
+      "name": "Lynk & Co",
+      "facet": "Electric cars and car makers",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Chuanfu",
+      "facet": "Electric cars and car makers",
+      "known_at": 11
+    },
+    {
+      "name": "CATL",
+      "facet": "Batteries and new energy",
+      "known_at": 8
+    },
+    {
+      "name": "Blade Battery",
+      "facet": "Batteries and new energy",
+      "known_at": 8
+    },
+    {
+      "name": "Lithium-ion battery",
+      "facet": "Batteries and new energy",
+      "known_at": 6
+    },
+    {
+      "name": "Lithium iron phosphate battery",
+      "facet": "Batteries and new energy",
+      "known_at": 11
+    },
+    {
+      "name": "Sodium-ion battery",
+      "facet": "Batteries and new energy",
+      "known_at": 12
+    },
+    {
+      "name": "Battery swap station",
+      "facet": "Batteries and new energy",
+      "known_at": 8
+    },
+    {
+      "name": "Charging pile",
+      "facet": "Batteries and new energy",
+      "known_at": 4
+    },
+    {
+      "name": "New energy vehicle",
+      "facet": "Batteries and new energy",
+      "known_at": 4
+    },
+    {
+      "name": "Green license plate",
+      "facet": "Batteries and new energy",
+      "known_at": 3
+    },
+    {
+      "name": "Power bank",
+      "facet": "Batteries and new energy",
+      "known_at": 3
+    },
+    {
+      "name": "Anker",
+      "facet": "Batteries and new energy",
+      "known_at": 11
+    },
+    {
+      "name": "LONGi",
+      "facet": "Batteries and new energy",
+      "known_at": 12
+    },
+    {
+      "name": "JinkoSolar",
+      "facet": "Batteries and new energy",
+      "known_at": 13
+    },
+    {
+      "name": "Trina Solar",
+      "facet": "Batteries and new energy",
+      "known_at": 13
+    },
+    {
+      "name": "Goldwind",
+      "facet": "Batteries and new energy",
+      "known_at": 13
+    },
+    {
+      "name": "Gotion",
+      "facet": "Batteries and new energy",
+      "known_at": 13
+    },
+    {
+      "name": "Zeng Yuqun",
+      "facet": "Batteries and new energy",
+      "known_at": 13
+    },
+    {
+      "name": "DJI",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 4
+    },
+    {
+      "name": "DJI Mavic",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 9
+    },
+    {
+      "name": "DJI Phantom",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 10
+    },
+    {
+      "name": "DJI Osmo Pocket",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Tao",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 12
+    },
+    {
+      "name": "Insta360",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 11
+    },
+    {
+      "name": "EHang",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 12
+    },
+    {
+      "name": "Ninebot",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 8
+    },
+    {
+      "name": "Xiaomi Mi Band",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 5
+    },
+    {
+      "name": "Huawei Watch",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 5
+    },
+    {
+      "name": "Huawei FreeBuds",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 7
+    },
+    {
+      "name": "Ecovacs",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 9
+    },
+    {
+      "name": "Roborock",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 10
+    },
+    {
+      "name": "Unitree",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 6
+    },
+    {
+      "name": "Hikvision",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 11
+    },
+    {
+      "name": "Tmall Genie",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 6
+    },
+    {
+      "name": "Drone light show",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 3
+    },
+    {
+      "name": "Xiaomi electric scooter",
+      "facet": "Drones and consumer gadgets",
+      "known_at": 6
+    },
+    {
+      "name": "Haier",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 3
+    },
+    {
+      "name": "Gree",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 3
+    },
+    {
+      "name": "Midea",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 3
+    },
+    {
+      "name": "Hisense",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 5
+    },
+    {
+      "name": "TCL",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 6
+    },
+    {
+      "name": "Skyworth",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 7
+    },
+    {
+      "name": "Changhong",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 8
+    },
+    {
+      "name": "Galanz",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 8
+    },
+    {
+      "name": "Joyoung",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 6
+    },
+    {
+      "name": "Supor",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 7
+    },
+    {
+      "name": "Little Swan",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 8
+    },
+    {
+      "name": "AUX",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 9
+    },
+    {
+      "name": "Fotile",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 10
+    },
+    {
+      "name": "Robam",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 11
+    },
+    {
+      "name": "Inverter air conditioner",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 8
+    },
+    {
+      "name": "Electric rice cooker",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 2
+    },
+    {
+      "name": "Dong Mingzhu",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 8
+    },
+    {
+      "name": "Zhang Ruimin",
+      "facet": "Home appliances and air conditioners",
+      "known_at": 12
+    },
+    {
+      "name": "Alibaba",
+      "facet": "Internet giants and their founders",
+      "known_at": 3
+    },
+    {
+      "name": "Baidu",
+      "facet": "Internet giants and their founders",
+      "known_at": 3
+    },
+    {
+      "name": "ByteDance",
+      "facet": "Internet giants and their founders",
+      "known_at": 7
+    },
+    {
+      "name": "JD.com",
+      "facet": "Internet giants and their founders",
+      "known_at": 4
+    },
+    {
+      "name": "Meituan",
+      "facet": "Internet giants and their founders",
+      "known_at": 4
+    },
+    {
+      "name": "PDD Holdings",
+      "facet": "Internet giants and their founders",
+      "known_at": 9
+    },
+    {
+      "name": "Sina",
+      "facet": "Internet giants and their founders",
+      "known_at": 8
+    },
+    {
+      "name": "Sohu",
+      "facet": "Internet giants and their founders",
+      "known_at": 10
+    },
+    {
+      "name": "Kuaishou Technology",
+      "facet": "Internet giants and their founders",
+      "known_at": 8
+    },
+    {
+      "name": "Ant Group",
+      "facet": "Internet giants and their founders",
+      "known_at": 9
+    },
+    {
+      "name": "DeepSeek",
+      "facet": "Internet giants and their founders",
+      "known_at": 6
+    },
+    {
+      "name": "Ma Yun",
+      "facet": "Internet giants and their founders",
+      "known_at": 4
+    },
+    {
+      "name": "Li Yanhong",
+      "facet": "Internet giants and their founders",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Yiming",
+      "facet": "Internet giants and their founders",
+      "known_at": 10
+    },
+    {
+      "name": "Liu Qiangdong",
+      "facet": "Internet giants and their founders",
+      "known_at": 9
+    },
+    {
+      "name": "Lei Jun",
+      "facet": "Internet giants and their founders",
+      "known_at": 6
+    },
+    {
+      "name": "Wang Xing",
+      "facet": "Internet giants and their founders",
+      "known_at": 12
+    },
+    {
+      "name": "Huang Zheng",
+      "facet": "Internet giants and their founders",
+      "known_at": 13
+    },
+    {
+      "name": "Liu Chuanzhi",
+      "facet": "Internet giants and their founders",
+      "known_at": 11
+    },
+    {
+      "name": "Liang Wenfeng",
+      "facet": "Internet giants and their founders",
+      "known_at": 11
+    },
+    {
+      "name": "Shenzhen Special Economic Zone",
+      "facet": "Company headquarters and tech cities",
+      "known_at": 7
+    },
+    {
+      "name": "Foshan Shunde",
+      "facet": "Company headquarters and tech cities",
+      "known_at": 11
+    },
+    {
+      "name": "Ningde",
+      "facet": "Company headquarters and tech cities",
+      "known_at": 12
+    },
+    {
+      "name": "Wuhan Optics Valley",
+      "facet": "Company headquarters and tech cities",
+      "known_at": 11
+    },
+    {
+      "name": "Dongguan Songshan Lake",
+      "facet": "Company headquarters and tech cities",
+      "known_at": 11
+    },
+    {
+      "name": "Huawei Ox Horn Campus",
+      "facet": "Company headquarters and tech cities",
+      "known_at": 12
+    },
+    {
+      "name": "Alibaba Xixi Campus",
+      "facet": "Company headquarters and tech cities",
+      "known_at": 12
+    },
+    {
+      "name": "Tencent Binhai Towers",
+      "facet": "Company headquarters and tech cities",
+      "known_at": 12
+    },
+    {
+      "name": "Zhengzhou Airport Economy Zone",
+      "facet": "Company headquarters and tech cities",
+      "known_at": 12
+    },
+    {
+      "name": "Wuzhen World Internet Conference",
+      "facet": "Company headquarters and tech cities",
+      "known_at": 11
+    },
+    {
+      "name": "Hangzhou Six Little Dragons",
+      "facet": "Company headquarters and tech cities",
+      "known_at": 10
+    },
+    {
+      "name": "Chengdu Tianfu Software Park",
+      "facet": "Company headquarters and tech cities",
+      "known_at": 13
+    },
+    {
+      "name": "Xiaomi name",
+      "facet": "Brand names and their meanings",
+      "known_at": 5
+    },
+    {
+      "name": "Huawei name",
+      "facet": "Brand names and their meanings",
+      "known_at": 7
+    },
+    {
+      "name": "Lenovo name",
+      "facet": "Brand names and their meanings",
+      "known_at": 11
+    },
+    {
+      "name": "BYD name",
+      "facet": "Brand names and their meanings",
+      "known_at": 7
+    },
+    {
+      "name": "Haier name",
+      "facet": "Brand names and their meanings",
+      "known_at": 13
+    },
+    {
+      "name": "Gree name",
+      "facet": "Brand names and their meanings",
+      "known_at": 11
+    },
+    {
+      "name": "Baidu name",
+      "facet": "Brand names and their meanings",
+      "known_at": 9
+    },
+    {
+      "name": "Tencent name",
+      "facet": "Brand names and their meanings",
+      "known_at": 11
+    },
+    {
+      "name": "Alibaba name",
+      "facet": "Brand names and their meanings",
+      "known_at": 7
+    },
+    {
+      "name": "Taobao name",
+      "facet": "Brand names and their meanings",
+      "known_at": 6
+    },
+    {
+      "name": "Geely name",
+      "facet": "Brand names and their meanings",
+      "known_at": 6
+    },
+    {
+      "name": "Hongqi name",
+      "facet": "Brand names and their meanings",
+      "known_at": 4
+    },
+    {
+      "name": "DJI name",
+      "facet": "Brand names and their meanings",
+      "known_at": 11
+    },
+    {
+      "name": "Honor name",
+      "facet": "Brand names and their meanings",
+      "known_at": 6
+    },
+    {
+      "name": "JD.com name",
+      "facet": "Brand names and their meanings",
+      "known_at": 10
+    },
+    {
+      "name": "Midea name",
+      "facet": "Brand names and their meanings",
+      "known_at": 7
+    },
+    {
+      "name": "Hisense name",
+      "facet": "Brand names and their meanings",
+      "known_at": 11
+    },
+    {
+      "name": "BAT",
+      "facet": "Brand names and their meanings",
+      "known_at": 10
+    },
+    {
+      "name": "QQ penguin",
+      "facet": "Logos, mascots and slogans",
+      "known_at": 2
+    },
+    {
+      "name": "Tmall cat",
+      "facet": "Logos, mascots and slogans",
+      "known_at": 4
+    },
+    {
+      "name": "JD dog Joy",
+      "facet": "Logos, mascots and slogans",
+      "known_at": 4
+    },
+    {
+      "name": "Meituan kangaroo",
+      "facet": "Logos, mascots and slogans",
+      "known_at": 3
+    },
+    {
+      "name": "Baidu bear paw logo",
+      "facet": "Logos, mascots and slogans",
+      "known_at": 5
+    },
+    {
+      "name": "Huawei flower logo",
+      "facet": "Logos, mascots and slogans",
+      "known_at": 5
+    },
+    {
+      "name": "Xiaomi logo",
+      "facet": "Logos, mascots and slogans",
+      "known_at": 6
+    },
+    {
+      "name": "Mitu",
+      "facet": "Logos, mascots and slogans",
+      "known_at": 8
+    },
+    {
+      "name": "Haier Brothers",
+      "facet": "Logos, mascots and slogans",
+      "known_at": 4
+    },
+    {
+      "name": "Gree slogan",
+      "facet": "Logos, mascots and slogans",
+      "known_at": 7
+    },
+    {
+      "name": "Sina eye logo",
+      "facet": "Logos, mascots and slogans",
+      "known_at": 10
+    },
+    {
+      "name": "Hongqi logo",
+      "facet": "Logos, mascots and slogans",
+      "known_at": 7
+    },
+    {
+      "name": "BYD logo",
+      "facet": "Logos, mascots and slogans",
+      "known_at": 7
+    },
+    {
+      "name": "Geely logo",
+      "facet": "Logos, mascots and slogans",
+      "known_at": 9
+    },
+    {
+      "name": "NIO logo",
+      "facet": "Logos, mascots and slogans",
+      "known_at": 10
+    },
+    {
+      "name": "Lenovo logo",
+      "facet": "Logos, mascots and slogans",
+      "known_at": 8
+    },
+    {
+      "name": "Lenovo buys IBM PCs",
+      "facet": "Company history and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Lenovo buys Motorola Mobility",
+      "facet": "Company history and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Geely buys Volvo",
+      "facet": "Company history and milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Haier refrigerator smashing",
+      "facet": "Company history and milestones",
+      "known_at": 9
+    },
+    {
+      "name": "Midea buys KUKA",
+      "facet": "Company history and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Haier buys GE Appliances",
+      "facet": "Company history and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "TCL buys Thomson TVs",
+      "facet": "Company history and milestones",
+      "known_at": 14
+    },
+    {
+      "name": "Lenovo founding",
+      "facet": "Company history and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Huawei founding",
+      "facet": "Company history and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Tencent founding",
+      "facet": "Company history and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Alibaba founding",
+      "facet": "Company history and milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Xiaomi founding",
+      "facet": "Company history and milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Alibaba IPO",
+      "facet": "Company history and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "BYD from batteries to cars",
+      "facet": "Company history and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Warren Buffett invests in BYD",
+      "facet": "Company history and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Honor split from Huawei",
+      "facet": "Company history and milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Unitree robots at the Spring Festival Gala",
+      "facet": "Company history and milestones",
+      "known_at": 5
+    },
+    {
+      "name": "5G",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 3
+    },
+    {
+      "name": "Huawei Kirin chip",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 8
+    },
+    {
+      "name": "HiSilicon",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 12
+    },
+    {
+      "name": "SMIC",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 11
+    },
+    {
+      "name": "ZTE",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 9
+    },
+    {
+      "name": "China Mobile",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 3
+    },
+    {
+      "name": "China Telecom",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 4
+    },
+    {
+      "name": "China Unicom",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 5
+    },
+    {
+      "name": "Loongson",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 12
+    },
+    {
+      "name": "Huawei Ascend",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 13
+    },
+    {
+      "name": "Ren Zhengfei",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 7
+    },
+    {
+      "name": "BeiDou Navigation Satellite System",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 5
+    },
+    {
+      "name": "Optical fiber",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 7
+    },
+    {
+      "name": "Gao Kun",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 12
+    },
+    {
+      "name": "5G base station",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 6
+    },
+    {
+      "name": "TD-SCDMA",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 14
+    },
+    {
+      "name": "Unisoc",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 13
+    },
+    {
+      "name": "YMTC",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 14
+    },
+    {
+      "name": "Lithography machine",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 9
+    },
+    {
+      "name": "Polar codes",
+      "facet": "Chips, telecom and 5G",
+      "known_at": 14
+    }
+  ]
+}

@@ -1,0 +1,1002 @@
+{
+  "subcategory": "ancient-chinese-maths",
+  "facets": [
+    "Abacus and bead counting",
+    "Counting rods and rod numerals",
+    "Multiplication rhyme and mental arithmetic",
+    "The Nine Chapters and classic books",
+    "Chickens-and-rabbits and puzzle problems",
+    "Pi and circle measurement",
+    "Gougu theorem and geometry",
+    "Yang Hui's triangle and number patterns",
+    "Famous ancient mathematicians",
+    "Measuring, calendars and practical maths",
+    "Chinese numerals and number customs",
+    "Magic squares and number legends"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 5,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 4,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Upper bead (上珠)",
+      "facet": "Abacus and bead counting",
+      "known_at": 6
+    },
+    {
+      "name": "Lower bead (下珠)",
+      "facet": "Abacus and bead counting",
+      "known_at": 6
+    },
+    {
+      "name": "Abacus beam (梁)",
+      "facet": "Abacus and bead counting",
+      "known_at": 8
+    },
+    {
+      "name": "Zhusuan (珠算)",
+      "facet": "Abacus and bead counting",
+      "known_at": 6
+    },
+    {
+      "name": "Mental abacus arithmetic (珠心算)",
+      "facet": "Abacus and bead counting",
+      "known_at": 6
+    },
+    {
+      "name": "Abacus rhymes (珠算口诀)",
+      "facet": "Abacus and bead counting",
+      "known_at": 9
+    },
+    {
+      "name": "三下五除二 (sān xià wǔ chú èr)",
+      "facet": "Abacus and bead counting",
+      "known_at": 7
+    },
+    {
+      "name": "打小算盘 (dǎ xiǎo suànpán)",
+      "facet": "Abacus and bead counting",
+      "known_at": 8
+    },
+    {
+      "name": "Clearing the abacus (清盘)",
+      "facet": "Abacus and bead counting",
+      "known_at": 7
+    },
+    {
+      "name": "Two-five bead abacus",
+      "facet": "Abacus and bead counting",
+      "known_at": 9
+    },
+    {
+      "name": "Zhusuan on the UNESCO heritage list",
+      "facet": "Abacus and bead counting",
+      "known_at": 11
+    },
+    {
+      "name": "Soroban",
+      "facet": "Abacus and bead counting",
+      "known_at": 11
+    },
+    {
+      "name": "Cheng Dawei",
+      "facet": "Abacus and bead counting",
+      "known_at": 12
+    },
+    {
+      "name": "Suanfa Tongzong (算法统宗)",
+      "facet": "Abacus and bead counting",
+      "known_at": 13
+    },
+    {
+      "name": "Abacus in Along the River During the Qingming Festival",
+      "facet": "Abacus and bead counting",
+      "known_at": 12
+    },
+    {
+      "name": "Counting rods (算筹)",
+      "facet": "Counting rods and rod numerals",
+      "known_at": 8
+    },
+    {
+      "name": "Rod numerals",
+      "facet": "Counting rods and rod numerals",
+      "known_at": 9
+    },
+    {
+      "name": "Vertical rod form (纵式)",
+      "facet": "Counting rods and rod numerals",
+      "known_at": 11
+    },
+    {
+      "name": "Horizontal rod form (横式)",
+      "facet": "Counting rods and rod numerals",
+      "known_at": 11
+    },
+    {
+      "name": "Red and black rods",
+      "facet": "Counting rods and rod numerals",
+      "known_at": 11
+    },
+    {
+      "name": "Negative numbers in ancient China",
+      "facet": "Counting rods and rod numerals",
+      "known_at": 10
+    },
+    {
+      "name": "Place value in rod numerals",
+      "facet": "Counting rods and rod numerals",
+      "known_at": 11
+    },
+    {
+      "name": "Blank space for zero",
+      "facet": "Counting rods and rod numerals",
+      "known_at": 12
+    },
+    {
+      "name": "运筹帷幄 (yùn chóu wéi wò)",
+      "facet": "Counting rods and rod numerals",
+      "known_at": 9
+    },
+    {
+      "name": "Bamboo counting rods",
+      "facet": "Counting rods and rod numerals",
+      "known_at": 9
+    },
+    {
+      "name": "筹码 (chóumǎ)",
+      "facet": "Counting rods and rod numerals",
+      "known_at": 10
+    },
+    {
+      "name": "Suzhou numerals (苏州码子)",
+      "facet": "Counting rods and rod numerals",
+      "known_at": 12
+    },
+    {
+      "name": "Rod calculus (筹算)",
+      "facet": "Counting rods and rod numerals",
+      "known_at": 12
+    },
+    {
+      "name": "Tianyuan method (天元术)",
+      "facet": "Counting rods and rod numerals",
+      "known_at": 14
+    },
+    {
+      "name": "Decimal system in ancient China",
+      "facet": "Counting rods and rod numerals",
+      "known_at": 11
+    },
+    {
+      "name": "Nine-nine multiplication rhyme (九九乘法表)",
+      "facet": "Multiplication rhyme and mental arithmetic",
+      "known_at": 3
+    },
+    {
+      "name": "九九八十一",
+      "facet": "Multiplication rhyme and mental arithmetic",
+      "known_at": 4
+    },
+    {
+      "name": "一一得一",
+      "facet": "Multiplication rhyme and mental arithmetic",
+      "known_at": 4
+    },
+    {
+      "name": "三七二十一",
+      "facet": "Multiplication rhyme and mental arithmetic",
+      "known_at": 5
+    },
+    {
+      "name": "不管三七二十一 (bùguǎn sān qī èrshíyī)",
+      "facet": "Multiplication rhyme and mental arithmetic",
+      "known_at": 8
+    },
+    {
+      "name": "二五一十 (èr wǔ yī shí)",
+      "facet": "Multiplication rhyme and mental arithmetic",
+      "known_at": 7
+    },
+    {
+      "name": "九九归一 (jiǔ jiǔ guī yī)",
+      "facet": "Multiplication rhyme and mental arithmetic",
+      "known_at": 10
+    },
+    {
+      "name": "45 lines of the small multiplication table",
+      "facet": "Multiplication rhyme and mental arithmetic",
+      "known_at": 7
+    },
+    {
+      "name": "Rhyme starting from 九九 in ancient times",
+      "facet": "Multiplication rhyme and mental arithmetic",
+      "known_at": 12
+    },
+    {
+      "name": "Liye Qin bamboo slip multiplication table",
+      "facet": "Multiplication rhyme and mental arithmetic",
+      "known_at": 13
+    },
+    {
+      "name": "Tsinghua bamboo slips Suanbiao (算表)",
+      "facet": "Multiplication rhyme and mental arithmetic",
+      "known_at": 14
+    },
+    {
+      "name": "Mental arithmetic (口算)",
+      "facet": "Multiplication rhyme and mental arithmetic",
+      "known_at": 3
+    },
+    {
+      "name": "Division rhymes (归除歌诀)",
+      "facet": "Multiplication rhyme and mental arithmetic",
+      "known_at": 13
+    },
+    {
+      "name": "Lattice multiplication (铺地锦)",
+      "facet": "Multiplication rhyme and mental arithmetic",
+      "known_at": 13
+    },
+    {
+      "name": "Dunhuang multiplication manuscripts",
+      "facet": "Multiplication rhyme and mental arithmetic",
+      "known_at": 14
+    },
+    {
+      "name": "The Nine Chapters on the Mathematical Art (九章算术)",
+      "facet": "The Nine Chapters and classic books",
+      "known_at": 10
+    },
+    {
+      "name": "Zhoubi Suanjing (周髀算经)",
+      "facet": "The Nine Chapters and classic books",
+      "known_at": 12
+    },
+    {
+      "name": "Sunzi Suanjing (孙子算经)",
+      "facet": "The Nine Chapters and classic books",
+      "known_at": 12
+    },
+    {
+      "name": "Sea Island Mathematical Manual (海岛算经)",
+      "facet": "The Nine Chapters and classic books",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Qiujian Suanjing (张丘建算经)",
+      "facet": "The Nine Chapters and classic books",
+      "known_at": 13
+    },
+    {
+      "name": "Ten Computational Canons (算经十书)",
+      "facet": "The Nine Chapters and classic books",
+      "known_at": 13
+    },
+    {
+      "name": "Zhui Shu (缀术)",
+      "facet": "The Nine Chapters and classic books",
+      "known_at": 14
+    },
+    {
+      "name": "Mathematical Treatise in Nine Sections (数书九章)",
+      "facet": "The Nine Chapters and classic books",
+      "known_at": 13
+    },
+    {
+      "name": "Jade Mirror of the Four Unknowns (四元玉鉴)",
+      "facet": "The Nine Chapters and classic books",
+      "known_at": 14
+    },
+    {
+      "name": "Xiangjie Jiuzhang Suanfa (详解九章算法)",
+      "facet": "The Nine Chapters and classic books",
+      "known_at": 14
+    },
+    {
+      "name": "Suanshu shu (算数书)",
+      "facet": "The Nine Chapters and classic books",
+      "known_at": 14
+    },
+    {
+      "name": "Fangcheng chapter (方程)",
+      "facet": "The Nine Chapters and classic books",
+      "known_at": 12
+    },
+    {
+      "name": "Excess and deficit (盈不足)",
+      "facet": "The Nine Chapters and classic books",
+      "known_at": 13
+    },
+    {
+      "name": "Dream Pool Essays (梦溪笔谈)",
+      "facet": "The Nine Chapters and classic books",
+      "known_at": 11
+    },
+    {
+      "name": "Jigu Suanjing (缉古算经)",
+      "facet": "The Nine Chapters and classic books",
+      "known_at": 14
+    },
+    {
+      "name": "Jihe Yuanben (几何原本)",
+      "facet": "The Nine Chapters and classic books",
+      "known_at": 12
+    },
+    {
+      "name": "Chickens and rabbits in a cage (鸡兔同笼)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 5
+    },
+    {
+      "name": "Han Xin counts soldiers (韩信点兵)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 9
+    },
+    {
+      "name": "Chinese remainder theorem",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 12
+    },
+    {
+      "name": "Things whose number is unknown (物不知数)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 12
+    },
+    {
+      "name": "Hundred fowls problem (百鸡问题)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 11
+    },
+    {
+      "name": "Seven-storey pagoda of lights (远望巍巍塔七层)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 10
+    },
+    {
+      "name": "Li Bai buys wine (李白打酒)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 9
+    },
+    {
+      "name": "Rice mixed with husks (米谷粒分)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 11
+    },
+    {
+      "name": "Two rats boring through a wall (两鼠穿垣)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 12
+    },
+    {
+      "name": "Wild duck and wild goose (凫雁问题)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 12
+    },
+    {
+      "name": "Good horse and slow horse (良马驽马)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 13
+    },
+    {
+      "name": "Tree-planting problem (植树问题)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 6
+    },
+    {
+      "name": "Meeting problem (相遇问题)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 6
+    },
+    {
+      "name": "Pool filling problem (水池问题)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 7
+    },
+    {
+      "name": "Tangram (七巧板)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 3
+    },
+    {
+      "name": "Nine linked rings (九连环)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 6
+    },
+    {
+      "name": "Huarong Road (华容道)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 6
+    },
+    {
+      "name": "Lu Ban lock (鲁班锁)",
+      "facet": "Chickens-and-rabbits and puzzle problems",
+      "known_at": 6
+    },
+    {
+      "name": "Pi (圆周率)",
+      "facet": "Pi and circle measurement",
+      "known_at": 5
+    },
+    {
+      "name": "3.14",
+      "facet": "Pi and circle measurement",
+      "known_at": 5
+    },
+    {
+      "name": "3.1415926",
+      "facet": "Pi and circle measurement",
+      "known_at": 7
+    },
+    {
+      "name": "355/113 (密率)",
+      "facet": "Pi and circle measurement",
+      "known_at": 10
+    },
+    {
+      "name": "22/7 (约率)",
+      "facet": "Pi and circle measurement",
+      "known_at": 10
+    },
+    {
+      "name": "Liu Hui's circle division (割圆术)",
+      "facet": "Pi and circle measurement",
+      "known_at": 10
+    },
+    {
+      "name": "157/50 (徽率)",
+      "facet": "Pi and circle measurement",
+      "known_at": 13
+    },
+    {
+      "name": "周三径一 (zhōu sān jìng yī)",
+      "facet": "Pi and circle measurement",
+      "known_at": 11
+    },
+    {
+      "name": "3072-sided polygon",
+      "facet": "Pi and circle measurement",
+      "known_at": 14
+    },
+    {
+      "name": "24,576-sided polygon",
+      "facet": "Pi and circle measurement",
+      "known_at": 14
+    },
+    {
+      "name": "Seven decimal places of pi",
+      "facet": "Pi and circle measurement",
+      "known_at": 11
+    },
+    {
+      "name": "Area of a circle",
+      "facet": "Pi and circle measurement",
+      "known_at": 7
+    },
+    {
+      "name": "Zu Geng's principle (祖暅原理)",
+      "facet": "Pi and circle measurement",
+      "known_at": 12
+    },
+    {
+      "name": "Volume of a sphere",
+      "facet": "Pi and circle measurement",
+      "known_at": 10
+    },
+    {
+      "name": "Double square lid (牟合方盖)",
+      "facet": "Pi and circle measurement",
+      "known_at": 14
+    },
+    {
+      "name": "Mohist definition of a circle (圆，一中同长也)",
+      "facet": "Pi and circle measurement",
+      "known_at": 12
+    },
+    {
+      "name": "Gougu theorem (勾股定理)",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 8
+    },
+    {
+      "name": "勾三股四弦五",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 8
+    },
+    {
+      "name": "Gou, gu and xian (勾股弦)",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 10
+    },
+    {
+      "name": "Shang Gao (商高)",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 12
+    },
+    {
+      "name": "Zhao Shuang's string diagram (赵爽弦图)",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 11
+    },
+    {
+      "name": "2002 International Congress of Mathematicians logo",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 13
+    },
+    {
+      "name": "Pythagoras",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 9
+    },
+    {
+      "name": "Right triangle (直角三角形)",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 6
+    },
+    {
+      "name": "Chen Zi measures the Sun (陈子测日)",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 14
+    },
+    {
+      "name": "Out-in complementary principle (出入相补)",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 13
+    },
+    {
+      "name": "Double-difference method (重差术)",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 13
+    },
+    {
+      "name": "Yangma, qiandu and bienao (阳马、堑堵、鳖臑)",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 14
+    },
+    {
+      "name": "Fang tian (方田)",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 12
+    },
+    {
+      "name": "Compass and square (规矩)",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 8
+    },
+    {
+      "name": "没有规矩，不成方圆",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 7
+    },
+    {
+      "name": "Fuxi and Nüwa with compass and square",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 11
+    },
+    {
+      "name": "Mohist Canon (墨经)",
+      "facet": "Gougu theorem and geometry",
+      "known_at": 11
+    },
+    {
+      "name": "Yang Hui's triangle (杨辉三角)",
+      "facet": "Yang Hui's triangle and number patterns",
+      "known_at": 9
+    },
+    {
+      "name": "Yang Hui",
+      "facet": "Yang Hui's triangle and number patterns",
+      "known_at": 11
+    },
+    {
+      "name": "Jia Xian",
+      "facet": "Yang Hui's triangle and number patterns",
+      "known_at": 13
+    },
+    {
+      "name": "Pascal's triangle",
+      "facet": "Yang Hui's triangle and number patterns",
+      "known_at": 11
+    },
+    {
+      "name": "Binomial coefficients",
+      "facet": "Yang Hui's triangle and number patterns",
+      "known_at": 13
+    },
+    {
+      "name": "Row sums as powers of 2",
+      "facet": "Yang Hui's triangle and number patterns",
+      "known_at": 12
+    },
+    {
+      "name": "Arithmetic sequence (等差数列)",
+      "facet": "Yang Hui's triangle and number patterns",
+      "known_at": 10
+    },
+    {
+      "name": "一尺之棰，日取其半，万世不竭",
+      "facet": "Yang Hui's triangle and number patterns",
+      "known_at": 11
+    },
+    {
+      "name": "Pile sums (垛积术)",
+      "facet": "Yang Hui's triangle and number patterns",
+      "known_at": 14
+    },
+    {
+      "name": "Horner's method (秦九韶算法)",
+      "facet": "Yang Hui's triangle and number patterns",
+      "known_at": 14
+    },
+    {
+      "name": "Yin and yang lines",
+      "facet": "Yang Hui's triangle and number patterns",
+      "known_at": 8
+    },
+    {
+      "name": "Binary numbers and the I Ching",
+      "facet": "Yang Hui's triangle and number patterns",
+      "known_at": 11
+    },
+    {
+      "name": "Leibniz and the I Ching",
+      "facet": "Yang Hui's triangle and number patterns",
+      "known_at": 13
+    },
+    {
+      "name": "Zu Chongzhi",
+      "facet": "Famous ancient mathematicians",
+      "known_at": 5
+    },
+    {
+      "name": "Liu Hui",
+      "facet": "Famous ancient mathematicians",
+      "known_at": 10
+    },
+    {
+      "name": "Zu Geng",
+      "facet": "Famous ancient mathematicians",
+      "known_at": 13
+    },
+    {
+      "name": "Qin Jiushao",
+      "facet": "Famous ancient mathematicians",
+      "known_at": 13
+    },
+    {
+      "name": "Li Ye",
+      "facet": "Famous ancient mathematicians",
+      "known_at": 14
+    },
+    {
+      "name": "Zhu Shijie",
+      "facet": "Famous ancient mathematicians",
+      "known_at": 14
+    },
+    {
+      "name": "Shen Kuo",
+      "facet": "Famous ancient mathematicians",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Heng",
+      "facet": "Famous ancient mathematicians",
+      "known_at": 9
+    },
+    {
+      "name": "Yi Xing",
+      "facet": "Famous ancient mathematicians",
+      "known_at": 12
+    },
+    {
+      "name": "Zhao Shuang",
+      "facet": "Famous ancient mathematicians",
+      "known_at": 13
+    },
+    {
+      "name": "Xu Guangqi",
+      "facet": "Famous ancient mathematicians",
+      "known_at": 12
+    },
+    {
+      "name": "Mei Wending",
+      "facet": "Famous ancient mathematicians",
+      "known_at": 14
+    },
+    {
+      "name": "Li Shanlan",
+      "facet": "Famous ancient mathematicians",
+      "known_at": 14
+    },
+    {
+      "name": "Wang Xiaotong",
+      "facet": "Famous ancient mathematicians",
+      "known_at": 14
+    },
+    {
+      "name": "Li Chunfeng",
+      "facet": "Famous ancient mathematicians",
+      "known_at": 13
+    },
+    {
+      "name": "Chi (尺)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 7
+    },
+    {
+      "name": "Cun (寸)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 7
+    },
+    {
+      "name": "Jin (斤)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 4
+    },
+    {
+      "name": "Liang (两)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 6
+    },
+    {
+      "name": "半斤八两 (bàn jīn bā liǎng)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 8
+    },
+    {
+      "name": "Li (里)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 6
+    },
+    {
+      "name": "Mu (亩)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 7
+    },
+    {
+      "name": "Dou (斗)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 10
+    },
+    {
+      "name": "Steelyard (杆秤)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 8
+    },
+    {
+      "name": "Qin standardisation of weights and measures (统一度量衡)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 9
+    },
+    {
+      "name": "Shang Yang's square sheng (商鞅方升)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 13
+    },
+    {
+      "name": "Gnomon (圭表)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 11
+    },
+    {
+      "name": "Sundial (日晷)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 6
+    },
+    {
+      "name": "Water clock (漏刻)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 10
+    },
+    {
+      "name": "Sexagenary cycle (天干地支)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 8
+    },
+    {
+      "name": "Chinese zodiac cycle",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 2
+    },
+    {
+      "name": "Shichen (时辰)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 8
+    },
+    {
+      "name": "Ke (刻)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 9
+    },
+    {
+      "name": "Shoushi calendar (授时历)",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 12
+    },
+    {
+      "name": "Guo Shoujing",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 12
+    },
+    {
+      "name": "Dengfeng Observatory",
+      "facet": "Measuring, calendars and practical maths",
+      "known_at": 13
+    },
+    {
+      "name": "Chinese numerals (一二三)",
+      "facet": "Chinese numerals and number customs",
+      "known_at": 1
+    },
+    {
+      "name": "Financial numerals (大写数字)",
+      "facet": "Chinese numerals and number customs",
+      "known_at": 7
+    },
+    {
+      "name": "Wan (万)",
+      "facet": "Chinese numerals and number customs",
+      "known_at": 4
+    },
+    {
+      "name": "Yi (亿)",
+      "facet": "Chinese numerals and number customs",
+      "known_at": 6
+    },
+    {
+      "name": "Ling (零)",
+      "facet": "Chinese numerals and number customs",
+      "known_at": 8
+    },
+    {
+      "name": "Nian (廿)",
+      "facet": "Chinese numerals and number customs",
+      "known_at": 9
+    },
+    {
+      "name": "Sa (卅)",
+      "facet": "Chinese numerals and number customs",
+      "known_at": 11
+    },
+    {
+      "name": "Number 9 and the emperor",
+      "facet": "Chinese numerals and number customs",
+      "known_at": 9
+    },
+    {
+      "name": "六六大顺 (liù liù dà shùn)",
+      "facet": "Chinese numerals and number customs",
+      "known_at": 6
+    },
+    {
+      "name": "520",
+      "facet": "Chinese numerals and number customs",
+      "known_at": 5
+    },
+    {
+      "name": "二百五 (èrbǎiwǔ)",
+      "facet": "Chinese numerals and number customs",
+      "known_at": 7
+    },
+    {
+      "name": "好事成双 (hǎo shì chéng shuāng)",
+      "facet": "Chinese numerals and number customs",
+      "known_at": 8
+    },
+    {
+      "name": "十全十美 (shí quán shí měi)",
+      "facet": "Chinese numerals and number customs",
+      "known_at": 6
+    },
+    {
+      "name": "Chinese hand number gestures",
+      "facet": "Chinese numerals and number customs",
+      "known_at": 5
+    },
+    {
+      "name": "Tally with 正 (zhèng)",
+      "facet": "Chinese numerals and number customs",
+      "known_at": 5
+    },
+    {
+      "name": "Oracle bone numerals",
+      "facet": "Chinese numerals and number customs",
+      "known_at": 11
+    },
+    {
+      "name": "Lo Shu Square (洛书)",
+      "facet": "Magic squares and number legends",
+      "known_at": 10
+    },
+    {
+      "name": "He Tu (河图)",
+      "facet": "Magic squares and number legends",
+      "known_at": 11
+    },
+    {
+      "name": "Turtle from the Luo River",
+      "facet": "Magic squares and number legends",
+      "known_at": 11
+    },
+    {
+      "name": "Dragon horse (龙马)",
+      "facet": "Magic squares and number legends",
+      "known_at": 12
+    },
+    {
+      "name": "Nine-palace grid (九宫格)",
+      "facet": "Magic squares and number legends",
+      "known_at": 5
+    },
+    {
+      "name": "Magic constant 15",
+      "facet": "Magic squares and number legends",
+      "known_at": 9
+    },
+    {
+      "name": "戴九履一 (dài jiǔ lǚ yī)",
+      "facet": "Magic squares and number legends",
+      "known_at": 13
+    },
+    {
+      "name": "Yang Hui's magic squares",
+      "facet": "Magic squares and number legends",
+      "known_at": 14
+    },
+    {
+      "name": "Sudoku",
+      "facet": "Magic squares and number legends",
+      "known_at": 5
+    },
+    {
+      "name": "Nine tripod cauldrons (九鼎)",
+      "facet": "Magic squares and number legends",
+      "known_at": 10
+    },
+    {
+      "name": "Li Shou invents counting (隶首作数)",
+      "facet": "Magic squares and number legends",
+      "known_at": 14
+    }
+  ]
+}

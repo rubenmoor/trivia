@@ -1,0 +1,982 @@
+{
+  "subcategory": "creation-myths",
+  "facets": [
+    "Pangu and the world's beginning",
+    "Nüwa, Fuxi and the first humans",
+    "Hou Yi and the ten suns",
+    "Chang'e and the moon palace",
+    "Heroes who never give up",
+    "Great flood and Da Yu",
+    "Inventors of fire, farming and writing",
+    "Battles of gods and giants",
+    "Mythical beasts and sacred places",
+    "Ancient myth books and idioms",
+    "Myth names in space missions",
+    "Myths in films and cartoons"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 1,
+      "record": 1,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 4,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pangu",
+      "facet": "Pangu and the world's beginning",
+      "known_at": 2
+    },
+    {
+      "name": "Cosmic egg",
+      "facet": "Pangu and the world's beginning",
+      "known_at": 6
+    },
+    {
+      "name": "Hundun",
+      "facet": "Pangu and the world's beginning",
+      "known_at": 11
+    },
+    {
+      "name": "Pangu's axe",
+      "facet": "Pangu and the world's beginning",
+      "known_at": 5
+    },
+    {
+      "name": "Yin and yang",
+      "facet": "Pangu and the world's beginning",
+      "known_at": 6
+    },
+    {
+      "name": "Separation of heaven and earth",
+      "facet": "Pangu and the world's beginning",
+      "known_at": 5
+    },
+    {
+      "name": "Pangu's body becoming the world",
+      "facet": "Pangu and the world's beginning",
+      "known_at": 6
+    },
+    {
+      "name": "Qi (气)",
+      "facet": "Pangu and the world's beginning",
+      "known_at": 9
+    },
+    {
+      "name": "Yuanshi Tianzun",
+      "facet": "Pangu and the world's beginning",
+      "known_at": 11
+    },
+    {
+      "name": "Hongjun Laozu",
+      "facet": "Pangu and the world's beginning",
+      "known_at": 11
+    },
+    {
+      "name": "Pangu Temple",
+      "facet": "Pangu and the world's beginning",
+      "known_at": 12
+    },
+    {
+      "name": "Pangu Mountain",
+      "facet": "Pangu and the world's beginning",
+      "known_at": 13
+    },
+    {
+      "name": "Taiyi",
+      "facet": "Pangu and the world's beginning",
+      "known_at": 13
+    },
+    {
+      "name": "Nüwa",
+      "facet": "Nüwa, Fuxi and the first humans",
+      "known_at": 2
+    },
+    {
+      "name": "Nüwa mends the sky",
+      "facet": "Nüwa, Fuxi and the first humans",
+      "known_at": 3
+    },
+    {
+      "name": "Five-colored stones",
+      "facet": "Nüwa, Fuxi and the first humans",
+      "known_at": 5
+    },
+    {
+      "name": "Humans made from yellow earth",
+      "facet": "Nüwa, Fuxi and the first humans",
+      "known_at": 4
+    },
+    {
+      "name": "Nüwa's snake tail",
+      "facet": "Nüwa, Fuxi and the first humans",
+      "known_at": 6
+    },
+    {
+      "name": "Bagua (八卦)",
+      "facet": "Nüwa, Fuxi and the first humans",
+      "known_at": 8
+    },
+    {
+      "name": "Compass and square of Fuxi and Nüwa",
+      "facet": "Nüwa, Fuxi and the first humans",
+      "known_at": 13
+    },
+    {
+      "name": "Giant turtle's legs",
+      "facet": "Nüwa, Fuxi and the first humans",
+      "known_at": 8
+    },
+    {
+      "name": "Reed ashes",
+      "facet": "Nüwa, Fuxi and the first humans",
+      "known_at": 12
+    },
+    {
+      "name": "Black dragon slain by Nüwa",
+      "facet": "Nüwa, Fuxi and the first humans",
+      "known_at": 12
+    },
+    {
+      "name": "Wahuang Palace (娲皇宫)",
+      "facet": "Nüwa, Fuxi and the first humans",
+      "known_at": 13
+    },
+    {
+      "name": "Sheng (笙)",
+      "facet": "Nüwa, Fuxi and the first humans",
+      "known_at": 12
+    },
+    {
+      "name": "Huaxu",
+      "facet": "Nüwa, Fuxi and the first humans",
+      "known_at": 14
+    },
+    {
+      "name": "Taihao Fuxi Mausoleum",
+      "facet": "Nüwa, Fuxi and the first humans",
+      "known_at": 13
+    },
+    {
+      "name": "Renri (人日)",
+      "facet": "Nüwa, Fuxi and the first humans",
+      "known_at": 11
+    },
+    {
+      "name": "Fishing net",
+      "facet": "Nüwa, Fuxi and the first humans",
+      "known_at": 9
+    },
+    {
+      "name": "Hou Yi",
+      "facet": "Hou Yi and the ten suns",
+      "known_at": 3
+    },
+    {
+      "name": "Ten suns",
+      "facet": "Hou Yi and the ten suns",
+      "known_at": 3
+    },
+    {
+      "name": "Three-legged crow",
+      "facet": "Hou Yi and the ten suns",
+      "known_at": 7
+    },
+    {
+      "name": "Fusang tree",
+      "facet": "Hou Yi and the ten suns",
+      "known_at": 9
+    },
+    {
+      "name": "Xihe",
+      "facet": "Hou Yi and the ten suns",
+      "known_at": 10
+    },
+    {
+      "name": "Emperor Yao",
+      "facet": "Hou Yi and the ten suns",
+      "known_at": 7
+    },
+    {
+      "name": "Dijun",
+      "facet": "Hou Yi and the ten suns",
+      "known_at": 11
+    },
+    {
+      "name": "Red bow and white arrows",
+      "facet": "Hou Yi and the ten suns",
+      "known_at": 9
+    },
+    {
+      "name": "Yayu",
+      "facet": "Hou Yi and the ten suns",
+      "known_at": 13
+    },
+    {
+      "name": "Feng Meng",
+      "facet": "Hou Yi and the ten suns",
+      "known_at": 11
+    },
+    {
+      "name": "Zaochi",
+      "facet": "Hou Yi and the ten suns",
+      "known_at": 14
+    },
+    {
+      "name": "Jiuying",
+      "facet": "Hou Yi and the ten suns",
+      "known_at": 14
+    },
+    {
+      "name": "Fengxi",
+      "facet": "Hou Yi and the ten suns",
+      "known_at": 13
+    },
+    {
+      "name": "Xiushe",
+      "facet": "Hou Yi and the ten suns",
+      "known_at": 13
+    },
+    {
+      "name": "Dafeng",
+      "facet": "Hou Yi and the ten suns",
+      "known_at": 13
+    },
+    {
+      "name": "Tanggu (汤谷)",
+      "facet": "Hou Yi and the ten suns",
+      "known_at": 14
+    },
+    {
+      "name": "Chang'e",
+      "facet": "Chang'e and the moon palace",
+      "known_at": 1
+    },
+    {
+      "name": "Jade Rabbit",
+      "facet": "Chang'e and the moon palace",
+      "known_at": 2
+    },
+    {
+      "name": "Wu Gang",
+      "facet": "Chang'e and the moon palace",
+      "known_at": 5
+    },
+    {
+      "name": "Osmanthus tree",
+      "facet": "Chang'e and the moon palace",
+      "known_at": 4
+    },
+    {
+      "name": "Guanghan Palace",
+      "facet": "Chang'e and the moon palace",
+      "known_at": 4
+    },
+    {
+      "name": "Elixir of immortality",
+      "facet": "Chang'e and the moon palace",
+      "known_at": 4
+    },
+    {
+      "name": "Queen Mother of the West",
+      "facet": "Chang'e and the moon palace",
+      "known_at": 6
+    },
+    {
+      "name": "Moon toad",
+      "facet": "Chang'e and the moon palace",
+      "known_at": 9
+    },
+    {
+      "name": "Heng'e",
+      "facet": "Chang'e and the moon palace",
+      "known_at": 13
+    },
+    {
+      "name": "Changxi",
+      "facet": "Chang'e and the moon palace",
+      "known_at": 13
+    },
+    {
+      "name": "Li Shangyin's poem “Chang'e”",
+      "facet": "Chang'e and the moon palace",
+      "known_at": 11
+    },
+    {
+      "name": "Shui Diao Ge Tou (水调歌头)",
+      "facet": "Chang'e and the moon palace",
+      "known_at": 8
+    },
+    {
+      "name": "Tang Xuanzong's visit to the moon",
+      "facet": "Chang'e and the moon palace",
+      "known_at": 13
+    },
+    {
+      "name": "Yue Lao",
+      "facet": "Chang'e and the moon palace",
+      "known_at": 8
+    },
+    {
+      "name": "Rainbow-Feather Garment Dance",
+      "facet": "Chang'e and the moon palace",
+      "known_at": 13
+    },
+    {
+      "name": "Peaches of immortality",
+      "facet": "Chang'e and the moon palace",
+      "known_at": 5
+    },
+    {
+      "name": "Jingwei",
+      "facet": "Heroes who never give up",
+      "known_at": 4
+    },
+    {
+      "name": "Kuafu",
+      "facet": "Heroes who never give up",
+      "known_at": 4
+    },
+    {
+      "name": "Yugong",
+      "facet": "Heroes who never give up",
+      "known_at": 3
+    },
+    {
+      "name": "Wangwu Mountain",
+      "facet": "Heroes who never give up",
+      "known_at": 9
+    },
+    {
+      "name": "Zhisou",
+      "facet": "Heroes who never give up",
+      "known_at": 9
+    },
+    {
+      "name": "Denglin peach forest",
+      "facet": "Heroes who never give up",
+      "known_at": 9
+    },
+    {
+      "name": "Xingtian",
+      "facet": "Heroes who never give up",
+      "known_at": 9
+    },
+    {
+      "name": "Mao Zedong's speech “The Foolish Old Man Who Removed the Mountains”",
+      "facet": "Heroes who never give up",
+      "known_at": 12
+    },
+    {
+      "name": "Yellow River and Wei River",
+      "facet": "Heroes who never give up",
+      "known_at": 8
+    },
+    {
+      "name": "East Sea",
+      "facet": "Heroes who never give up",
+      "known_at": 6
+    },
+    {
+      "name": "Mount Fajiu",
+      "facet": "Heroes who never give up",
+      "known_at": 14
+    },
+    {
+      "name": "Iron pestle ground into a needle",
+      "facet": "Heroes who never give up",
+      "known_at": 5
+    },
+    {
+      "name": "Yuyuan (虞渊)",
+      "facet": "Heroes who never give up",
+      "known_at": 13
+    },
+    {
+      "name": "Kua'e clan",
+      "facet": "Heroes who never give up",
+      "known_at": 13
+    },
+    {
+      "name": "Tao Yuanming's poem on the Classic of Mountains and Seas",
+      "facet": "Heroes who never give up",
+      "known_at": 13
+    },
+    {
+      "name": "Da Yu",
+      "facet": "Great flood and Da Yu",
+      "known_at": 4
+    },
+    {
+      "name": "Xirang (息壤)",
+      "facet": "Great flood and Da Yu",
+      "known_at": 10
+    },
+    {
+      "name": "Passing his home three times without entering",
+      "facet": "Great flood and Da Yu",
+      "known_at": 6
+    },
+    {
+      "name": "Yinglong",
+      "facet": "Great flood and Da Yu",
+      "known_at": 11
+    },
+    {
+      "name": "Nine Provinces",
+      "facet": "Great flood and Da Yu",
+      "known_at": 9
+    },
+    {
+      "name": "Carp leaping over the Dragon Gate",
+      "facet": "Great flood and Da Yu",
+      "known_at": 5
+    },
+    {
+      "name": "Mount Kuaiji",
+      "facet": "Great flood and Da Yu",
+      "known_at": 13
+    },
+    {
+      "name": "Yubu (禹步)",
+      "facet": "Great flood and Da Yu",
+      "known_at": 14
+    },
+    {
+      "name": "Nüjiao of Tushan",
+      "facet": "Great flood and Da Yu",
+      "known_at": 13
+    },
+    {
+      "name": "Emperor Shun",
+      "facet": "Great flood and Da Yu",
+      "known_at": 7
+    },
+    {
+      "name": "Fangfeng",
+      "facet": "Great flood and Da Yu",
+      "known_at": 14
+    },
+    {
+      "name": "Ruyi Jingu Bang",
+      "facet": "Great flood and Da Yu",
+      "known_at": 6
+    },
+    {
+      "name": "Luoshu (洛书)",
+      "facet": "Great flood and Da Yu",
+      "known_at": 11
+    },
+    {
+      "name": "Hou Ji",
+      "facet": "Inventors of fire, farming and writing",
+      "known_at": 10
+    },
+    {
+      "name": "Fire by drilling wood",
+      "facet": "Inventors of fire, farming and writing",
+      "known_at": 6
+    },
+    {
+      "name": "Tea",
+      "facet": "Inventors of fire, farming and writing",
+      "known_at": 3
+    },
+    {
+      "name": "Shennong Bencao Jing",
+      "facet": "Inventors of fire, farming and writing",
+      "known_at": 10
+    },
+    {
+      "name": "Leisi plough (耒耜)",
+      "facet": "Inventors of fire, farming and writing",
+      "known_at": 10
+    },
+    {
+      "name": "Cangjie's four eyes",
+      "facet": "Inventors of fire, farming and writing",
+      "known_at": 8
+    },
+    {
+      "name": "Bird footprints",
+      "facet": "Inventors of fire, farming and writing",
+      "known_at": 9
+    },
+    {
+      "name": "Five grains",
+      "facet": "Inventors of fire, farming and writing",
+      "known_at": 7
+    },
+    {
+      "name": "Xi Zhong",
+      "facet": "Inventors of fire, farming and writing",
+      "known_at": 12
+    },
+    {
+      "name": "Ling Lun",
+      "facet": "Inventors of fire, farming and writing",
+      "known_at": 14
+    },
+    {
+      "name": "Lu Ban",
+      "facet": "Inventors of fire, farming and writing",
+      "known_at": 5
+    },
+    {
+      "name": "Silkworm",
+      "facet": "Inventors of fire, farming and writing",
+      "known_at": 3
+    },
+    {
+      "name": "Millet falling from the sky (天雨粟)",
+      "facet": "Inventors of fire, farming and writing",
+      "known_at": 13
+    },
+    {
+      "name": "Shennong's transparent belly",
+      "facet": "Inventors of fire, farming and writing",
+      "known_at": 8
+    },
+    {
+      "name": "Huangdi (Yellow Emperor)",
+      "facet": "Battles of gods and giants",
+      "known_at": 4
+    },
+    {
+      "name": "Chi You",
+      "facet": "Battles of gods and giants",
+      "known_at": 7
+    },
+    {
+      "name": "Emperor Yan",
+      "facet": "Battles of gods and giants",
+      "known_at": 6
+    },
+    {
+      "name": "Gong Gong",
+      "facet": "Battles of gods and giants",
+      "known_at": 8
+    },
+    {
+      "name": "Zhurong",
+      "facet": "Battles of gods and giants",
+      "known_at": 7
+    },
+    {
+      "name": "Mount Buzhou",
+      "facet": "Battles of gods and giants",
+      "known_at": 9
+    },
+    {
+      "name": "Nüba",
+      "facet": "Battles of gods and giants",
+      "known_at": 12
+    },
+    {
+      "name": "Fengbo and Yushi",
+      "facet": "Battles of gods and giants",
+      "known_at": 10
+    },
+    {
+      "name": "Kui drum",
+      "facet": "Battles of gods and giants",
+      "known_at": 11
+    },
+    {
+      "name": "Sun Wukong",
+      "facet": "Battles of gods and giants",
+      "known_at": 1
+    },
+    {
+      "name": "Erlang Shen",
+      "facet": "Battles of gods and giants",
+      "known_at": 5
+    },
+    {
+      "name": "Jade Emperor",
+      "facet": "Battles of gods and giants",
+      "known_at": 3
+    },
+    {
+      "name": "Xiaotian Quan",
+      "facet": "Battles of gods and giants",
+      "known_at": 9
+    },
+    {
+      "name": "Four Heavenly Kings",
+      "facet": "Battles of gods and giants",
+      "known_at": 10
+    },
+    {
+      "name": "Li Jing (Pagoda-Bearing Heavenly King)",
+      "facet": "Battles of gods and giants",
+      "known_at": 8
+    },
+    {
+      "name": "Kunlun Mountain",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 7
+    },
+    {
+      "name": "Penglai",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 8
+    },
+    {
+      "name": "Qilin",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 4
+    },
+    {
+      "name": "Fenghuang",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 3
+    },
+    {
+      "name": "Chinese dragon",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 1
+    },
+    {
+      "name": "Nian",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 3
+    },
+    {
+      "name": "Bai Ze",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 11
+    },
+    {
+      "name": "Taotie",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 10
+    },
+    {
+      "name": "Pixiu",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 7
+    },
+    {
+      "name": "Nine-tailed fox",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 4
+    },
+    {
+      "name": "Four Symbols (四象)",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 6
+    },
+    {
+      "name": "Dragon King",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 3
+    },
+    {
+      "name": "Zhulong (Candle Dragon)",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 12
+    },
+    {
+      "name": "Bifang",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 11
+    },
+    {
+      "name": "Kun and Peng",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 9
+    },
+    {
+      "name": "Jianmu",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 13
+    },
+    {
+      "name": "Ruoshui (Weak River)",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 12
+    },
+    {
+      "name": "Yaochi (Jade Pool)",
+      "facet": "Mythical beasts and sacred places",
+      "known_at": 9
+    },
+    {
+      "name": "Classic of Mountains and Seas (山海经)",
+      "facet": "Ancient myth books and idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Huainanzi",
+      "facet": "Ancient myth books and idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Liezi",
+      "facet": "Ancient myth books and idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Sanwu Liji",
+      "facet": "Ancient myth books and idioms",
+      "known_at": 14
+    },
+    {
+      "name": "Tianwen (天问) poem",
+      "facet": "Ancient myth books and idioms",
+      "known_at": 12
+    },
+    {
+      "name": "Yuan Ke",
+      "facet": "Ancient myth books and idioms",
+      "known_at": 14
+    },
+    {
+      "name": "Soushen Ji",
+      "facet": "Ancient myth books and idioms",
+      "known_at": 13
+    },
+    {
+      "name": "Journey to the West",
+      "facet": "Ancient myth books and idioms",
+      "known_at": 2
+    },
+    {
+      "name": "天衣无缝 (tiān yī wú fèng)",
+      "facet": "Ancient myth books and idioms",
+      "known_at": 8
+    },
+    {
+      "name": "叶公好龙 (yè gōng hào lóng)",
+      "facet": "Ancient myth books and idioms",
+      "known_at": 7
+    },
+    {
+      "name": "画龙点睛 (huà lóng diǎn jīng)",
+      "facet": "Ancient myth books and idioms",
+      "known_at": 6
+    },
+    {
+      "name": "沧海桑田 (cāng hǎi sāng tián)",
+      "facet": "Ancient myth books and idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Shiji (Records of the Grand Historian)",
+      "facet": "Ancient myth books and idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Sima Qian",
+      "facet": "Ancient myth books and idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Chang'e lunar programme",
+      "facet": "Myth names in space missions",
+      "known_at": 5
+    },
+    {
+      "name": "Yutu rover",
+      "facet": "Myth names in space missions",
+      "known_at": 6
+    },
+    {
+      "name": "Tiangong space station",
+      "facet": "Myth names in space missions",
+      "known_at": 5
+    },
+    {
+      "name": "Shenzhou spacecraft",
+      "facet": "Myth names in space missions",
+      "known_at": 4
+    },
+    {
+      "name": "Tianwen-1",
+      "facet": "Myth names in space missions",
+      "known_at": 8
+    },
+    {
+      "name": "Zhurong rover",
+      "facet": "Myth names in space missions",
+      "known_at": 9
+    },
+    {
+      "name": "Queqiao relay satellite",
+      "facet": "Myth names in space missions",
+      "known_at": 11
+    },
+    {
+      "name": "Chang'e 4",
+      "facet": "Myth names in space missions",
+      "known_at": 9
+    },
+    {
+      "name": "Chang'e 5",
+      "facet": "Myth names in space missions",
+      "known_at": 10
+    },
+    {
+      "name": "Chang'e 6",
+      "facet": "Myth names in space missions",
+      "known_at": 11
+    },
+    {
+      "name": "Wukong dark matter satellite",
+      "facet": "Myth names in space missions",
+      "known_at": 13
+    },
+    {
+      "name": "Kuafu-1 solar observatory",
+      "facet": "Myth names in space missions",
+      "known_at": 14
+    },
+    {
+      "name": "Xihe solar satellite",
+      "facet": "Myth names in space missions",
+      "known_at": 14
+    },
+    {
+      "name": "Tianzhou cargo spacecraft",
+      "facet": "Myth names in space missions",
+      "known_at": 9
+    },
+    {
+      "name": "Mengzhou spacecraft",
+      "facet": "Myth names in space missions",
+      "known_at": 12
+    },
+    {
+      "name": "Lanyue lander",
+      "facet": "Myth names in space missions",
+      "known_at": 12
+    },
+    {
+      "name": "Beidou navigation system",
+      "facet": "Myth names in space missions",
+      "known_at": 6
+    },
+    {
+      "name": "Tianhe core module",
+      "facet": "Myth names in space missions",
+      "known_at": 9
+    },
+    {
+      "name": "Wentian module",
+      "facet": "Myth names in space missions",
+      "known_at": 12
+    },
+    {
+      "name": "Ne Zha (2019 film)",
+      "facet": "Myths in films and cartoons",
+      "known_at": 4
+    },
+    {
+      "name": "Havoc in Heaven (1961 animation)",
+      "facet": "Myths in films and cartoons",
+      "known_at": 6
+    },
+    {
+      "name": "Monkey King: Hero Is Back",
+      "facet": "Myths in films and cartoons",
+      "known_at": 6
+    },
+    {
+      "name": "Big Fish & Begonia",
+      "facet": "Myths in films and cartoons",
+      "known_at": 8
+    },
+    {
+      "name": "White Snake (2019 film)",
+      "facet": "Myths in films and cartoons",
+      "known_at": 7
+    },
+    {
+      "name": "Jiang Ziya (2020 film)",
+      "facet": "Myths in films and cartoons",
+      "known_at": 8
+    },
+    {
+      "name": "Over the Moon (2020 film)",
+      "facet": "Myths in films and cartoons",
+      "known_at": 7
+    },
+    {
+      "name": "Black Myth: Wukong",
+      "facet": "Myths in films and cartoons",
+      "known_at": 5
+    },
+    {
+      "name": "Prince Nezha's Triumph Against Dragon King",
+      "facet": "Myths in films and cartoons",
+      "known_at": 7
+    },
+    {
+      "name": "Calabash Brothers",
+      "facet": "Myths in films and cartoons",
+      "known_at": 4
+    },
+    {
+      "name": "Lotus Lantern (1999 film)",
+      "facet": "Myths in films and cartoons",
+      "known_at": 8
+    },
+    {
+      "name": "Little Door Gods",
+      "facet": "Myths in films and cartoons",
+      "known_at": 11
+    },
+    {
+      "name": "New Gods: Yang Jian",
+      "facet": "Myths in films and cartoons",
+      "known_at": 9
+    },
+    {
+      "name": "Creation of the Gods I: Kingdom of Storms",
+      "facet": "Myths in films and cartoons",
+      "known_at": 8
+    },
+    {
+      "name": "Journey to the West (1986 TV series)",
+      "facet": "Myths in films and cartoons",
+      "known_at": 2
+    }
+  ]
+}

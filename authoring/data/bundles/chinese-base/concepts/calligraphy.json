@@ -1,0 +1,972 @@
+{
+  "subcategory": "calligraphy",
+  "facets": [
+    "Four Treasures of the Study",
+    "Brushes, ink and paper making",
+    "Calligraphy script styles",
+    "Wang Xizhi and Wang Xianzhi",
+    "Tang dynasty masters",
+    "Song dynasty masters",
+    "Yuan, Ming and Qing calligraphers",
+    "Famous works and rubbings",
+    "Steles, inscriptions and seals",
+    "Calligraphy techniques and brushwork",
+    "Calligraphy legends and idioms",
+    "Calligraphy in daily life and festivals"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 5,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Ink stick (墨锭)",
+      "facet": "Four Treasures of the Study",
+      "known_at": 4
+    },
+    {
+      "name": "Inkstone (砚台)",
+      "facet": "Four Treasures of the Study",
+      "known_at": 4
+    },
+    {
+      "name": "She inkstone (歙砚)",
+      "facet": "Four Treasures of the Study",
+      "known_at": 13
+    },
+    {
+      "name": "Tao inkstone (洮砚)",
+      "facet": "Four Treasures of the Study",
+      "known_at": 14
+    },
+    {
+      "name": "Chengni inkstone (澄泥砚)",
+      "facet": "Four Treasures of the Study",
+      "known_at": 14
+    },
+    {
+      "name": "Huizhou ink (徽墨)",
+      "facet": "Four Treasures of the Study",
+      "known_at": 11
+    },
+    {
+      "name": "Brush rest (笔架)",
+      "facet": "Four Treasures of the Study",
+      "known_at": 7
+    },
+    {
+      "name": "Brush pot (笔筒)",
+      "facet": "Four Treasures of the Study",
+      "known_at": 5
+    },
+    {
+      "name": "Paperweight (镇纸)",
+      "facet": "Four Treasures of the Study",
+      "known_at": 6
+    },
+    {
+      "name": "Water dropper (水盂)",
+      "facet": "Four Treasures of the Study",
+      "known_at": 10
+    },
+    {
+      "name": "Felt mat (毛毡)",
+      "facet": "Four Treasures of the Study",
+      "known_at": 7
+    },
+    {
+      "name": "Brush washer (笔洗)",
+      "facet": "Four Treasures of the Study",
+      "known_at": 8
+    },
+    {
+      "name": "Seal paste (印泥)",
+      "facet": "Four Treasures of the Study",
+      "known_at": 7
+    },
+    {
+      "name": "Papermaking",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 4
+    },
+    {
+      "name": "Meng Tian",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 12
+    },
+    {
+      "name": "Wolf-hair brush (狼毫)",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 9
+    },
+    {
+      "name": "Goat-hair brush (羊毫)",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 9
+    },
+    {
+      "name": "Rabbit-hair brush (紫毫)",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 12
+    },
+    {
+      "name": "Mixed-hair brush (兼毫)",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 12
+    },
+    {
+      "name": "Pine-soot ink (松烟墨)",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 12
+    },
+    {
+      "name": "Oil-soot ink (油烟墨)",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 13
+    },
+    {
+      "name": "Bottled ink (墨汁)",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 4
+    },
+    {
+      "name": "Animal glue (胶)",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 12
+    },
+    {
+      "name": "Blue sandalwood tree (青檀)",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 13
+    },
+    {
+      "name": "Rice straw",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 10
+    },
+    {
+      "name": "Jingxian (泾县)",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 12
+    },
+    {
+      "name": "Raw xuan paper (生宣)",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 11
+    },
+    {
+      "name": "Sized xuan paper (熟宣)",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 11
+    },
+    {
+      "name": "Bamboo paper (竹纸)",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 12
+    },
+    {
+      "name": "Grinding ink (研墨)",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 5
+    },
+    {
+      "name": "Li Tinggui (李廷珪)",
+      "facet": "Brushes, ink and paper making",
+      "known_at": 14
+    },
+    {
+      "name": "Wild cursive script (狂草)",
+      "facet": "Calligraphy script styles",
+      "known_at": 9
+    },
+    {
+      "name": "Draft cursive script (章草)",
+      "facet": "Calligraphy script styles",
+      "known_at": 13
+    },
+    {
+      "name": "Yan style (颜体)",
+      "facet": "Calligraphy script styles",
+      "known_at": 8
+    },
+    {
+      "name": "Liu style (柳体)",
+      "facet": "Calligraphy script styles",
+      "known_at": 8
+    },
+    {
+      "name": "Ou style (欧体)",
+      "facet": "Calligraphy script styles",
+      "known_at": 9
+    },
+    {
+      "name": "Zhao style (赵体)",
+      "facet": "Calligraphy script styles",
+      "known_at": 10
+    },
+    {
+      "name": "Wei stele style (魏碑)",
+      "facet": "Calligraphy script styles",
+      "known_at": 11
+    },
+    {
+      "name": "Silkworm head and swallow tail (蚕头燕尾)",
+      "facet": "Calligraphy script styles",
+      "known_at": 12
+    },
+    {
+      "name": "Taige style (台阁体)",
+      "facet": "Calligraphy script styles",
+      "known_at": 14
+    },
+    {
+      "name": "Sage of Calligraphy (书圣)",
+      "facet": "Wang Xizhi and Wang Xianzhi",
+      "known_at": 7
+    },
+    {
+      "name": "Two Wangs (二王)",
+      "facet": "Wang Xizhi and Wang Xianzhi",
+      "known_at": 10
+    },
+    {
+      "name": "Orchid Pavilion (兰亭)",
+      "facet": "Wang Xizhi and Wang Xianzhi",
+      "known_at": 9
+    },
+    {
+      "name": "Lady Wei (卫夫人)",
+      "facet": "Wang Xizhi and Wang Xianzhi",
+      "known_at": 12
+    },
+    {
+      "name": "Wang Xizhi's geese",
+      "facet": "Wang Xizhi and Wang Xianzhi",
+      "known_at": 7
+    },
+    {
+      "name": "Ink Pond (墨池)",
+      "facet": "Wang Xizhi and Wang Xianzhi",
+      "known_at": 8
+    },
+    {
+      "name": "Eighteen vats of water (十八缸水)",
+      "facet": "Wang Xizhi and Wang Xianzhi",
+      "known_at": 9
+    },
+    {
+      "name": "Son-in-law on the eastern bed (东床快婿)",
+      "facet": "Wang Xizhi and Wang Xianzhi",
+      "known_at": 12
+    },
+    {
+      "name": "Floating wine cups (曲水流觞)",
+      "facet": "Wang Xizhi and Wang Xianzhi",
+      "known_at": 11
+    },
+    {
+      "name": "Shangsi Festival (上巳节)",
+      "facet": "Wang Xizhi and Wang Xianzhi",
+      "known_at": 12
+    },
+    {
+      "name": "Eastern Jin dynasty",
+      "facet": "Wang Xizhi and Wang Xianzhi",
+      "known_at": 9
+    },
+    {
+      "name": "Emperor Taizong of Tang",
+      "facet": "Wang Xizhi and Wang Xianzhi",
+      "known_at": 8
+    },
+    {
+      "name": "Xiao Yi obtains the Orchid Pavilion (萧翼赚兰亭)",
+      "facet": "Wang Xizhi and Wang Xianzhi",
+      "known_at": 14
+    },
+    {
+      "name": "General of the Right Army (王右军)",
+      "facet": "Wang Xizhi and Wang Xianzhi",
+      "known_at": 12
+    },
+    {
+      "name": "Linyi",
+      "facet": "Wang Xizhi and Wang Xianzhi",
+      "known_at": 12
+    },
+    {
+      "name": "Yu Shinan",
+      "facet": "Tang dynasty masters",
+      "known_at": 12
+    },
+    {
+      "name": "Chu Suiliang",
+      "facet": "Tang dynasty masters",
+      "known_at": 12
+    },
+    {
+      "name": "Xue Ji",
+      "facet": "Tang dynasty masters",
+      "known_at": 14
+    },
+    {
+      "name": "Huaisu",
+      "facet": "Tang dynasty masters",
+      "known_at": 9
+    },
+    {
+      "name": "Sun Guoting",
+      "facet": "Tang dynasty masters",
+      "known_at": 13
+    },
+    {
+      "name": "Li Yong (李邕)",
+      "facet": "Tang dynasty masters",
+      "known_at": 14
+    },
+    {
+      "name": "Emperor Xuanzong of Tang",
+      "facet": "Tang dynasty masters",
+      "known_at": 11
+    },
+    {
+      "name": "Li Bai",
+      "facet": "Tang dynasty masters",
+      "known_at": 3
+    },
+    {
+      "name": "Four Great Masters of Regular Script (楷书四大家)",
+      "facet": "Tang dynasty masters",
+      "known_at": 10
+    },
+    {
+      "name": "Four Great Calligraphers of Early Tang (初唐四家)",
+      "facet": "Tang dynasty masters",
+      "known_at": 13
+    },
+    {
+      "name": "Gongsun Daniang",
+      "facet": "Tang dynasty masters",
+      "known_at": 13
+    },
+    {
+      "name": "Huang Tingjian",
+      "facet": "Song dynasty masters",
+      "known_at": 11
+    },
+    {
+      "name": "Cai Xiang",
+      "facet": "Song dynasty masters",
+      "known_at": 12
+    },
+    {
+      "name": "Four Masters of Song (宋四家)",
+      "facet": "Song dynasty masters",
+      "known_at": 10
+    },
+    {
+      "name": "Mi Fu bows to a rock (米芾拜石)",
+      "facet": "Song dynasty masters",
+      "known_at": 12
+    },
+    {
+      "name": "Yue Fei",
+      "facet": "Song dynasty masters",
+      "known_at": 6
+    },
+    {
+      "name": "Lu You",
+      "facet": "Song dynasty masters",
+      "known_at": 6
+    },
+    {
+      "name": "Zhu Xi",
+      "facet": "Song dynasty masters",
+      "known_at": 10
+    },
+    {
+      "name": "Ouyang Xiu",
+      "facet": "Song dynasty masters",
+      "known_at": 10
+    },
+    {
+      "name": "Cai Jing",
+      "facet": "Song dynasty masters",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Jizhi",
+      "facet": "Song dynasty masters",
+      "known_at": 15
+    },
+    {
+      "name": "Stones pressing toads (石压蛤蟆)",
+      "facet": "Song dynasty masters",
+      "known_at": 13
+    },
+    {
+      "name": "Wen Tianxiang",
+      "facet": "Song dynasty masters",
+      "known_at": 8
+    },
+    {
+      "name": "Xianyu Shu",
+      "facet": "Yuan, Ming and Qing calligraphers",
+      "known_at": 14
+    },
+    {
+      "name": "Dong Qichang",
+      "facet": "Yuan, Ming and Qing calligraphers",
+      "known_at": 12
+    },
+    {
+      "name": "Zhu Yunming",
+      "facet": "Yuan, Ming and Qing calligraphers",
+      "known_at": 11
+    },
+    {
+      "name": "Tang Yin",
+      "facet": "Yuan, Ming and Qing calligraphers",
+      "known_at": 7
+    },
+    {
+      "name": "Xu Wei",
+      "facet": "Yuan, Ming and Qing calligraphers",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Duo",
+      "facet": "Yuan, Ming and Qing calligraphers",
+      "known_at": 13
+    },
+    {
+      "name": "Fu Shan",
+      "facet": "Yuan, Ming and Qing calligraphers",
+      "known_at": 13
+    },
+    {
+      "name": "Zheng Banqiao",
+      "facet": "Yuan, Ming and Qing calligraphers",
+      "known_at": 8
+    },
+    {
+      "name": "Liu Yong (刘墉)",
+      "facet": "Yuan, Ming and Qing calligraphers",
+      "known_at": 9
+    },
+    {
+      "name": "Deng Shiru",
+      "facet": "Yuan, Ming and Qing calligraphers",
+      "known_at": 14
+    },
+    {
+      "name": "He Shaoji",
+      "facet": "Yuan, Ming and Qing calligraphers",
+      "known_at": 14
+    },
+    {
+      "name": "Wu Changshuo",
+      "facet": "Yuan, Ming and Qing calligraphers",
+      "known_at": 12
+    },
+    {
+      "name": "Kang Youwei",
+      "facet": "Yuan, Ming and Qing calligraphers",
+      "known_at": 10
+    },
+    {
+      "name": "Bada Shanren",
+      "facet": "Yuan, Ming and Qing calligraphers",
+      "known_at": 11
+    },
+    {
+      "name": "Jin Nong",
+      "facet": "Yuan, Ming and Qing calligraphers",
+      "known_at": 13
+    },
+    {
+      "name": "Eight Eccentrics of Yangzhou (扬州八怪)",
+      "facet": "Yuan, Ming and Qing calligraphers",
+      "known_at": 11
+    },
+    {
+      "name": "Orchid Pavilion Preface (兰亭集序)",
+      "facet": "Famous works and rubbings",
+      "known_at": 6
+    },
+    {
+      "name": "Shenlong copy of the Orchid Pavilion Preface (神龙本)",
+      "facet": "Famous works and rubbings",
+      "known_at": 13
+    },
+    {
+      "name": "Draft Eulogy for My Nephew (祭侄文稿)",
+      "facet": "Famous works and rubbings",
+      "known_at": 11
+    },
+    {
+      "name": "Cold Food Observance (寒食帖)",
+      "facet": "Famous works and rubbings",
+      "known_at": 12
+    },
+    {
+      "name": "Mysterious Pagoda Stele (玄秘塔碑)",
+      "facet": "Famous works and rubbings",
+      "known_at": 11
+    },
+    {
+      "name": "Duobao Pagoda Stele (多宝塔碑)",
+      "facet": "Famous works and rubbings",
+      "known_at": 11
+    },
+    {
+      "name": "Jiucheng Palace Stele (九成宫醴泉铭)",
+      "facet": "Famous works and rubbings",
+      "known_at": 11
+    },
+    {
+      "name": "Treatise on Calligraphy (书谱)",
+      "facet": "Famous works and rubbings",
+      "known_at": 13
+    },
+    {
+      "name": "Autobiography (自叙帖)",
+      "facet": "Famous works and rubbings",
+      "known_at": 13
+    },
+    {
+      "name": "Timely Clearing after Snowfall (快雪时晴帖)",
+      "facet": "Famous works and rubbings",
+      "known_at": 12
+    },
+    {
+      "name": "Mid-Autumn Letter (中秋帖)",
+      "facet": "Famous works and rubbings",
+      "known_at": 13
+    },
+    {
+      "name": "Letter to Boyuan (伯远帖)",
+      "facet": "Famous works and rubbings",
+      "known_at": 14
+    },
+    {
+      "name": "Hall of Three Rarities (三希堂)",
+      "facet": "Famous works and rubbings",
+      "known_at": 13
+    },
+    {
+      "name": "Four Poems in Ancient Style (古诗四帖)",
+      "facet": "Famous works and rubbings",
+      "known_at": 14
+    },
+    {
+      "name": "Shu Su Tie (蜀素帖)",
+      "facet": "Famous works and rubbings",
+      "known_at": 14
+    },
+    {
+      "name": "Chunhua Pavilion Model Calligraphy (淳化阁帖)",
+      "facet": "Famous works and rubbings",
+      "known_at": 14
+    },
+    {
+      "name": "Preface to the Sacred Teaching (集王圣教序)",
+      "facet": "Famous works and rubbings",
+      "known_at": 14
+    },
+    {
+      "name": "Ink rubbing (拓片)",
+      "facet": "Famous works and rubbings",
+      "known_at": 8
+    },
+    {
+      "name": "Copybook (字帖)",
+      "facet": "Famous works and rubbings",
+      "known_at": 4
+    },
+    {
+      "name": "Xi'an Stele Forest (西安碑林)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 9
+    },
+    {
+      "name": "Stone stele (石碑)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 5
+    },
+    {
+      "name": "Mount Tai inscriptions",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 9
+    },
+    {
+      "name": "Cliff inscriptions (摩崖石刻)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 11
+    },
+    {
+      "name": "Seal (印章)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 3
+    },
+    {
+      "name": "Name seal (姓名章)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 5
+    },
+    {
+      "name": "Leisure seal (闲章)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 12
+    },
+    {
+      "name": "Red-character seal (朱文印)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 12
+    },
+    {
+      "name": "White-character seal (白文印)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 12
+    },
+    {
+      "name": "Shoushan stone (寿山石)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 12
+    },
+    {
+      "name": "Qingtian stone (青田石)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 13
+    },
+    {
+      "name": "Chicken-blood stone (鸡血石)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 12
+    },
+    {
+      "name": "Xiling Seal Art Society (西泠印社)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 13
+    },
+    {
+      "name": "Cao Quan Stele (曹全碑)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 14
+    },
+    {
+      "name": "Zhang Qian Stele (张迁碑)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 14
+    },
+    {
+      "name": "Wordless Stele (无字碑)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 10
+    },
+    {
+      "name": "Heirloom Seal of the Realm (传国玉玺)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 10
+    },
+    {
+      "name": "Twenty Pieces of Longmen (龙门二十品)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 14
+    },
+    {
+      "name": "Colophon (题跋)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 12
+    },
+    {
+      "name": "Dancing Beijing emblem (中国印·舞动的北京)",
+      "facet": "Steles, inscriptions and seals",
+      "known_at": 7
+    },
+    {
+      "name": "Eight Principles of Yong (永字八法)",
+      "facet": "Calligraphy techniques and brushwork",
+      "known_at": 8
+    },
+    {
+      "name": "Centered tip (中锋)",
+      "facet": "Calligraphy techniques and brushwork",
+      "known_at": 11
+    },
+    {
+      "name": "Side tip (侧锋)",
+      "facet": "Calligraphy techniques and brushwork",
+      "known_at": 12
+    },
+    {
+      "name": "Hidden tip (藏锋)",
+      "facet": "Calligraphy techniques and brushwork",
+      "known_at": 12
+    },
+    {
+      "name": "Returning tip (回锋)",
+      "facet": "Calligraphy techniques and brushwork",
+      "known_at": 12
+    },
+    {
+      "name": "Five-finger brush grip (五指执笔法)",
+      "facet": "Calligraphy techniques and brushwork",
+      "known_at": 11
+    },
+    {
+      "name": "Firm fingers, hollow palm (指实掌虚)",
+      "facet": "Calligraphy techniques and brushwork",
+      "known_at": 13
+    },
+    {
+      "name": "Suspended wrist (悬腕)",
+      "facet": "Calligraphy techniques and brushwork",
+      "known_at": 12
+    },
+    {
+      "name": "Flying white (飞白)",
+      "facet": "Calligraphy techniques and brushwork",
+      "known_at": 12
+    },
+    {
+      "name": "Copying from models (临摹)",
+      "facet": "Calligraphy techniques and brushwork",
+      "known_at": 8
+    },
+    {
+      "name": "Tracing in red (描红)",
+      "facet": "Calligraphy techniques and brushwork",
+      "known_at": 4
+    },
+    {
+      "name": "Nine-square grid (九宫格)",
+      "facet": "Calligraphy techniques and brushwork",
+      "known_at": 7
+    },
+    {
+      "name": "Five shades of ink (墨分五色)",
+      "facet": "Calligraphy techniques and brushwork",
+      "known_at": 13
+    },
+    {
+      "name": "Composition of a whole work (章法)",
+      "facet": "Calligraphy techniques and brushwork",
+      "known_at": 13
+    },
+    {
+      "name": "Water-writing cloth (水写布)",
+      "facet": "Calligraphy techniques and brushwork",
+      "known_at": 6
+    },
+    {
+      "name": "Penetrating the wood three fen (入木三分)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Flowers blooming from the brush (妙笔生花)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Crazy Zhang and Drunk Su (颠张醉素)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 13
+    },
+    {
+      "name": "Dragons flying, phoenixes dancing (龙飞凤舞)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Iron strokes and silver hooks (铁画银钩)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 12
+    },
+    {
+      "name": "Handwriting mirrors the person (字如其人)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Throwing down the brush to join the army (投笔从戎)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Brush moving like dragons and snakes (笔走龙蛇)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Not a drop of ink in the chest (胸无点墨)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Xizhi eats ink (王羲之吃墨)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Xizhi writes on the old woman's fans (题扇)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 12
+    },
+    {
+      "name": "Huaisu practising on banana leaves (怀素蕉叶练字)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Tomb of worn-out brushes (退笔冢)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 13
+    },
+    {
+      "name": "Zhiyong's iron threshold (铁门限)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 14
+    },
+    {
+      "name": "A brush as big as a rafter (大笔如椽)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 13
+    },
+    {
+      "name": "An upright heart makes an upright brush (心正则笔正)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 12
+    },
+    {
+      "name": "Paper becomes dear in Luoyang (洛阳纸贵)",
+      "facet": "Calligraphy legends and idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Spring Festival couplets (春联)",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 2
+    },
+    {
+      "name": "Upside-down Fu (倒福)",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 2
+    },
+    {
+      "name": "Horizontal scroll of a couplet (横批)",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 6
+    },
+    {
+      "name": "Double Happiness (囍)",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 2
+    },
+    {
+      "name": "Longevity character (寿)",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 4
+    },
+    {
+      "name": "Red paper",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 3
+    },
+    {
+      "name": "Shop signboard (牌匾)",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 6
+    },
+    {
+      "name": "Water calligraphy in the park (地书)",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 6
+    },
+    {
+      "name": "Hanging scroll (挂轴)",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 6
+    },
+    {
+      "name": "Mounting (装裱)",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Calligraphy fan",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 5
+    },
+    {
+      "name": "School calligraphy class (书法课)",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 3
+    },
+    {
+      "name": "Zhuazhou (抓周)",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 6
+    },
+    {
+      "name": "First writing of the new year (开笔)",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Mao Zedong's calligraphy",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 9
+    },
+    {
+      "name": "Qi Gong",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Chinese calligraphy on the UNESCO intangible heritage list",
+      "facet": "Calligraphy in daily life and festivals",
+      "known_at": 10
+    }
+  ]
+}

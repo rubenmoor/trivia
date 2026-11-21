@@ -1,0 +1,1107 @@
+{
+  "subcategory": "folktales",
+  "facets": [
+    "Four great folktales",
+    "Nezha legends",
+    "Chenxiang and the Lotus Lantern",
+    "Hua Mulan and heroine legends",
+    "Liaozhai ghost and fox tales",
+    "Ancient hero myths",
+    "Festival origin legends",
+    "Animal tales and zodiac race",
+    "Magic objects and wonder tales",
+    "Legends of famous places",
+    "Folktales of China's peoples",
+    "Folktales on stage and screen"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 1,
+      "record": 1,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Cowherd and Weaver Girl",
+      "facet": "Four great folktales",
+      "known_at": 2
+    },
+    {
+      "name": "Niulang",
+      "facet": "Four great folktales",
+      "known_at": 3
+    },
+    {
+      "name": "Zhinü",
+      "facet": "Four great folktales",
+      "known_at": 3
+    },
+    {
+      "name": "Magpie Bridge",
+      "facet": "Four great folktales",
+      "known_at": 3
+    },
+    {
+      "name": "Niulang's old ox",
+      "facet": "Four great folktales",
+      "known_at": 5
+    },
+    {
+      "name": "Queen Mother's hairpin",
+      "facet": "Four great folktales",
+      "known_at": 6
+    },
+    {
+      "name": "Legend of the White Snake",
+      "facet": "Four great folktales",
+      "known_at": 2
+    },
+    {
+      "name": "Bai Suzhen",
+      "facet": "Four great folktales",
+      "known_at": 4
+    },
+    {
+      "name": "Xu Xian",
+      "facet": "Four great folktales",
+      "known_at": 5
+    },
+    {
+      "name": "Xiaoqing",
+      "facet": "Four great folktales",
+      "known_at": 5
+    },
+    {
+      "name": "Fahai",
+      "facet": "Four great folktales",
+      "known_at": 5
+    },
+    {
+      "name": "Broken Bridge",
+      "facet": "Four great folktales",
+      "known_at": 7
+    },
+    {
+      "name": "Flooding of Jinshan Temple",
+      "facet": "Four great folktales",
+      "known_at": 7
+    },
+    {
+      "name": "Realgar wine",
+      "facet": "Four great folktales",
+      "known_at": 8
+    },
+    {
+      "name": "Butterfly Lovers",
+      "facet": "Four great folktales",
+      "known_at": 3
+    },
+    {
+      "name": "Liang Shanbo",
+      "facet": "Four great folktales",
+      "known_at": 5
+    },
+    {
+      "name": "Zhu Yingtai",
+      "facet": "Four great folktales",
+      "known_at": 5
+    },
+    {
+      "name": "Seeing-off over eighteen li",
+      "facet": "Four great folktales",
+      "known_at": 10
+    },
+    {
+      "name": "Meng Jiangnü weeps at the Wall",
+      "facet": "Four great folktales",
+      "known_at": 4
+    },
+    {
+      "name": "Meng Jiangnü",
+      "facet": "Four great folktales",
+      "known_at": 5
+    },
+    {
+      "name": "Fan Xiliang",
+      "facet": "Four great folktales",
+      "known_at": 10
+    },
+    {
+      "name": "Meng Jiangnü Temple",
+      "facet": "Four great folktales",
+      "known_at": 12
+    },
+    {
+      "name": "Nezha conquers the Dragon King",
+      "facet": "Nezha legends",
+      "known_at": 2
+    },
+    {
+      "name": "Nezha",
+      "facet": "Nezha legends",
+      "known_at": 1
+    },
+    {
+      "name": "Li Jing",
+      "facet": "Nezha legends",
+      "known_at": 6
+    },
+    {
+      "name": "Ao Guang",
+      "facet": "Nezha legends",
+      "known_at": 6
+    },
+    {
+      "name": "Ao Bing",
+      "facet": "Nezha legends",
+      "known_at": 3
+    },
+    {
+      "name": "Taiyi Zhenren",
+      "facet": "Nezha legends",
+      "known_at": 4
+    },
+    {
+      "name": "Lady Yin",
+      "facet": "Nezha legends",
+      "known_at": 9
+    },
+    {
+      "name": "Qiankun Circle",
+      "facet": "Nezha legends",
+      "known_at": 3
+    },
+    {
+      "name": "Red Armillary Sash",
+      "facet": "Nezha legends",
+      "known_at": 4
+    },
+    {
+      "name": "Fire-tipped Spear",
+      "facet": "Nezha legends",
+      "known_at": 5
+    },
+    {
+      "name": "Wind Fire Wheels",
+      "facet": "Nezha legends",
+      "known_at": 2
+    },
+    {
+      "name": "Lotus body of Nezha",
+      "facet": "Nezha legends",
+      "known_at": 5
+    },
+    {
+      "name": "Chentang Pass",
+      "facet": "Nezha legends",
+      "known_at": 6
+    },
+    {
+      "name": "Three heads and six arms",
+      "facet": "Nezha legends",
+      "known_at": 4
+    },
+    {
+      "name": "Nezha returns flesh and bones",
+      "facet": "Nezha legends",
+      "known_at": 10
+    },
+    {
+      "name": "Jinzha and Muzha",
+      "facet": "Nezha legends",
+      "known_at": 10
+    },
+    {
+      "name": "Shen Gongbao",
+      "facet": "Nezha legends",
+      "known_at": 6
+    },
+    {
+      "name": "Investiture of the Gods",
+      "facet": "Nezha legends",
+      "known_at": 9
+    },
+    {
+      "name": "Nezha versus Sun Wukong",
+      "facet": "Nezha legends",
+      "known_at": 8
+    },
+    {
+      "name": "Pearl of Chaos",
+      "facet": "Nezha legends",
+      "known_at": 5
+    },
+    {
+      "name": "Chenxiang and the Lotus Lantern",
+      "facet": "Chenxiang and the Lotus Lantern",
+      "known_at": 3
+    },
+    {
+      "name": "Chenxiang",
+      "facet": "Chenxiang and the Lotus Lantern",
+      "known_at": 4
+    },
+    {
+      "name": "Sanshengmu",
+      "facet": "Chenxiang and the Lotus Lantern",
+      "known_at": 6
+    },
+    {
+      "name": "Liu Xiang",
+      "facet": "Chenxiang and the Lotus Lantern",
+      "known_at": 11
+    },
+    {
+      "name": "Lotus Lantern",
+      "facet": "Chenxiang and the Lotus Lantern",
+      "known_at": 4
+    },
+    {
+      "name": "Splitting the Mountain to Save the Mother",
+      "facet": "Chenxiang and the Lotus Lantern",
+      "known_at": 5
+    },
+    {
+      "name": "Axe-Split Rock",
+      "facet": "Chenxiang and the Lotus Lantern",
+      "known_at": 12
+    },
+    {
+      "name": "Chenxiang's axe",
+      "facet": "Chenxiang and the Lotus Lantern",
+      "known_at": 6
+    },
+    {
+      "name": "Qiu'er",
+      "facet": "Chenxiang and the Lotus Lantern",
+      "known_at": 14
+    },
+    {
+      "name": "Wang Guiying",
+      "facet": "Chenxiang and the Lotus Lantern",
+      "known_at": 14
+    },
+    {
+      "name": "Pili Dashen",
+      "facet": "Chenxiang and the Lotus Lantern",
+      "known_at": 13
+    },
+    {
+      "name": "Roaring Celestial Hound",
+      "facet": "Chenxiang and the Lotus Lantern",
+      "known_at": 6
+    },
+    {
+      "name": "Precious Lotus Lantern (TV series)",
+      "facet": "Chenxiang and the Lotus Lantern",
+      "known_at": 9
+    },
+    {
+      "name": "Agarwood",
+      "facet": "Chenxiang and the Lotus Lantern",
+      "known_at": 11
+    },
+    {
+      "name": "Precious Lotus Lantern (opera)",
+      "facet": "Chenxiang and the Lotus Lantern",
+      "known_at": 13
+    },
+    {
+      "name": "Hua Mulan",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 2
+    },
+    {
+      "name": "Ballad of Mulan",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 6
+    },
+    {
+      "name": "Two hares running side by side",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 8
+    },
+    {
+      "name": "Mulan's loom",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 7
+    },
+    {
+      "name": "Northern Wei",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 11
+    },
+    {
+      "name": "Mu Guiying",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 7
+    },
+    {
+      "name": "Yang Family Generals",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 7
+    },
+    {
+      "name": "She Saihua",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 11
+    },
+    {
+      "name": "Women Generals of the Yang Family",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 9
+    },
+    {
+      "name": "Liang Hongyu",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 11
+    },
+    {
+      "name": "Qin Liangyu",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 11
+    },
+    {
+      "name": "Xun Guan",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 12
+    },
+    {
+      "name": "Hongxian",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 13
+    },
+    {
+      "name": "Nie Yinniang",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 12
+    },
+    {
+      "name": "Feng Suzhen",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 11
+    },
+    {
+      "name": "Meng Lijun",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 14
+    },
+    {
+      "name": "Lady Xian",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 13
+    },
+    {
+      "name": "Princess Pingyang",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Lanzhi",
+      "facet": "Hua Mulan and heroine legends",
+      "known_at": 12
+    },
+    {
+      "name": "Pu Songling's Liaozhai",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 6
+    },
+    {
+      "name": "Pu Songling",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 7
+    },
+    {
+      "name": "Pu Songling's tea stall",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 10
+    },
+    {
+      "name": "Nie Xiaoqian",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 7
+    },
+    {
+      "name": "Ning Caichen",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 9
+    },
+    {
+      "name": "Yan Chixia",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 10
+    },
+    {
+      "name": "Lanruo Temple",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 10
+    },
+    {
+      "name": "Tree Demon Granny",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 10
+    },
+    {
+      "name": "Painted Skin",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 7
+    },
+    {
+      "name": "The Taoist of Mount Lao",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 6
+    },
+    {
+      "name": "Wolf (Liaozhai)",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 7
+    },
+    {
+      "name": "The Cricket",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 10
+    },
+    {
+      "name": "Yingning",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 12
+    },
+    {
+      "name": "Xiaocui",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 12
+    },
+    {
+      "name": "Lianxiang",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 13
+    },
+    {
+      "name": "Judge Lu",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 13
+    },
+    {
+      "name": "Rakshasa Sea Market",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 9
+    },
+    {
+      "name": "Xiangyu the peony spirit",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 14
+    },
+    {
+      "name": "Planting a Pear Tree",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 11
+    },
+    {
+      "name": "Fox spirit",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 4
+    },
+    {
+      "name": "Jiaona",
+      "facet": "Liaozhai ghost and fox tales",
+      "known_at": 14
+    },
+    {
+      "name": "Hou Yi shoots the suns",
+      "facet": "Ancient hero myths",
+      "known_at": 2
+    },
+    {
+      "name": "Kuafu chases the sun",
+      "facet": "Ancient hero myths",
+      "known_at": 4
+    },
+    {
+      "name": "Jingwei fills the sea",
+      "facet": "Ancient hero myths",
+      "known_at": 4
+    },
+    {
+      "name": "Yu the Great tames the flood",
+      "facet": "Ancient hero myths",
+      "known_at": 3
+    },
+    {
+      "name": "Yu passes his home three times",
+      "facet": "Ancient hero myths",
+      "known_at": 6
+    },
+    {
+      "name": "Gun steals Xirang",
+      "facet": "Ancient hero myths",
+      "known_at": 10
+    },
+    {
+      "name": "Pangu separates heaven and earth",
+      "facet": "Ancient hero myths",
+      "known_at": 3
+    },
+    {
+      "name": "Gonggong strikes Mount Buzhou",
+      "facet": "Ancient hero myths",
+      "known_at": 8
+    },
+    {
+      "name": "Yugong moves the mountains",
+      "facet": "Ancient hero myths",
+      "known_at": 4
+    },
+    {
+      "name": "Shennong tastes a hundred herbs",
+      "facet": "Ancient hero myths",
+      "known_at": 5
+    },
+    {
+      "name": "Cangjie invents writing",
+      "facet": "Ancient hero myths",
+      "known_at": 5
+    },
+    {
+      "name": "Suiren drills wood for fire",
+      "facet": "Ancient hero myths",
+      "known_at": 6
+    },
+    {
+      "name": "Nine Tripods of Yu",
+      "facet": "Ancient hero myths",
+      "known_at": 11
+    },
+    {
+      "name": "Classic of Mountains and Seas",
+      "facet": "Ancient hero myths",
+      "known_at": 7
+    },
+    {
+      "name": "Chang'e flies to the moon",
+      "facet": "Festival origin legends",
+      "known_at": 1
+    },
+    {
+      "name": "Wu Gang chops the osmanthus",
+      "facet": "Festival origin legends",
+      "known_at": 6
+    },
+    {
+      "name": "Nian beast",
+      "facet": "Festival origin legends",
+      "known_at": 2
+    },
+    {
+      "name": "Firecrackers against Nian",
+      "facet": "Festival origin legends",
+      "known_at": 3
+    },
+    {
+      "name": "Upside-down Fu character",
+      "facet": "Festival origin legends",
+      "known_at": 5
+    },
+    {
+      "name": "Peach-wood charms",
+      "facet": "Festival origin legends",
+      "known_at": 11
+    },
+    {
+      "name": "Door gods Qin Qiong and Yuchi Gong",
+      "facet": "Festival origin legends",
+      "known_at": 10
+    },
+    {
+      "name": "Qu Yuan and zongzi",
+      "facet": "Festival origin legends",
+      "known_at": 3
+    },
+    {
+      "name": "Dragon boat race",
+      "facet": "Festival origin legends",
+      "known_at": 3
+    },
+    {
+      "name": "Cao E",
+      "facet": "Festival origin legends",
+      "known_at": 14
+    },
+    {
+      "name": "Jie Zitui and the Cold Food Festival",
+      "facet": "Festival origin legends",
+      "known_at": 9
+    },
+    {
+      "name": "Mooncake uprising legend",
+      "facet": "Festival origin legends",
+      "known_at": 8
+    },
+    {
+      "name": "Huan Jing and the Double Ninth",
+      "facet": "Festival origin legends",
+      "known_at": 12
+    },
+    {
+      "name": "Laba porridge legend",
+      "facet": "Festival origin legends",
+      "known_at": 8
+    },
+    {
+      "name": "Mulian rescues his mother",
+      "facet": "Festival origin legends",
+      "known_at": 12
+    },
+    {
+      "name": "Dongfang Shuo and Yuanxiao",
+      "facet": "Festival origin legends",
+      "known_at": 12
+    },
+    {
+      "name": "Staying up on New Year's Eve",
+      "facet": "Festival origin legends",
+      "known_at": 3
+    },
+    {
+      "name": "Zodiac race",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 2
+    },
+    {
+      "name": "Rat rides on the ox",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 2
+    },
+    {
+      "name": "Cat and rat feud",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 3
+    },
+    {
+      "name": "Pig comes last",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 3
+    },
+    {
+      "name": "Twelve zodiac animals",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 1
+    },
+    {
+      "name": "Fox borrows the tiger's might",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 4
+    },
+    {
+      "name": "Waiting for a rabbit by the tree stump",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 4
+    },
+    {
+      "name": "Frog at the bottom of the well",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 3
+    },
+    {
+      "name": "Donkey of Guizhou",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 8
+    },
+    {
+      "name": "Mantis stalks the cicada",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 8
+    },
+    {
+      "name": "Snipe and clam",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 7
+    },
+    {
+      "name": "Old horse knows the way",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 7
+    },
+    {
+      "name": "Sai Weng loses his horse",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 7
+    },
+    {
+      "name": "Wolf of Zhongshan",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 7
+    },
+    {
+      "name": "Monkeys fish for the moon",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 2
+    },
+    {
+      "name": "Little Tadpoles Look for Mother",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 1
+    },
+    {
+      "name": "Little Horse Crosses the River",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 2
+    },
+    {
+      "name": "Crow drinks water",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 1
+    },
+    {
+      "name": "Carp leaps over the Dragon Gate",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 5
+    },
+    {
+      "name": "Mending the pen after the sheep are lost",
+      "facet": "Animal tales and zodiac race",
+      "known_at": 5
+    },
+    {
+      "name": "Ma Liang's magic brush",
+      "facet": "Magic objects and wonder tales",
+      "known_at": 2
+    },
+    {
+      "name": "Treasure bowl",
+      "facet": "Magic objects and wonder tales",
+      "known_at": 7
+    },
+    {
+      "name": "Shen Wansan",
+      "facet": "Magic objects and wonder tales",
+      "known_at": 12
+    },
+    {
+      "name": "The Secret of the Magic Gourd",
+      "facet": "Magic objects and wonder tales",
+      "known_at": 6
+    },
+    {
+      "name": "Snail Girl",
+      "facet": "Magic objects and wonder tales",
+      "known_at": 4
+    },
+    {
+      "name": "Dream of the Yellow Millet",
+      "facet": "Magic objects and wonder tales",
+      "known_at": 9
+    },
+    {
+      "name": "Dream of Nanke",
+      "facet": "Magic objects and wonder tales",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Zhi and the rotten axe handle",
+      "facet": "Magic objects and wonder tales",
+      "known_at": 12
+    },
+    {
+      "name": "Demon-revealing mirror",
+      "facet": "Magic objects and wonder tales",
+      "known_at": 6
+    },
+    {
+      "name": "Painting the dragon's eyes",
+      "facet": "Magic objects and wonder tales",
+      "known_at": 5
+    },
+    {
+      "name": "Lu Ban's wooden bird",
+      "facet": "Magic objects and wonder tales",
+      "known_at": 9
+    },
+    {
+      "name": "Yan Shi's automaton",
+      "facet": "Magic objects and wonder tales",
+      "known_at": 14
+    },
+    {
+      "name": "Ten Brothers",
+      "facet": "Magic objects and wonder tales",
+      "known_at": 7
+    },
+    {
+      "name": "Pearl of the dragon",
+      "facet": "Magic objects and wonder tales",
+      "known_at": 6
+    },
+    {
+      "name": "Picture of the Painted Bride",
+      "facet": "Magic objects and wonder tales",
+      "known_at": 12
+    },
+    {
+      "name": "Golden carp of the well",
+      "facet": "Magic objects and wonder tales",
+      "known_at": 13
+    },
+    {
+      "name": "West Lake bright pearl legend",
+      "facet": "Legends of famous places",
+      "known_at": 9
+    },
+    {
+      "name": "Goddess Peak",
+      "facet": "Legends of famous places",
+      "known_at": 9
+    },
+    {
+      "name": "Wangfu Stone",
+      "facet": "Legends of famous places",
+      "known_at": 9
+    },
+    {
+      "name": "Eight Immortals cross the sea",
+      "facet": "Legends of famous places",
+      "known_at": 5
+    },
+    {
+      "name": "Tiger Hill Sword Pond",
+      "facet": "Legends of famous places",
+      "known_at": 12
+    },
+    {
+      "name": "Butterfly Spring",
+      "facet": "Legends of famous places",
+      "known_at": 12
+    },
+    {
+      "name": "Jiuzhaigou mirror legend",
+      "facet": "Legends of famous places",
+      "known_at": 12
+    },
+    {
+      "name": "Empress Wu banishes the peonies",
+      "facet": "Legends of famous places",
+      "known_at": 11
+    },
+    {
+      "name": "Li Bing and Dujiangyan",
+      "facet": "Legends of famous places",
+      "known_at": 10
+    },
+    {
+      "name": "Qiantang tidal bore",
+      "facet": "Legends of famous places",
+      "known_at": 8
+    },
+    {
+      "name": "Hanshan Temple bell",
+      "facet": "Legends of famous places",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Huangshan Flying Rock",
+      "facet": "Legends of famous places",
+      "known_at": 11
+    },
+    {
+      "name": "Lugu Lake Goddess Mountain",
+      "facet": "Legends of famous places",
+      "known_at": 13
+    },
+    {
+      "name": "Jade Maiden Peak",
+      "facet": "Legends of famous places",
+      "known_at": 13
+    },
+    {
+      "name": "Ashima",
+      "facet": "Folktales of China's peoples",
+      "known_at": 8
+    },
+    {
+      "name": "Ye Xian",
+      "facet": "Folktales of China's peoples",
+      "known_at": 11
+    },
+    {
+      "name": "Third Sister Liu",
+      "facet": "Folktales of China's peoples",
+      "known_at": 6
+    },
+    {
+      "name": "King Gesar",
+      "facet": "Folktales of China's peoples",
+      "known_at": 10
+    },
+    {
+      "name": "Jangar",
+      "facet": "Folktales of China's peoples",
+      "known_at": 13
+    },
+    {
+      "name": "Manas",
+      "facet": "Folktales of China's peoples",
+      "known_at": 12
+    },
+    {
+      "name": "Afanti",
+      "facet": "Folktales of China's peoples",
+      "known_at": 5
+    },
+    {
+      "name": "Peacock Princess",
+      "facet": "Folktales of China's peoples",
+      "known_at": 9
+    },
+    {
+      "name": "Water-Splashing Festival legend",
+      "facet": "Folktales of China's peoples",
+      "known_at": 8
+    },
+    {
+      "name": "Torch Festival legend",
+      "facet": "Folktales of China's peoples",
+      "known_at": 10
+    },
+    {
+      "name": "Pan Hu",
+      "facet": "Folktales of China's peoples",
+      "known_at": 13
+    },
+    {
+      "name": "Suho's White Horse",
+      "facet": "Folktales of China's peoples",
+      "known_at": 9
+    },
+    {
+      "name": "Morin khuur",
+      "facet": "Folktales of China's peoples",
+      "known_at": 8
+    },
+    {
+      "name": "Hailibu the hunter",
+      "facet": "Folktales of China's peoples",
+      "known_at": 9
+    },
+    {
+      "name": "Butterfly Mother",
+      "facet": "Folktales of China's peoples",
+      "known_at": 13
+    },
+    {
+      "name": "Golden Flower of the Bai",
+      "facet": "Folktales of China's peoples",
+      "known_at": 12
+    },
+    {
+      "name": "Lusheng",
+      "facet": "Folktales of China's peoples",
+      "known_at": 10
+    },
+    {
+      "name": "Nezha Conquers the Dragon King (1979 film)",
+      "facet": "Folktales on stage and screen",
+      "known_at": 5
+    },
+    {
+      "name": "The Magic Brush (1955 film)",
+      "facet": "Folktales on stage and screen",
+      "known_at": 10
+    },
+    {
+      "name": "New Legend of Madame White Snake",
+      "facet": "Folktales on stage and screen",
+      "known_at": 5
+    },
+    {
+      "name": "Green Snake (1993 film)",
+      "facet": "Folktales on stage and screen",
+      "known_at": 12
+    },
+    {
+      "name": "A Chinese Ghost Story",
+      "facet": "Folktales on stage and screen",
+      "known_at": 9
+    },
+    {
+      "name": "Painted Skin (2008 film)",
+      "facet": "Folktales on stage and screen",
+      "known_at": 10
+    },
+    {
+      "name": "Butterfly Lovers Violin Concerto",
+      "facet": "Folktales on stage and screen",
+      "known_at": 8
+    },
+    {
+      "name": "Mulan (1998 film)",
+      "facet": "Folktales on stage and screen",
+      "known_at": 3
+    },
+    {
+      "name": "Yao-Chinese Folktales",
+      "facet": "Folktales on stage and screen",
+      "known_at": 8
+    },
+    {
+      "name": "Yue opera",
+      "facet": "Folktales on stage and screen",
+      "known_at": 10
+    },
+    {
+      "name": "Huangmei opera",
+      "facet": "Folktales on stage and screen",
+      "known_at": 9
+    },
+    {
+      "name": "Shadow puppetry",
+      "facet": "Folktales on stage and screen",
+      "known_at": 5
+    },
+    {
+      "name": "Legend of Sealed Book",
+      "facet": "Folktales on stage and screen",
+      "known_at": 12
+    },
+    {
+      "name": "Sixty Years of Chinese Fairy Tales?",
+      "facet": "Folktales on stage and screen",
+      "known_at": 15
+    }
+  ]
+}

@@ -1,0 +1,1152 @@
+{
+  "subcategory": "chinese-characters",
+  "facets": [
+    "Pictographs and their origins",
+    "Radicals and character parts",
+    "Strokes and stroke order",
+    "Oracle bones and bronze inscriptions",
+    "Evolution of script styles",
+    "Calligraphy masters and tools",
+    "Myths and classic dictionaries",
+    "Pinyin and romanization",
+    "Zhuyin and tones",
+    "Simplified and traditional characters",
+    "Character counts and records",
+    "Rare scripts and Chinese characters abroad"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 1,
+      "count": 4,
+      "estimate": 4,
+      "record": 3,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 5,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 1,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "日 (sun)",
+      "facet": "Pictographs and their origins",
+      "known_at": 1
+    },
+    {
+      "name": "月 (moon)",
+      "facet": "Pictographs and their origins",
+      "known_at": 1
+    },
+    {
+      "name": "山 (mountain)",
+      "facet": "Pictographs and their origins",
+      "known_at": 1
+    },
+    {
+      "name": "水 (water)",
+      "facet": "Pictographs and their origins",
+      "known_at": 2
+    },
+    {
+      "name": "火 (fire)",
+      "facet": "Pictographs and their origins",
+      "known_at": 1
+    },
+    {
+      "name": "木 (tree)",
+      "facet": "Pictographs and their origins",
+      "known_at": 2
+    },
+    {
+      "name": "人 (person)",
+      "facet": "Pictographs and their origins",
+      "known_at": 1
+    },
+    {
+      "name": "口 (mouth)",
+      "facet": "Pictographs and their origins",
+      "known_at": 2
+    },
+    {
+      "name": "目 (eye)",
+      "facet": "Pictographs and their origins",
+      "known_at": 3
+    },
+    {
+      "name": "马 (horse)",
+      "facet": "Pictographs and their origins",
+      "known_at": 3
+    },
+    {
+      "name": "鱼 (fish)",
+      "facet": "Pictographs and their origins",
+      "known_at": 3
+    },
+    {
+      "name": "鸟 (bird)",
+      "facet": "Pictographs and their origins",
+      "known_at": 3
+    },
+    {
+      "name": "羊 (sheep)",
+      "facet": "Pictographs and their origins",
+      "known_at": 3
+    },
+    {
+      "name": "雨 (rain)",
+      "facet": "Pictographs and their origins",
+      "known_at": 3
+    },
+    {
+      "name": "门 (door)",
+      "facet": "Pictographs and their origins",
+      "known_at": 3
+    },
+    {
+      "name": "车 (cart)",
+      "facet": "Pictographs and their origins",
+      "known_at": 4
+    },
+    {
+      "name": "象 (elephant)",
+      "facet": "Pictographs and their origins",
+      "known_at": 6
+    },
+    {
+      "name": "龟 (turtle)",
+      "facet": "Pictographs and their origins",
+      "known_at": 6
+    },
+    {
+      "name": "田 (field)",
+      "facet": "Pictographs and their origins",
+      "known_at": 3
+    },
+    {
+      "name": "女 (woman)",
+      "facet": "Pictographs and their origins",
+      "known_at": 4
+    },
+    {
+      "name": "Pictograph (象形字)",
+      "facet": "Pictographs and their origins",
+      "known_at": 5
+    },
+    {
+      "name": "Indicative character (指事字)",
+      "facet": "Pictographs and their origins",
+      "known_at": 9
+    },
+    {
+      "name": "Compound ideograph (会意字)",
+      "facet": "Pictographs and their origins",
+      "known_at": 7
+    },
+    {
+      "name": "Phono-semantic compound (形声字)",
+      "facet": "Pictographs and their origins",
+      "known_at": 7
+    },
+    {
+      "name": "Water radical 氵",
+      "facet": "Radicals and character parts",
+      "known_at": 2
+    },
+    {
+      "name": "Grass radical 艹",
+      "facet": "Radicals and character parts",
+      "known_at": 3
+    },
+    {
+      "name": "Hand radical 扌",
+      "facet": "Radicals and character parts",
+      "known_at": 3
+    },
+    {
+      "name": "Person radical 亻",
+      "facet": "Radicals and character parts",
+      "known_at": 3
+    },
+    {
+      "name": "Heart radical 忄",
+      "facet": "Radicals and character parts",
+      "known_at": 4
+    },
+    {
+      "name": "Speech radical 讠",
+      "facet": "Radicals and character parts",
+      "known_at": 4
+    },
+    {
+      "name": "Metal radical 钅",
+      "facet": "Radicals and character parts",
+      "known_at": 4
+    },
+    {
+      "name": "Silk radical 纟",
+      "facet": "Radicals and character parts",
+      "known_at": 4
+    },
+    {
+      "name": "Fire radical 灬",
+      "facet": "Radicals and character parts",
+      "known_at": 5
+    },
+    {
+      "name": "Earth radical 土",
+      "facet": "Radicals and character parts",
+      "known_at": 3
+    },
+    {
+      "name": "Insect radical 虫",
+      "facet": "Radicals and character parts",
+      "known_at": 4
+    },
+    {
+      "name": "Sickness radical 疒",
+      "facet": "Radicals and character parts",
+      "known_at": 6
+    },
+    {
+      "name": "Dog radical 犭",
+      "facet": "Radicals and character parts",
+      "known_at": 5
+    },
+    {
+      "name": "Bamboo radical ⺮",
+      "facet": "Radicals and character parts",
+      "known_at": 5
+    },
+    {
+      "name": "Ear-shaped radical 阝",
+      "facet": "Radicals and character parts",
+      "known_at": 6
+    },
+    {
+      "name": "Walking radical 辶",
+      "facet": "Radicals and character parts",
+      "known_at": 5
+    },
+    {
+      "name": "Shell radical 贝",
+      "facet": "Radicals and character parts",
+      "known_at": 6
+    },
+    {
+      "name": "Moon/flesh radical 月",
+      "facet": "Radicals and character parts",
+      "known_at": 8
+    },
+    {
+      "name": "Kangxi radicals (214)",
+      "facet": "Radicals and character parts",
+      "known_at": 11
+    },
+    {
+      "name": "Semantic component (形旁)",
+      "facet": "Radicals and character parts",
+      "known_at": 7
+    },
+    {
+      "name": "Phonetic component (声旁)",
+      "facet": "Radicals and character parts",
+      "known_at": 7
+    },
+    {
+      "name": "Radical index (部首检字)",
+      "facet": "Radicals and character parts",
+      "known_at": 4
+    },
+    {
+      "name": "Horizontal stroke 横",
+      "facet": "Strokes and stroke order",
+      "known_at": 1
+    },
+    {
+      "name": "Vertical stroke 竖",
+      "facet": "Strokes and stroke order",
+      "known_at": 1
+    },
+    {
+      "name": "Left-falling stroke 撇",
+      "facet": "Strokes and stroke order",
+      "known_at": 2
+    },
+    {
+      "name": "Right-falling stroke 捺",
+      "facet": "Strokes and stroke order",
+      "known_at": 2
+    },
+    {
+      "name": "Dot stroke 点",
+      "facet": "Strokes and stroke order",
+      "known_at": 1
+    },
+    {
+      "name": "Rising stroke 提",
+      "facet": "Strokes and stroke order",
+      "known_at": 3
+    },
+    {
+      "name": "Hook stroke 钩",
+      "facet": "Strokes and stroke order",
+      "known_at": 3
+    },
+    {
+      "name": "Turning stroke 折",
+      "facet": "Strokes and stroke order",
+      "known_at": 3
+    },
+    {
+      "name": "Eight principles of 永 (永字八法)",
+      "facet": "Strokes and stroke order",
+      "known_at": 9
+    },
+    {
+      "name": "Stroke count",
+      "facet": "Strokes and stroke order",
+      "known_at": 2
+    },
+    {
+      "name": "Horizontal before vertical (先横后竖)",
+      "facet": "Strokes and stroke order",
+      "known_at": 3
+    },
+    {
+      "name": "Top to bottom, left to right (从上到下，从左到右)",
+      "facet": "Strokes and stroke order",
+      "known_at": 3
+    },
+    {
+      "name": "Outside before inside, close last (先里头后封口)",
+      "facet": "Strokes and stroke order",
+      "known_at": 4
+    },
+    {
+      "name": "Tian-character grid (田字格)",
+      "facet": "Strokes and stroke order",
+      "known_at": 1
+    },
+    {
+      "name": "Mi-character grid (米字格)",
+      "facet": "Strokes and stroke order",
+      "known_at": 5
+    },
+    {
+      "name": "Wubi input method (五笔)",
+      "facet": "Strokes and stroke order",
+      "known_at": 10
+    },
+    {
+      "name": "Stroke input method (笔画输入)",
+      "facet": "Strokes and stroke order",
+      "known_at": 7
+    },
+    {
+      "name": "Stroke names chant (笔画名称)",
+      "facet": "Strokes and stroke order",
+      "known_at": 3
+    },
+    {
+      "name": "Oracle bones (甲骨)",
+      "facet": "Oracle bones and bronze inscriptions",
+      "known_at": 5
+    },
+    {
+      "name": "Turtle plastrons",
+      "facet": "Oracle bones and bronze inscriptions",
+      "known_at": 6
+    },
+    {
+      "name": "Ox shoulder blades",
+      "facet": "Oracle bones and bronze inscriptions",
+      "known_at": 8
+    },
+    {
+      "name": "Yinxu (殷墟)",
+      "facet": "Oracle bones and bronze inscriptions",
+      "known_at": 8
+    },
+    {
+      "name": "Dragon bones (龙骨) medicine",
+      "facet": "Oracle bones and bronze inscriptions",
+      "known_at": 9
+    },
+    {
+      "name": "Divination (占卜)",
+      "facet": "Oracle bones and bronze inscriptions",
+      "known_at": 7
+    },
+    {
+      "name": "Mao Gong Ding (毛公鼎)",
+      "facet": "Oracle bones and bronze inscriptions",
+      "known_at": 13
+    },
+    {
+      "name": "Ding (鼎) ritual vessel",
+      "facet": "Oracle bones and bronze inscriptions",
+      "known_at": 6
+    },
+    {
+      "name": "Western Zhou",
+      "facet": "Oracle bones and bronze inscriptions",
+      "known_at": 7
+    },
+    {
+      "name": "Four Hall scholars of oracle bones (甲骨四堂)",
+      "facet": "Oracle bones and bronze inscriptions",
+      "known_at": 14
+    },
+    {
+      "name": "National Museum of Chinese Writing (中国文字博物馆)",
+      "facet": "Oracle bones and bronze inscriptions",
+      "known_at": 12
+    },
+    {
+      "name": "Seal script (篆书)",
+      "facet": "Evolution of script styles",
+      "known_at": 7
+    },
+    {
+      "name": "Small seal script (小篆)",
+      "facet": "Evolution of script styles",
+      "known_at": 9
+    },
+    {
+      "name": "Clerical script (隶书)",
+      "facet": "Evolution of script styles",
+      "known_at": 8
+    },
+    {
+      "name": "Regular script (楷书)",
+      "facet": "Evolution of script styles",
+      "known_at": 6
+    },
+    {
+      "name": "Running script (行书)",
+      "facet": "Evolution of script styles",
+      "known_at": 7
+    },
+    {
+      "name": "Cursive script (草书)",
+      "facet": "Evolution of script styles",
+      "known_at": 6
+    },
+    {
+      "name": "Unified writing under Qin (书同文)",
+      "facet": "Evolution of script styles",
+      "known_at": 7
+    },
+    {
+      "name": "Li Si",
+      "facet": "Evolution of script styles",
+      "known_at": 10
+    },
+    {
+      "name": "Stone drum inscriptions (石鼓文)",
+      "facet": "Evolution of script styles",
+      "known_at": 13
+    },
+    {
+      "name": "Song typeface (宋体)",
+      "facet": "Evolution of script styles",
+      "known_at": 7
+    },
+    {
+      "name": "Silk manuscripts (帛书)",
+      "facet": "Evolution of script styles",
+      "known_at": 10
+    },
+    {
+      "name": "Bi Sheng",
+      "facet": "Evolution of script styles",
+      "known_at": 7
+    },
+    {
+      "name": "Movable type printing",
+      "facet": "Evolution of script styles",
+      "known_at": 5
+    },
+    {
+      "name": "Seal carving (篆刻)",
+      "facet": "Evolution of script styles",
+      "known_at": 8
+    },
+    {
+      "name": "Xi'an Stele Forest (碑林)",
+      "facet": "Evolution of script styles",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Xizhi",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 5
+    },
+    {
+      "name": "Preface to the Orchid Pavilion (兰亭集序)",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 8
+    },
+    {
+      "name": "Wang Xianzhi",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 11
+    },
+    {
+      "name": "Yan Zhenqing",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 9
+    },
+    {
+      "name": "Liu Gongquan",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 10
+    },
+    {
+      "name": "Zhao Mengfu",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 12
+    },
+    {
+      "name": "Su Shi",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 6
+    },
+    {
+      "name": "Mi Fu",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Xu",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 12
+    },
+    {
+      "name": "Huai Su",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 13
+    },
+    {
+      "name": "Slender gold script (瘦金体)",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 11
+    },
+    {
+      "name": "Emperor Huizong of Song",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 10
+    },
+    {
+      "name": "Four Treasures of the Study (文房四宝)",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 5
+    },
+    {
+      "name": "Writing brush (毛笔)",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 1
+    },
+    {
+      "name": "Ink stick (墨)",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 4
+    },
+    {
+      "name": "Xuan paper (宣纸)",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 6
+    },
+    {
+      "name": "Inkstone (砚)",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 4
+    },
+    {
+      "name": "Huzhou brush (湖笔)",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 12
+    },
+    {
+      "name": "Duan inkstone (端砚)",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 12
+    },
+    {
+      "name": "Cai Lun",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 5
+    },
+    {
+      "name": "Yan's sinews, Liu's bones (颜筋柳骨)",
+      "facet": "Calligraphy masters and tools",
+      "known_at": 11
+    },
+    {
+      "name": "Cangjie input method",
+      "facet": "Myths and classic dictionaries",
+      "known_at": 11
+    },
+    {
+      "name": "Knotted cords (结绳记事)",
+      "facet": "Myths and classic dictionaries",
+      "known_at": 7
+    },
+    {
+      "name": "Shuowen Jiezi (说文解字)",
+      "facet": "Myths and classic dictionaries",
+      "known_at": 9
+    },
+    {
+      "name": "Xu Shen",
+      "facet": "Myths and classic dictionaries",
+      "known_at": 11
+    },
+    {
+      "name": "Kangxi Dictionary (康熙字典)",
+      "facet": "Myths and classic dictionaries",
+      "known_at": 7
+    },
+    {
+      "name": "Erya (尔雅)",
+      "facet": "Myths and classic dictionaries",
+      "known_at": 12
+    },
+    {
+      "name": "Xinhua Dictionary (新华字典)",
+      "facet": "Myths and classic dictionaries",
+      "known_at": 2
+    },
+    {
+      "name": "Modern Chinese Dictionary (现代汉语词典)",
+      "facet": "Myths and classic dictionaries",
+      "known_at": 6
+    },
+    {
+      "name": "Qieyun (切韵)",
+      "facet": "Myths and classic dictionaries",
+      "known_at": 14
+    },
+    {
+      "name": "Fanqie (反切)",
+      "facet": "Myths and classic dictionaries",
+      "known_at": 12
+    },
+    {
+      "name": "Thousand Character Classic (千字文)",
+      "facet": "Myths and classic dictionaries",
+      "known_at": 7
+    },
+    {
+      "name": "Hundred Family Surnames (百家姓)",
+      "facet": "Myths and classic dictionaries",
+      "known_at": 4
+    },
+    {
+      "name": "Hanyu Da Zidian (汉语大字典)",
+      "facet": "Myths and classic dictionaries",
+      "known_at": 13
+    },
+    {
+      "name": "Heaven rained millet, ghosts wept at night (天雨粟，鬼夜哭)",
+      "facet": "Myths and classic dictionaries",
+      "known_at": 12
+    },
+    {
+      "name": "Hanyu Pinyin",
+      "facet": "Pinyin and romanization",
+      "known_at": 2
+    },
+    {
+      "name": "Zhou Youguang",
+      "facet": "Pinyin and romanization",
+      "known_at": 11
+    },
+    {
+      "name": "Scheme for the Chinese Phonetic Alphabet (1958)",
+      "facet": "Pinyin and romanization",
+      "known_at": 10
+    },
+    {
+      "name": "Wade–Giles",
+      "facet": "Pinyin and romanization",
+      "known_at": 12
+    },
+    {
+      "name": "Peking (old spelling of Beijing)",
+      "facet": "Pinyin and romanization",
+      "known_at": 8
+    },
+    {
+      "name": "Matteo Ricci",
+      "facet": "Pinyin and romanization",
+      "known_at": 10
+    },
+    {
+      "name": "Postal romanization",
+      "facet": "Pinyin and romanization",
+      "known_at": 13
+    },
+    {
+      "name": "Tsingtao (old spelling of Qingdao)",
+      "facet": "Pinyin and romanization",
+      "known_at": 9
+    },
+    {
+      "name": "ISO 7098",
+      "facet": "Pinyin and romanization",
+      "known_at": 14
+    },
+    {
+      "name": "Pinyin input method",
+      "facet": "Pinyin and romanization",
+      "known_at": 3
+    },
+    {
+      "name": "Tone marks",
+      "facet": "Pinyin and romanization",
+      "known_at": 2
+    },
+    {
+      "name": "ü (u with two dots)",
+      "facet": "Pinyin and romanization",
+      "known_at": 2
+    },
+    {
+      "name": "Initials (声母)",
+      "facet": "Pinyin and romanization",
+      "known_at": 2
+    },
+    {
+      "name": "Finals (韵母)",
+      "facet": "Pinyin and romanization",
+      "known_at": 2
+    },
+    {
+      "name": "Whole-syllable readings (整体认读音节)",
+      "facet": "Pinyin and romanization",
+      "known_at": 3
+    },
+    {
+      "name": "Gwoyeu Romatzyh",
+      "facet": "Pinyin and romanization",
+      "known_at": 15
+    },
+    {
+      "name": "Latinxua Sin Wenz",
+      "facet": "Pinyin and romanization",
+      "known_at": 15
+    },
+    {
+      "name": "Tongyong Pinyin",
+      "facet": "Pinyin and romanization",
+      "known_at": 14
+    },
+    {
+      "name": "Jyutping (Cantonese romanization)",
+      "facet": "Pinyin and romanization",
+      "known_at": 13
+    },
+    {
+      "name": "Yale romanization",
+      "facet": "Pinyin and romanization",
+      "known_at": 15
+    },
+    {
+      "name": "Zhuyin (Bopomofo)",
+      "facet": "Zhuyin and tones",
+      "known_at": 7
+    },
+    {
+      "name": "ㄅㄆㄇㄈ",
+      "facet": "Zhuyin and tones",
+      "known_at": 8
+    },
+    {
+      "name": "Zhuyin keyboard",
+      "facet": "Zhuyin and tones",
+      "known_at": 10
+    },
+    {
+      "name": "Zhang Binglin",
+      "facet": "Zhuyin and tones",
+      "known_at": 13
+    },
+    {
+      "name": "Four tones of Mandarin",
+      "facet": "Zhuyin and tones",
+      "known_at": 2
+    },
+    {
+      "name": "First tone (阴平)",
+      "facet": "Zhuyin and tones",
+      "known_at": 4
+    },
+    {
+      "name": "Second tone (阳平)",
+      "facet": "Zhuyin and tones",
+      "known_at": 4
+    },
+    {
+      "name": "Third tone (上声)",
+      "facet": "Zhuyin and tones",
+      "known_at": 4
+    },
+    {
+      "name": "Fourth tone (去声)",
+      "facet": "Zhuyin and tones",
+      "known_at": 4
+    },
+    {
+      "name": "Neutral tone (轻声)",
+      "facet": "Zhuyin and tones",
+      "known_at": 4
+    },
+    {
+      "name": "Third-tone sandhi",
+      "facet": "Zhuyin and tones",
+      "known_at": 6
+    },
+    {
+      "name": "Tone change of 一",
+      "facet": "Zhuyin and tones",
+      "known_at": 5
+    },
+    {
+      "name": "Tone change of 不",
+      "facet": "Zhuyin and tones",
+      "known_at": 5
+    },
+    {
+      "name": "mā má mǎ mà",
+      "facet": "Zhuyin and tones",
+      "known_at": 2
+    },
+    {
+      "name": "Entering tone (入声)",
+      "facet": "Zhuyin and tones",
+      "known_at": 12
+    },
+    {
+      "name": "Shen Yue",
+      "facet": "Zhuyin and tones",
+      "known_at": 14
+    },
+    {
+      "name": "Cantonese tones",
+      "facet": "Zhuyin and tones",
+      "known_at": 10
+    },
+    {
+      "name": "Erhua (儿化)",
+      "facet": "Zhuyin and tones",
+      "known_at": 5
+    },
+    {
+      "name": "Simplified Chinese characters",
+      "facet": "Simplified and traditional characters",
+      "known_at": 3
+    },
+    {
+      "name": "Traditional Chinese characters",
+      "facet": "Simplified and traditional characters",
+      "known_at": 4
+    },
+    {
+      "name": "Chinese Character Simplification Scheme (1956)",
+      "facet": "Simplified and traditional characters",
+      "known_at": 10
+    },
+    {
+      "name": "General List of Simplified Characters (1964)",
+      "facet": "Simplified and traditional characters",
+      "known_at": 13
+    },
+    {
+      "name": "Second-round simplification (1977)",
+      "facet": "Simplified and traditional characters",
+      "known_at": 13
+    },
+    {
+      "name": "Table of General Standard Chinese Characters (2013)",
+      "facet": "Simplified and traditional characters",
+      "known_at": 13
+    },
+    {
+      "name": "龙 / 龍",
+      "facet": "Simplified and traditional characters",
+      "known_at": 5
+    },
+    {
+      "name": "国 / 國",
+      "facet": "Simplified and traditional characters",
+      "known_at": 5
+    },
+    {
+      "name": "爱 / 愛",
+      "facet": "Simplified and traditional characters",
+      "known_at": 6
+    },
+    {
+      "name": "门 / 門",
+      "facet": "Simplified and traditional characters",
+      "known_at": 5
+    },
+    {
+      "name": "马 / 馬",
+      "facet": "Simplified and traditional characters",
+      "known_at": 5
+    },
+    {
+      "name": "书 / 書",
+      "facet": "Simplified and traditional characters",
+      "known_at": 7
+    },
+    {
+      "name": "汉 / 漢",
+      "facet": "Simplified and traditional characters",
+      "known_at": 7
+    },
+    {
+      "name": "云 / 雲",
+      "facet": "Simplified and traditional characters",
+      "known_at": 8
+    },
+    {
+      "name": "Variant characters (异体字)",
+      "facet": "Simplified and traditional characters",
+      "known_at": 10
+    },
+    {
+      "name": "Taiwan",
+      "facet": "Simplified and traditional characters",
+      "known_at": 3
+    },
+    {
+      "name": "Singapore",
+      "facet": "Simplified and traditional characters",
+      "known_at": 5
+    },
+    {
+      "name": "Malaysia",
+      "facet": "Simplified and traditional characters",
+      "known_at": 8
+    },
+    {
+      "name": "Biáng (biangbiang noodles)",
+      "facet": "Character counts and records",
+      "known_at": 7
+    },
+    {
+      "name": "齉 (nàng)",
+      "facet": "Character counts and records",
+      "known_at": 13
+    },
+    {
+      "name": "龘 (dá)",
+      "facet": "Character counts and records",
+      "known_at": 11
+    },
+    {
+      "name": "𪚥 (zhé, four dragons)",
+      "facet": "Character counts and records",
+      "known_at": 15
+    },
+    {
+      "name": "爨 (cuàn)",
+      "facet": "Character counts and records",
+      "known_at": 13
+    },
+    {
+      "name": "一 (simplest character)",
+      "facet": "Character counts and records",
+      "known_at": 1
+    },
+    {
+      "name": "的 (most frequent character)",
+      "facet": "Character counts and records",
+      "known_at": 6
+    },
+    {
+      "name": "〇 (líng)",
+      "facet": "Character counts and records",
+      "known_at": 9
+    },
+    {
+      "name": "3,500 common characters",
+      "facet": "Character counts and records",
+      "known_at": 9
+    },
+    {
+      "name": "Zhonghua Zihai (中华字海)",
+      "facet": "Character counts and records",
+      "known_at": 14
+    },
+    {
+      "name": "Unicode CJK characters",
+      "facet": "Character counts and records",
+      "known_at": 13
+    },
+    {
+      "name": "Literacy campaign (扫盲运动)",
+      "facet": "Character counts and records",
+      "known_at": 9
+    },
+    {
+      "name": "Chinese Characters Dictation Competition (中国汉字听写大会)",
+      "facet": "Character counts and records",
+      "known_at": 8
+    },
+    {
+      "name": "Chinese character of the year (年度汉字)",
+      "facet": "Character counts and records",
+      "known_at": 11
+    },
+    {
+      "name": "Yongle Encyclopedia (永乐大典)",
+      "facet": "Character counts and records",
+      "known_at": 10
+    },
+    {
+      "name": "Number of Chinese characters in total",
+      "facet": "Character counts and records",
+      "known_at": 8
+    },
+    {
+      "name": "Nüshu (女书)",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 10
+    },
+    {
+      "name": "Jiangyong County",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 14
+    },
+    {
+      "name": "Dongba script (Naxi)",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 10
+    },
+    {
+      "name": "Tangut script (西夏文)",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 12
+    },
+    {
+      "name": "Khitan script (契丹文)",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 13
+    },
+    {
+      "name": "Jurchen script (女真文)",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 13
+    },
+    {
+      "name": "'Phags-pa script (八思巴文)",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 14
+    },
+    {
+      "name": "Manchu script",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 10
+    },
+    {
+      "name": "Traditional Mongolian script",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 9
+    },
+    {
+      "name": "Yi script",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 12
+    },
+    {
+      "name": "Tibetan script",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 9
+    },
+    {
+      "name": "Shui script (水书)",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 14
+    },
+    {
+      "name": "Sawndip (Old Zhuang script)",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 14
+    },
+    {
+      "name": "Kanji",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 6
+    },
+    {
+      "name": "Hiragana",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 8
+    },
+    {
+      "name": "Kokuji (Japanese-made characters)",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 13
+    },
+    {
+      "name": "Hanja",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 10
+    },
+    {
+      "name": "Hangul",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 7
+    },
+    {
+      "name": "King Sejong",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 10
+    },
+    {
+      "name": "Chữ Nôm",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 13
+    },
+    {
+      "name": "Book from the Sky (天书) by Xu Bing",
+      "facet": "Rare scripts and Chinese characters abroad",
+      "known_at": 14
+    }
+  ]
+}

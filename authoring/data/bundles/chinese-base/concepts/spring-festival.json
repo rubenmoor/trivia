@@ -1,0 +1,1102 @@
+{
+  "subcategory": "spring-festival",
+  "facets": [
+    "Legends and the Nian beast",
+    "Xiaonian and the Kitchen God",
+    "Spring couplets, fu and paper-cuts",
+    "Red packets and New Year money",
+    "Reunion dinner on New Year's Eve",
+    "Lucky New Year foods",
+    "Firecrackers, fireworks and lanterns",
+    "Staying up and greeting the New Year",
+    "Days one to five customs",
+    "Chunyun travel rush",
+    "Zodiac animals and the lunar calendar",
+    "Spring Festival Gala, poems and sayings"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Nian beast (年兽)",
+      "facet": "Legends and the Nian beast",
+      "known_at": 2
+    },
+    {
+      "name": "Xi beast (夕)",
+      "facet": "Legends and the Nian beast",
+      "known_at": 9
+    },
+    {
+      "name": "Sui demon (祟)",
+      "facet": "Legends and the Nian beast",
+      "known_at": 8
+    },
+    {
+      "name": "Color red",
+      "facet": "Legends and the Nian beast",
+      "known_at": 2
+    },
+    {
+      "name": "Door gods (门神)",
+      "facet": "Legends and the Nian beast",
+      "known_at": 4
+    },
+    {
+      "name": "Jade Emperor (玉皇大帝)",
+      "facet": "Legends and the Nian beast",
+      "known_at": 4
+    },
+    {
+      "name": "Zhong Kui (钟馗)",
+      "facet": "Legends and the Nian beast",
+      "known_at": 9
+    },
+    {
+      "name": "Qin Qiong and Yuchi Gong (秦琼、尉迟恭)",
+      "facet": "Legends and the Nian beast",
+      "known_at": 10
+    },
+    {
+      "name": "Shen Tu and Yu Lei (神荼、郁垒)",
+      "facet": "Legends and the Nian beast",
+      "known_at": 12
+    },
+    {
+      "name": "Peach-wood charms (桃符)",
+      "facet": "Legends and the Nian beast",
+      "known_at": 9
+    },
+    {
+      "name": "Nuo exorcism (傩)",
+      "facet": "Legends and the Nian beast",
+      "known_at": 13
+    },
+    {
+      "name": "Wan Nian calendar legend (万年)",
+      "facet": "Legends and the Nian beast",
+      "known_at": 13
+    },
+    {
+      "name": "Tusu wine (屠苏酒)",
+      "facet": "Legends and the Nian beast",
+      "known_at": 11
+    },
+    {
+      "name": "Sun Simiao (孙思邈)",
+      "facet": "Legends and the Nian beast",
+      "known_at": 11
+    },
+    {
+      "name": "Guo nian (过年)",
+      "facet": "Legends and the Nian beast",
+      "known_at": 3
+    },
+    {
+      "name": "Chuxi (除夕)",
+      "facet": "Legends and the Nian beast",
+      "known_at": 4
+    },
+    {
+      "name": "Kitchen God (灶王爷)",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 4
+    },
+    {
+      "name": "Xiaonian (小年)",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 4
+    },
+    {
+      "name": "Kitchen God's wife (灶王奶奶)",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 10
+    },
+    {
+      "name": "Malt sugar melons (糖瓜)",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 7
+    },
+    {
+      "name": "Guandong candy (关东糖)",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 9
+    },
+    {
+      "name": "Seeing off the Kitchen God (送灶)",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 8
+    },
+    {
+      "name": "Welcoming back the Kitchen God (接灶)",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 11
+    },
+    {
+      "name": "Southern Xiaonian",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 10
+    },
+    {
+      "name": "Laba Festival (腊八节)",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 4
+    },
+    {
+      "name": "Laba congee (腊八粥)",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 3
+    },
+    {
+      "name": "Laba garlic (腊八蒜)",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 7
+    },
+    {
+      "name": "Spring cleaning (扫尘)",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 4
+    },
+    {
+      "name": "Twelfth lunar month (腊月)",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 5
+    },
+    {
+      "name": "New Year countdown rhyme (二十三，糖瓜粘)",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 8
+    },
+    {
+      "name": "Stove (灶台)",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 6
+    },
+    {
+      "name": "Slaughtering the New Year pig (杀年猪)",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 8
+    },
+    {
+      "name": "Shopping for New Year goods (办年货)",
+      "facet": "Xiaonian and the Kitchen God",
+      "known_at": 4
+    },
+    {
+      "name": "Spring couplets (春联)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 2
+    },
+    {
+      "name": "Fu character (福)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 1
+    },
+    {
+      "name": "Upside-down fu (福)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 2
+    },
+    {
+      "name": "Horizontal scroll (横批)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 7
+    },
+    {
+      "name": "Upper and lower lines (上联、下联)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 8
+    },
+    {
+      "name": "Window flowers (窗花)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 3
+    },
+    {
+      "name": "Paper-cutting (剪纸)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 3
+    },
+    {
+      "name": "New Year paintings (年画)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 5
+    },
+    {
+      "name": "Yangliuqing New Year paintings (杨柳青年画)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 11
+    },
+    {
+      "name": "Taohuawu New Year paintings (桃花坞年画)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 13
+    },
+    {
+      "name": "Lianian Youyu painting (连年有余)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 11
+    },
+    {
+      "name": "Calligraphy brush (毛笔)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 3
+    },
+    {
+      "name": "Red paper (红纸)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 2
+    },
+    {
+      "name": "Chinese knot (中国结)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 3
+    },
+    {
+      "name": "Fai chun (挥春)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 12
+    },
+    {
+      "name": "Door hangings (挂钱)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 12
+    },
+    {
+      "name": "Kangxi's fu stele (福字碑)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 13
+    },
+    {
+      "name": "Level and oblique tones (平仄)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 13
+    },
+    {
+      "name": "Meng Chang (孟昶)",
+      "facet": "Spring couplets, fu and paper-cuts",
+      "known_at": 14
+    },
+    {
+      "name": "Red packets (红包)",
+      "facet": "Red packets and New Year money",
+      "known_at": 1
+    },
+    {
+      "name": "Yasuiqian (压岁钱)",
+      "facet": "Red packets and New Year money",
+      "known_at": 3
+    },
+    {
+      "name": "WeChat red packets",
+      "facet": "Red packets and New Year money",
+      "known_at": 4
+    },
+    {
+      "name": "Grabbing red packets (抢红包)",
+      "facet": "Red packets and New Year money",
+      "known_at": 5
+    },
+    {
+      "name": "Alipay Five Fortunes (集五福)",
+      "facet": "Red packets and New Year money",
+      "known_at": 6
+    },
+    {
+      "name": "New banknotes",
+      "facet": "Red packets and New Year money",
+      "known_at": 7
+    },
+    {
+      "name": "Coins on a red string",
+      "facet": "Red packets and New Year money",
+      "known_at": 10
+    },
+    {
+      "name": "Lucky number 8",
+      "facet": "Red packets and New Year money",
+      "known_at": 3
+    },
+    {
+      "name": "Unlucky number 4",
+      "facet": "Red packets and New Year money",
+      "known_at": 5
+    },
+    {
+      "name": "Even amounts (双数)",
+      "facet": "Red packets and New Year money",
+      "known_at": 8
+    },
+    {
+      "name": "Lai see (利是)",
+      "facet": "Red packets and New Year money",
+      "known_at": 11
+    },
+    {
+      "name": "Zodiac commemorative coins",
+      "facet": "Red packets and New Year money",
+      "known_at": 9
+    },
+    {
+      "name": "Money tree (摇钱树)",
+      "facet": "Red packets and New Year money",
+      "known_at": 8
+    },
+    {
+      "name": "Yuanbao ingot (元宝)",
+      "facet": "Red packets and New Year money",
+      "known_at": 4
+    },
+    {
+      "name": "Treasure bowl (聚宝盆)",
+      "facet": "Red packets and New Year money",
+      "known_at": 7
+    },
+    {
+      "name": "100-yuan note",
+      "facet": "Red packets and New Year money",
+      "known_at": 4
+    },
+    {
+      "name": "Yasheng coins (压胜钱)",
+      "facet": "Red packets and New Year money",
+      "known_at": 13
+    },
+    {
+      "name": "Reunion dinner (年夜饭)",
+      "facet": "Reunion dinner on New Year's Eve",
+      "known_at": 2
+    },
+    {
+      "name": "Dumplings at New Year's Eve",
+      "facet": "Reunion dinner on New Year's Eve",
+      "known_at": 1
+    },
+    {
+      "name": "Coin hidden in a dumpling",
+      "facet": "Reunion dinner on New Year's Eve",
+      "known_at": 4
+    },
+    {
+      "name": "Making dumplings together (包饺子)",
+      "facet": "Reunion dinner on New Year's Eve",
+      "known_at": 3
+    },
+    {
+      "name": "Ingot-shaped dumplings",
+      "facet": "Reunion dinner on New Year's Eve",
+      "known_at": 6
+    },
+    {
+      "name": "Cabbage dumpling filling (白菜)",
+      "facet": "Reunion dinner on New Year's Eve",
+      "known_at": 8
+    },
+    {
+      "name": "Whole fish (年年有余)",
+      "facet": "Reunion dinner on New Year's Eve",
+      "known_at": 3
+    },
+    {
+      "name": "Hot pot (火锅)",
+      "facet": "Reunion dinner on New Year's Eve",
+      "known_at": 3
+    },
+    {
+      "name": "Round table",
+      "facet": "Reunion dinner on New Year's Eve",
+      "known_at": 4
+    },
+    {
+      "name": "Empty seat for absent family",
+      "facet": "Reunion dinner on New Year's Eve",
+      "known_at": 9
+    },
+    {
+      "name": "Ancestor offerings (祭祖)",
+      "facet": "Reunion dinner on New Year's Eve",
+      "known_at": 6
+    },
+    {
+      "name": "Baijiu (白酒)",
+      "facet": "Reunion dinner on New Year's Eve",
+      "known_at": 6
+    },
+    {
+      "name": "Toasting elders (敬酒)",
+      "facet": "Reunion dinner on New Year's Eve",
+      "known_at": 5
+    },
+    {
+      "name": "Poon choi (盆菜)",
+      "facet": "Reunion dinner on New Year's Eve",
+      "known_at": 11
+    },
+    {
+      "name": "Restaurant reunion dinner",
+      "facet": "Reunion dinner on New Year's Eve",
+      "known_at": 7
+    },
+    {
+      "name": "Niangao (年糕)",
+      "facet": "Lucky New Year foods",
+      "known_at": 3
+    },
+    {
+      "name": "Tangyuan (汤圆)",
+      "facet": "Lucky New Year foods",
+      "known_at": 2
+    },
+    {
+      "name": "Spring rolls (春卷)",
+      "facet": "Lucky New Year foods",
+      "known_at": 3
+    },
+    {
+      "name": "Longevity noodles (长寿面)",
+      "facet": "Lucky New Year foods",
+      "known_at": 3
+    },
+    {
+      "name": "Mandarin oranges",
+      "facet": "Lucky New Year foods",
+      "known_at": 3
+    },
+    {
+      "name": "Kumquat tree (金桔)",
+      "facet": "Lucky New Year foods",
+      "known_at": 7
+    },
+    {
+      "name": "Pomelo (柚子)",
+      "facet": "Lucky New Year foods",
+      "known_at": 6
+    },
+    {
+      "name": "Eight-treasure rice (八宝饭)",
+      "facet": "Lucky New Year foods",
+      "known_at": 6
+    },
+    {
+      "name": "Tray of togetherness (全盒)",
+      "facet": "Lucky New Year foods",
+      "known_at": 10
+    },
+    {
+      "name": "Melon seeds (瓜子)",
+      "facet": "Lucky New Year foods",
+      "known_at": 3
+    },
+    {
+      "name": "Fat choy (发菜)",
+      "facet": "Lucky New Year foods",
+      "known_at": 12
+    },
+    {
+      "name": "Buddha's delight (罗汉斋)",
+      "facet": "Lucky New Year foods",
+      "known_at": 12
+    },
+    {
+      "name": "Turnip cake (萝卜糕)",
+      "facet": "Lucky New Year foods",
+      "known_at": 8
+    },
+    {
+      "name": "Cured meat (腊肉)",
+      "facet": "Lucky New Year foods",
+      "known_at": 5
+    },
+    {
+      "name": "Sachima (沙琪玛)",
+      "facet": "Lucky New Year foods",
+      "known_at": 6
+    },
+    {
+      "name": "Fried dough twists (麻花)",
+      "facet": "Lucky New Year foods",
+      "known_at": 5
+    },
+    {
+      "name": "Lettuce (生菜)",
+      "facet": "Lucky New Year foods",
+      "known_at": 11
+    },
+    {
+      "name": "Candied lotus seeds",
+      "facet": "Lucky New Year foods",
+      "known_at": 9
+    },
+    {
+      "name": "Firecrackers (鞭炮)",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 1
+    },
+    {
+      "name": "Fireworks (烟花)",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 1
+    },
+    {
+      "name": "Burning bamboo (爆竹)",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 7
+    },
+    {
+      "name": "Gunpowder (火药)",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 4
+    },
+    {
+      "name": "Saltpeter (硝石)",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 11
+    },
+    {
+      "name": "Metal salts in fireworks",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 12
+    },
+    {
+      "name": "Red lanterns (红灯笼)",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 2
+    },
+    {
+      "name": "Palace lanterns (宫灯)",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 9
+    },
+    {
+      "name": "Zigong Lantern Show (自贡灯会)",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 12
+    },
+    {
+      "name": "Firecracker bans in cities",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 6
+    },
+    {
+      "name": "Liuyang (浏阳)",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 10
+    },
+    {
+      "name": "Opening-door firecrackers (开门炮)",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 9
+    },
+    {
+      "name": "Double-bang firecracker (二踢脚)",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 8
+    },
+    {
+      "name": "Sparklers (仙女棒)",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 4
+    },
+    {
+      "name": "Iron-flower show (打铁花)",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 9
+    },
+    {
+      "name": "Gongs and drums (锣鼓)",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 5
+    },
+    {
+      "name": "Victoria Harbour fireworks",
+      "facet": "Firecrackers, fireworks and lanterns",
+      "known_at": 10
+    },
+    {
+      "name": "Staying up late (守岁)",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 2
+    },
+    {
+      "name": "Midnight countdown",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 2
+    },
+    {
+      "name": "New Year greetings (拜年)",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 2
+    },
+    {
+      "name": "Xinnian kuaile (新年快乐)",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 1
+    },
+    {
+      "name": "Gongxi facai (恭喜发财)",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 3
+    },
+    {
+      "name": "Guonian hao (过年好)",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 3
+    },
+    {
+      "name": "Jixiang ruyi (吉祥如意)",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 6
+    },
+    {
+      "name": "Suisui ping'an (岁岁平安)",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 5
+    },
+    {
+      "name": "Kowtow to elders (磕头)",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 5
+    },
+    {
+      "name": "Fist-and-palm salute (拱手)",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 6
+    },
+    {
+      "name": "New clothes",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 2
+    },
+    {
+      "name": "Lights on all night (点灯守岁)",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 10
+    },
+    {
+      "name": "New Year bell ringing (撞钟)",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 8
+    },
+    {
+      "name": "Hanshan Temple bell (寒山寺)",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 11
+    },
+    {
+      "name": "First incense (头香)",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 10
+    },
+    {
+      "name": "New Year greeting messages (拜年短信)",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 6
+    },
+    {
+      "name": "Video call greetings",
+      "facet": "Staying up and greeting the New Year",
+      "known_at": 4
+    },
+    {
+      "name": "No sweeping on the first day",
+      "facet": "Days one to five customs",
+      "known_at": 6
+    },
+    {
+      "name": "No hair washing on the first day",
+      "facet": "Days one to five customs",
+      "known_at": 8
+    },
+    {
+      "name": "Temple fair (庙会)",
+      "facet": "Days one to five customs",
+      "known_at": 5
+    },
+    {
+      "name": "Ditan Temple Fair (地坛庙会)",
+      "facet": "Days one to five customs",
+      "known_at": 10
+    },
+    {
+      "name": "Lion dance (舞狮)",
+      "facet": "Days one to five customs",
+      "known_at": 2
+    },
+    {
+      "name": "Dragon dance (舞龙)",
+      "facet": "Days one to five customs",
+      "known_at": 2
+    },
+    {
+      "name": "Yangge dance (秧歌)",
+      "facet": "Days one to five customs",
+      "known_at": 7
+    },
+    {
+      "name": "Stilt walking (踩高跷)",
+      "facet": "Days one to five customs",
+      "known_at": 7
+    },
+    {
+      "name": "Land boat dance (跑旱船)",
+      "facet": "Days one to five customs",
+      "known_at": 10
+    },
+    {
+      "name": "Visiting relatives (走亲戚)",
+      "facet": "Days one to five customs",
+      "known_at": 3
+    },
+    {
+      "name": "Returning to the mother's home (回娘家)",
+      "facet": "Days one to five customs",
+      "known_at": 7
+    },
+    {
+      "name": "Chikou day (赤口)",
+      "facet": "Days one to five customs",
+      "known_at": 13
+    },
+    {
+      "name": "Rat's wedding (老鼠娶亲)",
+      "facet": "Days one to five customs",
+      "known_at": 11
+    },
+    {
+      "name": "God of Wealth (财神)",
+      "facet": "Days one to five customs",
+      "known_at": 3
+    },
+    {
+      "name": "Zhao Gongming (赵公明)",
+      "facet": "Days one to five customs",
+      "known_at": 12
+    },
+    {
+      "name": "Welcoming the God of Wealth (迎财神)",
+      "facet": "Days one to five customs",
+      "known_at": 7
+    },
+    {
+      "name": "Po Wu (破五)",
+      "facet": "Days one to five customs",
+      "known_at": 10
+    },
+    {
+      "name": "Shops reopening (开市)",
+      "facet": "Days one to five customs",
+      "known_at": 8
+    },
+    {
+      "name": "Chunyun travel rush (春运)",
+      "facet": "Chunyun travel rush",
+      "known_at": 3
+    },
+    {
+      "name": "Going home for New Year (回家过年)",
+      "facet": "Chunyun travel rush",
+      "known_at": 2
+    },
+    {
+      "name": "Spring Festival holiday",
+      "facet": "Chunyun travel rush",
+      "known_at": 3
+    },
+    {
+      "name": "Train tickets",
+      "facet": "Chunyun travel rush",
+      "known_at": 2
+    },
+    {
+      "name": "12306",
+      "facet": "Chunyun travel rush",
+      "known_at": 4
+    },
+    {
+      "name": "High-speed rail (高铁)",
+      "facet": "Chunyun travel rush",
+      "known_at": 3
+    },
+    {
+      "name": "Fuxing trains (复兴号)",
+      "facet": "Chunyun travel rush",
+      "known_at": 5
+    },
+    {
+      "name": "Green-skin train (绿皮车)",
+      "facet": "Chunyun travel rush",
+      "known_at": 6
+    },
+    {
+      "name": "Standing tickets (无座)",
+      "facet": "Chunyun travel rush",
+      "known_at": 7
+    },
+    {
+      "name": "Ticket scalpers (黄牛)",
+      "facet": "Chunyun travel rush",
+      "known_at": 8
+    },
+    {
+      "name": "Migrant workers (农民工)",
+      "facet": "Chunyun travel rush",
+      "known_at": 7
+    },
+    {
+      "name": "Motorcycle convoys home",
+      "facet": "Chunyun travel rush",
+      "known_at": 9
+    },
+    {
+      "name": "Toll-free highways",
+      "facet": "Chunyun travel rush",
+      "known_at": 8
+    },
+    {
+      "name": "Guangzhou Railway Station",
+      "facet": "Chunyun travel rush",
+      "known_at": 9
+    },
+    {
+      "name": "Beijing West Railway Station",
+      "facet": "Chunyun travel rush",
+      "known_at": 8
+    },
+    {
+      "name": "Return trip rush (返程)",
+      "facet": "Chunyun travel rush",
+      "known_at": 8
+    },
+    {
+      "name": "Chinese zodiac (生肖)",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 1
+    },
+    {
+      "name": "Rat (zodiac)",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 2
+    },
+    {
+      "name": "Ox (zodiac)",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 2
+    },
+    {
+      "name": "Dragon (zodiac)",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 2
+    },
+    {
+      "name": "Pig (zodiac)",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 2
+    },
+    {
+      "name": "Cat left out of the zodiac",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 3
+    },
+    {
+      "name": "Great Race of the zodiac",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 4
+    },
+    {
+      "name": "Benmingnian (本命年)",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 5
+    },
+    {
+      "name": "Lunar calendar (农历)",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 3
+    },
+    {
+      "name": "Leap month (闰月)",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 10
+    },
+    {
+      "name": "Heavenly stems (天干)",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 11
+    },
+    {
+      "name": "Earthly branches (地支)",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 10
+    },
+    {
+      "name": "Sexagenary cycle (干支纪年)",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 10
+    },
+    {
+      "name": "Five elements (五行)",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 9
+    },
+    {
+      "name": "Twenty-four solar terms (二十四节气)",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 6
+    },
+    {
+      "name": "Lichun (立春)",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 8
+    },
+    {
+      "name": "Chinese almanac (黄历)",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 8
+    },
+    {
+      "name": "Zodiac stamps",
+      "facet": "Zodiac animals and the lunar calendar",
+      "known_at": 8
+    },
+    {
+      "name": "Spring Festival Gala (春晚)",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 2
+    },
+    {
+      "name": "CCTV",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 3
+    },
+    {
+      "name": "First Spring Festival Gala (1983)",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Crosstalk (相声)",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 5
+    },
+    {
+      "name": "Comedy sketch (小品)",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 4
+    },
+    {
+      "name": "Zhao Benshan",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Chen Peisi",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Song Dandan",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Liu Qian",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Unforgettable Tonight (难忘今宵)",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Gala robot dancers",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "New Year films (贺岁片)",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Ne Zha 2",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 4
+    },
+    {
+      "name": "Wang Anshi's poem Yuanri (元日)",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Wang Anshi",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Gao Shi's New Year's Eve poem (除夜作)",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Lao She's \"Spring Festival in Beijing\" (北京的春节)",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Lu Xun's \"New Year's Sacrifice\" (祝福)",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Timely snow promises a good harvest (瑞雪兆丰年)",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "One night links two years (一夜连双岁)",
+      "facet": "Spring Festival Gala, poems and sayings",
+      "known_at": 11
+    }
+  ]
+}

@@ -1,0 +1,1107 @@
+{
+  "subcategory": "chinese-video-games",
+  "facets": [
+    "Honor of Kings and MOBA games",
+    "Genshin Impact and miHoYo worlds",
+    "Black Myth: Wukong",
+    "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+    "Mobile casual and puzzle games",
+    "Shooters and battle royale games",
+    "Chinese myths and legends in games",
+    "Game studios and companies",
+    "Online games and MMORPGs",
+    "Foreign games popular in China",
+    "Esports in China",
+    "Gaming culture and slang"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Honor of Kings",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 2
+    },
+    {
+      "name": "Li Bai (Honor of Kings hero)",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 5
+    },
+    {
+      "name": "Diao Chan",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 7
+    },
+    {
+      "name": "Zhao Yun",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 6
+    },
+    {
+      "name": "Zhuge Liang",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 5
+    },
+    {
+      "name": "Lu Ban No. 7",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 6
+    },
+    {
+      "name": "Wang Zhaojun",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 8
+    },
+    {
+      "name": "Sun Shangxiang",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 8
+    },
+    {
+      "name": "Kings' Canyon (王者峡谷)",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 7
+    },
+    {
+      "name": "Tyrant (暴君)",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 9
+    },
+    {
+      "name": "Overlord (主宰)",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 9
+    },
+    {
+      "name": "Jungler (打野)",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 8
+    },
+    {
+      "name": "Minions (小兵)",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 7
+    },
+    {
+      "name": "Crystal (水晶)",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 7
+    },
+    {
+      "name": "Arena of Valor",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 11
+    },
+    {
+      "name": "Mobile Legends: Bang Bang",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 11
+    },
+    {
+      "name": "Onmyoji Arena",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 11
+    },
+    {
+      "name": "League of Legends: Wild Rift",
+      "facet": "Honor of Kings and MOBA games",
+      "known_at": 10
+    },
+    {
+      "name": "Genshin Impact",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 3
+    },
+    {
+      "name": "Teyvat",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 7
+    },
+    {
+      "name": "Paimon",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 5
+    },
+    {
+      "name": "Traveler (Aether and Lumine)",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 7
+    },
+    {
+      "name": "Mondstadt",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 7
+    },
+    {
+      "name": "Liyue",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 6
+    },
+    {
+      "name": "Inazuma",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 8
+    },
+    {
+      "name": "Sumeru",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 9
+    },
+    {
+      "name": "Fontaine",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 9
+    },
+    {
+      "name": "Natlan",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 10
+    },
+    {
+      "name": "Zhongli",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 7
+    },
+    {
+      "name": "Venti",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 8
+    },
+    {
+      "name": "Raiden Shogun",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 8
+    },
+    {
+      "name": "Hu Tao",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 8
+    },
+    {
+      "name": "Keqing",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 9
+    },
+    {
+      "name": "Klee",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 8
+    },
+    {
+      "name": "Seven Archons",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 9
+    },
+    {
+      "name": "Vision (神之眼)",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 9
+    },
+    {
+      "name": "Primogems",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 8
+    },
+    {
+      "name": "Lantern Rite",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 10
+    },
+    {
+      "name": "Honkai Impact 3rd",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 10
+    },
+    {
+      "name": "Honkai: Star Rail",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 7
+    },
+    {
+      "name": "Astral Express",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 10
+    },
+    {
+      "name": "Zenless Zone Zero",
+      "facet": "Genshin Impact and miHoYo worlds",
+      "known_at": 9
+    },
+    {
+      "name": "Destined One",
+      "facet": "Black Myth: Wukong",
+      "known_at": 7
+    },
+    {
+      "name": "Jingu Bang staff (如意金箍棒)",
+      "facet": "Black Myth: Wukong",
+      "known_at": 3
+    },
+    {
+      "name": "Healing gourd",
+      "facet": "Black Myth: Wukong",
+      "known_at": 8
+    },
+    {
+      "name": "Immobilize spell (定身法)",
+      "facet": "Black Myth: Wukong",
+      "known_at": 8
+    },
+    {
+      "name": "Black Bear Guai",
+      "facet": "Black Myth: Wukong",
+      "known_at": 7
+    },
+    {
+      "name": "Black Wind Mountain",
+      "facet": "Black Myth: Wukong",
+      "known_at": 8
+    },
+    {
+      "name": "Yellow Wind Sage",
+      "facet": "Black Myth: Wukong",
+      "known_at": 8
+    },
+    {
+      "name": "Yellowbrow",
+      "facet": "Black Myth: Wukong",
+      "known_at": 10
+    },
+    {
+      "name": "Hundred-Eyed Daoist Master",
+      "facet": "Black Myth: Wukong",
+      "known_at": 10
+    },
+    {
+      "name": "Bull Demon King",
+      "facet": "Black Myth: Wukong",
+      "known_at": 5
+    },
+    {
+      "name": "Spider spirits",
+      "facet": "Black Myth: Wukong",
+      "known_at": 6
+    },
+    {
+      "name": "Shanxi ancient temples",
+      "facet": "Black Myth: Wukong",
+      "known_at": 9
+    },
+    {
+      "name": "Little Western Heaven (小西天)",
+      "facet": "Black Myth: Wukong",
+      "known_at": 11
+    },
+    {
+      "name": "Feng Ji",
+      "facet": "Black Myth: Wukong",
+      "known_at": 12
+    },
+    {
+      "name": "Unreal Engine 5",
+      "facet": "Black Myth: Wukong",
+      "known_at": 12
+    },
+    {
+      "name": "The Game Awards 2024",
+      "facet": "Black Myth: Wukong",
+      "known_at": 12
+    },
+    {
+      "name": "Li Xiaoyao",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 7
+    },
+    {
+      "name": "Zhao Ling'er",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 7
+    },
+    {
+      "name": "Lin Yueru",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 9
+    },
+    {
+      "name": "Anu",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 10
+    },
+    {
+      "name": "Jing Tian",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 9
+    },
+    {
+      "name": "Xu Changqing",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese Paladin 3",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 8
+    },
+    {
+      "name": "Chinese Paladin TV series (2005)",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 6
+    },
+    {
+      "name": "Hu Ge",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 6
+    },
+    {
+      "name": "Liu Yifei",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 5
+    },
+    {
+      "name": "Sword and Fairy 7",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 11
+    },
+    {
+      "name": "Xuan-Yuan Sword (轩辕剑)",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 10
+    },
+    {
+      "name": "Gujian (古剑奇谭)",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 10
+    },
+    {
+      "name": "Heroes of Jin Yong (金庸群侠传)",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 12
+    },
+    {
+      "name": "Tale of Wuxia (侠客风云传)",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 13
+    },
+    {
+      "name": "The Scroll of Taiwu (太吾绘卷)",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 13
+    },
+    {
+      "name": "Wuxia (武侠)",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 6
+    },
+    {
+      "name": "Xianxia (仙侠)",
+      "facet": "Classic Chinese RPGs (Chinese Paladin, Sword and Fairy)",
+      "known_at": 8
+    },
+    {
+      "name": "Happy Elimination (开心消消乐)",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 3
+    },
+    {
+      "name": "Fight the Landlord (斗地主)",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 4
+    },
+    {
+      "name": "Online mahjong",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 4
+    },
+    {
+      "name": "Sheep a Sheep (羊了个羊)",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 5
+    },
+    {
+      "name": "Jump Jump (跳一跳)",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 5
+    },
+    {
+      "name": "WeChat mini games",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 5
+    },
+    {
+      "name": "Synthesize Big Watermelon (合成大西瓜)",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 6
+    },
+    {
+      "name": "Happy Farm (开心农场)",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 9
+    },
+    {
+      "name": "Stealing vegetables (偷菜)",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 9
+    },
+    {
+      "name": "Lianliankan (连连看)",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 5
+    },
+    {
+      "name": "Snake (贪吃蛇)",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 2
+    },
+    {
+      "name": "Gomoku (五子棋)",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 4
+    },
+    {
+      "name": "Online Chinese chess (象棋)",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 4
+    },
+    {
+      "name": "Eggy Party (蛋仔派对)",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 3
+    },
+    {
+      "name": "QQ Speed (QQ飞车)",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 5
+    },
+    {
+      "name": "Ant Forest (蚂蚁森林)",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 6
+    },
+    {
+      "name": "Love and Producer (恋与制作人)",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 10
+    },
+    {
+      "name": "Love and Deepspace (恋与深空)",
+      "facet": "Mobile casual and puzzle games",
+      "known_at": 9
+    },
+    {
+      "name": "Game for Peace (和平精英)",
+      "facet": "Shooters and battle royale games",
+      "known_at": 4
+    },
+    {
+      "name": "PUBG Mobile",
+      "facet": "Shooters and battle royale games",
+      "known_at": 6
+    },
+    {
+      "name": "CrossFire (穿越火线)",
+      "facet": "Shooters and battle royale games",
+      "known_at": 7
+    },
+    {
+      "name": "Knives Out (荒野行动)",
+      "facet": "Shooters and battle royale games",
+      "known_at": 9
+    },
+    {
+      "name": "Naraka: Bladepoint (永劫无间)",
+      "facet": "Shooters and battle royale games",
+      "known_at": 9
+    },
+    {
+      "name": "Delta Force (三角洲行动)",
+      "facet": "Shooters and battle royale games",
+      "known_at": 9
+    },
+    {
+      "name": "Arena Breakout (暗区突围)",
+      "facet": "Shooters and battle royale games",
+      "known_at": 10
+    },
+    {
+      "name": "Sausage Man (香肠派对)",
+      "facet": "Shooters and battle royale games",
+      "known_at": 7
+    },
+    {
+      "name": "Call of Duty: Mobile",
+      "facet": "Shooters and battle royale games",
+      "known_at": 9
+    },
+    {
+      "name": "Marvel Rivals",
+      "facet": "Shooters and battle royale games",
+      "known_at": 10
+    },
+    {
+      "name": "Battle royale",
+      "facet": "Shooters and battle royale games",
+      "known_at": 7
+    },
+    {
+      "name": "Safe zone (毒圈)",
+      "facet": "Shooters and battle royale games",
+      "known_at": 7
+    },
+    {
+      "name": "Airdrop (空投)",
+      "facet": "Shooters and battle royale games",
+      "known_at": 6
+    },
+    {
+      "name": "Frying pan (平底锅)",
+      "facet": "Shooters and battle royale games",
+      "known_at": 6
+    },
+    {
+      "name": "Level 3 helmet (三级头)",
+      "facet": "Shooters and battle royale games",
+      "known_at": 8
+    },
+    {
+      "name": "Erangel",
+      "facet": "Shooters and battle royale games",
+      "known_at": 11
+    },
+    {
+      "name": "Kua Fu",
+      "facet": "Chinese myths and legends in games",
+      "known_at": 5
+    },
+    {
+      "name": "Tencent",
+      "facet": "Game studios and companies",
+      "known_at": 4
+    },
+    {
+      "name": "NetEase",
+      "facet": "Game studios and companies",
+      "known_at": 6
+    },
+    {
+      "name": "miHoYo",
+      "facet": "Game studios and companies",
+      "known_at": 7
+    },
+    {
+      "name": "HoYoverse",
+      "facet": "Game studios and companies",
+      "known_at": 10
+    },
+    {
+      "name": "Game Science",
+      "facet": "Game studios and companies",
+      "known_at": 9
+    },
+    {
+      "name": "TiMi Studio Group",
+      "facet": "Game studios and companies",
+      "known_at": 10
+    },
+    {
+      "name": "Lightspeed Studios",
+      "facet": "Game studios and companies",
+      "known_at": 12
+    },
+    {
+      "name": "Softstar Entertainment",
+      "facet": "Game studios and companies",
+      "known_at": 11
+    },
+    {
+      "name": "Perfect World",
+      "facet": "Game studios and companies",
+      "known_at": 11
+    },
+    {
+      "name": "Shanda Games",
+      "facet": "Game studios and companies",
+      "known_at": 12
+    },
+    {
+      "name": "Giant Network",
+      "facet": "Game studios and companies",
+      "known_at": 12
+    },
+    {
+      "name": "Kingsoft Seasun",
+      "facet": "Game studios and companies",
+      "known_at": 12
+    },
+    {
+      "name": "Lilith Games",
+      "facet": "Game studios and companies",
+      "known_at": 12
+    },
+    {
+      "name": "Hypergryph",
+      "facet": "Game studios and companies",
+      "known_at": 11
+    },
+    {
+      "name": "Kuro Games",
+      "facet": "Game studios and companies",
+      "known_at": 12
+    },
+    {
+      "name": "Papergames",
+      "facet": "Game studios and companies",
+      "known_at": 11
+    },
+    {
+      "name": "Moonton",
+      "facet": "Game studios and companies",
+      "known_at": 13
+    },
+    {
+      "name": "4399",
+      "facet": "Game studios and companies",
+      "known_at": 6
+    },
+    {
+      "name": "Ma Huateng",
+      "facet": "Game studios and companies",
+      "known_at": 8
+    },
+    {
+      "name": "Ding Lei",
+      "facet": "Game studios and companies",
+      "known_at": 10
+    },
+    {
+      "name": "Cai Haoyu",
+      "facet": "Game studios and companies",
+      "known_at": 13
+    },
+    {
+      "name": "Fantasy Westward Journey (梦幻西游)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 6
+    },
+    {
+      "name": "Westward Journey Online II (大话西游2)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 8
+    },
+    {
+      "name": "The Legend of Mir 2 (热血传奇)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 10
+    },
+    {
+      "name": "JX3 Online (剑网3)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 9
+    },
+    {
+      "name": "Justice Online (逆水寒)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 9
+    },
+    {
+      "name": "Moonlight Blade (天涯明月刀)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 10
+    },
+    {
+      "name": "Zhengtu (征途)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 12
+    },
+    {
+      "name": "QQ Dance (QQ炫舞)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 8
+    },
+    {
+      "name": "Audition (劲舞团)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 10
+    },
+    {
+      "name": "QQ Pet (QQ宠物)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 9
+    },
+    {
+      "name": "Roco Kingdom (洛克王国)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 6
+    },
+    {
+      "name": "Mole's World (摩尔庄园)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 5
+    },
+    {
+      "name": "Seer (赛尔号)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 6
+    },
+    {
+      "name": "Onmyoji (阴阳师)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 7
+    },
+    {
+      "name": "Abe no Seimei",
+      "facet": "Online games and MMORPGs",
+      "known_at": 11
+    },
+    {
+      "name": "Identity V (第五人格)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 6
+    },
+    {
+      "name": "Arknights (明日方舟)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 9
+    },
+    {
+      "name": "Wuthering Waves (鸣潮)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 10
+    },
+    {
+      "name": "Infinity Nikki (无限暖暖)",
+      "facet": "Online games and MMORPGs",
+      "known_at": 8
+    },
+    {
+      "name": "League of Legends",
+      "facet": "Foreign games popular in China",
+      "known_at": 5
+    },
+    {
+      "name": "Dota 2",
+      "facet": "Foreign games popular in China",
+      "known_at": 9
+    },
+    {
+      "name": "World of Warcraft",
+      "facet": "Foreign games popular in China",
+      "known_at": 8
+    },
+    {
+      "name": "Warcraft III",
+      "facet": "Foreign games popular in China",
+      "known_at": 11
+    },
+    {
+      "name": "StarCraft",
+      "facet": "Foreign games popular in China",
+      "known_at": 11
+    },
+    {
+      "name": "Red Alert (红色警戒)",
+      "facet": "Foreign games popular in China",
+      "known_at": 9
+    },
+    {
+      "name": "Counter-Strike",
+      "facet": "Foreign games popular in China",
+      "known_at": 9
+    },
+    {
+      "name": "PUBG: Battlegrounds",
+      "facet": "Foreign games popular in China",
+      "known_at": 7
+    },
+    {
+      "name": "Dungeon & Fighter (地下城与勇士)",
+      "facet": "Foreign games popular in China",
+      "known_at": 9
+    },
+    {
+      "name": "Plants vs. Zombies",
+      "facet": "Foreign games popular in China",
+      "known_at": 2
+    },
+    {
+      "name": "Angry Birds",
+      "facet": "Foreign games popular in China",
+      "known_at": 2
+    },
+    {
+      "name": "Fruit Ninja",
+      "facet": "Foreign games popular in China",
+      "known_at": 3
+    },
+    {
+      "name": "Contra (魂斗罗)",
+      "facet": "Foreign games popular in China",
+      "known_at": 8
+    },
+    {
+      "name": "Battle City (坦克大战)",
+      "facet": "Foreign games popular in China",
+      "known_at": 8
+    },
+    {
+      "name": "The King of Fighters (拳皇)",
+      "facet": "Foreign games popular in China",
+      "known_at": 9
+    },
+    {
+      "name": "Street Fighter",
+      "facet": "Foreign games popular in China",
+      "known_at": 9
+    },
+    {
+      "name": "Famicom (红白机)",
+      "facet": "Foreign games popular in China",
+      "known_at": 10
+    },
+    {
+      "name": "Animal Crossing: New Horizons",
+      "facet": "Foreign games popular in China",
+      "known_at": 8
+    },
+    {
+      "name": "Elden Ring",
+      "facet": "Foreign games popular in China",
+      "known_at": 10
+    },
+    {
+      "name": "Stardew Valley",
+      "facet": "Foreign games popular in China",
+      "known_at": 9
+    },
+    {
+      "name": "King Pro League (KPL)",
+      "facet": "Esports in China",
+      "known_at": 8
+    },
+    {
+      "name": "LPL (League of Legends Pro League)",
+      "facet": "Esports in China",
+      "known_at": 9
+    },
+    {
+      "name": "League of Legends World Championship",
+      "facet": "Esports in China",
+      "known_at": 9
+    },
+    {
+      "name": "Invictus Gaming (IG)",
+      "facet": "Esports in China",
+      "known_at": 9
+    },
+    {
+      "name": "EDward Gaming (EDG)",
+      "facet": "Esports in China",
+      "known_at": 9
+    },
+    {
+      "name": "Royal Never Give Up (RNG)",
+      "facet": "Esports in China",
+      "known_at": 10
+    },
+    {
+      "name": "JD Gaming (JDG)",
+      "facet": "Esports in China",
+      "known_at": 12
+    },
+    {
+      "name": "Uzi (Jian Zihao)",
+      "facet": "Esports in China",
+      "known_at": 10
+    },
+    {
+      "name": "TheShy",
+      "facet": "Esports in China",
+      "known_at": 11
+    },
+    {
+      "name": "Faker",
+      "facet": "Esports in China",
+      "known_at": 10
+    },
+    {
+      "name": "Wings Gaming",
+      "facet": "Esports in China",
+      "known_at": 13
+    },
+    {
+      "name": "The International (Dota 2)",
+      "facet": "Esports in China",
+      "known_at": 12
+    },
+    {
+      "name": "Sky (Li Xiaofeng)",
+      "facet": "Esports in China",
+      "known_at": 13
+    },
+    {
+      "name": "World Cyber Games (WCG)",
+      "facet": "Esports in China",
+      "known_at": 13
+    },
+    {
+      "name": "Hangzhou Asian Games esports",
+      "facet": "Esports in China",
+      "known_at": 10
+    },
+    {
+      "name": "Chongqing Wolves (重庆狼队)",
+      "facet": "Esports in China",
+      "known_at": 11
+    },
+    {
+      "name": "AG Super Play (AG超玩会)",
+      "facet": "Esports in China",
+      "known_at": 11
+    },
+    {
+      "name": "Esports player as an official profession",
+      "facet": "Esports in China",
+      "known_at": 12
+    },
+    {
+      "name": "Internet café (网吧)",
+      "facet": "Gaming culture and slang",
+      "known_at": 6
+    },
+    {
+      "name": "Anti-addiction system (防沉迷)",
+      "facet": "Gaming culture and slang",
+      "known_at": 5
+    },
+    {
+      "name": "Gacha (抽卡)",
+      "facet": "Gaming culture and slang",
+      "known_at": 7
+    },
+    {
+      "name": "Krypton gold (氪金)",
+      "facet": "Gaming culture and slang",
+      "known_at": 8
+    },
+    {
+      "name": "Grinding (肝)",
+      "facet": "Gaming culture and slang",
+      "known_at": 9
+    },
+    {
+      "name": "Chicken dinner (吃鸡)",
+      "facet": "Gaming culture and slang",
+      "known_at": 6
+    },
+    {
+      "name": "Pentakill (五杀)",
+      "facet": "Gaming culture and slang",
+      "known_at": 8
+    },
+    {
+      "name": "Carry (带飞)",
+      "facet": "Gaming culture and slang",
+      "known_at": 8
+    },
+    {
+      "name": "Noob (菜鸟)",
+      "facet": "Gaming culture and slang",
+      "known_at": 5
+    },
+    {
+      "name": "GG",
+      "facet": "Gaming culture and slang",
+      "known_at": 7
+    },
+    {
+      "name": "666",
+      "facet": "Gaming culture and slang",
+      "known_at": 5
+    },
+    {
+      "name": "European emperor and African chief (欧皇/非酋)",
+      "facet": "Gaming culture and slang",
+      "known_at": 10
+    },
+    {
+      "name": "NPC",
+      "facet": "Gaming culture and slang",
+      "known_at": 6
+    },
+    {
+      "name": "Skins (皮肤)",
+      "facet": "Gaming culture and slang",
+      "known_at": 4
+    },
+    {
+      "name": "Q coins (Q币)",
+      "facet": "Gaming culture and slang",
+      "known_at": 8
+    },
+    {
+      "name": "Subor learning machine (小霸王学习机)",
+      "facet": "Gaming culture and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Danmaku (弹幕)",
+      "facet": "Gaming culture and slang",
+      "known_at": 7
+    },
+    {
+      "name": "Huya and Douyu live streaming",
+      "facet": "Gaming culture and slang",
+      "known_at": 9
+    },
+    {
+      "name": "ChinaJoy",
+      "facet": "Gaming culture and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Cosplay",
+      "facet": "Gaming culture and slang",
+      "known_at": 7
+    }
+  ]
+}

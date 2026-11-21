@@ -1,0 +1,1042 @@
+{
+  "subcategory": "chinese-folk-music",
+  "facets": [
+    "Bowed and plucked strings",
+    "Wind instruments and suona",
+    "Percussion, gongs and drums",
+    "Ancient bronze and stone instruments",
+    "Guqin and literati music",
+    "Pentatonic scale and notation",
+    "Famous folk songs",
+    "Classic instrumental pieces",
+    "Musicians, composers and legends",
+    "Regional and ethnic folk music",
+    "Folk music in festivals and life",
+    "Making and materials of instruments"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Erhu (二胡)",
+      "facet": "Bowed and plucked strings",
+      "known_at": 2
+    },
+    {
+      "name": "Guzheng (古筝)",
+      "facet": "Bowed and plucked strings",
+      "known_at": 3
+    },
+    {
+      "name": "Pipa (琵琶)",
+      "facet": "Bowed and plucked strings",
+      "known_at": 3
+    },
+    {
+      "name": "Yangqin (扬琴)",
+      "facet": "Bowed and plucked strings",
+      "known_at": 7
+    },
+    {
+      "name": "Ruan (阮)",
+      "facet": "Bowed and plucked strings",
+      "known_at": 9
+    },
+    {
+      "name": "Liuqin (柳琴)",
+      "facet": "Bowed and plucked strings",
+      "known_at": 11
+    },
+    {
+      "name": "Sanxian (三弦)",
+      "facet": "Bowed and plucked strings",
+      "known_at": 8
+    },
+    {
+      "name": "Banhu (板胡)",
+      "facet": "Bowed and plucked strings",
+      "known_at": 10
+    },
+    {
+      "name": "Jinghu (京胡)",
+      "facet": "Bowed and plucked strings",
+      "known_at": 8
+    },
+    {
+      "name": "Gaohu (高胡)",
+      "facet": "Bowed and plucked strings",
+      "known_at": 12
+    },
+    {
+      "name": "Zhonghu (中胡)",
+      "facet": "Bowed and plucked strings",
+      "known_at": 11
+    },
+    {
+      "name": "Konghou (箜篌)",
+      "facet": "Bowed and plucked strings",
+      "known_at": 11
+    },
+    {
+      "name": "Yueqin (月琴)",
+      "facet": "Bowed and plucked strings",
+      "known_at": 11
+    },
+    {
+      "name": "Huqin family (胡琴)",
+      "facet": "Bowed and plucked strings",
+      "known_at": 9
+    },
+    {
+      "name": "Dizi (笛子)",
+      "facet": "Wind instruments and suona",
+      "known_at": 2
+    },
+    {
+      "name": "Suona (唢呐)",
+      "facet": "Wind instruments and suona",
+      "known_at": 4
+    },
+    {
+      "name": "Xiao (箫)",
+      "facet": "Wind instruments and suona",
+      "known_at": 6
+    },
+    {
+      "name": "Xun (埙)",
+      "facet": "Wind instruments and suona",
+      "known_at": 8
+    },
+    {
+      "name": "Hulusi (葫芦丝)",
+      "facet": "Wind instruments and suona",
+      "known_at": 5
+    },
+    {
+      "name": "Bawu (巴乌)",
+      "facet": "Wind instruments and suona",
+      "known_at": 11
+    },
+    {
+      "name": "Guanzi (管子)",
+      "facet": "Wind instruments and suona",
+      "known_at": 12
+    },
+    {
+      "name": "Paixiao (排箫)",
+      "facet": "Wind instruments and suona",
+      "known_at": 9
+    },
+    {
+      "name": "Koudi (口笛)",
+      "facet": "Wind instruments and suona",
+      "known_at": 12
+    },
+    {
+      "name": "Bangdi (梆笛)",
+      "facet": "Wind instruments and suona",
+      "known_at": 12
+    },
+    {
+      "name": "Leaf playing (吹叶)",
+      "facet": "Wind instruments and suona",
+      "known_at": 9
+    },
+    {
+      "name": "Circular breathing (循环换气)",
+      "facet": "Wind instruments and suona",
+      "known_at": 12
+    },
+    {
+      "name": "Vertical and transverse flutes (竖吹横吹)",
+      "facet": "Wind instruments and suona",
+      "known_at": 7
+    },
+    {
+      "name": "Gong (锣)",
+      "facet": "Percussion, gongs and drums",
+      "known_at": 2
+    },
+    {
+      "name": "Xiaoluo (小锣)",
+      "facet": "Percussion, gongs and drums",
+      "known_at": 9
+    },
+    {
+      "name": "Cymbals (钹)",
+      "facet": "Percussion, gongs and drums",
+      "known_at": 4
+    },
+    {
+      "name": "Tanggu (堂鼓)",
+      "facet": "Percussion, gongs and drums",
+      "known_at": 9
+    },
+    {
+      "name": "Waist drum (腰鼓)",
+      "facet": "Percussion, gongs and drums",
+      "known_at": 4
+    },
+    {
+      "name": "Wooden fish (木鱼)",
+      "facet": "Percussion, gongs and drums",
+      "known_at": 4
+    },
+    {
+      "name": "Paiban clappers (拍板)",
+      "facet": "Percussion, gongs and drums",
+      "known_at": 10
+    },
+    {
+      "name": "Bangzi (梆子)",
+      "facet": "Percussion, gongs and drums",
+      "known_at": 10
+    },
+    {
+      "name": "Yunluo cloud gongs (云锣)",
+      "facet": "Percussion, gongs and drums",
+      "known_at": 12
+    },
+    {
+      "name": "Flower drum (花鼓)",
+      "facet": "Percussion, gongs and drums",
+      "known_at": 6
+    },
+    {
+      "name": "Kuaiban bamboo clappers (快板)",
+      "facet": "Percussion, gongs and drums",
+      "known_at": 5
+    },
+    {
+      "name": "Danpigu (单皮鼓)",
+      "facet": "Percussion, gongs and drums",
+      "known_at": 13
+    },
+    {
+      "name": "Weifeng gongs and drums (威风锣鼓)",
+      "facet": "Percussion, gongs and drums",
+      "known_at": 12
+    },
+    {
+      "name": "Luogu gong-and-drum music (锣鼓乐)",
+      "facet": "Percussion, gongs and drums",
+      "known_at": 7
+    },
+    {
+      "name": "Bianzhong (编钟)",
+      "facet": "Ancient bronze and stone instruments",
+      "known_at": 5
+    },
+    {
+      "name": "Bianqing (编磬)",
+      "facet": "Ancient bronze and stone instruments",
+      "known_at": 9
+    },
+    {
+      "name": "Marquis Yi of Zeng (曾侯乙)",
+      "facet": "Ancient bronze and stone instruments",
+      "known_at": 10
+    },
+    {
+      "name": "Hubei Provincial Museum (湖北省博物馆)",
+      "facet": "Ancient bronze and stone instruments",
+      "known_at": 10
+    },
+    {
+      "name": "Jiahu bone flutes (贾湖骨笛)",
+      "facet": "Ancient bronze and stone instruments",
+      "known_at": 11
+    },
+    {
+      "name": "Bronze drum (铜鼓)",
+      "facet": "Ancient bronze and stone instruments",
+      "known_at": 10
+    },
+    {
+      "name": "Nao bell (铙)",
+      "facet": "Ancient bronze and stone instruments",
+      "known_at": 13
+    },
+    {
+      "name": "Fou (缶)",
+      "facet": "Ancient bronze and stone instruments",
+      "known_at": 8
+    },
+    {
+      "name": "Se zither (瑟)",
+      "facet": "Ancient bronze and stone instruments",
+      "known_at": 11
+    },
+    {
+      "name": "Zhu (筑)",
+      "facet": "Ancient bronze and stone instruments",
+      "known_at": 13
+    },
+    {
+      "name": "Yu mouth organ (竽)",
+      "facet": "Ancient bronze and stone instruments",
+      "known_at": 9
+    },
+    {
+      "name": "Two-tone bells (一钟双音)",
+      "facet": "Ancient bronze and stone instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Chunyu bell (錞于)",
+      "facet": "Ancient bronze and stone instruments",
+      "known_at": 14
+    },
+    {
+      "name": "Yayue court music (雅乐)",
+      "facet": "Ancient bronze and stone instruments",
+      "known_at": 11
+    },
+    {
+      "name": "Guqin (古琴)",
+      "facet": "Guqin and literati music",
+      "known_at": 5
+    },
+    {
+      "name": "Guangling San (广陵散)",
+      "facet": "Guqin and literati music",
+      "known_at": 9
+    },
+    {
+      "name": "Gaoshan Liushui (高山流水)",
+      "facet": "Guqin and literati music",
+      "known_at": 6
+    },
+    {
+      "name": "Meihua Sannong (梅花三弄)",
+      "facet": "Guqin and literati music",
+      "known_at": 10
+    },
+    {
+      "name": "Pingsha Luoyan (平沙落雁)",
+      "facet": "Guqin and literati music",
+      "known_at": 12
+    },
+    {
+      "name": "Yangguan Sandie (阳关三叠)",
+      "facet": "Guqin and literati music",
+      "known_at": 11
+    },
+    {
+      "name": "Youlan (碣石调·幽兰)",
+      "facet": "Guqin and literati music",
+      "known_at": 14
+    },
+    {
+      "name": "Ji Kang (嵇康)",
+      "facet": "Guqin and literati music",
+      "known_at": 10
+    },
+    {
+      "name": "Four Arts (琴棋书画)",
+      "facet": "Guqin and literati music",
+      "known_at": 7
+    },
+    {
+      "name": "Zhiyin (知音)",
+      "facet": "Guqin and literati music",
+      "known_at": 6
+    },
+    {
+      "name": "Empty Fort Strategy (空城计)",
+      "facet": "Guqin and literati music",
+      "known_at": 7
+    },
+    {
+      "name": "Feng Qiu Huang (凤求凰)",
+      "facet": "Guqin and literati music",
+      "known_at": 11
+    },
+    {
+      "name": "Tao Yuanming's stringless qin (无弦琴)",
+      "facet": "Guqin and literati music",
+      "known_at": 13
+    },
+    {
+      "name": "Pipa Xing (琵琶行)",
+      "facet": "Guqin and literati music",
+      "known_at": 9
+    },
+    {
+      "name": "Hujia Shiba Pai (胡笳十八拍)",
+      "facet": "Guqin and literati music",
+      "known_at": 12
+    },
+    {
+      "name": "Voyager Golden Record",
+      "facet": "Guqin and literati music",
+      "known_at": 12
+    },
+    {
+      "name": "Jiuxiao Huanpei qin (九霄环佩)",
+      "facet": "Guqin and literati music",
+      "known_at": 14
+    },
+    {
+      "name": "Hui markers (徽)",
+      "facet": "Guqin and literati music",
+      "known_at": 13
+    },
+    {
+      "name": "Pentatonic scale (五声音阶)",
+      "facet": "Pentatonic scale and notation",
+      "known_at": 7
+    },
+    {
+      "name": "Gong shang jue zhi yu (宫商角徵羽)",
+      "facet": "Pentatonic scale and notation",
+      "known_at": 8
+    },
+    {
+      "name": "Gong mode (宫调式)",
+      "facet": "Pentatonic scale and notation",
+      "known_at": 12
+    },
+    {
+      "name": "Biangong and bianzhi (变宫变徵)",
+      "facet": "Pentatonic scale and notation",
+      "known_at": 14
+    },
+    {
+      "name": "Twelve lü (十二律)",
+      "facet": "Pentatonic scale and notation",
+      "known_at": 12
+    },
+    {
+      "name": "Huangzhong (黄钟)",
+      "facet": "Pentatonic scale and notation",
+      "known_at": 12
+    },
+    {
+      "name": "Sanfen sunyi (三分损益法)",
+      "facet": "Pentatonic scale and notation",
+      "known_at": 13
+    },
+    {
+      "name": "Zhu Zaiyu (朱载堉)",
+      "facet": "Pentatonic scale and notation",
+      "known_at": 13
+    },
+    {
+      "name": "Twelve-tone equal temperament (十二平均律)",
+      "facet": "Pentatonic scale and notation",
+      "known_at": 11
+    },
+    {
+      "name": "Jianpu numbered notation (简谱)",
+      "facet": "Pentatonic scale and notation",
+      "known_at": 4
+    },
+    {
+      "name": "Gongche notation (工尺谱)",
+      "facet": "Pentatonic scale and notation",
+      "known_at": 11
+    },
+    {
+      "name": "Jianzipu (减字谱)",
+      "facet": "Pentatonic scale and notation",
+      "known_at": 13
+    },
+    {
+      "name": "Banyan beat (板眼)",
+      "facet": "Pentatonic scale and notation",
+      "known_at": 10
+    },
+    {
+      "name": "Qupai labelled tunes (曲牌)",
+      "facet": "Pentatonic scale and notation",
+      "known_at": 12
+    },
+    {
+      "name": "Black keys of the piano",
+      "facet": "Pentatonic scale and notation",
+      "known_at": 8
+    },
+    {
+      "name": "Jasmine Flower (茉莉花)",
+      "facet": "Famous folk songs",
+      "known_at": 3
+    },
+    {
+      "name": "Kangding Love Song (康定情歌)",
+      "facet": "Famous folk songs",
+      "known_at": 7
+    },
+    {
+      "name": "In That Faraway Place (在那遥远的地方)",
+      "facet": "Famous folk songs",
+      "known_at": 7
+    },
+    {
+      "name": "Girl of Dabancheng (达坂城的姑娘)",
+      "facet": "Famous folk songs",
+      "known_at": 8
+    },
+    {
+      "name": "Lift Your Veil (掀起你的盖头来)",
+      "facet": "Famous folk songs",
+      "known_at": 9
+    },
+    {
+      "name": "Liuyang River (浏阳河)",
+      "facet": "Famous folk songs",
+      "known_at": 9
+    },
+    {
+      "name": "Fengyang Flower Drum (凤阳花鼓)",
+      "facet": "Famous folk songs",
+      "known_at": 9
+    },
+    {
+      "name": "Xiao Bai Cai (小白菜)",
+      "facet": "Famous folk songs",
+      "known_at": 7
+    },
+    {
+      "name": "Embroidering a Purse (绣荷包)",
+      "facet": "Famous folk songs",
+      "known_at": 11
+    },
+    {
+      "name": "Lan Huahua (兰花花)",
+      "facet": "Famous folk songs",
+      "known_at": 11
+    },
+    {
+      "name": "Wusuli Boat Song (乌苏里船歌)",
+      "facet": "Famous folk songs",
+      "known_at": 10
+    },
+    {
+      "name": "Picking Tea and Catching Butterflies (采茶扑蝶)",
+      "facet": "Famous folk songs",
+      "known_at": 11
+    },
+    {
+      "name": "Mayila (玛依拉)",
+      "facet": "Famous folk songs",
+      "known_at": 11
+    },
+    {
+      "name": "Alamuhan (阿拉木汗)",
+      "facet": "Famous folk songs",
+      "known_at": 11
+    },
+    {
+      "name": "Girl of Alishan (阿里山的姑娘)",
+      "facet": "Famous folk songs",
+      "known_at": 7
+    },
+    {
+      "name": "Drop the Handkerchief (丢手绢)",
+      "facet": "Famous folk songs",
+      "known_at": 2
+    },
+    {
+      "name": "Xiao Erlang (小二郎)",
+      "facet": "Famous folk songs",
+      "known_at": 4
+    },
+    {
+      "name": "Wang Luobin (王洛宾)",
+      "facet": "Famous folk songs",
+      "known_at": 11
+    },
+    {
+      "name": "Erquan Yingyue (二泉映月)",
+      "facet": "Classic instrumental pieces",
+      "known_at": 6
+    },
+    {
+      "name": "Butterfly Lovers Violin Concerto (梁祝)",
+      "facet": "Classic instrumental pieces",
+      "known_at": 6
+    },
+    {
+      "name": "Ambush from Ten Sides (十面埋伏)",
+      "facet": "Classic instrumental pieces",
+      "known_at": 8
+    },
+    {
+      "name": "Spring River Flower Moon Night (春江花月夜)",
+      "facet": "Classic instrumental pieces",
+      "known_at": 9
+    },
+    {
+      "name": "Horse Racing (赛马)",
+      "facet": "Classic instrumental pieces",
+      "known_at": 8
+    },
+    {
+      "name": "Hundred Birds Paying Homage to the Phoenix (百鸟朝凤)",
+      "facet": "Classic instrumental pieces",
+      "known_at": 9
+    },
+    {
+      "name": "Fishermen's Song at Dusk (渔舟唱晚)",
+      "facet": "Classic instrumental pieces",
+      "known_at": 9
+    },
+    {
+      "name": "Dance of the Yao People (瑶族舞曲)",
+      "facet": "Classic instrumental pieces",
+      "known_at": 11
+    },
+    {
+      "name": "Spring Festival Overture (春节序曲)",
+      "facet": "Classic instrumental pieces",
+      "known_at": 7
+    },
+    {
+      "name": "Golden Snake Dance (金蛇狂舞)",
+      "facet": "Classic instrumental pieces",
+      "known_at": 9
+    },
+    {
+      "name": "Yangchun Baixue (阳春白雪)",
+      "facet": "Classic instrumental pieces",
+      "known_at": 9
+    },
+    {
+      "name": "Purple Bamboo Melody (紫竹调)",
+      "facet": "Classic instrumental pieces",
+      "known_at": 12
+    },
+    {
+      "name": "Liangxiao (良宵)",
+      "facet": "Classic instrumental pieces",
+      "known_at": 12
+    },
+    {
+      "name": "General's Command (将军令)",
+      "facet": "Classic instrumental pieces",
+      "known_at": 11
+    },
+    {
+      "name": "Moon High (月儿高)",
+      "facet": "Classic instrumental pieces",
+      "known_at": 13
+    },
+    {
+      "name": "Xiyang Xiaogu (夕阳箫鼓)",
+      "facet": "Classic instrumental pieces",
+      "known_at": 13
+    },
+    {
+      "name": "Abing (阿炳)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 6
+    },
+    {
+      "name": "Liu Tianhua (刘天华)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 11
+    },
+    {
+      "name": "He Zhanhao and Chen Gang (何占豪、陈钢)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 12
+    },
+    {
+      "name": "Nie Er (聂耳)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 8
+    },
+    {
+      "name": "Xian Xinghai (冼星海)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 10
+    },
+    {
+      "name": "Boya and Ziqi (伯牙与子期)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 5
+    },
+    {
+      "name": "Shi Kuang (师旷)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 13
+    },
+    {
+      "name": "Li Guinian (李龟年)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 11
+    },
+    {
+      "name": "Pear Garden (梨园)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Zhaojun (王昭君)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 7
+    },
+    {
+      "name": "Ling Lun (伶伦)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 14
+    },
+    {
+      "name": "Fuxi (伏羲)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 8
+    },
+    {
+      "name": "Nongyu and Xiao Shi (弄玉吹箫)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 13
+    },
+    {
+      "name": "Zhou Yu (周瑜)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 8
+    },
+    {
+      "name": "Han Xiangzi (韩湘子)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 9
+    },
+    {
+      "name": "Mr. Nanguo (南郭先生)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 5
+    },
+    {
+      "name": "Playing the qin to a cow (对牛弹琴)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 3
+    },
+    {
+      "name": "Tan Dun (谭盾)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 12
+    },
+    {
+      "name": "Min Huifen (闵惠芬)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 13
+    },
+    {
+      "name": "Wu Man (吴蛮)",
+      "facet": "Musicians, composers and legends",
+      "known_at": 14
+    },
+    {
+      "name": "Matouqin (马头琴)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 5
+    },
+    {
+      "name": "Khoomei throat singing (呼麦)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 11
+    },
+    {
+      "name": "Mongolian long song (长调)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 11
+    },
+    {
+      "name": "Twelve Muqam (十二木卡姆)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 12
+    },
+    {
+      "name": "Dombra (冬不拉)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 10
+    },
+    {
+      "name": "Rawap (热瓦普)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 11
+    },
+    {
+      "name": "Dap hand drum (手鼓)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 7
+    },
+    {
+      "name": "Grand Song of the Dong (侗族大歌)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 11
+    },
+    {
+      "name": "Lusheng (芦笙)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 8
+    },
+    {
+      "name": "Hua'er (花儿)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 11
+    },
+    {
+      "name": "Xintianyou (信天游)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 10
+    },
+    {
+      "name": "Nanyin (南音)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 12
+    },
+    {
+      "name": "Jiangnan Sizhu (江南丝竹)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 11
+    },
+    {
+      "name": "Cantonese music (广东音乐)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 11
+    },
+    {
+      "name": "Hakka mountain songs (客家山歌)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 10
+    },
+    {
+      "name": "Liu Sanjie (刘三姐)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 7
+    },
+    {
+      "name": "Naxi ancient music (纳西古乐)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 12
+    },
+    {
+      "name": "Chuanjiang Haozi (川江号子)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 12
+    },
+    {
+      "name": "Chaozhou music (潮州音乐)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 13
+    },
+    {
+      "name": "Errentai (二人台)",
+      "facet": "Regional and ethnic folk music",
+      "known_at": 13
+    },
+    {
+      "name": "Suona at weddings (婚礼唢呐)",
+      "facet": "Folk music in festivals and life",
+      "known_at": 6
+    },
+    {
+      "name": "Lion dance drums (舞狮锣鼓)",
+      "facet": "Folk music in festivals and life",
+      "known_at": 3
+    },
+    {
+      "name": "Dragon boat drums (龙舟鼓)",
+      "facet": "Folk music in festivals and life",
+      "known_at": 3
+    },
+    {
+      "name": "Yangge (秧歌)",
+      "facet": "Folk music in festivals and life",
+      "known_at": 5
+    },
+    {
+      "name": "Ansai waist drum dance (安塞腰鼓)",
+      "facet": "Folk music in festivals and life",
+      "known_at": 8
+    },
+    {
+      "name": "Drum tower (鼓楼)",
+      "facet": "Folk music in festivals and life",
+      "known_at": 6
+    },
+    {
+      "name": "Morning bell and evening drum (晨钟暮鼓)",
+      "facet": "Folk music in festivals and life",
+      "known_at": 9
+    },
+    {
+      "name": "Sanyuesan song festival (三月三歌节)",
+      "facet": "Folk music in festivals and life",
+      "known_at": 10
+    },
+    {
+      "name": "Flower drum lantern (花鼓灯)",
+      "facet": "Folk music in festivals and life",
+      "known_at": 12
+    },
+    {
+      "name": "Errenzhuan (二人转)",
+      "facet": "Folk music in festivals and life",
+      "known_at": 8
+    },
+    {
+      "name": "Square dancing (广场舞)",
+      "facet": "Folk music in festivals and life",
+      "known_at": 3
+    },
+    {
+      "name": "Spring Festival Gala (春节联欢晚会)",
+      "facet": "Folk music in festivals and life",
+      "known_at": 2
+    },
+    {
+      "name": "Instrument grading exams (考级)",
+      "facet": "Folk music in festivals and life",
+      "known_at": 5
+    },
+    {
+      "name": "Happy New Year song (新年好)",
+      "facet": "Folk music in festivals and life",
+      "known_at": 1
+    },
+    {
+      "name": "Street vendor calls (叫卖)",
+      "facet": "Folk music in festivals and life",
+      "known_at": 7
+    },
+    {
+      "name": "Shadow puppet music (皮影戏音乐)",
+      "facet": "Folk music in festivals and life",
+      "known_at": 9
+    },
+    {
+      "name": "Bayin eight sounds (八音)",
+      "facet": "Making and materials of instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Python skin (蟒皮)",
+      "facet": "Making and materials of instruments",
+      "known_at": 9
+    },
+    {
+      "name": "Silk strings (丝弦)",
+      "facet": "Making and materials of instruments",
+      "known_at": 9
+    },
+    {
+      "name": "Bamboo (竹)",
+      "facet": "Making and materials of instruments",
+      "known_at": 2
+    },
+    {
+      "name": "Paulownia wood (桐木)",
+      "facet": "Making and materials of instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Rosewood (红木)",
+      "facet": "Making and materials of instruments",
+      "known_at": 10
+    },
+    {
+      "name": "Horsehair bow (马尾弓)",
+      "facet": "Making and materials of instruments",
+      "known_at": 7
+    },
+    {
+      "name": "Gourd (葫芦)",
+      "facet": "Making and materials of instruments",
+      "known_at": 4
+    },
+    {
+      "name": "Dimo flute membrane (笛膜)",
+      "facet": "Making and materials of instruments",
+      "known_at": 9
+    },
+    {
+      "name": "Wild goose bridges (雁柱)",
+      "facet": "Making and materials of instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Fingerpicks (义甲)",
+      "facet": "Making and materials of instruments",
+      "known_at": 7
+    },
+    {
+      "name": "Lacquer (漆)",
+      "facet": "Making and materials of instruments",
+      "known_at": 11
+    },
+    {
+      "name": "Clay (陶土)",
+      "facet": "Making and materials of instruments",
+      "known_at": 5
+    },
+    {
+      "name": "Suona reed (哨片)",
+      "facet": "Making and materials of instruments",
+      "known_at": 11
+    },
+    {
+      "name": "Bronze casting (青铜铸造)",
+      "facet": "Making and materials of instruments",
+      "known_at": 9
+    },
+    {
+      "name": "Rosin (松香)",
+      "facet": "Making and materials of instruments",
+      "known_at": 8
+    },
+    {
+      "name": "Erhu bow between the strings (弓在弦中)",
+      "facet": "Making and materials of instruments",
+      "known_at": 8
+    },
+    {
+      "name": "Lacquer cracks on old qins (断纹)",
+      "facet": "Making and materials of instruments",
+      "known_at": 14
+    }
+  ]
+}

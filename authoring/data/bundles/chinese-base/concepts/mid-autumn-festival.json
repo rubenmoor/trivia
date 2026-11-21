@@ -1,0 +1,1016 @@
+{
+  "subcategory": "mid-autumn-festival",
+  "facets": [
+    "Mooncakes and their fillings",
+    "Regional mooncake styles",
+    "Moon-gazing and the full moon",
+    "Lunar calendar and festival date",
+    "Lanterns and lantern riddles",
+    "Jade Rabbit and moon symbols",
+    "Mid-Autumn poems and sayings",
+    "Family reunion and festival foods",
+    "Regional and ethnic customs",
+    "Festival history and holidays",
+    "Mid-Autumn across East Asia"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 1,
+      "origin": 4,
+      "made_of": 5,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mooncakes (月饼)",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 1
+    },
+    {
+      "name": "Lotus seed paste (莲蓉)",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 4
+    },
+    {
+      "name": "Salted egg yolk (咸蛋黄)",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 3
+    },
+    {
+      "name": "Red bean paste (豆沙)",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 3
+    },
+    {
+      "name": "Five-kernel mooncake (五仁)",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 4
+    },
+    {
+      "name": "Jujube paste (枣泥)",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 6
+    },
+    {
+      "name": "Snow skin mooncake (冰皮月饼)",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 5
+    },
+    {
+      "name": "Ice cream mooncake",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 3
+    },
+    {
+      "name": "Lava custard mooncake (流心奶黄)",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 5
+    },
+    {
+      "name": "Black sesame filling",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 5
+    },
+    {
+      "name": "Taro paste (芋泥)",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 6
+    },
+    {
+      "name": "Winter melon paste (冬蓉)",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 9
+    },
+    {
+      "name": "Pork floss mooncake (肉松月饼)",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 7
+    },
+    {
+      "name": "Green tea mooncake",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 6
+    },
+    {
+      "name": "Mooncake mold (月饼模)",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 6
+    },
+    {
+      "name": "Golden syrup (转化糖浆)",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 11
+    },
+    {
+      "name": "Lye water (枧水)",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 12
+    },
+    {
+      "name": "Lard pastry (猪油酥皮)",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 10
+    },
+    {
+      "name": "Mooncake gift box",
+      "facet": "Mooncakes and their fillings",
+      "known_at": 3
+    },
+    {
+      "name": "Cantonese mooncake (广式月饼)",
+      "facet": "Regional mooncake styles",
+      "known_at": 4
+    },
+    {
+      "name": "Suzhou-style mooncake (苏式月饼)",
+      "facet": "Regional mooncake styles",
+      "known_at": 5
+    },
+    {
+      "name": "Beijing-style mooncake (京式月饼)",
+      "facet": "Regional mooncake styles",
+      "known_at": 7
+    },
+    {
+      "name": "Chaozhou-style mooncake (潮式月饼)",
+      "facet": "Regional mooncake styles",
+      "known_at": 9
+    },
+    {
+      "name": "Yunnan ham mooncake (云腿月饼)",
+      "facet": "Regional mooncake styles",
+      "known_at": 7
+    },
+    {
+      "name": "Fresh meat mooncake (鲜肉月饼)",
+      "facet": "Regional mooncake styles",
+      "known_at": 6
+    },
+    {
+      "name": "Egg yolk pastry (蛋黄酥)",
+      "facet": "Regional mooncake styles",
+      "known_at": 6
+    },
+    {
+      "name": "Ningbo-style mooncake (宁式月饼)",
+      "facet": "Regional mooncake styles",
+      "known_at": 12
+    },
+    {
+      "name": "Zilaihong (自来红)",
+      "facet": "Regional mooncake styles",
+      "known_at": 12
+    },
+    {
+      "name": "Zilaibai (自来白)",
+      "facet": "Regional mooncake styles",
+      "known_at": 12
+    },
+    {
+      "name": "Fengzhen mooncake (丰镇月饼)",
+      "facet": "Regional mooncake styles",
+      "known_at": 11
+    },
+    {
+      "name": "Daoxiangcun (稻香村)",
+      "facet": "Regional mooncake styles",
+      "known_at": 8
+    },
+    {
+      "name": "Lian Xiang Lou (莲香楼)",
+      "facet": "Regional mooncake styles",
+      "known_at": 12
+    },
+    {
+      "name": "Xinghualou (杏花楼)",
+      "facet": "Regional mooncake styles",
+      "known_at": 11
+    },
+    {
+      "name": "Wing Wah (荣华)",
+      "facet": "Regional mooncake styles",
+      "known_at": 11
+    },
+    {
+      "name": "Full moon",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 1
+    },
+    {
+      "name": "Moon-gazing (赏月)",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 3
+    },
+    {
+      "name": "Moon phases",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 5
+    },
+    {
+      "name": "Lunar eclipse",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 7
+    },
+    {
+      "name": "Supermoon",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 8
+    },
+    {
+      "name": "Harvest moon",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 10
+    },
+    {
+      "name": "Moon craters",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 5
+    },
+    {
+      "name": "Far side of the Moon",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 8
+    },
+    {
+      "name": "Moonrise",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 4
+    },
+    {
+      "name": "Lunar halo",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 10
+    },
+    {
+      "name": "Moon illusion",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 12
+    },
+    {
+      "name": "Tidal locking",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 12
+    },
+    {
+      "name": "Earthshine",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 13
+    },
+    {
+      "name": "Chang'e lunar program (嫦娥工程)",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 6
+    },
+    {
+      "name": "Yutu rover (玉兔号)",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 7
+    },
+    {
+      "name": "Three Pools Mirroring the Moon (三潭印月)",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 7
+    },
+    {
+      "name": "Moon reflection in water",
+      "facet": "Moon-gazing and the full moon",
+      "known_at": 3
+    },
+    {
+      "name": "Chinese lunar calendar (农历)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 3
+    },
+    {
+      "name": "15th day of the 8th lunar month (八月十五)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 2
+    },
+    {
+      "name": "Autumn Equinox (秋分)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 6
+    },
+    {
+      "name": "24 solar terms (二十四节气)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 6
+    },
+    {
+      "name": "White Dew (白露)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 8
+    },
+    {
+      "name": "Cold Dew (寒露)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 10
+    },
+    {
+      "name": "Zhongqiu as mid-autumn month (仲秋)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 10
+    },
+    {
+      "name": "Lantern Festival (元宵节)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 3
+    },
+    {
+      "name": "Chinese New Year (春节)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 1
+    },
+    {
+      "name": "Double Ninth Festival (重阳节)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 5
+    },
+    {
+      "name": "National Day (国庆节)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 2
+    },
+    {
+      "name": "Qixi Festival (七夕)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 5
+    },
+    {
+      "name": "Zhongyuan Festival (中元节)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 8
+    },
+    {
+      "name": "Gregorian calendar (公历)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 4
+    },
+    {
+      "name": "Lunisolar calendar (阴阳历)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 11
+    },
+    {
+      "name": "Wang day (望日)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 12
+    },
+    {
+      "name": "Synodic month (朔望月)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 12
+    },
+    {
+      "name": "Xia calendar (夏历)",
+      "facet": "Lunar calendar and festival date",
+      "known_at": 12
+    },
+    {
+      "name": "Lantern (灯笼)",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 1
+    },
+    {
+      "name": "Lantern riddles (灯谜)",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 5
+    },
+    {
+      "name": "Rabbit lantern (兔子灯)",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 3
+    },
+    {
+      "name": "Sky lantern (孔明灯)",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 5
+    },
+    {
+      "name": "River lantern (河灯)",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 6
+    },
+    {
+      "name": "Paper lantern",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 2
+    },
+    {
+      "name": "Carp lantern (鲤鱼灯)",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 6
+    },
+    {
+      "name": "Pomelo lantern (柚子灯)",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 9
+    },
+    {
+      "name": "Raising lanterns on poles (竖中秋)",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 12
+    },
+    {
+      "name": "Revolving lantern (走马灯)",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 9
+    },
+    {
+      "name": "Palace lantern (宫灯)",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 8
+    },
+    {
+      "name": "Star fruit lantern (杨桃灯)",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 9
+    },
+    {
+      "name": "Lotus lantern (莲花灯)",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 4
+    },
+    {
+      "name": "Lantern fair (灯会)",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 4
+    },
+    {
+      "name": "Victoria Park lantern carnival",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 10
+    },
+    {
+      "name": "Zigong Lantern Festival (自贡灯会)",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 10
+    },
+    {
+      "name": "Riddle answer (谜底)",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 6
+    },
+    {
+      "name": "Candle",
+      "facet": "Lanterns and lantern riddles",
+      "known_at": 1
+    },
+    {
+      "name": "Jade Rabbit (玉兔)",
+      "facet": "Jade Rabbit and moon symbols",
+      "known_at": 3
+    },
+    {
+      "name": "Guanghan Palace (广寒宫)",
+      "facet": "Jade Rabbit and moon symbols",
+      "known_at": 7
+    },
+    {
+      "name": "Wu Gang (吴刚)",
+      "facet": "Jade Rabbit and moon symbols",
+      "known_at": 7
+    },
+    {
+      "name": "Osmanthus tree (桂花树)",
+      "facet": "Jade Rabbit and moon symbols",
+      "known_at": 5
+    },
+    {
+      "name": "Moon toad (蟾蜍)",
+      "facet": "Jade Rabbit and moon symbols",
+      "known_at": 11
+    },
+    {
+      "name": "Elixir of immortality (不死药)",
+      "facet": "Jade Rabbit and moon symbols",
+      "known_at": 6
+    },
+    {
+      "name": "Tu'er Ye (兔儿爷)",
+      "facet": "Jade Rabbit and moon symbols",
+      "known_at": 9
+    },
+    {
+      "name": "Mortar and pestle",
+      "facet": "Jade Rabbit and moon symbols",
+      "known_at": 6
+    },
+    {
+      "name": "Yue Lao (月老)",
+      "facet": "Jade Rabbit and moon symbols",
+      "known_at": 8
+    },
+    {
+      "name": "Taiyin (太阴)",
+      "facet": "Jade Rabbit and moon symbols",
+      "known_at": 12
+    },
+    {
+      "name": "Yin and yang (阴阳)",
+      "facet": "Jade Rabbit and moon symbols",
+      "known_at": 7
+    },
+    {
+      "name": "Rabbit (zodiac animal)",
+      "facet": "Jade Rabbit and moon symbols",
+      "known_at": 2
+    },
+    {
+      "name": "Toad Palace (蟾宫)",
+      "facet": "Jade Rabbit and moon symbols",
+      "known_at": 12
+    },
+    {
+      "name": "Temple of the Moon (月坛)",
+      "facet": "Jade Rabbit and moon symbols",
+      "known_at": 11
+    },
+    {
+      "name": "White jade plate (白玉盘)",
+      "facet": "Jade Rabbit and moon symbols",
+      "known_at": 7
+    },
+    {
+      "name": "Shuidiao Getou (水调歌头)",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Su Shi (苏轼)",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Su Zhe (苏辙)",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Quiet Night Thoughts (静夜思)",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 2
+    },
+    {
+      "name": "Li Bai (李白)",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 2
+    },
+    {
+      "name": "Gu Lang Yue Xing (古朗月行)",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 5
+    },
+    {
+      "name": "但愿人长久，千里共婵娟",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Chanjuan (婵娟)",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "海上生明月，天涯共此时",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Jiuling (张九龄)",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "月是故乡明",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Du Fu (杜甫)",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 5
+    },
+    {
+      "name": "每逢佳节倍思亲",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 4
+    },
+    {
+      "name": "Wang Wei (王维)",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "A Moonlit Night on the Spring River (春江花月夜)",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Fifteenth Night Gazing at the Moon (十五夜望月)",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "十五的月亮十六圆",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "月到中秋分外明",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "八月十五云遮月，正月十五雪打灯",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "The Moon Represents My Heart (月亮代表我的心)",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Teresa Teng (邓丽君)",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "But Wish We Last Forever (但愿人长久, song)",
+      "facet": "Mid-Autumn poems and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Family reunion (团圆)",
+      "facet": "Family reunion and festival foods",
+      "known_at": 2
+    },
+    {
+      "name": "Reunion dinner (团圆饭)",
+      "facet": "Family reunion and festival foods",
+      "known_at": 3
+    },
+    {
+      "name": "Osmanthus wine (桂花酒)",
+      "facet": "Family reunion and festival foods",
+      "known_at": 8
+    },
+    {
+      "name": "Hairy crab (大闸蟹)",
+      "facet": "Family reunion and festival foods",
+      "known_at": 6
+    },
+    {
+      "name": "Taro (芋头)",
+      "facet": "Family reunion and festival foods",
+      "known_at": 5
+    },
+    {
+      "name": "Osmanthus salted duck (桂花鸭)",
+      "facet": "Family reunion and festival foods",
+      "known_at": 10
+    },
+    {
+      "name": "River snails (田螺)",
+      "facet": "Family reunion and festival foods",
+      "known_at": 11
+    },
+    {
+      "name": "Osmanthus cake (桂花糕)",
+      "facet": "Family reunion and festival foods",
+      "known_at": 6
+    },
+    {
+      "name": "Persimmon (柿子)",
+      "facet": "Family reunion and festival foods",
+      "known_at": 4
+    },
+    {
+      "name": "Water caltrop (菱角)",
+      "facet": "Family reunion and festival foods",
+      "known_at": 8
+    },
+    {
+      "name": "Chestnut (栗子)",
+      "facet": "Family reunion and festival foods",
+      "known_at": 4
+    },
+    {
+      "name": "Pomegranate (石榴)",
+      "facet": "Family reunion and festival foods",
+      "known_at": 5
+    },
+    {
+      "name": "Tea with mooncakes",
+      "facet": "Family reunion and festival foods",
+      "known_at": 3
+    },
+    {
+      "name": "Lotus root (莲藕)",
+      "facet": "Family reunion and festival foods",
+      "known_at": 5
+    },
+    {
+      "name": "Peanuts (花生)",
+      "facet": "Family reunion and festival foods",
+      "known_at": 3
+    },
+    {
+      "name": "Qiantang River tidal bore (钱塘潮)",
+      "facet": "Regional and ethnic customs",
+      "known_at": 9
+    },
+    {
+      "name": "Bobing (博饼)",
+      "facet": "Regional and ethnic customs",
+      "known_at": 10
+    },
+    {
+      "name": "Tai Hang Fire Dragon Dance (大坑舞火龙)",
+      "facet": "Regional and ethnic customs",
+      "known_at": 11
+    },
+    {
+      "name": "Burning pagodas (烧塔)",
+      "facet": "Regional and ethnic customs",
+      "known_at": 12
+    },
+    {
+      "name": "Walking under the moon (走月亮)",
+      "facet": "Regional and ethnic customs",
+      "known_at": 12
+    },
+    {
+      "name": "Moon worship (拜月)",
+      "facet": "Regional and ethnic customs",
+      "known_at": 6
+    },
+    {
+      "name": "Mid-Autumn barbecue in Taiwan (中秋烤肉)",
+      "facet": "Regional and ethnic customs",
+      "known_at": 9
+    },
+    {
+      "name": "Grass dragon dance (舞草龙)",
+      "facet": "Regional and ethnic customs",
+      "known_at": 12
+    },
+    {
+      "name": "Moqiu (摸秋)",
+      "facet": "Regional and ethnic customs",
+      "known_at": 13
+    },
+    {
+      "name": "Sending melons (送瓜)",
+      "facet": "Regional and ethnic customs",
+      "known_at": 13
+    },
+    {
+      "name": "West Lake moon-gazing (西湖赏月)",
+      "facet": "Regional and ethnic customs",
+      "known_at": 7
+    },
+    {
+      "name": "Ancestor worship (祭祖)",
+      "facet": "Regional and ethnic customs",
+      "known_at": 6
+    },
+    {
+      "name": "男不拜月，女不祭灶",
+      "facet": "Regional and ethnic customs",
+      "known_at": 13
+    },
+    {
+      "name": "Moon offering table (月光纸/供桌)",
+      "facet": "Regional and ethnic customs",
+      "known_at": 11
+    },
+    {
+      "name": "Mid-Autumn as public holiday since 2008",
+      "facet": "Festival history and holidays",
+      "known_at": 9
+    },
+    {
+      "name": "Golden Week (黄金周)",
+      "facet": "Festival history and holidays",
+      "known_at": 5
+    },
+    {
+      "name": "Holiday make-up workday (调休)",
+      "facet": "Festival history and holidays",
+      "known_at": 6
+    },
+    {
+      "name": "Four traditional Chinese festivals (四大传统节日)",
+      "facet": "Festival history and holidays",
+      "known_at": 5
+    },
+    {
+      "name": "Dragon Boat Festival (端午节)",
+      "facet": "Festival history and holidays",
+      "known_at": 3
+    },
+    {
+      "name": "Qingming Festival (清明节)",
+      "facet": "Festival history and holidays",
+      "known_at": 4
+    },
+    {
+      "name": "Zhou dynasty (周朝)",
+      "facet": "Festival history and holidays",
+      "known_at": 9
+    },
+    {
+      "name": "Rites of Zhou (周礼)",
+      "facet": "Festival history and holidays",
+      "known_at": 13
+    },
+    {
+      "name": "Book of Rites (礼记)",
+      "facet": "Festival history and holidays",
+      "known_at": 12
+    },
+    {
+      "name": "Tang dynasty (唐朝)",
+      "facet": "Festival history and holidays",
+      "known_at": 6
+    },
+    {
+      "name": "Song dynasty (宋朝)",
+      "facet": "Festival history and holidays",
+      "known_at": 6
+    },
+    {
+      "name": "Ming dynasty (明朝)",
+      "facet": "Festival history and holidays",
+      "known_at": 6
+    },
+    {
+      "name": "Mooncake uprising legend (月饼起义)",
+      "facet": "Festival history and holidays",
+      "known_at": 9
+    },
+    {
+      "name": "Zhu Yuanzhang (朱元璋)",
+      "facet": "Festival history and holidays",
+      "known_at": 8
+    },
+    {
+      "name": "Liu Bowen (刘伯温)",
+      "facet": "Festival history and holidays",
+      "known_at": 10
+    },
+    {
+      "name": "Emperor Xuanzong of Tang (唐玄宗)",
+      "facet": "Festival history and holidays",
+      "known_at": 10
+    },
+    {
+      "name": "Dongjing Meng Hua Lu (东京梦华录)",
+      "facet": "Festival history and holidays",
+      "known_at": 14
+    },
+    {
+      "name": "National intangible cultural heritage (国家级非物质文化遗产)",
+      "facet": "Festival history and holidays",
+      "known_at": 11
+    },
+    {
+      "name": "Mooncake voucher (月饼券)",
+      "facet": "Festival history and holidays",
+      "known_at": 10
+    },
+    {
+      "name": "Chuseok (추석)",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 7
+    },
+    {
+      "name": "Songpyeon (송편)",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 10
+    },
+    {
+      "name": "Ganggangsullae (강강술래)",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 13
+    },
+    {
+      "name": "Charye (차례)",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 13
+    },
+    {
+      "name": "Hanbok (한복)",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 7
+    },
+    {
+      "name": "Ssireum (씨름)",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 12
+    },
+    {
+      "name": "Tsukimi (月見)",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 9
+    },
+    {
+      "name": "Tsukimi dango (月見団子)",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 11
+    },
+    {
+      "name": "Jugoya (十五夜)",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 12
+    },
+    {
+      "name": "Susuki pampas grass (芒)",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 12
+    },
+    {
+      "name": "Moon rabbit pounding mochi",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 9
+    },
+    {
+      "name": "Tết Trung Thu",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 10
+    },
+    {
+      "name": "Vietnamese star lantern (đèn ông sao)",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 12
+    },
+    {
+      "name": "Chú Cuội",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 14
+    },
+    {
+      "name": "Bánh trung thu",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 11
+    },
+    {
+      "name": "Mid-Autumn in Singapore",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 8
+    },
+    {
+      "name": "Mid-Autumn in Malaysia",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 8
+    },
+    {
+      "name": "Gardens by the Bay lantern display",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 10
+    },
+    {
+      "name": "Mid-Autumn in Hong Kong",
+      "facet": "Mid-Autumn across East Asia",
+      "known_at": 6
+    }
+  ]
+}

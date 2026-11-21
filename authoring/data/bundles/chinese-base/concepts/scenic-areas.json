@@ -1,0 +1,982 @@
+{
+  "subcategory": "scenic-areas",
+  "facets": [
+    "Famous mountains of China",
+    "Rivers, lakes and waterfalls",
+    "Karst and stone landscapes",
+    "City skylines and waterfronts",
+    "Old towns and water villages",
+    "Beaches and island resorts",
+    "Grasslands, deserts and plateaus",
+    "Giant Buddhas and temple sights",
+    "Ice, snow and seasonal sights",
+    "Gardens and lakeside parks",
+    "Scenic areas on banknotes, poems and films",
+    "Travel customs and the 5A rating system"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mount Huang",
+      "facet": "Famous mountains of China",
+      "known_at": 4
+    },
+    {
+      "name": "Mount Heng (Hunan)",
+      "facet": "Famous mountains of China",
+      "known_at": 10
+    },
+    {
+      "name": "Mount Heng (Shanxi)",
+      "facet": "Famous mountains of China",
+      "known_at": 11
+    },
+    {
+      "name": "Mount Putuo",
+      "facet": "Famous mountains of China",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Jiuhua",
+      "facet": "Famous mountains of China",
+      "known_at": 11
+    },
+    {
+      "name": "Mount Everest (Qomolangma)",
+      "facet": "Famous mountains of China",
+      "known_at": 3
+    },
+    {
+      "name": "Jade Dragon Snow Mountain",
+      "facet": "Famous mountains of China",
+      "known_at": 9
+    },
+    {
+      "name": "Meili Snow Mountain",
+      "facet": "Famous mountains of China",
+      "known_at": 12
+    },
+    {
+      "name": "Yandang Mountain",
+      "facet": "Famous mountains of China",
+      "known_at": 11
+    },
+    {
+      "name": "Jinggangshan",
+      "facet": "Famous mountains of China",
+      "known_at": 8
+    },
+    {
+      "name": "Three Gorges",
+      "facet": "Rivers, lakes and waterfalls",
+      "known_at": 5
+    },
+    {
+      "name": "Hukou Waterfall",
+      "facet": "Rivers, lakes and waterfalls",
+      "known_at": 7
+    },
+    {
+      "name": "Detian Waterfall",
+      "facet": "Rivers, lakes and waterfalls",
+      "known_at": 11
+    },
+    {
+      "name": "Heavenly Lake of Tianshan",
+      "facet": "Rivers, lakes and waterfalls",
+      "known_at": 8
+    },
+    {
+      "name": "Changbai Heaven Lake",
+      "facet": "Rivers, lakes and waterfalls",
+      "known_at": 9
+    },
+    {
+      "name": "Lake Tai",
+      "facet": "Rivers, lakes and waterfalls",
+      "known_at": 6
+    },
+    {
+      "name": "Poyang Lake",
+      "facet": "Rivers, lakes and waterfalls",
+      "known_at": 6
+    },
+    {
+      "name": "Erhai Lake",
+      "facet": "Rivers, lakes and waterfalls",
+      "known_at": 8
+    },
+    {
+      "name": "Lugu Lake",
+      "facet": "Rivers, lakes and waterfalls",
+      "known_at": 10
+    },
+    {
+      "name": "Namtso",
+      "facet": "Rivers, lakes and waterfalls",
+      "known_at": 10
+    },
+    {
+      "name": "Kanas Lake",
+      "facet": "Rivers, lakes and waterfalls",
+      "known_at": 9
+    },
+    {
+      "name": "Sun Moon Lake",
+      "facet": "Rivers, lakes and waterfalls",
+      "known_at": 6
+    },
+    {
+      "name": "Yarlung Tsangpo Grand Canyon",
+      "facet": "Rivers, lakes and waterfalls",
+      "known_at": 9
+    },
+    {
+      "name": "Tiger Leaping Gorge",
+      "facet": "Rivers, lakes and waterfalls",
+      "known_at": 10
+    },
+    {
+      "name": "Tianmen Mountain",
+      "facet": "Karst and stone landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "Stone Forest (Shilin)",
+      "facet": "Karst and stone landscapes",
+      "known_at": 5
+    },
+    {
+      "name": "Reed Flute Cave",
+      "facet": "Karst and stone landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "Elephant Trunk Hill",
+      "facet": "Karst and stone landscapes",
+      "known_at": 6
+    },
+    {
+      "name": "Yangshuo",
+      "facet": "Karst and stone landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "Moon Hill",
+      "facet": "Karst and stone landscapes",
+      "known_at": 12
+    },
+    {
+      "name": "Wulong Karst",
+      "facet": "Karst and stone landscapes",
+      "known_at": 11
+    },
+    {
+      "name": "Xiaozhai Tiankeng",
+      "facet": "Karst and stone landscapes",
+      "known_at": 12
+    },
+    {
+      "name": "Furong Cave",
+      "facet": "Karst and stone landscapes",
+      "known_at": 13
+    },
+    {
+      "name": "Zhijin Cave",
+      "facet": "Karst and stone landscapes",
+      "known_at": 13
+    },
+    {
+      "name": "Yellow Dragon Cave",
+      "facet": "Karst and stone landscapes",
+      "known_at": 12
+    },
+    {
+      "name": "Wanfenglin",
+      "facet": "Karst and stone landscapes",
+      "known_at": 13
+    },
+    {
+      "name": "Libo Karst",
+      "facet": "Karst and stone landscapes",
+      "known_at": 12
+    },
+    {
+      "name": "Zhangye Danxia",
+      "facet": "Karst and stone landscapes",
+      "known_at": 7
+    },
+    {
+      "name": "Danxia Mountain",
+      "facet": "Karst and stone landscapes",
+      "known_at": 10
+    },
+    {
+      "name": "Yehliu Queen's Head",
+      "facet": "Karst and stone landscapes",
+      "known_at": 10
+    },
+    {
+      "name": "Karst",
+      "facet": "Karst and stone landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "Nanjing Road",
+      "facet": "City skylines and waterfronts",
+      "known_at": 7
+    },
+    {
+      "name": "Avenue of Stars",
+      "facet": "City skylines and waterfronts",
+      "known_at": 9
+    },
+    {
+      "name": "Yangtze River Cableway",
+      "facet": "City skylines and waterfronts",
+      "known_at": 10
+    },
+    {
+      "name": "Jiefangbei",
+      "facet": "City skylines and waterfronts",
+      "known_at": 10
+    },
+    {
+      "name": "Tiananmen Square",
+      "facet": "City skylines and waterfronts",
+      "known_at": 2
+    },
+    {
+      "name": "Beijing National Stadium (Bird's Nest)",
+      "facet": "City skylines and waterfronts",
+      "known_at": 4
+    },
+    {
+      "name": "Wangfujing",
+      "facet": "City skylines and waterfronts",
+      "known_at": 8
+    },
+    {
+      "name": "Taipei 101",
+      "facet": "City skylines and waterfronts",
+      "known_at": 6
+    },
+    {
+      "name": "Macau Tower",
+      "facet": "City skylines and waterfronts",
+      "known_at": 10
+    },
+    {
+      "name": "Zhanqiao Pier",
+      "facet": "City skylines and waterfronts",
+      "known_at": 10
+    },
+    {
+      "name": "Central Street (Harbin)",
+      "facet": "City skylines and waterfronts",
+      "known_at": 10
+    },
+    {
+      "name": "Kuanzhai Alley",
+      "facet": "City skylines and waterfronts",
+      "known_at": 9
+    },
+    {
+      "name": "Zhouzhuang",
+      "facet": "Old towns and water villages",
+      "known_at": 8
+    },
+    {
+      "name": "Wuzhen",
+      "facet": "Old towns and water villages",
+      "known_at": 7
+    },
+    {
+      "name": "Xitang",
+      "facet": "Old towns and water villages",
+      "known_at": 10
+    },
+    {
+      "name": "Tongli",
+      "facet": "Old towns and water villages",
+      "known_at": 11
+    },
+    {
+      "name": "Zhujiajiao",
+      "facet": "Old towns and water villages",
+      "known_at": 10
+    },
+    {
+      "name": "Nanxun",
+      "facet": "Old towns and water villages",
+      "known_at": 12
+    },
+    {
+      "name": "Pingjiang Road",
+      "facet": "Old towns and water villages",
+      "known_at": 11
+    },
+    {
+      "name": "Dali Old Town",
+      "facet": "Old towns and water villages",
+      "known_at": 7
+    },
+    {
+      "name": "Shuhe Old Town",
+      "facet": "Old towns and water villages",
+      "known_at": 12
+    },
+    {
+      "name": "Pingyao Ancient City",
+      "facet": "Old towns and water villages",
+      "known_at": 8
+    },
+    {
+      "name": "Fenghuang Ancient Town",
+      "facet": "Old towns and water villages",
+      "known_at": 7
+    },
+    {
+      "name": "Langzhong Ancient City",
+      "facet": "Old towns and water villages",
+      "known_at": 12
+    },
+    {
+      "name": "Xijiang Miao Village",
+      "facet": "Old towns and water villages",
+      "known_at": 10
+    },
+    {
+      "name": "Zhaoxing Dong Village",
+      "facet": "Old towns and water villages",
+      "known_at": 13
+    },
+    {
+      "name": "Dukezong Ancient Town",
+      "facet": "Old towns and water villages",
+      "known_at": 13
+    },
+    {
+      "name": "Hutong",
+      "facet": "Old towns and water villages",
+      "known_at": 4
+    },
+    {
+      "name": "Shikumen",
+      "facet": "Old towns and water villages",
+      "known_at": 9
+    },
+    {
+      "name": "Yalong Bay",
+      "facet": "Beaches and island resorts",
+      "known_at": 8
+    },
+    {
+      "name": "Wuzhizhou Island",
+      "facet": "Beaches and island resorts",
+      "known_at": 10
+    },
+    {
+      "name": "Luhuitou",
+      "facet": "Beaches and island resorts",
+      "known_at": 12
+    },
+    {
+      "name": "Dadonghai",
+      "facet": "Beaches and island resorts",
+      "known_at": 11
+    },
+    {
+      "name": "Hainan Island",
+      "facet": "Beaches and island resorts",
+      "known_at": 3
+    },
+    {
+      "name": "Boao",
+      "facet": "Beaches and island resorts",
+      "known_at": 11
+    },
+    {
+      "name": "Gulangyu",
+      "facet": "Beaches and island resorts",
+      "known_at": 6
+    },
+    {
+      "name": "Beidaihe",
+      "facet": "Beaches and island resorts",
+      "known_at": 7
+    },
+    {
+      "name": "Weizhou Island",
+      "facet": "Beaches and island resorts",
+      "known_at": 10
+    },
+    {
+      "name": "Beihai Silver Beach",
+      "facet": "Beaches and island resorts",
+      "known_at": 9
+    },
+    {
+      "name": "Pingtan Island",
+      "facet": "Beaches and island resorts",
+      "known_at": 11
+    },
+    {
+      "name": "Zhoushan Islands",
+      "facet": "Beaches and island resorts",
+      "known_at": 9
+    },
+    {
+      "name": "Penglai Pavilion",
+      "facet": "Beaches and island resorts",
+      "known_at": 8
+    },
+    {
+      "name": "Changdao",
+      "facet": "Beaches and island resorts",
+      "known_at": 13
+    },
+    {
+      "name": "Qingdao Golden Beach",
+      "facet": "Beaches and island resorts",
+      "known_at": 10
+    },
+    {
+      "name": "Bangchuidao",
+      "facet": "Beaches and island resorts",
+      "known_at": 13
+    },
+    {
+      "name": "Dameisha",
+      "facet": "Beaches and island resorts",
+      "known_at": 11
+    },
+    {
+      "name": "Kenting",
+      "facet": "Beaches and island resorts",
+      "known_at": 9
+    },
+    {
+      "name": "Xisha Islands",
+      "facet": "Beaches and island resorts",
+      "known_at": 8
+    },
+    {
+      "name": "Hulunbuir Grassland",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 6
+    },
+    {
+      "name": "Xilingol Grassland",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 10
+    },
+    {
+      "name": "Nalati Grassland",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 11
+    },
+    {
+      "name": "Bayanbulak Grassland",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 12
+    },
+    {
+      "name": "Zoige Grassland",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 10
+    },
+    {
+      "name": "Bashang Grassland",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 11
+    },
+    {
+      "name": "Qinghai-Tibet Plateau",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 4
+    },
+    {
+      "name": "Taklamakan Desert",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 6
+    },
+    {
+      "name": "Gobi Desert",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 5
+    },
+    {
+      "name": "Tengger Desert",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 11
+    },
+    {
+      "name": "Shapotou",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 10
+    },
+    {
+      "name": "Crescent Lake (Yueyaquan)",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 8
+    },
+    {
+      "name": "Mingsha Mountain",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 9
+    },
+    {
+      "name": "Flaming Mountains",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 5
+    },
+    {
+      "name": "Yardang Devil City",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 12
+    },
+    {
+      "name": "Daocheng Yading",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 10
+    },
+    {
+      "name": "Yuanyang Rice Terraces",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 9
+    },
+    {
+      "name": "Longji Rice Terraces",
+      "facet": "Grasslands, deserts and plateaus",
+      "known_at": 9
+    },
+    {
+      "name": "White Horse Temple",
+      "facet": "Giant Buddhas and temple sights",
+      "known_at": 9
+    },
+    {
+      "name": "Lingyin Temple",
+      "facet": "Giant Buddhas and temple sights",
+      "known_at": 8
+    },
+    {
+      "name": "Hanging Temple",
+      "facet": "Giant Buddhas and temple sights",
+      "known_at": 8
+    },
+    {
+      "name": "Lingshan Grand Buddha",
+      "facet": "Giant Buddhas and temple sights",
+      "known_at": 11
+    },
+    {
+      "name": "Spring Temple Buddha",
+      "facet": "Giant Buddhas and temple sights",
+      "known_at": 12
+    },
+    {
+      "name": "Nanshan Guanyin Statue",
+      "facet": "Giant Buddhas and temple sights",
+      "known_at": 10
+    },
+    {
+      "name": "Tian Tan Buddha",
+      "facet": "Giant Buddhas and temple sights",
+      "known_at": 10
+    },
+    {
+      "name": "Temple of Confucius (Qufu)",
+      "facet": "Giant Buddhas and temple sights",
+      "known_at": 8
+    },
+    {
+      "name": "Three Pagodas of Chongsheng Temple",
+      "facet": "Giant Buddhas and temple sights",
+      "known_at": 11
+    },
+    {
+      "name": "Yonghe Temple",
+      "facet": "Giant Buddhas and temple sights",
+      "known_at": 9
+    },
+    {
+      "name": "Famen Temple",
+      "facet": "Giant Buddhas and temple sights",
+      "known_at": 12
+    },
+    {
+      "name": "Harbin Ice and Snow World",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 4
+    },
+    {
+      "name": "Sun Island Snow Sculpture Expo",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 9
+    },
+    {
+      "name": "China Snow Town (Xuexiang)",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 8
+    },
+    {
+      "name": "Jilin rime (Wusong)",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 9
+    },
+    {
+      "name": "Mohe Arctic Village",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 8
+    },
+    {
+      "name": "Yabuli Ski Resort",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 11
+    },
+    {
+      "name": "Hemu Village",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 11
+    },
+    {
+      "name": "Ice lantern",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 5
+    },
+    {
+      "name": "Luoping rapeseed fields",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 10
+    },
+    {
+      "name": "Wuyuan",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 10
+    },
+    {
+      "name": "Luoyang Peony Festival",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 7
+    },
+    {
+      "name": "Fragrant Hills red leaves",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 7
+    },
+    {
+      "name": "Wuhan University cherry blossoms",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 8
+    },
+    {
+      "name": "Yuantouzhu cherry blossoms",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 12
+    },
+    {
+      "name": "Ejin golden poplars",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 10
+    },
+    {
+      "name": "Ili lavender fields",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 11
+    },
+    {
+      "name": "Plum Blossom Hill (Nanjing)",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 11
+    },
+    {
+      "name": "Qinhuai Lantern Fair",
+      "facet": "Ice, snow and seasonal sights",
+      "known_at": 10
+    },
+    {
+      "name": "Yu Garden",
+      "facet": "Gardens and lakeside parks",
+      "known_at": 8
+    },
+    {
+      "name": "Slender West Lake",
+      "facet": "Gardens and lakeside parks",
+      "known_at": 10
+    },
+    {
+      "name": "Geyuan Garden",
+      "facet": "Gardens and lakeside parks",
+      "known_at": 13
+    },
+    {
+      "name": "Jichang Garden",
+      "facet": "Gardens and lakeside parks",
+      "known_at": 13
+    },
+    {
+      "name": "Beihai Park",
+      "facet": "Gardens and lakeside parks",
+      "known_at": 5
+    },
+    {
+      "name": "Jingshan Park",
+      "facet": "Gardens and lakeside parks",
+      "known_at": 9
+    },
+    {
+      "name": "Daming Lake",
+      "facet": "Gardens and lakeside parks",
+      "known_at": 9
+    },
+    {
+      "name": "Xuanwu Lake",
+      "facet": "Gardens and lakeside parks",
+      "known_at": 10
+    },
+    {
+      "name": "Lin Family Garden",
+      "facet": "Gardens and lakeside parks",
+      "known_at": 13
+    },
+    {
+      "name": "Lan Su Garden",
+      "facet": "Gardens and lakeside parks",
+      "known_at": 15
+    },
+    {
+      "name": "Chengdu Research Base of Giant Panda Breeding",
+      "facet": "Gardens and lakeside parks",
+      "known_at": 5
+    },
+    {
+      "name": "Twenty-yuan note",
+      "facet": "Scenic areas on banknotes, poems and films",
+      "known_at": 6
+    },
+    {
+      "name": "Kuimen Gate",
+      "facet": "Scenic areas on banknotes, poems and films",
+      "known_at": 11
+    },
+    {
+      "name": "Three Pools Mirroring the Moon",
+      "facet": "Scenic areas on banknotes, poems and films",
+      "known_at": 8
+    },
+    {
+      "name": "Yueyang Tower",
+      "facet": "Scenic areas on banknotes, poems and films",
+      "known_at": 7
+    },
+    {
+      "name": "Pavilion of Prince Teng",
+      "facet": "Scenic areas on banknotes, poems and films",
+      "known_at": 8
+    },
+    {
+      "name": "Stork Tower",
+      "facet": "Scenic areas on banknotes, poems and films",
+      "known_at": 7
+    },
+    {
+      "name": "Hanshan Temple",
+      "facet": "Scenic areas on banknotes, poems and films",
+      "known_at": 7
+    },
+    {
+      "name": "Baidi City",
+      "facet": "Scenic areas on banknotes, poems and films",
+      "known_at": 8
+    },
+    {
+      "name": "Jingting Mountain",
+      "facet": "Scenic areas on banknotes, poems and films",
+      "known_at": 10
+    },
+    {
+      "name": "Red Cliff (Chibi)",
+      "facet": "Scenic areas on banknotes, poems and films",
+      "known_at": 7
+    },
+    {
+      "name": "Yangguan Pass",
+      "facet": "Scenic areas on banknotes, poems and films",
+      "known_at": 9
+    },
+    {
+      "name": "Orchid Pavilion",
+      "facet": "Scenic areas on banknotes, poems and films",
+      "known_at": 9
+    },
+    {
+      "name": "Peach Blossom Spring",
+      "facet": "Scenic areas on banknotes, poems and films",
+      "known_at": 8
+    },
+    {
+      "name": "Shunan Bamboo Sea",
+      "facet": "Scenic areas on banknotes, poems and films",
+      "known_at": 12
+    },
+    {
+      "name": "Hengdian World Studios",
+      "facet": "Scenic areas on banknotes, poems and films",
+      "known_at": 8
+    },
+    {
+      "name": "Avatar (film)",
+      "facet": "Scenic areas on banknotes, poems and films",
+      "known_at": 5
+    },
+    {
+      "name": "5A tourist attraction",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 6
+    },
+    {
+      "name": "Ministry of Culture and Tourism",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 12
+    },
+    {
+      "name": "Golden Week",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 5
+    },
+    {
+      "name": "Chunyun (春运)",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 5
+    },
+    {
+      "name": "China Tourism Day",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 12
+    },
+    {
+      "name": "Xu Xiake",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 9
+    },
+    {
+      "name": "The Travels of Xu Xiake",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 10
+    },
+    {
+      "name": "Red tourism",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 10
+    },
+    {
+      "name": "Check-in spot (打卡)",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 6
+    },
+    {
+      "name": "Tour guide flag",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 4
+    },
+    {
+      "name": "Souvenir stamp (盖章)",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 8
+    },
+    {
+      "name": "Love locks",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 6
+    },
+    {
+      "name": "Wishing coins",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 4
+    },
+    {
+      "name": "Cable car",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 3
+    },
+    {
+      "name": "Glass skywalk",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 5
+    },
+    {
+      "name": "Sedan chair (滑竿)",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 8
+    },
+    {
+      "name": "Watching the sunrise",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 4
+    },
+    {
+      "name": "Sea of clouds",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 5
+    },
+    {
+      "name": "Buddha's light (佛光)",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 11
+    },
+    {
+      "name": "Hanfu photo shoot",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 7
+    },
+    {
+      "name": "Peak season",
+      "facet": "Travel customs and the 5A rating system",
+      "known_at": 6
+    }
+  ]
+}

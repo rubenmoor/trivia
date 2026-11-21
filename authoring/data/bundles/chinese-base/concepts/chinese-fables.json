@@ -1,0 +1,912 @@
+{
+  "subcategory": "chinese-fables",
+  "facets": [
+    "Clever animal fables",
+    "Foolish animal fables",
+    "Model children of ancient China",
+    "Hard work and perseverance stories",
+    "Magic objects and folk wonders",
+    "Classic textbook nature stories",
+    "Aesop's fables in Chinese textbooks",
+    "Zheng Yuanjie's characters",
+    "Picture book animal friends",
+    "Clever problem-solving stories",
+    "Honesty and good manners stories",
+    "Fable morals and lessons"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 1,
+      "record": 1,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 4,
+      "connection": 3,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Fox divides the cheese",
+      "facet": "Clever animal fables",
+      "known_at": 5
+    },
+    {
+      "name": "Cat teaches the tiger",
+      "facet": "Clever animal fables",
+      "known_at": 7
+    },
+    {
+      "name": "Tiger and the donkey of Guizhou",
+      "facet": "Clever animal fables",
+      "known_at": 8
+    },
+    {
+      "name": "Rabbit and the lion in the well",
+      "facet": "Clever animal fables",
+      "known_at": 9
+    },
+    {
+      "name": "Monkey and the crocodile",
+      "facet": "Clever animal fables",
+      "known_at": 8
+    },
+    {
+      "name": "Little rabbits and the big bad wolf",
+      "facet": "Clever animal fables",
+      "known_at": 2
+    },
+    {
+      "name": "Rooster and the fox",
+      "facet": "Clever animal fables",
+      "known_at": 8
+    },
+    {
+      "name": "Three little pigs",
+      "facet": "Clever animal fables",
+      "known_at": 2
+    },
+    {
+      "name": "Wolf and the seven little goats",
+      "facet": "Clever animal fables",
+      "known_at": 4
+    },
+    {
+      "name": "Crow and the fox, the second time",
+      "facet": "Clever animal fables",
+      "known_at": 9
+    },
+    {
+      "name": "Frog in the well",
+      "facet": "Foolish animal fables",
+      "known_at": 3
+    },
+    {
+      "name": "Little monkey goes down the mountain",
+      "facet": "Foolish animal fables",
+      "known_at": 2
+    },
+    {
+      "name": "Monkeys scoop up the moon",
+      "facet": "Foolish animal fables",
+      "known_at": 2
+    },
+    {
+      "name": "Mr Dongguo and the wolf",
+      "facet": "Foolish animal fables",
+      "known_at": 7
+    },
+    {
+      "name": "Snipe and clam fight",
+      "facet": "Foolish animal fables",
+      "known_at": 7
+    },
+    {
+      "name": "Kitten plants fish",
+      "facet": "Foolish animal fables",
+      "known_at": 4
+    },
+    {
+      "name": "Monkeys fed three in the morning, four in the evening",
+      "facet": "Foolish animal fables",
+      "known_at": 9
+    },
+    {
+      "name": "Turtle that flew with the geese",
+      "facet": "Foolish animal fables",
+      "known_at": 9
+    },
+    {
+      "name": "Zhu Bajie eats the watermelon",
+      "facet": "Foolish animal fables",
+      "known_at": 3
+    },
+    {
+      "name": "Monkeys eat a watermelon",
+      "facet": "Foolish animal fables",
+      "known_at": 5
+    },
+    {
+      "name": "Mantis tries to stop a chariot",
+      "facet": "Foolish animal fables",
+      "known_at": 10
+    },
+    {
+      "name": "Little monkey plants a fruit tree",
+      "facet": "Foolish animal fables",
+      "known_at": 5
+    },
+    {
+      "name": "Model children of ancient China placeholder",
+      "facet": "Model children of ancient China",
+      "known_at": 15
+    },
+    {
+      "name": "Kong Rong gives up the pear",
+      "facet": "Model children of ancient China",
+      "known_at": 2
+    },
+    {
+      "name": "Sima Guang breaks the vat",
+      "facet": "Model children of ancient China",
+      "known_at": 2
+    },
+    {
+      "name": "Huang Xiang warms the bed",
+      "facet": "Model children of ancient China",
+      "known_at": 8
+    },
+    {
+      "name": "Lu Ji hides the oranges",
+      "facet": "Model children of ancient China",
+      "known_at": 11
+    },
+    {
+      "name": "Xiang Tuo, teacher of Confucius",
+      "facet": "Model children of ancient China",
+      "known_at": 12
+    },
+    {
+      "name": "Gan Luo",
+      "facet": "Model children of ancient China",
+      "known_at": 12
+    },
+    {
+      "name": "Luo Binwang writes “Ode to the Goose”",
+      "facet": "Model children of ancient China",
+      "known_at": 3
+    },
+    {
+      "name": "Xie Daoyun compares snow to willow catkins",
+      "facet": "Model children of ancient China",
+      "known_at": 11
+    },
+    {
+      "name": "Mencius's mother moves three times",
+      "facet": "Model children of ancient China",
+      "known_at": 6
+    },
+    {
+      "name": "Mencius's mother cuts the cloth",
+      "facet": "Model children of ancient China",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Mian learns to paint lotus flowers",
+      "facet": "Model children of ancient China",
+      "known_at": 8
+    },
+    {
+      "name": "Ouyang Xiu writes with reeds in the sand",
+      "facet": "Model children of ancient China",
+      "known_at": 10
+    },
+    {
+      "name": "Zhang Heng, the boy who counted stars",
+      "facet": "Model children of ancient China",
+      "known_at": 6
+    },
+    {
+      "name": "Min Ziqian's reed-filled coat",
+      "facet": "Model children of ancient China",
+      "known_at": 13
+    },
+    {
+      "name": "Iron rod into a needle: Li Bai",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 4
+    },
+    {
+      "name": "Kuang Heng bores a hole in the wall",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 7
+    },
+    {
+      "name": "Che Yin reads by fireflies",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 8
+    },
+    {
+      "name": "Sun Kang reads by the snow",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 9
+    },
+    {
+      "name": "Sun Jing ties his hair to the beam",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 9
+    },
+    {
+      "name": "Su Qin jabs his thigh with an awl",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 10
+    },
+    {
+      "name": "Zu Ti rises at the rooster's crow",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Xizhi's ink pond",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 7
+    },
+    {
+      "name": "Lu Xun's “早” on his desk",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 7
+    },
+    {
+      "name": "Foolish Old Man moves the mountains",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 4
+    },
+    {
+      "name": "Da Yu tames the flood",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 5
+    },
+    {
+      "name": "Kitten goes fishing",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 2
+    },
+    {
+      "name": "Little white rabbit and little grey rabbit",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 4
+    },
+    {
+      "name": "Cold-cry bird",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 6
+    },
+    {
+      "name": "Mei Lanfang trains his eyes",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 9
+    },
+    {
+      "name": "Leonardo da Vinci draws eggs",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 6
+    },
+    {
+      "name": "Song Lian copies borrowed books",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 11
+    },
+    {
+      "name": "Little Red Hen",
+      "facet": "Hard work and perseverance stories",
+      "known_at": 5
+    },
+    {
+      "name": "Hou Yi shoots down the suns",
+      "facet": "Magic objects and folk wonders",
+      "known_at": 3
+    },
+    {
+      "name": "Nine-colored deer",
+      "facet": "Magic objects and folk wonders",
+      "known_at": 7
+    },
+    {
+      "name": "Fisherman and the golden fish",
+      "facet": "Magic objects and folk wonders",
+      "known_at": 5
+    },
+    {
+      "name": "Secret of the magic gourd",
+      "facet": "Magic objects and folk wonders",
+      "known_at": 7
+    },
+    {
+      "name": "Golden cudgel",
+      "facet": "Magic objects and folk wonders",
+      "known_at": 3
+    },
+    {
+      "name": "Magic lotus lantern",
+      "facet": "Magic objects and folk wonders",
+      "known_at": 7
+    },
+    {
+      "name": "Wolf Grandma",
+      "facet": "Magic objects and folk wonders",
+      "known_at": 5
+    },
+    {
+      "name": "Little carp jumps over the dragon gate",
+      "facet": "Magic objects and folk wonders",
+      "known_at": 4
+    },
+    {
+      "name": "Little tadpoles look for their mother",
+      "facet": "Classic textbook nature stories",
+      "known_at": 2
+    },
+    {
+      "name": "Little gecko borrows a tail",
+      "facet": "Classic textbook nature stories",
+      "known_at": 3
+    },
+    {
+      "name": "Plant mothers have ways",
+      "facet": "Classic textbook nature stories",
+      "known_at": 4
+    },
+    {
+      "name": "Little painters in the snow",
+      "facet": "Classic textbook nature stories",
+      "known_at": 3
+    },
+    {
+      "name": "Little squirrel looks for peanuts",
+      "facet": "Classic textbook nature stories",
+      "known_at": 4
+    },
+    {
+      "name": "Little bear lives in a cave",
+      "facet": "Classic textbook nature stories",
+      "known_at": 5
+    },
+    {
+      "name": "Elephant's ears",
+      "facet": "Classic textbook nature stories",
+      "known_at": 5
+    },
+    {
+      "name": "Frog sells his mud pond",
+      "facet": "Classic textbook nature stories",
+      "known_at": 6
+    },
+    {
+      "name": "It's going to rain",
+      "facet": "Classic textbook nature stories",
+      "known_at": 4
+    },
+    {
+      "name": "Snow child",
+      "facet": "Classic textbook nature stories",
+      "known_at": 4
+    },
+    {
+      "name": "The tree from last year",
+      "facet": "Classic textbook nature stories",
+      "known_at": 7
+    },
+    {
+      "name": "Little water drop's journey",
+      "facet": "Classic textbook nature stories",
+      "known_at": 4
+    },
+    {
+      "name": "Hedgehog carries fruit on its back",
+      "facet": "Classic textbook nature stories",
+      "known_at": 4
+    },
+    {
+      "name": "Looking for spring",
+      "facet": "Classic textbook nature stories",
+      "known_at": 5
+    },
+    {
+      "name": "Fox and the crow",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 3
+    },
+    {
+      "name": "Fox and the grapes",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 4
+    },
+    {
+      "name": "Tortoise and the hare",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 2
+    },
+    {
+      "name": "Wolf and the lamb",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 6
+    },
+    {
+      "name": "Farmer and the snake",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 5
+    },
+    {
+      "name": "Boy who cried wolf",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 2
+    },
+    {
+      "name": "Ant and the grasshopper",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 5
+    },
+    {
+      "name": "Ant and the dove",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 6
+    },
+    {
+      "name": "Fox and the stork",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 7
+    },
+    {
+      "name": "Deer admires its antlers",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 7
+    },
+    {
+      "name": "North Wind and the Sun",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 6
+    },
+    {
+      "name": "Goose that laid the golden eggs",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 5
+    },
+    {
+      "name": "Dog and its reflection",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 5
+    },
+    {
+      "name": "Belling the cat",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 7
+    },
+    {
+      "name": "Town mouse and country mouse",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 6
+    },
+    {
+      "name": "Frog and the ox",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 8
+    },
+    {
+      "name": "Donkey carrying salt",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 7
+    },
+    {
+      "name": "Fox and the goat in the well",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 8
+    },
+    {
+      "name": "Father, son and the donkey",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 6
+    },
+    {
+      "name": "Bat between the birds and the beasts",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 9
+    },
+    {
+      "name": "Milkmaid and her pail",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 10
+    },
+    {
+      "name": "Aesop",
+      "facet": "Aesop's fables in Chinese textbooks",
+      "known_at": 7
+    },
+    {
+      "name": "Zheng Yuanjie",
+      "facet": "Zheng Yuanjie's characters",
+      "known_at": 6
+    },
+    {
+      "name": "Pipilu",
+      "facet": "Zheng Yuanjie's characters",
+      "known_at": 5
+    },
+    {
+      "name": "Lu Xixi",
+      "facet": "Zheng Yuanjie's characters",
+      "known_at": 7
+    },
+    {
+      "name": "Shuke",
+      "facet": "Zheng Yuanjie's characters",
+      "known_at": 4
+    },
+    {
+      "name": "Beita",
+      "facet": "Zheng Yuanjie's characters",
+      "known_at": 4
+    },
+    {
+      "name": "Shuke's helicopter",
+      "facet": "Zheng Yuanjie's characters",
+      "known_at": 5
+    },
+    {
+      "name": "Beita's tank",
+      "facet": "Zheng Yuanjie's characters",
+      "known_at": 5
+    },
+    {
+      "name": "Luoke the Big Grey Wolf",
+      "facet": "Zheng Yuanjie's characters",
+      "known_at": 9
+    },
+    {
+      "name": "Tin can little men",
+      "facet": "Zheng Yuanjie's characters",
+      "known_at": 10
+    },
+    {
+      "name": "Rubik's Cube Building",
+      "facet": "Zheng Yuanjie's characters",
+      "known_at": 11
+    },
+    {
+      "name": "Fairy Tale King magazine",
+      "facet": "Zheng Yuanjie's characters",
+      "known_at": 9
+    },
+    {
+      "name": "Little Nutbrown Hare",
+      "facet": "Picture book animal friends",
+      "known_at": 4
+    },
+    {
+      "name": "The Very Hungry Caterpillar",
+      "facet": "Picture book animal friends",
+      "known_at": 3
+    },
+    {
+      "name": "The Gruffalo",
+      "facet": "Picture book animal friends",
+      "known_at": 6
+    },
+    {
+      "name": "Rosie the hen",
+      "facet": "Picture book animal friends",
+      "known_at": 7
+    },
+    {
+      "name": "The Runaway Bunny",
+      "facet": "Picture book animal friends",
+      "known_at": 7
+    },
+    {
+      "name": "Frederick the field mouse",
+      "facet": "Picture book animal friends",
+      "known_at": 9
+    },
+    {
+      "name": "Swimmy",
+      "facet": "Picture book animal friends",
+      "known_at": 8
+    },
+    {
+      "name": "Badger's Parting Gifts",
+      "facet": "Picture book animal friends",
+      "known_at": 10
+    },
+    {
+      "name": "Xili Hulu the piglet",
+      "facet": "Picture book animal friends",
+      "known_at": 6
+    },
+    {
+      "name": "Frog by Max Velthuijs",
+      "facet": "Picture book animal friends",
+      "known_at": 10
+    },
+    {
+      "name": "Miyanishi Tatsuya's Tyrannosaurus",
+      "facet": "Picture book animal friends",
+      "known_at": 7
+    },
+    {
+      "name": "The mouse's wedding",
+      "facet": "Picture book animal friends",
+      "known_at": 5
+    },
+    {
+      "name": "Little rooster and little duck",
+      "facet": "Picture book animal friends",
+      "known_at": 3
+    },
+    {
+      "name": "Little Mole",
+      "facet": "Picture book animal friends",
+      "known_at": 4
+    },
+    {
+      "name": "Black Cat Detective",
+      "facet": "Picture book animal friends",
+      "known_at": 4
+    },
+    {
+      "name": "Frog and Toad",
+      "facet": "Picture book animal friends",
+      "known_at": 8
+    },
+    {
+      "name": "Cao Chong weighs the elephant",
+      "facet": "Clever problem-solving stories",
+      "known_at": 3
+    },
+    {
+      "name": "Wen Yanbo floats the ball",
+      "facet": "Clever problem-solving stories",
+      "known_at": 6
+    },
+    {
+      "name": "Wang Rong and the roadside plums",
+      "facet": "Clever problem-solving stories",
+      "known_at": 8
+    },
+    {
+      "name": "Tian Ji's horse race",
+      "facet": "Clever problem-solving stories",
+      "known_at": 7
+    },
+    {
+      "name": "Borrowing arrows with straw boats",
+      "facet": "Clever problem-solving stories",
+      "known_at": 6
+    },
+    {
+      "name": "Empty fort strategy",
+      "facet": "Clever problem-solving stories",
+      "known_at": 9
+    },
+    {
+      "name": "Huai Bing raises the iron oxen",
+      "facet": "Clever problem-solving stories",
+      "known_at": 11
+    },
+    {
+      "name": "Lu Ban invents the saw",
+      "facet": "Clever problem-solving stories",
+      "known_at": 5
+    },
+    {
+      "name": "Ikkyu",
+      "facet": "Clever problem-solving stories",
+      "known_at": 6
+    },
+    {
+      "name": "Edison saves his mother",
+      "facet": "Clever problem-solving stories",
+      "known_at": 6
+    },
+    {
+      "name": "Archimedes and the golden crown",
+      "facet": "Clever problem-solving stories",
+      "known_at": 9
+    },
+    {
+      "name": "Plum grove quenches thirst",
+      "facet": "Clever problem-solving stories",
+      "known_at": 8
+    },
+    {
+      "name": "Zeng Zi kills the pig",
+      "facet": "Honesty and good manners stories",
+      "known_at": 8
+    },
+    {
+      "name": "Song Qingling keeps her promise",
+      "facet": "Honesty and good manners stories",
+      "known_at": 8
+    },
+    {
+      "name": "George Washington and the cherry tree",
+      "facet": "Honesty and good manners stories",
+      "known_at": 8
+    },
+    {
+      "name": "The empty flowerpot",
+      "facet": "Honesty and good manners stories",
+      "known_at": 6
+    },
+    {
+      "name": "Ji Zha hangs his sword",
+      "facet": "Honesty and good manners stories",
+      "known_at": 13
+    },
+    {
+      "name": "Shang Yang moves the log",
+      "facet": "Honesty and good manners stories",
+      "known_at": 10
+    },
+    {
+      "name": "Beacon fires that fooled the lords",
+      "facet": "Honesty and good manners stories",
+      "known_at": 9
+    },
+    {
+      "name": "Honest woodcutter and the golden axe",
+      "facet": "Honesty and good manners stories",
+      "known_at": 4
+    },
+    {
+      "name": "Zhang Liang picks up the shoe",
+      "facet": "Honesty and good manners stories",
+      "known_at": 10
+    },
+    {
+      "name": "Yang Shi waits in the snow at Cheng's door",
+      "facet": "Honesty and good manners stories",
+      "known_at": 10
+    },
+    {
+      "name": "Lian Po carries thorns to apologize",
+      "facet": "Honesty and good manners stories",
+      "known_at": 8
+    },
+    {
+      "name": "Han Xin repays the washerwoman",
+      "facet": "Honesty and good manners stories",
+      "known_at": 11
+    },
+    {
+      "name": "Lamb kneels to drink milk",
+      "facet": "Honesty and good manners stories",
+      "known_at": 6
+    },
+    {
+      "name": "Crow feeds its mother",
+      "facet": "Honesty and good manners stories",
+      "known_at": 6
+    },
+    {
+      "name": "Yan Shu's honest exam",
+      "facet": "Honesty and good manners stories",
+      "known_at": 13
+    },
+    {
+      "name": "Waiting for rabbits by the tree stump",
+      "facet": "Fable morals and lessons",
+      "known_at": 3
+    },
+    {
+      "name": "Pulling up seedlings",
+      "facet": "Fable morals and lessons",
+      "known_at": 3
+    },
+    {
+      "name": "Mending the pen after losing sheep",
+      "facet": "Fable morals and lessons",
+      "known_at": 4
+    },
+    {
+      "name": "Marking the boat to find the sword",
+      "facet": "Fable morals and lessons",
+      "known_at": 5
+    },
+    {
+      "name": "Spear and shield",
+      "facet": "Fable morals and lessons",
+      "known_at": 5
+    },
+    {
+      "name": "Man of Zheng buys shoes",
+      "facet": "Fable morals and lessons",
+      "known_at": 7
+    },
+    {
+      "name": "Covering ears to steal a bell",
+      "facet": "Fable morals and lessons",
+      "known_at": 5
+    },
+    {
+      "name": "Lord Ye loves dragons",
+      "facet": "Fable morals and lessons",
+      "known_at": 6
+    },
+    {
+      "name": "Blind men and the elephant",
+      "facet": "Fable morals and lessons",
+      "known_at": 3
+    },
+    {
+      "name": "Three monks have no water",
+      "facet": "Fable morals and lessons",
+      "known_at": 3
+    },
+    {
+      "name": "Drawing legs on a snake",
+      "facet": "Fable morals and lessons",
+      "known_at": 5
+    },
+    {
+      "name": "Mr Nanguo plays the yu",
+      "facet": "Fable morals and lessons",
+      "known_at": 7
+    },
+    {
+      "name": "Driving north to go south",
+      "facet": "Fable morals and lessons",
+      "known_at": 8
+    },
+    {
+      "name": "Old man at the frontier loses his horse",
+      "facet": "Fable morals and lessons",
+      "known_at": 9
+    },
+    {
+      "name": "Bow reflected in the cup",
+      "facet": "Fable morals and lessons",
+      "known_at": 10
+    },
+    {
+      "name": "Clay pot and iron pot",
+      "facet": "Fable morals and lessons",
+      "known_at": 5
+    },
+    {
+      "name": "Breaking the arrows",
+      "facet": "Fable morals and lessons",
+      "known_at": 6
+    }
+  ]
+}

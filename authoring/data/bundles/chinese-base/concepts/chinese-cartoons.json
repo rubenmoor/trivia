@@ -1,0 +1,897 @@
+{
+  "subcategory": "chinese-cartoons",
+  "facets": [
+    "Shanghai studio classics",
+    "Ink-wash and paper-cut animation",
+    "Calabash Brothers and their world",
+    "Pleasant Goat and Big Big Wolf",
+    "Boonie Bears and forest cartoons",
+    "Family and school cartoons",
+    "Science and question cartoons",
+    "Hero and adventure series",
+    "Myth and legend cartoons",
+    "Animal characters and sidekicks",
+    "Theme songs and catchphrases",
+    "Animators, studios and milestones"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 4,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Three Monks",
+      "facet": "Shanghai studio classics",
+      "known_at": 4
+    },
+    {
+      "name": "The Proud General",
+      "facet": "Shanghai studio classics",
+      "known_at": 7
+    },
+    {
+      "name": "Why the Crow Is Black",
+      "facet": "Shanghai studio classics",
+      "known_at": 12
+    },
+    {
+      "name": "Mr. Dongguo",
+      "facet": "Shanghai studio classics",
+      "known_at": 8
+    },
+    {
+      "name": "Mr. Nanguo",
+      "facet": "Shanghai studio classics",
+      "known_at": 8
+    },
+    {
+      "name": "The Story of Effendi",
+      "facet": "Shanghai studio classics",
+      "known_at": 9
+    },
+    {
+      "name": "Heroic Sisters of the Grassland",
+      "facet": "Shanghai studio classics",
+      "known_at": 10
+    },
+    {
+      "name": "A Deer of Nine Colors",
+      "facet": "Shanghai studio classics",
+      "known_at": 7
+    },
+    {
+      "name": "Kitten Fishing",
+      "facet": "Shanghai studio classics",
+      "known_at": 4
+    },
+    {
+      "name": "Magic Paintbrush",
+      "facet": "Shanghai studio classics",
+      "known_at": 4
+    },
+    {
+      "name": "Little Eighth Route Army",
+      "facet": "Shanghai studio classics",
+      "known_at": 11
+    },
+    {
+      "name": "Snow Kid",
+      "facet": "Shanghai studio classics",
+      "known_at": 6
+    },
+    {
+      "name": "Tadpoles Looking for Mum 1960",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 4
+    },
+    {
+      "name": "Buffalo Boy and the Flute",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 10
+    },
+    {
+      "name": "Feelings of Mountains and Waters",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 12
+    },
+    {
+      "name": "The Deer's Bell",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 11
+    },
+    {
+      "name": "Ink-wash animation",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 7
+    },
+    {
+      "name": "Qi Baishi",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 8
+    },
+    {
+      "name": "Li Keran",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 12
+    },
+    {
+      "name": "Pigsy Eats Watermelon",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 9
+    },
+    {
+      "name": "Fishing Child",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 11
+    },
+    {
+      "name": "Ginseng Baby",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 11
+    },
+    {
+      "name": "Monkeys Fishing the Moon",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 4
+    },
+    {
+      "name": "Paper-cut animation",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 8
+    },
+    {
+      "name": "Puppet animation",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 8
+    },
+    {
+      "name": "Origami animation",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 12
+    },
+    {
+      "name": "Guqin",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 9
+    },
+    {
+      "name": "Seven calabash brothers' colours",
+      "facet": "Calabash Brothers and their world",
+      "known_at": 3
+    },
+    {
+      "name": "Grandpa",
+      "facet": "Calabash Brothers and their world",
+      "known_at": 2
+    },
+    {
+      "name": "Snake Spirit",
+      "facet": "Calabash Brothers and their world",
+      "known_at": 3
+    },
+    {
+      "name": "Scorpion Demon",
+      "facet": "Calabash Brothers and their world",
+      "known_at": 3
+    },
+    {
+      "name": "Big Brother (Calabash)",
+      "facet": "Calabash Brothers and their world",
+      "known_at": 4
+    },
+    {
+      "name": "Second Brother (Calabash)",
+      "facet": "Calabash Brothers and their world",
+      "known_at": 5
+    },
+    {
+      "name": "Third Brother (Calabash)",
+      "facet": "Calabash Brothers and their world",
+      "known_at": 5
+    },
+    {
+      "name": "Fourth Brother (Calabash)",
+      "facet": "Calabash Brothers and their world",
+      "known_at": 5
+    },
+    {
+      "name": "Fifth Brother (Calabash)",
+      "facet": "Calabash Brothers and their world",
+      "known_at": 5
+    },
+    {
+      "name": "Sixth Brother (Calabash)",
+      "facet": "Calabash Brothers and their world",
+      "known_at": 5
+    },
+    {
+      "name": "Seventh Brother (Calabash)",
+      "facet": "Calabash Brothers and their world",
+      "known_at": 5
+    },
+    {
+      "name": "Ruyi sceptre",
+      "facet": "Calabash Brothers and their world",
+      "known_at": 6
+    },
+    {
+      "name": "Treasure gourd",
+      "facet": "Calabash Brothers and their world",
+      "known_at": 5
+    },
+    {
+      "name": "Pangolin",
+      "facet": "Calabash Brothers and their world",
+      "known_at": 6
+    },
+    {
+      "name": "Calabash Little King Kong",
+      "facet": "Calabash Brothers and their world",
+      "known_at": 8
+    },
+    {
+      "name": "Pleasant Goat and Big Big Wolf",
+      "facet": "Pleasant Goat and Big Big Wolf",
+      "known_at": 1
+    },
+    {
+      "name": "Pleasant Goat",
+      "facet": "Pleasant Goat and Big Big Wolf",
+      "known_at": 1
+    },
+    {
+      "name": "Big Big Wolf",
+      "facet": "Pleasant Goat and Big Big Wolf",
+      "known_at": 1
+    },
+    {
+      "name": "Red Wolf",
+      "facet": "Pleasant Goat and Big Big Wolf",
+      "known_at": 2
+    },
+    {
+      "name": "Lazy Goat",
+      "facet": "Pleasant Goat and Big Big Wolf",
+      "known_at": 2
+    },
+    {
+      "name": "Pretty Goat",
+      "facet": "Pleasant Goat and Big Big Wolf",
+      "known_at": 2
+    },
+    {
+      "name": "Fit Goat",
+      "facet": "Pleasant Goat and Big Big Wolf",
+      "known_at": 3
+    },
+    {
+      "name": "Warm Goat",
+      "facet": "Pleasant Goat and Big Big Wolf",
+      "known_at": 3
+    },
+    {
+      "name": "Slow Goat",
+      "facet": "Pleasant Goat and Big Big Wolf",
+      "known_at": 3
+    },
+    {
+      "name": "Wilie",
+      "facet": "Pleasant Goat and Big Big Wolf",
+      "known_at": 4
+    },
+    {
+      "name": "Frying pan",
+      "facet": "Pleasant Goat and Big Big Wolf",
+      "known_at": 2
+    },
+    {
+      "name": "Goat Village",
+      "facet": "Pleasant Goat and Big Big Wolf",
+      "known_at": 3
+    },
+    {
+      "name": "Green Green Grassland",
+      "facet": "Pleasant Goat and Big Big Wolf",
+      "known_at": 3
+    },
+    {
+      "name": "Wolf Castle",
+      "facet": "Pleasant Goat and Big Big Wolf",
+      "known_at": 4
+    },
+    {
+      "name": "Boonie Bears",
+      "facet": "Boonie Bears and forest cartoons",
+      "known_at": 1
+    },
+    {
+      "name": "Briar",
+      "facet": "Boonie Bears and forest cartoons",
+      "known_at": 2
+    },
+    {
+      "name": "Bramble",
+      "facet": "Boonie Bears and forest cartoons",
+      "known_at": 2
+    },
+    {
+      "name": "Logger Vick",
+      "facet": "Boonie Bears and forest cartoons",
+      "known_at": 1
+    },
+    {
+      "name": "Boss Li",
+      "facet": "Boonie Bears and forest cartoons",
+      "known_at": 5
+    },
+    {
+      "name": "Tiki",
+      "facet": "Boonie Bears and forest cartoons",
+      "known_at": 5
+    },
+    {
+      "name": "Boonie Cubs",
+      "facet": "Boonie Bears and forest cartoons",
+      "known_at": 5
+    },
+    {
+      "name": "Chainsaw",
+      "facet": "Boonie Bears and forest cartoons",
+      "known_at": 3
+    },
+    {
+      "name": "Honey",
+      "facet": "Boonie Bears and forest cartoons",
+      "known_at": 2
+    },
+    {
+      "name": "Logging",
+      "facet": "Boonie Bears and forest cartoons",
+      "known_at": 3
+    },
+    {
+      "name": "Bear",
+      "facet": "Boonie Bears and forest cartoons",
+      "known_at": 1
+    },
+    {
+      "name": "The Legend of Hei",
+      "facet": "Boonie Bears and forest cartoons",
+      "known_at": 7
+    },
+    {
+      "name": "The Fox Hunting the Hunter",
+      "facet": "Boonie Bears and forest cartoons",
+      "known_at": 10
+    },
+    {
+      "name": "Forest fire",
+      "facet": "Boonie Bears and forest cartoons",
+      "known_at": 4
+    },
+    {
+      "name": "Pine tree",
+      "facet": "Boonie Bears and forest cartoons",
+      "known_at": 3
+    },
+    {
+      "name": "Big Head Son, Small Head Dad",
+      "facet": "Family and school cartoons",
+      "known_at": 2
+    },
+    {
+      "name": "Big Head Son",
+      "facet": "Family and school cartoons",
+      "known_at": 2
+    },
+    {
+      "name": "Small Head Dad",
+      "facet": "Family and school cartoons",
+      "known_at": 2
+    },
+    {
+      "name": "Apron Mum",
+      "facet": "Family and school cartoons",
+      "known_at": 3
+    },
+    {
+      "name": "Big Ears Tutu",
+      "facet": "Family and school cartoons",
+      "known_at": 2
+    },
+    {
+      "name": "Hu Tutu",
+      "facet": "Family and school cartoons",
+      "known_at": 3
+    },
+    {
+      "name": "Hu Yingjun",
+      "facet": "Family and school cartoons",
+      "known_at": 6
+    },
+    {
+      "name": "Zhang Xiaoli",
+      "facet": "Family and school cartoons",
+      "known_at": 7
+    },
+    {
+      "name": "Naughty Ma Xiaotiao",
+      "facet": "Family and school cartoons",
+      "known_at": 5
+    },
+    {
+      "name": "Yang Hongying",
+      "facet": "Family and school cartoons",
+      "known_at": 8
+    },
+    {
+      "name": "Lulu Xi",
+      "facet": "Family and school cartoons",
+      "known_at": 8
+    },
+    {
+      "name": "Kindergarten",
+      "facet": "Family and school cartoons",
+      "known_at": 1
+    },
+    {
+      "name": "Homework",
+      "facet": "Family and school cartoons",
+      "known_at": 1
+    },
+    {
+      "name": "Blue Cat's 3000 Questions",
+      "facet": "Science and question cartoons",
+      "known_at": 3
+    },
+    {
+      "name": "Blue Cat",
+      "facet": "Science and question cartoons",
+      "known_at": 3
+    },
+    {
+      "name": "Feifei",
+      "facet": "Science and question cartoons",
+      "known_at": 6
+    },
+    {
+      "name": "Taoqi",
+      "facet": "Science and question cartoons",
+      "known_at": 7
+    },
+    {
+      "name": "Sanchen Cartoon Group",
+      "facet": "Science and question cartoons",
+      "known_at": 13
+    },
+    {
+      "name": "100,000 Whys",
+      "facet": "Science and question cartoons",
+      "known_at": 5
+    },
+    {
+      "name": "BabyBus",
+      "facet": "Science and question cartoons",
+      "known_at": 2
+    },
+    {
+      "name": "Kiki and Miumiu",
+      "facet": "Science and question cartoons",
+      "known_at": 3
+    },
+    {
+      "name": "Science popularisation",
+      "facet": "Science and question cartoons",
+      "known_at": 9
+    },
+    {
+      "name": "Blue Cat Dragon Riders",
+      "facet": "Science and question cartoons",
+      "known_at": 8
+    },
+    {
+      "name": "Dinosaur",
+      "facet": "Science and question cartoons",
+      "known_at": 1
+    },
+    {
+      "name": "Solar System",
+      "facet": "Science and question cartoons",
+      "known_at": 4
+    },
+    {
+      "name": "Human body",
+      "facet": "Science and question cartoons",
+      "known_at": 3
+    },
+    {
+      "name": "Insect",
+      "facet": "Science and question cartoons",
+      "known_at": 2
+    },
+    {
+      "name": "Traffic safety",
+      "facet": "Science and question cartoons",
+      "known_at": 2
+    },
+    {
+      "name": "GG Bond",
+      "facet": "Hero and adventure series",
+      "known_at": 2
+    },
+    {
+      "name": "Lollipop",
+      "facet": "Hero and adventure series",
+      "known_at": 2
+    },
+    {
+      "name": "Rainbow Cat and Blue Rabbit",
+      "facet": "Hero and adventure series",
+      "known_at": 5
+    },
+    {
+      "name": "The Legend of Qin",
+      "facet": "Hero and adventure series",
+      "known_at": 8
+    },
+    {
+      "name": "Happy Heroes",
+      "facet": "Hero and adventure series",
+      "known_at": 4
+    },
+    {
+      "name": "Scissor Seven",
+      "facet": "Hero and adventure series",
+      "known_at": 9
+    },
+    {
+      "name": "Fog Hill of Five Elements",
+      "facet": "Hero and adventure series",
+      "known_at": 11
+    },
+    {
+      "name": "Link Click",
+      "facet": "Hero and adventure series",
+      "known_at": 10
+    },
+    {
+      "name": "Soul Land",
+      "facet": "Hero and adventure series",
+      "known_at": 8
+    },
+    {
+      "name": "Battle Through the Heavens",
+      "facet": "Hero and adventure series",
+      "known_at": 9
+    },
+    {
+      "name": "The King's Avatar",
+      "facet": "Hero and adventure series",
+      "known_at": 10
+    },
+    {
+      "name": "Mo Dao Zu Shi",
+      "facet": "Hero and adventure series",
+      "known_at": 10
+    },
+    {
+      "name": "Heaven Official's Blessing",
+      "facet": "Hero and adventure series",
+      "known_at": 11
+    },
+    {
+      "name": "A Record of a Mortal's Journey to Immortality",
+      "facet": "Hero and adventure series",
+      "known_at": 11
+    },
+    {
+      "name": "Balala the Fairies",
+      "facet": "Hero and adventure series",
+      "known_at": 4
+    },
+    {
+      "name": "Journey to the West (1999 animated series)",
+      "facet": "Myth and legend cartoons",
+      "known_at": 5
+    },
+    {
+      "name": "Zhu Bajie",
+      "facet": "Myth and legend cartoons",
+      "known_at": 2
+    },
+    {
+      "name": "Sha Wujing",
+      "facet": "Myth and legend cartoons",
+      "known_at": 4
+    },
+    {
+      "name": "Tang Sanzang",
+      "facet": "Myth and legend cartoons",
+      "known_at": 3
+    },
+    {
+      "name": "The Legend of Nezha (2003 series)",
+      "facet": "Myth and legend cartoons",
+      "known_at": 7
+    },
+    {
+      "name": "Universe Ring",
+      "facet": "Myth and legend cartoons",
+      "known_at": 5
+    },
+    {
+      "name": "Lady White Snake",
+      "facet": "Myth and legend cartoons",
+      "known_at": 7
+    },
+    {
+      "name": "Shuke and Beita",
+      "facet": "Animal characters and sidekicks",
+      "known_at": 4
+    },
+    {
+      "name": "One Ear",
+      "facet": "Animal characters and sidekicks",
+      "known_at": 4
+    },
+    {
+      "name": "Ali the Fox",
+      "facet": "Animal characters and sidekicks",
+      "known_at": 8
+    },
+    {
+      "name": "Tuzki",
+      "facet": "Animal characters and sidekicks",
+      "known_at": 9
+    },
+    {
+      "name": "Giant panda",
+      "facet": "Animal characters and sidekicks",
+      "known_at": 1
+    },
+    {
+      "name": "Mouse",
+      "facet": "Animal characters and sidekicks",
+      "known_at": 1
+    },
+    {
+      "name": "Sheep",
+      "facet": "Animal characters and sidekicks",
+      "known_at": 1
+    },
+    {
+      "name": "Wolf",
+      "facet": "Animal characters and sidekicks",
+      "known_at": 1
+    },
+    {
+      "name": "Pig",
+      "facet": "Animal characters and sidekicks",
+      "known_at": 1
+    },
+    {
+      "name": "Fox",
+      "facet": "Animal characters and sidekicks",
+      "known_at": 1
+    },
+    {
+      "name": "Monkey",
+      "facet": "Animal characters and sidekicks",
+      "known_at": 1
+    },
+    {
+      "name": "Cat",
+      "facet": "Animal characters and sidekicks",
+      "known_at": 1
+    },
+    {
+      "name": "Rabbit",
+      "facet": "Animal characters and sidekicks",
+      "known_at": 1
+    },
+    {
+      "name": "I'll be back!",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 2
+    },
+    {
+      "name": "Don't Look at Me as Just a Sheep",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 4
+    },
+    {
+      "name": "Ruyi, ruyi, follow my will",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 5
+    },
+    {
+      "name": "Calabash Brothers theme song",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 3
+    },
+    {
+      "name": "Monster, give back my grandpa!",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 4
+    },
+    {
+      "name": "Black Cat Detective theme song",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 6
+    },
+    {
+      "name": "Big Head Son theme song",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 4
+    },
+    {
+      "name": "Shuke and Beita theme song",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 8
+    },
+    {
+      "name": "Northeastern dialect",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 6
+    },
+    {
+      "name": "Super Lollipop, transform!",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 4
+    },
+    {
+      "name": "Monster, where are you running?",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 4
+    },
+    {
+      "name": "Big Ears Tutu theme song",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 5
+    },
+    {
+      "name": "Blue Cat theme song",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 7
+    },
+    {
+      "name": "Boonie Bears theme song",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 4
+    },
+    {
+      "name": "Wife, dear",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 5
+    },
+    {
+      "name": "Shanghai Animation Film Studio",
+      "facet": "Animators, studios and milestones",
+      "known_at": 7
+    },
+    {
+      "name": "Wan brothers",
+      "facet": "Animators, studios and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Wan Laiming",
+      "facet": "Animators, studios and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Te Wei",
+      "facet": "Animators, studios and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Hu Jinqing",
+      "facet": "Animators, studios and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "A Da",
+      "facet": "Animators, studios and milestones",
+      "known_at": 14
+    },
+    {
+      "name": "Dai Tielang",
+      "facet": "Animators, studios and milestones",
+      "known_at": 14
+    },
+    {
+      "name": "Jin Xi",
+      "facet": "Animators, studios and milestones",
+      "known_at": 14
+    },
+    {
+      "name": "Yan Dingxian",
+      "facet": "Animators, studios and milestones",
+      "known_at": 14
+    },
+    {
+      "name": "Qian Jiajun",
+      "facet": "Animators, studios and milestones",
+      "known_at": 15
+    },
+    {
+      "name": "Huang Weiming",
+      "facet": "Animators, studios and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Creative Power Entertaining",
+      "facet": "Animators, studios and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Fantawild Animation",
+      "facet": "Animators, studios and milestones",
+      "known_at": 9
+    },
+    {
+      "name": "CCTV Children's Channel",
+      "facet": "Animators, studios and milestones",
+      "known_at": 3
+    },
+    {
+      "name": "Golden Eagle Cartoon",
+      "facet": "Animators, studios and milestones",
+      "known_at": 7
+    },
+    {
+      "name": "Uproar in the Studio",
+      "facet": "Animators, studios and milestones",
+      "known_at": 14
+    },
+    {
+      "name": "Chinese school of animation",
+      "facet": "Animators, studios and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Bilibili",
+      "facet": "Animators, studios and milestones",
+      "known_at": 6
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "d2bd352e",
+  "hash": "e33e8afb",
   "questions": [
     {
       "id": "q-21210",
@@ -33806,6 +33806,1756 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Trougnouf",
         "author_url": "https://commons.wikimedia.org/wiki/User:Trougnouf",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22226",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "ancient-chinese-maths",
+      "bundle": "chinese-base",
+      "description": "Qin had one big rule for the whole country: everybody measures the same way, or else.",
+      "question": "I am a small bronze object carved with Shang Yang's name in 344 BC, and later with Qin Shi Huang's edict. What am I?",
+      "answer": "A standard measure for volume",
+      "wrong_answers": [
+        "A standard weight for scales",
+        "A standard ruler for length",
+        "An official seal for tax receipts"
+      ],
+      "hints": [
+        "Shang Yang wanted every market in Qin to use the same units.",
+        "Farmers paid taxes in grain, so officials needed to know exactly how much grain they got.",
+        "I was made to hold a fixed amount: one sheng (升), about 200 millilitres."
+      ],
+      "fun_fact": "Modern scholars measured the vessel and found it holds about 202 millilitres, which lets us know the size of a Qin “sheng” today.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E7%A6%8F%E7%94%B0_Futian_%E5%90%8C%E5%BF%83%E8%B7%AF_6_TongXin_Road_%E6%B7%B1%E5%9C%B3%E5%8F%A4%E4%BB%A3%E5%8D%9A%E7%89%A9%E9%A4%A8_Shenzhen_Ancient_Art_Museum_exhibition_%E5%8F%A4%E9%8A%85%E5%B9%A3_Chinese_bronze_coins_May_2026_N13P_18.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E7%A6%8F%E7%94%B0_Futian_%E5%90%8C%E5%BF%83%E8%B7%AF_6_TongXin_Road_%E6%B7%B1%E5%9C%B3%E5%8F%A4%E4%BB%A3%E5%8D%9A%E7%89%A9%E9%A4%A8_Shenzhen_Ancient_Art_Museum_exhibition_%E5%8F%A4%E9%8A%85%E5%B9%A3_Chinese_bronze_coins_May_2026_N13P_18.jpg",
+        "credit": "ZBMAUE oopAAM · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "ZBMAUE oopAAM",
+        "author_url": "https://commons.wikimedia.org/wiki/User:ZBMAUE_oopAAM",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22227",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "board-and-tile-games",
+      "bundle": "chinese-base",
+      "description": "A board game that has spent more than a century travelling under a false name.",
+      "question": "Chinese checkers (跳棋) isn't Chinese at all: it grew out of Halma, a game invented by an American surgeon. When was Halma invented?",
+      "answer": "1880s",
+      "wrong_answers": [
+        "1680s",
+        "1780s",
+        "1930s"
+      ],
+      "hints": [
+        "It is older than the star-shaped board you know: that version came a few years later.",
+        "At that time the Qing dynasty still ruled China.",
+        "It was during the reign of the Guangxu Emperor, late in the 19th century."
+      ],
+      "fun_fact": "“Halma” is Greek for “jump”, and the six-pointed star version was first sold in Germany in 1892 as “Stern-Halma” before American sellers renamed it “Chinese checkers”.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Dames-chinoises-en-bois.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADames-chinoises-en-bois.JPG",
+        "credit": "CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "author": "No machine-readable author provided. Mzelle Laure assumed (based on copyright claims).",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mzelle_Laure",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22228",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "calligraphy",
+      "bundle": "chinese-base",
+      "description": "Before a single brushstroke, someone had to peel this one.",
+      "question": "It grows only in China, it is the only species in its genus, and its bark is the key fibre in Xuan paper (宣纸). Which tree is it?",
+      "answer": "Blue sandalwood (青檀, qīngtán)",
+      "wrong_answers": [
+        "Paper mulberry (构树, gòushù)",
+        "White mulberry (桑树, sāngshù)",
+        "Moso bamboo (毛竹, máozhú)"
+      ],
+      "hints": [
+        "Xuan paper is made in Jing County (泾县), Anhui, from tree bark mixed with rice straw.",
+        "It is a relative of the hackberry trees (family Cannabaceae) and often grows on limestone hills in Anhui.",
+        "Its Chinese name starts with the character for a blue-green colour, 青."
+      ],
+      "fun_fact": "Making traditional Xuan paper takes more than 100 steps and can last over a year, and the craft is on UNESCO's list of Intangible Cultural Heritage.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Making_Xuan_Paper_%289974380895%29.jpg/3840px-Making_Xuan_Paper_%289974380895%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMaking_Xuan_Paper_%289974380895%29.jpg",
+        "credit": "Gary Todd from Xinzheng, China · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Gary Todd from Xinzheng, China",
+        "author_url": "https://www.flickr.com/people/101561334@N08",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22229",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "calligraphy",
+      "bundle": "chinese-base",
+      "description": "Some artists need a quiet studio; this one needed a garden and a wine jar.",
+      "question": "I became a Buddhist monk in the Tang dynasty. Too poor for paper, I wrote on banana leaves. After wine, my wild cursive flew across temple walls. Who am I?",
+      "answer": "Huaisu (怀素)",
+      "wrong_answers": [
+        "Zhang Xu (张旭)",
+        "Wang Xizhi (王羲之)",
+        "Yan Zhenqing (颜真卿)"
+      ],
+      "hints": [
+        "I came from the area around Changsha in Hunan.",
+        "My most famous work is the “Autobiography” (自叙帖), written in wild cursive (狂草).",
+        "People pair me with another Tang master as “Crazy Zhang and Drunk Su” (颠张醉素)."
+      ],
+      "fun_fact": "Legend says he wore out so many brushes that he buried them in a mound called the “Brush Tomb” (笔冢).",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Wen_Zhengming_-_Poem_on_Imperial_Gift_of_an_Embroidered_Silk-_Calligraphy_in_Cursive_Script_-_1998.169_-_Cleveland_Museum_of_Art.tif/lossy-page1-3840px-Wen_Zhengming_-_Poem_on_Imperial_Gift_of_an_Embroidered_Silk-_Calligraphy_in_Cursive_Script_-_1998.169_-_Cleveland_Museum_of_Art.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWen_Zhengming_-_Poem_on_Imperial_Gift_of_an_Embroidered_Silk-_Calligraphy_in_Cursive_Script_-_1998.169_-_Cleveland_Museum_of_Art.tif",
+        "credit": "Wen Zhengming · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Wen Zhengming",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22230",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "chinese-cartoons",
+      "bundle": "chinese-base",
+      "description": "A marriage where one partner always cooks with a frying pan, but never in the kitchen.",
+      "question": "In Pleasant Goat and Big Big Wolf (喜羊羊与灰太狼), which place does Big Big Wolf keep trying to sneak into?",
+      "answer": "Goat Village (羊村)",
+      "wrong_answers": [
+        "Wolf Castle (狼堡)",
+        "Flower Fruit Mountain (花果山)",
+        "Bamboo Forest (竹林)"
+      ],
+      "hints": [
+        "He has to go where his dinner lives.",
+        "It sits on the Green Green Grassland (青青草原).",
+        "Weslie (喜羊羊) and his friends live and go to school there."
+      ],
+      "fun_fact": "Every time he fails, Big Big Wolf flies off shouting “我一定会回来的！” (“I'll be back!”), and the line became a famous catchphrase across China.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Cast-Iron-Pan.jpg/3840px-Cast-Iron-Pan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACast-Iron-Pan.jpg",
+        "credit": "Evan-Amos · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Evan-Amos",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Evan-Amos",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22231",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "chinese-characters",
+      "bundle": "chinese-base",
+      "description": "A character that has been swimming through Chinese writing for over 3,000 years without getting tired.",
+      "question": "On oracle bones, 鱼 (yú) was a drawing: the top showed the head and the middle the scaly body. What did the bottom stroke show?",
+      "answer": "The tail",
+      "wrong_answers": [
+        "The mouth",
+        "The fins",
+        "The water"
+      ],
+      "hints": [
+        "Start at the top of the drawing and go down the animal's body.",
+        "It is the last part of the animal you would draw.",
+        "It is the part a fish swishes from side to side to swim forward."
+      ],
+      "fun_fact": "In the traditional form 魚, the tail became four dots at the bottom, which look just like the “fire” dots in 熱 (rè, hot) but have nothing to do with fire.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Inscribed_oracle_turtle_shell%2C_Shang_Dynasty%2C_Huayuanzhuang%2C_Anyang%2C_Henan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AInscribed_oracle_turtle_shell%2C_Shang_Dynasty%2C_Huayuanzhuang%2C_Anyang%2C_Henan.jpg",
+        "credit": "Furius · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Furius",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Furius&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22232",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "chinese-characters",
+      "bundle": "chinese-base",
+      "description": "The only calendar that has been hanging in the sky since before anyone could write.",
+      "question": "The character 月 (yuè) means both “moon” and “month”, because a month comes from one moon cycle. About how many days is that?",
+      "answer": "About 30",
+      "wrong_answers": [
+        "About 7",
+        "About 100",
+        "About 365"
+      ],
+      "hints": [
+        "It is longer than a week.",
+        "It is much shorter than a year.",
+        "Think of how many days are on one page of a calendar."
+      ],
+      "fun_fact": "From one full moon to the next takes about 29.5 days, which is why months in the Chinese lunar calendar (农历) have either 29 or 30 days.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Sun_and_moon_2_-_Full_moon_in_the_night_sky.jpg/3840px-Sun_and_moon_2_-_Full_moon_in_the_night_sky.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASun_and_moon_2_-_Full_moon_in_the_night_sky.jpg",
+        "credit": "Annatsach · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Annatsach",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Annatsach",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22234",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "chinese-cities",
+      "bundle": "chinese-base",
+      "description": "The longest sleepover in history finally ended with everyone going home.",
+      "question": "Walking in Macau, you see Portuguese street signs. About how many years had the Portuguese been there before Macau returned to China on 20 December 1999?",
+      "answer": "About 440 years",
+      "wrong_answers": [
+        "About 100 years",
+        "About 250 years",
+        "About 700 years"
+      ],
+      "hints": [
+        "They arrived much earlier than the British came to Hong Kong.",
+        "It was during the Ming dynasty.",
+        "Portuguese traders settled in Macau in the 1550s."
+      ],
+      "fun_fact": "Macau's return came just 12 days before the year 2000, and the day, 20 December, is now a public holiday there.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Senado_Square_YF_ST.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASenado_Square_YF_ST.jpg",
+        "credit": "CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "No machine-readable author provided. KAMSAND23 assumed (based on copyright claims).",
+        "author_url": "https://commons.wikimedia.org/wiki/User:KAMSAND23",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22236",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "chinese-folk-music",
+      "bundle": "chinese-base",
+      "description": "A marquis who took his whole orchestra to the afterlife, just in case it got quiet.",
+      "question": "In 1978, archaeologists opened the 2,400-year-old tomb of Marquis Yi of Zeng (曾侯乙) and found 65 bronze bells (编钟). Which province was it in?",
+      "answer": "Hubei",
+      "wrong_answers": [
+        "Henan",
+        "Shaanxi",
+        "Hunan"
+      ],
+      "hints": [
+        "The state of Zeng was in the middle Yangtze region, in the old lands of Chu.",
+        "Today the bells are the treasure of a provincial museum in a big city on the Yangtze.",
+        "The tomb was found near Suizhou, and the bells are shown in Wuhan."
+      ],
+      "fun_fact": "Each bell of Marquis Yi can play two different notes, one when struck in the middle and one when struck at the side.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Bianzhong.jpg/3840px-Bianzhong.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABianzhong.jpg",
+        "credit": "The original uploader was Zzjgbc at Chinese Wikipedia. · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "The original uploader was Zzjgbc at Chinese Wikipedia.",
+        "author_url": "https://en.wikipedia.org/wiki/zh:User:Zzjgbc",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22237",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "chinese-tech-brands",
+      "bundle": "chinese-base",
+      "description": "A search engine with a name that needed a thousand searches of its own to find.",
+      "question": "Li Yanhong named his company Baidu (百度) after a line of classical poetry. Which poem does the name come from?",
+      "answer": "青玉案·元夕 (Qīng Yù Àn · Yuán Xī, “Lantern Festival Night”)",
+      "wrong_answers": [
+        "静夜思 (Jìng Yè Sī, “Quiet Night Thoughts”)",
+        "水调歌头 (Shuǐ Diào Gē Tóu, “Prelude to Water Melody”)",
+        "春晓 (Chūn Xiǎo, “Spring Dawn”)"
+      ],
+      "hints": [
+        "It is a Song dynasty ci, not a Tang poem.",
+        "Its author is Xin Qiji.",
+        "The line is 众里寻他千百度: searching for someone in a festive crowd, again and again."
+      ],
+      "fun_fact": "Li Yanhong said the line about searching “a thousand, a hundred times” in the crowd was the perfect picture of what a search engine does.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Zhongguancun_Street_from_Haidian_Huangzhuang_North_%2820201214123508%29.jpg/3840px-Zhongguancun_Street_from_Haidian_Huangzhuang_North_%2820201214123508%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AZhongguancun_Street_from_Haidian_Huangzhuang_North_%2820201214123508%29.jpg",
+        "credit": "N509FZ · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "N509FZ",
+        "author_url": "https://commons.wikimedia.org/wiki/User:N509FZ",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22238",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "chinese-tech-brands",
+      "bundle": "chinese-base",
+      "description": "A machine in Wuxi that can do in one second what would take you several lifetimes of homework.",
+      "question": "In which year did China's Sunway TaihuLight first top the world list of fastest supercomputers?",
+      "answer": "2016",
+      "wrong_answers": [
+        "2008",
+        "2012",
+        "2021"
+      ],
+      "hints": [
+        "It came after Tianhe-2, which led the list a few years earlier.",
+        "It was the first world number one built only with Chinese-designed chips.",
+        "That was the same year as the Rio de Janeiro Olympics."
+      ],
+      "fun_fact": "Sunway TaihuLight has more than 10 million processor cores and stayed number one on the world list for two years.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Vlsci_pan_e_small-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVlsci_pan_e_small-2.jpg",
+        "credit": "Vlsci · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Vlsci",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Vlsci&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22239",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "chinese-tech-brands",
+      "bundle": "chinese-base",
+      "description": "A family reunion of laptops, with one cousin who clearly isn't related.",
+      "question": "Lenovo makes Legion (拯救者) laptops for gamers. Which of these laptop lines is NOT made by Lenovo?",
+      "answer": "MateBook",
+      "wrong_answers": [
+        "ThinkPad",
+        "Yoga",
+        "Xiaoxin (小新)"
+      ],
+      "hints": [
+        "Lenovo bought one of these lines from IBM in 2005.",
+        "The odd one out belongs to a company better known for its phones.",
+        "Its name matches a famous phone line from Huawei."
+      ],
+      "fun_fact": "The black ThinkPad, which Lenovo bought from IBM, is famous for the small red pointer stick in the middle of its keyboard.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/ASUS_GL553VD_Light-on_keyboard.jpg/3840px-ASUS_GL553VD_Light-on_keyboard.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AASUS_GL553VD_Light-on_keyboard.jpg",
+        "credit": "CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": ".mw-parser-output .template-designermadsen-source{border:1px solid #a2a9b1;background-color:#f8f9fa;display:grid;padding-left:4em;padding-right:4em;grid-template-columns:1fr 8fr;grid-template-rows:1fr;grid-column-gap:4em}.mw-parser-output .tdm-flex-container-center{width:100%;margin:0px;padding:0px;display:flex;justify-content:center;flex-direction:row}.mw-parser-output .template-designermadsen-source .tdm-avatar{display:flex;justify-content:center;flex-wrap:wrap;flex-direction:column;width:100%;margin-top:1em;margin-bottom:1em}.mw-parser-output .tdm-avatar img{border:1px solid #a2a9b1;padding:0.25em 0.25em}.mw-parser-output .template-designermadsen-source .tdm-attributes{width:100%;display:flex;flex-direction:column;justify-content:center;margin-top:1em;margin-bottom:1em}.mw-parser-output .template-designermadsen-source .tdm-attributes p{width:100%;margin-top:0.5em;margin-bottom:0.5em}@media only screen and (max-width:764px){.mw-parser-output .template-designermadsen-source{grid-template-columns:1fr;grid-template-rows:1fr 1fr;grid-column-gap:0px}.mw-parser-output .template-designermadsen-source .tdm-avatar{}.mw-parser-output .template-designermadsen-source .tdm-attributes{justify-content:center;text-align:center}}\n\n\n\n\n\n\n\n\nAuthor: Kent Madsen\n\n\nDesignermadsen\n\n\nFlickr \n\n\nDeviantart",
+        "author_url": "https://commons.wikimedia.org/wiki/File:PortraitImageOfKentMadsen.jpg",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22240",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "chinese-video-games",
+      "bundle": "chinese-base",
+      "description": "A land where the trees are tall, the sand is hot and everyone has read more books than you.",
+      "question": "You're playing Genshin Impact and arrive in Sumeru, the land of rainforest and desert. Which of these Archons comes from there?",
+      "answer": "Nahida",
+      "wrong_answers": [
+        "Zhongli",
+        "Venti",
+        "Raiden Shogun"
+      ],
+      "hints": [
+        "This Archon is the god of wisdom.",
+        "Her element is Dendro, the power of plants.",
+        "She looks like a small girl with white hair, and players call her 草神 (cǎo shén, the Dendro Archon)."
+      ],
+      "fun_fact": "Sumeru is named after Mount Sumeru (须弥山), the mountain at the centre of the world in Buddhist stories.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Rainforest_Canopy_El_Yunque_National_Forest.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARainforest_Canopy_El_Yunque_National_Forest.jpg",
+        "credit": "EgorovaSvetlana · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "EgorovaSvetlana",
+        "author_url": "https://commons.wikimedia.org/wiki/User:EgorovaSvetlana",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22241",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "chinese-video-games",
+      "bundle": "chinese-base",
+      "description": "The only game where your morning walk to school can turn into a real tree in the desert.",
+      "question": "In Alipay's Ant Forest (蚂蚁森林), walking or paying online earns “green energy” that helps plant real trees. In which decade did it start?",
+      "answer": "The 2010s",
+      "wrong_answers": [
+        "The 1990s",
+        "The 2000s",
+        "The 2020s"
+      ],
+      "hints": [
+        "It started after smartphones and phone payments were already common in China.",
+        "It is older than the COVID-19 pandemic.",
+        "It launched in the same year as the Rio de Janeiro Summer Olympics."
+      ],
+      "fun_fact": "In 2019, Ant Forest won the UN's Champions of the Earth award for turning green habits into real trees in northern China.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Saxaul_tree.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASaxaul_tree.JPG",
+        "credit": "CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": null,
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22242",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "city-snacks",
+      "bundle": "chinese-base",
+      "description": "A little cake so soft it falls apart if you just look at it the wrong way.",
+      "question": "These small, crumbly cakes are a classic summer treat in China. What are they mainly made of?",
+      "answer": "Mung beans",
+      "wrong_answers": [
+        "Red beans",
+        "Glutinous rice",
+        "Peanuts"
+      ],
+      "hints": [
+        "The main ingredient is a kind of bean.",
+        "The same bean is cooked into a cooling sweet soup on hot days.",
+        "In Chinese, the bean's name means “green bean”."
+      ],
+      "fun_fact": "In many places, mung bean cakes are eaten at the Dragon Boat Festival (端午节), as mung beans are said to help the body stay cool in summer heat.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Mung_bean_cakes.jpg/3840px-Mung_bean_cakes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMung_bean_cakes.jpg",
+        "credit": "Fumikas Sagisavas · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Fumikas Sagisavas",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Fumikas_Sagisavas",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22243",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "confucianism",
+      "bundle": "chinese-base",
+      "description": "Before one famous set of footnotes took over, another set of footnotes ruled for almost a thousand years.",
+      "question": "Zhu Xi's Collected Commentaries on the Analects (论语集注) replaced an older standard commentary, the 论语集解 from the Three Kingdoms period. Who compiled it?",
+      "answer": "He Yan (何晏)",
+      "wrong_answers": [
+        "Wang Bi (王弼)",
+        "Zheng Xuan (郑玄)",
+        "Kong Yingda (孔颖达)"
+      ],
+      "hints": [
+        "He was an official and thinker of the state of Wei, the kingdom founded by Cao Cao's son.",
+        "He was a leading figure of 'Dark Learning' (玄学), next to a young thinker famous for his notes on the Laozi.",
+        "His family name is written 何, the same character as in the herb 何首乌."
+      ],
+      "fun_fact": "He Yan's 论语集解 is the oldest complete commentary on the Analects that survives, and it is the one printed in the Thirteen Classics with Commentaries (十三经注疏).",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Disciples_holding_bamboo_slips_during_2008_Summer_Olympics_opening_ceremony.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADisciples_holding_bamboo_slips_during_2008_Summer_Olympics_opening_ceremony.jpg",
+        "credit": "Tim Hipps, U.S. Army · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Tim Hipps, U.S. Army",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22244",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "confucianism",
+      "bundle": "chinese-base",
+      "description": "The original open-admission policy, long before anyone invented entrance exams.",
+      "question": "Confucius said teaching should be open to everyone, whatever their background: 有教无类 (yǒu jiào wú lèi). In which period did he live?",
+      "answer": "Spring and Autumn period",
+      "wrong_answers": [
+        "Warring States period",
+        "Qin dynasty",
+        "Western Han dynasty"
+      ],
+      "hints": [
+        "It was before China was first unified.",
+        "The Zhou kings still reigned, but many small states ran their own affairs.",
+        "The period is named after a chronicle of the state of Lu."
+      ],
+      "fun_fact": "Confucius is said to have accepted a bundle of dried meat as tuition, so even poor students could study with him.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Kongzi_%28Confucius%29_Temple%2C_Qufu_%2813036165885%29.jpg/3840px-Kongzi_%28Confucius%29_Temple%2C_Qufu_%2813036165885%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKongzi_%28Confucius%29_Temple%2C_Qufu_%2813036165885%29.jpg",
+        "credit": "Gary Todd from Xinzheng, China · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Gary Todd from Xinzheng, China",
+        "author_url": "https://www.flickr.com/people/101561334@N08",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22245",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "confucianism",
+      "bundle": "chinese-base",
+      "description": "A tiny walled town, a huge army outside, and a philosopher taking notes.",
+      "question": "In the Mencius passage that ends 得道者多助，失道者寡助, a small town under attack has an outer wall (郭) how many li around?",
+      "answer": "7 li",
+      "wrong_answers": [
+        "3 li",
+        "5 li",
+        "10 li"
+      ],
+      "hints": [
+        "The passage comes from the chapter 公孙丑下 and is studied in Chinese middle school.",
+        "The attackers surround the town on all sides and still cannot take it, which Mencius uses to show that good ground beats good timing.",
+        "It is the same number as the days in one week."
+      ],
+      "fun_fact": "The same passage opens with the famous line 天时不如地利，地利不如人和: good timing is worth less than good ground, and good ground less than people working together.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Ancient_City_Wall_of_Chuansha.jpg/3840px-Ancient_City_Wall_of_Chuansha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAncient_City_Wall_of_Chuansha.jpg",
+        "credit": "钉钉 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "钉钉",
+        "author_url": "https://commons.wikimedia.org/wiki/User:%E9%92%89%E9%92%89",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22246",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "creation-myths",
+      "bundle": "chinese-base",
+      "description": "His treasure house is so well stocked that one cheeky visitor went shopping there without paying.",
+      "question": "I live in a crystal palace at the bottom of the East Sea, and farmers prayed to me for rain. The Monkey King took his magic staff from my treasure house. Who am I?",
+      "answer": "The Dragon King (龙王)",
+      "wrong_answers": [
+        "The Jade Emperor (玉皇大帝)",
+        "The Thunder God (雷公)",
+        "The Earth God (土地公)"
+      ],
+      "hints": [
+        "People built temples for me and burned incense to me.",
+        "I am in “Journey to the West” (西游记), and I am also the enemy in the story of Nezha.",
+        "My palace is guarded by shrimp soldiers and crab generals."
+      ],
+      "fun_fact": "Many old Chinese towns had a Dragon King temple, where people prayed for rain in dry years.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Waves_009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWaves_009.jpg",
+        "credit": "Amada44 · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Amada44",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Amada44",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22247",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "creation-myths",
+      "bundle": "chinese-base",
+      "description": "An art class where the homework literally flies out of the window.",
+      "question": "In the story behind 画龙点睛 (huà lóng diǎn jīng, “dotting the eyes of a painted dragon”), painter Zhang Sengyou adds eyes to some dragons on a temple wall. How many fly away?",
+      "answer": "2",
+      "wrong_answers": [
+        "1",
+        "3",
+        "4"
+      ],
+      "hints": [
+        "He painted more dragons than the ones that flew away.",
+        "He had painted four dragons in total.",
+        "He only dotted the eyes of half of them, and those were the ones that left."
+      ],
+      "fun_fact": "The two dragons without eyes stayed on the wall, which is why the idiom says the eyes are what bring a work to life.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Bl%C3%A4cksten2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABl%C3%A4cksten2.jpg",
+        "credit": "Bairuilong · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bairuilong",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bairuilong",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22248",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "creation-myths",
+      "bundle": "chinese-base",
+      "description": "Long before 3D Nezha broke box-office records, his grandparents' version was already making waves.",
+      "question": "Long before the 2019 hit “Ne Zha”, the hand-drawn classic “Prince Nezha's Triumph Against Dragon King” (哪吒闹海) came out. In which decade?",
+      "answer": "The 1970s",
+      "wrong_answers": [
+        "The 1950s",
+        "The 1990s",
+        "The 1980s"
+      ],
+      "hints": [
+        "Many of today's grandparents and parents saw it as children.",
+        "It came out soon after China's Cultural Revolution ended.",
+        "It came out in the same year China and the United States started official relations."
+      ],
+      "fun_fact": "Made by the Shanghai Animation Film Studio, it was the first Chinese animated film shown at the Cannes Film Festival.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Sacred_Lotus_in_a_Pond_2.jpg/3840px-Sacred_Lotus_in_a_Pond_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASacred_Lotus_in_a_Pond_2.jpg",
+        "credit": "Daftation · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Daftation",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Daftation",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22249",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "daoism",
+      "bundle": "chinese-base",
+      "description": "A grandmaster who never needed a gym membership, just a very tall mountain.",
+      "question": "I was a Daoist hermit in the misty Wudang Mountains. Legend says I watched a crane fight a snake and created tai chi. Who am I?",
+      "answer": "Zhang Sanfeng",
+      "wrong_answers": [
+        "Bodhidharma",
+        "Huang Feihong",
+        "Huo Yuanjia"
+      ],
+      "hints": [
+        "My mountains are in Hubei Province, and their martial arts are seen as the great rival of Shaolin’s.",
+        "In Jin Yong’s wuxia novels, I am the wise old founder of the Wudang school.",
+        "I taught tai chi to Zhang Wuji in “The Heaven Sword and Dragon Saber”."
+      ],
+      "fun_fact": "The ancient buildings of the Wudang Mountains became a UNESCO World Heritage Site in 1994.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/%E7%B4%AB%E9%9C%84%E5%AE%AE.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%E7%B4%AB%E9%9C%84%E5%AE%AE.JPG",
+        "credit": "Gisling · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Gisling",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Gisling",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22250",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "daoism",
+      "bundle": "chinese-base",
+      "description": "The top table of Daoist heaven, where seating is strictly limited.",
+      "question": "Daoism's highest gods are worshipped together as one group, side by side on the altar. How many gods are in that group?",
+      "answer": "3",
+      "wrong_answers": [
+        "4",
+        "5",
+        "8"
+      ],
+      "hints": [
+        "Laozi is one of them, as the Heavenly Lord of the Way and its Virtue (道德天尊).",
+        "Together they are called the “Pure Ones”.",
+        "Their hall is the Sanqing Hall (三清殿); count the number in that name."
+      ],
+      "fun_fact": "Sanqingshan (三清山), a mountain in Jiangxi, is named after these gods because its three highest peaks are said to look like them sitting together.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Kinesiskt_tempelgarnityr_fr%C3%A5n_1661-1722_i_porslin%2C_best%C3%A5ende_av_r%C3%B6kelsek%C3%A4rl_%28ting%29_-_Hallwylska_museet_-_96154.tif/lossy-page1-3840px-Kinesiskt_tempelgarnityr_fr%C3%A5n_1661-1722_i_porslin%2C_best%C3%A5ende_av_r%C3%B6kelsek%C3%A4rl_%28ting%29_-_Hallwylska_museet_-_96154.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKinesiskt_tempelgarnityr_fr%C3%A5n_1661-1722_i_porslin%2C_best%C3%A5ende_av_r%C3%B6kelsek%C3%A4rl_%28ting%29_-_Hallwylska_museet_-_96154.tif",
+        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unknown authorUnknown author",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22251",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "dynasties-overview",
+      "bundle": "chinese-base",
+      "description": "Some emperors build new capitals; this one just packed up and moved east.",
+      "question": "Emperor Guangwu of Han (汉光武帝) set up the Eastern Han capital in the province shown on this map. Which province is it?",
+      "answer": "Henan",
+      "wrong_answers": [
+        "Shaanxi",
+        "Jiangsu",
+        "Hebei"
+      ],
+      "hints": [
+        "The Western Han capital Chang'an was further west, so it's not the same province.",
+        "This province sits in the middle of the Yellow River plain and is often called the cradle of Chinese civilization.",
+        "The Eastern Han capital was Luoyang, home of the Longmen Grottoes."
+      ],
+      "fun_fact": "Liu Xiu, later Emperor Guangwu, brought back the Han dynasty in 25 AD, after Wang Mang's short Xin dynasty.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Henan_grey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHenan_grey.jpg",
+        "credit": "Quintucket · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Quintucket",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22252",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "dynasties-overview",
+      "bundle": "chinese-base",
+      "description": "Bronze vessels, ritual music and very good manners: welcome to a dynasty that took ceremonies seriously.",
+      "question": "Around when did the Western Zhou (西周) dynasty begin?",
+      "answer": "About 1046 BC",
+      "wrong_answers": [
+        "About 2070 BC",
+        "About 1600 BC",
+        "About 221 BC"
+      ],
+      "hints": [
+        "It came right after the Shang dynasty.",
+        "King Wu of Zhou founded it after his victory at Muye.",
+        "It's in the 11th century BC."
+      ],
+      "fun_fact": "Western Zhou ended in 771 BC, and the next year the capital moved east to Luoyang, which started the Eastern Zhou.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Western_Zhou_Bronze_Fangyi_Wine_Vessel.jpg/3840px-Western_Zhou_Bronze_Fangyi_Wine_Vessel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWestern_Zhou_Bronze_Fangyi_Wine_Vessel.jpg",
+        "credit": "Gary Todd · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Gary Todd",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22253",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "dynasties-overview",
+      "bundle": "chinese-base",
+      "description": "Two former allies, one empire up for grabs, and a chessboard that still remembers their fight.",
+      "question": "Xiang Yu and Liu Bang rebelled together and brought a dynasty down, then fought each other in the Chu–Han Contention (楚汉之争). Which dynasty did they bring down?",
+      "answer": "Qin",
+      "wrong_answers": [
+        "Zhou",
+        "Shang",
+        "Sui"
+      ],
+      "hints": [
+        "This dynasty lasted only about 15 years.",
+        "It was the first dynasty to unify all of China.",
+        "Its founder built the Terracotta Army."
+      ],
+      "fun_fact": "The river across the middle of a Chinese chess board is called 楚河汉界 (Chǔ hé Hàn jiè, “Chu River, Han border”), after this war.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Chess_and_playing_cards_%281898%29_%2814598119248%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChess_and_playing_cards_%281898%29_%2814598119248%29.jpg",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Internet Archive Book Images",
+        "author_url": "https://www.flickr.com/people/126377022@N07",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22254",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "early-china",
+      "bundle": "chinese-base",
+      "description": "The most expensive smile in history: it cost a king his whole capital.",
+      "question": "King You lit the beacon fires just to make Bao Si laugh. Which era began soon after his fall?",
+      "answer": "Eastern Zhou dynasty (东周)",
+      "wrong_answers": [
+        "Shang dynasty (商朝)",
+        "Xia dynasty (夏朝)",
+        "Qin dynasty (秦朝)"
+      ],
+      "hints": [
+        "This era is known for great thinkers such as Confucius and Laozi.",
+        "It is often split into the Spring and Autumn and the Warring States periods.",
+        "After King You's fall, the court moved its capital east to Luoyi (洛邑)."
+      ],
+      "fun_fact": "The story gave Chinese the idiom 烽火戏诸侯 (fēng huǒ xì zhū hóu, “playing tricks on the lords with beacon fires”), and the capital moved east in 770 BCE.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Great_Wall_Beacon_Tower_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreat_Wall_Beacon_Tower_-_panoramio.jpg",
+        "credit": "danmairen · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "danmairen",
+        "author_url": "https://web.archive.org/web/20161014152716/http://www.panoramio.com/user/1270960?with_photo_id=33390409",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22255",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "eight-cuisines",
+      "bundle": "chinese-base",
+      "description": "Hunan's favourite home dish: so hot that the rice bowl calls for help.",
+      "question": "In the Hunan dish 辣椒炒肉 (làjiāo chǎo ròu, \"stir-fried meat with chilli\"), the name just says 肉. Which meat is it?",
+      "answer": "Pork",
+      "wrong_answers": [
+        "Beef",
+        "Chicken",
+        "Lamb"
+      ],
+      "hints": [
+        "In most Chinese dish names, 肉 on its own means the same everyday meat.",
+        "It's the meat in 红烧肉 (hóngshāo ròu) and in 回锅肉 (huíguō ròu) too.",
+        "This meat comes from the animal of the last year in the Chinese zodiac."
+      ],
+      "fun_fact": "Chillies only reached China from the Americas about 400 years ago, yet today Hunan is one of the spiciest places to eat in the world.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Peppers_for_sale.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APeppers_for_sale.JPG",
+        "credit": "U.S. Air Force photo by Tech. Sgt. Michael B. Keller · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Air Force photo by Tech. Sgt. Michael B. Keller",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22256",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "eight-cuisines",
+      "bundle": "chinese-base",
+      "description": "The best part of this dinner is the part stuck to the bottom of the pot.",
+      "question": "Look at the photo: rice cooked in a clay pot, topped with sausage, with a crispy crust at the bottom. Which of the eight great cuisines is it from?",
+      "answer": "Cantonese cuisine (粤菜)",
+      "wrong_answers": [
+        "Sichuan cuisine (川菜)",
+        "Shandong cuisine (鲁菜)",
+        "Hunan cuisine (湘菜)"
+      ],
+      "hints": [
+        "It's a classic winter dish in the south of China and in Hong Kong.",
+        "The same cuisine is famous for dim sum and morning tea (早茶).",
+        "Its home province's capital is Guangzhou."
+      ],
+      "fun_fact": "The crispy rice crust at the bottom of the pot is called 饭焦 (fàn jiāo) in Cantonese, and many people scrape the pot to get every bit of it.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Cured_Meat_Claypot_Rice_at_The_Soup_Kitchen_%2820200718171540%29.jpg/3840px-Cured_Meat_Claypot_Rice_at_The_Soup_Kitchen_%2820200718171540%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACured_Meat_Claypot_Rice_at_The_Soup_Kitchen_%2820200718171540%29.jpg",
+        "credit": "N509FZ · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "N509FZ",
+        "author_url": "https://commons.wikimedia.org/wiki/User:N509FZ",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22258",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "folktales",
+      "bundle": "chinese-base",
+      "description": "Some say too much of a good thing is still a good thing. These farmers disagree.",
+      "question": "Long ago, ten of me rose in the sky together and the earth grew too hot. The archer Hou Yi shot down nine of us. What am I?",
+      "answer": "The sun",
+      "wrong_answers": [
+        "The moon",
+        "A star",
+        "A cloud"
+      ],
+      "hints": [
+        "Today there is only one of me left.",
+        "I give light and heat every day.",
+        "I rise in the east each morning."
+      ],
+      "fun_fact": "Hou Yi's wife is Chang'e (嫦娥), who in a famous legend flew to the moon, and China named its moon probes after her.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Spring_%26_Autumn_Bamboo_Bow_%289884315074%29.jpg/3840px-Spring_%26_Autumn_Bamboo_Bow_%289884315074%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASpring_%26_Autumn_Bamboo_Bow_%289884315074%29.jpg",
+        "credit": "Gary Todd from Xinzheng, China · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Gary Todd from Xinzheng, China",
+        "author_url": "https://www.flickr.com/people/101561334@N08",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22259",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "giant-panda",
+      "bundle": "chinese-base",
+      "description": "Nature's crunchiest snack, with a panda on the other end.",
+      "question": "Pandas crunch bamboo stems all day long. Which of these is NOT true about bamboo stems?",
+      "answer": "They grow on trees",
+      "wrong_answers": [
+        "They are hollow inside",
+        "They have rings along them",
+        "They can grow very fast"
+      ],
+      "hints": [
+        "Think about where a bamboo stem comes from.",
+        "Three of these you could check by cutting or watching a bamboo stem.",
+        "Bamboo is actually a giant kind of grass."
+      ],
+      "fun_fact": "Bamboo is a giant grass, and some kinds can grow almost 1 m in a single day.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Leaky_Ridge_%2846882692201%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeaky_Ridge_%2846882692201%29.jpg",
+        "credit": "David Stanley from Nanaimo, Canada · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "David Stanley from Nanaimo, Canada",
+        "author_url": "https://www.flickr.com/people/79721788@N00",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22260",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "mid-autumn-festival",
+      "bundle": "chinese-base",
+      "description": "Long before telescopes, a small child had a very creative guess about what was hanging in the night sky.",
+      "question": "Which Tang dynasty poet wrote 古朗月行 (gǔ lǎng yuè xíng), which starts “小时不识月，呼作白玉盘”?",
+      "answer": "Li Bai",
+      "wrong_answers": [
+        "Du Fu",
+        "Bai Juyi",
+        "Wang Wei"
+      ],
+      "hints": [
+        "He loved wine and travelled all over China.",
+        "People call him the “Immortal of Poetry” (诗仙).",
+        "He also wrote 静夜思, the poem that starts “床前明月光”."
+      ],
+      "fun_fact": "In the poem, the child calls the moon a “white jade plate” (白玉盘) and wonders if it is a mirror flying above the clouds.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Full_moon_over_Gullmarn_fjord_at_Holma_Marina_2.jpg/3840px-Full_moon_over_Gullmarn_fjord_at_Holma_Marina_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFull_moon_over_Gullmarn_fjord_at_Holma_Marina_2.jpg",
+        "credit": "W.carter · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "W.carter",
+        "author_url": "https://commons.wikimedia.org/wiki/User:W.carter",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22262",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "renminbi-and-old-coins",
+      "bundle": "chinese-base",
+      "description": "Cash is feeling very lonely in its wallet these days.",
+      "question": "I was born in Japan in 1994 to keep track of car parts. Now I sit on almost every shop counter in China, and you scan me with your phone to pay. What am I?",
+      "answer": "A QR code",
+      "wrong_answers": [
+        "A barcode",
+        "A bank card",
+        "A bus card"
+      ],
+      "hints": [
+        "You need a phone camera to read me.",
+        "I'm a little square full of black and white dots.",
+        "Alipay and WeChat Pay show me on the screen too."
+      ],
+      "fun_fact": "The QR code was made by the Japanese company Denso Wave, and “QR” stands for “Quick Response”.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Gas_street_food_stall_can_make_almost_anything.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGas_street_food_stall_can_make_almost_anything.JPG",
+        "credit": "Kilroy238 · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Kilroy238",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kilroy238&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22263",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "renminbi-and-old-coins",
+      "bundle": "chinese-base",
+      "description": "The smallest coin in your piggy bank got a makeover, and a tough one.",
+      "question": "Today's 1-jiao (角) coin shows an orchid, is silver in color and stopped being made of aluminum in 2005. What is it made of now?",
+      "answer": "Stainless steel",
+      "wrong_answers": [
+        "Nickel",
+        "Tin",
+        "Zinc"
+      ],
+      "hints": [
+        "The 2005 change made the coin harder-wearing and a bit heavier.",
+        "It's an alloy, a mix of metals, made mostly of iron.",
+        "It's the same metal as many kitchen sinks and spoons."
+      ],
+      "fun_fact": "It takes 10 jiao to make 1 yuan, so ten of these little orchid coins buy the same as one big 1-yuan coin.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Pile_of_money_in_front_of_Yongle_emperor_statute_at_Changling_tomb.jpg/3840px-Pile_of_money_in_front_of_Yongle_emperor_statute_at_Changling_tomb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APile_of_money_in_front_of_Yongle_emperor_statute_at_Changling_tomb.jpg",
+        "credit": "Daniel Case · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Daniel Case",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Daniel_Case",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22265",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "china-at-the-olympics",
+      "bundle": "chinese-base",
+      "description": "This torch travelled further than most families go on their summer holidays.",
+      "question": "This traditional good-luck design swirls over the red-and-silver Beijing 2008 Olympic torch, which was even named after it. What is it?",
+      "answer": "祥云 (xiángyún, auspicious clouds)",
+      "wrong_answers": [
+        "龙纹 (lóngwén, dragon pattern)",
+        "回纹 (huíwén, key pattern)",
+        "莲花纹 (liánhuāwén, lotus pattern)"
+      ],
+      "hints": [
+        "It is often painted on old palace ceilings and embroidered on festive clothes.",
+        "It has nothing to do with animals or plants.",
+        "Look up at the sky on a sunny day and you may see the real thing."
+      ],
+      "fun_fact": "The Beijing 2008 torch was designed by a team from the Chinese computer company Lenovo.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Beijing_National_Stadium_in_November_2016.jpg/3840px-Beijing_National_Stadium_in_November_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeijing_National_Stadium_in_November_2016.jpg",
+        "credit": "Another Believer · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Another Believer",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Another_Believer",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22266",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "chinese-cities",
+      "bundle": "chinese-base",
+      "description": "Handle with care: this question breaks if you drop it.",
+      "question": "Jingdezhen, China's “Porcelain Capital” (瓷都), is most famous for ware like this. What is this style called?",
+      "answer": "Blue-and-white porcelain (青花瓷)",
+      "wrong_answers": [
+        "Celadon (青瓷)",
+        "Tang tri-colour ware (唐三彩)",
+        "Yixing purple clay (紫砂)"
+      ],
+      "hints": [
+        "Its patterns are painted on before the glaze goes on, then fired.",
+        "The colour comes from cobalt, and it reached its height in the Yuan and Ming dynasties.",
+        "Jay Chou has a famous song with this porcelain's name as its title."
+      ],
+      "fun_fact": "Jingdezhen got its name from the Song emperor Zhenzong, whose reign name Jingde (景德) was stamped on the town's porcelain made for the palace.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Ming_Porcelain_Vases.jpg/3840px-Ming_Porcelain_Vases.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMing_Porcelain_Vases.jpg",
+        "credit": "Gary Todd · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Gary Todd",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22267",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "chinese-folk-music",
+      "bundle": "chinese-base",
+      "description": "A love song that gets very poetic about one girl's cheeks.",
+      "question": "Complete the line from the Xinjiang folk song “Lift Your Veil” (掀起你的盖头来): “Your face is red and round, like ___ in autumn.”",
+      "answer": "An apple",
+      "wrong_answers": [
+        "A peach",
+        "A persimmon",
+        "A lantern"
+      ],
+      "hints": [
+        "Like the other lines of the song, it compares the girl to something from nature.",
+        "It is something people pick from a tree.",
+        "Xinjiang's Aksu region is famous for growing sweet ones of this fruit."
+      ],
+      "fun_fact": "Wang Luobin, called the “King of Western Folk Songs”, arranged this Uyghur song and made it famous all over China.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Northwest_Chinese_Instruments_-_MIM_PHX_%282014-02-09_13.51.13_by_ksblack99%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANorthwest_Chinese_Instruments_-_MIM_PHX_%282014-02-09_13.51.13_by_ksblack99%29.jpg",
+        "credit": "ksblack99 · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "ksblack99",
+        "author_url": "https://www.flickr.com/people/91064752@N03",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22268",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "daoism",
+      "bundle": "chinese-base",
+      "description": "A kitchen story so famous that philosophers still sharpen their minds on it.",
+      "question": "The idiom 庖丁解牛 (páo dīng jiě niú, “Cook Ding carves an ox”) comes from a story in which ancient thinker's book?",
+      "answer": "Zhuangzi (庄子)",
+      "wrong_answers": [
+        "Laozi (老子)",
+        "Mencius (孟子)",
+        "Confucius (孔子)"
+      ],
+      "hints": [
+        "He lived during the Warring States period.",
+        "His book is full of playful fables, like a giant fish that turns into a huge bird.",
+        "He once dreamed he was a butterfly and woke up unsure which one he really was."
+      ],
+      "fun_fact": "In Zhuangzi’s story, the cook used the same knife for 19 years and it was still as sharp as new.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Ancient_Chinese_Writing_on_Warring_States_Bamboo_Slips_3.jpg/3840px-Ancient_Chinese_Writing_on_Warring_States_Bamboo_Slips_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAncient_Chinese_Writing_on_Warring_States_Bamboo_Slips_3.jpg",
+        "credit": "Gary Todd · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Gary Todd",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22269",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "early-china",
+      "bundle": "chinese-base",
+      "description": "Seven thousand years before house-hunting apps, someone still had to choose a good home.",
+      "question": "About 7,000 years ago at Hemudu (河姆渡), people lived on wet ground and grew rice. What kind of houses did they build?",
+      "answer": "Stilt houses (干栏式建筑)",
+      "wrong_answers": [
+        "Cave dwellings (窑洞)",
+        "Half-underground houses (半地穴式房屋)",
+        "Courtyard houses (四合院)"
+      ],
+      "hints": [
+        "Hemudu is in the warm, rainy south, near today's Ningbo in Zhejiang.",
+        "The builders had to deal with floods, damp ground, snakes and wild animals.",
+        "The living space sat up in the air, with the ground left open below."
+      ],
+      "fun_fact": "Hemudu builders already joined wooden beams with mortise and tenon joints (榫卯), which hold together without nails.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Neolithic_Hemudu_Culture_Pottery_01.jpg/3840px-Neolithic_Hemudu_Culture_Pottery_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANeolithic_Hemudu_Culture_Pottery_01.jpg",
+        "credit": "Gary Lee Todd, Ph.D. · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Gary Lee Todd, Ph.D.",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22270",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "provinces",
+      "bundle": "chinese-base",
+      "description": "Yaks live up here, and nobody has ever had to clean the gutters.",
+      "question": "The Qinghai-Tibet Plateau (青藏高原) is called the “Roof of the World” (世界屋脊). What is its average height above sea level?",
+      "answer": "4,000–5,000 m",
+      "wrong_answers": [
+        "1,000–2,000 m",
+        "2,000–3,000 m",
+        "6,000–7,000 m"
+      ],
+      "hints": [
+        "No other large plateau on Earth is as high.",
+        "Many visitors get altitude sickness there, even when they stand still.",
+        "Lhasa, at about 3,650 m, actually sits lower than the plateau's average."
+      ],
+      "fun_fact": "The Qinghai-Tibet Plateau is still rising by a few millimetres a year, because the Indian plate keeps pushing into Asia.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://pd.w.org/2024/12/776763e536682e45.17151072-2048x1365.jpg",
+        "source_url": "https://wordpress.org/photos/photo/776763e536/",
+        "credit": "Anil Gurung · CC0 1.0 · Wordpress via Openverse",
+        "provider": "openverse",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "author": "Anil Gurung",
+        "author_url": "https://wordpress.org/photos/author/anil04/",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22271",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "provinces",
+      "bundle": "chinese-base",
+      "description": "A province where winter is long and some street signs speak two languages.",
+      "question": "Their families crossed the Tumen River over 150 years ago, and Jilin is home to more of them than any other province. Which ethnic group is it?",
+      "answer": "Korean (朝鲜族)",
+      "wrong_answers": [
+        "Manchu (满族)",
+        "Mongol (蒙古族)",
+        "Hui (回族)"
+      ],
+      "hints": [
+        "Their traditional dances often feature long, hourglass-shaped drums.",
+        "Their language is also spoken just across the border.",
+        "They are famous for cold noodles and spicy pickled cabbage."
+      ],
+      "fun_fact": "Street signs in Yanji, the capital of Jilin's Yanbian prefecture, are written in both Chinese and Korean.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/%E5%9B%BE%E4%BB%AC%E6%B1%9F_Tu_Men_River_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%E5%9B%BE%E4%BB%AC%E6%B1%9F_Tu_Men_River_-_panoramio.jpg",
+        "credit": "wanghongliu · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "wanghongliu",
+        "author_url": "https://web.archive.org/web/20161023153122/http://www.panoramio.com/user/4409275?with_photo_id=55359268",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22272",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "tang-poems",
+      "bundle": "chinese-base",
+      "description": "A goodbye poem where the only one waving might be the river.",
+      "question": "I grew up in Shu (蜀), today's Sichuan. As a young man I sailed down the Yangtze past Jingmen and wrote “Farewell at Jingmen Ferry” (渡荆门送别). Who am I?",
+      "answer": "Li Bai",
+      "wrong_answers": [
+        "Du Fu",
+        "Meng Haoran",
+        "Wang Wei"
+      ],
+      "hints": [
+        "I lived in the Tang dynasty and spent much of my life travelling.",
+        "After leaving Sichuan, I never went back to live there.",
+        "I loved wine and the moon, and people call me the “Immortal of Poetry” (诗仙)."
+      ],
+      "fun_fact": "The Qing critic Shen Deqian said the poem shows no farewell at all, so the word “farewell” could be cut from its title.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Three_gorges_on_the_Yangtze_river.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThree_gorges_on_the_Yangtze_river.jpg",
+        "credit": "Jan Kranendonk (https://www.jankranendonk.nl) · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jan Kranendonk (https://www.jankranendonk.nl)",
+        "author_url": "https://www.jankranendonk.nl",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22273",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "world-heritage-sites",
+      "bundle": "chinese-base",
+      "description": "Sand that refuses to blow away and water where no water should be: nature clearly ignored the rules here.",
+      "question": "This desert in Inner Mongolia joined the World Heritage list in 2024. It has the world's tallest stationary sand dunes and over 100 lakes. Which desert is it?",
+      "answer": "Badain Jaran Desert (巴丹吉林沙漠)",
+      "wrong_answers": [
+        "Taklamakan Desert (塔克拉玛干沙漠)",
+        "Tengger Desert (腾格里沙漠)",
+        "Kubuqi Desert (库布其沙漠)"
+      ],
+      "hints": [
+        "It lies in western Inner Mongolia, in Alxa League (阿拉善盟).",
+        "Its UNESCO listing calls it a place of “towers of sand and lakes”.",
+        "It is the northwestern neighbour of the Tengger Desert."
+      ],
+      "fun_fact": "Some of Badain Jaran's dunes rise about 500 m (1,640 ft) above their base, and the lakes between them are fed by groundwater whose source scientists still debate.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Bilutu_Peak.JPG/3840px-Bilutu_Peak.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABilutu_Peak.JPG",
+        "credit": "Sjoerd van Oort · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Sjoerd van Oort",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:15sjoerdv&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22274",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "scenic-areas",
+      "bundle": "chinese-base",
+      "description": "Yangzhou's lake went on a diet and kept its famous sister's name.",
+      "question": "You're on a boat on Slender West Lake (瘦西湖) in Yangzhou. Which sight will you NOT see there?",
+      "answer": "Leifeng Pagoda (雷峰塔)",
+      "wrong_answers": [
+        "Five-Pavilion Bridge (五亭桥)",
+        "White Pagoda (白塔)",
+        "Twenty-Four Bridge (二十四桥)"
+      ],
+      "hints": [
+        "Three of these sights are in Yangzhou; one belongs to another famous lake.",
+        "The odd one out appears in the Legend of the White Snake.",
+        "It stands beside the “fat” West Lake in Hangzhou."
+      ],
+      "fun_fact": "Du Mu's Tang poem line “二十四桥明月夜” (Twenty-Four Bridges on a moonlit night) made Yangzhou's bridges famous long before today's scenic area was built.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Bamboo_garden_zxjc.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABamboo_garden_zxjc.jpg",
+        "credit": "Wcam · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Wcam",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Wcam",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22275",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "spring-festival",
+      "bundle": "chinese-base",
+      "description": "The one day of the year when banging on the door at dawn is a welcome, and quite possibly a profitable, thing to do.",
+      "question": "At dawn, firecrackers go off, shops reopen, and families welcome the God of Wealth (财神). Which day of the New Year is it?",
+      "answer": "The 5th day",
+      "wrong_answers": [
+        "The 3rd day",
+        "The 7th day",
+        "The 15th day"
+      ],
+      "hints": [
+        "It falls inside the first week of the New Year.",
+        "Many shops stay closed until this day and then open their doors again.",
+        "On this day many New Year taboos end, like the ban on sweeping the floor, and many families eat dumplings that morning."
+      ],
+      "fun_fact": "Some shop owners try to set off the very first firecracker on this morning, hoping the God of Wealth visits their shop before any other.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/%22God_of_Wealth%22_%2C_A_Chinese_New_Year_Must_Element_in_Singapore.jpg/3840px-%22God_of_Wealth%22_%2C_A_Chinese_New_Year_Must_Element_in_Singapore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%22God_of_Wealth%22_%2C_A_Chinese_New_Year_Must_Element_in_Singapore.jpg",
+        "credit": "Charlieyang34 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Charlieyang34",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Charlieyang34&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22276",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "spring-festival",
+      "bundle": "chinese-base",
+      "description": "Twelve animals lined up for a race, and the prize was a job on the calendar for ever.",
+      "question": "I can fly and bring rain. In the Great Race I came after the Rabbit and before the Snake. Nobody has ever seen me in real life. Who am I?",
+      "answer": "The Dragon",
+      "wrong_answers": [
+        "The Tiger",
+        "The Horse",
+        "The Rooster"
+      ],
+      "hints": [
+        "I am the fifth animal of the Chinese zodiac.",
+        "At New Year, dancers hold me up on long poles and make me wave through the streets.",
+        "Chinese people sometimes call themselves my descendants (龙的传人)."
+      ],
+      "fun_fact": "In many tellings of the Great Race, the Dragon could have won but stopped to bring rain to a village, or to help the Rabbit across the river.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Happy_Spring_Festival_of_Chinese_New_Year_in_Dalian_%281st_Round_Photography%29_-_Lanterns%27_Gate.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHappy_Spring_Festival_of_Chinese_New_Year_in_Dalian_%281st_Round_Photography%29_-_Lanterns%27_Gate.jpg",
+        "credit": "Jason M. C., Han · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jason M. C., Han",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jason_M._C.,_Han",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22277",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "spring-festival",
+      "bundle": "chinese-base",
+      "description": "A porridge with so many beans, nuts and dates in it that it could pass for a whole grocery shop in a bowl.",
+      "question": "Laba congee is cooked with grains, beans, nuts and dates on the 8th day of the 12th lunar month. Eating it starts the countdown to which festival?",
+      "answer": "Spring Festival",
+      "wrong_answers": [
+        "Mid-Autumn Festival",
+        "Dragon Boat Festival",
+        "Lantern Festival"
+      ],
+      "hints": [
+        "The 12th lunar month is the last month of the year.",
+        "An old saying goes 过了腊八就是年 (guò le Làbā jiù shì nián).",
+        "It is the festival with red packets, couplets and the reunion dinner."
+      ],
+      "fun_fact": "Many Buddhist temples in China give out free Laba congee on this day, and people queue in the cold winter morning for a bowl.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Laba_Congee._After.jpg/3840px-Laba_Congee._After.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALaba_Congee._After.jpg",
+        "credit": "bfishadow from Beijing, China · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "bfishadow from Beijing, China",
+        "author_url": "https://www.flickr.com/people/61368956@N00",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22278",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "tang-poems",
+      "bundle": "chinese-base",
+      "description": "Four lines, no more, no less: the Tang dynasty's version of a tweet.",
+      "question": "I wrote seven-character jueju (七言绝句) so well that people called me their “Sage Hand” (七绝圣手). I wrote “Out to the Frontier” (出塞). Who am I?",
+      "answer": "Wang Changling",
+      "wrong_answers": [
+        "Wang Wei",
+        "Wang Zhihuan",
+        "Meng Haoran"
+      ],
+      "hints": [
+        "I lived in the Tang dynasty, at the same time as Li Bai.",
+        "Many of my famous poems are about soldiers at the frontier and about saying goodbye to friends.",
+        "I also wrote “Seeing Xin Jian Off at Lotus Tower” (芙蓉楼送辛渐), and I share my family name with Wang Wei."
+      ],
+      "fun_fact": "A legend says Wang Changling, Gao Shi and Wang Zhihuan once sat in a tavern and secretly counted which of their poems the singers performed most.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Han_Dynasty_Granary_west_of_Dunhuang.jpg/3840px-Han_Dynasty_Granary_west_of_Dunhuang.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHan_Dynasty_Granary_west_of_Dunhuang.jpg",
+        "credit": "John Hill · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "John Hill",
+        "author_url": "https://commons.wikimedia.org/wiki/User:John_Hill",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22279",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "tang-poems",
+      "bundle": "chinese-base",
+      "description": "Good news travelled slowly in the Tang dynasty, but it still made a poet dance.",
+      "question": "Du Fu wrote the joyful poem “Hearing the Army Has Recovered Henan and Hebei” (闻官军收河南河北) when the An Lushan Rebellion ended. In which century?",
+      "answer": "8th century",
+      "wrong_answers": [
+        "7th century",
+        "9th century",
+        "10th century"
+      ],
+      "hints": [
+        "The Tang dynasty lasted from 618 to 907.",
+        "Du Fu was a younger friend of Li Bai and wrote in the middle part of the Tang dynasty.",
+        "The rebellion broke out in 755 and ended a few years later."
+      ],
+      "fun_fact": "The Qing scholar Pu Qilong called it Du Fu's “first happy poem of his life” (生平第一快诗).",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Du_Fu_Thatched_Cottage_-_Chengdu_20161121.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADu_Fu_Thatched_Cottage_-_Chengdu_20161121.jpg",
+        "credit": "Tyg728 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Tyg728",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tyg728",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22280",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "world-heritage-sites",
+      "bundle": "chinese-base",
+      "description": "Monks, sword fighters and a few hundred stairs too many: welcome to Hubei's holy heights.",
+      "question": "These halls stand on Mount Wudang (武当山) in Hubei, a mountain famous for its own style of kung fu. Which religion built them?",
+      "answer": "Daoism (道教)",
+      "wrong_answers": [
+        "Buddhism (佛教)",
+        "Islam (伊斯兰教)",
+        "Christianity (基督教)"
+      ],
+      "hints": [
+        "Its temples and priests can be found on many famous mountains across China.",
+        "Its old teacher Laozi (老子) wrote the Dao De Jing (道德经).",
+        "Its symbol is the black-and-white yin-yang circle (太极图)."
+      ],
+      "fun_fact": "The Golden Hall on Wudang's highest peak was cast from bronze and covered in gold in 1416, during the Ming dynasty.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Wudangshan_pic_9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWudangshan_pic_9.jpg",
+        "credit": "gongfu_king · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "gongfu_king",
+        "author_url": "https://www.flickr.com/people/drnantu/",
         "excerpt": null
       },
       "background": null

@@ -1,0 +1,1117 @@
+{
+  "subcategory": "china-at-the-olympics",
+  "facets": [
+    "First Olympic steps before 1984",
+    "Los Angeles 1984 breakthrough",
+    "Beijing 2008 bid and opening ceremony",
+    "Beijing 2008 venues",
+    "Beijing 2008 mascots and emblems",
+    "Beijing 2008 torch relay",
+    "Beijing 2022 Winter Games",
+    "Winter Games venues and mascots",
+    "Medal tables and milestones",
+    "Summer Games after 2008",
+    "Olympic symbols and traditions in China",
+    "Paralympics and Youth Olympics in China"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 4,
+      "record": 3,
+      "origin": 2,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 4,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Liu Changchun",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 10
+    },
+    {
+      "name": "1932 Los Angeles Olympics",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Boling",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 12
+    },
+    {
+      "name": "Olympic Three Questions (奥运三问)",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 11
+    },
+    {
+      "name": "1936 Berlin Olympics",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 12
+    },
+    {
+      "name": "Wushu demonstration at Berlin 1936",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 13
+    },
+    {
+      "name": "1948 London Olympics",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 13
+    },
+    {
+      "name": "1952 Helsinki Olympics",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 12
+    },
+    {
+      "name": "Wu Chuanyu",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Zhengting",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 14
+    },
+    {
+      "name": "Dong Shouyi",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 13
+    },
+    {
+      "name": "Far Eastern Championship Games",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 14
+    },
+    {
+      "name": "IOC readmission in 1979",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 12
+    },
+    {
+      "name": "Nagoya Resolution",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 13
+    },
+    {
+      "name": "1980 Lake Placid Winter Olympics",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese Taipei",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 11
+    },
+    {
+      "name": "Chinese Olympic Committee",
+      "facet": "First Olympic steps before 1984",
+      "known_at": 9
+    },
+    {
+      "name": "Xu Haifeng",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 6
+    },
+    {
+      "name": "50 metre pistol",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 9
+    },
+    {
+      "name": "Li Ning",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 6
+    },
+    {
+      "name": "Lang Ping",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 6
+    },
+    {
+      "name": "China women's volleyball team",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 5
+    },
+    {
+      "name": "Zero breakthrough (零的突破)",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 7
+    },
+    {
+      "name": "Zeng Guoqiang",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 14
+    },
+    {
+      "name": "Wu Shude",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 14
+    },
+    {
+      "name": "Zhou Jihong",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 13
+    },
+    {
+      "name": "Luan Jujie",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 13
+    },
+    {
+      "name": "Li Yuwei",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 14
+    },
+    {
+      "name": "Lou Yun",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 13
+    },
+    {
+      "name": "Ma Yanhong",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 14
+    },
+    {
+      "name": "Tong Fei",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 14
+    },
+    {
+      "name": "Zhu Jianhua",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 12
+    },
+    {
+      "name": "15 gold medals in 1984",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 10
+    },
+    {
+      "name": "Yuan Weimin",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 13
+    },
+    {
+      "name": "1984 Olympic boycott",
+      "facet": "Los Angeles 1984 breakthrough",
+      "known_at": 12
+    },
+    {
+      "name": "Bid win on 13 July 2001",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 9
+    },
+    {
+      "name": "1993 bid lost to Sydney",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 11
+    },
+    {
+      "name": "Juan Antonio Samaranch",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 10
+    },
+    {
+      "name": "Zhang Yimou",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 7
+    },
+    {
+      "name": "Opening on 8 August 2008",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 5
+    },
+    {
+      "name": "Fou drums (缶)",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 9
+    },
+    {
+      "name": "Movable type performance",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 11
+    },
+    {
+      "name": "Giant scroll",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 10
+    },
+    {
+      "name": "Footprint fireworks",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 11
+    },
+    {
+      "name": "You and Me (我和你)",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 6
+    },
+    {
+      "name": "Liu Huan",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 8
+    },
+    {
+      "name": "Lin Miaoke",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 10
+    },
+    {
+      "name": "Yao Ming as flag bearer",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 7
+    },
+    {
+      "name": "Lin Hao",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 10
+    },
+    {
+      "name": "Li Ning lights the cauldron",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 6
+    },
+    {
+      "name": "One World, One Dream",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 6
+    },
+    {
+      "name": "Lang Lang",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 9
+    },
+    {
+      "name": "Tai chi performance",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 9
+    },
+    {
+      "name": "Cai Guoqiang",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 13
+    },
+    {
+      "name": "Children of the 56 ethnic groups",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 8
+    },
+    {
+      "name": "Green, High-tech and People's Olympics",
+      "facet": "Beijing 2008 bid and opening ceremony",
+      "known_at": 11
+    },
+    {
+      "name": "Water Cube",
+      "facet": "Beijing 2008 venues",
+      "known_at": 4
+    },
+    {
+      "name": "Olympic Green",
+      "facet": "Beijing 2008 venues",
+      "known_at": 9
+    },
+    {
+      "name": "National Indoor Stadium",
+      "facet": "Beijing 2008 venues",
+      "known_at": 12
+    },
+    {
+      "name": "Qingdao Olympic Sailing Center",
+      "facet": "Beijing 2008 venues",
+      "known_at": 11
+    },
+    {
+      "name": "Sha Tin equestrian venue",
+      "facet": "Beijing 2008 venues",
+      "known_at": 12
+    },
+    {
+      "name": "Shunyi Olympic Rowing-Canoeing Park",
+      "facet": "Beijing 2008 venues",
+      "known_at": 13
+    },
+    {
+      "name": "Laoshan Velodrome",
+      "facet": "Beijing 2008 venues",
+      "known_at": 14
+    },
+    {
+      "name": "Digital Beijing Building",
+      "facet": "Beijing 2008 venues",
+      "known_at": 14
+    },
+    {
+      "name": "Ling Long Pagoda",
+      "facet": "Beijing 2008 venues",
+      "known_at": 14
+    },
+    {
+      "name": "Workers' Stadium",
+      "facet": "Beijing 2008 venues",
+      "known_at": 9
+    },
+    {
+      "name": "Peking University Gymnasium",
+      "facet": "Beijing 2008 venues",
+      "known_at": 12
+    },
+    {
+      "name": "Wukesong Arena",
+      "facet": "Beijing 2008 venues",
+      "known_at": 12
+    },
+    {
+      "name": "Olympic Forest Park",
+      "facet": "Beijing 2008 venues",
+      "known_at": 9
+    },
+    {
+      "name": "Herzog & de Meuron",
+      "facet": "Beijing 2008 venues",
+      "known_at": 13
+    },
+    {
+      "name": "2008 Olympic Village",
+      "facet": "Beijing 2008 venues",
+      "known_at": 10
+    },
+    {
+      "name": "Football co-host cities of 2008",
+      "facet": "Beijing 2008 venues",
+      "known_at": 12
+    },
+    {
+      "name": "Beijing Capital Airport Terminal 3",
+      "facet": "Beijing 2008 venues",
+      "known_at": 11
+    },
+    {
+      "name": "Olympic Branch Line",
+      "facet": "Beijing 2008 venues",
+      "known_at": 13
+    },
+    {
+      "name": "Marathon start at Tiananmen Square",
+      "facet": "Beijing 2008 venues",
+      "known_at": 11
+    },
+    {
+      "name": "Fuwa mascots",
+      "facet": "Beijing 2008 mascots and emblems",
+      "known_at": 3
+    },
+    {
+      "name": "Beibei",
+      "facet": "Beijing 2008 mascots and emblems",
+      "known_at": 5
+    },
+    {
+      "name": "Huanhuan",
+      "facet": "Beijing 2008 mascots and emblems",
+      "known_at": 5
+    },
+    {
+      "name": "Yingying",
+      "facet": "Beijing 2008 mascots and emblems",
+      "known_at": 6
+    },
+    {
+      "name": "Nini",
+      "facet": "Beijing 2008 mascots and emblems",
+      "known_at": 6
+    },
+    {
+      "name": "Beijing Huanying Ni (北京欢迎你)",
+      "facet": "Beijing 2008 mascots and emblems",
+      "known_at": 5
+    },
+    {
+      "name": "Dancing Beijing emblem",
+      "facet": "Beijing 2008 mascots and emblems",
+      "known_at": 8
+    },
+    {
+      "name": "Chinese seal (印章)",
+      "facet": "Beijing 2008 mascots and emblems",
+      "known_at": 10
+    },
+    {
+      "name": "Seal-script sport pictograms",
+      "facet": "Beijing 2008 mascots and emblems",
+      "known_at": 12
+    },
+    {
+      "name": "Gold-and-jade medals (金镶玉)",
+      "facet": "Beijing 2008 mascots and emblems",
+      "known_at": 9
+    },
+    {
+      "name": "Kunlun jade",
+      "facet": "Beijing 2008 mascots and emblems",
+      "known_at": 13
+    },
+    {
+      "name": "Han Meilin",
+      "facet": "Beijing 2008 mascots and emblems",
+      "known_at": 14
+    },
+    {
+      "name": "China red",
+      "facet": "Beijing 2008 mascots and emblems",
+      "known_at": 11
+    },
+    {
+      "name": "Beijing 2008 volunteer emblem",
+      "facet": "Beijing 2008 mascots and emblems",
+      "known_at": 13
+    },
+    {
+      "name": "Lucky Cloud torch (祥云)",
+      "facet": "Beijing 2008 torch relay",
+      "known_at": 9
+    },
+    {
+      "name": "Auspicious cloud pattern",
+      "facet": "Beijing 2008 torch relay",
+      "known_at": 10
+    },
+    {
+      "name": "Mount Everest torch relay",
+      "facet": "Beijing 2008 torch relay",
+      "known_at": 8
+    },
+    {
+      "name": "Flame lighting in Olympia",
+      "facet": "Beijing 2008 torch relay",
+      "known_at": 9
+    },
+    {
+      "name": "Journey of Harmony (和谐之旅)",
+      "facet": "Beijing 2008 torch relay",
+      "known_at": 11
+    },
+    {
+      "name": "Hong Kong and Macao torch relay",
+      "facet": "Beijing 2008 torch relay",
+      "known_at": 11
+    },
+    {
+      "name": "Global torch relay route",
+      "facet": "Beijing 2008 torch relay",
+      "known_at": 12
+    },
+    {
+      "name": "Tiananmen torch welcome ceremony",
+      "facet": "Beijing 2008 torch relay",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Xiang as torchbearer",
+      "facet": "Beijing 2008 torch relay",
+      "known_at": 9
+    },
+    {
+      "name": "Propane torch fuel",
+      "facet": "Beijing 2008 torch relay",
+      "known_at": 12
+    },
+    {
+      "name": "Flame lantern (火种灯)",
+      "facet": "Beijing 2008 torch relay",
+      "known_at": 10
+    },
+    {
+      "name": "21,880 torchbearers",
+      "facet": "Beijing 2008 torch relay",
+      "known_at": 13
+    },
+    {
+      "name": "Panathenaic Stadium handover",
+      "facet": "Beijing 2008 torch relay",
+      "known_at": 13
+    },
+    {
+      "name": "Domestic torch relay route",
+      "facet": "Beijing 2008 torch relay",
+      "known_at": 11
+    },
+    {
+      "name": "Opening on 4 February 2022",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 8
+    },
+    {
+      "name": "24 solar terms countdown",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 9
+    },
+    {
+      "name": "Snowflake cauldron",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 9
+    },
+    {
+      "name": "Double Olympic city",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 7
+    },
+    {
+      "name": "Together for a Shared Future",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 9
+    },
+    {
+      "name": "Gu Ailing",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 6
+    },
+    {
+      "name": "Su Yiming",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 9
+    },
+    {
+      "name": "Xu Mengtao",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 11
+    },
+    {
+      "name": "Ren Ziwei",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 11
+    },
+    {
+      "name": "Gao Tingyu",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 11
+    },
+    {
+      "name": "Short track mixed team relay",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 11
+    },
+    {
+      "name": "Nine gold medals in 2022",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 11
+    },
+    {
+      "name": "Dinigeer Yilamujiang",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 12
+    },
+    {
+      "name": "Flying torch (飞扬)",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 10
+    },
+    {
+      "name": "Malan Flower Children's Chorus",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 12
+    },
+    {
+      "name": "Ice-cube Olympic rings",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 10
+    },
+    {
+      "name": "Tong Xin medals (同心)",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 12
+    },
+    {
+      "name": "300 million people in winter sports",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 10
+    },
+    {
+      "name": "Children with dove lanterns",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 11
+    },
+    {
+      "name": "Yellow River water from the sky (黄河之水天上来)",
+      "facet": "Beijing 2022 Winter Games",
+      "known_at": 11
+    },
+    {
+      "name": "Shuey Rhon Rhon",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 7
+    },
+    {
+      "name": "One Dwen Dwen hard to find (一墩难求)",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 9
+    },
+    {
+      "name": "Ice Ribbon",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 9
+    },
+    {
+      "name": "Ice Cube",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 8
+    },
+    {
+      "name": "Snow Ruyi",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 10
+    },
+    {
+      "name": "Big Air Shougang",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 9
+    },
+    {
+      "name": "Snow Flying Dragon",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 12
+    },
+    {
+      "name": "Zhangjiakou",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 7
+    },
+    {
+      "name": "Chongli",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 10
+    },
+    {
+      "name": "Yanqing",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 11
+    },
+    {
+      "name": "Genting Snow Park",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 12
+    },
+    {
+      "name": "National Alpine Skiing Centre",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 13
+    },
+    {
+      "name": "Capital Indoor Stadium",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 12
+    },
+    {
+      "name": "Beijing–Zhangjiakou high-speed railway",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 9
+    },
+    {
+      "name": "Winter Dream emblem (冬梦)",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 9
+    },
+    {
+      "name": "Artificial snow",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 10
+    },
+    {
+      "name": "CO2 ice making",
+      "facet": "Winter Games venues and mascots",
+      "known_at": 13
+    },
+    {
+      "name": "51 golds in 2008",
+      "facet": "Medal tables and milestones",
+      "known_at": 7
+    },
+    {
+      "name": "100 medals in 2008",
+      "facet": "Medal tables and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "32 golds at Athens 2004",
+      "facet": "Medal tables and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Yang Yang",
+      "facet": "Medal tables and milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Ye Qiaobo",
+      "facet": "Medal tables and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Shan",
+      "facet": "Medal tables and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Fu Mingxia",
+      "facet": "Medal tables and milestones",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Junxia",
+      "facet": "Medal tables and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Chen Zhong",
+      "facet": "Medal tables and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Li Ting and Sun Tiantian",
+      "facet": "Medal tables and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Diving Dream Team (梦之队)",
+      "facet": "Medal tables and milestones",
+      "known_at": 7
+    },
+    {
+      "name": "Wu Dajing",
+      "facet": "Medal tables and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Hong",
+      "facet": "Medal tables and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Shen Xue and Zhao Hongbo",
+      "facet": "Medal tables and milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Meng",
+      "facet": "Medal tables and milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Zou Shiming",
+      "facet": "Medal tables and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "London 2012 Olympics",
+      "facet": "Summer Games after 2008",
+      "known_at": 12
+    },
+    {
+      "name": "Rio 2016 women's volleyball gold",
+      "facet": "Summer Games after 2008",
+      "known_at": 8
+    },
+    {
+      "name": "Zhu Ting",
+      "facet": "Summer Games after 2008",
+      "known_at": 7
+    },
+    {
+      "name": "Tokyo 2020 held in 2021",
+      "facet": "Summer Games after 2008",
+      "known_at": 9
+    },
+    {
+      "name": "40 golds at Paris 2024",
+      "facet": "Summer Games after 2008",
+      "known_at": 10
+    },
+    {
+      "name": "Pan Zhanle",
+      "facet": "Summer Games after 2008",
+      "known_at": 9
+    },
+    {
+      "name": "Quan Hongchan",
+      "facet": "Summer Games after 2008",
+      "known_at": 6
+    },
+    {
+      "name": "Ma Long",
+      "facet": "Summer Games after 2008",
+      "known_at": 7
+    },
+    {
+      "name": "Fan Zhendong",
+      "facet": "Summer Games after 2008",
+      "known_at": 8
+    },
+    {
+      "name": "Sun Yingsha",
+      "facet": "Summer Games after 2008",
+      "known_at": 6
+    },
+    {
+      "name": "Zheng Qinwen",
+      "facet": "Summer Games after 2008",
+      "known_at": 7
+    },
+    {
+      "name": "Su Bingtian",
+      "facet": "Summer Games after 2008",
+      "known_at": 7
+    },
+    {
+      "name": "Gong Lijiao",
+      "facet": "Summer Games after 2008",
+      "known_at": 10
+    },
+    {
+      "name": "Zhang Yufei",
+      "facet": "Summer Games after 2008",
+      "known_at": 10
+    },
+    {
+      "name": "Yang Qian",
+      "facet": "Summer Games after 2008",
+      "known_at": 11
+    },
+    {
+      "name": "Chen Yufei",
+      "facet": "Summer Games after 2008",
+      "known_at": 11
+    },
+    {
+      "name": "Lin Dan",
+      "facet": "Summer Games after 2008",
+      "known_at": 7
+    },
+    {
+      "name": "Wu Minxia",
+      "facet": "Summer Games after 2008",
+      "known_at": 13
+    },
+    {
+      "name": "Sheng Lihao",
+      "facet": "Summer Games after 2008",
+      "known_at": 12
+    },
+    {
+      "name": "Olympic motto",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 8
+    },
+    {
+      "name": "Pierre de Coubertin",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 10
+    },
+    {
+      "name": "Olympic Day",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 11
+    },
+    {
+      "name": "Olympic Truce",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 13
+    },
+    {
+      "name": "Olympic oath",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 11
+    },
+    {
+      "name": "Olympic flag handover",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 11
+    },
+    {
+      "name": "Olympic anthem",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 12
+    },
+    {
+      "name": "March of the Volunteers",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 6
+    },
+    {
+      "name": "Five-starred Red Flag on the podium",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 4
+    },
+    {
+      "name": "Gold, silver and bronze medals",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 2
+    },
+    {
+      "name": "Beijing Olympic Museum",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 12
+    },
+    {
+      "name": "Doves of peace",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 7
+    },
+    {
+      "name": "International Olympic Committee",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 8
+    },
+    {
+      "name": "Olympic volunteers",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 8
+    },
+    {
+      "name": "National Fitness Day (全民健身日)",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 10
+    },
+    {
+      "name": "Four-year Olympic cycle",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 5
+    },
+    {
+      "name": "Tomato and scrambled eggs uniform (西红柿炒鸡蛋)",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 8
+    },
+    {
+      "name": "Flag bearer",
+      "facet": "Olympic symbols and traditions in China",
+      "known_at": 7
+    },
+    {
+      "name": "Beijing 2008 Paralympics",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 8
+    },
+    {
+      "name": "Fu Niu Lele",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 11
+    },
+    {
+      "name": "Beijing 2022 Winter Paralympics",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 9
+    },
+    {
+      "name": "Top of the Paralympic medal table since 2004",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 11
+    },
+    {
+      "name": "Ping Yali",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 12
+    },
+    {
+      "name": "Hou Bin",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 11
+    },
+    {
+      "name": "Wheelchair curling",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 9
+    },
+    {
+      "name": "Nanjing 2014 Youth Olympic Games",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 10
+    },
+    {
+      "name": "Nanjing Lele",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 13
+    },
+    {
+      "name": "Youth Olympic Games",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 9
+    },
+    {
+      "name": "Wheelchair fencing",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 10
+    },
+    {
+      "name": "Blind football",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 10
+    },
+    {
+      "name": "Boccia",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 13
+    },
+    {
+      "name": "Goalball",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 13
+    },
+    {
+      "name": "Agitos",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 13
+    },
+    {
+      "name": "Beijing 2008 Paralympic emblem",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 13
+    },
+    {
+      "name": "Flight emblem (飞跃)",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 13
+    },
+    {
+      "name": "18 golds at the 2022 Winter Paralympics",
+      "facet": "Paralympics and Youth Olympics in China",
+      "known_at": 13
+    }
+  ]
+}

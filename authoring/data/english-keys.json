@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "about": "decision 232: English answer and concept per source question in another language, for the overlap checks (qgen english-keys)",
+  "about": "decision 232: English answer and concept per source question in another language, for the overlap checks (the english-keys step of qgen batch)",
   "questions": {
     "q-0001": {
       "hash": "a25fd882ae9d",
