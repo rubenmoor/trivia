@@ -1775932,7 +1775932,8 @@
       "bundle": "chinese-base",
       "locale": "en",
       "background": null,
-      "copied_from": "q-2787"
+      "copied_from": "q-2787",
+      "translatable": false
     },
     {
       "id": "q-22744",
@@ -1778360,7 +1778361,8 @@
       "bundle": "chinese-base",
       "locale": "en",
       "background": null,
-      "copied_from": "q-2236"
+      "copied_from": "q-2236",
+      "translatable": false
     },
     {
       "id": "q-22780",
@@ -1793593,7 +1793595,8 @@
       "bundle": "chinese-base",
       "locale": "en",
       "background": null,
-      "copied_from": "q-2657"
+      "copied_from": "q-2657",
+      "translatable": false
     },
     {
       "id": "q-22998",
@@ -1831994,7 +1831997,8 @@
       "bundle": "chinese-base",
       "locale": "en",
       "background": null,
-      "copied_from": "q-3835"
+      "copied_from": "q-3835",
+      "translatable": false
     },
     {
       "id": "q-23546",
