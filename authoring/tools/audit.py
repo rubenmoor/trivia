@@ -1,5 +1,5 @@
 """`qgen audit` and the back-audit (plan 16, D-56). Never ships (D-35)."""
-import datetime, json, random, sys
+import datetime, json, random, sys, urllib.parse
 from collections import Counter
 
 import layout  # paths (D-35)
@@ -192,14 +192,27 @@ def run_questions(run):
     return in_locale(locale) if locale else load_json(POOL)["questions"]
 
 
+def media_title(q, spec, name, pool):
+    """The picked file's title: the candidates of the question, else of its copy source (copied_from,
+    plan 230); else the file name of source_url/file_url (copies and translations keep no candidates)."""
+    qid, seen = q["id"], set()
+    by_id = {x["id"]: x for x in pool}
+    while qid and qid not in seen:
+        seen.add(qid)
+        found = (media_tool.load_candidates(qid, name) or {"candidates": []})["candidates"]
+        if pick := next((c for c in found if spec.get("source_url") and c.get("page_url") == spec["source_url"]), None):
+            return pick["title"]
+        qid = (by_id.get(qid) or {}).get("copied_from")
+    url = spec.get("file_url") and (spec.get("source_url") or spec["file_url"])
+    return urllib.parse.unquote(url.split("?")[0].rsplit("/", 1)[-1]) if url else None
+
+
 def audit_input(q, pool, pool_en=None):
     """The question as played (plan 16): no review, fix, rater notes or fact check; a translation with its source."""
 
     def slot(spec, name):
-        found = (media_tool.load_candidates(q["id"], name) or {"candidates": []})["candidates"]
-        pick = next((c for c in found if spec.get("source_url") and c.get("page_url") == spec["source_url"]), None)
         return {"type": spec.get("type", "image"), "role": spec.get("role", "decorative"),
-                "title": pick["title"] if pick else None}
+                "title": media_title(q, spec, name, pool)}
     return {"question": {k: named(q, translations.source_locale(q))[k] for k in ["id", "bundle", "subcategory", *QUESTION_FIELDS]}
                         | ({} if q.get("source") else {"locale": translations.source_locale(q)}),
             "media": slot(q["media"], "media"),
