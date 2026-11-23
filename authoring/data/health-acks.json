@@ -58,5 +58,9 @@
   "tr-zh-Hans-6": {
     "date": "2026-11-23",
     "note": "Agreement 87 %: 7 major media findings are the audit's title-null false positive (task 2430). Real: q-21619 hint 3 «名字里有一个“包”字» names the answer's character (蒙古包), against the zh hint rule: needs_work; q-23640 水壶 vs 水罐 minor, kept"
+  },
+  "tr-zh-Hans-7": {
+    "date": "2026-11-23",
+    "note": "Agreement 85 %: all 8 major findings are the audit's media title-null false positive (task 2430); giveaways minor only; nothing to change"
   }
 }
