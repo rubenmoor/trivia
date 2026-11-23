@@ -42,5 +42,9 @@
   "batch-93": {
     "date": "2026-11-23",
     "note": "Media share 14.5 % vs 15 % floor is one question short in a 55-question pilot (10 had no media pick in review 1, 8 were recovered by research); every other threshold passes; no change, full runs as planned (decision 810)"
+  },
+  "tr-zh-Hans-2": {
+    "date": "2026-11-23",
+    "note": "Agreement 88 % vs 90 %: the 9 media findings are the audit's title-null false positive on translations (audit_input reads the translation's own candidates file; decision 794, task for the fix). Real: q-21607 giveaway (辣根 spelled in the question), q-23878 name 大内元 vs 大内朔: both set to needs_work"
   }
 }
