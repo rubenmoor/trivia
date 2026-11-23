@@ -1738939,11 +1738939,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:15:02"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1739019,11 +1739027,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:15:29"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1739091,11 +1739107,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:16:32"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1739175,11 +1739199,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:16:46"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1739249,11 +1739281,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:17:06"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1739329,11 +1739369,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:17:47"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1739401,11 +1739449,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:18:04"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1739413,7 +1739469,7 @@
     },
     {
       "id": "q-22233",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "A travel review from the Tang dynasty: one star, the road went straight up.",
       "question": "Li Bai's poem 蜀道难 (Shǔ dào nán, “The Road to Shu Is Hard”) is about the road into the region highlighted on this map. Which province is it today?",
@@ -1739431,11 +1739487,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Sichuan in China map",
+        "query": "Sichuan_in_china highlighted",
         "note": "Unlabelled map of China with only Sichuan province highlighted; no province names or city labels visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASichuan_CN.png",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Sichuan_CN.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "ASDFGH · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "ASDFGH",
+        "author_url": "https://en.wikipedia.org/wiki/User:ASDFGH",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Li Bai wrote that the road to Shu was harder than climbing up to the blue sky (难于上青天), and the poem is said to have made He Zhizhang call him an “immortal banished from heaven” (谪仙人).",
       "subcategory": "chinese-cities",
@@ -1739464,15 +1739527,23 @@
       "needs_media": true,
       "batch": "batch-93",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates is the essential image the question needs: an unlabelled map of China with only Sichuan highlighted. No new search is allowed. Candidate 6 prints 四川 / Sichuan, 4 shows a big 四川 SICHUAN sign, 3 labels Chengdu and highlights nothing, and 1, 2 and 5 aren't maps. Try a fresh search such as \"Sichuan locator map China\" or \"China Sichuan location map\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates is the essential image the question needs: an unlabelled map of China with only Sichuan highlighted. No new search is allowed. Candidate 6 prints 四川 / Sichuan, 4 shows a big 四川 SICHUAN sign, 3 labels Chengdu and highlights nothing, and 1, 2 and 5 aren't maps. Try a fresh search such as \"Sichuan locator map China\" or \"China Sichuan location map\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:22:59"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1739540,11 +1739611,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:23:14"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1739560,7 +1739639,7 @@
     },
     {
       "id": "q-22235",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "The most important home-safety lesson ever taught by a family of rabbits.",
       "question": "In the song 小兔子乖乖 (“Little Rabbits, Be Good”), the big bad wolf sings Mother Rabbit's song at the door. Why won't the little rabbits open it?",
@@ -1739618,15 +1739697,23 @@
       "needs_media": false,
       "batch": "batch-93",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The answer uses \"Mum\", a UK-only word. The chinese-base voice doesn't set a spelling, so the general en rule applies: use the US word or reword around it. Change the answer to \"Their mom hasn't come back yet\", or better, to a neutral \"Their mother isn't back yet\". Everything else is fine: the song's reply line 妈妈没回来 confirms the answer, and the description doesn't give it away.",
-        "problems": [
-          "style"
-        ],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The answer uses \"Mum\", a UK-only word. The chinese-base voice doesn't set a spelling, so the general en rule applies: use the US word or reword around it. Change the answer to \"Their mom hasn't come back yet\", or better, to a neutral \"Their mother isn't back yet\". Everything else is fine: the song's reply line 妈妈没回来 confirms the answer, and the description doesn't give it away.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:23:43"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1739694,11 +1739781,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:23:55"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1739766,11 +1739861,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:24:11"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1739838,11 +1739941,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:24:24"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1739910,11 +1740021,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:24:37"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1739982,11 +1740101,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:24:49"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1740054,11 +1740181,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:25:06"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1740126,11 +1740261,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:25:16"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1740200,11 +1740343,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:25:30"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1740280,11 +1740431,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:25:44"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1740360,11 +1740519,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:25:57"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1740447,11 +1740614,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:26:09"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1740532,11 +1740707,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:26:23"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1740604,11 +1740787,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-11-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-21T09:26:39"
       },
       "bundle": "chinese-base",
       "locale": "en",
@@ -1744709,7 +1744900,7 @@
     },
     {
       "id": "q-22304",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 7,
       "description": "A mountain so strange it looks like it came from another planet… or from a movie.",
       "question": "What is the name of the old man in the Pixar movie who ties thousands of balloons to his house?",
@@ -1744750,27 +1744941,35 @@
       "needs_media": false,
       "batch": "fit-3",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
+        "decision": "needs_work",
+        "feedback": "Description (\"a mountain so strange it looks like it came from another planet… or from a movie\") points to Mount Roraima, but the fit adapt replaced the Roraima fun fact with one about Up: the description now matches nothing. Rewrite the description about Up / Carl Fredricksen; subcategory planet-earth no longer fits either (a film question).",
+        "reviewed_on": "2026-11-23",
+        "reviewer": "human",
+        "model": null,
         "previous": {
-          "decision": "needs_work",
-          "feedback": "adapt for a Chinese family: wrong_answers: replace “Abraham Simpson” with an old cartoon character known worldwide; hint 3: replace the letter clue “starts with C, like cloud” with a clue that works in any language; fun_fact: replace with a fact about Up or Carl; difficulty 6 → 7",
+          "decision": "approved",
+          "feedback": null,
           "problems": [],
           "reviewed_on": "2026-11-20",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
-          "fit": "fit-3",
-          "source_review": {
+          "previous": {
+            "decision": "needs_work",
+            "feedback": "adapt for a Chinese family: wrong_answers: replace “Abraham Simpson” with an old cartoon character known worldwide; hint 3: replace the letter clue “starts with C, like cloud” with a clue that works in any language; fun_fact: replace with a fact about Up or Carl; difficulty 6 → 7",
+            "problems": [],
+            "reviewed_on": "2026-11-20",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
-            "reviewed_on": "2026-10-15",
-            "id": "q-1060"
+            "fit": "fit-3",
+            "source_review": {
+              "reviewer": "llm",
+              "model": "claude-opus-5-5",
+              "reviewed_on": "2026-10-15",
+              "id": "q-1060"
+            }
           }
-        }
+        },
+        "reviewed_at": "2026-11-23T09:57:49"
       },
       "bundle": "chinese-base",
       "locale": "en",

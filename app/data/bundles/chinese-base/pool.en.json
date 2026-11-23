@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "712a71c8",
+  "hash": "177eb60e",
   "questions": [
     {
       "id": "q-21210",
@@ -34056,6 +34056,41 @@
       "background": null
     },
     {
+      "id": "q-22233",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "chinese-cities",
+      "bundle": "chinese-base",
+      "description": "A travel review from the Tang dynasty: one star, the road went straight up.",
+      "question": "Li Bai's poem 蜀道难 (Shǔ dào nán, “The Road to Shu Is Hard”) is about the road into the region highlighted on this map. Which province is it today?",
+      "answer": "Sichuan",
+      "wrong_answers": [
+        "Shaanxi",
+        "Yunnan",
+        "Guizhou"
+      ],
+      "hints": [
+        "The region is ringed by high mountains, which is why the road was so hard.",
+        "In the Three Kingdoms period, Liu Bei's state here was also called Shu.",
+        "Its capital is Chengdu, home of the Giant Panda Breeding Research Base."
+      ],
+      "fun_fact": "Li Bai wrote that the road to Shu was harder than climbing up to the blue sky (难于上青天), and the poem is said to have made He Zhizhang call him an “immortal banished from heaven” (谪仙人).",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Sichuan_CN.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASichuan_CN.png",
+        "credit": "ASDFGH · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "ASDFGH",
+        "author_url": "https://en.wikipedia.org/wiki/User:ASDFGH",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-22234",
       "status": "approved",
       "difficulty": 7,
@@ -34086,6 +34121,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
         "author": "No machine-readable author provided. KAMSAND23 assumed (based on copyright claims).",
         "author_url": "https://commons.wikimedia.org/wiki/User:KAMSAND23",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-22235",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "chinese-fables",
+      "bundle": "chinese-base",
+      "description": "The most important home-safety lesson ever taught by a family of rabbits.",
+      "question": "In the song 小兔子乖乖 (“Little Rabbits, Be Good”), the big bad wolf sings Mother Rabbit's song at the door. Why won't the little rabbits open it?",
+      "answer": "Mum hasn't come back yet",
+      "wrong_answers": [
+        "They are fast asleep",
+        "They lost the door key",
+        "They are busy eating carrots"
+      ],
+      "hints": [
+        "Think about who the little rabbits are waiting for.",
+        "They sing back: “Won't open, won't open, we won't open!”",
+        "They will only open the door when one special rabbit is home."
+      ],
+      "fun_fact": "小兔子乖乖 is one of China's best-known nursery songs, and parents use it to teach children never to open the door to strangers.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Baby_rabbits_in_market_%2826400003044%29.jpg/3840px-Baby_rabbits_in_market_%2826400003044%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABaby_rabbits_in_market_%2826400003044%29.jpg",
+        "credit": "Thomas Quine · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Thomas Quine",
+        "author_url": "https://www.flickr.com/people/91994044@N00",
         "excerpt": null
       },
       "background": null
@@ -36256,41 +36326,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Ilyacadiz",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ilyacadiz&action=edit&redlink=1",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-22304",
-      "status": "approved",
-      "difficulty": 7,
-      "subcategory": "planet-earth",
-      "bundle": "chinese-base",
-      "description": "A mountain so strange it looks like it came from another planet… or from a movie.",
-      "question": "What is the name of the old man in the Pixar movie who ties thousands of balloons to his house?",
-      "answer": "Carl Fredricksen",
-      "wrong_answers": [
-        "Charles Muntz",
-        "Geppetto",
-        "Master Shifu"
-      ],
-      "hints": [
-        "He travels with a young explorer scout and a talking dog.",
-        "The movie is called “Up”.",
-        "Before he retired, he sold balloons at the zoo."
-      ],
-      "fun_fact": "In 2009, “Up” became the first animated film ever to open the Cannes Film Festival.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Roraima3_%2879%29.JPG/3840px-Roraima3_%2879%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ARoraima3_%2879%29.JPG",
-        "credit": "Paolo Costa Baldi · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Paolo Costa Baldi",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Paolostefano1412",
         "excerpt": null
       },
       "background": null
