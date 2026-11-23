@@ -46,5 +46,13 @@
   "tr-zh-Hans-2": {
     "date": "2026-11-23",
     "note": "Agreement 88 % vs 90 %: the 9 media findings are the audit's title-null false positive on translations (audit_input reads the translation's own candidates file; decision 794, task for the fix). Real: q-21607 giveaway (辣根 spelled in the question), q-23878 name 大内元 vs 大内朔: both set to needs_work"
+  },
+  "tr-zh-Hans-3": {
+    "date": "2026-11-23",
+    "note": "Agreement 78 %: 13 of 13 major media findings are the audit's title-null false positive (task 2430). Real: q-22497 description gives away the four-leaf clover (source-level): needs_work; q-22113, q-23559 description hints are minor, kept"
+  },
+  "tr-zh-Hans-4": {
+    "date": "2026-11-23",
+    "note": "Agreement 83 %: 8 major media findings are the audit's title-null false positive (task 2430). Real: q-21907 zh-only giveaway (能人 a meaning translation among transliterations, hint 本领): needs_work"
   }
 }
