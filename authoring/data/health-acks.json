@@ -38,5 +38,9 @@
   "tr-zh-Hans-1": {
     "date": "2026-11-20",
     "note": "pilot looked at by worker: 50/50 approved, 0 needs_work; audit agreement 88% from 6 'media essential, no file' audit findings on translations (media sits on the source; developer to confirm)"
+  },
+  "batch-93": {
+    "date": "2026-11-23",
+    "note": "Media share 14.5 % vs 15 % floor is one question short in a 55-question pilot (10 had no media pick in review 1, 8 were recovered by research); every other threshold passes; no change, full runs as planned (decision 810)"
   }
 }
