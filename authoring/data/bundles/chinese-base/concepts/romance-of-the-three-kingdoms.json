@@ -1,0 +1,852 @@
+{
+  "subcategory": "romance-of-the-three-kingdoms",
+  "facets": [
+    "Oath brothers of Shu",
+    "Zhuge Liang's strategies",
+    "Cao Cao and the Wei camp",
+    "Sun Quan and the Wu camp",
+    "Great battles of the novel",
+    "Famous generals and warriors",
+    "Women and minor characters",
+    "Horses, weapons and treasures",
+    "Famous episodes and scenes",
+    "Idioms and sayings from the novel",
+    "Luo Guanzhong and the book",
+    "Adaptations, opera and games"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 1,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Guan Yu's red face",
+      "facet": "Oath brothers of Shu",
+      "known_at": 4
+    },
+    {
+      "name": "Zhang Fei's black face",
+      "facet": "Oath brothers of Shu",
+      "known_at": 6
+    },
+    {
+      "name": "Liu Bei's long ears",
+      "facet": "Oath brothers of Shu",
+      "known_at": 10
+    },
+    {
+      "name": "Liu Bei selling straw sandals",
+      "facet": "Oath brothers of Shu",
+      "known_at": 9
+    },
+    {
+      "name": "Lord of the Beautiful Beard (美髯公)",
+      "facet": "Oath brothers of Shu",
+      "known_at": 9
+    },
+    {
+      "name": "Guan Gong (关公) as god of wealth",
+      "facet": "Oath brothers of Shu",
+      "known_at": 6
+    },
+    {
+      "name": "Guandi Temple",
+      "facet": "Oath brothers of Shu",
+      "known_at": 7
+    },
+    {
+      "name": "Liu Shan (Adou)",
+      "facet": "Oath brothers of Shu",
+      "known_at": 6
+    },
+    {
+      "name": "Imperial Uncle Liu (刘皇叔)",
+      "facet": "Oath brothers of Shu",
+      "known_at": 9
+    },
+    {
+      "name": "Guan Yu reading the Spring and Autumn Annals",
+      "facet": "Oath brothers of Shu",
+      "known_at": 10
+    },
+    {
+      "name": "Liu Bei's tears",
+      "facet": "Oath brothers of Shu",
+      "known_at": 8
+    },
+    {
+      "name": "Jingzhou",
+      "facet": "Oath brothers of Shu",
+      "known_at": 8
+    },
+    {
+      "name": "Zhuo County",
+      "facet": "Oath brothers of Shu",
+      "known_at": 11
+    },
+    {
+      "name": "Guan Ping",
+      "facet": "Oath brothers of Shu",
+      "known_at": 11
+    },
+    {
+      "name": "Guan Xing and Zhang Bao",
+      "facet": "Oath brothers of Shu",
+      "known_at": 12
+    },
+    {
+      "name": "Borrowing the east wind",
+      "facet": "Zhuge Liang's strategies",
+      "known_at": 6
+    },
+    {
+      "name": "Longzhong Plan (隆中对)",
+      "facet": "Zhuge Liang's strategies",
+      "known_at": 9
+    },
+    {
+      "name": "Eight Formations Maze (八阵图)",
+      "facet": "Zhuge Liang's strategies",
+      "known_at": 10
+    },
+    {
+      "name": "Three silk pouches (锦囊妙计)",
+      "facet": "Zhuge Liang's strategies",
+      "known_at": 8
+    },
+    {
+      "name": "Zhuge Liang's feather fan",
+      "facet": "Zhuge Liang's strategies",
+      "known_at": 4
+    },
+    {
+      "name": "Zhuge crossbow (诸葛连弩)",
+      "facet": "Zhuge Liang's strategies",
+      "known_at": 10
+    },
+    {
+      "name": "Six campaigns from Qishan (六出祁山)",
+      "facet": "Zhuge Liang's strategies",
+      "known_at": 11
+    },
+    {
+      "name": "Sleeping Dragon (卧龙)",
+      "facet": "Zhuge Liang's strategies",
+      "known_at": 7
+    },
+    {
+      "name": "Angering Zhou Yu three times (三气周瑜)",
+      "facet": "Zhuge Liang's strategies",
+      "known_at": 9
+    },
+    {
+      "name": "Debate with the Wu scholars (舌战群儒)",
+      "facet": "Zhuge Liang's strategies",
+      "known_at": 10
+    },
+    {
+      "name": "Seven-star lamps (七星灯)",
+      "facet": "Zhuge Liang's strategies",
+      "known_at": 12
+    },
+    {
+      "name": "Dian Wei",
+      "facet": "Cao Cao and the Wei camp",
+      "known_at": 9
+    },
+    {
+      "name": "Xu Chu",
+      "facet": "Cao Cao and the Wei camp",
+      "known_at": 9
+    },
+    {
+      "name": "Xun Yu",
+      "facet": "Cao Cao and the Wei camp",
+      "known_at": 12
+    },
+    {
+      "name": "Cao Ren",
+      "facet": "Cao Cao and the Wei camp",
+      "known_at": 12
+    },
+    {
+      "name": "Xu Huang",
+      "facet": "Cao Cao and the Wei camp",
+      "known_at": 12
+    },
+    {
+      "name": "Yang Xiu",
+      "facet": "Cao Cao and the Wei camp",
+      "known_at": 10
+    },
+    {
+      "name": "Kingdom of Wei",
+      "facet": "Cao Cao and the Wei camp",
+      "known_at": 5
+    },
+    {
+      "name": "Bronze Sparrow Terrace (铜雀台)",
+      "facet": "Cao Cao and the Wei camp",
+      "known_at": 10
+    },
+    {
+      "name": "Short Song Style (短歌行)",
+      "facet": "Cao Cao and the Wei camp",
+      "known_at": 10
+    },
+    {
+      "name": "Zhong Hui",
+      "facet": "Cao Cao and the Wei camp",
+      "known_at": 13
+    },
+    {
+      "name": "Pang De",
+      "facet": "Cao Cao and the Wei camp",
+      "known_at": 12
+    },
+    {
+      "name": "Cao Cao's white opera face",
+      "facet": "Cao Cao and the Wei camp",
+      "known_at": 7
+    },
+    {
+      "name": "Lu Xun (Wu general 陆逊)",
+      "facet": "Sun Quan and the Wu camp",
+      "known_at": 10
+    },
+    {
+      "name": "Taishi Ci",
+      "facet": "Sun Quan and the Wu camp",
+      "known_at": 11
+    },
+    {
+      "name": "Zhou Tai",
+      "facet": "Sun Quan and the Wu camp",
+      "known_at": 13
+    },
+    {
+      "name": "Ling Tong",
+      "facet": "Sun Quan and the Wu camp",
+      "known_at": 13
+    },
+    {
+      "name": "Zhuge Jin",
+      "facet": "Sun Quan and the Wu camp",
+      "known_at": 12
+    },
+    {
+      "name": "Kingdom of Wu",
+      "facet": "Sun Quan and the Wu camp",
+      "known_at": 5
+    },
+    {
+      "name": "Zhou Yu's ear for music (曲有误，周郎顾)",
+      "facet": "Sun Quan and the Wu camp",
+      "known_at": 13
+    },
+    {
+      "name": "Flooding the seven armies (水淹七军)",
+      "facet": "Great battles of the novel",
+      "known_at": 10
+    },
+    {
+      "name": "Battle of Hulao Pass",
+      "facet": "Great battles of the novel",
+      "known_at": 8
+    },
+    {
+      "name": "Battle of Mount Dingjun",
+      "facet": "Great battles of the novel",
+      "known_at": 10
+    },
+    {
+      "name": "Battle of Bowang Slope",
+      "facet": "Great battles of the novel",
+      "known_at": 11
+    },
+    {
+      "name": "Fire at Xinye (火烧新野)",
+      "facet": "Great battles of the novel",
+      "known_at": 12
+    },
+    {
+      "name": "Chained ships plan (连环计)",
+      "facet": "Great battles of the novel",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Tong Pass",
+      "facet": "Great battles of the novel",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Xiapi",
+      "facet": "Great battles of the novel",
+      "known_at": 11
+    },
+    {
+      "name": "Coalition against Dong Zhuo",
+      "facet": "Great battles of the novel",
+      "known_at": 9
+    },
+    {
+      "name": "Five Tiger Generals",
+      "facet": "Famous generals and warriors",
+      "known_at": 6
+    },
+    {
+      "name": "Wei Yan",
+      "facet": "Famous generals and warriors",
+      "known_at": 10
+    },
+    {
+      "name": "Yuan Shu",
+      "facet": "Famous generals and warriors",
+      "known_at": 11
+    },
+    {
+      "name": "Yan Liang and Wen Chou",
+      "facet": "Famous generals and warriors",
+      "known_at": 11
+    },
+    {
+      "name": "Hua Xiong",
+      "facet": "Famous generals and warriors",
+      "known_at": 10
+    },
+    {
+      "name": "Meng Huo",
+      "facet": "Famous generals and warriors",
+      "known_at": 8
+    },
+    {
+      "name": "Ma Su",
+      "facet": "Famous generals and warriors",
+      "known_at": 9
+    },
+    {
+      "name": "Liao Hua",
+      "facet": "Famous generals and warriors",
+      "known_at": 12
+    },
+    {
+      "name": "Gongsun Zan",
+      "facet": "Famous generals and warriors",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Jiao",
+      "facet": "Famous generals and warriors",
+      "known_at": 10
+    },
+    {
+      "name": "Ma Dai",
+      "facet": "Famous generals and warriors",
+      "known_at": 12
+    },
+    {
+      "name": "Xu Shu",
+      "facet": "Famous generals and warriors",
+      "known_at": 11
+    },
+    {
+      "name": "Diaochan",
+      "facet": "Women and minor characters",
+      "known_at": 5
+    },
+    {
+      "name": "Huang Yueying",
+      "facet": "Women and minor characters",
+      "known_at": 8
+    },
+    {
+      "name": "Xiao Qiao",
+      "facet": "Women and minor characters",
+      "known_at": 8
+    },
+    {
+      "name": "Da Qiao",
+      "facet": "Women and minor characters",
+      "known_at": 9
+    },
+    {
+      "name": "Lady Mi",
+      "facet": "Women and minor characters",
+      "known_at": 11
+    },
+    {
+      "name": "Lady Gan",
+      "facet": "Women and minor characters",
+      "known_at": 12
+    },
+    {
+      "name": "Wang Yun",
+      "facet": "Women and minor characters",
+      "known_at": 10
+    },
+    {
+      "name": "Zhen Ji",
+      "facet": "Women and minor characters",
+      "known_at": 12
+    },
+    {
+      "name": "Lady Zhurong",
+      "facet": "Women and minor characters",
+      "known_at": 11
+    },
+    {
+      "name": "Zuo Ci",
+      "facet": "Women and minor characters",
+      "known_at": 13
+    },
+    {
+      "name": "Xu Shu's mother",
+      "facet": "Women and minor characters",
+      "known_at": 12
+    },
+    {
+      "name": "Chen Gong",
+      "facet": "Women and minor characters",
+      "known_at": 10
+    },
+    {
+      "name": "Huang Chengyan",
+      "facet": "Women and minor characters",
+      "known_at": 13
+    },
+    {
+      "name": "Sima Hui (水镜先生)",
+      "facet": "Women and minor characters",
+      "known_at": 11
+    },
+    {
+      "name": "Kong Rong",
+      "facet": "Women and minor characters",
+      "known_at": 5
+    },
+    {
+      "name": "Mi Heng",
+      "facet": "Women and minor characters",
+      "known_at": 12
+    },
+    {
+      "name": "Zhou Cang",
+      "facet": "Women and minor characters",
+      "known_at": 11
+    },
+    {
+      "name": "Red Hare horse",
+      "facet": "Horses, weapons and treasures",
+      "known_at": 4
+    },
+    {
+      "name": "Green Dragon Crescent Blade",
+      "facet": "Horses, weapons and treasures",
+      "known_at": 5
+    },
+    {
+      "name": "Serpent Spear (丈八蛇矛)",
+      "facet": "Horses, weapons and treasures",
+      "known_at": 7
+    },
+    {
+      "name": "Sky Piercer halberd (方天画戟)",
+      "facet": "Horses, weapons and treasures",
+      "known_at": 7
+    },
+    {
+      "name": "Dilu horse (的卢)",
+      "facet": "Horses, weapons and treasures",
+      "known_at": 9
+    },
+    {
+      "name": "Shadow Runner horse (绝影)",
+      "facet": "Horses, weapons and treasures",
+      "known_at": 13
+    },
+    {
+      "name": "Liu Bei's twin swords (双股剑)",
+      "facet": "Horses, weapons and treasures",
+      "known_at": 10
+    },
+    {
+      "name": "Qinggang Sword (青釭剑)",
+      "facet": "Horses, weapons and treasures",
+      "known_at": 11
+    },
+    {
+      "name": "Yitian Sword (倚天剑)",
+      "facet": "Horses, weapons and treasures",
+      "known_at": 11
+    },
+    {
+      "name": "Seven-Star Sword (七星宝刀)",
+      "facet": "Horses, weapons and treasures",
+      "known_at": 12
+    },
+    {
+      "name": "Zhao Yun's Dragon Courage spear (龙胆亮银枪)",
+      "facet": "Horses, weapons and treasures",
+      "known_at": 11
+    },
+    {
+      "name": "Girdle edict (衣带诏)",
+      "facet": "Horses, weapons and treasures",
+      "known_at": 11
+    },
+    {
+      "name": "Zhao Yun's white horse (照夜玉狮子)",
+      "facet": "Horses, weapons and treasures",
+      "known_at": 13
+    },
+    {
+      "name": "Flying Lightning horse (爪黄飞电)",
+      "facet": "Horses, weapons and treasures",
+      "known_at": 14
+    },
+    {
+      "name": "Three visits to the thatched cottage",
+      "facet": "Famous episodes and scenes",
+      "known_at": 4
+    },
+    {
+      "name": "Zhao Yun saves Adou",
+      "facet": "Famous episodes and scenes",
+      "known_at": 6
+    },
+    {
+      "name": "Zhang Fei at Changban Bridge",
+      "facet": "Famous episodes and scenes",
+      "known_at": 7
+    },
+    {
+      "name": "Crossing five passes and slaying six generals (过五关斩六将)",
+      "facet": "Famous episodes and scenes",
+      "known_at": 6
+    },
+    {
+      "name": "Slaying Hua Xiong while the wine is warm (温酒斩华雄)",
+      "facet": "Famous episodes and scenes",
+      "known_at": 9
+    },
+    {
+      "name": "Three heroes fight Lü Bu (三英战吕布)",
+      "facet": "Famous episodes and scenes",
+      "known_at": 8
+    },
+    {
+      "name": "Scraping the bone to cure the poison (刮骨疗毒)",
+      "facet": "Famous episodes and scenes",
+      "known_at": 7
+    },
+    {
+      "name": "Liu Bei's marriage at Ganlu Temple (甘露寺招亲)",
+      "facet": "Famous episodes and scenes",
+      "known_at": 10
+    },
+    {
+      "name": "Dilu leaps the Tan Stream (马跃檀溪)",
+      "facet": "Famous episodes and scenes",
+      "known_at": 11
+    },
+    {
+      "name": "Going to the feast with a single blade (单刀赴会)",
+      "facet": "Famous episodes and scenes",
+      "known_at": 9
+    },
+    {
+      "name": "Entrusting the son at Baidi City (白帝城托孤)",
+      "facet": "Famous episodes and scenes",
+      "known_at": 10
+    },
+    {
+      "name": "Guan Yu lets Cao Cao go at Huarong Trail",
+      "facet": "Famous episodes and scenes",
+      "known_at": 7
+    },
+    {
+      "name": "Zhang Fei whips the inspector (怒鞭督邮)",
+      "facet": "Famous episodes and scenes",
+      "known_at": 11
+    },
+    {
+      "name": "Crossing the river in white clothes (白衣渡江)",
+      "facet": "Famous episodes and scenes",
+      "known_at": 12
+    },
+    {
+      "name": "Zhuge Liang mourns Zhou Yu (卧龙吊孝)",
+      "facet": "Famous episodes and scenes",
+      "known_at": 12
+    },
+    {
+      "name": "Cao Cao cuts his beard and drops his robe (割须弃袍)",
+      "facet": "Famous episodes and scenes",
+      "known_at": 12
+    },
+    {
+      "name": "Mi Heng beats the drum (击鼓骂曹)",
+      "facet": "Famous episodes and scenes",
+      "known_at": 12
+    },
+    {
+      "name": "Speak of Cao Cao and Cao Cao arrives (说曹操，曹操到)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 4
+    },
+    {
+      "name": "Three cobblers beat one Zhuge Liang (三个臭皮匠，顶个诸葛亮)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 4
+    },
+    {
+      "name": "Gazing at plums to quench thirst (望梅止渴)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 6
+    },
+    {
+      "name": "Chicken rib (鸡肋)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 9
+    },
+    {
+      "name": "Zhou Yu beats Huang Gai (周瑜打黄盖)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 7
+    },
+    {
+      "name": "Sima Zhao's intent (司马昭之心，路人皆知)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 10
+    },
+    {
+      "name": "Too happy to think of Shu (乐不思蜀)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 9
+    },
+    {
+      "name": "Weeping while executing Ma Su (挥泪斩马谡)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 10
+    },
+    {
+      "name": "Carelessly losing Jingzhou (大意失荆州)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 9
+    },
+    {
+      "name": "Long divided, the empire must unite (分久必合，合久必分)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 9
+    },
+    {
+      "name": "All is ready except the east wind (万事俱备，只欠东风)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 6
+    },
+    {
+      "name": "Look with new eyes after three days apart (士别三日，当刮目相看)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 9
+    },
+    {
+      "name": "Xu Shu in Cao's camp says not a word (徐庶进曹营，一言不发)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 10
+    },
+    {
+      "name": "Do no evil, however small (勿以恶小而为之)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 10
+    },
+    {
+      "name": "Bending to the task until death (鞠躬尽瘁，死而后已)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 10
+    },
+    {
+      "name": "Liu Bei borrows Jingzhou (刘备借荆州)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 10
+    },
+    {
+      "name": "Like a fish in water (如鱼得水)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 8
+    },
+    {
+      "name": "Zhuge Liang after the event (事后诸葛亮)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 8
+    },
+    {
+      "name": "Dead Zhuge scares off living Zhongda (死诸葛吓走活仲达)",
+      "facet": "Idioms and sayings from the novel",
+      "known_at": 11
+    },
+    {
+      "name": "Chen Shou",
+      "facet": "Luo Guanzhong and the book",
+      "known_at": 12
+    },
+    {
+      "name": "Pei Songzhi",
+      "facet": "Luo Guanzhong and the book",
+      "known_at": 14
+    },
+    {
+      "name": "Mao Zonggang edition",
+      "facet": "Luo Guanzhong and the book",
+      "known_at": 14
+    },
+    {
+      "name": "Chapter novel (章回小说)",
+      "facet": "Luo Guanzhong and the book",
+      "known_at": 11
+    },
+    {
+      "name": "Pinghua of the Three Kingdoms (三国志平话)",
+      "facet": "Luo Guanzhong and the book",
+      "known_at": 14
+    },
+    {
+      "name": "The rolling Yangtze flows east (滚滚长江东逝水)",
+      "facet": "Luo Guanzhong and the book",
+      "known_at": 8
+    },
+    {
+      "name": "Semi-classical style (半文半白)",
+      "facet": "Luo Guanzhong and the book",
+      "known_at": 12
+    },
+    {
+      "name": "Honouring Liu, belittling Cao (尊刘贬曹)",
+      "facet": "Luo Guanzhong and the book",
+      "known_at": 12
+    },
+    {
+      "name": "Seven parts fact, three parts fiction (七实三虚)",
+      "facet": "Luo Guanzhong and the book",
+      "known_at": 11
+    },
+    {
+      "name": "Three Kingdoms storytelling (说书)",
+      "facet": "Luo Guanzhong and the book",
+      "known_at": 8
+    },
+    {
+      "name": "Romance of the Three Kingdoms (1994 TV series)",
+      "facet": "Adaptations, opera and games",
+      "known_at": 7
+    },
+    {
+      "name": "Three Kingdoms (2010 TV series)",
+      "facet": "Adaptations, opera and games",
+      "known_at": 9
+    },
+    {
+      "name": "Red Cliff (2008 film)",
+      "facet": "Adaptations, opera and games",
+      "known_at": 8
+    },
+    {
+      "name": "Dynasty Warriors",
+      "facet": "Adaptations, opera and games",
+      "known_at": 8
+    },
+    {
+      "name": "Total War: Three Kingdoms",
+      "facet": "Adaptations, opera and games",
+      "known_at": 11
+    },
+    {
+      "name": "Koei's Romance of the Three Kingdoms games",
+      "facet": "Adaptations, opera and games",
+      "known_at": 11
+    },
+    {
+      "name": "Peking opera face painting (脸谱)",
+      "facet": "Adaptations, opera and games",
+      "known_at": 6
+    },
+    {
+      "name": "Three Kingdoms Kill (三国杀)",
+      "facet": "Adaptations, opera and games",
+      "known_at": 7
+    },
+    {
+      "name": "Picture-story books (连环画)",
+      "facet": "Adaptations, opera and games",
+      "known_at": 9
+    },
+    {
+      "name": "Tang Guoqiang",
+      "facet": "Adaptations, opera and games",
+      "known_at": 10
+    },
+    {
+      "name": "Bao Guo'an",
+      "facet": "Adaptations, opera and games",
+      "known_at": 12
+    },
+    {
+      "name": "Yokoyama Mitsuteru's Sangokushi manga",
+      "facet": "Adaptations, opera and games",
+      "known_at": 13
+    },
+    {
+      "name": "Yuan Kuocheng",
+      "facet": "Adaptations, opera and games",
+      "known_at": 13
+    },
+    {
+      "name": "Red-faced role in Guan Yu opera (红生)",
+      "facet": "Adaptations, opera and games",
+      "known_at": 13
+    },
+    {
+      "name": "Chibi Ancient Battlefield",
+      "facet": "Adaptations, opera and games",
+      "known_at": 12
+    }
+  ]
+}

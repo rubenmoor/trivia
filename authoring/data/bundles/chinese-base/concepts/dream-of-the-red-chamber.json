@@ -1,0 +1,1017 @@
+{
+  "subcategory": "dream-of-the-red-chamber",
+  "facets": [
+    "Jia Baoyu and Lin Daiyu",
+    "Xue Baochai and the Jade-Gold match",
+    "Twelve Beauties of Jinling",
+    "Elders and household managers",
+    "Maids and servants",
+    "Granny Liu and outsiders",
+    "Grand View Garden and its courtyards",
+    "Famous scenes and episodes",
+    "Poems, poetry clubs and riddles",
+    "Myth frame, jade and the Stone",
+    "Cao Xueqin, authorship and versions",
+    "Redology, adaptations and sayings"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 1,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Jia Baoyu",
+      "facet": "Jia Baoyu and Lin Daiyu",
+      "known_at": 3
+    },
+    {
+      "name": "Lin Daiyu",
+      "facet": "Jia Baoyu and Lin Daiyu",
+      "known_at": 3
+    },
+    {
+      "name": "Lin Ruhai",
+      "facet": "Jia Baoyu and Lin Daiyu",
+      "known_at": 11
+    },
+    {
+      "name": "Jia Min",
+      "facet": "Jia Baoyu and Lin Daiyu",
+      "known_at": 11
+    },
+    {
+      "name": "Girls are made of water (女儿是水做的骨肉)",
+      "facet": "Jia Baoyu and Lin Daiyu",
+      "known_at": 9
+    },
+    {
+      "name": "Baoyu becomes a monk",
+      "facet": "Jia Baoyu and Lin Daiyu",
+      "known_at": 9
+    },
+    {
+      "name": "Daiyu's illness",
+      "facet": "Jia Baoyu and Lin Daiyu",
+      "known_at": 7
+    },
+    {
+      "name": "Daiyu's parrot",
+      "facet": "Jia Baoyu and Lin Daiyu",
+      "known_at": 11
+    },
+    {
+      "name": "Baoyu smashes his jade",
+      "facet": "Jia Baoyu and Lin Daiyu",
+      "known_at": 9
+    },
+    {
+      "name": "Baoyu's love of rouge",
+      "facet": "Jia Baoyu and Lin Daiyu",
+      "known_at": 12
+    },
+    {
+      "name": "Qin Zhong",
+      "facet": "Jia Baoyu and Lin Daiyu",
+      "known_at": 12
+    },
+    {
+      "name": "Old handkerchiefs with poems (旧帕题诗)",
+      "facet": "Jia Baoyu and Lin Daiyu",
+      "known_at": 12
+    },
+    {
+      "name": "Xue Baochai",
+      "facet": "Xue Baochai and the Jade-Gold match",
+      "known_at": 4
+    },
+    {
+      "name": "Jade-Gold match (金玉良缘)",
+      "facet": "Xue Baochai and the Jade-Gold match",
+      "known_at": 8
+    },
+    {
+      "name": "Golden locket",
+      "facet": "Xue Baochai and the Jade-Gold match",
+      "known_at": 8
+    },
+    {
+      "name": "Cold Fragrance Pill (冷香丸)",
+      "facet": "Xue Baochai and the Jade-Gold match",
+      "known_at": 10
+    },
+    {
+      "name": "Aunt Xue",
+      "facet": "Xue Baochai and the Jade-Gold match",
+      "known_at": 9
+    },
+    {
+      "name": "Xue Pan",
+      "facet": "Xue Baochai and the Jade-Gold match",
+      "known_at": 9
+    },
+    {
+      "name": "Xue Baoqin",
+      "facet": "Xue Baochai and the Jade-Gold match",
+      "known_at": 12
+    },
+    {
+      "name": "Baochai's wedding to Baoyu",
+      "facet": "Xue Baochai and the Jade-Gold match",
+      "known_at": 8
+    },
+    {
+      "name": "Bride switch scheme (掉包计)",
+      "facet": "Xue Baochai and the Jade-Gold match",
+      "known_at": 10
+    },
+    {
+      "name": "Baochai chases butterflies (宝钗扑蝶)",
+      "facet": "Xue Baochai and the Jade-Gold match",
+      "known_at": 9
+    },
+    {
+      "name": "Yingr",
+      "facet": "Xue Baochai and the Jade-Gold match",
+      "known_at": 12
+    },
+    {
+      "name": "Imperial merchant (皇商)",
+      "facet": "Xue Baochai and the Jade-Gold match",
+      "known_at": 12
+    },
+    {
+      "name": "Golden kylin (金麒麟)",
+      "facet": "Xue Baochai and the Jade-Gold match",
+      "known_at": 12
+    },
+    {
+      "name": "Xia Jingui",
+      "facet": "Xue Baochai and the Jade-Gold match",
+      "known_at": 13
+    },
+    {
+      "name": "Locket inscription (不离不弃，芳龄永继)",
+      "facet": "Xue Baochai and the Jade-Gold match",
+      "known_at": 12
+    },
+    {
+      "name": "Baochai's plain snow-cave room",
+      "facet": "Xue Baochai and the Jade-Gold match",
+      "known_at": 12
+    },
+    {
+      "name": "Jia Yuanchun",
+      "facet": "Twelve Beauties of Jinling",
+      "known_at": 8
+    },
+    {
+      "name": "Jia Yingchun",
+      "facet": "Twelve Beauties of Jinling",
+      "known_at": 10
+    },
+    {
+      "name": "Jia Tanchun",
+      "facet": "Twelve Beauties of Jinling",
+      "known_at": 8
+    },
+    {
+      "name": "Jia Xichun",
+      "facet": "Twelve Beauties of Jinling",
+      "known_at": 10
+    },
+    {
+      "name": "Shi Xiangyun",
+      "facet": "Twelve Beauties of Jinling",
+      "known_at": 7
+    },
+    {
+      "name": "Miaoyu",
+      "facet": "Twelve Beauties of Jinling",
+      "known_at": 9
+    },
+    {
+      "name": "Qiaojie",
+      "facet": "Twelve Beauties of Jinling",
+      "known_at": 11
+    },
+    {
+      "name": "Li Wan",
+      "facet": "Twelve Beauties of Jinling",
+      "known_at": 10
+    },
+    {
+      "name": "Qin Keqing",
+      "facet": "Twelve Beauties of Jinling",
+      "known_at": 9
+    },
+    {
+      "name": "Jinling (Nanjing)",
+      "facet": "Twelve Beauties of Jinling",
+      "known_at": 8
+    },
+    {
+      "name": "Twelve Beauties of Jinling",
+      "facet": "Twelve Beauties of Jinling",
+      "known_at": 8
+    },
+    {
+      "name": "Secondary register (副册)",
+      "facet": "Twelve Beauties of Jinling",
+      "known_at": 12
+    },
+    {
+      "name": "Four Spring sisters (原应叹息)",
+      "facet": "Twelve Beauties of Jinling",
+      "known_at": 11
+    },
+    {
+      "name": "Jia Lan",
+      "facet": "Twelve Beauties of Jinling",
+      "known_at": 12
+    },
+    {
+      "name": "Sun Shaozu",
+      "facet": "Twelve Beauties of Jinling",
+      "known_at": 13
+    },
+    {
+      "name": "Tanchun's distant marriage",
+      "facet": "Twelve Beauties of Jinling",
+      "known_at": 12
+    },
+    {
+      "name": "Grandmother Jia",
+      "facet": "Elders and household managers",
+      "known_at": 3
+    },
+    {
+      "name": "Wang Xifeng",
+      "facet": "Elders and household managers",
+      "known_at": 5
+    },
+    {
+      "name": "Jia Zheng",
+      "facet": "Elders and household managers",
+      "known_at": 8
+    },
+    {
+      "name": "Lady Wang",
+      "facet": "Elders and household managers",
+      "known_at": 8
+    },
+    {
+      "name": "Jia She",
+      "facet": "Elders and household managers",
+      "known_at": 11
+    },
+    {
+      "name": "Lady Xing",
+      "facet": "Elders and household managers",
+      "known_at": 11
+    },
+    {
+      "name": "Jia Lian",
+      "facet": "Elders and household managers",
+      "known_at": 10
+    },
+    {
+      "name": "Jia Zhen",
+      "facet": "Elders and household managers",
+      "known_at": 11
+    },
+    {
+      "name": "Jia Rong",
+      "facet": "Elders and household managers",
+      "known_at": 12
+    },
+    {
+      "name": "Lady You",
+      "facet": "Elders and household managers",
+      "known_at": 11
+    },
+    {
+      "name": "Concubine Zhao",
+      "facet": "Elders and household managers",
+      "known_at": 10
+    },
+    {
+      "name": "Jia Huan",
+      "facet": "Elders and household managers",
+      "known_at": 11
+    },
+    {
+      "name": "Jia Jing",
+      "facet": "Elders and household managers",
+      "known_at": 13
+    },
+    {
+      "name": "Ning Mansion (宁国府)",
+      "facet": "Elders and household managers",
+      "known_at": 9
+    },
+    {
+      "name": "Rong Mansion (荣国府)",
+      "facet": "Elders and household managers",
+      "known_at": 9
+    },
+    {
+      "name": "Confiscation of the Jia estates (抄家)",
+      "facet": "Elders and household managers",
+      "known_at": 10
+    },
+    {
+      "name": "Phoenix Pepper (凤辣子)",
+      "facet": "Elders and household managers",
+      "known_at": 10
+    },
+    {
+      "name": "Xiren",
+      "facet": "Maids and servants",
+      "known_at": 7
+    },
+    {
+      "name": "Qingwen",
+      "facet": "Maids and servants",
+      "known_at": 7
+    },
+    {
+      "name": "Zijuan",
+      "facet": "Maids and servants",
+      "known_at": 9
+    },
+    {
+      "name": "Ping'er",
+      "facet": "Maids and servants",
+      "known_at": 8
+    },
+    {
+      "name": "Yuanyang",
+      "facet": "Maids and servants",
+      "known_at": 9
+    },
+    {
+      "name": "Xiangling",
+      "facet": "Maids and servants",
+      "known_at": 8
+    },
+    {
+      "name": "Sheyue",
+      "facet": "Maids and servants",
+      "known_at": 12
+    },
+    {
+      "name": "Qiuwen",
+      "facet": "Maids and servants",
+      "known_at": 13
+    },
+    {
+      "name": "Xueyan",
+      "facet": "Maids and servants",
+      "known_at": 12
+    },
+    {
+      "name": "Siqi",
+      "facet": "Maids and servants",
+      "known_at": 12
+    },
+    {
+      "name": "Jinchuan",
+      "facet": "Maids and servants",
+      "known_at": 11
+    },
+    {
+      "name": "Xiaohong",
+      "facet": "Maids and servants",
+      "known_at": 11
+    },
+    {
+      "name": "Fangguan",
+      "facet": "Maids and servants",
+      "known_at": 12
+    },
+    {
+      "name": "Lingguan",
+      "facet": "Maids and servants",
+      "known_at": 12
+    },
+    {
+      "name": "Mingyan",
+      "facet": "Maids and servants",
+      "known_at": 11
+    },
+    {
+      "name": "Jiao Da",
+      "facet": "Maids and servants",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Shanbao's wife",
+      "facet": "Maids and servants",
+      "known_at": 12
+    },
+    {
+      "name": "Granny Liu",
+      "facet": "Granny Liu and outsiders",
+      "known_at": 4
+    },
+    {
+      "name": "Ban'er",
+      "facet": "Granny Liu and outsiders",
+      "known_at": 11
+    },
+    {
+      "name": "Jia Yucun",
+      "facet": "Granny Liu and outsiders",
+      "known_at": 10
+    },
+    {
+      "name": "Zhen Shiyin",
+      "facet": "Granny Liu and outsiders",
+      "known_at": 10
+    },
+    {
+      "name": "Leng Zixing",
+      "facet": "Granny Liu and outsiders",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Xianglian",
+      "facet": "Granny Liu and outsiders",
+      "known_at": 11
+    },
+    {
+      "name": "You Sanjie",
+      "facet": "Granny Liu and outsiders",
+      "known_at": 10
+    },
+    {
+      "name": "You Erjie",
+      "facet": "Granny Liu and outsiders",
+      "known_at": 10
+    },
+    {
+      "name": "Zhen Baoyu",
+      "facet": "Granny Liu and outsiders",
+      "known_at": 12
+    },
+    {
+      "name": "Gourd Temple",
+      "facet": "Granny Liu and outsiders",
+      "known_at": 12
+    },
+    {
+      "name": "Zhou Rui's wife",
+      "facet": "Granny Liu and outsiders",
+      "known_at": 12
+    },
+    {
+      "name": "Eggplant dish (茄鲞)",
+      "facet": "Granny Liu and outsiders",
+      "known_at": 9
+    },
+    {
+      "name": "Pigeon eggs",
+      "facet": "Granny Liu and outsiders",
+      "known_at": 10
+    },
+    {
+      "name": "Jiang Yuhan",
+      "facet": "Granny Liu and outsiders",
+      "known_at": 13
+    },
+    {
+      "name": "Prince of Beijing (北静王)",
+      "facet": "Granny Liu and outsiders",
+      "known_at": 11
+    },
+    {
+      "name": "Ni Er the Drunken Diamond",
+      "facet": "Granny Liu and outsiders",
+      "known_at": 13
+    },
+    {
+      "name": "Grand View Garden",
+      "facet": "Grand View Garden and its courtyards",
+      "known_at": 4
+    },
+    {
+      "name": "Happy Red Court (怡红院)",
+      "facet": "Grand View Garden and its courtyards",
+      "known_at": 8
+    },
+    {
+      "name": "Bamboo Lodge (潇湘馆)",
+      "facet": "Grand View Garden and its courtyards",
+      "known_at": 8
+    },
+    {
+      "name": "Alpinia Park (蘅芜苑)",
+      "facet": "Grand View Garden and its courtyards",
+      "known_at": 10
+    },
+    {
+      "name": "Paddy-Sweet Cottage (稻香村)",
+      "facet": "Grand View Garden and its courtyards",
+      "known_at": 10
+    },
+    {
+      "name": "Autumn Studio (秋爽斋)",
+      "facet": "Grand View Garden and its courtyards",
+      "known_at": 11
+    },
+    {
+      "name": "Green Lattice Nunnery (栊翠庵)",
+      "facet": "Grand View Garden and its courtyards",
+      "known_at": 11
+    },
+    {
+      "name": "Smartweed Breeze Cot (蓼风轩)",
+      "facet": "Grand View Garden and its courtyards",
+      "known_at": 13
+    },
+    {
+      "name": "Purple Caltrop Isle (紫菱洲)",
+      "facet": "Grand View Garden and its courtyards",
+      "known_at": 13
+    },
+    {
+      "name": "Grand View Pavilion (大观楼)",
+      "facet": "Grand View Garden and its courtyards",
+      "known_at": 11
+    },
+    {
+      "name": "Seeping Fragrance Pavilion (沁芳亭)",
+      "facet": "Grand View Garden and its courtyards",
+      "known_at": 12
+    },
+    {
+      "name": "Pear Fragrance Court (梨香院)",
+      "facet": "Grand View Garden and its courtyards",
+      "known_at": 11
+    },
+    {
+      "name": "Prince Gong's Mansion (恭王府)",
+      "facet": "Grand View Garden and its courtyards",
+      "known_at": 11
+    },
+    {
+      "name": "Beijing Grand View Garden park",
+      "facet": "Grand View Garden and its courtyards",
+      "known_at": 10
+    },
+    {
+      "name": "Shanghai Grand View Garden",
+      "facet": "Grand View Garden and its courtyards",
+      "known_at": 12
+    },
+    {
+      "name": "Daiyu buries flowers",
+      "facet": "Famous scenes and episodes",
+      "known_at": 5
+    },
+    {
+      "name": "Daiyu enters the Jia mansion",
+      "facet": "Famous scenes and episodes",
+      "known_at": 7
+    },
+    {
+      "name": "Granny Liu enters the Grand View Garden",
+      "facet": "Famous scenes and episodes",
+      "known_at": 6
+    },
+    {
+      "name": "Imperial Consort Yuan's visit home",
+      "facet": "Famous scenes and episodes",
+      "known_at": 9
+    },
+    {
+      "name": "Baoyu is flogged",
+      "facet": "Famous scenes and episodes",
+      "known_at": 9
+    },
+    {
+      "name": "Qingwen mends the peacock cloak",
+      "facet": "Famous scenes and episodes",
+      "known_at": 10
+    },
+    {
+      "name": "Xiangyun sleeps among peonies",
+      "facet": "Famous scenes and episodes",
+      "known_at": 10
+    },
+    {
+      "name": "Raid on the Grand View Garden",
+      "facet": "Famous scenes and episodes",
+      "known_at": 11
+    },
+    {
+      "name": "Qin Keqing's funeral",
+      "facet": "Famous scenes and episodes",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Xifeng runs the Ning Mansion",
+      "facet": "Famous scenes and episodes",
+      "known_at": 12
+    },
+    {
+      "name": "Daiyu burns her poems",
+      "facet": "Famous scenes and episodes",
+      "known_at": 9
+    },
+    {
+      "name": "Reading Romance of the Western Chamber together",
+      "facet": "Famous scenes and episodes",
+      "known_at": 10
+    },
+    {
+      "name": "Xiangling learns poetry",
+      "facet": "Famous scenes and episodes",
+      "known_at": 9
+    },
+    {
+      "name": "Tanchun's household reforms",
+      "facet": "Famous scenes and episodes",
+      "known_at": 12
+    },
+    {
+      "name": "Baoyu's birthday party",
+      "facet": "Famous scenes and episodes",
+      "known_at": 12
+    },
+    {
+      "name": "Crab feast",
+      "facet": "Famous scenes and episodes",
+      "known_at": 11
+    },
+    {
+      "name": "Begonia Poetry Club (海棠诗社)",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 10
+    },
+    {
+      "name": "Chrysanthemum poems",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 11
+    },
+    {
+      "name": "Song of Burying Flowers (葬花吟)",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 8
+    },
+    {
+      "name": "Autumn Window on a Rainy Night (秋窗风雨夕)",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 13
+    },
+    {
+      "name": "Won-Done Song (好了歌)",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 10
+    },
+    {
+      "name": "Xiaoxiang Consort (潇湘妃子)",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 10
+    },
+    {
+      "name": "Lady of the Alpinia (蘅芜君)",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 12
+    },
+    {
+      "name": "Prince of Happy Red (怡红公子)",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 11
+    },
+    {
+      "name": "Lantern riddles",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 9
+    },
+    {
+      "name": "Drinking games (酒令)",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 11
+    },
+    {
+      "name": "Willow catkin lyrics (柳絮词)",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 12
+    },
+    {
+      "name": "Peach Blossom Poetry Club",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 12
+    },
+    {
+      "name": "Elegy for the Hibiscus Maiden (芙蓉女儿诔)",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 12
+    },
+    {
+      "name": "Crab poems",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 12
+    },
+    {
+      "name": "A crane's shadow crosses the cold pond (寒塘渡鹤影)",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 13
+    },
+    {
+      "name": "Red Bean Song (红豆曲)",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 12
+    },
+    {
+      "name": "Songs of the Dream of the Red Chamber (红楼梦曲)",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 12
+    },
+    {
+      "name": "Peony Pavilion (牡丹亭)",
+      "facet": "Poems, poetry clubs and riddles",
+      "known_at": 11
+    },
+    {
+      "name": "Leftover stone",
+      "facet": "Myth frame, jade and the Stone",
+      "known_at": 9
+    },
+    {
+      "name": "Magic Jade (通灵宝玉)",
+      "facet": "Myth frame, jade and the Stone",
+      "known_at": 8
+    },
+    {
+      "name": "Crimson Pearl Flower (绛珠仙草)",
+      "facet": "Myth frame, jade and the Stone",
+      "known_at": 9
+    },
+    {
+      "name": "Divine Luminescent Stone-in-Waiting (神瑛侍者)",
+      "facet": "Myth frame, jade and the Stone",
+      "known_at": 11
+    },
+    {
+      "name": "Repaying the debt of tears (还泪)",
+      "facet": "Myth frame, jade and the Stone",
+      "known_at": 10
+    },
+    {
+      "name": "Wood-stone bond (木石前盟)",
+      "facet": "Myth frame, jade and the Stone",
+      "known_at": 9
+    },
+    {
+      "name": "Land of Illusion (太虚幻境)",
+      "facet": "Myth frame, jade and the Stone",
+      "known_at": 10
+    },
+    {
+      "name": "Fairy Disenchantment (警幻仙子)",
+      "facet": "Myth frame, jade and the Stone",
+      "known_at": 11
+    },
+    {
+      "name": "Scabby monk and lame Taoist",
+      "facet": "Myth frame, jade and the Stone",
+      "known_at": 11
+    },
+    {
+      "name": "Greensickness Peak (青埂峰)",
+      "facet": "Myth frame, jade and the Stone",
+      "known_at": 12
+    },
+    {
+      "name": "Great Waste Mountain (大荒山)",
+      "facet": "Myth frame, jade and the Stone",
+      "known_at": 12
+    },
+    {
+      "name": "Spirit River (灵河)",
+      "facet": "Myth frame, jade and the Stone",
+      "known_at": 13
+    },
+    {
+      "name": "Truth becomes fiction when fiction is true (假作真时真亦假)",
+      "facet": "Myth frame, jade and the Stone",
+      "known_at": 10
+    },
+    {
+      "name": "Vanitas (空空道人)",
+      "facet": "Myth frame, jade and the Stone",
+      "known_at": 13
+    },
+    {
+      "name": "Jade inscription (莫失莫忘，仙寿恒昌)",
+      "facet": "Myth frame, jade and the Stone",
+      "known_at": 12
+    },
+    {
+      "name": "Precious Mirror of Romance (风月宝鉴)",
+      "facet": "Myth frame, jade and the Stone",
+      "known_at": 11
+    },
+    {
+      "name": "Gao E",
+      "facet": "Cao Xueqin, authorship and versions",
+      "known_at": 10
+    },
+    {
+      "name": "Cheng Weiyuan",
+      "facet": "Cao Xueqin, authorship and versions",
+      "known_at": 13
+    },
+    {
+      "name": "The Story of the Stone (石头记)",
+      "facet": "Cao Xueqin, authorship and versions",
+      "known_at": 9
+    },
+    {
+      "name": "First 80 chapters",
+      "facet": "Cao Xueqin, authorship and versions",
+      "known_at": 9
+    },
+    {
+      "name": "Red Inkstone (脂砚斋)",
+      "facet": "Cao Xueqin, authorship and versions",
+      "known_at": 12
+    },
+    {
+      "name": "Red Inkstone commentary manuscripts (脂评本)",
+      "facet": "Cao Xueqin, authorship and versions",
+      "known_at": 13
+    },
+    {
+      "name": "Jiaxu manuscript (甲戌本)",
+      "facet": "Cao Xueqin, authorship and versions",
+      "known_at": 14
+    },
+    {
+      "name": "Cheng-Gao edition (程高本)",
+      "facet": "Cao Xueqin, authorship and versions",
+      "known_at": 12
+    },
+    {
+      "name": "Cao Yin",
+      "facet": "Cao Xueqin, authorship and versions",
+      "known_at": 12
+    },
+    {
+      "name": "Jiangning Imperial Silk Manufactory",
+      "facet": "Cao Xueqin, authorship and versions",
+      "known_at": 13
+    },
+    {
+      "name": "Qianlong era",
+      "facet": "Cao Xueqin, authorship and versions",
+      "known_at": 10
+    },
+    {
+      "name": "Western Hills of Beijing",
+      "facet": "Cao Xueqin, authorship and versions",
+      "known_at": 13
+    },
+    {
+      "name": "Ten years of revision, five rewrites (披阅十载，增删五次)",
+      "facet": "Cao Xueqin, authorship and versions",
+      "known_at": 11
+    },
+    {
+      "name": "David Hawkes",
+      "facet": "Cao Xueqin, authorship and versions",
+      "known_at": 13
+    },
+    {
+      "name": "Yang Xianyi and Gladys Yang",
+      "facet": "Cao Xueqin, authorship and versions",
+      "known_at": 13
+    },
+    {
+      "name": "Cao Xueqin Memorial Hall",
+      "facet": "Cao Xueqin, authorship and versions",
+      "known_at": 13
+    },
+    {
+      "name": "Redology (红学)",
+      "facet": "Redology, adaptations and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Yu Pingbo",
+      "facet": "Redology, adaptations and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Zhou Ruchang",
+      "facet": "Redology, adaptations and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "1987 TV series Dream of the Red Chamber",
+      "facet": "Redology, adaptations and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Chen Xiaoxu",
+      "facet": "Redology, adaptations and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Ouyang Fenqiang",
+      "facet": "Redology, adaptations and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Deng Jie",
+      "facet": "Redology, adaptations and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "2010 TV series Dream of the Red Chamber",
+      "facet": "Redology, adaptations and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Yue opera Dream of the Red Chamber",
+      "facet": "Redology, adaptations and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Xu Yulan",
+      "facet": "Redology, adaptations and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Liping",
+      "facet": "Redology, adaptations and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Vain Longing (枉凝眉)",
+      "facet": "Redology, adaptations and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "A modern Lin Daiyu (林黛玉 as a nickname)",
+      "facet": "Redology, adaptations and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Liu Xinwu",
+      "facet": "Redology, adaptations and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Ailing's Nightmare in the Red Chamber (红楼梦魇)",
+      "facet": "Redology, adaptations and sayings",
+      "known_at": 14
+    },
+    {
+      "name": "Red Chamber banquet (红楼宴)",
+      "facet": "Redology, adaptations and sayings",
+      "known_at": 12
+    }
+  ]
+}

@@ -1,0 +1,942 @@
+{
+  "subcategory": "calendar-and-solar-terms",
+  "facets": [
+    "Lunar calendar basics",
+    "Leap months and leap years",
+    "Spring solar terms",
+    "Summer solar terms",
+    "Autumn solar terms",
+    "Winter solar terms",
+    "Solar term foods and customs",
+    "Solar term rhymes and sayings",
+    "Heavenly stems and earthly branches",
+    "Sixty-year cycle and year names",
+    "Traditional timekeeping and almanacs",
+    "Calendar history and astronomers"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 5,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 5,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "body_senses": 2,
+      "colombia": 1,
+      "educational_media": 3,
+      "everyday": 5,
+      "history": 4,
+      "language": 4,
+      "nature": 5,
+      "pop_culture": 1,
+      "popular_science": 2,
+      "school": 5,
+      "science_news": 2,
+      "university": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Lunar month (农历月)",
+      "facet": "Lunar calendar basics",
+      "known_at": 5
+    },
+    {
+      "name": "First lunar month (正月)",
+      "facet": "Lunar calendar basics",
+      "known_at": 4
+    },
+    {
+      "name": "First day of the lunar month (初一)",
+      "facet": "Lunar calendar basics",
+      "known_at": 3
+    },
+    {
+      "name": "Fifteenth day of the lunar month (十五)",
+      "facet": "Lunar calendar basics",
+      "known_at": 3
+    },
+    {
+      "name": "New moon (朔)",
+      "facet": "Lunar calendar basics",
+      "known_at": 8
+    },
+    {
+      "name": "Full moon (望)",
+      "facet": "Lunar calendar basics",
+      "known_at": 8
+    },
+    {
+      "name": "Big month and small month (大月小月)",
+      "facet": "Lunar calendar basics",
+      "known_at": 9
+    },
+    {
+      "name": "Lunisolar calendar (阴阳合历)",
+      "facet": "Lunar calendar basics",
+      "known_at": 11
+    },
+    {
+      "name": "Spring Festival (春节)",
+      "facet": "Lunar calendar basics",
+      "known_at": 1
+    },
+    {
+      "name": "Chinese New Year's Eve (除夕)",
+      "facet": "Lunar calendar basics",
+      "known_at": 2
+    },
+    {
+      "name": "Little New Year (小年)",
+      "facet": "Lunar calendar basics",
+      "known_at": 6
+    },
+    {
+      "name": "Ten-day periods (上旬、中旬、下旬)",
+      "facet": "Lunar calendar basics",
+      "known_at": 7
+    },
+    {
+      "name": "Leap year (闰年)",
+      "facet": "Leap months and leap years",
+      "known_at": 4
+    },
+    {
+      "name": "29 February",
+      "facet": "Leap months and leap years",
+      "known_at": 5
+    },
+    {
+      "name": "Common year (平年)",
+      "facet": "Leap months and leap years",
+      "known_at": 5
+    },
+    {
+      "name": "Seven leap months in 19 years (十九年七闰)",
+      "facet": "Leap months and leap years",
+      "known_at": 13
+    },
+    {
+      "name": "Leap second month of 2023 (闰二月)",
+      "facet": "Leap months and leap years",
+      "known_at": 11
+    },
+    {
+      "name": "Leap sixth month of 2025 (闰六月)",
+      "facet": "Leap months and leap years",
+      "known_at": 11
+    },
+    {
+      "name": "Year without Start of Spring (无春年)",
+      "facet": "Leap months and leap years",
+      "known_at": 12
+    },
+    {
+      "name": "Year with two Starts of Spring (双春年)",
+      "facet": "Leap months and leap years",
+      "known_at": 11
+    },
+    {
+      "name": "No-middle-term leap rule (无中气置闰)",
+      "facet": "Leap months and leap years",
+      "known_at": 14
+    },
+    {
+      "name": "Middle solar terms (中气)",
+      "facet": "Leap months and leap years",
+      "known_at": 14
+    },
+    {
+      "name": "Lunar leap year (383–385 days)",
+      "facet": "Leap months and leap years",
+      "known_at": 12
+    },
+    {
+      "name": "Lunar common year (354 days)",
+      "facet": "Leap months and leap years",
+      "known_at": 10
+    },
+    {
+      "name": "Leap second",
+      "facet": "Leap months and leap years",
+      "known_at": 12
+    },
+    {
+      "name": "Century leap year rule",
+      "facet": "Leap months and leap years",
+      "known_at": 12
+    },
+    {
+      "name": "Leap month birthday",
+      "facet": "Leap months and leap years",
+      "known_at": 10
+    },
+    {
+      "name": "Tropical year (回归年)",
+      "facet": "Leap months and leap years",
+      "known_at": 12
+    },
+    {
+      "name": "Start of Spring (立春)",
+      "facet": "Spring solar terms",
+      "known_at": 6
+    },
+    {
+      "name": "Rain Water (雨水)",
+      "facet": "Spring solar terms",
+      "known_at": 8
+    },
+    {
+      "name": "Awakening of Insects (惊蛰)",
+      "facet": "Spring solar terms",
+      "known_at": 8
+    },
+    {
+      "name": "Grain Rain (谷雨)",
+      "facet": "Spring solar terms",
+      "known_at": 9
+    },
+    {
+      "name": "Whipping the spring ox (鞭春牛)",
+      "facet": "Spring solar terms",
+      "known_at": 12
+    },
+    {
+      "name": "Standing eggs on the Spring Equinox (春分竖蛋)",
+      "facet": "Spring solar terms",
+      "known_at": 7
+    },
+    {
+      "name": "Peach blossom (桃花)",
+      "facet": "Spring solar terms",
+      "known_at": 8
+    },
+    {
+      "name": "Spring thunder (春雷)",
+      "facet": "Spring solar terms",
+      "known_at": 8
+    },
+    {
+      "name": "Returning swallows (玄鸟至)",
+      "facet": "Spring solar terms",
+      "known_at": 10
+    },
+    {
+      "name": "Grain Rain tea (谷雨茶)",
+      "facet": "Spring solar terms",
+      "known_at": 11
+    },
+    {
+      "name": "Peony (牡丹)",
+      "facet": "Spring solar terms",
+      "known_at": 9
+    },
+    {
+      "name": "Cangjie (仓颉)",
+      "facet": "Spring solar terms",
+      "known_at": 12
+    },
+    {
+      "name": "Beating the petty person (打小人)",
+      "facet": "Spring solar terms",
+      "known_at": 13
+    },
+    {
+      "name": "Start of Summer (立夏)",
+      "facet": "Summer solar terms",
+      "known_at": 6
+    },
+    {
+      "name": "Grain Buds (小满)",
+      "facet": "Summer solar terms",
+      "known_at": 9
+    },
+    {
+      "name": "Grain in Ear (芒种)",
+      "facet": "Summer solar terms",
+      "known_at": 9
+    },
+    {
+      "name": "Minor Heat (小暑)",
+      "facet": "Summer solar terms",
+      "known_at": 8
+    },
+    {
+      "name": "Major Heat (大暑)",
+      "facet": "Summer solar terms",
+      "known_at": 8
+    },
+    {
+      "name": "Weighing people at Start of Summer (立夏称人)",
+      "facet": "Summer solar terms",
+      "known_at": 11
+    },
+    {
+      "name": "Egg fighting (斗蛋)",
+      "facet": "Summer solar terms",
+      "known_at": 10
+    },
+    {
+      "name": "Dog days (三伏天)",
+      "facet": "Summer solar terms",
+      "known_at": 6
+    },
+    {
+      "name": "Plum rain season (梅雨)",
+      "facet": "Summer solar terms",
+      "known_at": 8
+    },
+    {
+      "name": "Tropic of Cancer (北回归线)",
+      "facet": "Summer solar terms",
+      "known_at": 9
+    },
+    {
+      "name": "Seeing off the flower gods (送花神)",
+      "facet": "Summer solar terms",
+      "known_at": 13
+    },
+    {
+      "name": "Fireflies (萤火虫)",
+      "facet": "Summer solar terms",
+      "known_at": 10
+    },
+    {
+      "name": "Cicadas (蝉)",
+      "facet": "Summer solar terms",
+      "known_at": 5
+    },
+    {
+      "name": "Wheat harvest (麦收)",
+      "facet": "Summer solar terms",
+      "known_at": 8
+    },
+    {
+      "name": "Treating winter illness in summer (冬病夏治)",
+      "facet": "Summer solar terms",
+      "known_at": 11
+    },
+    {
+      "name": "Silkworm (蚕)",
+      "facet": "Summer solar terms",
+      "known_at": 9
+    },
+    {
+      "name": "Lotus (荷花)",
+      "facet": "Summer solar terms",
+      "known_at": 5
+    },
+    {
+      "name": "Start of Autumn (立秋)",
+      "facet": "Autumn solar terms",
+      "known_at": 6
+    },
+    {
+      "name": "End of Heat (处暑)",
+      "facet": "Autumn solar terms",
+      "known_at": 9
+    },
+    {
+      "name": "Frost's Descent (霜降)",
+      "facet": "Autumn solar terms",
+      "known_at": 8
+    },
+    {
+      "name": "Chinese Farmers' Harvest Festival (中国农民丰收节)",
+      "facet": "Autumn solar terms",
+      "known_at": 10
+    },
+    {
+      "name": "Autumn tiger (秋老虎)",
+      "facet": "Autumn solar terms",
+      "known_at": 9
+    },
+    {
+      "name": "Wild geese flying south (鸿雁南飞)",
+      "facet": "Autumn solar terms",
+      "known_at": 5
+    },
+    {
+      "name": "Red autumn leaves (红叶)",
+      "facet": "Autumn solar terms",
+      "known_at": 5
+    },
+    {
+      "name": "Osmanthus (桂花)",
+      "facet": "Autumn solar terms",
+      "known_at": 6
+    },
+    {
+      "name": "Rice harvest (秋收)",
+      "facet": "Autumn solar terms",
+      "known_at": 5
+    },
+    {
+      "name": "Opening of the fishing season (开渔节)",
+      "facet": "Autumn solar terms",
+      "known_at": 12
+    },
+    {
+      "name": "First frost (初霜)",
+      "facet": "Autumn solar terms",
+      "known_at": 7
+    },
+    {
+      "name": "Dew (露水)",
+      "facet": "Autumn solar terms",
+      "known_at": 4
+    },
+    {
+      "name": "Start of Winter (立冬)",
+      "facet": "Winter solar terms",
+      "known_at": 6
+    },
+    {
+      "name": "Minor Snow (小雪)",
+      "facet": "Winter solar terms",
+      "known_at": 7
+    },
+    {
+      "name": "Major Snow (大雪)",
+      "facet": "Winter solar terms",
+      "known_at": 7
+    },
+    {
+      "name": "Winter Solstice (冬至)",
+      "facet": "Winter solar terms",
+      "known_at": 4
+    },
+    {
+      "name": "Minor Cold (小寒)",
+      "facet": "Winter solar terms",
+      "known_at": 8
+    },
+    {
+      "name": "Major Cold (大寒)",
+      "facet": "Winter solar terms",
+      "known_at": 8
+    },
+    {
+      "name": "Nine-nines chart (九九消寒图)",
+      "facet": "Winter solar terms",
+      "known_at": 12
+    },
+    {
+      "name": "Tropic of Capricorn (南回归线)",
+      "facet": "Winter solar terms",
+      "known_at": 9
+    },
+    {
+      "name": "Plum blossom (梅花)",
+      "facet": "Winter solar terms",
+      "known_at": 5
+    },
+    {
+      "name": "Snowfall (下雪)",
+      "facet": "Winter solar terms",
+      "known_at": 2
+    },
+    {
+      "name": "Wintersweet (蜡梅)",
+      "facet": "Winter solar terms",
+      "known_at": 9
+    },
+    {
+      "name": "Hibernation (冬眠)",
+      "facet": "Winter solar terms",
+      "known_at": 4
+    },
+    {
+      "name": "Winter Solstice ceremony at the Temple of Heaven (天坛祭天)",
+      "facet": "Winter solar terms",
+      "known_at": 11
+    },
+    {
+      "name": "Yang returns at Winter Solstice (冬至一阳生)",
+      "facet": "Winter solar terms",
+      "known_at": 14
+    },
+    {
+      "name": "Earthworms curl up (蚯蚓结)",
+      "facet": "Winter solar terms",
+      "known_at": 13
+    },
+    {
+      "name": "Winter Solstice dumplings (冬至饺子)",
+      "facet": "Solar term foods and customs",
+      "known_at": 4
+    },
+    {
+      "name": "Winter Solstice tangyuan (冬至汤圆)",
+      "facet": "Solar term foods and customs",
+      "known_at": 5
+    },
+    {
+      "name": "Spring pancakes (春饼)",
+      "facet": "Solar term foods and customs",
+      "known_at": 7
+    },
+    {
+      "name": "Biting spring radish (咬春)",
+      "facet": "Solar term foods and customs",
+      "known_at": 10
+    },
+    {
+      "name": "Pears at Awakening of Insects (惊蛰吃梨)",
+      "facet": "Solar term foods and customs",
+      "known_at": 11
+    },
+    {
+      "name": "Start of Summer eggs (立夏蛋)",
+      "facet": "Solar term foods and customs",
+      "known_at": 9
+    },
+    {
+      "name": "Summer Solstice noodles (夏至面)",
+      "facet": "Solar term foods and customs",
+      "known_at": 9
+    },
+    {
+      "name": "Biting autumn watermelon (啃秋)",
+      "facet": "Solar term foods and customs",
+      "known_at": 10
+    },
+    {
+      "name": "Sticking on autumn fat (贴秋膘)",
+      "facet": "Solar term foods and customs",
+      "known_at": 10
+    },
+    {
+      "name": "White Dew tea (白露茶)",
+      "facet": "Solar term foods and customs",
+      "known_at": 12
+    },
+    {
+      "name": "Persimmons at Frost's Descent (霜降吃柿子)",
+      "facet": "Solar term foods and customs",
+      "known_at": 10
+    },
+    {
+      "name": "Winter Solstice mutton soup (冬至羊肉汤)",
+      "facet": "Solar term foods and customs",
+      "known_at": 8
+    },
+    {
+      "name": "Spring Equinox wild greens (春菜)",
+      "facet": "Solar term foods and customs",
+      "known_at": 13
+    },
+    {
+      "name": "Dog days dumplings (头伏饺子)",
+      "facet": "Solar term foods and customs",
+      "known_at": 10
+    },
+    {
+      "name": "Solar terms song (二十四节气歌)",
+      "facet": "Solar term rhymes and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "冬至大如年 (dōngzhì dà rú nián, “Winter Solstice is as big as New Year”)",
+      "facet": "Solar term rhymes and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "冬至不端饺子碗，冻掉耳朵没人管 (“no dumplings at Winter Solstice, frozen ears”)",
+      "facet": "Solar term rhymes and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Nine-nines song (九九歌)",
+      "facet": "Solar term rhymes and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "一年之计在于春 (yī nián zhī jì zài yú chūn, “the year's plan starts in spring”)",
+      "facet": "Solar term rhymes and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Qingming (清明), poem by Du Mu",
+      "facet": "Solar term rhymes and sayings",
+      "known_at": 4
+    },
+    {
+      "name": "冬至饺子夏至面 (“Winter Solstice dumplings, Summer Solstice noodles”)",
+      "facet": "Solar term rhymes and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "春种秋收 (chūn zhòng qiū shōu, “sow in spring, harvest in autumn”)",
+      "facet": "Solar term rhymes and sayings",
+      "known_at": 4
+    },
+    {
+      "name": "春捂秋冻 (chūn wǔ qiū dòng, “wrap up in spring, stay cool in autumn”)",
+      "facet": "Solar term rhymes and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "瑞雪兆丰年 (ruì xuě zhào fēng nián, “timely snow promises a good harvest”)",
+      "facet": "Solar term rhymes and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "春雨贵如油 (chūn yǔ guì rú yóu, “spring rain is as precious as oil”)",
+      "facet": "Solar term rhymes and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "冷在三九 (lěng zài sān jiǔ, “coldest in the third nine”)",
+      "facet": "Solar term rhymes and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "热在中伏 (rè zài zhōng fú, “hottest in the middle fu”)",
+      "facet": "Solar term rhymes and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "清明前后，种瓜点豆 (“around Qingming, plant melons and beans”)",
+      "facet": "Solar term rhymes and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "白露身不露 (bái lù shēn bù lù, “at White Dew, cover your body”)",
+      "facet": "Solar term rhymes and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "一场秋雨一场寒 (“each autumn rain brings more cold”)",
+      "facet": "Solar term rhymes and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Ten heavenly stems (天干)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 9
+    },
+    {
+      "name": "Twelve earthly branches (地支)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 9
+    },
+    {
+      "name": "Jia (甲)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 9
+    },
+    {
+      "name": "Yi (乙)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 10
+    },
+    {
+      "name": "Bing (丙)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 11
+    },
+    {
+      "name": "Ding (丁)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 11
+    },
+    {
+      "name": "Gui (癸)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 12
+    },
+    {
+      "name": "Chou (丑)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 10
+    },
+    {
+      "name": "Yin (寅)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 11
+    },
+    {
+      "name": "Chen (辰)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 11
+    },
+    {
+      "name": "Wu (午)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 10
+    },
+    {
+      "name": "Hai (亥)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 11
+    },
+    {
+      "name": "Jia Yi Bing Ding ranking (甲乙丙丁)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 8
+    },
+    {
+      "name": "Grade A tertiary hospital (三甲医院)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 10
+    },
+    {
+      "name": "Meridian line (子午线)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 12
+    },
+    {
+      "name": "Ganzhi day count (干支纪日)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 13
+    },
+    {
+      "name": "60-year cycle (六十甲子)",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 9
+    },
+    {
+      "name": "1984 as a Jiazi (甲子) year",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 12
+    },
+    {
+      "name": "2026 as a Bingwu (丙午) year",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 11
+    },
+    {
+      "name": "2025 as a Yisi (乙巳) year",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 12
+    },
+    {
+      "name": "2024 as a Jiachen (甲辰) year",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 12
+    },
+    {
+      "name": "First Sino-Japanese War (甲午战争)",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 8
+    },
+    {
+      "name": "Wuxu Reform (戊戌变法)",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 10
+    },
+    {
+      "name": "Gengzi Indemnity (庚子赔款)",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 11
+    },
+    {
+      "name": "Xinchou Treaty (辛丑条约)",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 10
+    },
+    {
+      "name": "Jiashen year 1644 (甲申)",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 14
+    },
+    {
+      "name": "Huajia (花甲)",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 9
+    },
+    {
+      "name": "Reign era names (年号)",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 9
+    },
+    {
+      "name": "Zhenguan era (贞观)",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 12
+    },
+    {
+      "name": "Kaiyuan era (开元)",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 12
+    },
+    {
+      "name": "Renchen War of 1592 (壬辰战争)",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 14
+    },
+    {
+      "name": "Xinyou Coup (辛酉政变)",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 14
+    },
+    {
+      "name": "Tai Sui (太岁)",
+      "facet": "Sixty-year cycle and year names",
+      "known_at": 11
+    },
+    {
+      "name": "Zi hour (子时)",
+      "facet": "Traditional timekeeping and almanacs",
+      "known_at": 9
+    },
+    {
+      "name": "Wu hour (午时)",
+      "facet": "Traditional timekeeping and almanacs",
+      "known_at": 9
+    },
+    {
+      "name": "Night watches (更)",
+      "facet": "Traditional timekeeping and almanacs",
+      "known_at": 9
+    },
+    {
+      "name": "Incense clock (香钟)",
+      "facet": "Traditional timekeeping and almanacs",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese almanac (老黄历)",
+      "facet": "Traditional timekeeping and almanacs",
+      "known_at": 6
+    },
+    {
+      "name": "Auspicious days (黄道吉日)",
+      "facet": "Traditional timekeeping and almanacs",
+      "known_at": 7
+    },
+    {
+      "name": "Seventy-two pentads (七十二候)",
+      "facet": "Traditional timekeeping and almanacs",
+      "known_at": 12
+    },
+    {
+      "name": "Bell and Drum Towers (钟鼓楼)",
+      "facet": "Traditional timekeeping and almanacs",
+      "known_at": 8
+    },
+    {
+      "name": "Su Song's astronomical clock tower (水运仪象台)",
+      "facet": "Traditional timekeeping and almanacs",
+      "known_at": 12
+    },
+    {
+      "name": "Tear-off daily calendar (手撕日历)",
+      "facet": "Traditional timekeeping and almanacs",
+      "known_at": 5
+    },
+    {
+      "name": "Armillary sphere (浑仪)",
+      "facet": "Traditional timekeeping and almanacs",
+      "known_at": 11
+    },
+    {
+      "name": "Taichu Calendar (太初历)",
+      "facet": "Calendar history and astronomers",
+      "known_at": 13
+    },
+    {
+      "name": "Guo Shoujing (郭守敬)",
+      "facet": "Calendar history and astronomers",
+      "known_at": 11
+    },
+    {
+      "name": "Zu Chongzhi (祖冲之)",
+      "facet": "Calendar history and astronomers",
+      "known_at": 8
+    },
+    {
+      "name": "Daming Calendar (大明历)",
+      "facet": "Calendar history and astronomers",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Heng (张衡)",
+      "facet": "Calendar history and astronomers",
+      "known_at": 7
+    },
+    {
+      "name": "Shen Kuo (沈括)",
+      "facet": "Calendar history and astronomers",
+      "known_at": 11
+    },
+    {
+      "name": "Yi Xing (一行)",
+      "facet": "Calendar history and astronomers",
+      "known_at": 13
+    },
+    {
+      "name": "Xu Guangqi (徐光启)",
+      "facet": "Calendar history and astronomers",
+      "known_at": 11
+    },
+    {
+      "name": "Johann Adam Schall von Bell (汤若望)",
+      "facet": "Calendar history and astronomers",
+      "known_at": 13
+    },
+    {
+      "name": "Shixian Calendar (时宪历)",
+      "facet": "Calendar history and astronomers",
+      "known_at": 13
+    },
+    {
+      "name": "Purple Mountain Observatory (紫金山天文台)",
+      "facet": "Calendar history and astronomers",
+      "known_at": 10
+    },
+    {
+      "name": "Beijing Ancient Observatory (北京古观象台)",
+      "facet": "Calendar history and astronomers",
+      "known_at": 11
+    },
+    {
+      "name": "Dengfeng Observatory (登封观星台)",
+      "facet": "Calendar history and astronomers",
+      "known_at": 13
+    },
+    {
+      "name": "Huainanzi (淮南子)",
+      "facet": "Calendar history and astronomers",
+      "known_at": 13
+    },
+    {
+      "name": "Adoption of the Gregorian calendar in 1912",
+      "facet": "Calendar history and astronomers",
+      "known_at": 11
+    },
+    {
+      "name": "Solar terms on UNESCO list 2016",
+      "facet": "Calendar history and astronomers",
+      "known_at": 10
+    },
+    {
+      "name": "Number of solar terms: 24",
+      "facet": "Calendar history and astronomers",
+      "known_at": 4
+    }
+  ]
+}

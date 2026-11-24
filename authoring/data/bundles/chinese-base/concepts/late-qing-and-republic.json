@@ -1,0 +1,1297 @@
+{
+  "subcategory": "late-qing-and-republic",
+  "facets": [
+    "Opium Wars and Lin Zexu",
+    "Treaties and treaty ports",
+    "Taiping and Boxer movements",
+    "Self-Strengthening and reform",
+    "Qing court and Puyi",
+    "1911 Revolution and Sun Yat-sen",
+    "Early Republic and warlords",
+    "May Fourth and New Culture",
+    "Long March and Yan'an",
+    "War of 1937–1945: dates and places",
+    "Railways, fleets and modern firsts",
+    "Daily life and culture 1840–1949"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Lin Zexu",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 4
+    },
+    {
+      "name": "Destruction of opium at Humen",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 5
+    },
+    {
+      "name": "First Opium War",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 5
+    },
+    {
+      "name": "Second Opium War",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 8
+    },
+    {
+      "name": "Opium",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 5
+    },
+    {
+      "name": "Humen",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 7
+    },
+    {
+      "name": "Burning of the Old Summer Palace",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 6
+    },
+    {
+      "name": "Twelve bronze zodiac heads of Yuanmingyuan",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 7
+    },
+    {
+      "name": "Daoguang Emperor",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 9
+    },
+    {
+      "name": "Xianfeng Emperor",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 10
+    },
+    {
+      "name": "Guan Tianpei",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 11
+    },
+    {
+      "name": "Sanyuanli Incident",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 11
+    },
+    {
+      "name": "Arrow Incident",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 13
+    },
+    {
+      "name": "Thirteen Factories of Guangzhou",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 12
+    },
+    {
+      "name": "Qishan",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 13
+    },
+    {
+      "name": "Wei Yuan",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 10
+    },
+    {
+      "name": "Illustrated Treatise on the Maritime Kingdoms (海国图志)",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 11
+    },
+    {
+      "name": "“Learn the foreigners' skills to resist them” (师夷长技以制夷)",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 10
+    },
+    {
+      "name": "Gazetteer of the Four Continents (四洲志)",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Dinghai",
+      "facet": "Opium Wars and Lin Zexu",
+      "known_at": 13
+    },
+    {
+      "name": "Treaty of Nanjing",
+      "facet": "Treaties and treaty ports",
+      "known_at": 6
+    },
+    {
+      "name": "Treaty of Shimonoseki",
+      "facet": "Treaties and treaty ports",
+      "known_at": 8
+    },
+    {
+      "name": "Boxer Protocol",
+      "facet": "Treaties and treaty ports",
+      "known_at": 9
+    },
+    {
+      "name": "Treaty of Tianjin",
+      "facet": "Treaties and treaty ports",
+      "known_at": 11
+    },
+    {
+      "name": "Convention of Peking",
+      "facet": "Treaties and treaty ports",
+      "known_at": 11
+    },
+    {
+      "name": "Treaty of Aigun",
+      "facet": "Treaties and treaty ports",
+      "known_at": 12
+    },
+    {
+      "name": "Treaty of Wangxia",
+      "facet": "Treaties and treaty ports",
+      "known_at": 13
+    },
+    {
+      "name": "Treaty of Whampoa",
+      "facet": "Treaties and treaty ports",
+      "known_at": 14
+    },
+    {
+      "name": "Treaty of the Bogue",
+      "facet": "Treaties and treaty ports",
+      "known_at": 14
+    },
+    {
+      "name": "Unequal treaties",
+      "facet": "Treaties and treaty ports",
+      "known_at": 8
+    },
+    {
+      "name": "Five treaty ports",
+      "facet": "Treaties and treaty ports",
+      "known_at": 10
+    },
+    {
+      "name": "Concessions (租界)",
+      "facet": "Treaties and treaty ports",
+      "known_at": 9
+    },
+    {
+      "name": "Shanghai International Settlement",
+      "facet": "Treaties and treaty ports",
+      "known_at": 10
+    },
+    {
+      "name": "Kowloon Peninsula",
+      "facet": "Treaties and treaty ports",
+      "known_at": 8
+    },
+    {
+      "name": "New Territories lease of 1898",
+      "facet": "Treaties and treaty ports",
+      "known_at": 11
+    },
+    {
+      "name": "Tianjin concessions",
+      "facet": "Treaties and treaty ports",
+      "known_at": 9
+    },
+    {
+      "name": "Qingdao German lease",
+      "facet": "Treaties and treaty ports",
+      "known_at": 11
+    },
+    {
+      "name": "Lüshun",
+      "facet": "Treaties and treaty ports",
+      "known_at": 11
+    },
+    {
+      "name": "Extraterritoriality",
+      "facet": "Treaties and treaty ports",
+      "known_at": 12
+    },
+    {
+      "name": "Taiping Heavenly Kingdom",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 6
+    },
+    {
+      "name": "Hong Xiuquan",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 7
+    },
+    {
+      "name": "Jintian Uprising",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 10
+    },
+    {
+      "name": "Tianjing",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 9
+    },
+    {
+      "name": "Heavenly Land System (天朝田亩制度)",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 10
+    },
+    {
+      "name": "New Treatise on Government (资政新篇)",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 12
+    },
+    {
+      "name": "Yang Xiuqing",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 11
+    },
+    {
+      "name": "Shi Dakai",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 11
+    },
+    {
+      "name": "Li Xiucheng",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 12
+    },
+    {
+      "name": "Hong Rengan",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 12
+    },
+    {
+      "name": "Tianjing Incident",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 12
+    },
+    {
+      "name": "Xiang Army",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 9
+    },
+    {
+      "name": "Zeng Guofan",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 7
+    },
+    {
+      "name": "Ever Victorious Army",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 13
+    },
+    {
+      "name": "Nian Rebellion",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 12
+    },
+    {
+      "name": "Boxer Movement (义和团)",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 7
+    },
+    {
+      "name": "Eight-Nation Alliance",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 7
+    },
+    {
+      "name": "“Support the Qing, destroy the foreign” (扶清灭洋)",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 9
+    },
+    {
+      "name": "Siege of the Legations",
+      "facet": "Taiping and Boxer movements",
+      "known_at": 12
+    },
+    {
+      "name": "Self-Strengthening Movement (洋务运动)",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 8
+    },
+    {
+      "name": "Li Hongzhang",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 7
+    },
+    {
+      "name": "Zuo Zongtang",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Zhidong",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 10
+    },
+    {
+      "name": "Huai Army",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 11
+    },
+    {
+      "name": "Jiangnan Arsenal",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 11
+    },
+    {
+      "name": "Fuzhou Navy Yard",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 11
+    },
+    {
+      "name": "Tongwen Guan",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 12
+    },
+    {
+      "name": "“Chinese learning as the base, Western learning for use” (中体西用)",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 11
+    },
+    {
+      "name": "Hundred Days' Reform",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 8
+    },
+    {
+      "name": "Liang Qichao",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 8
+    },
+    {
+      "name": "Tan Sitong",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 9
+    },
+    {
+      "name": "Six Gentlemen of the Wuxu Reform",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 11
+    },
+    {
+      "name": "Gongche Shangshu petition",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 10
+    },
+    {
+      "name": "Imperial University of Peking (京师大学堂)",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 10
+    },
+    {
+      "name": "Yan Fu",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 11
+    },
+    {
+      "name": "Tianyan Lun (天演论)",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 12
+    },
+    {
+      "name": "Late Qing New Policies (清末新政)",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 13
+    },
+    {
+      "name": "Abolition of the imperial examination",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 10
+    },
+    {
+      "name": "Rong Hong",
+      "facet": "Self-Strengthening and reform",
+      "known_at": 13
+    },
+    {
+      "name": "Guangxu Emperor",
+      "facet": "Qing court and Puyi",
+      "known_at": 8
+    },
+    {
+      "name": "Tongzhi Emperor",
+      "facet": "Qing court and Puyi",
+      "known_at": 10
+    },
+    {
+      "name": "Empress Dowager Ci'an",
+      "facet": "Qing court and Puyi",
+      "known_at": 12
+    },
+    {
+      "name": "Prince Gong",
+      "facet": "Qing court and Puyi",
+      "known_at": 11
+    },
+    {
+      "name": "Xinyou Coup",
+      "facet": "Qing court and Puyi",
+      "known_at": 12
+    },
+    {
+      "name": "Pearl Concubine",
+      "facet": "Qing court and Puyi",
+      "known_at": 9
+    },
+    {
+      "name": "Li Lianying",
+      "facet": "Qing court and Puyi",
+      "known_at": 11
+    },
+    {
+      "name": "Zaifeng, Prince Chun",
+      "facet": "Qing court and Puyi",
+      "known_at": 13
+    },
+    {
+      "name": "Empress Dowager Longyu",
+      "facet": "Qing court and Puyi",
+      "known_at": 13
+    },
+    {
+      "name": "Qing abdication edict",
+      "facet": "Qing court and Puyi",
+      "known_at": 9
+    },
+    {
+      "name": "Queue hairstyle (辫子)",
+      "facet": "Qing court and Puyi",
+      "known_at": 4
+    },
+    {
+      "name": "Yellow Dragon Flag",
+      "facet": "Qing court and Puyi",
+      "known_at": 9
+    },
+    {
+      "name": "Manchukuo",
+      "facet": "Qing court and Puyi",
+      "known_at": 8
+    },
+    {
+      "name": "The Last Emperor (film)",
+      "facet": "Qing court and Puyi",
+      "known_at": 9
+    },
+    {
+      "name": "From Emperor to Citizen (我的前半生)",
+      "facet": "Qing court and Puyi",
+      "known_at": 12
+    },
+    {
+      "name": "Sun Yat-sen",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 3
+    },
+    {
+      "name": "Xinhai Revolution",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 6
+    },
+    {
+      "name": "Wuchang Uprising",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 7
+    },
+    {
+      "name": "Revive China Society (兴中会)",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 11
+    },
+    {
+      "name": "Tongmenghui",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 9
+    },
+    {
+      "name": "Three Principles of the People",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 8
+    },
+    {
+      "name": "Huanghuagang Uprising",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 9
+    },
+    {
+      "name": "Huang Xing",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 9
+    },
+    {
+      "name": "Qiu Jin",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 8
+    },
+    {
+      "name": "Song Jiaoren",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 11
+    },
+    {
+      "name": "Lin Juemin",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 10
+    },
+    {
+      "name": "Railway Protection Movement",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 11
+    },
+    {
+      "name": "Nanjing Provisional Government",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 10
+    },
+    {
+      "name": "Founding of the Republic of China in 1912",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 6
+    },
+    {
+      "name": "Sun Yat-sen Mausoleum",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 6
+    },
+    {
+      "name": "Zhongshan suit",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 6
+    },
+    {
+      "name": "Whampoa Military Academy",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 8
+    },
+    {
+      "name": "Soong Ching-ling",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 8
+    },
+    {
+      "name": "Cuiheng Village",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 12
+    },
+    {
+      "name": "Zou Rong",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 13
+    },
+    {
+      "name": "Chen Tianhua",
+      "facet": "1911 Revolution and Sun Yat-sen",
+      "known_at": 13
+    },
+    {
+      "name": "Yuan Shikai",
+      "facet": "Early Republic and warlords",
+      "known_at": 7
+    },
+    {
+      "name": "Hongxian monarchy",
+      "facet": "Early Republic and warlords",
+      "known_at": 9
+    },
+    {
+      "name": "National Protection War (护国战争)",
+      "facet": "Early Republic and warlords",
+      "known_at": 11
+    },
+    {
+      "name": "Cai E",
+      "facet": "Early Republic and warlords",
+      "known_at": 10
+    },
+    {
+      "name": "Twenty-One Demands",
+      "facet": "Early Republic and warlords",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Xun Restoration",
+      "facet": "Early Republic and warlords",
+      "known_at": 11
+    },
+    {
+      "name": "Beiyang Government",
+      "facet": "Early Republic and warlords",
+      "known_at": 9
+    },
+    {
+      "name": "Beiyang Army",
+      "facet": "Early Republic and warlords",
+      "known_at": 10
+    },
+    {
+      "name": "Duan Qirui",
+      "facet": "Early Republic and warlords",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Zuolin",
+      "facet": "Early Republic and warlords",
+      "known_at": 9
+    },
+    {
+      "name": "Huanggutun Incident",
+      "facet": "Early Republic and warlords",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Xueliang",
+      "facet": "Early Republic and warlords",
+      "known_at": 9
+    },
+    {
+      "name": "Northeast Flag Replacement (东北易帜)",
+      "facet": "Early Republic and warlords",
+      "known_at": 12
+    },
+    {
+      "name": "Feng Yuxiang",
+      "facet": "Early Republic and warlords",
+      "known_at": 11
+    },
+    {
+      "name": "Wu Peifu",
+      "facet": "Early Republic and warlords",
+      "known_at": 11
+    },
+    {
+      "name": "Constitutional Protection Movement (护法运动)",
+      "facet": "Early Republic and warlords",
+      "known_at": 13
+    },
+    {
+      "name": "Northern Expedition",
+      "facet": "Early Republic and warlords",
+      "known_at": 8
+    },
+    {
+      "name": "Chiang Kai-shek",
+      "facet": "Early Republic and warlords",
+      "known_at": 7
+    },
+    {
+      "name": "Yuan Datou silver dollar",
+      "facet": "Early Republic and warlords",
+      "known_at": 8
+    },
+    {
+      "name": "May Fourth Movement",
+      "facet": "May Fourth and New Culture",
+      "known_at": 5
+    },
+    {
+      "name": "Youth Day (五四青年节)",
+      "facet": "May Fourth and New Culture",
+      "known_at": 5
+    },
+    {
+      "name": "New Youth (新青年)",
+      "facet": "May Fourth and New Culture",
+      "known_at": 8
+    },
+    {
+      "name": "Chen Duxiu",
+      "facet": "May Fourth and New Culture",
+      "known_at": 8
+    },
+    {
+      "name": "Hu Shi",
+      "facet": "May Fourth and New Culture",
+      "known_at": 9
+    },
+    {
+      "name": "Li Dazhao",
+      "facet": "May Fourth and New Culture",
+      "known_at": 7
+    },
+    {
+      "name": "Cai Yuanpei",
+      "facet": "May Fourth and New Culture",
+      "known_at": 8
+    },
+    {
+      "name": "Peking University",
+      "facet": "May Fourth and New Culture",
+      "known_at": 4
+    },
+    {
+      "name": "Lu Xun",
+      "facet": "May Fourth and New Culture",
+      "known_at": 4
+    },
+    {
+      "name": "A Madman's Diary (狂人日记)",
+      "facet": "May Fourth and New Culture",
+      "known_at": 8
+    },
+    {
+      "name": "The True Story of Ah Q (阿Q正传)",
+      "facet": "May Fourth and New Culture",
+      "known_at": 9
+    },
+    {
+      "name": "Call to Arms (呐喊)",
+      "facet": "May Fourth and New Culture",
+      "known_at": 9
+    },
+    {
+      "name": "From Hundred-Plant Garden to Three-Flavour Study (从百草园到三味书屋)",
+      "facet": "May Fourth and New Culture",
+      "known_at": 7
+    },
+    {
+      "name": "Vernacular Chinese movement (白话文运动)",
+      "facet": "May Fourth and New Culture",
+      "known_at": 10
+    },
+    {
+      "name": "Mr. Democracy and Mr. Science (德先生和赛先生)",
+      "facet": "May Fourth and New Culture",
+      "known_at": 9
+    },
+    {
+      "name": "Paris Peace Conference 1919",
+      "facet": "May Fourth and New Culture",
+      "known_at": 10
+    },
+    {
+      "name": "Shandong Problem",
+      "facet": "May Fourth and New Culture",
+      "known_at": 11
+    },
+    {
+      "name": "Gu Weijun",
+      "facet": "May Fourth and New Culture",
+      "known_at": 12
+    },
+    {
+      "name": "Burning of Zhao Family Mansion (火烧赵家楼)",
+      "facet": "May Fourth and New Culture",
+      "known_at": 12
+    },
+    {
+      "name": "Ba Jin",
+      "facet": "May Fourth and New Culture",
+      "known_at": 9
+    },
+    {
+      "name": "Mao Dun",
+      "facet": "May Fourth and New Culture",
+      "known_at": 9
+    },
+    {
+      "name": "Bing Xin",
+      "facet": "May Fourth and New Culture",
+      "known_at": 7
+    },
+    {
+      "name": "Zhu Ziqing",
+      "facet": "May Fourth and New Culture",
+      "known_at": 7
+    },
+    {
+      "name": "Xu Zhimo",
+      "facet": "May Fourth and New Culture",
+      "known_at": 8
+    },
+    {
+      "name": "Long March",
+      "facet": "Long March and Yan'an",
+      "known_at": 5
+    },
+    {
+      "name": "Pagoda Hill (宝塔山)",
+      "facet": "Long March and Yan'an",
+      "known_at": 8
+    },
+    {
+      "name": "First National Congress of the CPC",
+      "facet": "Long March and Yan'an",
+      "known_at": 7
+    },
+    {
+      "name": "Red Boat on South Lake, Jiaxing",
+      "facet": "Long March and Yan'an",
+      "known_at": 7
+    },
+    {
+      "name": "Nanchang Uprising",
+      "facet": "Long March and Yan'an",
+      "known_at": 7
+    },
+    {
+      "name": "Autumn Harvest Uprising",
+      "facet": "Long March and Yan'an",
+      "known_at": 9
+    },
+    {
+      "name": "Gutian Conference",
+      "facet": "Long March and Yan'an",
+      "known_at": 11
+    },
+    {
+      "name": "Ruijin",
+      "facet": "Long March and Yan'an",
+      "known_at": 8
+    },
+    {
+      "name": "Battle of the Xiang River",
+      "facet": "Long March and Yan'an",
+      "known_at": 12
+    },
+    {
+      "name": "Zunyi Conference",
+      "facet": "Long March and Yan'an",
+      "known_at": 8
+    },
+    {
+      "name": "Four crossings of the Chishui River",
+      "facet": "Long March and Yan'an",
+      "known_at": 10
+    },
+    {
+      "name": "Seizing Luding Bridge",
+      "facet": "Long March and Yan'an",
+      "known_at": 8
+    },
+    {
+      "name": "Dadu River",
+      "facet": "Long March and Yan'an",
+      "known_at": 9
+    },
+    {
+      "name": "Jiajin Mountain",
+      "facet": "Long March and Yan'an",
+      "known_at": 11
+    },
+    {
+      "name": "Crossing the grasslands",
+      "facet": "Long March and Yan'an",
+      "known_at": 9
+    },
+    {
+      "name": "Wuqi Town",
+      "facet": "Long March and Yan'an",
+      "known_at": 13
+    },
+    {
+      "name": "Huining reunion of the three Red Armies",
+      "facet": "Long March and Yan'an",
+      "known_at": 12
+    },
+    {
+      "name": "The Long March (七律·长征)",
+      "facet": "Long March and Yan'an",
+      "known_at": 8
+    },
+    {
+      "name": "Nanniwan",
+      "facet": "Long March and Yan'an",
+      "known_at": 9
+    },
+    {
+      "name": "Serve the People (为人民服务)",
+      "facet": "Long March and Yan'an",
+      "known_at": 9
+    },
+    {
+      "name": "Zhu De",
+      "facet": "Long March and Yan'an",
+      "known_at": 7
+    },
+    {
+      "name": "Zhou Enlai",
+      "facet": "Long March and Yan'an",
+      "known_at": 5
+    },
+    {
+      "name": "Red Star Over China",
+      "facet": "Long March and Yan'an",
+      "known_at": 11
+    },
+    {
+      "name": "Chongqing Negotiations",
+      "facet": "Long March and Yan'an",
+      "known_at": 11
+    },
+    {
+      "name": "Liaoshen Campaign",
+      "facet": "Long March and Yan'an",
+      "known_at": 10
+    },
+    {
+      "name": "Huaihai Campaign",
+      "facet": "Long March and Yan'an",
+      "known_at": 10
+    },
+    {
+      "name": "Pingjin Campaign",
+      "facet": "Long March and Yan'an",
+      "known_at": 10
+    },
+    {
+      "name": "Yangtze River Crossing Campaign",
+      "facet": "Long March and Yan'an",
+      "known_at": 9
+    },
+    {
+      "name": "September 18 Incident",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 6
+    },
+    {
+      "name": "Xi'an Incident",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 8
+    },
+    {
+      "name": "Marco Polo Bridge Incident (七七事变)",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 6
+    },
+    {
+      "name": "Lugou Bridge",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 6
+    },
+    {
+      "name": "Battle of Shanghai 1937",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 9
+    },
+    {
+      "name": "Sihang Warehouse",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Pingxingguan",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Taierzhuang",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Wuhan",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 11
+    },
+    {
+      "name": "Battles of Changsha",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 12
+    },
+    {
+      "name": "Hundred Regiments Offensive",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 9
+    },
+    {
+      "name": "Chongqing wartime capital",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 8
+    },
+    {
+      "name": "Eighth Route Army",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 7
+    },
+    {
+      "name": "New Fourth Army",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 9
+    },
+    {
+      "name": "Tunnel warfare (地道战)",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 8
+    },
+    {
+      "name": "Five Heroes of Langya Mountain",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 8
+    },
+    {
+      "name": "Little Soldier Zhang Ga",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 6
+    },
+    {
+      "name": "Zhang Zizhong",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 12
+    },
+    {
+      "name": "Flying Tigers",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 9
+    },
+    {
+      "name": "Burma Road",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 11
+    },
+    {
+      "name": "The Hump airlift",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese Expeditionary Force",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 11
+    },
+    {
+      "name": "Cairo Declaration",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 12
+    },
+    {
+      "name": "Victory Day, 3 September",
+      "facet": "War of 1937–1945: dates and places",
+      "known_at": 7
+    },
+    {
+      "name": "Beijing–Zhangjiakou Railway",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 8
+    },
+    {
+      "name": "Zigzag switchback at Qinglongqiao",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 9
+    },
+    {
+      "name": "Wusong Railway",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 13
+    },
+    {
+      "name": "Tangxu Railway",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Beiyang Fleet",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 8
+    },
+    {
+      "name": "Deng Shichang",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 7
+    },
+    {
+      "name": "Zhiyuan cruiser",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 9
+    },
+    {
+      "name": "Dingyuan battleship",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of the Yellow Sea 1894",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 9
+    },
+    {
+      "name": "Liugong Island",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Fuzhou 1884",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 13
+    },
+    {
+      "name": "China Merchants Steam Navigation Company",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Kaiping Mines",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 13
+    },
+    {
+      "name": "Hanyeping Company",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 13
+    },
+    {
+      "name": "Commercial Press",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Shenbao",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Dingjun Mountain (1905 film)",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 10
+    },
+    {
+      "name": "Feng Ru",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 13
+    },
+    {
+      "name": "Zhongshan Bridge, Lanzhou",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 11
+    },
+    {
+      "name": "Qiantang River Bridge",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 10
+    },
+    {
+      "name": "Mao Yisheng",
+      "facet": "Railways, fleets and modern firsts",
+      "known_at": 10
+    },
+    {
+      "name": "Mei Lanfang",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 8
+    },
+    {
+      "name": "Rickshaw",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 5
+    },
+    {
+      "name": "Teahouse (茶馆)",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 10
+    },
+    {
+      "name": "Xu Beihong",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 7
+    },
+    {
+      "name": "Nie Er",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 8
+    },
+    {
+      "name": "Tian Han",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 10
+    },
+    {
+      "name": "Yellow River Cantata",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 9
+    },
+    {
+      "name": "Xian Xinghai",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 10
+    },
+    {
+      "name": "Ruan Lingyu",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 13
+    },
+    {
+      "name": "Zhou Xuan",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 12
+    },
+    {
+      "name": "Hu Die",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 13
+    },
+    {
+      "name": "Shikumen houses",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 10
+    },
+    {
+      "name": "Quanjude roast duck",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 8
+    },
+    {
+      "name": "Goubuli baozi",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 9
+    },
+    {
+      "name": "Tsingtao Brewery",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 9
+    },
+    {
+      "name": "Daoxiangcun",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 12
+    },
+    {
+      "name": "Matches called “foreign fire” (洋火)",
+      "facet": "Daily life and culture 1840–1949",
+      "known_at": 11
+    }
+  ]
+}

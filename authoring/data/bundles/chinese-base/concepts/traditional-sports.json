@@ -1,0 +1,673 @@
+{
+  "subcategory": "traditional-sports",
+  "facets": [
+    "Dragon boat racing and Duanwu",
+    "Lion dance styles and customs",
+    "Dragon dance and festival parades",
+    "Shuttlecock kicking (毽子)",
+    "Diabolo and spinning tops",
+    "Cuju and ancient football",
+    "Jump rope and playground games",
+    "Archery and the Six Arts",
+    "Polo and horseback sports",
+    "Kites, swings and folk contests",
+    "Traditional board and strategy games",
+    "Wrestling, tug-of-war and strength sports"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 5,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 4,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Five-colour silk thread (五彩绳)",
+      "facet": "Dragon boat racing and Duanwu",
+      "known_at": 6
+    },
+    {
+      "name": "Fifth day of the fifth lunar month",
+      "facet": "Dragon boat racing and Duanwu",
+      "known_at": 4
+    },
+    {
+      "name": "State of Chu (楚国)",
+      "facet": "Dragon boat racing and Duanwu",
+      "known_at": 9
+    },
+    {
+      "name": "Dragon boat paddle",
+      "facet": "Dragon boat racing and Duanwu",
+      "known_at": 5
+    },
+    {
+      "name": "Dragon boat helmsman (舵手)",
+      "facet": "Dragon boat racing and Duanwu",
+      "known_at": 7
+    },
+    {
+      "name": "UNESCO Intangible Cultural Heritage list",
+      "facet": "Dragon boat racing and Duanwu",
+      "known_at": 11
+    },
+    {
+      "name": "Hong Kong International Dragon Boat Races",
+      "facet": "Dragon boat racing and Duanwu",
+      "known_at": 10
+    },
+    {
+      "name": "Northern lion (北狮)",
+      "facet": "Lion dance styles and customs",
+      "known_at": 7
+    },
+    {
+      "name": "Foshan (佛山)",
+      "facet": "Lion dance styles and customs",
+      "known_at": 9
+    },
+    {
+      "name": "Huang Feihong (黄飞鸿)",
+      "facet": "Lion dance styles and customs",
+      "known_at": 8
+    },
+    {
+      "name": "Plucking the greens (采青)",
+      "facet": "Lion dance styles and customs",
+      "known_at": 8
+    },
+    {
+      "name": "Gongs and cymbals",
+      "facet": "Lion dance styles and customs",
+      "known_at": 4
+    },
+    {
+      "name": "Lion dance drum",
+      "facet": "Lion dance styles and customs",
+      "known_at": 3
+    },
+    {
+      "name": "Plum-blossom poles (梅花桩)",
+      "facet": "Lion dance styles and customs",
+      "known_at": 9
+    },
+    {
+      "name": "Big-head Buddha (大头佛)",
+      "facet": "Lion dance styles and customs",
+      "known_at": 9
+    },
+    {
+      "name": "Guan Yu lion (关公狮)",
+      "facet": "Lion dance styles and customs",
+      "known_at": 13
+    },
+    {
+      "name": "Heshan lion (鹤山狮)",
+      "facet": "Lion dance styles and customs",
+      "known_at": 13
+    },
+    {
+      "name": "Horse stance (马步)",
+      "facet": "Lion dance styles and customs",
+      "known_at": 7
+    },
+    {
+      "name": "Shop opening ceremony",
+      "facet": "Lion dance styles and customs",
+      "known_at": 6
+    },
+    {
+      "name": "Bench dragon (板凳龙)",
+      "facet": "Dragon dance and festival parades",
+      "known_at": 12
+    },
+    {
+      "name": "Year of the Dragon",
+      "facet": "Dragon dance and festival parades",
+      "known_at": 2
+    },
+    {
+      "name": "Red lantern (灯笼)",
+      "facet": "Dragon dance and festival parades",
+      "known_at": 1
+    },
+    {
+      "name": "Shehuo (社火)",
+      "facet": "Dragon dance and festival parades",
+      "known_at": 12
+    },
+    {
+      "name": "Ansai waist drum (安塞腰鼓)",
+      "facet": "Dragon dance and festival parades",
+      "known_at": 9
+    },
+    {
+      "name": "Rooster feather",
+      "facet": "Shuttlecock kicking (毽子)",
+      "known_at": 4
+    },
+    {
+      "name": "Copper coin (铜钱)",
+      "facet": "Shuttlecock kicking (毽子)",
+      "known_at": 7
+    },
+    {
+      "name": "Metal washer",
+      "facet": "Shuttlecock kicking (毽子)",
+      "known_at": 8
+    },
+    {
+      "name": "Inside-foot kick (盘踢)",
+      "facet": "Shuttlecock kicking (毽子)",
+      "known_at": 10
+    },
+    {
+      "name": "Badminton (羽毛球)",
+      "facet": "Shuttlecock kicking (毽子)",
+      "known_at": 1
+    },
+    {
+      "name": "Net shuttlecock (毽球)",
+      "facet": "Shuttlecock kicking (毽子)",
+      "known_at": 10
+    },
+    {
+      "name": "Footbag",
+      "facet": "Shuttlecock kicking (毽子)",
+      "known_at": 11
+    },
+    {
+      "name": "Sepak takraw (藤球)",
+      "facet": "Shuttlecock kicking (毽子)",
+      "known_at": 10
+    },
+    {
+      "name": "Đá cầu",
+      "facet": "Shuttlecock kicking (毽子)",
+      "known_at": 13
+    },
+    {
+      "name": "Jegichagi",
+      "facet": "Shuttlecock kicking (毽子)",
+      "known_at": 13
+    },
+    {
+      "name": "PE class (体育课)",
+      "facet": "Shuttlecock kicking (毽子)",
+      "known_at": 3
+    },
+    {
+      "name": "Circle kicking (围踢)",
+      "facet": "Shuttlecock kicking (毽子)",
+      "known_at": 8,
+      "retired": "unaskable: Circle kicking is too narrow, and its English name already says what the clue would describe (kicking in a circle)."
+    },
+    {
+      "name": "Whip top (抽陀螺)",
+      "facet": "Diabolo and spinning tops",
+      "known_at": 5
+    },
+    {
+      "name": "Diabolo whistle sound",
+      "facet": "Diabolo and spinning tops",
+      "known_at": 5
+    },
+    {
+      "name": "Diabolo sticks and string",
+      "facet": "Diabolo and spinning tops",
+      "known_at": 4
+    },
+    {
+      "name": "Yo-yo (悠悠球)",
+      "facet": "Diabolo and spinning tops",
+      "known_at": 1
+    },
+    {
+      "name": "Gyroscope (陀螺仪)",
+      "facet": "Diabolo and spinning tops",
+      "known_at": 11
+    },
+    {
+      "name": "Angular momentum",
+      "facet": "Diabolo and spinning tops",
+      "known_at": 13
+    },
+    {
+      "name": "Beyblade (战斗陀螺)",
+      "facet": "Diabolo and spinning tops",
+      "known_at": 4
+    },
+    {
+      "name": "Single-wheel diabolo",
+      "facet": "Diabolo and spinning tops",
+      "known_at": 8
+    },
+    {
+      "name": "Friction",
+      "facet": "Diabolo and spinning tops",
+      "known_at": 7
+    },
+    {
+      "name": "Inertia",
+      "facet": "Diabolo and spinning tops",
+      "known_at": 9
+    },
+    {
+      "name": "Ice spinning top (冰陀螺)",
+      "facet": "Diabolo and spinning tops",
+      "known_at": 9
+    },
+    {
+      "name": "State of Qi (齐国)",
+      "facet": "Cuju and ancient football",
+      "known_at": 10
+    },
+    {
+      "name": "Han dynasty (汉朝)",
+      "facet": "Cuju and ancient football",
+      "known_at": 6
+    },
+    {
+      "name": "FIFA",
+      "facet": "Cuju and ancient football",
+      "known_at": 6
+    },
+    {
+      "name": "Zibo (淄博)",
+      "facet": "Cuju and ancient football",
+      "known_at": 11
+    },
+    {
+      "name": "Football (足球)",
+      "facet": "Cuju and ancient football",
+      "known_at": 1
+    },
+    {
+      "name": "Fengliu eye goal (风流眼)",
+      "facet": "Cuju and ancient football",
+      "known_at": 12
+    },
+    {
+      "name": "Animal bladder ball",
+      "facet": "Cuju and ancient football",
+      "known_at": 9
+    },
+    {
+      "name": "Qiyun Club (齐云社)",
+      "facet": "Cuju and ancient football",
+      "known_at": 14
+    },
+    {
+      "name": "Emperor Taizu of Song (宋太祖)",
+      "facet": "Cuju and ancient football",
+      "known_at": 11
+    },
+    {
+      "name": "Kemari (蹴鞠, Japan)",
+      "facet": "Cuju and ancient football",
+      "known_at": 13
+    },
+    {
+      "name": "Military training",
+      "facet": "Cuju and ancient football",
+      "known_at": 9
+    },
+    {
+      "name": "Jump rope (跳绳)",
+      "facet": "Jump rope and playground games",
+      "known_at": 1
+    },
+    {
+      "name": "Rubber band jumping (跳皮筋)",
+      "facet": "Jump rope and playground games",
+      "known_at": 3
+    },
+    {
+      "name": "Rolling iron hoop (滚铁环)",
+      "facet": "Jump rope and playground games",
+      "known_at": 8
+    },
+    {
+      "name": "Marbles (弹珠)",
+      "facet": "Jump rope and playground games",
+      "known_at": 3
+    },
+    {
+      "name": "Throwing sandbags (丢沙包)",
+      "facet": "Jump rope and playground games",
+      "known_at": 4
+    },
+    {
+      "name": "Double Dutch",
+      "facet": "Jump rope and playground games",
+      "known_at": 10
+    },
+    {
+      "name": "Long rope group skipping",
+      "facet": "Jump rope and playground games",
+      "known_at": 3
+    },
+    {
+      "name": "Flipping picture cards (拍画片)",
+      "facet": "Jump rope and playground games",
+      "known_at": 6
+    },
+    {
+      "name": "Knucklebones (抓石子)",
+      "facet": "Jump rope and playground games",
+      "known_at": 6
+    },
+    {
+      "name": "Hula hoop (呼啦圈)",
+      "facet": "Jump rope and playground games",
+      "known_at": 2
+    },
+    {
+      "name": "Archery (射箭)",
+      "facet": "Archery and the Six Arts",
+      "known_at": 3
+    },
+    {
+      "name": "Charioteering (御)",
+      "facet": "Archery and the Six Arts",
+      "known_at": 11
+    },
+    {
+      "name": "Hou Yi (后羿)",
+      "facet": "Archery and the Six Arts",
+      "known_at": 4
+    },
+    {
+      "name": "Yang Youji (养由基)",
+      "facet": "Archery and the Six Arts",
+      "known_at": 13
+    },
+    {
+      "name": "百步穿杨 (bǎi bù chuān yáng)",
+      "facet": "Archery and the Six Arts",
+      "known_at": 10
+    },
+    {
+      "name": "Li Guang (李广)",
+      "facet": "Archery and the Six Arts",
+      "known_at": 11
+    },
+    {
+      "name": "Huang Zhong (黄忠)",
+      "facet": "Archery and the Six Arts",
+      "known_at": 8
+    },
+    {
+      "name": "Crossbow (弩)",
+      "facet": "Archery and the Six Arts",
+      "known_at": 6
+    },
+    {
+      "name": "Bow and arrow",
+      "facet": "Archery and the Six Arts",
+      "known_at": 1
+    },
+    {
+      "name": "Archer's thumb ring (扳指)",
+      "facet": "Archery and the Six Arts",
+      "known_at": 10
+    },
+    {
+      "name": "Pitch-pot (投壶)",
+      "facet": "Archery and the Six Arts",
+      "known_at": 9
+    },
+    {
+      "name": "Great Archery Ceremony (大射礼)",
+      "facet": "Archery and the Six Arts",
+      "known_at": 13
+    },
+    {
+      "name": "Kneeling archer of the Terracotta Army",
+      "facet": "Archery and the Six Arts",
+      "known_at": 10
+    },
+    {
+      "name": "Hu clothing and mounted archery (胡服骑射)",
+      "facet": "Archery and the Six Arts",
+      "known_at": 11
+    },
+    {
+      "name": "Olympic archery",
+      "facet": "Archery and the Six Arts",
+      "known_at": 5
+    },
+    {
+      "name": "Xue Rengui (薛仁贵)",
+      "facet": "Archery and the Six Arts",
+      "known_at": 13
+    },
+    {
+      "name": "Prince Zhanghuai's tomb polo mural (章怀太子墓壁画)",
+      "facet": "Polo and horseback sports",
+      "known_at": 13
+    },
+    {
+      "name": "Persia (波斯)",
+      "facet": "Polo and horseback sports",
+      "known_at": 10
+    },
+    {
+      "name": "Donkey polo (驴鞠)",
+      "facet": "Polo and horseback sports",
+      "known_at": 13
+    },
+    {
+      "name": "Tang sancai horse (唐三彩马)",
+      "facet": "Polo and horseback sports",
+      "known_at": 9
+    },
+    {
+      "name": "Naadam (那达慕)",
+      "facet": "Polo and horseback sports",
+      "known_at": 10
+    },
+    {
+      "name": "Girl chasing (姑娘追)",
+      "facet": "Polo and horseback sports",
+      "known_at": 13
+    },
+    {
+      "name": "Goat grabbing (叼羊)",
+      "facet": "Polo and horseback sports",
+      "known_at": 12
+    },
+    {
+      "name": "Stirrup (马镫)",
+      "facet": "Polo and horseback sports",
+      "known_at": 9
+    },
+    {
+      "name": "Ferghana horse (汗血宝马)",
+      "facet": "Polo and horseback sports",
+      "known_at": 9
+    },
+    {
+      "name": "Tian Ji's horse race (田忌赛马)",
+      "facet": "Polo and horseback sports",
+      "known_at": 5
+    },
+    {
+      "name": "Polo mallet (球杖)",
+      "facet": "Polo and horseback sports",
+      "known_at": 9
+    },
+    {
+      "name": "Weifang (潍坊)",
+      "facet": "Kites, swings and folk contests",
+      "known_at": 8
+    },
+    {
+      "name": "Swing (秋千)",
+      "facet": "Kites, swings and folk contests",
+      "known_at": 1
+    },
+    {
+      "name": "Cricket fighting (斗蟋蟀)",
+      "facet": "Kites, swings and folk contests",
+      "known_at": 7
+    },
+    {
+      "name": "Grass fighting (斗草)",
+      "facet": "Kites, swings and folk contests",
+      "known_at": 11
+    },
+    {
+      "name": "Centipede kite (蜈蚣风筝)",
+      "facet": "Kites, swings and folk contests",
+      "known_at": 8
+    },
+    {
+      "name": "Swallow kite (沙燕风筝)",
+      "facet": "Kites, swings and folk contests",
+      "known_at": 9
+    },
+    {
+      "name": "Go (围棋)",
+      "facet": "Traditional board and strategy games",
+      "known_at": 4
+    },
+    {
+      "name": "Chinese chess (象棋)",
+      "facet": "Traditional board and strategy games",
+      "known_at": 3
+    },
+    {
+      "name": "Mahjong (麻将)",
+      "facet": "Traditional board and strategy games",
+      "known_at": 3
+    },
+    {
+      "name": "Ke Jie (柯洁)",
+      "facet": "Traditional board and strategy games",
+      "known_at": 10
+    },
+    {
+      "name": "Nie Weiping (聂卫平)",
+      "facet": "Traditional board and strategy games",
+      "known_at": 11
+    },
+    {
+      "name": "Chu River–Han Border (楚河汉界)",
+      "facet": "Traditional board and strategy games",
+      "known_at": 6
+    },
+    {
+      "name": "Military chess (军棋)",
+      "facet": "Traditional board and strategy games",
+      "known_at": 4
+    },
+    {
+      "name": "Aeroplane chess (飞行棋)",
+      "facet": "Traditional board and strategy games",
+      "known_at": 2
+    },
+    {
+      "name": "Emperor Yao (尧)",
+      "facet": "Traditional board and strategy games",
+      "known_at": 12
+    },
+    {
+      "name": "Shuai jiao (摔跤)",
+      "facet": "Wrestling, tug-of-war and strength sports",
+      "known_at": 8
+    },
+    {
+      "name": "Mongolian wrestling (搏克)",
+      "facet": "Wrestling, tug-of-war and strength sports",
+      "known_at": 10
+    },
+    {
+      "name": "Sumo (相扑)",
+      "facet": "Wrestling, tug-of-war and strength sports",
+      "known_at": 6
+    },
+    {
+      "name": "Jiaodi (角抵)",
+      "facet": "Wrestling, tug-of-war and strength sports",
+      "known_at": 12
+    },
+    {
+      "name": "Stone lock lifting (石锁)",
+      "facet": "Wrestling, tug-of-war and strength sports",
+      "known_at": 11
+    },
+    {
+      "name": "Weightlifting (举重)",
+      "facet": "Wrestling, tug-of-war and strength sports",
+      "known_at": 3
+    },
+    {
+      "name": "Arm wrestling (掰手腕)",
+      "facet": "Wrestling, tug-of-war and strength sports",
+      "known_at": 2
+    },
+    {
+      "name": "Sanda (散打)",
+      "facet": "Wrestling, tug-of-war and strength sports",
+      "known_at": 9
+    },
+    {
+      "name": "Huo Yuanjia (霍元甲)",
+      "facet": "Wrestling, tug-of-war and strength sports",
+      "known_at": 9
+    },
+    {
+      "name": "Hook pulling (牵钩)",
+      "facet": "Wrestling, tug-of-war and strength sports",
+      "known_at": 13
+    },
+    {
+      "name": "Bruce Lee (李小龙)",
+      "facet": "Wrestling, tug-of-war and strength sports",
+      "known_at": 3
+    },
+    {
+      "name": "Wushu (武术)",
+      "facet": "Wrestling, tug-of-war and strength sports",
+      "known_at": 4
+    }
+  ]
+}

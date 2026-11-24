@@ -1,0 +1,952 @@
+{
+  "subcategory": "qing-dynasty",
+  "facets": [
+    "Founding and Manchu origins",
+    "Kangxi Emperor's reign",
+    "Yongzheng Emperor's reign",
+    "Qianlong Emperor's reign",
+    "Officials, scholars and famous figures",
+    "Court life and the Forbidden City",
+    "Imperial gardens and palaces",
+    "Queue, clothing and Manchu customs",
+    "Government, banners and examinations",
+    "Wars and frontiers of the High Qing",
+    "Literature, books and arts",
+    "Trade, porcelain and daily life"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 5,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Hong Taiji",
+      "facet": "Founding and Manchu origins",
+      "known_at": 9
+    },
+    {
+      "name": "Jurchen people",
+      "facet": "Founding and Manchu origins",
+      "known_at": 8
+    },
+    {
+      "name": "Manchu people",
+      "facet": "Founding and Manchu origins",
+      "known_at": 4
+    },
+    {
+      "name": "Aisin Gioro",
+      "facet": "Founding and Manchu origins",
+      "known_at": 8
+    },
+    {
+      "name": "Hetu Ala",
+      "facet": "Founding and Manchu origins",
+      "known_at": 14
+    },
+    {
+      "name": "Shenyang Imperial Palace",
+      "facet": "Founding and Manchu origins",
+      "known_at": 8
+    },
+    {
+      "name": "Empress Dowager Xiaozhuang",
+      "facet": "Founding and Manchu origins",
+      "known_at": 9
+    },
+    {
+      "name": "Year 1644",
+      "facet": "Founding and Manchu origins",
+      "known_at": 8
+    },
+    {
+      "name": "Kangxi's 61-year reign",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 7
+    },
+    {
+      "name": "Oboi",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 7
+    },
+    {
+      "name": "Revolt of the Three Feudatories",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 9
+    },
+    {
+      "name": "Treaty of Nerchinsk",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 9
+    },
+    {
+      "name": "Siege of Albazin",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 10
+    },
+    {
+      "name": "Galdan",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 10
+    },
+    {
+      "name": "Battle of Jao Modo",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 14
+    },
+    {
+      "name": "Kangxi's southern inspection tours",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 8
+    },
+    {
+      "name": "Kangxi Dictionary",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 7
+    },
+    {
+      "name": "Complete Tang Poems",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 11
+    },
+    {
+      "name": "Struggle of the Nine Princes",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 7
+    },
+    {
+      "name": "Yinreng",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 11
+    },
+    {
+      "name": "Ferdinand Verbiest",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 13
+    },
+    {
+      "name": "Thousand Elders Banquet",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 11
+    },
+    {
+      "name": "Never raising the land tax",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 12
+    },
+    {
+      "name": "Kangxi Emperor (TV series)",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 8
+    },
+    {
+      "name": "Duolun Assembly",
+      "facet": "Kangxi Emperor's reign",
+      "known_at": 14
+    },
+    {
+      "name": "Yongzheng Emperor",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 5
+    },
+    {
+      "name": "Grand Council",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 9
+    },
+    {
+      "name": "Secret heir system",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 9
+    },
+    {
+      "name": "“Upright and Bright” plaque",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 8
+    },
+    {
+      "name": "Tanding rumu",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 10
+    },
+    {
+      "name": "Huohao guigong",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 12
+    },
+    {
+      "name": "Yanglian silver",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 12
+    },
+    {
+      "name": "Gaitu guiliu",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 10
+    },
+    {
+      "name": "Nian Gengyao",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 8
+    },
+    {
+      "name": "Longkodo",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 10
+    },
+    {
+      "name": "Yinxiang, Prince Yi",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 10
+    },
+    {
+      "name": "Vermilion rescripts",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 11
+    },
+    {
+      "name": "Zeng Jing case",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 14
+    },
+    {
+      "name": "Dayi Juemi Lu",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 14
+    },
+    {
+      "name": "Treaty of Kyakhta",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 13
+    },
+    {
+      "name": "Yongzheng Dynasty (TV series)",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 9
+    },
+    {
+      "name": "Empresses in the Palace",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 6
+    },
+    {
+      "name": "Abolition of the debased status",
+      "facet": "Yongzheng Emperor's reign",
+      "known_at": 14
+    },
+    {
+      "name": "Qianlong's southern tours",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 6
+    },
+    {
+      "name": "Ten Great Campaigns",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 11
+    },
+    {
+      "name": "Old Man of the Ten Perfections",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 11
+    },
+    {
+      "name": "Macartney Embassy",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 9
+    },
+    {
+      "name": "Qianlong's poems",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 8
+    },
+    {
+      "name": "Qianlong's seals on paintings",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 7
+    },
+    {
+      "name": "Hall of Three Rarities",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 11
+    },
+    {
+      "name": "Abdication to Jiaqing",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 10
+    },
+    {
+      "name": "Jiaqing Emperor",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 8
+    },
+    {
+      "name": "Fragrant Concubine",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 7
+    },
+    {
+      "name": "Empress Xiaoxian",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 9
+    },
+    {
+      "name": "Prosperous Age of Kangxi and Qianlong",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 8
+    },
+    {
+      "name": "Literary inquisition",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 10
+    },
+    {
+      "name": "My Fair Princess",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 4
+    },
+    {
+      "name": "Story of Yanxi Palace",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 6
+    },
+    {
+      "name": "Taishang Huang",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 10
+    },
+    {
+      "name": "Yuling Mausoleum",
+      "facet": "Qianlong Emperor's reign",
+      "known_at": 13
+    },
+    {
+      "name": "Heshen",
+      "facet": "Officials, scholars and famous figures",
+      "known_at": 5
+    },
+    {
+      "name": "Ji Xiaolan",
+      "facet": "Officials, scholars and famous figures",
+      "known_at": 6
+    },
+    {
+      "name": "Liu Yong",
+      "facet": "Officials, scholars and famous figures",
+      "known_at": 6
+    },
+    {
+      "name": "Zhang Tingyu",
+      "facet": "Officials, scholars and famous figures",
+      "known_at": 11
+    },
+    {
+      "name": "Yu Chenglong",
+      "facet": "Officials, scholars and famous figures",
+      "known_at": 11
+    },
+    {
+      "name": "Li Wei",
+      "facet": "Officials, scholars and famous figures",
+      "known_at": 10
+    },
+    {
+      "name": "Tian Wenjing",
+      "facet": "Officials, scholars and famous figures",
+      "known_at": 12
+    },
+    {
+      "name": "Fuheng",
+      "facet": "Officials, scholars and famous figures",
+      "known_at": 9
+    },
+    {
+      "name": "Zhaohui",
+      "facet": "Officials, scholars and famous figures",
+      "known_at": 13
+    },
+    {
+      "name": "Shi Lang",
+      "facet": "Officials, scholars and famous figures",
+      "known_at": 10
+    },
+    {
+      "name": "Cao Xueqin",
+      "facet": "Officials, scholars and famous figures",
+      "known_at": 6
+    },
+    {
+      "name": "Wu Jingzi",
+      "facet": "Officials, scholars and famous figures",
+      "known_at": 8
+    },
+    {
+      "name": "Yuan Mei",
+      "facet": "Officials, scholars and famous figures",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Fuzhi",
+      "facet": "Officials, scholars and famous figures",
+      "known_at": 10
+    },
+    {
+      "name": "Nalan Xingde",
+      "facet": "Officials, scholars and famous figures",
+      "known_at": 8
+    },
+    {
+      "name": "Dai Zhen",
+      "facet": "Officials, scholars and famous figures",
+      "known_at": 13
+    },
+    {
+      "name": "Gate of Divine Prowess",
+      "facet": "Court life and the Forbidden City",
+      "known_at": 9
+    },
+    {
+      "name": "Six Eastern and Six Western Palaces",
+      "facet": "Court life and the Forbidden City",
+      "known_at": 8
+    },
+    {
+      "name": "Eunuchs",
+      "facet": "Court life and the Forbidden City",
+      "known_at": 5
+    },
+    {
+      "name": "Imperial consort ranks",
+      "facet": "Court life and the Forbidden City",
+      "known_at": 7
+    },
+    {
+      "name": "Xiunü selection",
+      "facet": "Court life and the Forbidden City",
+      "known_at": 7
+    },
+    {
+      "name": "Imperial Household Department",
+      "facet": "Court life and the Forbidden City",
+      "known_at": 10
+    },
+    {
+      "name": "Imperial kitchen",
+      "facet": "Court life and the Forbidden City",
+      "known_at": 7
+    },
+    {
+      "name": "Manchu Han Imperial Feast",
+      "facet": "Court life and the Forbidden City",
+      "known_at": 5
+    },
+    {
+      "name": "Kowtow",
+      "facet": "Court life and the Forbidden City",
+      "known_at": 5
+    },
+    {
+      "name": "Wansui",
+      "facet": "Court life and the Forbidden City",
+      "known_at": 3
+    },
+    {
+      "name": "Imperial seal",
+      "facet": "Court life and the Forbidden City",
+      "known_at": 5
+    },
+    {
+      "name": "Zhen Huan",
+      "facet": "Court life and the Forbidden City",
+      "known_at": 6
+    },
+    {
+      "name": "Old Summer Palace",
+      "facet": "Imperial gardens and palaces",
+      "known_at": 4
+    },
+    {
+      "name": "Eight Outer Temples",
+      "facet": "Imperial gardens and palaces",
+      "known_at": 11
+    },
+    {
+      "name": "Xiyanglou",
+      "facet": "Imperial gardens and palaces",
+      "known_at": 9
+    },
+    {
+      "name": "Twelve bronze zodiac heads",
+      "facet": "Imperial gardens and palaces",
+      "known_at": 6
+    },
+    {
+      "name": "Haiyantang",
+      "facet": "Imperial gardens and palaces",
+      "known_at": 10
+    },
+    {
+      "name": "Fuhai Lake",
+      "facet": "Imperial gardens and palaces",
+      "known_at": 12
+    },
+    {
+      "name": "Fragrant Hills",
+      "facet": "Imperial gardens and palaces",
+      "known_at": 5
+    },
+    {
+      "name": "Three Hills and Five Gardens",
+      "facet": "Imperial gardens and palaces",
+      "known_at": 12
+    },
+    {
+      "name": "Mulan Hunting Grounds",
+      "facet": "Imperial gardens and palaces",
+      "known_at": 10
+    },
+    {
+      "name": "White Pagoda of Beihai",
+      "facet": "Imperial gardens and palaces",
+      "known_at": 3
+    },
+    {
+      "name": "Queue hairstyle",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 3
+    },
+    {
+      "name": "Head-shaving order",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 8
+    },
+    {
+      "name": "Magua jacket",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 6
+    },
+    {
+      "name": "Horse-hoof sleeves",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 10
+    },
+    {
+      "name": "Mandarin square",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 9
+    },
+    {
+      "name": "Hat finial",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 8
+    },
+    {
+      "name": "Peacock feather plume",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 8
+    },
+    {
+      "name": "Liangbatou hairstyle",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 7
+    },
+    {
+      "name": "Flowerpot shoes",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 6
+    },
+    {
+      "name": "Court beads",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 8
+    },
+    {
+      "name": "Dragon robe",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 4
+    },
+    {
+      "name": "Manchu language",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 6
+    },
+    {
+      "name": "Manchu shamanism",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 12
+    },
+    {
+      "name": "Mounted archery",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 6
+    },
+    {
+      "name": "Bingxi ice skating",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 10
+    },
+    {
+      "name": "Daqian salute",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 8
+    },
+    {
+      "name": "Wanfu greeting",
+      "facet": "Queue, clothing and Manchu customs",
+      "known_at": 6
+    },
+    {
+      "name": "Eight Banners",
+      "facet": "Government, banners and examinations",
+      "known_at": 6
+    },
+    {
+      "name": "Bordered Yellow Banner",
+      "facet": "Government, banners and examinations",
+      "known_at": 10
+    },
+    {
+      "name": "Upper Three Banners",
+      "facet": "Government, banners and examinations",
+      "known_at": 12
+    },
+    {
+      "name": "Bannermen",
+      "facet": "Government, banners and examinations",
+      "known_at": 8
+    },
+    {
+      "name": "Niru",
+      "facet": "Government, banners and examinations",
+      "known_at": 14
+    },
+    {
+      "name": "Green Standard Army",
+      "facet": "Government, banners and examinations",
+      "known_at": 11
+    },
+    {
+      "name": "Palace examination",
+      "facet": "Government, banners and examinations",
+      "known_at": 8
+    },
+    {
+      "name": "Six Ministries",
+      "facet": "Government, banners and examinations",
+      "known_at": 8
+    },
+    {
+      "name": "Lifan Yuan",
+      "facet": "Government, banners and examinations",
+      "known_at": 12
+    },
+    {
+      "name": "Viceroy",
+      "facet": "Government, banners and examinations",
+      "known_at": 9
+    },
+    {
+      "name": "Provincial governor (Xunfu)",
+      "facet": "Government, banners and examinations",
+      "known_at": 11
+    },
+    {
+      "name": "Censorate",
+      "facet": "Government, banners and examinations",
+      "known_at": 12
+    },
+    {
+      "name": "Baojia system",
+      "facet": "Government, banners and examinations",
+      "known_at": 12
+    },
+    {
+      "name": "Dzungar Khanate",
+      "facet": "Wars and frontiers of the High Qing",
+      "known_at": 11
+    },
+    {
+      "name": "Amursana",
+      "facet": "Wars and frontiers of the High Qing",
+      "known_at": 14
+    },
+    {
+      "name": "Ili General",
+      "facet": "Wars and frontiers of the High Qing",
+      "known_at": 12
+    },
+    {
+      "name": "Jinchuan campaigns",
+      "facet": "Wars and frontiers of the High Qing",
+      "known_at": 13
+    },
+    {
+      "name": "Sino-Burmese War",
+      "facet": "Wars and frontiers of the High Qing",
+      "known_at": 13
+    },
+    {
+      "name": "Sino-Nepalese War",
+      "facet": "Wars and frontiers of the High Qing",
+      "known_at": 13
+    },
+    {
+      "name": "Return of the Torghuts",
+      "facet": "Wars and frontiers of the High Qing",
+      "known_at": 10
+    },
+    {
+      "name": "Golden Urn",
+      "facet": "Wars and frontiers of the High Qing",
+      "known_at": 11
+    },
+    {
+      "name": "Amban",
+      "facet": "Wars and frontiers of the High Qing",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Penghu",
+      "facet": "Wars and frontiers of the High Qing",
+      "known_at": 11
+    },
+    {
+      "name": "Lin Shuangwen rebellion",
+      "facet": "Wars and frontiers of the High Qing",
+      "known_at": 13
+    },
+    {
+      "name": "White Lotus Rebellion",
+      "facet": "Wars and frontiers of the High Qing",
+      "known_at": 10
+    },
+    {
+      "name": "Eight Trigrams uprising of 1813",
+      "facet": "Wars and frontiers of the High Qing",
+      "known_at": 13
+    },
+    {
+      "name": "Khalkha Mongols",
+      "facet": "Wars and frontiers of the High Qing",
+      "known_at": 12
+    },
+    {
+      "name": "Jahangir Khoja",
+      "facet": "Wars and frontiers of the High Qing",
+      "known_at": 14
+    },
+    {
+      "name": "Sino-Vietnamese War of 1788–1789",
+      "facet": "Wars and frontiers of the High Qing",
+      "known_at": 14
+    },
+    {
+      "name": "Dream of the Red Chamber",
+      "facet": "Literature, books and arts",
+      "known_at": 4
+    },
+    {
+      "name": "Strange Tales from a Chinese Studio",
+      "facet": "Literature, books and arts",
+      "known_at": 5
+    },
+    {
+      "name": "The Scholars",
+      "facet": "Literature, books and arts",
+      "known_at": 8
+    },
+    {
+      "name": "The Peach Blossom Fan",
+      "facet": "Literature, books and arts",
+      "known_at": 11
+    },
+    {
+      "name": "The Palace of Eternal Youth",
+      "facet": "Literature, books and arts",
+      "known_at": 12
+    },
+    {
+      "name": "Siku Quanshu",
+      "facet": "Literature, books and arts",
+      "known_at": 8
+    },
+    {
+      "name": "Gujin Tushu Jicheng",
+      "facet": "Literature, books and arts",
+      "known_at": 13
+    },
+    {
+      "name": "Three Hundred Tang Poems",
+      "facet": "Literature, books and arts",
+      "known_at": 5
+    },
+    {
+      "name": "Guwen Guanzhi",
+      "facet": "Literature, books and arts",
+      "known_at": 10
+    },
+    {
+      "name": "Notes of the Thatched Abode of Close Scrutiny",
+      "facet": "Literature, books and arts",
+      "known_at": 12
+    },
+    {
+      "name": "Flowers in the Mirror",
+      "facet": "Literature, books and arts",
+      "known_at": 10
+    },
+    {
+      "name": "Six Records of a Floating Life",
+      "facet": "Literature, books and arts",
+      "known_at": 11
+    },
+    {
+      "name": "Suiyuan Shidan",
+      "facet": "Literature, books and arts",
+      "known_at": 12
+    },
+    {
+      "name": "Wenyuan Pavilion",
+      "facet": "Literature, books and arts",
+      "known_at": 12
+    },
+    {
+      "name": "Eight Eccentrics of Yangzhou",
+      "facet": "Literature, books and arts",
+      "known_at": 9
+    },
+    {
+      "name": "Shitao",
+      "facet": "Literature, books and arts",
+      "known_at": 12
+    },
+    {
+      "name": "Giuseppe Castiglione",
+      "facet": "Literature, books and arts",
+      "known_at": 11
+    },
+    {
+      "name": "One Hundred Horses scroll",
+      "facet": "Literature, books and arts",
+      "known_at": 12
+    },
+    {
+      "name": "Four Great Anhui Troupes",
+      "facet": "Literature, books and arts",
+      "known_at": 9
+    },
+    {
+      "name": "Peking opera",
+      "facet": "Literature, books and arts",
+      "known_at": 2
+    },
+    {
+      "name": "Kunqu opera",
+      "facet": "Literature, books and arts",
+      "known_at": 8
+    },
+    {
+      "name": "Canton System",
+      "facet": "Trade, porcelain and daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Thirteen Factories",
+      "facet": "Trade, porcelain and daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Cohong",
+      "facet": "Trade, porcelain and daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Wu Bingjian",
+      "facet": "Trade, porcelain and daily life",
+      "known_at": 13
+    },
+    {
+      "name": "Great Clearance",
+      "facet": "Trade, porcelain and daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Tea trade",
+      "facet": "Trade, porcelain and daily life",
+      "known_at": 6
+    },
+    {
+      "name": "Tea Road to Kyakhta",
+      "facet": "Trade, porcelain and daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Copper cash",
+      "facet": "Trade, porcelain and daily life",
+      "known_at": 4
+    },
+    {
+      "name": "Famille rose",
+      "facet": "Trade, porcelain and daily life",
+      "known_at": 11
+    },
+    {
+      "name": "Falangcai enamel",
+      "facet": "Trade, porcelain and daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Snuff bottle",
+      "facet": "Trade, porcelain and daily life",
+      "known_at": 7
+    },
+    {
+      "name": "Maize",
+      "facet": "Trade, porcelain and daily life",
+      "known_at": 6
+    },
+    {
+      "name": "Population boom",
+      "facet": "Trade, porcelain and daily life",
+      "known_at": 9
+    }
+  ]
+}

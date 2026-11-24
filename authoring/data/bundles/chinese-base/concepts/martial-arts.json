@@ -1,0 +1,772 @@
+{
+  "subcategory": "martial-arts",
+  "facets": [
+    "Shaolin Temple and kung fu",
+    "Wudang and Taoist styles",
+    "Taijiquan styles and practice",
+    "Famous masters and heroes",
+    "Southern styles and Wing Chun",
+    "Animal and imitation styles",
+    "Traditional weapons",
+    "Modern competitive wushu and sanda",
+    "Training methods and qigong",
+    "Martial-arts terms and etiquette",
+    "Wuxia world and legends",
+    "Lion dance and festival martial arts"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 5,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Warrior monk",
+      "facet": "Shaolin Temple and kung fu",
+      "known_at": 4
+    },
+    {
+      "name": "Thirteen Staff Monks",
+      "facet": "Shaolin Temple and kung fu",
+      "known_at": 9
+    },
+    {
+      "name": "Li Shimin",
+      "facet": "Shaolin Temple and kung fu",
+      "known_at": 8
+    },
+    {
+      "name": "Pagoda Forest",
+      "facet": "Shaolin Temple and kung fu",
+      "known_at": 9
+    },
+    {
+      "name": "Shaolin 72 Arts",
+      "facet": "Shaolin Temple and kung fu",
+      "known_at": 9
+    },
+    {
+      "name": "Dengfeng",
+      "facet": "Shaolin Temple and kung fu",
+      "known_at": 10
+    },
+    {
+      "name": "Chan Buddhism",
+      "facet": "Shaolin Temple and kung fu",
+      "known_at": 10
+    },
+    {
+      "name": "Luohan Quan",
+      "facet": "Shaolin Temple and kung fu",
+      "known_at": 10
+    },
+    {
+      "name": "Southern Shaolin Temple",
+      "facet": "Shaolin Temple and kung fu",
+      "known_at": 11
+    },
+    {
+      "name": "Bodhidharma Cave",
+      "facet": "Shaolin Temple and kung fu",
+      "known_at": 12
+    },
+    {
+      "name": "Xiao Hong Quan",
+      "facet": "Shaolin Temple and kung fu",
+      "known_at": 13
+    },
+    {
+      "name": "Thousand Buddha Hall",
+      "facet": "Shaolin Temple and kung fu",
+      "known_at": 13
+    },
+    {
+      "name": "Wudang style",
+      "facet": "Wudang and Taoist styles",
+      "known_at": 6
+    },
+    {
+      "name": "Taiji diagram",
+      "facet": "Wudang and Taoist styles",
+      "known_at": 5
+    },
+    {
+      "name": "Taoism",
+      "facet": "Wudang and Taoist styles",
+      "known_at": 7
+    },
+    {
+      "name": "Taoist priest",
+      "facet": "Wudang and Taoist styles",
+      "known_at": 6
+    },
+    {
+      "name": "Golden Summit",
+      "facet": "Wudang and Taoist styles",
+      "known_at": 11
+    },
+    {
+      "name": "Zhenwu",
+      "facet": "Wudang and Taoist styles",
+      "known_at": 12
+    },
+    {
+      "name": "Internal martial arts",
+      "facet": "Wudang and Taoist styles",
+      "known_at": 10
+    },
+    {
+      "name": "Dong Haichuan",
+      "facet": "Wudang and Taoist styles",
+      "known_at": 14
+    },
+    {
+      "name": "Wudang sword",
+      "facet": "Wudang and Taoist styles",
+      "known_at": 10
+    },
+    {
+      "name": "Morning taiji in the park",
+      "facet": "Taijiquan styles and practice",
+      "known_at": 3
+    },
+    {
+      "name": "Wu-style taiji",
+      "facet": "Taijiquan styles and practice",
+      "known_at": 13
+    },
+    {
+      "name": "Sun-style taiji",
+      "facet": "Taijiquan styles and practice",
+      "known_at": 13
+    },
+    {
+      "name": "Chenjiagou",
+      "facet": "Taijiquan styles and practice",
+      "known_at": 11
+    },
+    {
+      "name": "Chen Wangting",
+      "facet": "Taijiquan styles and practice",
+      "known_at": 13
+    },
+    {
+      "name": "Yang Luchan",
+      "facet": "Taijiquan styles and practice",
+      "known_at": 12
+    },
+    {
+      "name": "Yang Chengfu",
+      "facet": "Taijiquan styles and practice",
+      "known_at": 14
+    },
+    {
+      "name": "24-form taiji",
+      "facet": "Taijiquan styles and practice",
+      "known_at": 8
+    },
+    {
+      "name": "Taiji UNESCO 2020",
+      "facet": "Taijiquan styles and practice",
+      "known_at": 10
+    },
+    {
+      "name": "Cloud hands",
+      "facet": "Taijiquan styles and practice",
+      "known_at": 9
+    },
+    {
+      "name": "Single whip",
+      "facet": "Taijiquan styles and practice",
+      "known_at": 12
+    },
+    {
+      "name": "Grasp the bird's tail",
+      "facet": "Taijiquan styles and practice",
+      "known_at": 12
+    },
+    {
+      "name": "Taiji fan",
+      "facet": "Taijiquan styles and practice",
+      "known_at": 6
+    },
+    {
+      "name": "Huo Yuanjia",
+      "facet": "Famous masters and heroes",
+      "known_at": 7
+    },
+    {
+      "name": "Fang Shiyu",
+      "facet": "Famous masters and heroes",
+      "known_at": 10
+    },
+    {
+      "name": "Hong Xiguan",
+      "facet": "Famous masters and heroes",
+      "known_at": 12
+    },
+    {
+      "name": "Sun Lutang",
+      "facet": "Famous masters and heroes",
+      "known_at": 14
+    },
+    {
+      "name": "Wang Ziping",
+      "facet": "Famous masters and heroes",
+      "known_at": 14
+    },
+    {
+      "name": "Li Shuwen",
+      "facet": "Famous masters and heroes",
+      "known_at": 14
+    },
+    {
+      "name": "Wang Wu",
+      "facet": "Famous masters and heroes",
+      "known_at": 12
+    },
+    {
+      "name": "Su Qi'er",
+      "facet": "Famous masters and heroes",
+      "known_at": 10
+    },
+    {
+      "name": "Zhou Tong",
+      "facet": "Famous masters and heroes",
+      "known_at": 13
+    },
+    {
+      "name": "Jingwu Athletic Association",
+      "facet": "Famous masters and heroes",
+      "known_at": 11
+    },
+    {
+      "name": "Chi sao",
+      "facet": "Southern styles and Wing Chun",
+      "known_at": 11
+    },
+    {
+      "name": "Siu Nim Tau",
+      "facet": "Southern styles and Wing Chun",
+      "known_at": 13
+    },
+    {
+      "name": "Hung Gar",
+      "facet": "Southern styles and Wing Chun",
+      "known_at": 10
+    },
+    {
+      "name": "Choy Li Fut",
+      "facet": "Southern styles and Wing Chun",
+      "known_at": 12
+    },
+    {
+      "name": "Nanquan",
+      "facet": "Southern styles and Wing Chun",
+      "known_at": 9
+    },
+    {
+      "name": "Southern Fist, Northern Kick",
+      "facet": "Southern styles and Wing Chun",
+      "known_at": 9
+    },
+    {
+      "name": "Fujian White Crane",
+      "facet": "Southern styles and Wing Chun",
+      "known_at": 13
+    },
+    {
+      "name": "Five Ancestors Fist",
+      "facet": "Southern styles and Wing Chun",
+      "known_at": 14
+    },
+    {
+      "name": "Tiger-crane paired form",
+      "facet": "Southern styles and Wing Chun",
+      "known_at": 13
+    },
+    {
+      "name": "Red Boat Opera Company",
+      "facet": "Southern styles and Wing Chun",
+      "known_at": 15
+    },
+    {
+      "name": "Wuqinxi",
+      "facet": "Animal and imitation styles",
+      "known_at": 9
+    },
+    {
+      "name": "Tiger style",
+      "facet": "Animal and imitation styles",
+      "known_at": 4
+    },
+    {
+      "name": "Crane style",
+      "facet": "Animal and imitation styles",
+      "known_at": 5
+    },
+    {
+      "name": "Snake style",
+      "facet": "Animal and imitation styles",
+      "known_at": 5
+    },
+    {
+      "name": "Monkey style",
+      "facet": "Animal and imitation styles",
+      "known_at": 5
+    },
+    {
+      "name": "Mantis style",
+      "facet": "Animal and imitation styles",
+      "known_at": 6
+    },
+    {
+      "name": "Dragon style",
+      "facet": "Animal and imitation styles",
+      "known_at": 6
+    },
+    {
+      "name": "Eagle Claw",
+      "facet": "Animal and imitation styles",
+      "known_at": 9
+    },
+    {
+      "name": "Drunken fist",
+      "facet": "Animal and imitation styles",
+      "known_at": 6
+    },
+    {
+      "name": "Leopard style",
+      "facet": "Animal and imitation styles",
+      "known_at": 8
+    },
+    {
+      "name": "Wang Lang",
+      "facet": "Animal and imitation styles",
+      "known_at": 14
+    },
+    {
+      "name": "Furious Five",
+      "facet": "Animal and imitation styles",
+      "known_at": 4
+    },
+    {
+      "name": "Deer play",
+      "facet": "Animal and imitation styles",
+      "known_at": 11
+    },
+    {
+      "name": "Bear play",
+      "facet": "Animal and imitation styles",
+      "known_at": 11
+    },
+    {
+      "name": "Staff",
+      "facet": "Traditional weapons",
+      "known_at": 3
+    },
+    {
+      "name": "Spear",
+      "facet": "Traditional weapons",
+      "known_at": 4
+    },
+    {
+      "name": "Broadsword",
+      "facet": "Traditional weapons",
+      "known_at": 6
+    },
+    {
+      "name": "Straight sword",
+      "facet": "Traditional weapons",
+      "known_at": 6
+    },
+    {
+      "name": "Nine-section whip",
+      "facet": "Traditional weapons",
+      "known_at": 10
+    },
+    {
+      "name": "Meteor hammer",
+      "facet": "Traditional weapons",
+      "known_at": 11
+    },
+    {
+      "name": "Three-section staff",
+      "facet": "Traditional weapons",
+      "known_at": 10
+    },
+    {
+      "name": "Rope dart",
+      "facet": "Traditional weapons",
+      "known_at": 12
+    },
+    {
+      "name": "Hook swords",
+      "facet": "Traditional weapons",
+      "known_at": 12
+    },
+    {
+      "name": "Ji halberd",
+      "facet": "Traditional weapons",
+      "known_at": 11
+    },
+    {
+      "name": "Eighteen Arms",
+      "facet": "Traditional weapons",
+      "known_at": 9
+    },
+    {
+      "name": "Emei piercers",
+      "facet": "Traditional weapons",
+      "known_at": 13
+    },
+    {
+      "name": "Monk's spade",
+      "facet": "Traditional weapons",
+      "known_at": 10
+    },
+    {
+      "name": "Longquan sword",
+      "facet": "Traditional weapons",
+      "known_at": 11
+    },
+    {
+      "name": "Fan",
+      "facet": "Traditional weapons",
+      "known_at": 6
+    },
+    {
+      "name": "Wushu",
+      "facet": "Modern competitive wushu and sanda",
+      "known_at": 5
+    },
+    {
+      "name": "Sanda",
+      "facet": "Modern competitive wushu and sanda",
+      "known_at": 9
+    },
+    {
+      "name": "Taolu",
+      "facet": "Modern competitive wushu and sanda",
+      "known_at": 11
+    },
+    {
+      "name": "Changquan",
+      "facet": "Modern competitive wushu and sanda",
+      "known_at": 10
+    },
+    {
+      "name": "Nandao",
+      "facet": "Modern competitive wushu and sanda",
+      "known_at": 13
+    },
+    {
+      "name": "Nangun",
+      "facet": "Modern competitive wushu and sanda",
+      "known_at": 13
+    },
+    {
+      "name": "Leitai",
+      "facet": "Modern competitive wushu and sanda",
+      "known_at": 10
+    },
+    {
+      "name": "Beijing 2008 Wushu Tournament",
+      "facet": "Modern competitive wushu and sanda",
+      "known_at": 12
+    },
+    {
+      "name": "Asian Games wushu",
+      "facet": "Modern competitive wushu and sanda",
+      "known_at": 11
+    },
+    {
+      "name": "World Wushu Championships",
+      "facet": "Modern competitive wushu and sanda",
+      "known_at": 11
+    },
+    {
+      "name": "International Wushu Federation",
+      "facet": "Modern competitive wushu and sanda",
+      "known_at": 12
+    },
+    {
+      "name": "Dakar 2026 Youth Olympic Games",
+      "facet": "Modern competitive wushu and sanda",
+      "known_at": 13
+    },
+    {
+      "name": "Wushu Duan ranks",
+      "facet": "Modern competitive wushu and sanda",
+      "known_at": 13
+    },
+    {
+      "name": "Butterfly twist",
+      "facet": "Modern competitive wushu and sanda",
+      "known_at": 11
+    },
+    {
+      "name": "Chinese Wushu Association",
+      "facet": "Modern competitive wushu and sanda",
+      "known_at": 13
+    },
+    {
+      "name": "Wulin Feng",
+      "facet": "Modern competitive wushu and sanda",
+      "known_at": 12
+    },
+    {
+      "name": "Xisuijing",
+      "facet": "Training methods and qigong",
+      "known_at": 13
+    },
+    {
+      "name": "Liuzijue",
+      "facet": "Training methods and qigong",
+      "known_at": 14
+    },
+    {
+      "name": "Horse stance",
+      "facet": "Training methods and qigong",
+      "known_at": 3
+    },
+    {
+      "name": "Bow stance",
+      "facet": "Training methods and qigong",
+      "known_at": 7
+    },
+    {
+      "name": "Zhan zhuang",
+      "facet": "Training methods and qigong",
+      "known_at": 11
+    },
+    {
+      "name": "Plum blossom poles",
+      "facet": "Training methods and qigong",
+      "known_at": 9
+    },
+    {
+      "name": "Iron palm",
+      "facet": "Training methods and qigong",
+      "known_at": 8
+    },
+    {
+      "name": "Iron Shirt",
+      "facet": "Training methods and qigong",
+      "known_at": 9
+    },
+    {
+      "name": "Qi",
+      "facet": "Training methods and qigong",
+      "known_at": 6
+    },
+    {
+      "name": "Meridians",
+      "facet": "Training methods and qigong",
+      "known_at": 10
+    },
+    {
+      "name": "Sandbag training",
+      "facet": "Training methods and qigong",
+      "known_at": 7
+    },
+    {
+      "name": "Fist-and-palm salute",
+      "facet": "Martial-arts terms and etiquette",
+      "known_at": 5
+    },
+    {
+      "name": "Shifu",
+      "facet": "Martial-arts terms and etiquette",
+      "known_at": 3
+    },
+    {
+      "name": "Shixiong",
+      "facet": "Martial-arts terms and etiquette",
+      "known_at": 6
+    },
+    {
+      "name": "Wude",
+      "facet": "Martial-arts terms and etiquette",
+      "known_at": 10
+    },
+    {
+      "name": "Wulin",
+      "facet": "Martial-arts terms and etiquette",
+      "known_at": 9
+    },
+    {
+      "name": "Baishi",
+      "facet": "Martial-arts terms and etiquette",
+      "known_at": 9
+    },
+    {
+      "name": "Wuguan",
+      "facet": "Martial-arts terms and etiquette",
+      "known_at": 8
+    },
+    {
+      "name": "Menpai",
+      "facet": "Martial-arts terms and etiquette",
+      "known_at": 9
+    },
+    {
+      "name": "Qiecuo",
+      "facet": "Martial-arts terms and etiquette",
+      "known_at": 10
+    },
+    {
+      "name": "Disciple",
+      "facet": "Martial-arts terms and etiquette",
+      "known_at": 5
+    },
+    {
+      "name": "Neigong",
+      "facet": "Martial-arts terms and etiquette",
+      "known_at": 9
+    },
+    {
+      "name": "Waijia",
+      "facet": "Martial-arts terms and etiquette",
+      "known_at": 12
+    },
+    {
+      "name": "Xia",
+      "facet": "Martial-arts terms and etiquette",
+      "known_at": 10
+    },
+    {
+      "name": "Biwu zhaoqin",
+      "facet": "Martial-arts terms and etiquette",
+      "known_at": 11
+    },
+    {
+      "name": "Wuxia novel",
+      "facet": "Wuxia world and legends",
+      "known_at": 8
+    },
+    {
+      "name": "Dianxue",
+      "facet": "Wuxia world and legends",
+      "known_at": 7
+    },
+    {
+      "name": "Huashan Sword Contest",
+      "facet": "Wuxia world and legends",
+      "known_at": 9
+    },
+    {
+      "name": "Eighteen Dragon-Subduing Palms",
+      "facet": "Wuxia world and legends",
+      "known_at": 8
+    },
+    {
+      "name": "Nine Yin Manual",
+      "facet": "Wuxia world and legends",
+      "known_at": 10
+    },
+    {
+      "name": "Beggars' Sect",
+      "facet": "Wuxia world and legends",
+      "known_at": 9
+    },
+    {
+      "name": "Southern lion",
+      "facet": "Lion dance and festival martial arts",
+      "known_at": 9
+    },
+    {
+      "name": "Northern lion",
+      "facet": "Lion dance and festival martial arts",
+      "known_at": 10
+    },
+    {
+      "name": "Cai qing",
+      "facet": "Lion dance and festival martial arts",
+      "known_at": 9
+    },
+    {
+      "name": "Dotting the eyes",
+      "facet": "Lion dance and festival martial arts",
+      "known_at": 9
+    },
+    {
+      "name": "High-pole lion dance",
+      "facet": "Lion dance and festival martial arts",
+      "known_at": 9
+    },
+    {
+      "name": "Big-head Buddha",
+      "facet": "Lion dance and festival martial arts",
+      "known_at": 11
+    },
+    {
+      "name": "Gongs and drums",
+      "facet": "Lion dance and festival martial arts",
+      "known_at": 4
+    },
+    {
+      "name": "Red envelope",
+      "facet": "Lion dance and festival martial arts",
+      "known_at": 1
+    },
+    {
+      "name": "Temple fair",
+      "facet": "Lion dance and festival martial arts",
+      "known_at": 5
+    },
+    {
+      "name": "Shehuo",
+      "facet": "Lion dance and festival martial arts",
+      "known_at": 12
+    },
+    {
+      "name": "Stilt walking",
+      "facet": "Lion dance and festival martial arts",
+      "known_at": 5
+    },
+    {
+      "name": "Yingge dance",
+      "facet": "Lion dance and festival martial arts",
+      "known_at": 11
+    }
+  ]
+}

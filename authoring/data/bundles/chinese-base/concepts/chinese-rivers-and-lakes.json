@@ -1,0 +1,1107 @@
+{
+  "subcategory": "chinese-rivers-and-lakes",
+  "facets": [
+    "Yangtze River and its gorges",
+    "Yellow River and its basin",
+    "Pearl River and southern rivers",
+    "Northern and northeastern rivers",
+    "Rivers of Tibet and the west",
+    "Grand Canal and historic waterways",
+    "Great freshwater lakes",
+    "Salt lakes and plateau lakes",
+    "Famous scenic lakes",
+    "Waterfalls of China",
+    "Dams, floods and water projects",
+    "Rivers and lakes in poetry and legend"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Three Gorges (长江三峡)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 5
+    },
+    {
+      "name": "Qutang Gorge (瞿塘峡)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 9
+    },
+    {
+      "name": "Wu Gorge (巫峡)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 9
+    },
+    {
+      "name": "Xiling Gorge (西陵峡)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 10
+    },
+    {
+      "name": "Tiger Leaping Gorge (虎跳峡)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 9
+    },
+    {
+      "name": "Jinsha River (金沙江)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 8
+    },
+    {
+      "name": "Tuotuo River (沱沱河)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 11
+    },
+    {
+      "name": "Geladaindong (各拉丹冬)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 13
+    },
+    {
+      "name": "First Bend of the Yangtze (长江第一湾)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 12
+    },
+    {
+      "name": "Han River (汉江)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 8
+    },
+    {
+      "name": "Jialing River (嘉陵江)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 9
+    },
+    {
+      "name": "Min River (岷江)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 9
+    },
+    {
+      "name": "Huangpu River (黄浦江)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 6
+    },
+    {
+      "name": "Shennong Stream (神农溪)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 12
+    },
+    {
+      "name": "Wuhan Yangtze River Bridge (武汉长江大桥)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 7
+    },
+    {
+      "name": "Nanjing Yangtze River Bridge (南京长江大桥)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 7
+    },
+    {
+      "name": "Yangtze River Delta (长江三角洲)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 6
+    },
+    {
+      "name": "Chongming Island (崇明岛)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 8
+    },
+    {
+      "name": "Chinese sturgeon (中华鲟)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 6
+    },
+    {
+      "name": "Baiji (白鱀豚)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 7
+    },
+    {
+      "name": "Yangtze finless porpoise (长江江豚)",
+      "facet": "Yangtze River and its gorges",
+      "known_at": 7
+    },
+    {
+      "name": "Loess Plateau (黄土高原)",
+      "facet": "Yellow River and its basin",
+      "known_at": 6
+    },
+    {
+      "name": "Hanging river (地上河)",
+      "facet": "Yellow River and its basin",
+      "known_at": 8
+    },
+    {
+      "name": "Ji-shaped Bend (几字弯)",
+      "facet": "Yellow River and its basin",
+      "known_at": 8
+    },
+    {
+      "name": "Hetao Plain (河套平原)",
+      "facet": "Yellow River and its basin",
+      "known_at": 10
+    },
+    {
+      "name": "Ordos Plateau (鄂尔多斯高原)",
+      "facet": "Yellow River and its basin",
+      "known_at": 11
+    },
+    {
+      "name": "Wei River (渭河)",
+      "facet": "Yellow River and its basin",
+      "known_at": 9
+    },
+    {
+      "name": "Fen River (汾河)",
+      "facet": "Yellow River and its basin",
+      "known_at": 10
+    },
+    {
+      "name": "Yellow River Delta (黄河三角洲)",
+      "facet": "Yellow River and its basin",
+      "known_at": 8
+    },
+    {
+      "name": "Bayan Har Mountains (巴颜喀拉山)",
+      "facet": "Yellow River and its basin",
+      "known_at": 11
+    },
+    {
+      "name": "Sanmenxia (三门峡)",
+      "facet": "Yellow River and its basin",
+      "known_at": 11
+    },
+    {
+      "name": "Liujiaxia Gorge (刘家峡)",
+      "facet": "Yellow River and its basin",
+      "known_at": 12
+    },
+    {
+      "name": "Qingtongxia (青铜峡)",
+      "facet": "Yellow River and its basin",
+      "known_at": 12
+    },
+    {
+      "name": "Lanzhou Zhongshan Bridge (中山桥)",
+      "facet": "Yellow River and its basin",
+      "known_at": 10
+    },
+    {
+      "name": "Sheepskin raft (羊皮筏子)",
+      "facet": "Yellow River and its basin",
+      "known_at": 9
+    },
+    {
+      "name": "Shapotou (沙坡头)",
+      "facet": "Yellow River and its basin",
+      "known_at": 11
+    },
+    {
+      "name": "Yellow River carp (黄河鲤鱼)",
+      "facet": "Yellow River and its basin",
+      "known_at": 10
+    },
+    {
+      "name": "Pearl River (珠江)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 3
+    },
+    {
+      "name": "Xi River (西江)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 8
+    },
+    {
+      "name": "Bei River (北江)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 10
+    },
+    {
+      "name": "Dong River (东江)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 10
+    },
+    {
+      "name": "Pearl River Delta (珠江三角洲)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 6
+    },
+    {
+      "name": "Lingdingyang (伶仃洋)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 12
+    },
+    {
+      "name": "Humen (虎门)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 9
+    },
+    {
+      "name": "Hong Kong–Zhuhai–Macao Bridge (港珠澳大桥)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 6
+    },
+    {
+      "name": "Li River (漓江)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 5
+    },
+    {
+      "name": "Hongshui River (红水河)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 12
+    },
+    {
+      "name": "Liu River (柳江)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 11
+    },
+    {
+      "name": "Yong River (邕江)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 12
+    },
+    {
+      "name": "Nanpan River (南盘江)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 13
+    },
+    {
+      "name": "Qiantang River (钱塘江)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 6
+    },
+    {
+      "name": "Min River (闽江)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 10
+    },
+    {
+      "name": "Jiulong River (九龙江)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 13
+    },
+    {
+      "name": "Xiang River (湘江)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 8
+    },
+    {
+      "name": "Gan River (赣江)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 9
+    },
+    {
+      "name": "Red River (元江)",
+      "facet": "Pearl River and southern rivers",
+      "known_at": 12
+    },
+    {
+      "name": "Heilongjiang River (黑龙江)",
+      "facet": "Northern and northeastern rivers",
+      "known_at": 6
+    },
+    {
+      "name": "Songhua River (松花江)",
+      "facet": "Northern and northeastern rivers",
+      "known_at": 6
+    },
+    {
+      "name": "Nen River (嫩江)",
+      "facet": "Northern and northeastern rivers",
+      "known_at": 11
+    },
+    {
+      "name": "Ussuri River (乌苏里江)",
+      "facet": "Northern and northeastern rivers",
+      "known_at": 9
+    },
+    {
+      "name": "Argun River (额尔古纳河)",
+      "facet": "Northern and northeastern rivers",
+      "known_at": 11
+    },
+    {
+      "name": "Tumen River (图们江)",
+      "facet": "Northern and northeastern rivers",
+      "known_at": 10
+    },
+    {
+      "name": "Yalu River (鸭绿江)",
+      "facet": "Northern and northeastern rivers",
+      "known_at": 7
+    },
+    {
+      "name": "Mudan River (牡丹江)",
+      "facet": "Northern and northeastern rivers",
+      "known_at": 12
+    },
+    {
+      "name": "Liao River (辽河)",
+      "facet": "Northern and northeastern rivers",
+      "known_at": 9
+    },
+    {
+      "name": "Hai River (海河)",
+      "facet": "Northern and northeastern rivers",
+      "known_at": 8
+    },
+    {
+      "name": "Yongding River (永定河)",
+      "facet": "Northern and northeastern rivers",
+      "known_at": 10
+    },
+    {
+      "name": "Lugou Bridge (卢沟桥)",
+      "facet": "Northern and northeastern rivers",
+      "known_at": 7
+    },
+    {
+      "name": "Chaobai River (潮白河)",
+      "facet": "Northern and northeastern rivers",
+      "known_at": 12
+    },
+    {
+      "name": "Hutuo River (滹沱河)",
+      "facet": "Northern and northeastern rivers",
+      "known_at": 12
+    },
+    {
+      "name": "Luan River (滦河)",
+      "facet": "Northern and northeastern rivers",
+      "known_at": 11
+    },
+    {
+      "name": "Huai River (淮河)",
+      "facet": "Northern and northeastern rivers",
+      "known_at": 7
+    },
+    {
+      "name": "Yarlung Tsangpo (雅鲁藏布江)",
+      "facet": "Rivers of Tibet and the west",
+      "known_at": 7
+    },
+    {
+      "name": "Yarlung Tsangpo Grand Canyon (雅鲁藏布大峡谷)",
+      "facet": "Rivers of Tibet and the west",
+      "known_at": 8
+    },
+    {
+      "name": "Medog (墨脱)",
+      "facet": "Rivers of Tibet and the west",
+      "known_at": 12
+    },
+    {
+      "name": "Lhasa River (拉萨河)",
+      "facet": "Rivers of Tibet and the west",
+      "known_at": 10
+    },
+    {
+      "name": "Lancang River (澜沧江)",
+      "facet": "Rivers of Tibet and the west",
+      "known_at": 8
+    },
+    {
+      "name": "Nu River (怒江)",
+      "facet": "Rivers of Tibet and the west",
+      "known_at": 9
+    },
+    {
+      "name": "Three Parallel Rivers (三江并流)",
+      "facet": "Rivers of Tibet and the west",
+      "known_at": 11
+    },
+    {
+      "name": "Sanjiangyuan (三江源)",
+      "facet": "Rivers of Tibet and the west",
+      "known_at": 8
+    },
+    {
+      "name": "Shiquan River (狮泉河)",
+      "facet": "Rivers of Tibet and the west",
+      "known_at": 13
+    },
+    {
+      "name": "Tarim River (塔里木河)",
+      "facet": "Rivers of Tibet and the west",
+      "known_at": 9
+    },
+    {
+      "name": "Ili River (伊犁河)",
+      "facet": "Rivers of Tibet and the west",
+      "known_at": 11
+    },
+    {
+      "name": "Irtysh River (额尔齐斯河)",
+      "facet": "Rivers of Tibet and the west",
+      "known_at": 11
+    },
+    {
+      "name": "Heihe River (黑河)",
+      "facet": "Rivers of Tibet and the west",
+      "known_at": 12
+    },
+    {
+      "name": "Shule River (疏勒河)",
+      "facet": "Rivers of Tibet and the west",
+      "known_at": 13
+    },
+    {
+      "name": "Dadu River (大渡河)",
+      "facet": "Rivers of Tibet and the west",
+      "known_at": 8
+    },
+    {
+      "name": "Yalong River (雅砻江)",
+      "facet": "Rivers of Tibet and the west",
+      "known_at": 12
+    },
+    {
+      "name": "Beijing–Hangzhou Grand Canal (京杭大运河)",
+      "facet": "Grand Canal and historic waterways",
+      "known_at": 5
+    },
+    {
+      "name": "Sui–Tang Grand Canal (隋唐大运河)",
+      "facet": "Grand Canal and historic waterways",
+      "known_at": 11
+    },
+    {
+      "name": "Tongji Canal (通济渠)",
+      "facet": "Grand Canal and historic waterways",
+      "known_at": 13
+    },
+    {
+      "name": "Hangou Canal (邗沟)",
+      "facet": "Grand Canal and historic waterways",
+      "known_at": 13
+    },
+    {
+      "name": "Tonghui River (通惠河)",
+      "facet": "Grand Canal and historic waterways",
+      "known_at": 13
+    },
+    {
+      "name": "Honggou Canal (鸿沟)",
+      "facet": "Grand Canal and historic waterways",
+      "known_at": 13
+    },
+    {
+      "name": "Lingqu Canal (灵渠)",
+      "facet": "Grand Canal and historic waterways",
+      "known_at": 11
+    },
+    {
+      "name": "Zhengguo Canal (郑国渠)",
+      "facet": "Grand Canal and historic waterways",
+      "known_at": 12
+    },
+    {
+      "name": "Grain transport by canal (漕运)",
+      "facet": "Grand Canal and historic waterways",
+      "known_at": 11
+    },
+    {
+      "name": "Gongchen Bridge (拱宸桥)",
+      "facet": "Grand Canal and historic waterways",
+      "known_at": 11
+    },
+    {
+      "name": "Qinhuai River (秦淮河)",
+      "facet": "Grand Canal and historic waterways",
+      "known_at": 8
+    },
+    {
+      "name": "Zhouzhuang (周庄)",
+      "facet": "Grand Canal and historic waterways",
+      "known_at": 8
+    },
+    {
+      "name": "Wuzhen (乌镇)",
+      "facet": "Grand Canal and historic waterways",
+      "known_at": 8
+    },
+    {
+      "name": "Tongli (同里)",
+      "facet": "Grand Canal and historic waterways",
+      "known_at": 10
+    },
+    {
+      "name": "Shantang Street (山塘街)",
+      "facet": "Grand Canal and historic waterways",
+      "known_at": 11
+    },
+    {
+      "name": "Poyang Lake (鄱阳湖)",
+      "facet": "Great freshwater lakes",
+      "known_at": 6
+    },
+    {
+      "name": "Dongting Lake (洞庭湖)",
+      "facet": "Great freshwater lakes",
+      "known_at": 6
+    },
+    {
+      "name": "Taihu Lake (太湖)",
+      "facet": "Great freshwater lakes",
+      "known_at": 6
+    },
+    {
+      "name": "Hongze Lake (洪泽湖)",
+      "facet": "Great freshwater lakes",
+      "known_at": 9
+    },
+    {
+      "name": "Chaohu Lake (巢湖)",
+      "facet": "Great freshwater lakes",
+      "known_at": 9
+    },
+    {
+      "name": "Gaoyou Lake (高邮湖)",
+      "facet": "Great freshwater lakes",
+      "known_at": 12
+    },
+    {
+      "name": "Weishan Lake (微山湖)",
+      "facet": "Great freshwater lakes",
+      "known_at": 12
+    },
+    {
+      "name": "Liangzi Lake (梁子湖)",
+      "facet": "Great freshwater lakes",
+      "known_at": 13
+    },
+    {
+      "name": "Dianchi Lake (滇池)",
+      "facet": "Great freshwater lakes",
+      "known_at": 8
+    },
+    {
+      "name": "Erhai Lake (洱海)",
+      "facet": "Great freshwater lakes",
+      "known_at": 8
+    },
+    {
+      "name": "Fuxian Lake (抚仙湖)",
+      "facet": "Great freshwater lakes",
+      "known_at": 11
+    },
+    {
+      "name": "Hulun Lake (呼伦湖)",
+      "facet": "Great freshwater lakes",
+      "known_at": 10
+    },
+    {
+      "name": "Xingkai Lake (兴凯湖)",
+      "facet": "Great freshwater lakes",
+      "known_at": 11
+    },
+    {
+      "name": "Bosten Lake (博斯腾湖)",
+      "facet": "Great freshwater lakes",
+      "known_at": 12
+    },
+    {
+      "name": "Junshan Island (君山岛)",
+      "facet": "Great freshwater lakes",
+      "known_at": 11
+    },
+    {
+      "name": "Taihu stone (太湖石)",
+      "facet": "Great freshwater lakes",
+      "known_at": 10
+    },
+    {
+      "name": "Siberian crane (白鹤)",
+      "facet": "Great freshwater lakes",
+      "known_at": 9
+    },
+    {
+      "name": "Qinghai Lake (青海湖)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 4
+    },
+    {
+      "name": "Bird Island (鸟岛)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 9
+    },
+    {
+      "name": "Naked carp (湟鱼)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 10
+    },
+    {
+      "name": "Chaka Salt Lake (茶卡盐湖)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 7
+    },
+    {
+      "name": "Qarhan Salt Lake (察尔汗盐湖)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 10
+    },
+    {
+      "name": "Yuncheng Salt Lake (运城盐湖)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 11
+    },
+    {
+      "name": "Namtso (纳木错)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 7
+    },
+    {
+      "name": "Yamdrok Lake (羊卓雍错)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 9
+    },
+    {
+      "name": "Mapam Yumco (玛旁雍错)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 11
+    },
+    {
+      "name": "Siling Co (色林错)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 11
+    },
+    {
+      "name": "Pangong Tso (班公错)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 12
+    },
+    {
+      "name": "Basum Tso (巴松措)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 12
+    },
+    {
+      "name": "Gyaring Lake (扎陵湖)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 13
+    },
+    {
+      "name": "Ngoring Lake (鄂陵湖)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 13
+    },
+    {
+      "name": "Lop Nur (罗布泊)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 9
+    },
+    {
+      "name": "Ebinur Lake (艾比湖)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 12
+    },
+    {
+      "name": "Sayram Lake (赛里木湖)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 9
+    },
+    {
+      "name": "Tianchi of Tianshan (天山天池)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 7
+    },
+    {
+      "name": "Lugu Lake (泸沽湖)",
+      "facet": "Salt lakes and plateau lakes",
+      "known_at": 8
+    },
+    {
+      "name": "West Lake (西湖)",
+      "facet": "Famous scenic lakes",
+      "known_at": 3
+    },
+    {
+      "name": "Su Causeway (苏堤)",
+      "facet": "Famous scenic lakes",
+      "known_at": 8
+    },
+    {
+      "name": "Bai Causeway (白堤)",
+      "facet": "Famous scenic lakes",
+      "known_at": 9
+    },
+    {
+      "name": "Broken Bridge (断桥)",
+      "facet": "Famous scenic lakes",
+      "known_at": 7
+    },
+    {
+      "name": "Leifeng Pagoda (雷峰塔)",
+      "facet": "Famous scenic lakes",
+      "known_at": 6
+    },
+    {
+      "name": "Jiuzhaigou (九寨沟)",
+      "facet": "Famous scenic lakes",
+      "known_at": 5
+    },
+    {
+      "name": "Five Flower Lake (五花海)",
+      "facet": "Famous scenic lakes",
+      "known_at": 10
+    },
+    {
+      "name": "Huanglong (黄龙)",
+      "facet": "Famous scenic lakes",
+      "known_at": 8
+    },
+    {
+      "name": "Kanas Lake (喀纳斯湖)",
+      "facet": "Famous scenic lakes",
+      "known_at": 8
+    },
+    {
+      "name": "Heaven Lake of Changbai Mountain (长白山天池)",
+      "facet": "Famous scenic lakes",
+      "known_at": 7
+    },
+    {
+      "name": "Crescent Lake (月牙泉)",
+      "facet": "Famous scenic lakes",
+      "known_at": 7
+    },
+    {
+      "name": "Thousand Island Lake (千岛湖)",
+      "facet": "Famous scenic lakes",
+      "known_at": 8
+    },
+    {
+      "name": "Sun Moon Lake (日月潭)",
+      "facet": "Famous scenic lakes",
+      "known_at": 6
+    },
+    {
+      "name": "Slender West Lake (瘦西湖)",
+      "facet": "Famous scenic lakes",
+      "known_at": 9
+    },
+    {
+      "name": "Xuanwu Lake (玄武湖)",
+      "facet": "Famous scenic lakes",
+      "known_at": 9
+    },
+    {
+      "name": "Kunming Lake (昆明湖)",
+      "facet": "Famous scenic lakes",
+      "known_at": 7
+    },
+    {
+      "name": "Shichahai (什刹海)",
+      "facet": "Famous scenic lakes",
+      "known_at": 9
+    },
+    {
+      "name": "Daming Lake (大明湖)",
+      "facet": "Famous scenic lakes",
+      "known_at": 10
+    },
+    {
+      "name": "Jingpo Lake (镜泊湖)",
+      "facet": "Famous scenic lakes",
+      "known_at": 10
+    },
+    {
+      "name": "East Lake (东湖)",
+      "facet": "Famous scenic lakes",
+      "known_at": 11
+    },
+    {
+      "name": "Huangguoshu Waterfall (黄果树瀑布)",
+      "facet": "Waterfalls of China",
+      "known_at": 5
+    },
+    {
+      "name": "Doupotang Waterfall (陡坡塘瀑布)",
+      "facet": "Waterfalls of China",
+      "known_at": 12
+    },
+    {
+      "name": "Tianxing Bridge (天星桥)",
+      "facet": "Waterfalls of China",
+      "known_at": 13
+    },
+    {
+      "name": "Hukou Waterfall (壶口瀑布)",
+      "facet": "Waterfalls of China",
+      "known_at": 5
+    },
+    {
+      "name": "Detian Waterfall (德天瀑布)",
+      "facet": "Waterfalls of China",
+      "known_at": 8
+    },
+    {
+      "name": "Lushan Waterfall (庐山瀑布)",
+      "facet": "Waterfalls of China",
+      "known_at": 6
+    },
+    {
+      "name": "Three-Tier Spring (三叠泉)",
+      "facet": "Waterfalls of China",
+      "known_at": 12
+    },
+    {
+      "name": "Nuorilang Waterfall (诺日朗瀑布)",
+      "facet": "Waterfalls of China",
+      "known_at": 9
+    },
+    {
+      "name": "Pearl Shoal Waterfall (珍珠滩瀑布)",
+      "facet": "Waterfalls of China",
+      "known_at": 9
+    },
+    {
+      "name": "Diaoshuilou Waterfall (吊水楼瀑布)",
+      "facet": "Waterfalls of China",
+      "known_at": 12
+    },
+    {
+      "name": "Jiulong Waterfall (九龙瀑布)",
+      "facet": "Waterfalls of China",
+      "known_at": 12
+    },
+    {
+      "name": "Yuntai Mountain Waterfall (云台天瀑)",
+      "facet": "Waterfalls of China",
+      "known_at": 11
+    },
+    {
+      "name": "Xiaoqikong (小七孔)",
+      "facet": "Waterfalls of China",
+      "known_at": 12
+    },
+    {
+      "name": "Dadieshui Waterfall (大叠水瀑布)",
+      "facet": "Waterfalls of China",
+      "known_at": 13
+    },
+    {
+      "name": "Nine Dragon Waterfall (九龙瀑)",
+      "facet": "Waterfalls of China",
+      "known_at": 13
+    },
+    {
+      "name": "Three Gorges Dam (三峡大坝)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 4
+    },
+    {
+      "name": "Three Gorges Ship Lift (三峡升船机)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 10
+    },
+    {
+      "name": "Gezhouba Dam (葛洲坝)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 10
+    },
+    {
+      "name": "Baihetan Dam (白鹤滩水电站)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 11
+    },
+    {
+      "name": "Xiluodu Dam (溪洛渡水电站)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 12
+    },
+    {
+      "name": "Xiaolangdi Dam (小浪底)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 11
+    },
+    {
+      "name": "Longyangxia Dam (龙羊峡水电站)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 13
+    },
+    {
+      "name": "Yellow River sediment flushing (调水调沙)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 13
+    },
+    {
+      "name": "Dujiangyan (都江堰)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 6
+    },
+    {
+      "name": "Li Bing (李冰)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 9
+    },
+    {
+      "name": "South–North Water Transfer Project (南水北调)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 7
+    },
+    {
+      "name": "Danjiangkou Reservoir (丹江口水库)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 11
+    },
+    {
+      "name": "Miyun Reservoir (密云水库)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 11
+    },
+    {
+      "name": "Red Flag Canal (红旗渠)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 8
+    },
+    {
+      "name": "Karez (坎儿井)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 9
+    },
+    {
+      "name": "Qiantang River Seawall (钱塘江海塘)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 12
+    },
+    {
+      "name": "1998 China floods (1998年特大洪水)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 9
+    },
+    {
+      "name": "1938 Yellow River flood (花园口决堤)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 12
+    },
+    {
+      "name": "Jingjiang Flood Diversion Area (荆江分洪区)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 13
+    },
+    {
+      "name": "Sponge city (海绵城市)",
+      "facet": "Dams, floods and water projects",
+      "known_at": 11
+    },
+    {
+      "name": "Gun (鲧)",
+      "facet": "Rivers and lakes in poetry and legend",
+      "known_at": 11
+    },
+    {
+      "name": "Gonggong (共工)",
+      "facet": "Rivers and lakes in poetry and legend",
+      "known_at": 10
+    },
+    {
+      "name": "Hebo (河伯)",
+      "facet": "Rivers and lakes in poetry and legend",
+      "known_at": 12
+    },
+    {
+      "name": "Goddess of the Luo River (洛神)",
+      "facet": "Rivers and lakes in poetry and legend",
+      "known_at": 12
+    },
+    {
+      "name": "Ehuang and Nüying (娥皇女英)",
+      "facet": "Rivers and lakes in poetry and legend",
+      "known_at": 12
+    },
+    {
+      "name": "Carp leaping over the Dragon Gate (鲤鱼跳龙门)",
+      "facet": "Rivers and lakes in poetry and legend",
+      "known_at": 6
+    },
+    {
+      "name": "Water Curtain Cave (水帘洞)",
+      "facet": "Rivers and lakes in poetry and legend",
+      "known_at": 3
+    },
+    {
+      "name": "Liangshan Marsh (梁山泊)",
+      "facet": "Rivers and lakes in poetry and legend",
+      "known_at": 9
+    },
+    {
+      "name": "Departing Baidi City at Dawn (早发白帝城)",
+      "facet": "Rivers and lakes in poetry and legend",
+      "known_at": 5
+    },
+    {
+      "name": "Farewell to Meng Haoran at Yellow Crane Tower (黄鹤楼送孟浩然之广陵)",
+      "facet": "Rivers and lakes in poetry and legend",
+      "known_at": 6
+    },
+    {
+      "name": "Yueyang Tower (岳阳楼)",
+      "facet": "Rivers and lakes in poetry and legend",
+      "known_at": 6
+    },
+    {
+      "name": "Drinking at the Lake in Sun and Rain (饮湖上初晴后雨)",
+      "facet": "Rivers and lakes in poetry and legend",
+      "known_at": 6
+    },
+    {
+      "name": "Ascending the Heights (登高)",
+      "facet": "Rivers and lakes in poetry and legend",
+      "known_at": 9
+    },
+    {
+      "name": "Spring River in the Flower Moon Night (春江花月夜)",
+      "facet": "Rivers and lakes in poetry and legend",
+      "known_at": 11
+    },
+    {
+      "name": "Yellow River Cantata (黄河大合唱)",
+      "facet": "Rivers and lakes in poetry and legend",
+      "known_at": 8
+    }
+  ]
+}

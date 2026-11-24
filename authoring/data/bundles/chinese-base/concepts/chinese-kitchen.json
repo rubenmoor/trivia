@@ -1,0 +1,922 @@
+{
+  "subcategory": "chinese-kitchen",
+  "facets": [
+    "Chopsticks and table customs",
+    "Woks, cleavers and kitchen tools",
+    "Cooking methods and heat (火候)",
+    "Soy sauce, vinegar and fermented sauces",
+    "Spices and aromatics",
+    "Sichuan pepper and chili flavors",
+    "Tofu and soybean foods",
+    "Rice, noodles and flour doughs",
+    "Preserved and dried ingredients",
+    "Vegetables, mushrooms and fungi",
+    "Tea, oils and cooking wines",
+    "Five flavors and kitchen philosophy"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 3,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 4,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Chopsticks (筷子)",
+      "facet": "Chopsticks and table customs",
+      "known_at": 1
+    },
+    {
+      "name": "Bamboo chopsticks",
+      "facet": "Chopsticks and table customs",
+      "known_at": 3
+    },
+    {
+      "name": "Disposable chopsticks",
+      "facet": "Chopsticks and table customs",
+      "known_at": 5
+    },
+    {
+      "name": "Chopsticks standing upright in rice",
+      "facet": "Chopsticks and table customs",
+      "known_at": 6
+    },
+    {
+      "name": "Zhu (箸), the old name for chopsticks",
+      "facet": "Chopsticks and table customs",
+      "known_at": 11
+    },
+    {
+      "name": "Ivory chopsticks of King Zhou of Shang",
+      "facet": "Chopsticks and table customs",
+      "known_at": 13
+    },
+    {
+      "name": "Rice bowl",
+      "facet": "Chopsticks and table customs",
+      "known_at": 1
+    },
+    {
+      "name": "Porcelain soup spoon (汤匙)",
+      "facet": "Chopsticks and table customs",
+      "known_at": 3
+    },
+    {
+      "name": "Round dining table",
+      "facet": "Chopsticks and table customs",
+      "known_at": 4
+    },
+    {
+      "name": "Lazy Susan turntable",
+      "facet": "Chopsticks and table customs",
+      "known_at": 5
+    },
+    {
+      "name": "Putting food in a guest's bowl (夹菜)",
+      "facet": "Chopsticks and table customs",
+      "known_at": 4
+    },
+    {
+      "name": "Seat of honour facing the door",
+      "facet": "Chopsticks and table customs",
+      "known_at": 9
+    },
+    {
+      "name": "Not turning the fish over",
+      "facet": "Chopsticks and table customs",
+      "known_at": 10
+    },
+    {
+      "name": "AA system (AA制)",
+      "facet": "Chopsticks and table customs",
+      "known_at": 8
+    },
+    {
+      "name": "Wok spatula (锅铲)",
+      "facet": "Woks, cleavers and kitchen tools",
+      "known_at": 3
+    },
+    {
+      "name": "Chopping board (砧板)",
+      "facet": "Woks, cleavers and kitchen tools",
+      "known_at": 3
+    },
+    {
+      "name": "Clay pot (砂锅)",
+      "facet": "Woks, cleavers and kitchen tools",
+      "known_at": 6
+    },
+    {
+      "name": "Wok ladle (炒勺)",
+      "facet": "Woks, cleavers and kitchen tools",
+      "known_at": 4
+    },
+    {
+      "name": "Spider strainer (漏勺)",
+      "facet": "Woks, cleavers and kitchen tools",
+      "known_at": 5
+    },
+    {
+      "name": "Stone mill (石磨)",
+      "facet": "Woks, cleavers and kitchen tools",
+      "known_at": 7
+    },
+    {
+      "name": "Mandarin duck hot pot (鸳鸯锅)",
+      "facet": "Woks, cleavers and kitchen tools",
+      "known_at": 5
+    },
+    {
+      "name": "Ding (鼎)",
+      "facet": "Woks, cleavers and kitchen tools",
+      "known_at": 9
+    },
+    {
+      "name": "Seasoning a new iron wok (开锅)",
+      "facet": "Woks, cleavers and kitchen tools",
+      "known_at": 9
+    },
+    {
+      "name": "Brick stove (灶台)",
+      "facet": "Woks, cleavers and kitchen tools",
+      "known_at": 5
+    },
+    {
+      "name": "Pressure cooker",
+      "facet": "Woks, cleavers and kitchen tools",
+      "known_at": 4
+    },
+    {
+      "name": "Soymilk maker (豆浆机)",
+      "facet": "Woks, cleavers and kitchen tools",
+      "known_at": 6
+    },
+    {
+      "name": "Mortar and pestle (研钵)",
+      "facet": "Woks, cleavers and kitchen tools",
+      "known_at": 6
+    },
+    {
+      "name": "Roasting (烤)",
+      "facet": "Cooking methods and heat (火候)",
+      "known_at": 3
+    },
+    {
+      "name": "Pan-frying (煎)",
+      "facet": "Cooking methods and heat (火候)",
+      "known_at": 4
+    },
+    {
+      "name": "Cold dressing (凉拌)",
+      "facet": "Cooking methods and heat (火候)",
+      "known_at": 4
+    },
+    {
+      "name": "Lu braising (卤)",
+      "facet": "Cooking methods and heat (火候)",
+      "known_at": 6
+    },
+    {
+      "name": "Quick-frying (爆炒)",
+      "facet": "Cooking methods and heat (火候)",
+      "known_at": 7
+    },
+    {
+      "name": "Covered braising (焖)",
+      "facet": "Cooking methods and heat (火候)",
+      "known_at": 7
+    },
+    {
+      "name": "Huohou (火候)",
+      "facet": "Cooking methods and heat (火候)",
+      "known_at": 8
+    },
+    {
+      "name": "Thickening with starch (勾芡)",
+      "facet": "Cooking methods and heat (火候)",
+      "known_at": 8
+    },
+    {
+      "name": "Spun sugar coating (拔丝)",
+      "facet": "Cooking methods and heat (火候)",
+      "known_at": 8
+    },
+    {
+      "name": "Light soy sauce (生抽)",
+      "facet": "Soy sauce, vinegar and fermented sauces",
+      "known_at": 5
+    },
+    {
+      "name": "Dark soy sauce (老抽)",
+      "facet": "Soy sauce, vinegar and fermented sauces",
+      "known_at": 5
+    },
+    {
+      "name": "Rice vinegar (米醋)",
+      "facet": "Soy sauce, vinegar and fermented sauces",
+      "known_at": 5
+    },
+    {
+      "name": "Baoning vinegar (保宁醋)",
+      "facet": "Soy sauce, vinegar and fermented sauces",
+      "known_at": 13
+    },
+    {
+      "name": "Lee Kum Kee",
+      "facet": "Soy sauce, vinegar and fermented sauces",
+      "known_at": 10
+    },
+    {
+      "name": "Sesame paste (芝麻酱)",
+      "facet": "Soy sauce, vinegar and fermented sauces",
+      "known_at": 6
+    },
+    {
+      "name": "Sweet bean sauce (甜面酱)",
+      "facet": "Soy sauce, vinegar and fermented sauces",
+      "known_at": 7
+    },
+    {
+      "name": "Pixian doubanjiang (郫县豆瓣酱)",
+      "facet": "Soy sauce, vinegar and fermented sauces",
+      "known_at": 8
+    },
+    {
+      "name": "XO sauce",
+      "facet": "Soy sauce, vinegar and fermented sauces",
+      "known_at": 10
+    },
+    {
+      "name": "Shrimp paste (虾酱)",
+      "facet": "Soy sauce, vinegar and fermented sauces",
+      "known_at": 10
+    },
+    {
+      "name": "Chaozhou fish sauce (鱼露)",
+      "facet": "Soy sauce, vinegar and fermented sauces",
+      "known_at": 11
+    },
+    {
+      "name": "Garlic",
+      "facet": "Spices and aromatics",
+      "known_at": 1
+    },
+    {
+      "name": "Ginger",
+      "facet": "Spices and aromatics",
+      "known_at": 2
+    },
+    {
+      "name": "Spring onion (葱)",
+      "facet": "Spices and aromatics",
+      "known_at": 2
+    },
+    {
+      "name": "Coriander (香菜)",
+      "facet": "Spices and aromatics",
+      "known_at": 3
+    },
+    {
+      "name": "Sesame seeds",
+      "facet": "Spices and aromatics",
+      "known_at": 3
+    },
+    {
+      "name": "Chinese cinnamon (桂皮)",
+      "facet": "Spices and aromatics",
+      "known_at": 4
+    },
+    {
+      "name": "Chicken essence (鸡精)",
+      "facet": "Spices and aromatics",
+      "known_at": 6
+    },
+    {
+      "name": "White pepper (白胡椒)",
+      "facet": "Spices and aromatics",
+      "known_at": 6
+    },
+    {
+      "name": "Bay leaf (香叶)",
+      "facet": "Spices and aromatics",
+      "known_at": 6
+    },
+    {
+      "name": "Clove (丁香)",
+      "facet": "Spices and aromatics",
+      "known_at": 7
+    },
+    {
+      "name": "Fennel seed (小茴香)",
+      "facet": "Spices and aromatics",
+      "known_at": 8
+    },
+    {
+      "name": "Licorice root (甘草)",
+      "facet": "Spices and aromatics",
+      "known_at": 9
+    },
+    {
+      "name": "Black cardamom (草果)",
+      "facet": "Spices and aromatics",
+      "known_at": 11
+    },
+    {
+      "name": "Zigong well salt (自贡井盐)",
+      "facet": "Spices and aromatics",
+      "known_at": 11
+    },
+    {
+      "name": "Chili pepper (辣椒)",
+      "facet": "Sichuan pepper and chili flavors",
+      "known_at": 1
+    },
+    {
+      "name": "Dried chili (干辣椒)",
+      "facet": "Sichuan pepper and chili flavors",
+      "known_at": 3
+    },
+    {
+      "name": "Spicy strips (辣条)",
+      "facet": "Sichuan pepper and chili flavors",
+      "known_at": 3
+    },
+    {
+      "name": "Chili oil (红油)",
+      "facet": "Sichuan pepper and chili flavors",
+      "known_at": 5
+    },
+    {
+      "name": "Sichuan pepper numbness (麻)",
+      "facet": "Sichuan pepper and chili flavors",
+      "known_at": 6
+    },
+    {
+      "name": "Sichuan pepper oil (花椒油)",
+      "facet": "Sichuan pepper and chili flavors",
+      "known_at": 7
+    },
+    {
+      "name": "Pepper salt (椒盐)",
+      "facet": "Sichuan pepper and chili flavors",
+      "known_at": 7
+    },
+    {
+      "name": "Fish-fragrant flavor (鱼香)",
+      "facet": "Sichuan pepper and chili flavors",
+      "known_at": 8
+    },
+    {
+      "name": "Chopped chili (剁辣椒)",
+      "facet": "Sichuan pepper and chili flavors",
+      "known_at": 8
+    },
+    {
+      "name": "Facing-heaven chili (朝天椒)",
+      "facet": "Sichuan pepper and chili flavors",
+      "known_at": 9
+    },
+    {
+      "name": "Guizhou chili",
+      "facet": "Sichuan pepper and chili flavors",
+      "known_at": 9
+    },
+    {
+      "name": "Green Sichuan pepper (藤椒)",
+      "facet": "Sichuan pepper and chili flavors",
+      "known_at": 10
+    },
+    {
+      "name": "Strange flavor (怪味)",
+      "facet": "Sichuan pepper and chili flavors",
+      "known_at": 12
+    },
+    {
+      "name": "Arrival of chili in China in the Ming dynasty",
+      "facet": "Sichuan pepper and chili flavors",
+      "known_at": 12
+    },
+    {
+      "name": "Erjingtiao chili (二荆条)",
+      "facet": "Sichuan pepper and chili flavors",
+      "known_at": 13
+    },
+    {
+      "name": "Hanyuan Sichuan pepper (汉源花椒)",
+      "facet": "Sichuan pepper and chili flavors",
+      "known_at": 13
+    },
+    {
+      "name": "Tofu (豆腐)",
+      "facet": "Tofu and soybean foods",
+      "known_at": 1
+    },
+    {
+      "name": "Soy milk (豆浆)",
+      "facet": "Tofu and soybean foods",
+      "known_at": 2
+    },
+    {
+      "name": "Soybean (大豆)",
+      "facet": "Tofu and soybean foods",
+      "known_at": 3
+    },
+    {
+      "name": "Stinky tofu (臭豆腐)",
+      "facet": "Tofu and soybean foods",
+      "known_at": 4
+    },
+    {
+      "name": "Soybean sprouts (黄豆芽)",
+      "facet": "Tofu and soybean foods",
+      "known_at": 4
+    },
+    {
+      "name": "Mung bean sprouts (绿豆芽)",
+      "facet": "Tofu and soybean foods",
+      "known_at": 4
+    },
+    {
+      "name": "Edamame (毛豆)",
+      "facet": "Tofu and soybean foods",
+      "known_at": 4
+    },
+    {
+      "name": "Dried tofu (豆腐干)",
+      "facet": "Tofu and soybean foods",
+      "known_at": 5
+    },
+    {
+      "name": "Tofu sticks (腐竹)",
+      "facet": "Tofu and soybean foods",
+      "known_at": 6
+    },
+    {
+      "name": "Tofu sheets (千张)",
+      "facet": "Tofu and soybean foods",
+      "known_at": 7
+    },
+    {
+      "name": "Okara (豆渣)",
+      "facet": "Tofu and soybean foods",
+      "known_at": 9
+    },
+    {
+      "name": "Gypsum (石膏) as tofu coagulant",
+      "facet": "Tofu and soybean foods",
+      "known_at": 10
+    },
+    {
+      "name": "Brine (卤水) as tofu coagulant",
+      "facet": "Tofu and soybean foods",
+      "known_at": 10
+    },
+    {
+      "name": "Liu An and tofu legend",
+      "facet": "Tofu and soybean foods",
+      "known_at": 11
+    },
+    {
+      "name": "Bagong Mountain, Huainan (八公山)",
+      "facet": "Tofu and soybean foods",
+      "known_at": 12
+    },
+    {
+      "name": "Rice",
+      "facet": "Rice, noodles and flour doughs",
+      "known_at": 1
+    },
+    {
+      "name": "Hand-pulled noodles (拉面)",
+      "facet": "Rice, noodles and flour doughs",
+      "known_at": 4
+    },
+    {
+      "name": "Rice noodles (米粉)",
+      "facet": "Rice, noodles and flour doughs",
+      "known_at": 4
+    },
+    {
+      "name": "Glass noodles (粉丝)",
+      "facet": "Rice, noodles and flour doughs",
+      "known_at": 5
+    },
+    {
+      "name": "Leavened dough (发面)",
+      "facet": "Rice, noodles and flour doughs",
+      "known_at": 6
+    },
+    {
+      "name": "Cornstarch (淀粉)",
+      "facet": "Rice, noodles and flour doughs",
+      "known_at": 6
+    },
+    {
+      "name": "Yuan Longping and hybrid rice",
+      "facet": "Rice, noodles and flour doughs",
+      "known_at": 6
+    },
+    {
+      "name": "Flat rice noodles (河粉)",
+      "facet": "Rice, noodles and flour doughs",
+      "known_at": 7
+    },
+    {
+      "name": "Sourdough starter (老面)",
+      "facet": "Rice, noodles and flour doughs",
+      "known_at": 11
+    },
+    {
+      "name": "Hot-water dough (烫面)",
+      "facet": "Rice, noodles and flour doughs",
+      "known_at": 11
+    },
+    {
+      "name": "Wheat starch (澄粉)",
+      "facet": "Rice, noodles and flour doughs",
+      "known_at": 12
+    },
+    {
+      "name": "Hemudu rice",
+      "facet": "Rice, noodles and flour doughs",
+      "known_at": 12
+    },
+    {
+      "name": "Lajia millet noodles",
+      "facet": "Rice, noodles and flour doughs",
+      "known_at": 13
+    },
+    {
+      "name": "Century egg (皮蛋)",
+      "facet": "Preserved and dried ingredients",
+      "known_at": 4
+    },
+    {
+      "name": "Chinese sausage (腊肠)",
+      "facet": "Preserved and dried ingredients",
+      "known_at": 5
+    },
+    {
+      "name": "Cured pork (腊肉)",
+      "facet": "Preserved and dried ingredients",
+      "known_at": 5
+    },
+    {
+      "name": "Pickled mustard tuber (榨菜)",
+      "facet": "Preserved and dried ingredients",
+      "known_at": 5
+    },
+    {
+      "name": "Sichuan pickles (泡菜)",
+      "facet": "Preserved and dried ingredients",
+      "known_at": 5
+    },
+    {
+      "name": "Goji berries (枸杞)",
+      "facet": "Preserved and dried ingredients",
+      "known_at": 5
+    },
+    {
+      "name": "Preserved plum (话梅)",
+      "facet": "Preserved and dried ingredients",
+      "known_at": 5
+    },
+    {
+      "name": "Suancai (酸菜)",
+      "facet": "Preserved and dried ingredients",
+      "known_at": 6
+    },
+    {
+      "name": "Dried shrimp (虾米)",
+      "facet": "Preserved and dried ingredients",
+      "known_at": 6
+    },
+    {
+      "name": "Dried longan (桂圆)",
+      "facet": "Preserved and dried ingredients",
+      "known_at": 6
+    },
+    {
+      "name": "Bird's nest (燕窝)",
+      "facet": "Preserved and dried ingredients",
+      "known_at": 8
+    },
+    {
+      "name": "Meigancai (梅干菜)",
+      "facet": "Preserved and dried ingredients",
+      "known_at": 9
+    },
+    {
+      "name": "Dried abalone (干鲍)",
+      "facet": "Preserved and dried ingredients",
+      "known_at": 9
+    },
+    {
+      "name": "Dried scallops (干贝)",
+      "facet": "Preserved and dried ingredients",
+      "known_at": 10
+    },
+    {
+      "name": "Xuanwei ham (宣威火腿)",
+      "facet": "Preserved and dried ingredients",
+      "known_at": 11
+    },
+    {
+      "name": "Napa cabbage (大白菜)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 2
+    },
+    {
+      "name": "Bok choy (青菜)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 3
+    },
+    {
+      "name": "Bamboo shoots (竹笋)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 3
+    },
+    {
+      "name": "Bitter melon (苦瓜)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 3
+    },
+    {
+      "name": "Shiitake (香菇)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 4
+    },
+    {
+      "name": "Wood ear fungus (木耳)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 4
+    },
+    {
+      "name": "Enoki mushroom (金针菇)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 4
+    },
+    {
+      "name": "Winter melon (冬瓜)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 4
+    },
+    {
+      "name": "Chinese chives (韭菜)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 4
+    },
+    {
+      "name": "Chinese yam (山药)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 5
+    },
+    {
+      "name": "Water spinach (空心菜)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 5
+    },
+    {
+      "name": "Luffa (丝瓜)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 5
+    },
+    {
+      "name": "Snow fungus (银耳)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 6
+    },
+    {
+      "name": "Water chestnut (荸荠)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 7
+    },
+    {
+      "name": "Chinese broccoli (芥兰)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 7
+    },
+    {
+      "name": "Lily bulb (百合)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 7
+    },
+    {
+      "name": "Daylily buds (黄花菜)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 9
+    },
+    {
+      "name": "Matsutake (松茸)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 10
+    },
+    {
+      "name": "Jianshouqing mushroom (见手青)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 10
+    },
+    {
+      "name": "Cordyceps (冬虫夏草)",
+      "facet": "Vegetables, mushrooms and fungi",
+      "known_at": 10
+    },
+    {
+      "name": "Green tea (绿茶)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 2
+    },
+    {
+      "name": "Peanut oil (花生油)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 4
+    },
+    {
+      "name": "Jasmine tea (茉莉花茶)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 4
+    },
+    {
+      "name": "Lard (猪油)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 5
+    },
+    {
+      "name": "Rapeseed oil (菜籽油)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 6
+    },
+    {
+      "name": "Fermented sweet rice (酒酿)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 6
+    },
+    {
+      "name": "Longjing tea (龙井)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 6
+    },
+    {
+      "name": "Oolong tea (乌龙茶)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 6
+    },
+    {
+      "name": "Pu'er tea (普洱茶)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 7
+    },
+    {
+      "name": "Shaoxing wine (绍兴酒)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 7
+    },
+    {
+      "name": "Huangjiu (黄酒)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 8
+    },
+    {
+      "name": "Tieguanyin (铁观音)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 8
+    },
+    {
+      "name": "Shennong and the discovery of tea",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 8
+    },
+    {
+      "name": "Lu Yu (陆羽)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 9
+    },
+    {
+      "name": "Gongfu tea (功夫茶)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 9
+    },
+    {
+      "name": "Da Hong Pao (大红袍)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 9
+    },
+    {
+      "name": "Red yeast rice (红曲)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 11
+    },
+    {
+      "name": "Tea Horse Road (茶马古道)",
+      "facet": "Tea, oils and cooking wines",
+      "known_at": 11
+    },
+    {
+      "name": "Umami (鲜)",
+      "facet": "Five flavors and kitchen philosophy",
+      "known_at": 6
+    },
+    {
+      "name": "Warming and cooling foods (热性/寒性)",
+      "facet": "Five flavors and kitchen philosophy",
+      "known_at": 6
+    },
+    {
+      "name": "Color, aroma and taste (色香味)",
+      "facet": "Five flavors and kitchen philosophy",
+      "known_at": 6
+    },
+    {
+      "name": "Knife skills (刀工)",
+      "facet": "Five flavors and kitchen philosophy",
+      "known_at": 6
+    },
+    {
+      "name": "Five flavors (五味)",
+      "facet": "Five flavors and kitchen philosophy",
+      "known_at": 8
+    },
+    {
+      "name": "Sweet south, salty north (南甜北咸)",
+      "facet": "Five flavors and kitchen philosophy",
+      "known_at": 8
+    },
+    {
+      "name": "Food therapy (食疗)",
+      "facet": "Five flavors and kitchen philosophy",
+      "known_at": 8
+    },
+    {
+      "name": "Cook Ding (庖丁解牛)",
+      "facet": "Five flavors and kitchen philosophy",
+      "known_at": 9
+    },
+    {
+      "name": "Su Dongpo as a food lover",
+      "facet": "Five flavors and kitchen philosophy",
+      "known_at": 9
+    },
+    {
+      "name": "Five elements and the five flavors (五行)",
+      "facet": "Five flavors and kitchen philosophy",
+      "known_at": 12
+    },
+    {
+      "name": "Confucius: 食不厌精",
+      "facet": "Five flavors and kitchen philosophy",
+      "known_at": 12
+    },
+    {
+      "name": "Laozi: 治大国若烹小鲜",
+      "facet": "Five flavors and kitchen philosophy",
+      "known_at": 12
+    },
+    {
+      "name": "Yuan Mei and Suiyuan Shidan (随园食单)",
+      "facet": "Five flavors and kitchen philosophy",
+      "known_at": 13
+    },
+    {
+      "name": "Qimin Yaoshu (齐民要术)",
+      "facet": "Five flavors and kitchen philosophy",
+      "known_at": 13
+    }
+  ]
+}

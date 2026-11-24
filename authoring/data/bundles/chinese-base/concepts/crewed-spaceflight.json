@@ -1,0 +1,953 @@
+{
+  "subcategory": "crewed-spaceflight",
+  "facets": [
+    "Shenzhou spacecraft missions",
+    "Taikonauts and their firsts",
+    "Tiangong space station modules",
+    "Earlier labs Tiangong-1 and 2",
+    "Tiangong space lessons",
+    "Long March rockets",
+    "Launch sites and landing zones",
+    "Life aboard the station",
+    "Spacewalks and space suits",
+    "Cargo ships and space science",
+    "Programme history and milestones",
+    "Names, symbols and space culture"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 3,
+      "science_news": 5,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Shenzhou 1",
+      "facet": "Shenzhou spacecraft missions",
+      "known_at": 12
+    },
+    {
+      "name": "Shenzhou 6",
+      "facet": "Shenzhou spacecraft missions",
+      "known_at": 9
+    },
+    {
+      "name": "Shenzhou 7",
+      "facet": "Shenzhou spacecraft missions",
+      "known_at": 8
+    },
+    {
+      "name": "Shenzhou 9",
+      "facet": "Shenzhou spacecraft missions",
+      "known_at": 9
+    },
+    {
+      "name": "Shenzhou 10",
+      "facet": "Shenzhou spacecraft missions",
+      "known_at": 9
+    },
+    {
+      "name": "Shenzhou 11",
+      "facet": "Shenzhou spacecraft missions",
+      "known_at": 11
+    },
+    {
+      "name": "Shenzhou 12",
+      "facet": "Shenzhou spacecraft missions",
+      "known_at": 9
+    },
+    {
+      "name": "Shenzhou 13",
+      "facet": "Shenzhou spacecraft missions",
+      "known_at": 8
+    },
+    {
+      "name": "Shenzhou 14",
+      "facet": "Shenzhou spacecraft missions",
+      "known_at": 10
+    },
+    {
+      "name": "Shenzhou 15",
+      "facet": "Shenzhou spacecraft missions",
+      "known_at": 12
+    },
+    {
+      "name": "Shenzhou 16",
+      "facet": "Shenzhou spacecraft missions",
+      "known_at": 11
+    },
+    {
+      "name": "Shenzhou 19",
+      "facet": "Shenzhou spacecraft missions",
+      "known_at": 12
+    },
+    {
+      "name": "Shenzhou 20",
+      "facet": "Shenzhou spacecraft missions",
+      "known_at": 13
+    },
+    {
+      "name": "Shenzhou re-entry module",
+      "facet": "Shenzhou spacecraft missions",
+      "known_at": 9
+    },
+    {
+      "name": "Shenzhou orbital module",
+      "facet": "Shenzhou spacecraft missions",
+      "known_at": 12
+    },
+    {
+      "name": "Rapid rendezvous and docking",
+      "facet": "Shenzhou spacecraft missions",
+      "known_at": 13
+    },
+    {
+      "name": "Fei Junlong",
+      "facet": "Taikonauts and their firsts",
+      "known_at": 9
+    },
+    {
+      "name": "Nie Haisheng",
+      "facet": "Taikonauts and their firsts",
+      "known_at": 8
+    },
+    {
+      "name": "Zhai Zhigang",
+      "facet": "Taikonauts and their firsts",
+      "known_at": 7
+    },
+    {
+      "name": "Liu Boming",
+      "facet": "Taikonauts and their firsts",
+      "known_at": 11
+    },
+    {
+      "name": "Jing Haipeng",
+      "facet": "Taikonauts and their firsts",
+      "known_at": 9
+    },
+    {
+      "name": "Liu Wang",
+      "facet": "Taikonauts and their firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Yang",
+      "facet": "Taikonauts and their firsts",
+      "known_at": 7
+    },
+    {
+      "name": "Zhang Xiaoguang",
+      "facet": "Taikonauts and their firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Chen Dong",
+      "facet": "Taikonauts and their firsts",
+      "known_at": 11
+    },
+    {
+      "name": "Tang Hongbo",
+      "facet": "Taikonauts and their firsts",
+      "known_at": 11
+    },
+    {
+      "name": "Ye Guangfu",
+      "facet": "Taikonauts and their firsts",
+      "known_at": 11
+    },
+    {
+      "name": "Cai Xuzhe",
+      "facet": "Taikonauts and their firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Gui Haichao",
+      "facet": "Taikonauts and their firsts",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Haoze",
+      "facet": "Taikonauts and their firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Zhu Yangzhu",
+      "facet": "Taikonauts and their firsts",
+      "known_at": 13
+    },
+    {
+      "name": "Wentian lab module",
+      "facet": "Tiangong space station modules",
+      "known_at": 9
+    },
+    {
+      "name": "Mengtian lab module",
+      "facet": "Tiangong space station modules",
+      "known_at": 9
+    },
+    {
+      "name": "Large robotic arm",
+      "facet": "Tiangong space station modules",
+      "known_at": 10
+    },
+    {
+      "name": "Small robotic arm",
+      "facet": "Tiangong space station modules",
+      "known_at": 13
+    },
+    {
+      "name": "Node module",
+      "facet": "Tiangong space station modules",
+      "known_at": 13
+    },
+    {
+      "name": "Wentian airlock",
+      "facet": "Tiangong space station modules",
+      "known_at": 13
+    },
+    {
+      "name": "Mengtian cargo airlock",
+      "facet": "Tiangong space station modules",
+      "known_at": 14
+    },
+    {
+      "name": "Flexible solar wings",
+      "facet": "Tiangong space station modules",
+      "known_at": 12
+    },
+    {
+      "name": "Hall-effect ion thrusters",
+      "facet": "Tiangong space station modules",
+      "known_at": 14
+    },
+    {
+      "name": "T-shaped layout",
+      "facet": "Tiangong space station modules",
+      "known_at": 11
+    },
+    {
+      "name": "Tiangong expansion to six modules",
+      "facet": "Tiangong space station modules",
+      "known_at": 14
+    },
+    {
+      "name": "Tiangong orbit altitude",
+      "facet": "Tiangong space station modules",
+      "known_at": 12
+    },
+    {
+      "name": "Tiangong-2",
+      "facet": "Earlier labs Tiangong-1 and 2",
+      "known_at": 9
+    },
+    {
+      "name": "Tiangong-1 re-entry",
+      "facet": "Earlier labs Tiangong-1 and 2",
+      "known_at": 12
+    },
+    {
+      "name": "Tiangong-2 deorbit",
+      "facet": "Earlier labs Tiangong-1 and 2",
+      "known_at": 13
+    },
+    {
+      "name": "Shenzhou 8",
+      "facet": "Earlier labs Tiangong-1 and 2",
+      "known_at": 12
+    },
+    {
+      "name": "First Chinese space docking",
+      "facet": "Earlier labs Tiangong-1 and 2",
+      "known_at": 10
+    },
+    {
+      "name": "Manual docking",
+      "facet": "Earlier labs Tiangong-1 and 2",
+      "known_at": 12
+    },
+    {
+      "name": "In-orbit refuelling",
+      "facet": "Earlier labs Tiangong-1 and 2",
+      "known_at": 13
+    },
+    {
+      "name": "POLAR gamma-ray detector",
+      "facet": "Earlier labs Tiangong-1 and 2",
+      "known_at": 14,
+      "retired": "unaskable: POLAR only gives questions that come down to Tiangong-2's launch year or obscure partner lists."
+    },
+    {
+      "name": "Cold atomic clock in space",
+      "facet": "Earlier labs Tiangong-1 and 2",
+      "known_at": 14
+    },
+    {
+      "name": "Silkworms in space",
+      "facet": "Earlier labs Tiangong-1 and 2",
+      "known_at": 13
+    },
+    {
+      "name": "Rice and Arabidopsis on Tiangong-2",
+      "facet": "Earlier labs Tiangong-1 and 2",
+      "known_at": 13
+    },
+    {
+      "name": "Banxing-2 companion satellite",
+      "facet": "Earlier labs Tiangong-1 and 2",
+      "known_at": 14
+    },
+    {
+      "name": "Target spacecraft",
+      "facet": "Earlier labs Tiangong-1 and 2",
+      "known_at": 13
+    },
+    {
+      "name": "Tiangong-3 plan",
+      "facet": "Earlier labs Tiangong-1 and 2",
+      "known_at": 14
+    },
+    {
+      "name": "Wang Yaping's space lesson",
+      "facet": "Tiangong space lessons",
+      "known_at": 6
+    },
+    {
+      "name": "Tiangong Class",
+      "facet": "Tiangong space lessons",
+      "known_at": 7
+    },
+    {
+      "name": "Water ball experiment",
+      "facet": "Tiangong space lessons",
+      "known_at": 6
+    },
+    {
+      "name": "Water film experiment",
+      "facet": "Tiangong space lessons",
+      "known_at": 8
+    },
+    {
+      "name": "Bing Dwen Dwen toss",
+      "facet": "Tiangong space lessons",
+      "known_at": 6
+    },
+    {
+      "name": "Effervescent tablet in a water ball",
+      "facet": "Tiangong space lessons",
+      "known_at": 8
+    },
+    {
+      "name": "Liquid bridge experiment",
+      "facet": "Tiangong space lessons",
+      "known_at": 10
+    },
+    {
+      "name": "Sodium acetate ice ball",
+      "facet": "Tiangong space lessons",
+      "known_at": 10
+    },
+    {
+      "name": "Spinning top experiment",
+      "facet": "Tiangong space lessons",
+      "known_at": 9
+    },
+    {
+      "name": "Mass measurement in space",
+      "facet": "Tiangong space lessons",
+      "known_at": 9
+    },
+    {
+      "name": "Pendulum experiment",
+      "facet": "Tiangong space lessons",
+      "known_at": 9
+    },
+    {
+      "name": "Oil and water separation",
+      "facet": "Tiangong space lessons",
+      "known_at": 10
+    },
+    {
+      "name": "Capillary effect experiment",
+      "facet": "Tiangong space lessons",
+      "known_at": 11
+    },
+    {
+      "name": "Candle flame in space",
+      "facet": "Tiangong space lessons",
+      "known_at": 10
+    },
+    {
+      "name": "Water ping-pong ball",
+      "facet": "Tiangong space lessons",
+      "known_at": 9
+    },
+    {
+      "name": "Flipping wrench",
+      "facet": "Tiangong space lessons",
+      "known_at": 13
+    },
+    {
+      "name": "Long March rockets",
+      "facet": "Long March rockets",
+      "known_at": 5
+    },
+    {
+      "name": "Long March 1",
+      "facet": "Long March rockets",
+      "known_at": 11
+    },
+    {
+      "name": "Long March 2F",
+      "facet": "Long March rockets",
+      "known_at": 10
+    },
+    {
+      "name": "Shenjian",
+      "facet": "Long March rockets",
+      "known_at": 13
+    },
+    {
+      "name": "Long March 3B",
+      "facet": "Long March rockets",
+      "known_at": 13
+    },
+    {
+      "name": "Long March 5",
+      "facet": "Long March rockets",
+      "known_at": 9
+    },
+    {
+      "name": "Long March 5B",
+      "facet": "Long March rockets",
+      "known_at": 12
+    },
+    {
+      "name": "Long March 6",
+      "facet": "Long March rockets",
+      "known_at": 13
+    },
+    {
+      "name": "Long March 7",
+      "facet": "Long March rockets",
+      "known_at": 11
+    },
+    {
+      "name": "Long March 8",
+      "facet": "Long March rockets",
+      "known_at": 13
+    },
+    {
+      "name": "Long March 9",
+      "facet": "Long March rockets",
+      "known_at": 14
+    },
+    {
+      "name": "Long March 10",
+      "facet": "Long March rockets",
+      "known_at": 13
+    },
+    {
+      "name": "YF-100 engine",
+      "facet": "Long March rockets",
+      "known_at": 14
+    },
+    {
+      "name": "YF-77 engine",
+      "facet": "Long March rockets",
+      "known_at": 14
+    },
+    {
+      "name": "Strap-on boosters",
+      "facet": "Long March rockets",
+      "known_at": 10
+    },
+    {
+      "name": "Payload fairing",
+      "facet": "Long March rockets",
+      "known_at": 12
+    },
+    {
+      "name": "Jiuquan launch centre",
+      "facet": "Launch sites and landing zones",
+      "known_at": 7
+    },
+    {
+      "name": "Wenchang launch site",
+      "facet": "Launch sites and landing zones",
+      "known_at": 8
+    },
+    {
+      "name": "Xichang launch centre",
+      "facet": "Launch sites and landing zones",
+      "known_at": 11
+    },
+    {
+      "name": "Taiyuan launch centre",
+      "facet": "Launch sites and landing zones",
+      "known_at": 12
+    },
+    {
+      "name": "Ejin Banner",
+      "facet": "Launch sites and landing zones",
+      "known_at": 14
+    },
+    {
+      "name": "Dongfeng landing site",
+      "facet": "Launch sites and landing zones",
+      "known_at": 10
+    },
+    {
+      "name": "Siziwang Banner",
+      "facet": "Launch sites and landing zones",
+      "known_at": 11
+    },
+    {
+      "name": "Beijing Aerospace Control Center",
+      "facet": "Launch sites and landing zones",
+      "known_at": 10
+    },
+    {
+      "name": "Yuanwang tracking ships",
+      "facet": "Launch sites and landing zones",
+      "known_at": 12
+    },
+    {
+      "name": "Low-latitude launch advantage",
+      "facet": "Launch sites and landing zones",
+      "known_at": 11
+    },
+    {
+      "name": "Haiyang sea launch",
+      "facet": "Launch sites and landing zones",
+      "known_at": 14
+    },
+    {
+      "name": "Landing parachute",
+      "facet": "Launch sites and landing zones",
+      "known_at": 8
+    },
+    {
+      "name": "Landing retro-rockets",
+      "facet": "Launch sites and landing zones",
+      "known_at": 12
+    },
+    {
+      "name": "Recovery helicopters",
+      "facet": "Launch sites and landing zones",
+      "known_at": 10
+    },
+    {
+      "name": "Weightlessness",
+      "facet": "Life aboard the station",
+      "known_at": 4
+    },
+    {
+      "name": "Space food",
+      "facet": "Life aboard the station",
+      "known_at": 5
+    },
+    {
+      "name": "Kung Pao chicken in space",
+      "facet": "Life aboard the station",
+      "known_at": 9
+    },
+    {
+      "name": "Mooncakes in orbit",
+      "facet": "Life aboard the station",
+      "known_at": 7
+    },
+    {
+      "name": "Spring Festival in orbit",
+      "facet": "Life aboard the station",
+      "known_at": 9
+    },
+    {
+      "name": "Space sleeping bag",
+      "facet": "Life aboard the station",
+      "known_at": 7
+    },
+    {
+      "name": "Penguin suit",
+      "facet": "Life aboard the station",
+      "known_at": 12
+    },
+    {
+      "name": "Oxygen from water electrolysis",
+      "facet": "Life aboard the station",
+      "known_at": 11
+    },
+    {
+      "name": "Lettuce grown in space",
+      "facet": "Life aboard the station",
+      "known_at": 10
+    },
+    {
+      "name": "Haircut in space",
+      "facet": "Life aboard the station",
+      "known_at": 9
+    },
+    {
+      "name": "Video calls home",
+      "facet": "Life aboard the station",
+      "known_at": 8
+    },
+    {
+      "name": "Six-month crew rotation",
+      "facet": "Life aboard the station",
+      "known_at": 9
+    },
+    {
+      "name": "In-orbit crew handover",
+      "facet": "Life aboard the station",
+      "known_at": 12
+    },
+    {
+      "name": "Bone loss in space",
+      "facet": "Life aboard the station",
+      "known_at": 10
+    },
+    {
+      "name": "Space motion sickness",
+      "facet": "Life aboard the station",
+      "known_at": 11
+    },
+    {
+      "name": "Fluid shift",
+      "facet": "Life aboard the station",
+      "known_at": 13
+    },
+    {
+      "name": "Growing taller in space",
+      "facet": "Life aboard the station",
+      "known_at": 8
+    },
+    {
+      "name": "Post-flight rehabilitation",
+      "facet": "Life aboard the station",
+      "known_at": 11
+    },
+    {
+      "name": "Zhai Zhigang's spacewalk",
+      "facet": "Spacewalks and space suits",
+      "known_at": 6
+    },
+    {
+      "name": "Extravehicular activity",
+      "facet": "Spacewalks and space suits",
+      "known_at": 8
+    },
+    {
+      "name": "Feitian space suit",
+      "facet": "Spacewalks and space suits",
+      "known_at": 9
+    },
+    {
+      "name": "Haiying space suit",
+      "facet": "Spacewalks and space suits",
+      "known_at": 14
+    },
+    {
+      "name": "Launch-and-entry pressure suit",
+      "facet": "Spacewalks and space suits",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Yaping's spacewalk",
+      "facet": "Spacewalks and space suits",
+      "known_at": 7
+    },
+    {
+      "name": "Foot restraint",
+      "facet": "Spacewalks and space suits",
+      "known_at": 13
+    },
+    {
+      "name": "Debris protection panels",
+      "facet": "Spacewalks and space suits",
+      "known_at": 12
+    },
+    {
+      "name": "Suit life-support backpack",
+      "facet": "Spacewalks and space suits",
+      "known_at": 11
+    },
+    {
+      "name": "Temperature swings outside",
+      "facet": "Spacewalks and space suits",
+      "known_at": 10
+    },
+    {
+      "name": "Space debris",
+      "facet": "Spacewalks and space suits",
+      "known_at": 9
+    },
+    {
+      "name": "Oxygen pre-breathing",
+      "facet": "Spacewalks and space suits",
+      "known_at": 14
+    },
+    {
+      "name": "Liquid cooling garment",
+      "facet": "Spacewalks and space suits",
+      "known_at": 13
+    },
+    {
+      "name": "Stuck hatch on Shenzhou 7",
+      "facet": "Spacewalks and space suits",
+      "known_at": 13
+    },
+    {
+      "name": "Parabolic flight training",
+      "facet": "Spacewalks and space suits",
+      "known_at": 12
+    },
+    {
+      "name": "Wangyu moon suit",
+      "facet": "Spacewalks and space suits",
+      "known_at": 12
+    },
+    {
+      "name": "Tianzhou cargo ship",
+      "facet": "Cargo ships and space science",
+      "known_at": 8
+    },
+    {
+      "name": "Tianzhou 1",
+      "facet": "Cargo ships and space science",
+      "known_at": 12
+    },
+    {
+      "name": "Tianzhou fast docking",
+      "facet": "Cargo ships and space science",
+      "known_at": 13
+    },
+    {
+      "name": "Fresh fruit deliveries",
+      "facet": "Cargo ships and space science",
+      "known_at": 9
+    },
+    {
+      "name": "Space seed breeding",
+      "facet": "Cargo ships and space science",
+      "known_at": 8
+    },
+    {
+      "name": "Space peppers",
+      "facet": "Cargo ships and space science",
+      "known_at": 9
+    },
+    {
+      "name": "Rice on Wentian",
+      "facet": "Cargo ships and space science",
+      "known_at": 12
+    },
+    {
+      "name": "Zebrafish aquarium",
+      "facet": "Cargo ships and space science",
+      "known_at": 12
+    },
+    {
+      "name": "Mice on Tiangong",
+      "facet": "Cargo ships and space science",
+      "known_at": 13
+    },
+    {
+      "name": "Tianlian relay satellites",
+      "facet": "Cargo ships and space science",
+      "known_at": 12
+    },
+    {
+      "name": "Fluid physics experiments",
+      "facet": "Cargo ships and space science",
+      "known_at": 13
+    },
+    {
+      "name": "Combustion experiments",
+      "facet": "Cargo ships and space science",
+      "known_at": 14
+    },
+    {
+      "name": "Materials science furnace",
+      "facet": "Cargo ships and space science",
+      "known_at": 14
+    },
+    {
+      "name": "UN experiments on Tiangong",
+      "facet": "Cargo ships and space science",
+      "known_at": 14
+    },
+    {
+      "name": "Cargo ship destructive re-entry",
+      "facet": "Cargo ships and space science",
+      "known_at": 11
+    },
+    {
+      "name": "Project 921",
+      "facet": "Programme history and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Three-step strategy",
+      "facet": "Programme history and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Two Bombs, One Satellite",
+      "facet": "Programme history and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Shuguang project",
+      "facet": "Programme history and milestones",
+      "known_at": 15
+    },
+    {
+      "name": "Wang Yongzhi",
+      "facet": "Programme history and milestones",
+      "known_at": 14
+    },
+    {
+      "name": "Qi Faren",
+      "facet": "Programme history and milestones",
+      "known_at": 14
+    },
+    {
+      "name": "China Manned Space Agency",
+      "facet": "Programme history and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Astronaut Center of China",
+      "facet": "Programme history and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Third batch of taikonauts",
+      "facet": "Programme history and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Third nation in independent crewed spaceflight",
+      "facet": "Programme history and milestones",
+      "known_at": 6
+    },
+    {
+      "name": "Station completed 2022",
+      "facet": "Programme history and milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Crewed Moon landing goal",
+      "facet": "Programme history and milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Tansuo lunar rover",
+      "facet": "Programme history and milestones",
+      "known_at": 14
+    },
+    {
+      "name": "Yuhangyuan",
+      "facet": "Names, symbols and space culture",
+      "known_at": 10
+    },
+    {
+      "name": "Havoc in Heaven",
+      "facet": "Names, symbols and space culture",
+      "known_at": 5
+    },
+    {
+      "name": "Feitian apsaras of Dunhuang",
+      "facet": "Names, symbols and space culture",
+      "known_at": 9
+    },
+    {
+      "name": "Tianwen poem",
+      "facet": "Names, symbols and space culture",
+      "known_at": 11
+    },
+    {
+      "name": "Long March of 1934–1935",
+      "facet": "Names, symbols and space culture",
+      "known_at": 7
+    },
+    {
+      "name": "Shenzhou as an old name for China",
+      "facet": "Names, symbols and space culture",
+      "known_at": 12
+    },
+    {
+      "name": "China Space Day",
+      "facet": "Names, symbols and space culture",
+      "known_at": 10
+    },
+    {
+      "name": "Space Hero title",
+      "facet": "Names, symbols and space culture",
+      "known_at": 11
+    },
+    {
+      "name": "China Manned Space emblem",
+      "facet": "Names, symbols and space culture",
+      "known_at": 13
+    },
+    {
+      "name": "The Wandering Earth",
+      "facet": "Names, symbols and space culture",
+      "known_at": 6
+    },
+    {
+      "name": "The Three-Body Problem",
+      "facet": "Names, symbols and space culture",
+      "known_at": 9
+    },
+    {
+      "name": "Liu Cixin",
+      "facet": "Names, symbols and space culture",
+      "known_at": 9
+    },
+    {
+      "name": "Fire arrows",
+      "facet": "Names, symbols and space culture",
+      "known_at": 9
+    }
+  ]
+}

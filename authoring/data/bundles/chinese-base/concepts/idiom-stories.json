@@ -1,0 +1,1143 @@
+{
+  "subcategory": "idiom-stories",
+  "facets": [
+    "Spring and Autumn rulers",
+    "Warring States generals and envoys",
+    "Chu–Han contention heroes",
+    "Three Kingdoms idioms",
+    "Confucius and his disciples",
+    "Philosophers behind sayings",
+    "Hard-working scholars' stories",
+    "Poets, painters and calligraphers",
+    "Famous women in idioms",
+    "Friendship and loyalty stories",
+    "Idioms from later dynasties",
+    "Classic books as idiom sources"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 3,
+      "name_concept": 2,
+      "word_meaning": 1,
+      "count": 2,
+      "estimate": 1,
+      "record": 1,
+      "origin": 4,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sleeping on brushwood: Goujian",
+      "facet": "Spring and Autumn rulers",
+      "known_at": 7
+    },
+    {
+      "name": "Retreating three days' march: Duke Wen of Jin",
+      "facet": "Spring and Autumn rulers",
+      "known_at": 11
+    },
+    {
+      "name": "An old horse knows the way: Guan Zhong",
+      "facet": "Spring and Autumn rulers",
+      "known_at": 8
+    },
+    {
+      "name": "Never forget Ju: Duke Huan of Qi",
+      "facet": "Spring and Autumn rulers",
+      "known_at": 14
+    },
+    {
+      "name": "One cry that startles the world: King Zhuang of Chu",
+      "facet": "Spring and Autumn rulers",
+      "known_at": 9
+    },
+    {
+      "name": "Asking the weight of the cauldrons: King Zhuang of Chu",
+      "facet": "Spring and Autumn rulers",
+      "known_at": 12
+    },
+    {
+      "name": "Benevolence of Duke Xiang of Song",
+      "facet": "Spring and Autumn rulers",
+      "known_at": 13
+    },
+    {
+      "name": "Lips gone, teeth cold: Duke Xian of Jin",
+      "facet": "Spring and Autumn rulers",
+      "known_at": 9
+    },
+    {
+      "name": "Beacon fires to tease the lords: King You of Zhou",
+      "facet": "Spring and Autumn rulers",
+      "known_at": 8
+    },
+    {
+      "name": "Hair turned white overnight: Wu Zixu",
+      "facet": "Spring and Autumn rulers",
+      "known_at": 11
+    },
+    {
+      "name": "Boating on the Five Lakes: Fan Li",
+      "facet": "Spring and Autumn rulers",
+      "known_at": 13
+    },
+    {
+      "name": "Birds gone, bow put away: Fan Li",
+      "facet": "Spring and Autumn rulers",
+      "known_at": 12
+    },
+    {
+      "name": "One roll of the drum: Cao Gui",
+      "facet": "Spring and Autumn rulers",
+      "known_at": 7
+    },
+    {
+      "name": "Dipping a finger in the pot: Duke Ling of Zheng",
+      "facet": "Spring and Autumn rulers",
+      "known_at": 14
+    },
+    {
+      "name": "Marriage of Qin and Jin: Duke Mu of Qin",
+      "facet": "Spring and Autumn rulers",
+      "known_at": 11
+    },
+    {
+      "name": "Bian He weeps with the jade",
+      "facet": "Spring and Autumn rulers",
+      "known_at": 11
+    },
+    {
+      "name": "Returning the jade: Lin Xiangru",
+      "facet": "Warring States generals and envoys",
+      "known_at": 6
+    },
+    {
+      "name": "Carrying thorns: Lian Po",
+      "facet": "Warring States generals and envoys",
+      "known_at": 6
+    },
+    {
+      "name": "Armchair strategist: Zhao Kuo",
+      "facet": "Warring States generals and envoys",
+      "known_at": 7
+    },
+    {
+      "name": "Mao Sui recommends himself",
+      "facet": "Warring States generals and envoys",
+      "known_at": 7
+    },
+    {
+      "name": "Stealing the tally to save Zhao: Lord Xinling",
+      "facet": "Warring States generals and envoys",
+      "known_at": 12
+    },
+    {
+      "name": "Crowing like a rooster: Lord Mengchang",
+      "facet": "Warring States generals and envoys",
+      "known_at": 10
+    },
+    {
+      "name": "Cunning rabbit's three burrows: Feng Xuan",
+      "facet": "Warring States generals and envoys",
+      "known_at": 11
+    },
+    {
+      "name": "Besieging Wei to save Zhao: Sun Bin",
+      "facet": "Warring States generals and envoys",
+      "known_at": 9
+    },
+    {
+      "name": "Vertical and horizontal alliances: Su Qin and Zhang Yi",
+      "facet": "Warring States generals and envoys",
+      "known_at": 11
+    },
+    {
+      "name": "Befriend the far, attack the near: Fan Ju",
+      "facet": "Warring States generals and envoys",
+      "known_at": 12
+    },
+    {
+      "name": "Moving the log to win trust: Shang Yang",
+      "facet": "Warring States generals and envoys",
+      "known_at": 10
+    },
+    {
+      "name": "Hu clothing and mounted archery: King Wuling of Zhao",
+      "facet": "Warring States generals and envoys",
+      "known_at": 10
+    },
+    {
+      "name": "Dagger revealed in the map: Jing Ke",
+      "facet": "Warring States generals and envoys",
+      "known_at": 8
+    },
+    {
+      "name": "Minister at twelve: Gan Luo",
+      "facet": "Warring States generals and envoys",
+      "known_at": 11
+    },
+    {
+      "name": "Fire oxen formation: Tian Dan",
+      "facet": "Warring States generals and envoys",
+      "known_at": 12
+    },
+    {
+      "name": "A word worth a thousand gold: Lü Buwei",
+      "facet": "Warring States generals and envoys",
+      "known_at": 10
+    },
+    {
+      "name": "Bird startled by the bow: Geng Lei",
+      "facet": "Warring States generals and envoys",
+      "known_at": 12
+    },
+    {
+      "name": "Piercing a willow leaf at a hundred paces: Yang Youji",
+      "facet": "Warring States generals and envoys",
+      "known_at": 11
+    },
+    {
+      "name": "Three people make a tiger: Pang Cong",
+      "facet": "Warring States generals and envoys",
+      "known_at": 12
+    },
+    {
+      "name": "Bian Que and Duke Huan of Cai",
+      "facet": "Warring States generals and envoys",
+      "known_at": 9
+    },
+    {
+      "name": "Breaking the cauldrons: Xiang Yu",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 7
+    },
+    {
+      "name": "Han Xin under the crotch",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 8
+    },
+    {
+      "name": "Sword dance at the Hongmen Banquet: Xiang Zhuang",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 9
+    },
+    {
+      "name": "Chu songs on all sides: Gaixia",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 8
+    },
+    {
+      "name": "Xiao He chases Han Xin by moonlight",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 10
+    },
+    {
+      "name": "Success and failure both by Xiao He",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 11
+    },
+    {
+      "name": "Repairing the plank road, crossing at Chencang",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 11
+    },
+    {
+      "name": "The more the better: Han Xin",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 10
+    },
+    {
+      "name": "A meal repaid with a thousand gold: Han Xin",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 10
+    },
+    {
+      "name": "Three-article code: Liu Bang",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 9
+    },
+    {
+      "name": "A promise worth a thousand gold: Ji Bu",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Liang fetches the shoe at the bridge",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 9
+    },
+    {
+      "name": "Planning inside the tent: Zhang Liang",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 10
+    },
+    {
+      "name": "Fighting with backs to the river: Han Xin",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 8
+    },
+    {
+      "name": "Fan Zeng raises the jade ring",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 14
+    },
+    {
+      "name": "No face to meet the elders east of the river: Xiang Yu",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 11
+    },
+    {
+      "name": "Sparrows and swans: Chen Sheng",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 9
+    },
+    {
+      "name": "A monkey in a hat: Xiang Yu",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 13
+    },
+    {
+      "name": "Ambush on ten sides",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 9
+    },
+    {
+      "name": "Chu River and Han border",
+      "facet": "Chu–Han contention heroes",
+      "known_at": 6
+    },
+    {
+      "name": "Three visits to the thatched cottage: Liu Bei",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 4
+    },
+    {
+      "name": "Oath of the Peach Garden",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 4
+    },
+    {
+      "name": "Borrowing arrows with straw boats: Zhuge Liang",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 3
+    },
+    {
+      "name": "Empty fort strategy: Zhuge Liang",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 6
+    },
+    {
+      "name": "Executing Ma Su in tears",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Seven captures of Meng Huo",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Speak of Cao Cao and Cao Cao arrives",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 5
+    },
+    {
+      "name": "Quenching thirst by thinking of plums: Cao Cao",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Liu Bei borrows Jingzhou",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Zhou Yu beats Huang Gai",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Going to the feast with a single sword: Guan Yu",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Riding alone for a thousand li: Guan Yu",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Carelessly losing Jingzhou",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Seeing with new eyes: Lü Meng",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Too happy to miss Shu: Liu Shan",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Sima Zhao's intent",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Seven-step poem: Cao Zhi",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Flesh regrowing on the thighs: Liu Bei",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 14
+    },
+    {
+      "name": "Everything ready but the east wind",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Bending to the task until death: Zhuge Liang",
+      "facet": "Three Kingdoms idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Teaching without discrimination",
+      "facet": "Confucius and his disciples",
+      "known_at": 9
+    },
+    {
+      "name": "Teaching according to aptitude",
+      "facet": "Confucius and his disciples",
+      "known_at": 7
+    },
+    {
+      "name": "Leather bindings broke three times",
+      "facet": "Confucius and his disciples",
+      "known_at": 11
+    },
+    {
+      "name": "One basket of rice, one ladle of water: Yan Hui",
+      "facet": "Confucius and his disciples",
+      "known_at": 12
+    },
+    {
+      "name": "Zengzi kills the pig",
+      "facet": "Confucius and his disciples",
+      "known_at": 7
+    },
+    {
+      "name": "Carrying rice a hundred li: Zilu",
+      "facet": "Confucius and his disciples",
+      "known_at": 10
+    },
+    {
+      "name": "Reed-flower coat: Min Ziqian",
+      "facet": "Confucius and his disciples",
+      "known_at": 13
+    },
+    {
+      "name": "Three months without tasting meat: Confucius",
+      "facet": "Confucius and his disciples",
+      "known_at": 11
+    },
+    {
+      "name": "Harsh government fiercer than a tiger",
+      "facet": "Confucius and his disciples",
+      "known_at": 10
+    },
+    {
+      "name": "Like a homeless dog: Confucius",
+      "facet": "Confucius and his disciples",
+      "known_at": 13
+    },
+    {
+      "name": "Rotten wood cannot be carved: Zai Yu",
+      "facet": "Confucius and his disciples",
+      "known_at": 9
+    },
+    {
+      "name": "Examining myself three times a day: Zengzi",
+      "facet": "Confucius and his disciples",
+      "known_at": 8
+    },
+    {
+      "name": "Confucius asks Laozi about the rites",
+      "facet": "Confucius and his disciples",
+      "known_at": 12
+    },
+    {
+      "name": "Among three walking, one is my teacher",
+      "facet": "Confucius and his disciples",
+      "known_at": 5
+    },
+    {
+      "name": "Not ashamed to ask: Kong Wenzi",
+      "facet": "Confucius and his disciples",
+      "known_at": 8
+    },
+    {
+      "name": "Walls of the master's palace: Zigong",
+      "facet": "Confucius and his disciples",
+      "known_at": 14
+    },
+    {
+      "name": "Never repeating a mistake: Yan Hui",
+      "facet": "Confucius and his disciples",
+      "known_at": 13
+    },
+    {
+      "name": "Mencius's mother cuts the weaving",
+      "facet": "Philosophers behind sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Zhuangzi dreams of a butterfly",
+      "facet": "Philosophers behind sayings",
+      "known_at": 8
+    },
+    {
+      "name": "The joy of fish: Zhuangzi and Huizi",
+      "facet": "Philosophers behind sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Cook Ding carves the ox",
+      "facet": "Philosophers behind sayings",
+      "known_at": 9
+    },
+    {
+      "name": "A journey of a thousand li: Laozi",
+      "facet": "Philosophers behind sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Mozi defends Song against Gongshu Ban",
+      "facet": "Philosophers behind sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Blue from indigo: Xunzi",
+      "facet": "Philosophers behind sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Fish and bear's paw: Mencius",
+      "facet": "Philosophers behind sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Fifty steps laughing at a hundred: Mencius",
+      "facet": "Philosophers behind sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Purple air from the east: Laozi at Hangu Pass",
+      "facet": "Philosophers behind sayings",
+      "known_at": 10
+    },
+    {
+      "name": "A white horse is not a horse: Gongsun Long",
+      "facet": "Philosophers behind sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Not plucking a single hair: Yang Zhu",
+      "facet": "Philosophers behind sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Mozi weeps over dyed silk",
+      "facet": "Philosophers behind sayings",
+      "known_at": 14
+    },
+    {
+      "name": "Know the enemy and know yourself: Sunzi",
+      "facet": "Philosophers behind sayings",
+      "known_at": 7
+    },
+    {
+      "name": "The highest good is like water: Laozi",
+      "facet": "Philosophers behind sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Riches cannot corrupt: Mencius",
+      "facet": "Philosophers behind sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Rising at cockcrow: Zu Ti",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 8
+    },
+    {
+      "name": "Boring through the wall for light: Kuang Heng",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 5
+    },
+    {
+      "name": "Reading by fireflies: Che Yin",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 6
+    },
+    {
+      "name": "Reading by snowlight: Sun Kang",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 6
+    },
+    {
+      "name": "Tying hair to the beam: Sun Jing",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 7
+    },
+    {
+      "name": "Jabbing the thigh with an awl: Su Qin",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 7
+    },
+    {
+      "name": "Grinding an iron rod into a needle: Li Bai",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 4
+    },
+    {
+      "name": "Books hung on the ox horns: Li Mi",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 11
+    },
+    {
+      "name": "Standing in the snow at Cheng's door: Yang Shi",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 9
+    },
+    {
+      "name": "Writing with reeds in the sand: Ouyang Xiu",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 10
+    },
+    {
+      "name": "Three years without looking at the garden: Dong Zhongshu",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 13
+    },
+    {
+      "name": "Borrowing and copying books: Song Lian",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 11
+    },
+    {
+      "name": "Cutting the cold porridge: Fan Zhongyan",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 11
+    },
+    {
+      "name": "The character “early” carved on the desk: Lu Xun",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 5
+    },
+    {
+      "name": "Studying by the temple lamp: Wang Mian",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 10
+    },
+    {
+      "name": "Round-log pillow: Sima Guang",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 11
+    },
+    {
+      "name": "Throwing down the brush to join the army: Ban Chao",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 10
+    },
+    {
+      "name": "Hoeing with the classics: Ni Kuan",
+      "facet": "Hard-working scholars' stories",
+      "known_at": 14
+    },
+    {
+      "name": "Ink pond: Wang Xizhi",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 7
+    },
+    {
+      "name": "Calligraphy for geese: Wang Xizhi",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 11
+    },
+    {
+      "name": "Bamboo in the mind: Wen Tong",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 9
+    },
+    {
+      "name": "Dotting the dragon's eyes: Zhang Sengyou",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 6
+    },
+    {
+      "name": "Push or knock: Jia Dao",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 8
+    },
+    {
+      "name": "Paper grows dear in Luoyang: Zuo Si",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 11
+    },
+    {
+      "name": "Talent run dry: Jiang Yan",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 10
+    },
+    {
+      "name": "Gao Lishi pulls off Li Bai's boots",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 10
+    },
+    {
+      "name": "Poems an old woman can understand: Bai Juyi",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 10
+    },
+    {
+      "name": "Pouring out the heart: Li He's brocade bag",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 12
+    },
+    {
+      "name": "Preface to the Pavilion of Prince Teng: Wang Bo",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 10
+    },
+    {
+      "name": "Dongpo pork: Su Shi",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 6
+    },
+    {
+      "name": "Eighteen vats of water: Wang Xianzhi",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 9
+    },
+    {
+      "name": "Sugarcane from the tip: Gu Kaizhi",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 12
+    },
+    {
+      "name": "Wu's sashes in the wind: Wu Daozi",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 13
+    },
+    {
+      "name": "It's hard to be muddled: Zheng Banqiao",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 10
+    },
+    {
+      "name": "Writing on banana leaves: Huai Su",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 12
+    },
+    {
+      "name": "Not bowing for five pecks of rice: Tao Yuanming",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 9
+    },
+    {
+      "name": "Eight pecks of talent: Cao Zhi",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 11
+    },
+    {
+      "name": "Yan's sinew, Liu's bone",
+      "facet": "Poets, painters and calligraphers",
+      "known_at": 11
+    },
+    {
+      "name": "Dong Shi imitates Xi Shi's frown",
+      "facet": "Famous women in idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Wang Zhaojun leaves for the frontier",
+      "facet": "Famous women in idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Diaochan outshines the moon",
+      "facet": "Famous women in idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Yang Guifei and the lychees",
+      "facet": "Famous women in idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Meng Jiangnü weeps at the Great Wall",
+      "facet": "Famous women in idioms",
+      "known_at": 6
+    },
+    {
+      "name": "Mulan joins the army",
+      "facet": "Famous women in idioms",
+      "known_at": 2
+    },
+    {
+      "name": "Raising the tray to the eyebrows: Meng Guang",
+      "facet": "Famous women in idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Selling wine at the counter: Zhuo Wenjun",
+      "facet": "Famous women in idioms",
+      "known_at": 12
+    },
+    {
+      "name": "Ban Zhao completes the Book of Han",
+      "facet": "Famous women in idioms",
+      "known_at": 13
+    },
+    {
+      "name": "Willow catkins in the wind: Xie Daoyun",
+      "facet": "Famous women in idioms",
+      "known_at": 12
+    },
+    {
+      "name": "Farewell My Concubine: Consort Yu",
+      "facet": "Famous women in idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Princess Wencheng goes to Tibet",
+      "facet": "Famous women in idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Yue Fei's mother tattoos his back",
+      "facet": "Famous women in idioms",
+      "known_at": 6
+    },
+    {
+      "name": "Wordless stele: Wu Zetian",
+      "facet": "Famous women in idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Zhang Chang paints his wife's eyebrows",
+      "facet": "Famous women in idioms",
+      "known_at": 13
+    },
+    {
+      "name": "Thinner than the yellow flowers: Li Qingzhao",
+      "facet": "Famous women in idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Mu Guiying takes command",
+      "facet": "Famous women in idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Liang Hongyu beats the war drum",
+      "facet": "Famous women in idioms",
+      "known_at": 12
+    },
+    {
+      "name": "Cai Wenji returns to Han",
+      "facet": "Famous women in idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Lady Ban declines the carriage",
+      "facet": "Famous women in idioms",
+      "known_at": 14
+    },
+    {
+      "name": "Dancing on a palm: Zhao Feiyan",
+      "facet": "Famous women in idioms",
+      "known_at": 12
+    },
+    {
+      "name": "High mountains and flowing water: Yu Boya and Zhong Ziqi",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 7
+    },
+    {
+      "name": "Friendship of Guan Zhong and Bao Shuya",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 10
+    },
+    {
+      "name": "Cutting the mat: Guan Ning and Hua Xin",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 11
+    },
+    {
+      "name": "Su Wu herds sheep",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 8
+    },
+    {
+      "name": "A loyal heart in the annals: Wen Tianxiang",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 8
+    },
+    {
+      "name": "Groundless charge: Yue Fei and Qin Hui",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 10
+    },
+    {
+      "name": "Dying for one who knows him: Yu Rang",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 13
+    },
+    {
+      "name": "Ji Zha hangs his sword on the tomb",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 13
+    },
+    {
+      "name": "Jie Zitui cuts flesh from his thigh",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 11
+    },
+    {
+      "name": "Giving one's life for a friend: Yangjiao Ai and Zuo Botao",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 14,
+      "retired": "unaskable: The whole story is about a friend freezing to death. You can't ask it without the death, and the two men are far too obscure."
+    },
+    {
+      "name": "Chicken and millet friendship: Fan Shi and Zhang Shao",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 13
+    },
+    {
+      "name": "Wei Sheng holds the pillar",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 12
+    },
+    {
+      "name": "Cheng Ying saves the Orphan of Zhao",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 10
+    },
+    {
+      "name": "Shen Baoxu weeps at the Qin court",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 13
+    },
+    {
+      "name": "Refusing the grain of Zhou: Bo Yi and Shu Qi",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 11
+    },
+    {
+      "name": "Memorial expressing my feelings: Li Mi",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 13
+    },
+    {
+      "name": "Hiding oranges for his mother: Lu Ji",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 11
+    },
+    {
+      "name": "Lying on ice for carp: Wang Xiang",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 10
+    },
+    {
+      "name": "Staying by a sick friend: Xun Jubo",
+      "facet": "Friendship and loyalty stories",
+      "known_at": 14
+    },
+    {
+      "name": "Wind and cranes: Battle of Fei River",
+      "facet": "Idioms from later dynasties",
+      "known_at": 10
+    },
+    {
+      "name": "Every tree a soldier: Fu Jian",
+      "facet": "Idioms from later dynasties",
+      "known_at": 10
+    },
+    {
+      "name": "Carrying bricks: Tao Kan",
+      "facet": "Idioms from later dynasties",
+      "known_at": 13
+    },
+    {
+      "name": "Honey mouth, sword belly: Li Linfu",
+      "facet": "Idioms from later dynasties",
+      "known_at": 11
+    },
+    {
+      "name": "People as a mirror: Wei Zheng",
+      "facet": "Idioms from later dynasties",
+      "known_at": 10
+    },
+    {
+      "name": "Water carries and overturns the boat: Emperor Taizong of Tang",
+      "facet": "Idioms from later dynasties",
+      "known_at": 9
+    },
+    {
+      "name": "Yellow robe draped on him: Zhao Kuangyin",
+      "facet": "Idioms from later dynasties",
+      "known_at": 9
+    },
+    {
+      "name": "Military power dissolved over wine",
+      "facet": "Idioms from later dynasties",
+      "known_at": 10
+    },
+    {
+      "name": "Iron-faced and impartial: Bao Zheng",
+      "facet": "Idioms from later dynasties",
+      "known_at": 7
+    },
+    {
+      "name": "Sima Guang smashes the vat",
+      "facet": "Idioms from later dynasties",
+      "known_at": 3
+    },
+    {
+      "name": "Only officials may light fires: Tian Deng",
+      "facet": "Idioms from later dynasties",
+      "known_at": 12
+    },
+    {
+      "name": "Hai Rui and his coffin",
+      "facet": "Idioms from later dynasties",
+      "known_at": 13
+    },
+    {
+      "name": "Peaches and plums everywhere: Di Renjie",
+      "facet": "Idioms from later dynasties",
+      "known_at": 11
+    },
+    {
+      "name": "High walls, stored grain: Zhu Yuanzhang",
+      "facet": "Idioms from later dynasties",
+      "known_at": 13
+    },
+    {
+      "name": "The sea takes in a hundred rivers: Lin Zexu",
+      "facet": "Idioms from later dynasties",
+      "known_at": 10
+    },
+    {
+      "name": "Bitter plums by the road: Wang Rong",
+      "facet": "Idioms from later dynasties",
+      "known_at": 11
+    },
+    {
+      "name": "The oil seller: Chen Yaozi",
+      "facet": "Idioms from later dynasties",
+      "known_at": 7
+    },
+    {
+      "name": "Wealth contest: Shi Chong and Wang Kai",
+      "facet": "Idioms from later dynasties",
+      "known_at": 13
+    },
+    {
+      "name": "Please step into the urn: Lai Junchen",
+      "facet": "Idioms from later dynasties",
+      "known_at": 11
+    },
+    {
+      "name": "First to worry, last to enjoy: Fan Zhongyan",
+      "facet": "Idioms from later dynasties",
+      "known_at": 8
+    },
+    {
+      "name": "Strategies of the Warring States",
+      "facet": "Classic books as idiom sources",
+      "known_at": 11
+    },
+    {
+      "name": "Analects",
+      "facet": "Classic books as idiom sources",
+      "known_at": 6
+    },
+    {
+      "name": "Mencius (book)",
+      "facet": "Classic books as idiom sources",
+      "known_at": 8
+    },
+    {
+      "name": "Zhuangzi (book)",
+      "facet": "Classic books as idiom sources",
+      "known_at": 9
+    },
+    {
+      "name": "Lüshi Chunqiu",
+      "facet": "Classic books as idiom sources",
+      "known_at": 12
+    },
+    {
+      "name": "Book of Songs",
+      "facet": "Classic books as idiom sources",
+      "known_at": 8
+    },
+    {
+      "name": "A New Account of the Tales of the World",
+      "facet": "Classic books as idiom sources",
+      "known_at": 12
+    },
+    {
+      "name": "Book of Han",
+      "facet": "Classic books as idiom sources",
+      "known_at": 12
+    },
+    {
+      "name": "Records of the Three Kingdoms",
+      "facet": "Classic books as idiom sources",
+      "known_at": 11
+    }
+  ]
+}

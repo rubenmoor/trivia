@@ -1,0 +1,1032 @@
+{
+  "subcategory": "diving-and-gymnastics",
+  "facets": [
+    "Diving stars and the dream team",
+    "Diving skills, boards and scoring",
+    "Gymnastics legends",
+    "Gymnastics apparatus and moves",
+    "Weightlifting champions",
+    "Weightlifting lifts and rules",
+    "Shooting and China's first gold",
+    "Olympic Games and medal moments",
+    "Training, sports schools and coaches",
+    "Sport terms and nicknames in Chinese"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 3,
+      "record": 4,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 5,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Guo Jingjing",
+      "facet": "Diving stars and the dream team",
+      "known_at": 5
+    },
+    {
+      "name": "Tian Liang",
+      "facet": "Diving stars and the dream team",
+      "known_at": 8
+    },
+    {
+      "name": "Chen Yuxi",
+      "facet": "Diving stars and the dream team",
+      "known_at": 7
+    },
+    {
+      "name": "Chen Ruolin",
+      "facet": "Diving stars and the dream team",
+      "known_at": 9
+    },
+    {
+      "name": "Gao Min",
+      "facet": "Diving stars and the dream team",
+      "known_at": 11
+    },
+    {
+      "name": "Xiong Ni",
+      "facet": "Diving stars and the dream team",
+      "known_at": 11
+    },
+    {
+      "name": "Cao Yuan",
+      "facet": "Diving stars and the dream team",
+      "known_at": 9
+    },
+    {
+      "name": "Xie Siyi",
+      "facet": "Diving stars and the dream team",
+      "known_at": 10
+    },
+    {
+      "name": "Shi Tingmao",
+      "facet": "Diving stars and the dream team",
+      "known_at": 10
+    },
+    {
+      "name": "Qin Kai",
+      "facet": "Diving stars and the dream team",
+      "known_at": 10
+    },
+    {
+      "name": "Chen Aisen",
+      "facet": "Diving stars and the dream team",
+      "known_at": 11
+    },
+    {
+      "name": "He Chong",
+      "facet": "Diving stars and the dream team",
+      "known_at": 11
+    },
+    {
+      "name": "Hu Jia",
+      "facet": "Diving stars and the dream team",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Zongyuan",
+      "facet": "Diving stars and the dream team",
+      "known_at": 11
+    },
+    {
+      "name": "Lian Junjie",
+      "facet": "Diving stars and the dream team",
+      "known_at": 11
+    },
+    {
+      "name": "Li Ting",
+      "facet": "Diving stars and the dream team",
+      "known_at": 12
+    },
+    {
+      "name": "Splash-free entry (水花消失术)",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 5
+    },
+    {
+      "name": "10-metre platform",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 3
+    },
+    {
+      "name": "Springboard",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 4
+    },
+    {
+      "name": "Synchronised diving",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 5
+    },
+    {
+      "name": "Somersault",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 4
+    },
+    {
+      "name": "Twist",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 6
+    },
+    {
+      "name": "Tuck position",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 8
+    },
+    {
+      "name": "Pike position",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 9
+    },
+    {
+      "name": "Straight position",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 10
+    },
+    {
+      "name": "Free position",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 13
+    },
+    {
+      "name": "Armstand dive",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 10
+    },
+    {
+      "name": "Forward dive",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 7
+    },
+    {
+      "name": "Backward dive",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 8
+    },
+    {
+      "name": "Inward dive",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 12
+    },
+    {
+      "name": "Reverse dive",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 13
+    },
+    {
+      "name": "Degree of difficulty",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 10
+    },
+    {
+      "name": "Perfect score of 10",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 5
+    },
+    {
+      "name": "Dropping the highest and lowest scores",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 11
+    },
+    {
+      "name": "Flat-hand entry (平掌入水)",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 12
+    },
+    {
+      "name": "Diver's shammy towel",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 10
+    },
+    {
+      "name": "Pool bubble sparger",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 13
+    },
+    {
+      "name": "Dive code number",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 14
+    },
+    {
+      "name": "1-metre springboard",
+      "facet": "Diving skills, boards and scoring",
+      "known_at": 12
+    },
+    {
+      "name": "Li Xiaoshuang",
+      "facet": "Gymnastics legends",
+      "known_at": 10
+    },
+    {
+      "name": "Yang Wei",
+      "facet": "Gymnastics legends",
+      "known_at": 10
+    },
+    {
+      "name": "Zou Kai",
+      "facet": "Gymnastics legends",
+      "known_at": 9
+    },
+    {
+      "name": "Chen Yibing",
+      "facet": "Gymnastics legends",
+      "known_at": 9
+    },
+    {
+      "name": "Li Xiaopeng",
+      "facet": "Gymnastics legends",
+      "known_at": 10
+    },
+    {
+      "name": "Teng Haibin",
+      "facet": "Gymnastics legends",
+      "known_at": 11,
+      "retired": "unaskable: Too obscure for a fair number or group question with these options."
+    },
+    {
+      "name": "Xiao Qin",
+      "facet": "Gymnastics legends",
+      "known_at": 11
+    },
+    {
+      "name": "Feng Zhe",
+      "facet": "Gymnastics legends",
+      "known_at": 11
+    },
+    {
+      "name": "Cheng Fei",
+      "facet": "Gymnastics legends",
+      "known_at": 9
+    },
+    {
+      "name": "He Kexin",
+      "facet": "Gymnastics legends",
+      "known_at": 9
+    },
+    {
+      "name": "Deng Linlin",
+      "facet": "Gymnastics legends",
+      "known_at": 11
+    },
+    {
+      "name": "Liu Xuan",
+      "facet": "Gymnastics legends",
+      "known_at": 11
+    },
+    {
+      "name": "Sui Lu",
+      "facet": "Gymnastics legends",
+      "known_at": 11
+    },
+    {
+      "name": "Lu Li",
+      "facet": "Gymnastics legends",
+      "known_at": 12
+    },
+    {
+      "name": "Zou Jingyuan",
+      "facet": "Gymnastics legends",
+      "known_at": 9
+    },
+    {
+      "name": "Guan Chenchen",
+      "facet": "Gymnastics legends",
+      "known_at": 10
+    },
+    {
+      "name": "Zhang Boheng",
+      "facet": "Gymnastics legends",
+      "known_at": 10
+    },
+    {
+      "name": "Rings",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 5
+    },
+    {
+      "name": "Pommel horse",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 6
+    },
+    {
+      "name": "Balance beam",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 4
+    },
+    {
+      "name": "Uneven bars",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 5
+    },
+    {
+      "name": "Parallel bars",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 6
+    },
+    {
+      "name": "Horizontal bar",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 6
+    },
+    {
+      "name": "Vault",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 5
+    },
+    {
+      "name": "Floor exercise",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 4
+    },
+    {
+      "name": "Iron cross",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 9
+    },
+    {
+      "name": "Handstand",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 2
+    },
+    {
+      "name": "Cartwheel",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 2
+    },
+    {
+      "name": "Splits",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 3
+    },
+    {
+      "name": "Back handspring",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 6
+    },
+    {
+      "name": "Thomas flair",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 13
+    },
+    {
+      "name": "Cheng Fei vault",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 12
+    },
+    {
+      "name": "Li Xiaopeng move",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 13
+    },
+    {
+      "name": "Gymnastics chalk",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 5
+    },
+    {
+      "name": "Stuck landing",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 7
+    },
+    {
+      "name": "Rhythmic gymnastics",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 5
+    },
+    {
+      "name": "Trampoline",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 2
+    },
+    {
+      "name": "Ribbon",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 4
+    },
+    {
+      "name": "Hand grips",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 10
+    },
+    {
+      "name": "Difficulty and execution scores",
+      "facet": "Gymnastics apparatus and moves",
+      "known_at": 12
+    },
+    {
+      "name": "Lü Xiaojun",
+      "facet": "Weightlifting champions",
+      "known_at": 9
+    },
+    {
+      "name": "Long Qingquan",
+      "facet": "Weightlifting champions",
+      "known_at": 9
+    },
+    {
+      "name": "Shi Zhiyong",
+      "facet": "Weightlifting champions",
+      "known_at": 10
+    },
+    {
+      "name": "Zhan Xugang",
+      "facet": "Weightlifting champions",
+      "known_at": 11
+    },
+    {
+      "name": "Chen Yanqing",
+      "facet": "Weightlifting champions",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Guozheng",
+      "facet": "Weightlifting champions",
+      "known_at": 13
+    },
+    {
+      "name": "Li Fabin",
+      "facet": "Weightlifting champions",
+      "known_at": 10
+    },
+    {
+      "name": "Hou Zhihui",
+      "facet": "Weightlifting champions",
+      "known_at": 8
+    },
+    {
+      "name": "Li Wenwen",
+      "facet": "Weightlifting champions",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Mingjuan",
+      "facet": "Weightlifting champions",
+      "known_at": 12
+    },
+    {
+      "name": "Tang Gonghong",
+      "facet": "Weightlifting champions",
+      "known_at": 11
+    },
+    {
+      "name": "Zhou Lulu",
+      "facet": "Weightlifting champions",
+      "known_at": 11
+    },
+    {
+      "name": "Liu Chunhong",
+      "facet": "Weightlifting champions",
+      "known_at": 11,
+      "retired": "unaskable: Her Olympic medal count was changed after doping retests, so the facts are messy and the topic doesn't suit a family game."
+    },
+    {
+      "name": "Chen Lijun",
+      "facet": "Weightlifting champions",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Zhouyu",
+      "facet": "Weightlifting champions",
+      "known_at": 12
+    },
+    {
+      "name": "Deng Wei",
+      "facet": "Weightlifting champions",
+      "known_at": 11
+    },
+    {
+      "name": "Lin Qingfeng",
+      "facet": "Weightlifting champions",
+      "known_at": 12
+    },
+    {
+      "name": "Chen Jingkai",
+      "facet": "Weightlifting champions",
+      "known_at": 13
+    },
+    {
+      "name": "Chen Xiexia",
+      "facet": "Weightlifting champions",
+      "known_at": 12
+    },
+    {
+      "name": "Liao Hui",
+      "facet": "Weightlifting champions",
+      "known_at": 12
+    },
+    {
+      "name": "Snatch",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 8
+    },
+    {
+      "name": "Clean and jerk",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 8
+    },
+    {
+      "name": "Barbell",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 3
+    },
+    {
+      "name": "Weight plates",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 4
+    },
+    {
+      "name": "Bodyweight category",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 7
+    },
+    {
+      "name": "Weigh-in",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 8
+    },
+    {
+      "name": "Total (snatch plus clean and jerk)",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 10
+    },
+    {
+      "name": "Three attempts",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 10
+    },
+    {
+      "name": "Referee lights",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 11
+    },
+    {
+      "name": "Weightlifting belt",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 8
+    },
+    {
+      "name": "Weightlifting shoes",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 10
+    },
+    {
+      "name": "Squat",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 4
+    },
+    {
+      "name": "Deadlift",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 7
+    },
+    {
+      "name": "Powerlifting",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 9
+    },
+    {
+      "name": "Press (abolished lift)",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 13
+    },
+    {
+      "name": "Split jerk",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 12
+    },
+    {
+      "name": "Hook grip",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 12
+    },
+    {
+      "name": "Barbell collars",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 12
+    },
+    {
+      "name": "Kilogram",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 3
+    },
+    {
+      "name": "Doping test",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 8
+    },
+    {
+      "name": "One-minute rule",
+      "facet": "Weightlifting lifts and rules",
+      "known_at": 13
+    },
+    {
+      "name": "Los Angeles 1984 Olympics",
+      "facet": "Shooting and China's first gold",
+      "known_at": 6
+    },
+    {
+      "name": "Wang Yifu",
+      "facet": "Shooting and China's first gold",
+      "known_at": 11
+    },
+    {
+      "name": "Yang Ling",
+      "facet": "Shooting and China's first gold",
+      "known_at": 12
+    },
+    {
+      "name": "Du Li",
+      "facet": "Shooting and China's first gold",
+      "known_at": 11
+    },
+    {
+      "name": "Pang Wei",
+      "facet": "Shooting and China's first gold",
+      "known_at": 12
+    },
+    {
+      "name": "Zhu Qinan",
+      "facet": "Shooting and China's first gold",
+      "known_at": 12
+    },
+    {
+      "name": "Chen Ying",
+      "facet": "Shooting and China's first gold",
+      "known_at": 12
+    },
+    {
+      "name": "Guo Wenjun",
+      "facet": "Shooting and China's first gold",
+      "known_at": 12
+    },
+    {
+      "name": "Huang Yuting",
+      "facet": "Shooting and China's first gold",
+      "known_at": 9
+    },
+    {
+      "name": "Xie Yu",
+      "facet": "Shooting and China's first gold",
+      "known_at": 11
+    },
+    {
+      "name": "10 m air rifle",
+      "facet": "Shooting and China's first gold",
+      "known_at": 7
+    },
+    {
+      "name": "10 m air pistol",
+      "facet": "Shooting and China's first gold",
+      "known_at": 8
+    },
+    {
+      "name": "Mixed team air rifle",
+      "facet": "Shooting and China's first gold",
+      "known_at": 9
+    },
+    {
+      "name": "Skeet",
+      "facet": "Shooting and China's first gold",
+      "known_at": 10
+    },
+    {
+      "name": "Trap",
+      "facet": "Shooting and China's first gold",
+      "known_at": 11
+    },
+    {
+      "name": "Clay target",
+      "facet": "Shooting and China's first gold",
+      "known_at": 9
+    },
+    {
+      "name": "25 m rapid fire pistol",
+      "facet": "Shooting and China's first gold",
+      "known_at": 12
+    },
+    {
+      "name": "50 m rifle three positions",
+      "facet": "Shooting and China's first gold",
+      "known_at": 12
+    },
+    {
+      "name": "Bullseye",
+      "facet": "Shooting and China's first gold",
+      "known_at": 4
+    },
+    {
+      "name": "Electronic target",
+      "facet": "Shooting and China's first gold",
+      "known_at": 10
+    },
+    {
+      "name": "Bird's Nest (国家体育场)",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 3
+    },
+    {
+      "name": "Gold medal",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 1
+    },
+    {
+      "name": "Olympic rings",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 2
+    },
+    {
+      "name": "Olympic flame",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 2
+    },
+    {
+      "name": "Olympic torch relay",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 5
+    },
+    {
+      "name": "Opening ceremony",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 3
+    },
+    {
+      "name": "Medal table",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 6
+    },
+    {
+      "name": "Podium",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 3
+    },
+    {
+      "name": "March of the Volunteers (义勇军进行曲)",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 4
+    },
+    {
+      "name": "Fuwa (福娃)",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 3
+    },
+    {
+      "name": "Bing Dwen Dwen (冰墩墩)",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 2
+    },
+    {
+      "name": "“One World, One Dream” (同一个世界 同一个梦想)",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 7
+    },
+    {
+      "name": "Olympic motto “Faster, Higher, Stronger”",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 7
+    },
+    {
+      "name": "Tokyo 2020 Olympics",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 5
+    },
+    {
+      "name": "Paris 2024 Olympics",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 4
+    },
+    {
+      "name": "Athens 2004 Olympics",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 8
+    },
+    {
+      "name": "Hangzhou Asian Games",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 8
+    },
+    {
+      "name": "National Games of China (全运会)",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 9
+    },
+    {
+      "name": "World Championships",
+      "facet": "Olympic Games and medal moments",
+      "known_at": 6
+    },
+    {
+      "name": "National team (国家队)",
+      "facet": "Training, sports schools and coaches",
+      "known_at": 4
+    },
+    {
+      "name": "Whole-nation system (举国体制)",
+      "facet": "Training, sports schools and coaches",
+      "known_at": 12
+    },
+    {
+      "name": "三从一大 (sān cóng yī dà, “three froms, one large”)",
+      "facet": "Training, sports schools and coaches",
+      "known_at": 14
+    },
+    {
+      "name": "Huang Yubin",
+      "facet": "Training, sports schools and coaches",
+      "known_at": 13
+    },
+    {
+      "name": "Zhanjiang",
+      "facet": "Training, sports schools and coaches",
+      "known_at": 8
+    },
+    {
+      "name": "General Administration of Sport of China",
+      "facet": "Training, sports schools and coaches",
+      "known_at": 13
+    },
+    {
+      "name": "Talent selection (选材)",
+      "facet": "Training, sports schools and coaches",
+      "known_at": 11
+    },
+    {
+      "name": "Physical education class (体育课)",
+      "facet": "Training, sports schools and coaches",
+      "known_at": 2
+    },
+    {
+      "name": "Warm-up",
+      "facet": "Training, sports schools and coaches",
+      "known_at": 3
+    },
+    {
+      "name": "Stretching",
+      "facet": "Training, sports schools and coaches",
+      "known_at": 3
+    },
+    {
+      "name": "Dryland training (陆上训练)",
+      "facet": "Training, sports schools and coaches",
+      "known_at": 11
+    },
+    {
+      "name": "Foam pit",
+      "facet": "Training, sports schools and coaches",
+      "known_at": 9
+    },
+    {
+      "name": "Spotting belt",
+      "facet": "Training, sports schools and coaches",
+      "known_at": 11
+    },
+    {
+      "name": "Gymnastics mat",
+      "facet": "Training, sports schools and coaches",
+      "known_at": 3
+    },
+    {
+      "name": "Video analysis",
+      "facet": "Training, sports schools and coaches",
+      "known_at": 10
+    },
+    {
+      "name": "Athletic tape",
+      "facet": "Training, sports schools and coaches",
+      "known_at": 6
+    },
+    {
+      "name": "跳水女皇 (tiàoshuǐ nǚhuáng, “diving queen”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 8
+    },
+    {
+      "name": "体操王子 (tǐcāo wángzǐ, “prince of gymnastics”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 8
+    },
+    {
+      "name": "吊环王 (diàohuán wáng, “king of the rings”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 9
+    },
+    {
+      "name": "鞍马王子 (ānmǎ wángzǐ, “prince of the pommel horse”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 12
+    },
+    {
+      "name": "零的突破 (líng de tūpò, “breakthrough from zero”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 9
+    },
+    {
+      "name": "冠军 (guànjūn, “champion”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 2
+    },
+    {
+      "name": "亚军 (yàjūn, “runner-up”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 4
+    },
+    {
+      "name": "加油 (jiāyóu, “add oil”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 1
+    },
+    {
+      "name": "三连冠 (sān lián guàn, “three titles in a row”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 9
+    },
+    {
+      "name": "大满贯 (dà mǎnguàn, “grand slam”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 8
+    },
+    {
+      "name": "卫冕 (wèimiǎn, “defend the crown”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 11
+    },
+    {
+      "name": "国手 (guóshǒu, “national player”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 11
+    },
+    {
+      "name": "神枪手 (shénqiāngshǒu, “sharpshooter”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 6
+    },
+    {
+      "name": "一姐 (yī jiě, “number-one sister”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 10
+    },
+    {
+      "name": "小将 (xiǎojiàng, “young general”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 10
+    },
+    {
+      "name": "老将 (lǎojiàng, “veteran general”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 9
+    },
+    {
+      "name": "黑马 (hēimǎ, “dark horse”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 7
+    },
+    {
+      "name": "破纪录 (pò jìlù, “break the record”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 5
+    },
+    {
+      "name": "东亚病夫 (dōng yà bìngfū, “sick man of East Asia”)",
+      "facet": "Sport terms and nicknames in Chinese",
+      "known_at": 10
+    }
+  ]
+}

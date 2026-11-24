@@ -1,0 +1,677 @@
+{
+  "subcategory": "traditional-puzzles",
+  "facets": [
+    "Tangram and its pieces",
+    "Huarong Road sliding puzzle",
+    "Luban lock and burr puzzles",
+    "Nine linked rings",
+    "Spinning tops and hoops",
+    "Kites and paper folding",
+    "Shuttlecock kicking and rope games",
+    "Marbles, jacks and small toys",
+    "Chinese chess and board games",
+    "Riddles and word puzzles",
+    "Folk toys and crafts",
+    "Puzzle history and inventors"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 5,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Seven tangram pieces",
+      "facet": "Tangram and its pieces",
+      "known_at": 3
+    },
+    {
+      "name": "Large triangle (tangram)",
+      "facet": "Tangram and its pieces",
+      "known_at": 3
+    },
+    {
+      "name": "Medium triangle (tangram)",
+      "facet": "Tangram and its pieces",
+      "known_at": 4
+    },
+    {
+      "name": "Small triangle (tangram)",
+      "facet": "Tangram and its pieces",
+      "known_at": 4
+    },
+    {
+      "name": "Square piece (tangram)",
+      "facet": "Tangram and its pieces",
+      "known_at": 3
+    },
+    {
+      "name": "Parallelogram piece (tangram)",
+      "facet": "Tangram and its pieces",
+      "known_at": 5
+    },
+    {
+      "name": "Right isosceles triangle",
+      "facet": "Tangram and its pieces",
+      "known_at": 8
+    },
+    {
+      "name": "Tangram cat",
+      "facet": "Tangram and its pieces",
+      "known_at": 3
+    },
+    {
+      "name": "Tangram rabbit",
+      "facet": "Tangram and its pieces",
+      "known_at": 3
+    },
+    {
+      "name": "Tangram running man",
+      "facet": "Tangram and its pieces",
+      "known_at": 4
+    },
+    {
+      "name": "Tangram house",
+      "facet": "Tangram and its pieces",
+      "known_at": 3
+    },
+    {
+      "name": "Tangram fish",
+      "facet": "Tangram and its pieces",
+      "known_at": 3
+    },
+    {
+      "name": "Tangram paradox",
+      "facet": "Tangram and its pieces",
+      "known_at": 12
+    },
+    {
+      "name": "Eleven-piece tangram (益智图)",
+      "facet": "Tangram and its pieces",
+      "known_at": 13
+    },
+    {
+      "name": "Tangram area fractions",
+      "facet": "Tangram and its pieces",
+      "known_at": 8
+    },
+    {
+      "name": "Thirteen convex tangram shapes",
+      "facet": "Tangram and its pieces",
+      "known_at": 14
+    },
+    {
+      "name": "Cao Cao in Huarong Road",
+      "facet": "Huarong Road sliding puzzle",
+      "known_at": 5
+    },
+    {
+      "name": "Soldier pieces (卒)",
+      "facet": "Huarong Road sliding puzzle",
+      "known_at": 6
+    },
+    {
+      "name": "Huarong Road exit",
+      "facet": "Huarong Road sliding puzzle",
+      "known_at": 5
+    },
+    {
+      "name": "Hengdao Lima layout (横刀立马)",
+      "facet": "Huarong Road sliding puzzle",
+      "known_at": 11
+    },
+    {
+      "name": "Huarong Road 81-move solution",
+      "facet": "Huarong Road sliding puzzle",
+      "known_at": 13
+    },
+    {
+      "name": "Four-by-five board",
+      "facet": "Huarong Road sliding puzzle",
+      "known_at": 7
+    },
+    {
+      "name": "Fifteen puzzle",
+      "facet": "Huarong Road sliding puzzle",
+      "known_at": 8
+    },
+    {
+      "name": "Sliding block puzzle",
+      "facet": "Huarong Road sliding puzzle",
+      "known_at": 6
+    },
+    {
+      "name": "Mortise and tenon joint (榫卯)",
+      "facet": "Luban lock and burr puzzles",
+      "known_at": 8
+    },
+    {
+      "name": "Six-piece burr",
+      "facet": "Luban lock and burr puzzles",
+      "known_at": 9
+    },
+    {
+      "name": "Three-piece burr",
+      "facet": "Luban lock and burr puzzles",
+      "known_at": 10
+    },
+    {
+      "name": "Nine-piece burr",
+      "facet": "Luban lock and burr puzzles",
+      "known_at": 11
+    },
+    {
+      "name": "Key piece",
+      "facet": "Luban lock and burr puzzles",
+      "known_at": 9
+    },
+    {
+      "name": "Burr puzzle",
+      "facet": "Luban lock and burr puzzles",
+      "known_at": 10
+    },
+    {
+      "name": "Wooden interlocking ball",
+      "facet": "Luban lock and burr puzzles",
+      "known_at": 8
+    },
+    {
+      "name": "Saw (Lu Ban legend)",
+      "facet": "Luban lock and burr puzzles",
+      "known_at": 5
+    },
+    {
+      "name": "Ink line marker (墨斗)",
+      "facet": "Luban lock and burr puzzles",
+      "known_at": 11
+    },
+    {
+      "name": "Cloud ladder (云梯)",
+      "facet": "Luban lock and burr puzzles",
+      "known_at": 10
+    },
+    {
+      "name": "Lu Ban's wooden bird (木鸢)",
+      "facet": "Luban lock and burr puzzles",
+      "known_at": 11
+    },
+    {
+      "name": "Forbidden City woodwork",
+      "facet": "Luban lock and burr puzzles",
+      "known_at": 9
+    },
+    {
+      "name": "Carpenter's square (曲尺)",
+      "facet": "Luban lock and burr puzzles",
+      "known_at": 12
+    },
+    {
+      "name": "Linked ring handle",
+      "facet": "Nine linked rings",
+      "known_at": 8
+    },
+    {
+      "name": "Queen of Qi's jade rings (齐王后解玉连环)",
+      "facet": "Nine linked rings",
+      "known_at": 13
+    },
+    {
+      "name": "341 moves",
+      "facet": "Nine linked rings",
+      "known_at": 13
+    },
+    {
+      "name": "Gray code",
+      "facet": "Nine linked rings",
+      "known_at": 14
+    },
+    {
+      "name": "Binary numbers",
+      "facet": "Nine linked rings",
+      "known_at": 9
+    },
+    {
+      "name": "Recursion",
+      "facet": "Nine linked rings",
+      "known_at": 12
+    },
+    {
+      "name": "Tower of Hanoi",
+      "facet": "Nine linked rings",
+      "known_at": 8
+    },
+    {
+      "name": "Disentanglement puzzle",
+      "facet": "Nine linked rings",
+      "known_at": 9
+    },
+    {
+      "name": "Cast metal puzzle",
+      "facet": "Nine linked rings",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese linking rings (magic trick)",
+      "facet": "Nine linked rings",
+      "known_at": 7
+    },
+    {
+      "name": "Jade linked rings",
+      "facet": "Nine linked rings",
+      "known_at": 10
+    },
+    {
+      "name": "Spinning tops (陀螺)",
+      "facet": "Spinning tops and hoops",
+      "known_at": 1
+    },
+    {
+      "name": "Ice top (冰陀螺)",
+      "facet": "Spinning tops and hoops",
+      "known_at": 6
+    },
+    {
+      "name": "Iron rolling hoop (滚铁环)",
+      "facet": "Spinning tops and hoops",
+      "known_at": 5
+    },
+    {
+      "name": "Hoop pusher hook",
+      "facet": "Spinning tops and hoops",
+      "known_at": 6
+    },
+    {
+      "name": "Hula hoop",
+      "facet": "Spinning tops and hoops",
+      "known_at": 1
+    },
+    {
+      "name": "Beyblade",
+      "facet": "Spinning tops and hoops",
+      "known_at": 3
+    },
+    {
+      "name": "Gyroscope",
+      "facet": "Spinning tops and hoops",
+      "known_at": 8
+    },
+    {
+      "name": "Yo-yo",
+      "facet": "Spinning tops and hoops",
+      "known_at": 1
+    },
+    {
+      "name": "Pinwheel (风车)",
+      "facet": "Spinning tops and hoops",
+      "known_at": 1
+    },
+    {
+      "name": "String-pulled top",
+      "facet": "Spinning tops and hoops",
+      "known_at": 4
+    },
+    {
+      "name": "Precession",
+      "facet": "Spinning tops and hoops",
+      "known_at": 14
+    },
+    {
+      "name": "Spinning plates (acrobatics)",
+      "facet": "Spinning tops and hoops",
+      "known_at": 5
+    },
+    {
+      "name": "Mozi's wooden kite",
+      "facet": "Kites and paper folding",
+      "known_at": 11
+    },
+    {
+      "name": "Han Xin's kite legend",
+      "facet": "Kites and paper folding",
+      "known_at": 13
+    },
+    {
+      "name": "Qingming kite flying",
+      "facet": "Kites and paper folding",
+      "known_at": 6
+    },
+    {
+      "name": "Lu Xun's essay “Kite”",
+      "facet": "Kites and paper folding",
+      "known_at": 10
+    },
+    {
+      "name": "Cao Xueqin's kite manual (南鹞北鸢考工志)",
+      "facet": "Kites and paper folding",
+      "known_at": 14
+    },
+    {
+      "name": "Origami",
+      "facet": "Kites and paper folding",
+      "known_at": 3
+    },
+    {
+      "name": "Paper crane",
+      "facet": "Kites and paper folding",
+      "known_at": 2
+    },
+    {
+      "name": "Paper boat",
+      "facet": "Kites and paper folding",
+      "known_at": 1
+    },
+    {
+      "name": "Paper airplane",
+      "facet": "Kites and paper folding",
+      "known_at": 1
+    },
+    {
+      "name": "Paper fortune teller (东南西北)",
+      "facet": "Kites and paper folding",
+      "known_at": 3
+    },
+    {
+      "name": "Paper frog",
+      "facet": "Kites and paper folding",
+      "known_at": 3
+    },
+    {
+      "name": "Rooster feathers (jianzi)",
+      "facet": "Shuttlecock kicking and rope games",
+      "known_at": 5
+    },
+    {
+      "name": "Copper coin base (jianzi)",
+      "facet": "Shuttlecock kicking and rope games",
+      "known_at": 8
+    },
+    {
+      "name": "Long rope jumping",
+      "facet": "Shuttlecock kicking and rope games",
+      "known_at": 3
+    },
+    {
+      "name": "Chinese jump rope (跳皮筋)",
+      "facet": "Shuttlecock kicking and rope games",
+      "known_at": 3
+    },
+    {
+      "name": "Blind man's buff",
+      "facet": "Shuttlecock kicking and rope games",
+      "known_at": 3
+    },
+    {
+      "name": "Cat's eye marble",
+      "facet": "Marbles, jacks and small toys",
+      "known_at": 5
+    },
+    {
+      "name": "Picking up stones (抓石子)",
+      "facet": "Marbles, jacks and small toys",
+      "known_at": 5
+    },
+    {
+      "name": "Gacuha ankle bones (嘎拉哈)",
+      "facet": "Marbles, jacks and small toys",
+      "known_at": 11
+    },
+    {
+      "name": "Picture card slapping (拍洋画)",
+      "facet": "Marbles, jacks and small toys",
+      "known_at": 7
+    },
+    {
+      "name": "Folded paper squares (拍四角)",
+      "facet": "Marbles, jacks and small toys",
+      "known_at": 6
+    },
+    {
+      "name": "Slingshot (弹弓)",
+      "facet": "Marbles, jacks and small toys",
+      "known_at": 2
+    },
+    {
+      "name": "Water gun",
+      "facet": "Marbles, jacks and small toys",
+      "known_at": 1
+    },
+    {
+      "name": "Water Margin cards (水浒卡)",
+      "facet": "Marbles, jacks and small toys",
+      "known_at": 10
+    },
+    {
+      "name": "Little Raccoon noodle snack (小浣熊干脆面)",
+      "facet": "Marbles, jacks and small toys",
+      "known_at": 9
+    },
+    {
+      "name": "Bubble blowing",
+      "facet": "Marbles, jacks and small toys",
+      "known_at": 1
+    },
+    {
+      "name": "Tamagotchi",
+      "facet": "Marbles, jacks and small toys",
+      "known_at": 8
+    },
+    {
+      "name": "Handheld brick game (俄罗斯方块机)",
+      "facet": "Marbles, jacks and small toys",
+      "known_at": 7
+    },
+    {
+      "name": "Tetris",
+      "facet": "Marbles, jacks and small toys",
+      "known_at": 3
+    },
+    {
+      "name": "Bouncy ball",
+      "facet": "Marbles, jacks and small toys",
+      "known_at": 1
+    },
+    {
+      "name": "Bottle cap games",
+      "facet": "Marbles, jacks and small toys",
+      "known_at": 4
+    },
+    {
+      "name": "Rubber band gun",
+      "facet": "Marbles, jacks and small toys",
+      "known_at": 4
+    },
+    {
+      "name": "General piece (帅/将)",
+      "facet": "Chinese chess and board games",
+      "known_at": 4
+    },
+    {
+      "name": "Soldier piece (兵/卒)",
+      "facet": "Chinese chess and board games",
+      "known_at": 5
+    },
+    {
+      "name": "River border (楚河汉界)",
+      "facet": "Chinese chess and board games",
+      "known_at": 6
+    },
+    {
+      "name": "Palace (九宫)",
+      "facet": "Chinese chess and board games",
+      "known_at": 8
+    },
+    {
+      "name": "Jungle animal chess (斗兽棋)",
+      "facet": "Chinese chess and board games",
+      "known_at": 4
+    },
+    {
+      "name": "Doudizhu (斗地主)",
+      "facet": "Chinese chess and board games",
+      "known_at": 6
+    },
+    {
+      "name": "Character riddles (字谜)",
+      "facet": "Riddles and word puzzles",
+      "known_at": 5
+    },
+    {
+      "name": "Xiehouyu (歇后语)",
+      "facet": "Riddles and word puzzles",
+      "known_at": 7
+    },
+    {
+      "name": "Antithetical couplet (对联)",
+      "facet": "Riddles and word puzzles",
+      "known_at": 7
+    },
+    {
+      "name": "Idiom chain (成语接龙)",
+      "facet": "Riddles and word puzzles",
+      "known_at": 5
+    },
+    {
+      "name": "Yellow silk young wife riddle (黄绢幼妇)",
+      "facet": "Riddles and word puzzles",
+      "known_at": 13
+    },
+    {
+      "name": "24 game (算24点)",
+      "facet": "Riddles and word puzzles",
+      "known_at": 5
+    },
+    {
+      "name": "Han Xin counting soldiers (韩信点兵)",
+      "facet": "Riddles and word puzzles",
+      "known_at": 11
+    },
+    {
+      "name": "Clay Figurine Zhang (泥人张)",
+      "facet": "Folk toys and crafts",
+      "known_at": 10
+    },
+    {
+      "name": "Huishan clay figurines (惠山泥人)",
+      "facet": "Folk toys and crafts",
+      "known_at": 12
+    },
+    {
+      "name": "Blown sugar figures (吹糖人)",
+      "facet": "Folk toys and crafts",
+      "known_at": 6
+    },
+    {
+      "name": "Cloth tiger (布老虎)",
+      "facet": "Folk toys and crafts",
+      "known_at": 5
+    },
+    {
+      "name": "Roly-poly toy (不倒翁)",
+      "facet": "Folk toys and crafts",
+      "known_at": 2
+    },
+    {
+      "name": "Grass weaving (草编)",
+      "facet": "Folk toys and crafts",
+      "known_at": 6
+    },
+    {
+      "name": "Yanjitu (燕几图)",
+      "facet": "Puzzle history and inventors",
+      "known_at": 13
+    },
+    {
+      "name": "Huang Boshi (黄伯思)",
+      "facet": "Puzzle history and inventors",
+      "known_at": 14
+    },
+    {
+      "name": "Butterfly table diagram (蝶几图)",
+      "facet": "Puzzle history and inventors",
+      "known_at": 14
+    },
+    {
+      "name": "Touhu (投壶)",
+      "facet": "Puzzle history and inventors",
+      "known_at": 11
+    },
+    {
+      "name": "Chuiwan (捶丸)",
+      "facet": "Puzzle history and inventors",
+      "known_at": 13
+    },
+    {
+      "name": "Emperor Yao and Go legend",
+      "facet": "Puzzle history and inventors",
+      "known_at": 12
+    },
+    {
+      "name": "Tangram craze in 19th-century Europe",
+      "facet": "Puzzle history and inventors",
+      "known_at": 13
+    },
+    {
+      "name": "Sam Loyd",
+      "facet": "Puzzle history and inventors",
+      "known_at": 14
+    },
+    {
+      "name": "Gerolamo Cardano",
+      "facet": "Puzzle history and inventors",
+      "known_at": 14
+    },
+    {
+      "name": "Édouard Lucas",
+      "facet": "Puzzle history and inventors",
+      "known_at": 14
+    },
+    {
+      "name": "Qing dynasty tangram books",
+      "facet": "Puzzle history and inventors",
+      "known_at": 13
+    },
+    {
+      "name": "Song dynasty banquet tables",
+      "facet": "Puzzle history and inventors",
+      "known_at": 13
+    }
+  ]
+}

@@ -1,0 +1,1107 @@
+{
+  "subcategory": "school-and-daily-life",
+  "facets": [
+    "School stages and exams",
+    "Daily school routines",
+    "School life and roles",
+    "Emergency numbers and safety",
+    "Traffic rules and road safety",
+    "Rubbish sorting and recycling",
+    "Teachers' Day and school holidays",
+    "Golden Week and public holidays",
+    "Shopping festivals and modern dates",
+    "Public transport and city life",
+    "Home and family routines",
+    "Health and hygiene habits"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 2,
+      "record": 1,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 1,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 2,
+      "body_senses": 3,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Kindergarten (幼儿园)",
+      "facet": "School stages and exams",
+      "known_at": 1
+    },
+    {
+      "name": "Six years of primary school",
+      "facet": "School stages and exams",
+      "known_at": 3
+    },
+    {
+      "name": "Junior middle school (初中)",
+      "facet": "School stages and exams",
+      "known_at": 3
+    },
+    {
+      "name": "Senior high school (高中)",
+      "facet": "School stages and exams",
+      "known_at": 3
+    },
+    {
+      "name": "Nine-year compulsory education (九年义务教育)",
+      "facet": "School stages and exams",
+      "known_at": 6
+    },
+    {
+      "name": "Zhongkao (中考)",
+      "facet": "School stages and exams",
+      "known_at": 6
+    },
+    {
+      "name": "Final exams (期末考试)",
+      "facet": "School stages and exams",
+      "known_at": 2
+    },
+    {
+      "name": "Midterm exams (期中考试)",
+      "facet": "School stages and exams",
+      "known_at": 3
+    },
+    {
+      "name": "Report card (成绩单)",
+      "facet": "School stages and exams",
+      "known_at": 2
+    },
+    {
+      "name": "100-point scale (百分制)",
+      "facet": "School stages and exams",
+      "known_at": 3
+    },
+    {
+      "name": "Graduation ceremony (毕业典礼)",
+      "facet": "School stages and exams",
+      "known_at": 3
+    },
+    {
+      "name": "Gaokao dates on 7 and 8 June",
+      "facet": "School stages and exams",
+      "known_at": 9
+    },
+    {
+      "name": "Top scorer (状元)",
+      "facet": "School stages and exams",
+      "known_at": 9
+    },
+    {
+      "name": "Arts and sciences streams (文理分科)",
+      "facet": "School stages and exams",
+      "known_at": 10
+    },
+    {
+      "name": "3+1+2 gaokao model",
+      "facet": "School stages and exams",
+      "known_at": 13
+    },
+    {
+      "name": "Physical education exam (体育中考)",
+      "facet": "School stages and exams",
+      "known_at": 8
+    },
+    {
+      "name": "Postgraduate entrance exam (考研)",
+      "facet": "School stages and exams",
+      "known_at": 11
+    },
+    {
+      "name": "College English Test Band 4 (英语四级)",
+      "facet": "School stages and exams",
+      "known_at": 11
+    },
+    {
+      "name": "Civil service exam (公务员考试)",
+      "facet": "School stages and exams",
+      "known_at": 12
+    },
+    {
+      "name": "Eye exercises (眼保健操)",
+      "facet": "Daily school routines",
+      "known_at": 3
+    },
+    {
+      "name": "Radio calisthenics (广播体操)",
+      "facet": "Daily school routines",
+      "known_at": 3
+    },
+    {
+      "name": "Monday flag-raising ceremony (升旗仪式)",
+      "facet": "Daily school routines",
+      "known_at": 3
+    },
+    {
+      "name": "Morning reading (早读)",
+      "facet": "Daily school routines",
+      "known_at": 4
+    },
+    {
+      "name": "Evening self-study (晚自习)",
+      "facet": "Daily school routines",
+      "known_at": 7
+    },
+    {
+      "name": "Lunch nap (午休)",
+      "facet": "Daily school routines",
+      "known_at": 3
+    },
+    {
+      "name": "School bell",
+      "facet": "Daily school routines",
+      "known_at": 1
+    },
+    {
+      "name": "40-minute lesson",
+      "facet": "Daily school routines",
+      "known_at": 4
+    },
+    {
+      "name": "Ten-minute break (课间十分钟)",
+      "facet": "Daily school routines",
+      "known_at": 3
+    },
+    {
+      "name": "Long break exercise (大课间)",
+      "facet": "Daily school routines",
+      "known_at": 5
+    },
+    {
+      "name": "School uniform (校服)",
+      "facet": "Daily school routines",
+      "known_at": 1
+    },
+    {
+      "name": "Homework (作业)",
+      "facet": "Daily school routines",
+      "known_at": 1
+    },
+    {
+      "name": "Cleaning duty (值日)",
+      "facet": "Daily school routines",
+      "known_at": 3
+    },
+    {
+      "name": "Standing up to greet the teacher (老师好)",
+      "facet": "Daily school routines",
+      "known_at": 2
+    },
+    {
+      "name": "Raising your hand",
+      "facet": "Daily school routines",
+      "known_at": 1
+    },
+    {
+      "name": "School timetable (课程表)",
+      "facet": "Daily school routines",
+      "known_at": 2
+    },
+    {
+      "name": "Dictation (听写)",
+      "facet": "Daily school routines",
+      "known_at": 3
+    },
+    {
+      "name": "Parent's signature on homework (家长签字)",
+      "facet": "Daily school routines",
+      "known_at": 5
+    },
+    {
+      "name": "School lunch",
+      "facet": "Daily school routines",
+      "known_at": 2
+    },
+    {
+      "name": "Head teacher (班主任)",
+      "facet": "School life and roles",
+      "known_at": 3
+    },
+    {
+      "name": "Class monitor (班长)",
+      "facet": "School life and roles",
+      "known_at": 3
+    },
+    {
+      "name": "Subject representative (课代表)",
+      "facet": "School life and roles",
+      "known_at": 5
+    },
+    {
+      "name": "Principal (校长)",
+      "facet": "School life and roles",
+      "known_at": 2
+    },
+    {
+      "name": "Young Pioneers (少先队)",
+      "facet": "School life and roles",
+      "known_at": 4
+    },
+    {
+      "name": "Red scarf (红领巾)",
+      "facet": "School life and roles",
+      "known_at": 2
+    },
+    {
+      "name": "Young Pioneer stripes badge (队长标志)",
+      "facet": "School life and roles",
+      "known_at": 7
+    },
+    {
+      "name": "Communist Youth League (共青团)",
+      "facet": "School life and roles",
+      "known_at": 9
+    },
+    {
+      "name": "Three Good Student (三好学生)",
+      "facet": "School life and roles",
+      "known_at": 6
+    },
+    {
+      "name": "Little red flower (小红花)",
+      "facet": "School life and roles",
+      "known_at": 2
+    },
+    {
+      "name": "Parent-teacher meeting (家长会)",
+      "facet": "School life and roles",
+      "known_at": 3
+    },
+    {
+      "name": "Sports day (运动会)",
+      "facet": "School life and roles",
+      "known_at": 2
+    },
+    {
+      "name": "Spring outing (春游)",
+      "facet": "School life and roles",
+      "known_at": 3
+    },
+    {
+      "name": "Student union (学生会)",
+      "facet": "School life and roles",
+      "known_at": 7
+    },
+    {
+      "name": "Military training (军训)",
+      "facet": "School life and roles",
+      "known_at": 8
+    },
+    {
+      "name": "Blackboard",
+      "facet": "School life and roles",
+      "known_at": 1
+    },
+    {
+      "name": "Blackboard newspaper (黑板报)",
+      "facet": "School life and roles",
+      "known_at": 5
+    },
+    {
+      "name": "Desk mate (同桌)",
+      "facet": "School life and roles",
+      "known_at": 3
+    },
+    {
+      "name": "School dormitory (宿舍)",
+      "facet": "School life and roles",
+      "known_at": 6
+    },
+    {
+      "name": "110 for police",
+      "facet": "Emergency numbers and safety",
+      "known_at": 2
+    },
+    {
+      "name": "119 for fire",
+      "facet": "Emergency numbers and safety",
+      "known_at": 3
+    },
+    {
+      "name": "120 for ambulance",
+      "facet": "Emergency numbers and safety",
+      "known_at": 3
+    },
+    {
+      "name": "122 for traffic accidents",
+      "facet": "Emergency numbers and safety",
+      "known_at": 9
+    },
+    {
+      "name": "999 in Hong Kong",
+      "facet": "Emergency numbers and safety",
+      "known_at": 10
+    },
+    {
+      "name": "12315 consumer hotline",
+      "facet": "Emergency numbers and safety",
+      "known_at": 12
+    },
+    {
+      "name": "12345 citizen hotline",
+      "facet": "Emergency numbers and safety",
+      "known_at": 12
+    },
+    {
+      "name": "Fire extinguisher",
+      "facet": "Emergency numbers and safety",
+      "known_at": 3
+    },
+    {
+      "name": "Fire hydrant",
+      "facet": "Emergency numbers and safety",
+      "known_at": 4
+    },
+    {
+      "name": "Fire drill",
+      "facet": "Emergency numbers and safety",
+      "known_at": 4
+    },
+    {
+      "name": "Earthquake drill",
+      "facet": "Emergency numbers and safety",
+      "known_at": 6
+    },
+    {
+      "name": "Emergency exit sign",
+      "facet": "Emergency numbers and safety",
+      "known_at": 2
+    },
+    {
+      "name": "Wet towel over the mouth",
+      "facet": "Emergency numbers and safety",
+      "known_at": 5
+    },
+    {
+      "name": "Smoke detector",
+      "facet": "Emergency numbers and safety",
+      "known_at": 6
+    },
+    {
+      "name": "National Fire Safety Day 9 November",
+      "facet": "Emergency numbers and safety",
+      "known_at": 10
+    },
+    {
+      "name": "National Disaster Prevention Day 12 May",
+      "facet": "Emergency numbers and safety",
+      "known_at": 12
+    },
+    {
+      "name": "Heimlich manoeuvre",
+      "facet": "Emergency numbers and safety",
+      "known_at": 9
+    },
+    {
+      "name": "Electrical socket safety",
+      "facet": "Emergency numbers and safety",
+      "known_at": 2
+    },
+    {
+      "name": "Drowning prevention (防溺水)",
+      "facet": "Emergency numbers and safety",
+      "known_at": 6
+    },
+    {
+      "name": "Gas leak",
+      "facet": "Emergency numbers and safety",
+      "known_at": 7
+    },
+    {
+      "name": "Traffic light",
+      "facet": "Traffic rules and road safety",
+      "known_at": 1
+    },
+    {
+      "name": "Yellow light",
+      "facet": "Traffic rules and road safety",
+      "known_at": 2
+    },
+    {
+      "name": "Zebra crossing",
+      "facet": "Traffic rules and road safety",
+      "known_at": 2
+    },
+    {
+      "name": "Look left, then right",
+      "facet": "Traffic rules and road safety",
+      "known_at": 2
+    },
+    {
+      "name": "Seat belt",
+      "facet": "Traffic rules and road safety",
+      "known_at": 2
+    },
+    {
+      "name": "Child safety seat",
+      "facet": "Traffic rules and road safety",
+      "known_at": 5
+    },
+    {
+      "name": "One helmet, one belt (一盔一带)",
+      "facet": "Traffic rules and road safety",
+      "known_at": 9
+    },
+    {
+      "name": "Electric bike (电动车)",
+      "facet": "Traffic rules and road safety",
+      "known_at": 4
+    },
+    {
+      "name": "Traffic police",
+      "facet": "Traffic rules and road safety",
+      "known_at": 2
+    },
+    {
+      "name": "Pedestrian footbridge (天桥)",
+      "facet": "Traffic rules and road safety",
+      "known_at": 4
+    },
+    {
+      "name": "Driving on the right",
+      "facet": "Traffic rules and road safety",
+      "known_at": 7
+    },
+    {
+      "name": "Countdown pedestrian signal",
+      "facet": "Traffic rules and road safety",
+      "known_at": 5
+    },
+    {
+      "name": "Speed camera",
+      "facet": "Traffic rules and road safety",
+      "known_at": 7
+    },
+    {
+      "name": "Left-turn arrow",
+      "facet": "Traffic rules and road safety",
+      "known_at": 8
+    },
+    {
+      "name": "No-honking zone",
+      "facet": "Traffic rules and road safety",
+      "known_at": 9
+    },
+    {
+      "name": "Drink-driving ban",
+      "facet": "Traffic rules and road safety",
+      "known_at": 10
+    },
+    {
+      "name": "Emergency lane on the expressway",
+      "facet": "Traffic rules and road safety",
+      "known_at": 11
+    },
+    {
+      "name": "12-point driving licence system",
+      "facet": "Traffic rules and road safety",
+      "known_at": 12
+    },
+    {
+      "name": "National Traffic Safety Day 2 December",
+      "facet": "Traffic rules and road safety",
+      "known_at": 12
+    },
+    {
+      "name": "Four rubbish bins in Shanghai",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 6
+    },
+    {
+      "name": "Recyclable waste (可回收物)",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 4
+    },
+    {
+      "name": "Hazardous waste (有害垃圾)",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 5
+    },
+    {
+      "name": "Wet waste (湿垃圾)",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 6
+    },
+    {
+      "name": "Dry waste (干垃圾)",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 6
+    },
+    {
+      "name": "Blue recyclables bin",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 6
+    },
+    {
+      "name": "Used battery",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 3
+    },
+    {
+      "name": "Plastic bottle",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 1
+    },
+    {
+      "name": "Glass bottle",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 3
+    },
+    {
+      "name": "Waste paper",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 3
+    },
+    {
+      "name": "Expired medicine",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 7
+    },
+    {
+      "name": "Fluorescent lamp",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 8
+    },
+    {
+      "name": "Bubble tea cup",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 6
+    },
+    {
+      "name": "Recycling symbol",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 6
+    },
+    {
+      "name": "Composting",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 8
+    },
+    {
+      "name": "Plastic bag charge (限塑令)",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 7
+    },
+    {
+      "name": "Shanghai rubbish sorting rules of 2019",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 10
+    },
+    {
+      "name": "Waste-to-energy plant",
+      "facet": "Rubbish sorting and recycling",
+      "known_at": 11
+    },
+    {
+      "name": "Teachers' Day on 10 September",
+      "facet": "Teachers' Day and school holidays",
+      "known_at": 3
+    },
+    {
+      "name": "Teachers' Day founded in 1985",
+      "facet": "Teachers' Day and school holidays",
+      "known_at": 13
+    },
+    {
+      "name": "Gardener (园丁) as a name for teachers",
+      "facet": "Teachers' Day and school holidays",
+      "known_at": 6
+    },
+    {
+      "name": "春蚕到死丝方尽 (chūn cán dào sǐ sī fāng jìn)",
+      "facet": "Teachers' Day and school holidays",
+      "known_at": 10
+    },
+    {
+      "name": "Thank-you card",
+      "facet": "Teachers' Day and school holidays",
+      "known_at": 2
+    },
+    {
+      "name": "Summer holiday",
+      "facet": "Teachers' Day and school holidays",
+      "known_at": 1
+    },
+    {
+      "name": "Winter holiday",
+      "facet": "Teachers' Day and school holidays",
+      "known_at": 2
+    },
+    {
+      "name": "Holiday homework (暑假作业)",
+      "facet": "Teachers' Day and school holidays",
+      "known_at": 3
+    },
+    {
+      "name": "Back-to-school day 1 September",
+      "facet": "Teachers' Day and school holidays",
+      "known_at": 3
+    },
+    {
+      "name": "Children's Day 1 June",
+      "facet": "Teachers' Day and school holidays",
+      "known_at": 2
+    },
+    {
+      "name": "Youth Day 4 May",
+      "facet": "Teachers' Day and school holidays",
+      "known_at": 8
+    },
+    {
+      "name": "Young Pioneers' Day 13 October",
+      "facet": "Teachers' Day and school holidays",
+      "known_at": 12
+    },
+    {
+      "name": "Summer camp",
+      "facet": "Teachers' Day and school holidays",
+      "known_at": 4
+    },
+    {
+      "name": "Tutoring classes (补习班)",
+      "facet": "Teachers' Day and school holidays",
+      "known_at": 5
+    },
+    {
+      "name": "Double Reduction policy (双减)",
+      "facet": "Teachers' Day and school holidays",
+      "known_at": 11
+    },
+    {
+      "name": "Graduation season",
+      "facet": "Teachers' Day and school holidays",
+      "known_at": 6
+    },
+    {
+      "name": "National Day 1 October",
+      "facet": "Golden Week and public holidays",
+      "known_at": 3
+    },
+    {
+      "name": "Labour Day 1 May",
+      "facet": "Golden Week and public holidays",
+      "known_at": 3
+    },
+    {
+      "name": "New Year's Day 1 January",
+      "facet": "Golden Week and public holidays",
+      "known_at": 2
+    },
+    {
+      "name": "Qingming Festival holiday",
+      "facet": "Golden Week and public holidays",
+      "known_at": 5
+    },
+    {
+      "name": "Dragon Boat Festival holiday",
+      "facet": "Golden Week and public holidays",
+      "known_at": 3
+    },
+    {
+      "name": "Mid-Autumn Festival holiday",
+      "facet": "Golden Week and public holidays",
+      "known_at": 2
+    },
+    {
+      "name": "Short three-day holiday (小长假)",
+      "facet": "Golden Week and public holidays",
+      "known_at": 8
+    },
+    {
+      "name": "Make-up workday (调休)",
+      "facet": "Golden Week and public holidays",
+      "known_at": 9
+    },
+    {
+      "name": "Spring Festival travel rush (春运)",
+      "facet": "Golden Week and public holidays",
+      "known_at": 7
+    },
+    {
+      "name": "Arbor Day 12 March",
+      "facet": "Golden Week and public holidays",
+      "known_at": 6
+    },
+    {
+      "name": "Women's Day 8 March",
+      "facet": "Golden Week and public holidays",
+      "known_at": 5
+    },
+    {
+      "name": "Army Day 1 August",
+      "facet": "Golden Week and public holidays",
+      "known_at": 9
+    },
+    {
+      "name": "Paid annual leave",
+      "facet": "Golden Week and public holidays",
+      "known_at": 12
+    },
+    {
+      "name": "Holiday tourist crowds",
+      "facet": "Golden Week and public holidays",
+      "known_at": 5
+    },
+    {
+      "name": "Singles' Day 11 November",
+      "facet": "Shopping festivals and modern dates",
+      "known_at": 5
+    },
+    {
+      "name": "1314",
+      "facet": "Shopping festivals and modern dates",
+      "known_at": 9
+    },
+    {
+      "name": "618 shopping festival",
+      "facet": "Shopping festivals and modern dates",
+      "known_at": 9
+    },
+    {
+      "name": "Double Twelve 12 December",
+      "facet": "Shopping festivals and modern dates",
+      "known_at": 10
+    },
+    {
+      "name": "Valentine's Day 14 February",
+      "facet": "Shopping festivals and modern dates",
+      "known_at": 3
+    },
+    {
+      "name": "Christmas",
+      "facet": "Shopping festivals and modern dates",
+      "known_at": 2
+    },
+    {
+      "name": "Halloween",
+      "facet": "Shopping festivals and modern dates",
+      "known_at": 4
+    },
+    {
+      "name": "April Fool's Day",
+      "facet": "Shopping festivals and modern dates",
+      "known_at": 4
+    },
+    {
+      "name": "Mother's Day",
+      "facet": "Shopping festivals and modern dates",
+      "known_at": 4
+    },
+    {
+      "name": "Father's Day",
+      "facet": "Shopping festivals and modern dates",
+      "known_at": 5
+    },
+    {
+      "name": "Black Friday",
+      "facet": "Shopping festivals and modern dates",
+      "known_at": 9
+    },
+    {
+      "name": "Digital red envelope (红包)",
+      "facet": "Shopping festivals and modern dates",
+      "known_at": 4
+    },
+    {
+      "name": "Live-streaming sales (直播带货)",
+      "facet": "Shopping festivals and modern dates",
+      "known_at": 8
+    },
+    {
+      "name": "Pre-sale deposit (定金)",
+      "facet": "Shopping festivals and modern dates",
+      "known_at": 11
+    },
+    {
+      "name": "Express delivery courier",
+      "facet": "Shopping festivals and modern dates",
+      "known_at": 3
+    },
+    {
+      "name": "Programmers' Day 1024",
+      "facet": "Shopping festivals and modern dates",
+      "known_at": 13
+    },
+    {
+      "name": "Bus",
+      "facet": "Public transport and city life",
+      "known_at": 1
+    },
+    {
+      "name": "Taxi",
+      "facet": "Public transport and city life",
+      "known_at": 1
+    },
+    {
+      "name": "Metro",
+      "facet": "Public transport and city life",
+      "known_at": 2
+    },
+    {
+      "name": "Metro security check",
+      "facet": "Public transport and city life",
+      "known_at": 5
+    },
+    {
+      "name": "Transport card",
+      "facet": "Public transport and city life",
+      "known_at": 4
+    },
+    {
+      "name": "Priority seat",
+      "facet": "Public transport and city life",
+      "known_at": 3
+    },
+    {
+      "name": "Queuing",
+      "facet": "Public transport and city life",
+      "known_at": 1
+    },
+    {
+      "name": "Shared bicycles (共享单车)",
+      "facet": "Public transport and city life",
+      "known_at": 4
+    },
+    {
+      "name": "High-speed rail",
+      "facet": "Public transport and city life",
+      "known_at": 3
+    },
+    {
+      "name": "Fuxing train (复兴号)",
+      "facet": "Public transport and city life",
+      "known_at": 7
+    },
+    {
+      "name": "Ride-hailing car",
+      "facet": "Public transport and city life",
+      "known_at": 6
+    },
+    {
+      "name": "Food delivery rider",
+      "facet": "Public transport and city life",
+      "known_at": 3
+    },
+    {
+      "name": "Parcel locker",
+      "facet": "Public transport and city life",
+      "known_at": 6
+    },
+    {
+      "name": "Residential compound (小区)",
+      "facet": "Public transport and city life",
+      "known_at": 4
+    },
+    {
+      "name": "Hukou (户口)",
+      "facet": "Public transport and city life",
+      "known_at": 12
+    },
+    {
+      "name": "Chopsticks",
+      "facet": "Home and family routines",
+      "known_at": 1
+    },
+    {
+      "name": "Slippers",
+      "facet": "Home and family routines",
+      "known_at": 1
+    },
+    {
+      "name": "Taking off shoes at the door",
+      "facet": "Home and family routines",
+      "known_at": 2
+    },
+    {
+      "name": "Rice cooker",
+      "facet": "Home and family routines",
+      "known_at": 2
+    },
+    {
+      "name": "Thermos flask",
+      "facet": "Home and family routines",
+      "known_at": 5
+    },
+    {
+      "name": "Washing machine",
+      "facet": "Home and family routines",
+      "known_at": 1
+    },
+    {
+      "name": "Drying clothes on the balcony",
+      "facet": "Home and family routines",
+      "known_at": 4
+    },
+    {
+      "name": "New Year's Eve family dinner (年夜饭)",
+      "facet": "Home and family routines",
+      "known_at": 3
+    },
+    {
+      "name": "Making dumplings together",
+      "facet": "Home and family routines",
+      "known_at": 2
+    },
+    {
+      "name": "Lucky money (压岁钱)",
+      "facet": "Home and family routines",
+      "known_at": 3
+    },
+    {
+      "name": "Spring cleaning before the New Year",
+      "facet": "Home and family routines",
+      "known_at": 4
+    },
+    {
+      "name": "Morning congee",
+      "facet": "Home and family routines",
+      "known_at": 3
+    },
+    {
+      "name": "Pouring tea for elders",
+      "facet": "Home and family routines",
+      "known_at": 5
+    },
+    {
+      "name": "Grandparents looking after grandchildren",
+      "facet": "Home and family routines",
+      "known_at": 6
+    },
+    {
+      "name": "Bedtime",
+      "facet": "Home and family routines",
+      "known_at": 1
+    },
+    {
+      "name": "Only child (独生子女)",
+      "facet": "Home and family routines",
+      "known_at": 9
+    },
+    {
+      "name": "Toothbrush",
+      "facet": "Health and hygiene habits",
+      "known_at": 1
+    },
+    {
+      "name": "Nail clippers",
+      "facet": "Health and hygiene habits",
+      "known_at": 1
+    },
+    {
+      "name": "Seven-step handwashing (七步洗手法)",
+      "facet": "Health and hygiene habits",
+      "known_at": 6
+    },
+    {
+      "name": "Hand sanitiser",
+      "facet": "Health and hygiene habits",
+      "known_at": 3
+    },
+    {
+      "name": "Face mask",
+      "facet": "Health and hygiene habits",
+      "known_at": 2
+    },
+    {
+      "name": "Covering a cough",
+      "facet": "Health and hygiene habits",
+      "known_at": 3
+    },
+    {
+      "name": "Drinking warm water",
+      "facet": "Health and hygiene habits",
+      "known_at": 4
+    },
+    {
+      "name": "Thermometer",
+      "facet": "Health and hygiene habits",
+      "known_at": 2
+    },
+    {
+      "name": "Vaccination",
+      "facet": "Health and hygiene habits",
+      "known_at": 3
+    },
+    {
+      "name": "Myopia",
+      "facet": "Health and hygiene habits",
+      "known_at": 6
+    },
+    {
+      "name": "Eye chart (视力表)",
+      "facet": "Health and hygiene habits",
+      "known_at": 5
+    },
+    {
+      "name": "Tooth decay",
+      "facet": "Health and hygiene habits",
+      "known_at": 3
+    },
+    {
+      "name": "Eight hours of sleep",
+      "facet": "Health and hygiene habits",
+      "known_at": 3
+    },
+    {
+      "name": "One hour of exercise a day",
+      "facet": "Health and hygiene habits",
+      "known_at": 7
+    },
+    {
+      "name": "Health check-up (体检)",
+      "facet": "Health and hygiene habits",
+      "known_at": 4
+    },
+    {
+      "name": "Sunscreen",
+      "facet": "Health and hygiene habits",
+      "known_at": 4
+    },
+    {
+      "name": "No spitting rule",
+      "facet": "Health and hygiene habits",
+      "known_at": 5
+    },
+    {
+      "name": "Chinese Food Pagoda (膳食宝塔)",
+      "facet": "Health and hygiene habits",
+      "known_at": 9
+    }
+  ]
+}

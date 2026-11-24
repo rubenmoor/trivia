@@ -1,0 +1,762 @@
+{
+  "subcategory": "four-great-inventions",
+  "facets": [
+    "Papermaking and Cai Lun",
+    "Woodblock printing and early books",
+    "Movable type and Bi Sheng",
+    "Gunpowder and its recipe",
+    "Fireworks and firecrackers",
+    "Compass and the sinan",
+    "Porcelain and kilns",
+    "Silk and sericulture",
+    "Kites and flying toys",
+    "Other ancient Chinese firsts",
+    "Inventions spreading along the Silk Road",
+    "Inventors and the books that recorded them"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 5,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Eastern Han dynasty",
+      "facet": "Papermaking and Cai Lun",
+      "known_at": 7
+    },
+    {
+      "name": "Marquis Cai paper (蔡侯纸)",
+      "facet": "Papermaking and Cai Lun",
+      "known_at": 9
+    },
+    {
+      "name": "Tree bark",
+      "facet": "Papermaking and Cai Lun",
+      "known_at": 7
+    },
+    {
+      "name": "Hemp fibres",
+      "facet": "Papermaking and Cai Lun",
+      "known_at": 9
+    },
+    {
+      "name": "Old fishing nets",
+      "facet": "Papermaking and Cai Lun",
+      "known_at": 10
+    },
+    {
+      "name": "Silk writing (帛书)",
+      "facet": "Papermaking and Cai Lun",
+      "known_at": 8
+    },
+    {
+      "name": "Jing County, Anhui",
+      "facet": "Papermaking and Cai Lun",
+      "known_at": 12
+    },
+    {
+      "name": "Baqiao paper (灞桥纸)",
+      "facet": "Papermaking and Cai Lun",
+      "known_at": 12
+    },
+    {
+      "name": "Papermaking screen",
+      "facet": "Papermaking and Cai Lun",
+      "known_at": 11
+    },
+    {
+      "name": "Paper pulp",
+      "facet": "Papermaking and Cai Lun",
+      "known_at": 7
+    },
+    {
+      "name": "Fangmatan paper map",
+      "facet": "Papermaking and Cai Lun",
+      "known_at": 14
+    },
+    {
+      "name": "Emperor He of Han",
+      "facet": "Papermaking and Cai Lun",
+      "known_at": 12
+    },
+    {
+      "name": "Woodblock printing (雕版印刷)",
+      "facet": "Woodblock printing and early books",
+      "known_at": 5
+    },
+    {
+      "name": "Diamond Sutra printed 868",
+      "facet": "Woodblock printing and early books",
+      "known_at": 9
+    },
+    {
+      "name": "Dunhuang Library Cave (藏经洞)",
+      "facet": "Woodblock printing and early books",
+      "known_at": 10
+    },
+    {
+      "name": "Stone rubbing (拓片)",
+      "facet": "Woodblock printing and early books",
+      "known_at": 8
+    },
+    {
+      "name": "Mirror-image characters",
+      "facet": "Woodblock printing and early books",
+      "known_at": 6
+    },
+    {
+      "name": "New Year woodblock prints (年画)",
+      "facet": "Woodblock printing and early books",
+      "known_at": 5
+    },
+    {
+      "name": "Yangliuqing New Year paintings",
+      "facet": "Woodblock printing and early books",
+      "known_at": 10
+    },
+    {
+      "name": "Taohuawu woodblock prints",
+      "facet": "Woodblock printing and early books",
+      "known_at": 13
+    },
+    {
+      "name": "Pear wood",
+      "facet": "Woodblock printing and early books",
+      "known_at": 11
+    },
+    {
+      "name": "Chinese ink (墨)",
+      "facet": "Woodblock printing and early books",
+      "known_at": 3
+    },
+    {
+      "name": "Hui ink stick (徽墨)",
+      "facet": "Woodblock printing and early books",
+      "known_at": 10
+    },
+    {
+      "name": "Thread-bound book (线装书)",
+      "facet": "Woodblock printing and early books",
+      "known_at": 8
+    },
+    {
+      "name": "Ten Bamboo Studio",
+      "facet": "Woodblock printing and early books",
+      "known_at": 14
+    },
+    {
+      "name": "Xiping Stone Classics",
+      "facet": "Woodblock printing and early books",
+      "known_at": 14
+    },
+    {
+      "name": "Tripitaka Koreana",
+      "facet": "Woodblock printing and early books",
+      "known_at": 14
+    },
+    {
+      "name": "Bi Sheng's movable type",
+      "facet": "Movable type and Bi Sheng",
+      "known_at": 6
+    },
+    {
+      "name": "Clay movable type (泥活字)",
+      "facet": "Movable type and Bi Sheng",
+      "known_at": 7
+    },
+    {
+      "name": "Wooden movable type",
+      "facet": "Movable type and Bi Sheng",
+      "known_at": 10
+    },
+    {
+      "name": "Rotating type table (转轮排字架)",
+      "facet": "Movable type and Bi Sheng",
+      "known_at": 13
+    },
+    {
+      "name": "Bronze movable type",
+      "facet": "Movable type and Bi Sheng",
+      "known_at": 12
+    },
+    {
+      "name": "Hua Sui",
+      "facet": "Movable type and Bi Sheng",
+      "known_at": 14
+    },
+    {
+      "name": "Jikji",
+      "facet": "Movable type and Bi Sheng",
+      "known_at": 14
+    },
+    {
+      "name": "Gujin Tushu Jicheng (古今图书集成)",
+      "facet": "Movable type and Bi Sheng",
+      "known_at": 14
+    },
+    {
+      "name": "Typesetting",
+      "facet": "Movable type and Bi Sheng",
+      "known_at": 8
+    },
+    {
+      "name": "Iron plate with pine resin and wax",
+      "facet": "Movable type and Bi Sheng",
+      "known_at": 12
+    },
+    {
+      "name": "Beijing 2008 Olympic movable type show",
+      "facet": "Movable type and Bi Sheng",
+      "known_at": 6
+    },
+    {
+      "name": "Chinese laser typesetting",
+      "facet": "Movable type and Bi Sheng",
+      "known_at": 12
+    },
+    {
+      "name": "Saltpetre",
+      "facet": "Gunpowder and its recipe",
+      "known_at": 7
+    },
+    {
+      "name": "Sulphur",
+      "facet": "Gunpowder and its recipe",
+      "known_at": 6
+    },
+    {
+      "name": "Charcoal",
+      "facet": "Gunpowder and its recipe",
+      "known_at": 4
+    },
+    {
+      "name": "One sulphur, two saltpetre, three charcoal",
+      "facet": "Gunpowder and its recipe",
+      "known_at": 8
+    },
+    {
+      "name": "Taoist alchemists",
+      "facet": "Gunpowder and its recipe",
+      "known_at": 8
+    },
+    {
+      "name": "Huoyao (火药, “fire medicine”)",
+      "facet": "Gunpowder and its recipe",
+      "known_at": 6
+    },
+    {
+      "name": "Wujing Zongyao (武经总要)",
+      "facet": "Gunpowder and its recipe",
+      "known_at": 12
+    },
+    {
+      "name": "Zeng Gongliang",
+      "facet": "Gunpowder and its recipe",
+      "known_at": 14
+    },
+    {
+      "name": "Fire arrows (火箭)",
+      "facet": "Gunpowder and its recipe",
+      "known_at": 8
+    },
+    {
+      "name": "Thunder crash bomb (震天雷)",
+      "facet": "Gunpowder and its recipe",
+      "known_at": 13
+    },
+    {
+      "name": "Fire dragon from the water (火龙出水)",
+      "facet": "Gunpowder and its recipe",
+      "known_at": 12
+    },
+    {
+      "name": "Heilongjiang hand cannon",
+      "facet": "Gunpowder and its recipe",
+      "known_at": 14
+    },
+    {
+      "name": "Huolongjing (火龙经)",
+      "facet": "Gunpowder and its recipe",
+      "known_at": 14
+    },
+    {
+      "name": "Fireworks",
+      "facet": "Fireworks and firecrackers",
+      "known_at": 1
+    },
+    {
+      "name": "Spring Festival",
+      "facet": "Fireworks and firecrackers",
+      "known_at": 1
+    },
+    {
+      "name": "Nian monster",
+      "facet": "Fireworks and firecrackers",
+      "known_at": 3
+    },
+    {
+      "name": "Li Tian",
+      "facet": "Fireworks and firecrackers",
+      "known_at": 13
+    },
+    {
+      "name": "Liuyang, Hunan",
+      "facet": "Fireworks and firecrackers",
+      "known_at": 9
+    },
+    {
+      "name": "Yuan Ri (元日) by Wang Anshi",
+      "facet": "Fireworks and firecrackers",
+      "known_at": 6
+    },
+    {
+      "name": "Cai Guo-Qiang",
+      "facet": "Fireworks and firecrackers",
+      "known_at": 12
+    },
+    {
+      "name": "Beijing 2008 Olympic footprint fireworks",
+      "facet": "Fireworks and firecrackers",
+      "known_at": 8
+    },
+    {
+      "name": "Sparklers",
+      "facet": "Fireworks and firecrackers",
+      "known_at": 3
+    },
+    {
+      "name": "Firework shell",
+      "facet": "Fireworks and firecrackers",
+      "known_at": 10
+    },
+    {
+      "name": "Strontium",
+      "facet": "Fireworks and firecrackers",
+      "known_at": 12
+    },
+    {
+      "name": "Copper salts",
+      "facet": "Fireworks and firecrackers",
+      "known_at": 11
+    },
+    {
+      "name": "Iron flowers (打铁花)",
+      "facet": "Fireworks and firecrackers",
+      "known_at": 9
+    },
+    {
+      "name": "Sinan spoon compass",
+      "facet": "Compass and the sinan",
+      "known_at": 5
+    },
+    {
+      "name": "Lodestone (磁石)",
+      "facet": "Compass and the sinan",
+      "known_at": 7
+    },
+    {
+      "name": "Magnetic needle",
+      "facet": "Compass and the sinan",
+      "known_at": 6
+    },
+    {
+      "name": "Pointing south (指南)",
+      "facet": "Compass and the sinan",
+      "known_at": 4
+    },
+    {
+      "name": "Luopan (罗盘)",
+      "facet": "Compass and the sinan",
+      "known_at": 9
+    },
+    {
+      "name": "South-pointing fish (指南鱼)",
+      "facet": "Compass and the sinan",
+      "known_at": 11
+    },
+    {
+      "name": "Magnetic declination",
+      "facet": "Compass and the sinan",
+      "known_at": 13
+    },
+    {
+      "name": "Zheng He's treasure ships",
+      "facet": "Compass and the sinan",
+      "known_at": 8
+    },
+    {
+      "name": "South-pointing chariot (指南车)",
+      "facet": "Compass and the sinan",
+      "known_at": 9
+    },
+    {
+      "name": "Pingzhou Table Talks (萍洲可谈)",
+      "facet": "Compass and the sinan",
+      "known_at": 14
+    },
+    {
+      "name": "Earth's magnetic field",
+      "facet": "Compass and the sinan",
+      "known_at": 8
+    },
+    {
+      "name": "Magnetic north",
+      "facet": "Compass and the sinan",
+      "known_at": 6
+    },
+    {
+      "name": "Porcelain (瓷器)",
+      "facet": "Porcelain and kilns",
+      "known_at": 3
+    },
+    {
+      "name": "Kaolin",
+      "facet": "Porcelain and kilns",
+      "known_at": 10
+    },
+    {
+      "name": "Five Great Kilns of the Song (五大名窑)",
+      "facet": "Porcelain and kilns",
+      "known_at": 12
+    },
+    {
+      "name": "Ru ware",
+      "facet": "Porcelain and kilns",
+      "known_at": 12
+    },
+    {
+      "name": "Ding ware",
+      "facet": "Porcelain and kilns",
+      "known_at": 13
+    },
+    {
+      "name": "Jun ware",
+      "facet": "Porcelain and kilns",
+      "known_at": 13
+    },
+    {
+      "name": "Ge ware",
+      "facet": "Porcelain and kilns",
+      "known_at": 14
+    },
+    {
+      "name": "Longquan kilns",
+      "facet": "Porcelain and kilns",
+      "known_at": 12
+    },
+    {
+      "name": "Dragon kiln",
+      "facet": "Porcelain and kilns",
+      "known_at": 11
+    },
+    {
+      "name": "Cobalt blue",
+      "facet": "Porcelain and kilns",
+      "known_at": 11
+    },
+    {
+      "name": "Yangshao painted pottery",
+      "facet": "Porcelain and kilns",
+      "known_at": 9
+    },
+    {
+      "name": "Yixing clay teapot (紫砂壶)",
+      "facet": "Porcelain and kilns",
+      "known_at": 8
+    },
+    {
+      "name": "Dehua white porcelain",
+      "facet": "Porcelain and kilns",
+      "known_at": 13
+    },
+    {
+      "name": "Famille rose (粉彩)",
+      "facet": "Porcelain and kilns",
+      "known_at": 13
+    },
+    {
+      "name": "Pottery wheel",
+      "facet": "Porcelain and kilns",
+      "known_at": 5
+    },
+    {
+      "name": "“china” as the English word for porcelain",
+      "facet": "Porcelain and kilns",
+      "known_at": 6
+    },
+    {
+      "name": "Mulberry leaves",
+      "facet": "Silk and sericulture",
+      "known_at": 3
+    },
+    {
+      "name": "Cocoon",
+      "facet": "Silk and sericulture",
+      "known_at": 3
+    },
+    {
+      "name": "Leizu (嫘祖)",
+      "facet": "Silk and sericulture",
+      "known_at": 6
+    },
+    {
+      "name": "Silk reeling",
+      "facet": "Silk and sericulture",
+      "known_at": 10
+    },
+    {
+      "name": "Brocade",
+      "facet": "Silk and sericulture",
+      "known_at": 8
+    },
+    {
+      "name": "Shu brocade (蜀锦)",
+      "facet": "Silk and sericulture",
+      "known_at": 10
+    },
+    {
+      "name": "Nanjing Yunjin brocade (云锦)",
+      "facet": "Silk and sericulture",
+      "known_at": 10
+    },
+    {
+      "name": "Suzhou embroidery (苏绣)",
+      "facet": "Silk and sericulture",
+      "known_at": 7
+    },
+    {
+      "name": "China National Silk Museum",
+      "facet": "Silk and sericulture",
+      "known_at": 12
+    },
+    {
+      "name": "Mawangdui plain gauze robe (素纱襌衣)",
+      "facet": "Silk and sericulture",
+      "known_at": 11
+    },
+    {
+      "name": "Draw loom (花楼机)",
+      "facet": "Silk and sericulture",
+      "known_at": 13
+    },
+    {
+      "name": "Li Shangyin",
+      "facet": "Silk and sericulture",
+      "known_at": 8
+    },
+    {
+      "name": "Princess who smuggled silkworm eggs to Khotan",
+      "facet": "Silk and sericulture",
+      "known_at": 13
+    },
+    {
+      "name": "Weifang",
+      "facet": "Kites and flying toys",
+      "known_at": 7
+    },
+    {
+      "name": "Weifang International Kite Festival",
+      "facet": "Kites and flying toys",
+      "known_at": 9
+    },
+    {
+      "name": "Mozi's wooden kite (木鸢)",
+      "facet": "Kites and flying toys",
+      "known_at": 10
+    },
+    {
+      "name": "Lu Ban's wooden magpie",
+      "facet": "Kites and flying toys",
+      "known_at": 10
+    },
+    {
+      "name": "Kongming lantern (孔明灯)",
+      "facet": "Kites and flying toys",
+      "known_at": 5
+    },
+    {
+      "name": "Qingming Festival",
+      "facet": "Kites and flying toys",
+      "known_at": 4
+    },
+    {
+      "name": "Kite whistle (风哨)",
+      "facet": "Kites and flying toys",
+      "known_at": 12
+    },
+    {
+      "name": "Village Living (村居) by Gao Ding",
+      "facet": "Kites and flying toys",
+      "known_at": 4
+    },
+    {
+      "name": "Cao Xueqin's kite manual",
+      "facet": "Kites and flying toys",
+      "known_at": 13
+    },
+    {
+      "name": "Centipede kite (龙头蜈蚣)",
+      "facet": "Kites and flying toys",
+      "known_at": 8
+    },
+    {
+      "name": "Swallow kite (沙燕)",
+      "facet": "Kites and flying toys",
+      "known_at": 8
+    },
+    {
+      "name": "Spinning top (陀螺)",
+      "facet": "Kites and flying toys",
+      "known_at": 2
+    },
+    {
+      "name": "Shuttlecock kicking (毽子)",
+      "facet": "Kites and flying toys",
+      "known_at": 3
+    },
+    {
+      "name": "Zhang Heng's seismoscope (地动仪)",
+      "facet": "Other ancient Chinese firsts",
+      "known_at": 6
+    },
+    {
+      "name": "Abacus",
+      "facet": "Other ancient Chinese firsts",
+      "known_at": 3
+    },
+    {
+      "name": "Acupuncture",
+      "facet": "Other ancient Chinese firsts",
+      "known_at": 4
+    },
+    {
+      "name": "Wheelbarrow",
+      "facet": "Other ancient Chinese firsts",
+      "known_at": 6
+    },
+    {
+      "name": "Crossbow",
+      "facet": "Other ancient Chinese firsts",
+      "known_at": 7
+    },
+    {
+      "name": "Cast iron",
+      "facet": "Other ancient Chinese firsts",
+      "known_at": 11
+    },
+    {
+      "name": "Water-driven astronomical clock tower",
+      "facet": "Other ancient Chinese firsts",
+      "known_at": 13
+    },
+    {
+      "name": "Umbrella",
+      "facet": "Other ancient Chinese firsts",
+      "known_at": 4
+    },
+    {
+      "name": "Bristle toothbrush",
+      "facet": "Other ancient Chinese firsts",
+      "known_at": 7
+    },
+    {
+      "name": "Lacquerware",
+      "facet": "Other ancient Chinese firsts",
+      "known_at": 9
+    },
+    {
+      "name": "Ship's rudder",
+      "facet": "Other ancient Chinese firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Dragon-bone water pump (龙骨水车)",
+      "facet": "Other ancient Chinese firsts",
+      "known_at": 11
+    },
+    {
+      "name": "Smallpox inoculation (人痘)",
+      "facet": "Other ancient Chinese firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Samarkand paper",
+      "facet": "Inventions spreading along the Silk Road",
+      "known_at": 12
+    },
+    {
+      "name": "Baghdad paper mill",
+      "facet": "Inventions spreading along the Silk Road",
+      "known_at": 13
+    },
+    {
+      "name": "Mongol Empire",
+      "facet": "Inventions spreading along the Silk Road",
+      "known_at": 9
+    },
+    {
+      "name": "Japanese envoys to Tang China (遣唐使)",
+      "facet": "Inventions spreading along the Silk Road",
+      "known_at": 9
+    },
+    {
+      "name": "Tiangong Kaiwu (天工开物)",
+      "facet": "Inventors and the books that recorded them",
+      "known_at": 10
+    },
+    {
+      "name": "Joseph Needham",
+      "facet": "Inventors and the books that recorded them",
+      "known_at": 12
+    },
+    {
+      "name": "Su Song",
+      "facet": "Inventors and the books that recorded them",
+      "known_at": 12
+    },
+    {
+      "name": "Ma Jun",
+      "facet": "Inventors and the books that recorded them",
+      "known_at": 13
+    }
+  ]
+}

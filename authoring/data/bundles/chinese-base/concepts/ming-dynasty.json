@@ -1,0 +1,1077 @@
+{
+  "subcategory": "ming-dynasty",
+  "facets": [
+    "Zhu Yuanzhang and the founding",
+    "Yongle and the move to Beijing",
+    "Forbidden City and palaces",
+    "Ming Great Wall and border defense",
+    "Generals, pirates and wars",
+    "Officials, eunuchs and court politics",
+    "Thinkers, scientists and travelers",
+    "Ming novels and theater",
+    "Porcelain, painting and crafts",
+    "Ming tombs and city walls",
+    "Daily life, exams and economy",
+    "Fall of the Ming in 1644"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 3,
+      "origin": 2,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Red Turban Rebellion",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 11
+    },
+    {
+      "name": "Empress Ma",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 10
+    },
+    {
+      "name": "Liu Bowen",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 8
+    },
+    {
+      "name": "Xu Da",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 11
+    },
+    {
+      "name": "Chang Yuchun",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 12
+    },
+    {
+      "name": "Li Shanchang",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 13
+    },
+    {
+      "name": "Chen Youliang",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Shicheng",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Lake Poyang",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 12
+    },
+    {
+      "name": "Huangjue Temple",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 12
+    },
+    {
+      "name": "Fengyang",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 12
+    },
+    {
+      "name": "Capture of Dadu in 1368",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 10
+    },
+    {
+      "name": "Nanjing as Ming capital",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 8
+    },
+    {
+      "name": "Hu Weiyong case",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 13
+    },
+    {
+      "name": "Abolition of the chancellor",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 13
+    },
+    {
+      "name": "Great Ming Code",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 13
+    },
+    {
+      "name": "Yellow Registers",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 14
+    },
+    {
+      "name": "Fish-scale maps",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 14
+    },
+    {
+      "name": "Zhu Biao",
+      "facet": "Zhu Yuanzhang and the founding",
+      "known_at": 13
+    },
+    {
+      "name": "Yongle Emperor",
+      "facet": "Yongle and the move to Beijing",
+      "known_at": 8
+    },
+    {
+      "name": "Jianwen Emperor",
+      "facet": "Yongle and the move to Beijing",
+      "known_at": 11
+    },
+    {
+      "name": "Jingnan Campaign",
+      "facet": "Yongle and the move to Beijing",
+      "known_at": 12
+    },
+    {
+      "name": "Fang Xiaoru",
+      "facet": "Yongle and the move to Beijing",
+      "known_at": 12
+    },
+    {
+      "name": "Yao Guangxiao",
+      "facet": "Yongle and the move to Beijing",
+      "known_at": 13
+    },
+    {
+      "name": "Xie Jin",
+      "facet": "Yongle and the move to Beijing",
+      "known_at": 13
+    },
+    {
+      "name": "Yongle Encyclopedia",
+      "facet": "Yongle and the move to Beijing",
+      "known_at": 9
+    },
+    {
+      "name": "Move of the capital to Beijing",
+      "facet": "Yongle and the move to Beijing",
+      "known_at": 9
+    },
+    {
+      "name": "Grand Canal restoration",
+      "facet": "Yongle and the move to Beijing",
+      "known_at": 8
+    },
+    {
+      "name": "Porcelain Tower of Nanjing",
+      "facet": "Yongle and the move to Beijing",
+      "known_at": 11
+    },
+    {
+      "name": "Yongle Bell",
+      "facet": "Yongle and the move to Beijing",
+      "known_at": 12
+    },
+    {
+      "name": "Wudang Mountains temples",
+      "facet": "Yongle and the move to Beijing",
+      "known_at": 10
+    },
+    {
+      "name": "Yongle campaigns against the Mongols",
+      "facet": "Yongle and the move to Beijing",
+      "known_at": 12
+    },
+    {
+      "name": "Ming invasion of Dai Viet",
+      "facet": "Yongle and the move to Beijing",
+      "known_at": 14
+    },
+    {
+      "name": "Hongxi Emperor",
+      "facet": "Yongle and the move to Beijing",
+      "known_at": 13
+    },
+    {
+      "name": "Xuande Emperor",
+      "facet": "Yongle and the move to Beijing",
+      "known_at": 12
+    },
+    {
+      "name": "Palace Museum",
+      "facet": "Forbidden City and palaces",
+      "known_at": 5
+    },
+    {
+      "name": "Tiananmen",
+      "facet": "Forbidden City and palaces",
+      "known_at": 3
+    },
+    {
+      "name": "Hall of Central Harmony",
+      "facet": "Forbidden City and palaces",
+      "known_at": 12
+    },
+    {
+      "name": "Hall of Preserving Harmony",
+      "facet": "Forbidden City and palaces",
+      "known_at": 12
+    },
+    {
+      "name": "Palace of Heavenly Purity",
+      "facet": "Forbidden City and palaces",
+      "known_at": 11
+    },
+    {
+      "name": "Hall of Mental Cultivation",
+      "facet": "Forbidden City and palaces",
+      "known_at": 10
+    },
+    {
+      "name": "Imperial Garden",
+      "facet": "Forbidden City and palaces",
+      "known_at": 10
+    },
+    {
+      "name": "Corner towers of the Forbidden City",
+      "facet": "Forbidden City and palaces",
+      "known_at": 9
+    },
+    {
+      "name": "Forbidden City moat",
+      "facet": "Forbidden City and palaces",
+      "known_at": 11
+    },
+    {
+      "name": "Golden bricks",
+      "facet": "Forbidden City and palaces",
+      "known_at": 12
+    },
+    {
+      "name": "Yellow glazed roof tiles",
+      "facet": "Forbidden City and palaces",
+      "known_at": 6
+    },
+    {
+      "name": "Roof guardian beasts",
+      "facet": "Forbidden City and palaces",
+      "known_at": 10
+    },
+    {
+      "name": "Dragon throne",
+      "facet": "Forbidden City and palaces",
+      "known_at": 6
+    },
+    {
+      "name": "Kuai Xiang",
+      "facet": "Forbidden City and palaces",
+      "known_at": 14
+    },
+    {
+      "name": "Altar of Earth",
+      "facet": "Forbidden City and palaces",
+      "known_at": 12
+    },
+    {
+      "name": "Nine-Dragon Wall of Datong",
+      "facet": "Forbidden City and palaces",
+      "known_at": 12
+    },
+    {
+      "name": "Ming Great Wall",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 3
+    },
+    {
+      "name": "Badaling",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 4
+    },
+    {
+      "name": "Mutianyu",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 7
+    },
+    {
+      "name": "Old Dragon's Head",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 10
+    },
+    {
+      "name": "Juyong Pass",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 10
+    },
+    {
+      "name": "Jinshanling",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 11
+    },
+    {
+      "name": "Simatai",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 10
+    },
+    {
+      "name": "Gubeikou",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 13
+    },
+    {
+      "name": "Beacon towers",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 6
+    },
+    {
+      "name": "Nine Garrisons",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 14
+    },
+    {
+      "name": "Weisuo system",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 14
+    },
+    {
+      "name": "Tumu Crisis",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 11
+    },
+    {
+      "name": "Zhengtong Emperor",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 12
+    },
+    {
+      "name": "Esen Taishi",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 13
+    },
+    {
+      "name": "Oirat Mongols",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 12
+    },
+    {
+      "name": "Yu Qian",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 10
+    },
+    {
+      "name": "Defense of Beijing in 1449",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 12
+    },
+    {
+      "name": "Altan Khan",
+      "facet": "Ming Great Wall and border defense",
+      "known_at": 13
+    },
+    {
+      "name": "Qi Jiguang",
+      "facet": "Generals, pirates and wars",
+      "known_at": 7
+    },
+    {
+      "name": "Wokou",
+      "facet": "Generals, pirates and wars",
+      "known_at": 8
+    },
+    {
+      "name": "Qi Family Army",
+      "facet": "Generals, pirates and wars",
+      "known_at": 10
+    },
+    {
+      "name": "Mandarin duck formation",
+      "facet": "Generals, pirates and wars",
+      "known_at": 12
+    },
+    {
+      "name": "Yu Dayou",
+      "facet": "Generals, pirates and wars",
+      "known_at": 12
+    },
+    {
+      "name": "Hu Zongxian",
+      "facet": "Generals, pirates and wars",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Zhi",
+      "facet": "Generals, pirates and wars",
+      "known_at": 14
+    },
+    {
+      "name": "Taizhou victories",
+      "facet": "Generals, pirates and wars",
+      "known_at": 13
+    },
+    {
+      "name": "Imjin War",
+      "facet": "Generals, pirates and wars",
+      "known_at": 12
+    },
+    {
+      "name": "Li Rusong",
+      "facet": "Generals, pirates and wars",
+      "known_at": 13
+    },
+    {
+      "name": "Wanli Three Great Campaigns",
+      "facet": "Generals, pirates and wars",
+      "known_at": 14
+    },
+    {
+      "name": "Battle of Sarhu",
+      "facet": "Generals, pirates and wars",
+      "known_at": 13
+    },
+    {
+      "name": "Yuan Chonghuan",
+      "facet": "Generals, pirates and wars",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of Ningyuan",
+      "facet": "Generals, pirates and wars",
+      "known_at": 12
+    },
+    {
+      "name": "Xiong Tingbi",
+      "facet": "Generals, pirates and wars",
+      "known_at": 14
+    },
+    {
+      "name": "Sun Chengzong",
+      "facet": "Generals, pirates and wars",
+      "known_at": 14
+    },
+    {
+      "name": "Hongyi cannon",
+      "facet": "Generals, pirates and wars",
+      "known_at": 13
+    },
+    {
+      "name": "Shenjiying",
+      "facet": "Generals, pirates and wars",
+      "known_at": 14
+    },
+    {
+      "name": "Zheng Chenggong",
+      "facet": "Generals, pirates and wars",
+      "known_at": 8
+    },
+    {
+      "name": "Hai Rui",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 8
+    },
+    {
+      "name": "Zhang Juzheng",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 10
+    },
+    {
+      "name": "Single Whip Reform",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 11
+    },
+    {
+      "name": "Yan Song",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 11
+    },
+    {
+      "name": "Xu Jie",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 13
+    },
+    {
+      "name": "Yang Jisheng",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 14
+    },
+    {
+      "name": "Wei Zhongxian",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 10
+    },
+    {
+      "name": "Liu Jin",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 12
+    },
+    {
+      "name": "Wang Zhen",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 13
+    },
+    {
+      "name": "Jinyiwei",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 8
+    },
+    {
+      "name": "East Depot",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 9
+    },
+    {
+      "name": "West Depot",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 11
+    },
+    {
+      "name": "Grand Secretariat",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 13
+    },
+    {
+      "name": "Donglin Movement",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 12
+    },
+    {
+      "name": "Great Rites Controversy",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 14
+    },
+    {
+      "name": "Court beating",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 13
+    },
+    {
+      "name": "Jiajing Emperor",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 11
+    },
+    {
+      "name": "Zhengde Emperor",
+      "facet": "Officials, eunuchs and court politics",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Yangming",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 8
+    },
+    {
+      "name": "Unity of knowledge and action",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 9
+    },
+    {
+      "name": "Enlightenment at Longchang",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 12
+    },
+    {
+      "name": "Instructions for Practical Living",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 13
+    },
+    {
+      "name": "Li Zhi",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 13
+    },
+    {
+      "name": "Li Shizhen",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 6
+    },
+    {
+      "name": "Compendium of Materia Medica",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 7
+    },
+    {
+      "name": "Travels of Xu Xiake",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 9
+    },
+    {
+      "name": "Song Yingxing",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 10
+    },
+    {
+      "name": "Tiangong Kaiwu",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 9
+    },
+    {
+      "name": "Complete Treatise on Agriculture",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 12
+    },
+    {
+      "name": "Jihe Yuanben",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 12
+    },
+    {
+      "name": "Kunyu Wanguo Quantu",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 13
+    },
+    {
+      "name": "Zhu Zaiyu",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 13
+    },
+    {
+      "name": "Wan Hu",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 10
+    },
+    {
+      "name": "Huang Zongxi",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 12
+    },
+    {
+      "name": "Gu Yanwu",
+      "facet": "Thinkers, scientists and travelers",
+      "known_at": 11
+    },
+    {
+      "name": "Wu Cheng'en",
+      "facet": "Ming novels and theater",
+      "known_at": 7
+    },
+    {
+      "name": "Water Margin",
+      "facet": "Ming novels and theater",
+      "known_at": 6
+    },
+    {
+      "name": "Shi Nai'an",
+      "facet": "Ming novels and theater",
+      "known_at": 8
+    },
+    {
+      "name": "Song Jiang",
+      "facet": "Ming novels and theater",
+      "known_at": 9
+    },
+    {
+      "name": "Wu Song fights the tiger",
+      "facet": "Ming novels and theater",
+      "known_at": 6
+    },
+    {
+      "name": "Romance of the Three Kingdoms",
+      "facet": "Ming novels and theater",
+      "known_at": 5
+    },
+    {
+      "name": "Luo Guanzhong",
+      "facet": "Ming novels and theater",
+      "known_at": 8
+    },
+    {
+      "name": "Four Great Classical Novels",
+      "facet": "Ming novels and theater",
+      "known_at": 6
+    },
+    {
+      "name": "The Peony Pavilion",
+      "facet": "Ming novels and theater",
+      "known_at": 9
+    },
+    {
+      "name": "Tang Xianzu",
+      "facet": "Ming novels and theater",
+      "known_at": 9
+    },
+    {
+      "name": "Du Liniang",
+      "facet": "Ming novels and theater",
+      "known_at": 11
+    },
+    {
+      "name": "Kunqu",
+      "facet": "Ming novels and theater",
+      "known_at": 8
+    },
+    {
+      "name": "Wei Liangfu",
+      "facet": "Ming novels and theater",
+      "known_at": 14
+    },
+    {
+      "name": "Feng Menglong",
+      "facet": "Ming novels and theater",
+      "known_at": 11
+    },
+    {
+      "name": "Sanyan",
+      "facet": "Ming novels and theater",
+      "known_at": 12
+    },
+    {
+      "name": "Erpai",
+      "facet": "Ming novels and theater",
+      "known_at": 13
+    },
+    {
+      "name": "Blue-and-white porcelain",
+      "facet": "Porcelain, painting and crafts",
+      "known_at": 4
+    },
+    {
+      "name": "Jingdezhen",
+      "facet": "Porcelain, painting and crafts",
+      "known_at": 7
+    },
+    {
+      "name": "Chenghua chicken cup",
+      "facet": "Porcelain, painting and crafts",
+      "known_at": 12
+    },
+    {
+      "name": "Dehua porcelain",
+      "facet": "Porcelain, painting and crafts",
+      "known_at": 13
+    },
+    {
+      "name": "Cloisonné",
+      "facet": "Porcelain, painting and crafts",
+      "known_at": 9
+    },
+    {
+      "name": "Xuande incense burner",
+      "facet": "Porcelain, painting and crafts",
+      "known_at": 13
+    },
+    {
+      "name": "Carved red lacquer",
+      "facet": "Porcelain, painting and crafts",
+      "known_at": 12
+    },
+    {
+      "name": "Ming furniture",
+      "facet": "Porcelain, painting and crafts",
+      "known_at": 12
+    },
+    {
+      "name": "Suzhou embroidery",
+      "facet": "Porcelain, painting and crafts",
+      "known_at": 10
+    },
+    {
+      "name": "Shen Zhou",
+      "facet": "Porcelain, painting and crafts",
+      "known_at": 12
+    },
+    {
+      "name": "Qiu Ying",
+      "facet": "Porcelain, painting and crafts",
+      "known_at": 12
+    },
+    {
+      "name": "Four Masters of the Ming",
+      "facet": "Porcelain, painting and crafts",
+      "known_at": 12
+    },
+    {
+      "name": "Wu School of painting",
+      "facet": "Porcelain, painting and crafts",
+      "known_at": 13
+    },
+    {
+      "name": "Yuan Ye",
+      "facet": "Porcelain, painting and crafts",
+      "known_at": 14
+    },
+    {
+      "name": "Thirteen Ming Tombs",
+      "facet": "Ming tombs and city walls",
+      "known_at": 7
+    },
+    {
+      "name": "Changling",
+      "facet": "Ming tombs and city walls",
+      "known_at": 11
+    },
+    {
+      "name": "Dingling",
+      "facet": "Ming tombs and city walls",
+      "known_at": 10
+    },
+    {
+      "name": "Phoenix crown from Dingling",
+      "facet": "Ming tombs and city walls",
+      "known_at": 12
+    },
+    {
+      "name": "Sacred Way",
+      "facet": "Ming tombs and city walls",
+      "known_at": 10
+    },
+    {
+      "name": "Ming Zuling",
+      "facet": "Ming tombs and city walls",
+      "known_at": 14
+    },
+    {
+      "name": "Ming Huangling",
+      "facet": "Ming tombs and city walls",
+      "known_at": 14
+    },
+    {
+      "name": "Xianling",
+      "facet": "Ming tombs and city walls",
+      "known_at": 14
+    },
+    {
+      "name": "Nanjing City Wall",
+      "facet": "Ming tombs and city walls",
+      "known_at": 8
+    },
+    {
+      "name": "Zhonghua Gate",
+      "facet": "Ming tombs and city walls",
+      "known_at": 11
+    },
+    {
+      "name": "Inscribed bricks of the Nanjing wall",
+      "facet": "Ming tombs and city walls",
+      "known_at": 13
+    },
+    {
+      "name": "Xi'an City Wall",
+      "facet": "Ming tombs and city walls",
+      "known_at": 6
+    },
+    {
+      "name": "Xi'an Bell Tower",
+      "facet": "Ming tombs and city walls",
+      "known_at": 9
+    },
+    {
+      "name": "Beijing Bell and Drum Towers",
+      "facet": "Ming tombs and city walls",
+      "known_at": 10
+    },
+    {
+      "name": "Jingzhou Ancient City Wall",
+      "facet": "Ming tombs and city walls",
+      "known_at": 11
+    },
+    {
+      "name": "Imperial examination",
+      "facet": "Daily life, exams and economy",
+      "known_at": 6
+    },
+    {
+      "name": "Eight-legged essay",
+      "facet": "Daily life, exams and economy",
+      "known_at": 10
+    },
+    {
+      "name": "Zhuangyuan",
+      "facet": "Daily life, exams and economy",
+      "known_at": 7
+    },
+    {
+      "name": "Xiucai",
+      "facet": "Daily life, exams and economy",
+      "known_at": 9
+    },
+    {
+      "name": "Juren",
+      "facet": "Daily life, exams and economy",
+      "known_at": 11
+    },
+    {
+      "name": "Jiangnan Examination Hall",
+      "facet": "Daily life, exams and economy",
+      "known_at": 12
+    },
+    {
+      "name": "Silver tael",
+      "facet": "Daily life, exams and economy",
+      "known_at": 8
+    },
+    {
+      "name": "Da Ming Baochao",
+      "facet": "Daily life, exams and economy",
+      "known_at": 12
+    },
+    {
+      "name": "Hongwu Tongbao",
+      "facet": "Daily life, exams and economy",
+      "known_at": 13
+    },
+    {
+      "name": "Huizhou merchants",
+      "facet": "Daily life, exams and economy",
+      "known_at": 11
+    },
+    {
+      "name": "Haijin",
+      "facet": "Daily life, exams and economy",
+      "known_at": 11
+    },
+    {
+      "name": "Tea-horse trade",
+      "facet": "Daily life, exams and economy",
+      "known_at": 12
+    },
+    {
+      "name": "Sweet potato",
+      "facet": "Daily life, exams and economy",
+      "known_at": 11
+    },
+    {
+      "name": "Chili pepper",
+      "facet": "Daily life, exams and economy",
+      "known_at": 11
+    },
+    {
+      "name": "Suzhou silk",
+      "facet": "Daily life, exams and economy",
+      "known_at": 8
+    },
+    {
+      "name": "Horse-face skirt",
+      "facet": "Daily life, exams and economy",
+      "known_at": 8
+    },
+    {
+      "name": "Lijia system",
+      "facet": "Daily life, exams and economy",
+      "known_at": 14
+    },
+    {
+      "name": "Chongzhen Emperor",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 8
+    },
+    {
+      "name": "Li Zicheng",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 8
+    },
+    {
+      "name": "Li Yan",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 14
+    },
+    {
+      "name": "Shun dynasty",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Xianzhong",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 12
+    },
+    {
+      "name": "Wu Sangui",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 9
+    },
+    {
+      "name": "Chen Yuanyuan",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of Shanhai Pass",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 11
+    },
+    {
+      "name": "Dorgon",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 11
+    },
+    {
+      "name": "Huang Taiji",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 11
+    },
+    {
+      "name": "Later Jin",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 11
+    },
+    {
+      "name": "Seven Grievances",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 14
+    },
+    {
+      "name": "Shunzhi Emperor",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 10
+    },
+    {
+      "name": "Southern Ming",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 12
+    },
+    {
+      "name": "Hongguang Emperor",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 14
+    },
+    {
+      "name": "Yongli Emperor",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 14
+    },
+    {
+      "name": "Shi Kefa",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 11
+    },
+    {
+      "name": "Queue order",
+      "facet": "Fall of the Ming in 1644",
+      "known_at": 13
+    }
+  ]
+}

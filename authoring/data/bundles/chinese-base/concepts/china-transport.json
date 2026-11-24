@@ -1,0 +1,907 @@
+{
+  "subcategory": "china-transport",
+  "facets": [
+    "High-speed rail network",
+    "Fuxing and Hexie trains",
+    "Mountain and plateau railways",
+    "Historic railways and pioneers",
+    "Maglev and new rail technology",
+    "City metros and buses",
+    "Shared bikes and e-scooters",
+    "Civil aviation and airliners",
+    "Bridges, tunnels and highways",
+    "Ports, ships and canals",
+    "Travel customs and Spring Festival rush",
+    "Everyday transport apps and tickets"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 4,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Beijing–Tianjin intercity railway",
+      "facet": "High-speed rail network",
+      "known_at": 11
+    },
+    {
+      "name": "Wuhan–Guangzhou high-speed railway",
+      "facet": "High-speed rail network",
+      "known_at": 11
+    },
+    {
+      "name": "Beijing–Guangzhou high-speed railway",
+      "facet": "High-speed rail network",
+      "known_at": 9
+    },
+    {
+      "name": "Guangzhou–Shenzhen–Hong Kong Express Rail Link",
+      "facet": "High-speed rail network",
+      "known_at": 10
+    },
+    {
+      "name": "Harbin–Dalian high-speed railway",
+      "facet": "High-speed rail network",
+      "known_at": 12
+    },
+    {
+      "name": "Lanzhou–Xinjiang high-speed railway",
+      "facet": "High-speed rail network",
+      "known_at": 12
+    },
+    {
+      "name": "Eight Vertical and Eight Horizontal network (八纵八横)",
+      "facet": "High-speed rail network",
+      "known_at": 12
+    },
+    {
+      "name": "Beijing South railway station",
+      "facet": "High-speed rail network",
+      "known_at": 7
+    },
+    {
+      "name": "Shanghai Hongqiao railway station",
+      "facet": "High-speed rail network",
+      "known_at": 7
+    },
+    {
+      "name": "Jakarta–Bandung high-speed railway",
+      "facet": "High-speed rail network",
+      "known_at": 12
+    },
+    {
+      "name": "China–Laos railway",
+      "facet": "High-speed rail network",
+      "known_at": 11
+    },
+    {
+      "name": "Fuzhou–Xiamen high-speed railway",
+      "facet": "High-speed rail network",
+      "known_at": 13
+    },
+    {
+      "name": "Chengdu–Chongqing intercity railway",
+      "facet": "High-speed rail network",
+      "known_at": 12
+    },
+    {
+      "name": "Hainan round-island railway",
+      "facet": "High-speed rail network",
+      "known_at": 12
+    },
+    {
+      "name": "Hexie trains (和谐号)",
+      "facet": "Fuxing and Hexie trains",
+      "known_at": 6
+    },
+    {
+      "name": "CR400AF",
+      "facet": "Fuxing and Hexie trains",
+      "known_at": 12
+    },
+    {
+      "name": "CR400BF",
+      "facet": "Fuxing and Hexie trains",
+      "known_at": 12
+    },
+    {
+      "name": "CRH380A",
+      "facet": "Fuxing and Hexie trains",
+      "known_at": 12
+    },
+    {
+      "name": "CRH2",
+      "facet": "Fuxing and Hexie trains",
+      "known_at": 13
+    },
+    {
+      "name": "Smart Fuxing (智能复兴号)",
+      "facet": "Fuxing and Hexie trains",
+      "known_at": 11
+    },
+    {
+      "name": "CRRC (中国中车)",
+      "facet": "Fuxing and Hexie trains",
+      "known_at": 10
+    },
+    {
+      "name": "Golden Phoenix (金凤凰)",
+      "facet": "Fuxing and Hexie trains",
+      "known_at": 13
+    },
+    {
+      "name": "Blue Dolphin (蓝海豚)",
+      "facet": "Fuxing and Hexie trains",
+      "known_at": 13
+    },
+    {
+      "name": "Dining car",
+      "facet": "Fuxing and Hexie trains",
+      "known_at": 5
+    },
+    {
+      "name": "Business class seat",
+      "facet": "Fuxing and Hexie trains",
+      "known_at": 6
+    },
+    {
+      "name": "Second-class seat",
+      "facet": "Fuxing and Hexie trains",
+      "known_at": 5
+    },
+    {
+      "name": "Pantograph",
+      "facet": "Fuxing and Hexie trains",
+      "known_at": 9
+    },
+    {
+      "name": "China Standard EMU (中国标准动车组)",
+      "facet": "Fuxing and Hexie trains",
+      "known_at": 11
+    },
+    {
+      "name": "CRH380AL",
+      "facet": "Fuxing and Hexie trains",
+      "known_at": 13
+    },
+    {
+      "name": "CR450",
+      "facet": "Fuxing and Hexie trains",
+      "known_at": 13
+    },
+    {
+      "name": "Tanggula railway station",
+      "facet": "Mountain and plateau railways",
+      "known_at": 11
+    },
+    {
+      "name": "Lhasa railway station",
+      "facet": "Mountain and plateau railways",
+      "known_at": 8
+    },
+    {
+      "name": "Fenghuoshan tunnel",
+      "facet": "Mountain and plateau railways",
+      "known_at": 13
+    },
+    {
+      "name": "Oxygen supply on trains",
+      "facet": "Mountain and plateau railways",
+      "known_at": 7
+    },
+    {
+      "name": "Lhasa–Nyingchi railway",
+      "facet": "Mountain and plateau railways",
+      "known_at": 12
+    },
+    {
+      "name": "Sichuan–Tibet railway",
+      "facet": "Mountain and plateau railways",
+      "known_at": 10
+    },
+    {
+      "name": "Baoji–Chengdu railway",
+      "facet": "Mountain and plateau railways",
+      "known_at": 12
+    },
+    {
+      "name": "Taklamakan desert railway loop",
+      "facet": "Mountain and plateau railways",
+      "known_at": 13
+    },
+    {
+      "name": "Tibetan antelope crossings",
+      "facet": "Mountain and plateau railways",
+      "known_at": 9
+    },
+    {
+      "name": "Beijing–Zhangjiakou railway 1909",
+      "facet": "Historic railways and pioneers",
+      "known_at": 9
+    },
+    {
+      "name": "Zigzag railway (人字形铁路)",
+      "facet": "Historic railways and pioneers",
+      "known_at": 8
+    },
+    {
+      "name": "Qinglongqiao station",
+      "facet": "Historic railways and pioneers",
+      "known_at": 12
+    },
+    {
+      "name": "Woosung Road railway 1876",
+      "facet": "Historic railways and pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Tangshan–Xugezhuang railway",
+      "facet": "Historic railways and pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Rocket of China locomotive (龙号机车)",
+      "facet": "Historic railways and pioneers",
+      "known_at": 14
+    },
+    {
+      "name": "Chinese Eastern Railway",
+      "facet": "Historic railways and pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Tianjin–Pukou railway",
+      "facet": "Historic railways and pioneers",
+      "known_at": 14
+    },
+    {
+      "name": "Chengdu–Chongqing railway 1952",
+      "facet": "Historic railways and pioneers",
+      "known_at": 12
+    },
+    {
+      "name": "Green-skin trains (绿皮车)",
+      "facet": "Historic railways and pioneers",
+      "known_at": 4
+    },
+    {
+      "name": "Steam locomotive",
+      "facet": "Historic railways and pioneers",
+      "known_at": 3
+    },
+    {
+      "name": "Railway Protection Movement (保路运动)",
+      "facet": "Historic railways and pioneers",
+      "known_at": 11
+    },
+    {
+      "name": "Mao Zedong locomotive (毛泽东号机车)",
+      "facet": "Historic railways and pioneers",
+      "known_at": 12
+    },
+    {
+      "name": "Railway speed-up campaigns (铁路大提速)",
+      "facet": "Historic railways and pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "China Railway Museum",
+      "facet": "Historic railways and pioneers",
+      "known_at": 11
+    },
+    {
+      "name": "Yunnan–Vietnam railway (滇越铁路)",
+      "facet": "Historic railways and pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Beijing–Hankou railway",
+      "facet": "Historic railways and pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Changsha maglev express",
+      "facet": "Maglev and new rail technology",
+      "known_at": 12
+    },
+    {
+      "name": "Beijing Subway Line S1",
+      "facet": "Maglev and new rail technology",
+      "known_at": 13
+    },
+    {
+      "name": "600 km/h maglev train",
+      "facet": "Maglev and new rail technology",
+      "known_at": 11
+    },
+    {
+      "name": "Linear motor",
+      "facet": "Maglev and new rail technology",
+      "known_at": 13
+    },
+    {
+      "name": "Superconductivity",
+      "facet": "Maglev and new rail technology",
+      "known_at": 13
+    },
+    {
+      "name": "Autonomous Rail Rapid Transit (智轨)",
+      "facet": "Maglev and new rail technology",
+      "known_at": 12
+    },
+    {
+      "name": "Monorail",
+      "facet": "Maglev and new rail technology",
+      "known_at": 7
+    },
+    {
+      "name": "Low-vacuum tube maglev",
+      "facet": "Maglev and new rail technology",
+      "known_at": 13
+    },
+    {
+      "name": "Driverless train",
+      "facet": "Maglev and new rail technology",
+      "known_at": 8
+    },
+    {
+      "name": "Regenerative braking",
+      "facet": "Maglev and new rail technology",
+      "known_at": 13
+    },
+    {
+      "name": "Ballastless track",
+      "facet": "Maglev and new rail technology",
+      "known_at": 13
+    },
+    {
+      "name": "Continuous welded rail",
+      "facet": "Maglev and new rail technology",
+      "known_at": 11
+    },
+    {
+      "name": "Transrapid",
+      "facet": "Maglev and new rail technology",
+      "known_at": 14
+    },
+    {
+      "name": "Hydrogen-powered tram",
+      "facet": "Maglev and new rail technology",
+      "known_at": 13
+    },
+    {
+      "name": "Shanghai Metro",
+      "facet": "City metros and buses",
+      "known_at": 5
+    },
+    {
+      "name": "Guangzhou Metro",
+      "facet": "City metros and buses",
+      "known_at": 7
+    },
+    {
+      "name": "Hong Kong MTR",
+      "facet": "City metros and buses",
+      "known_at": 8
+    },
+    {
+      "name": "Beijing Subway Line 1",
+      "facet": "City metros and buses",
+      "known_at": 10
+    },
+    {
+      "name": "Beijing Subway Line 2",
+      "facet": "City metros and buses",
+      "known_at": 11
+    },
+    {
+      "name": "Shenzhen Metro",
+      "facet": "City metros and buses",
+      "known_at": 8
+    },
+    {
+      "name": "Taipei Metro",
+      "facet": "City metros and buses",
+      "known_at": 10
+    },
+    {
+      "name": "Double-decker bus",
+      "facet": "City metros and buses",
+      "known_at": 6
+    },
+    {
+      "name": "Trolleybus",
+      "facet": "City metros and buses",
+      "known_at": 8
+    },
+    {
+      "name": "Electric bus",
+      "facet": "City metros and buses",
+      "known_at": 7
+    },
+    {
+      "name": "Hong Kong tram (叮叮车)",
+      "facet": "City metros and buses",
+      "known_at": 9
+    },
+    {
+      "name": "Bus rapid transit",
+      "facet": "City metros and buses",
+      "known_at": 11
+    },
+    {
+      "name": "Rickshaw (黄包车)",
+      "facet": "City metros and buses",
+      "known_at": 7
+    },
+    {
+      "name": "Pedicab (三轮车)",
+      "facet": "City metros and buses",
+      "known_at": 4
+    },
+    {
+      "name": "Shared bicycles",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 2
+    },
+    {
+      "name": "Mobike",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 6
+    },
+    {
+      "name": "ofo",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 6
+    },
+    {
+      "name": "Hello Bike (哈啰)",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 6
+    },
+    {
+      "name": "Meituan Bike",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 7
+    },
+    {
+      "name": "Didi Qingju (青桔)",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 8
+    },
+    {
+      "name": "QR code unlocking",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 3
+    },
+    {
+      "name": "Electric bicycle (电动车)",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 2
+    },
+    {
+      "name": "Electric scooter",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 3
+    },
+    {
+      "name": "Flying Pigeon bicycle (飞鸽)",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 9
+    },
+    {
+      "name": "Forever bicycle (永久)",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 10
+    },
+    {
+      "name": "Phoenix bicycle (凤凰)",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 10
+    },
+    {
+      "name": "Kingdom of Bicycles (自行车王国)",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 8
+    },
+    {
+      "name": "One Helmet, One Belt campaign (一盔一带)",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 9
+    },
+    {
+      "name": "Bicycle graveyard",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 11
+    },
+    {
+      "name": "Electronic fence parking (电子围栏)",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 10
+    },
+    {
+      "name": "Hangzhou public bicycle",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 12
+    },
+    {
+      "name": "Battery swapping",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 11
+    },
+    {
+      "name": "E-bike license plate",
+      "facet": "Shared bikes and e-scooters",
+      "known_at": 9
+    },
+    {
+      "name": "ARJ21 (C909)",
+      "facet": "Civil aviation and airliners",
+      "known_at": 11
+    },
+    {
+      "name": "C929",
+      "facet": "Civil aviation and airliners",
+      "known_at": 13
+    },
+    {
+      "name": "COMAC",
+      "facet": "Civil aviation and airliners",
+      "known_at": 9
+    },
+    {
+      "name": "Beijing Capital International Airport",
+      "facet": "Civil aviation and airliners",
+      "known_at": 7
+    },
+    {
+      "name": "Shanghai Pudong International Airport",
+      "facet": "Civil aviation and airliners",
+      "known_at": 8
+    },
+    {
+      "name": "Guangzhou Baiyun International Airport",
+      "facet": "Civil aviation and airliners",
+      "known_at": 10
+    },
+    {
+      "name": "Chengdu Tianfu International Airport",
+      "facet": "Civil aviation and airliners",
+      "known_at": 11
+    },
+    {
+      "name": "Daocheng Yading Airport",
+      "facet": "Civil aviation and airliners",
+      "known_at": 13
+    },
+    {
+      "name": "Air China",
+      "facet": "Civil aviation and airliners",
+      "known_at": 6
+    },
+    {
+      "name": "China Southern Airlines",
+      "facet": "Civil aviation and airliners",
+      "known_at": 7
+    },
+    {
+      "name": "China Eastern Airlines",
+      "facet": "Civil aviation and airliners",
+      "known_at": 7
+    },
+    {
+      "name": "Hainan Airlines",
+      "facet": "Civil aviation and airliners",
+      "known_at": 9
+    },
+    {
+      "name": "Cathay Pacific",
+      "facet": "Civil aviation and airliners",
+      "known_at": 10
+    },
+    {
+      "name": "Feng Ru (冯如)",
+      "facet": "Civil aviation and airliners",
+      "known_at": 12
+    },
+    {
+      "name": "Y-10 (运-10)",
+      "facet": "Civil aviation and airliners",
+      "known_at": 13
+    },
+    {
+      "name": "AG600 Kunlong (鲲龙)",
+      "facet": "Civil aviation and airliners",
+      "known_at": 11
+    },
+    {
+      "name": "Drone delivery",
+      "facet": "Civil aviation and airliners",
+      "known_at": 9
+    },
+    {
+      "name": "Sutong Yangtze River Bridge",
+      "facet": "Bridges, tunnels and highways",
+      "known_at": 13
+    },
+    {
+      "name": "Huangjueya Interchange",
+      "facet": "Bridges, tunnels and highways",
+      "known_at": 8
+    },
+    {
+      "name": "Zhongnanshan Tunnel",
+      "facet": "Bridges, tunnels and highways",
+      "known_at": 12
+    },
+    {
+      "name": "China National Highway 318",
+      "facet": "Bridges, tunnels and highways",
+      "known_at": 9
+    },
+    {
+      "name": "Duku Highway (独库公路)",
+      "facet": "Bridges, tunnels and highways",
+      "known_at": 10
+    },
+    {
+      "name": "Expressway service area",
+      "facet": "Bridges, tunnels and highways",
+      "known_at": 4
+    },
+    {
+      "name": "Grand Canal (京杭大运河)",
+      "facet": "Ports, ships and canals",
+      "known_at": 4
+    },
+    {
+      "name": "Yangshan Deep-Water Port",
+      "facet": "Ports, ships and canals",
+      "known_at": 9
+    },
+    {
+      "name": "Port of Ningbo-Zhoushan",
+      "facet": "Ports, ships and canals",
+      "known_at": 11
+    },
+    {
+      "name": "Treasure ship (宝船)",
+      "facet": "Ports, ships and canals",
+      "known_at": 9
+    },
+    {
+      "name": "Dragon boat",
+      "facet": "Ports, ships and canals",
+      "known_at": 2
+    },
+    {
+      "name": "Liaoning aircraft carrier",
+      "facet": "Ports, ships and canals",
+      "known_at": 7
+    },
+    {
+      "name": "Adora Magic City cruise ship",
+      "facet": "Ports, ships and canals",
+      "known_at": 12
+    },
+    {
+      "name": "Xuelong icebreaker (雪龙号)",
+      "facet": "Ports, ships and canals",
+      "known_at": 10
+    },
+    {
+      "name": "Jiaolong submersible (蛟龙号)",
+      "facet": "Ports, ships and canals",
+      "known_at": 9
+    },
+    {
+      "name": "Qiongzhou Strait ferry",
+      "facet": "Ports, ships and canals",
+      "known_at": 11
+    },
+    {
+      "name": "Sampan",
+      "facet": "Ports, ships and canals",
+      "known_at": 11
+    },
+    {
+      "name": "Going home for the New Year (回家过年)",
+      "facet": "Travel customs and Spring Festival rush",
+      "known_at": 3
+    },
+    {
+      "name": "National Day holiday",
+      "facet": "Travel customs and Spring Festival rush",
+      "known_at": 4
+    },
+    {
+      "name": "Hard seat (硬座)",
+      "facet": "Travel customs and Spring Festival rush",
+      "known_at": 6
+    },
+    {
+      "name": "Hard sleeper (硬卧)",
+      "facet": "Travel customs and Spring Festival rush",
+      "known_at": 7
+    },
+    {
+      "name": "Standing ticket (无座)",
+      "facet": "Travel customs and Spring Festival rush",
+      "known_at": 6
+    },
+    {
+      "name": "Instant noodles on trains",
+      "facet": "Travel customs and Spring Festival rush",
+      "known_at": 3
+    },
+    {
+      "name": "Hot water dispenser on trains",
+      "facet": "Travel customs and Spring Festival rush",
+      "known_at": 4
+    },
+    {
+      "name": "Train trolley vendor",
+      "facet": "Travel customs and Spring Festival rush",
+      "known_at": 7
+    },
+    {
+      "name": "Motorbike army (摩托大军)",
+      "facet": "Travel customs and Spring Festival rush",
+      "known_at": 10
+    },
+    {
+      "name": "Toll-free expressways on holidays",
+      "facet": "Travel customs and Spring Festival rush",
+      "known_at": 9
+    },
+    {
+      "name": "Railway station waiting hall",
+      "facet": "Travel customs and Spring Festival rush",
+      "known_at": 5
+    },
+    {
+      "name": "Return travel peak (返程高峰)",
+      "facet": "Travel customs and Spring Festival rush",
+      "known_at": 8
+    },
+    {
+      "name": "Self-drive tour (自驾游)",
+      "facet": "Travel customs and Spring Festival rush",
+      "known_at": 7
+    },
+    {
+      "name": "Long-distance coach",
+      "facet": "Travel customs and Spring Festival rush",
+      "known_at": 5
+    },
+    {
+      "name": "Alipay",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 4
+    },
+    {
+      "name": "WeChat Pay",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 4
+    },
+    {
+      "name": "Didi",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 4
+    },
+    {
+      "name": "Amap (高德地图)",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 6
+    },
+    {
+      "name": "Baidu Maps",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 6
+    },
+    {
+      "name": "Trip.com (携程)",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 8
+    },
+    {
+      "name": "Electronic train ticket",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 7
+    },
+    {
+      "name": "ID card ticket check",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 5
+    },
+    {
+      "name": "Facial recognition gates",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 6
+    },
+    {
+      "name": "Yikatong transport card (一卡通)",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 7
+    },
+    {
+      "name": "Octopus card",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 9
+    },
+    {
+      "name": "EasyCard (悠遊卡)",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 11
+    },
+    {
+      "name": "ETC lane",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 8
+    },
+    {
+      "name": "Real-name ticketing",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 10
+    },
+    {
+      "name": "Ticket grabbing (抢票)",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 8
+    },
+    {
+      "name": "Metro QR code",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 5
+    },
+    {
+      "name": "Red paper train ticket",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 9
+    },
+    {
+      "name": "Waitlist ticketing (候补购票)",
+      "facet": "Everyday transport apps and tickets",
+      "known_at": 10
+    }
+  ]
+}

@@ -96,7 +96,8 @@
     {
       "name": "Three little pigs",
       "facet": "Clever animal fables",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Pool already has several Three Little Pigs questions (houses, glass house, brick house analogy); the remaining options would repeat them."
     },
     {
       "name": "Wolf and the seven little goats",
@@ -476,7 +477,8 @@
     {
       "name": "Ant and the grasshopper",
       "facet": "Aesop's fables in Chinese textbooks",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Pool already covers the ant storing food for winter and Aesop; remaining options would repeat or give those away."
     },
     {
       "name": "Ant and the dove",

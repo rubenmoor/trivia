@@ -1,0 +1,891 @@
+{
+  "subcategory": "ethnic-groups",
+  "facets": [
+    "Recognised groups and populations",
+    "Where groups live",
+    "Festivals and celebrations",
+    "Food and drink",
+    "Traditional dress and jewellery",
+    "Homes and architecture",
+    "Music, instruments and dance",
+    "Scripts, languages and epics",
+    "Crafts and handicrafts",
+    "Customs, sports and daily life",
+    "Legends, heroes and famous people"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "56 recognised groups",
+      "facet": "Recognised groups and populations",
+      "known_at": 3
+    },
+    {
+      "name": "Han Chinese",
+      "facet": "Recognised groups and populations",
+      "known_at": 2
+    },
+    {
+      "name": "Zhuang",
+      "facet": "Recognised groups and populations",
+      "known_at": 8
+    },
+    {
+      "name": "Hui",
+      "facet": "Recognised groups and populations",
+      "known_at": 7
+    },
+    {
+      "name": "Manchu",
+      "facet": "Recognised groups and populations",
+      "known_at": 6
+    },
+    {
+      "name": "Uyghur",
+      "facet": "Recognised groups and populations",
+      "known_at": 6
+    },
+    {
+      "name": "Miao",
+      "facet": "Recognised groups and populations",
+      "known_at": 6
+    },
+    {
+      "name": "Yi",
+      "facet": "Recognised groups and populations",
+      "known_at": 8
+    },
+    {
+      "name": "Tujia",
+      "facet": "Recognised groups and populations",
+      "known_at": 10
+    },
+    {
+      "name": "Tibetan",
+      "facet": "Recognised groups and populations",
+      "known_at": 4
+    },
+    {
+      "name": "Mongolian",
+      "facet": "Recognised groups and populations",
+      "known_at": 4
+    },
+    {
+      "name": "Dong",
+      "facet": "Recognised groups and populations",
+      "known_at": 9
+    },
+    {
+      "name": "Bai",
+      "facet": "Recognised groups and populations",
+      "known_at": 9
+    },
+    {
+      "name": "Dai",
+      "facet": "Recognised groups and populations",
+      "known_at": 7
+    },
+    {
+      "name": "Naxi",
+      "facet": "Recognised groups and populations",
+      "known_at": 10
+    },
+    {
+      "name": "Li",
+      "facet": "Recognised groups and populations",
+      "known_at": 10
+    },
+    {
+      "name": "Hani",
+      "facet": "Recognised groups and populations",
+      "known_at": 11
+    },
+    {
+      "name": "Kazakh",
+      "facet": "Recognised groups and populations",
+      "known_at": 9
+    },
+    {
+      "name": "Korean ethnic group (Chaoxian)",
+      "facet": "Recognised groups and populations",
+      "known_at": 9
+    },
+    {
+      "name": "Gaoshan",
+      "facet": "Recognised groups and populations",
+      "known_at": 10
+    },
+    {
+      "name": "She",
+      "facet": "Recognised groups and populations",
+      "known_at": 12
+    },
+    {
+      "name": "Hezhe",
+      "facet": "Recognised groups and populations",
+      "known_at": 12
+    },
+    {
+      "name": "Lhoba",
+      "facet": "Recognised groups and populations",
+      "known_at": 13
+    },
+    {
+      "name": "Jino",
+      "facet": "Recognised groups and populations",
+      "known_at": 13
+    },
+    {
+      "name": "Guangxi Zhuang Autonomous Region",
+      "facet": "Where groups live",
+      "known_at": 7
+    },
+    {
+      "name": "Xizang (Tibet)",
+      "facet": "Where groups live",
+      "known_at": 4
+    },
+    {
+      "name": "Ningxia Hui Autonomous Region",
+      "facet": "Where groups live",
+      "known_at": 8
+    },
+    {
+      "name": "Yanbian",
+      "facet": "Where groups live",
+      "known_at": 10
+    },
+    {
+      "name": "Liangshan",
+      "facet": "Where groups live",
+      "known_at": 11
+    },
+    {
+      "name": "Xiangxi",
+      "facet": "Where groups live",
+      "known_at": 11
+    },
+    {
+      "name": "Enshi",
+      "facet": "Where groups live",
+      "known_at": 12
+    },
+    {
+      "name": "Shangri-La",
+      "facet": "Where groups live",
+      "known_at": 9
+    },
+    {
+      "name": "Dai Water-Splashing Festival",
+      "facet": "Festivals and celebrations",
+      "known_at": 5
+    },
+    {
+      "name": "Yi Torch Festival",
+      "facet": "Festivals and celebrations",
+      "known_at": 8
+    },
+    {
+      "name": "Zhuang March 3 festival",
+      "facet": "Festivals and celebrations",
+      "known_at": 9
+    },
+    {
+      "name": "Losar (Tibetan New Year)",
+      "facet": "Festivals and celebrations",
+      "known_at": 9
+    },
+    {
+      "name": "Shoton Festival",
+      "facet": "Festivals and celebrations",
+      "known_at": 12
+    },
+    {
+      "name": "Eid al-Fitr",
+      "facet": "Festivals and celebrations",
+      "known_at": 9
+    },
+    {
+      "name": "Corban Festival",
+      "facet": "Festivals and celebrations",
+      "known_at": 11
+    },
+    {
+      "name": "Bai March Street Fair",
+      "facet": "Festivals and celebrations",
+      "known_at": 12
+    },
+    {
+      "name": "Miao New Year",
+      "facet": "Festivals and celebrations",
+      "known_at": 11
+    },
+    {
+      "name": "Sisters' Meal Festival",
+      "facet": "Festivals and celebrations",
+      "known_at": 12
+    },
+    {
+      "name": "Ongkor Festival",
+      "facet": "Festivals and celebrations",
+      "known_at": 13
+    },
+    {
+      "name": "Panwang Festival",
+      "facet": "Festivals and celebrations",
+      "known_at": 13
+    },
+    {
+      "name": "Lisu Knife-Pole Festival",
+      "facet": "Festivals and celebrations",
+      "known_at": 13
+    },
+    {
+      "name": "Munao Zongge",
+      "facet": "Festivals and celebrations",
+      "known_at": 14
+    },
+    {
+      "name": "Banjin Festival",
+      "facet": "Festivals and celebrations",
+      "known_at": 14
+    },
+    {
+      "name": "Tsampa",
+      "facet": "Food and drink",
+      "known_at": 9
+    },
+    {
+      "name": "Naan",
+      "facet": "Food and drink",
+      "known_at": 6
+    },
+    {
+      "name": "Polo (hand-grabbed rice)",
+      "facet": "Food and drink",
+      "known_at": 8
+    },
+    {
+      "name": "Lamb kebab",
+      "facet": "Food and drink",
+      "known_at": 3
+    },
+    {
+      "name": "Kumis",
+      "facet": "Food and drink",
+      "known_at": 10
+    },
+    {
+      "name": "Five-colour glutinous rice",
+      "facet": "Food and drink",
+      "known_at": 10
+    },
+    {
+      "name": "Bamboo tube rice",
+      "facet": "Food and drink",
+      "known_at": 9
+    },
+    {
+      "name": "Pineapple rice",
+      "facet": "Food and drink",
+      "known_at": 8
+    },
+    {
+      "name": "Miao sour soup fish",
+      "facet": "Food and drink",
+      "known_at": 9
+    },
+    {
+      "name": "Dong oil tea",
+      "facet": "Food and drink",
+      "known_at": 11
+    },
+    {
+      "name": "Sachima",
+      "facet": "Food and drink",
+      "known_at": 6
+    },
+    {
+      "name": "Yak meat",
+      "facet": "Food and drink",
+      "known_at": 7
+    },
+    {
+      "name": "Roast whole lamb",
+      "facet": "Food and drink",
+      "known_at": 7
+    },
+    {
+      "name": "Rushan (milk fan)",
+      "facet": "Food and drink",
+      "known_at": 12
+    },
+    {
+      "name": "Highland barley wine",
+      "facet": "Food and drink",
+      "known_at": 11
+    },
+    {
+      "name": "Big plate chicken",
+      "facet": "Food and drink",
+      "known_at": 7
+    },
+    {
+      "name": "Miao silver jewellery",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 6
+    },
+    {
+      "name": "Chuba (Tibetan robe)",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 9
+    },
+    {
+      "name": "Mongolian robe",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 9
+    },
+    {
+      "name": "Qipao",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 4
+    },
+    {
+      "name": "Bai headdress",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 12
+    },
+    {
+      "name": "Dai sarong",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 10
+    },
+    {
+      "name": "Doppa",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 8
+    },
+    {
+      "name": "Hero knot",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 13
+    },
+    {
+      "name": "Naxi seven-star sheepskin cape",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 13
+    },
+    {
+      "name": "Miao pleated skirt",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 11
+    },
+    {
+      "name": "Long-horn Miao headdress",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 12
+    },
+    {
+      "name": "Atlas silk",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 11
+    },
+    {
+      "name": "Turquoise and coral jewellery",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 10
+    },
+    {
+      "name": "Flowerpot-bottom shoes",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 11
+    },
+    {
+      "name": "Liangbatou",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 11
+    },
+    {
+      "name": "Charwa (Yi wool cape)",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 13
+    },
+    {
+      "name": "Hui white cap",
+      "facet": "Traditional dress and jewellery",
+      "known_at": 8
+    },
+    {
+      "name": "Mongolian yurt",
+      "facet": "Homes and architecture",
+      "known_at": 3
+    },
+    {
+      "name": "Dai bamboo stilt house",
+      "facet": "Homes and architecture",
+      "known_at": 8
+    },
+    {
+      "name": "Diaojiaolou",
+      "facet": "Homes and architecture",
+      "known_at": 10
+    },
+    {
+      "name": "Dong drum tower",
+      "facet": "Homes and architecture",
+      "known_at": 9
+    },
+    {
+      "name": "Wind-and-rain bridge",
+      "facet": "Homes and architecture",
+      "known_at": 10
+    },
+    {
+      "name": "Tibetan stone house",
+      "facet": "Homes and architecture",
+      "known_at": 11
+    },
+    {
+      "name": "Three houses and one screen wall",
+      "facet": "Homes and architecture",
+      "known_at": 13
+    },
+    {
+      "name": "Mu Mansion",
+      "facet": "Homes and architecture",
+      "known_at": 13
+    },
+    {
+      "name": "Id Kah Mosque",
+      "facet": "Homes and architecture",
+      "known_at": 11
+    },
+    {
+      "name": "Hani mushroom house",
+      "facet": "Homes and architecture",
+      "known_at": 12
+    },
+    {
+      "name": "Ondol",
+      "facet": "Homes and architecture",
+      "known_at": 11
+    },
+    {
+      "name": "Li boat-shaped house",
+      "facet": "Homes and architecture",
+      "known_at": 13
+    },
+    {
+      "name": "Qiang watchtowers",
+      "facet": "Homes and architecture",
+      "known_at": 12
+    },
+    {
+      "name": "Niujie Mosque",
+      "facet": "Homes and architecture",
+      "known_at": 11
+    },
+    {
+      "name": "Great Mosque of Xi'an",
+      "facet": "Homes and architecture",
+      "known_at": 10
+    },
+    {
+      "name": "Kumbum Monastery",
+      "facet": "Homes and architecture",
+      "known_at": 11
+    },
+    {
+      "name": "Labrang Monastery",
+      "facet": "Homes and architecture",
+      "known_at": 12
+    },
+    {
+      "name": "Khoomei (throat singing)",
+      "facet": "Music, instruments and dance",
+      "known_at": 10
+    },
+    {
+      "name": "Mongolian long song",
+      "facet": "Music, instruments and dance",
+      "known_at": 12
+    },
+    {
+      "name": "Grand Song of the Dong",
+      "facet": "Music, instruments and dance",
+      "known_at": 12
+    },
+    {
+      "name": "Peacock dance",
+      "facet": "Music, instruments and dance",
+      "known_at": 7
+    },
+    {
+      "name": "Yang Liping",
+      "facet": "Music, instruments and dance",
+      "known_at": 9
+    },
+    {
+      "name": "Twelve Muqam",
+      "facet": "Music, instruments and dance",
+      "known_at": 12
+    },
+    {
+      "name": "Dutar",
+      "facet": "Music, instruments and dance",
+      "known_at": 12
+    },
+    {
+      "name": "Rawap",
+      "facet": "Music, instruments and dance",
+      "known_at": 12
+    },
+    {
+      "name": "Hulusi",
+      "facet": "Music, instruments and dance",
+      "known_at": 8
+    },
+    {
+      "name": "Bawu",
+      "facet": "Music, instruments and dance",
+      "known_at": 11
+    },
+    {
+      "name": "Guozhuang dance",
+      "facet": "Music, instruments and dance",
+      "known_at": 11
+    },
+    {
+      "name": "Andai dance",
+      "facet": "Music, instruments and dance",
+      "known_at": 13
+    },
+    {
+      "name": "Janggu",
+      "facet": "Music, instruments and dance",
+      "known_at": 11
+    },
+    {
+      "name": "Naxi ancient music",
+      "facet": "Music, instruments and dance",
+      "known_at": 12
+    },
+    {
+      "name": "Dombra",
+      "facet": "Music, instruments and dance",
+      "known_at": 12
+    },
+    {
+      "name": "Kangding Love Song",
+      "facet": "Music, instruments and dance",
+      "known_at": 8
+    },
+    {
+      "name": "Bamboo pole dance",
+      "facet": "Music, instruments and dance",
+      "known_at": 8
+    },
+    {
+      "name": "Antiphonal singing",
+      "facet": "Music, instruments and dance",
+      "known_at": 10
+    },
+    {
+      "name": "Naxi Dongba script",
+      "facet": "Scripts, languages and epics",
+      "known_at": 10
+    },
+    {
+      "name": "Epic of King Gesar",
+      "facet": "Scripts, languages and epics",
+      "known_at": 11
+    },
+    {
+      "name": "Uyghur script",
+      "facet": "Scripts, languages and epics",
+      "known_at": 11
+    },
+    {
+      "name": "Tangut script",
+      "facet": "Scripts, languages and epics",
+      "known_at": 12
+    },
+    {
+      "name": "Phagspa script",
+      "facet": "Scripts, languages and epics",
+      "known_at": 14
+    },
+    {
+      "name": "Sawndip",
+      "facet": "Scripts, languages and epics",
+      "known_at": 14
+    },
+    {
+      "name": "Khitan script",
+      "facet": "Scripts, languages and epics",
+      "known_at": 14
+    },
+    {
+      "name": "Bilingual signs",
+      "facet": "Scripts, languages and epics",
+      "known_at": 8
+    },
+    {
+      "name": "Mongolian language",
+      "facet": "Scripts, languages and epics",
+      "known_at": 8
+    },
+    {
+      "name": "Thangka",
+      "facet": "Crafts and handicrafts",
+      "known_at": 10
+    },
+    {
+      "name": "Batik",
+      "facet": "Crafts and handicrafts",
+      "known_at": 10
+    },
+    {
+      "name": "Zhuang brocade",
+      "facet": "Crafts and handicrafts",
+      "known_at": 11
+    },
+    {
+      "name": "Li brocade",
+      "facet": "Crafts and handicrafts",
+      "known_at": 13
+    },
+    {
+      "name": "Dali tie-dye",
+      "facet": "Crafts and handicrafts",
+      "known_at": 11
+    },
+    {
+      "name": "Miao embroidery",
+      "facet": "Crafts and handicrafts",
+      "known_at": 9
+    },
+    {
+      "name": "Tibetan carpet",
+      "facet": "Crafts and handicrafts",
+      "known_at": 11
+    },
+    {
+      "name": "Yengisar knife",
+      "facet": "Crafts and handicrafts",
+      "known_at": 13
+    },
+    {
+      "name": "Hetian jade",
+      "facet": "Crafts and handicrafts",
+      "known_at": 10
+    },
+    {
+      "name": "Qiang embroidery",
+      "facet": "Crafts and handicrafts",
+      "known_at": 14
+    },
+    {
+      "name": "Xilankapu (Tujia brocade)",
+      "facet": "Crafts and handicrafts",
+      "known_at": 14
+    },
+    {
+      "name": "Butter sculpture",
+      "facet": "Crafts and handicrafts",
+      "known_at": 12
+    },
+    {
+      "name": "Bonan knife",
+      "facet": "Crafts and handicrafts",
+      "known_at": 14
+    },
+    {
+      "name": "Uyghur mulberry paper",
+      "facet": "Crafts and handicrafts",
+      "known_at": 13
+    },
+    {
+      "name": "Dongba paper",
+      "facet": "Crafts and handicrafts",
+      "known_at": 13
+    },
+    {
+      "name": "Kazakh felt",
+      "facet": "Crafts and handicrafts",
+      "known_at": 12
+    },
+    {
+      "name": "Hada",
+      "facet": "Customs, sports and daily life",
+      "known_at": 8
+    },
+    {
+      "name": "Eagle hunting",
+      "facet": "Customs, sports and daily life",
+      "known_at": 11
+    },
+    {
+      "name": "Mongolian wrestling",
+      "facet": "Customs, sports and daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Goat grabbing",
+      "facet": "Customs, sports and daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Korean swing",
+      "facet": "Customs, sports and daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Embroidered ball",
+      "facet": "Customs, sports and daily life",
+      "known_at": 9
+    },
+    {
+      "name": "Walking marriage",
+      "facet": "Customs, sports and daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Prayer wheel",
+      "facet": "Customs, sports and daily life",
+      "known_at": 8
+    },
+    {
+      "name": "Mani stones",
+      "facet": "Customs, sports and daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Prostration pilgrimage",
+      "facet": "Customs, sports and daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Halal food (qingzhen)",
+      "facet": "Customs, sports and daily life",
+      "known_at": 6
+    },
+    {
+      "name": "Toasting song",
+      "facet": "Customs, sports and daily life",
+      "known_at": 11
+    },
+    {
+      "name": "Kyz kuu (Girl Chasing)",
+      "facet": "Customs, sports and daily life",
+      "known_at": 13
+    },
+    {
+      "name": "Ovoo",
+      "facet": "Customs, sports and daily life",
+      "known_at": 11
+    },
+    {
+      "name": "Liu Sanjie",
+      "facet": "Legends, heroes and famous people",
+      "known_at": 8
+    },
+    {
+      "name": "Genghis Khan",
+      "facet": "Legends, heroes and famous people",
+      "known_at": 6
+    },
+    {
+      "name": "Songtsen Gampo",
+      "facet": "Legends, heroes and famous people",
+      "known_at": 11
+    },
+    {
+      "name": "Nurhaci",
+      "facet": "Legends, heroes and famous people",
+      "known_at": 11
+    },
+    {
+      "name": "Puyi",
+      "facet": "Legends, heroes and famous people",
+      "known_at": 8
+    },
+    {
+      "name": "Shen Congwen",
+      "facet": "Legends, heroes and famous people",
+      "known_at": 12
+    },
+    {
+      "name": "Five Golden Flowers",
+      "facet": "Legends, heroes and famous people",
+      "known_at": 11
+    },
+    {
+      "name": "Tsangyang Gyatso",
+      "facet": "Legends, heroes and famous people",
+      "known_at": 12
+    },
+    {
+      "name": "Milarepa",
+      "facet": "Legends, heroes and famous people",
+      "known_at": 14
+    },
+    {
+      "name": "Tengger",
+      "facet": "Legends, heroes and famous people",
+      "known_at": 11
+    },
+    {
+      "name": "Han Hong",
+      "facet": "Legends, heroes and famous people",
+      "known_at": 12
+    },
+    {
+      "name": "Dilraba Dilmurat",
+      "facet": "Legends, heroes and famous people",
+      "known_at": 7
+    }
+  ]
+}

@@ -1,0 +1,882 @@
+{
+  "subcategory": "other-traditional-festivals",
+  "facets": [
+    "Lantern Festival (元宵节)",
+    "Qingming Festival (清明节)",
+    "Dragon Boat Festival (端午节)",
+    "Qixi Festival (七夕)",
+    "Ghost Festival (中元节)",
+    "Double Ninth Festival (重阳节)",
+    "Laba Festival (腊八节)",
+    "Festival foods and snacks",
+    "Festival dates and the lunar calendar",
+    "Festival poems and sayings",
+    "Festival customs and games",
+    "Festivals as heritage and public holidays"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 1,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Lantern riddles (猜灯谜)",
+      "facet": "Lantern Festival (元宵节)",
+      "known_at": 4
+    },
+    {
+      "name": "Dragon lantern (龙灯)",
+      "facet": "Lantern Festival (元宵节)",
+      "known_at": 5
+    },
+    {
+      "name": "Walking on stilts (踩高跷)",
+      "facet": "Lantern Festival (元宵节)",
+      "known_at": 7
+    },
+    {
+      "name": "Qinhuai Lantern Fair (秦淮灯会)",
+      "facet": "Lantern Festival (元宵节)",
+      "known_at": 11
+    },
+    {
+      "name": "Pingxi Sky Lantern Festival (平溪天灯节)",
+      "facet": "Lantern Festival (元宵节)",
+      "known_at": 11
+    },
+    {
+      "name": "Revolving horse lantern (走马灯)",
+      "facet": "Lantern Festival (元宵节)",
+      "known_at": 9
+    },
+    {
+      "name": "Yuanxiao (元宵)",
+      "facet": "Lantern Festival (元宵节)",
+      "known_at": 3
+    },
+    {
+      "name": "Emperor Ming of Han (汉明帝)",
+      "facet": "Lantern Festival (元宵节)",
+      "known_at": 13
+    },
+    {
+      "name": "Lantern Festival Gala (元宵晚会)",
+      "facet": "Lantern Festival (元宵节)",
+      "known_at": 6
+    },
+    {
+      "name": "Walking away illness (走百病)",
+      "facet": "Lantern Festival (元宵节)",
+      "known_at": 12
+    },
+    {
+      "name": "Fish lantern (鱼灯)",
+      "facet": "Lantern Festival (元宵节)",
+      "known_at": 10
+    },
+    {
+      "name": "Yu Garden Lantern Fair (豫园灯会)",
+      "facet": "Lantern Festival (元宵节)",
+      "known_at": 10
+    },
+    {
+      "name": "Tomb-sweeping (扫墓)",
+      "facet": "Qingming Festival (清明节)",
+      "known_at": 3
+    },
+    {
+      "name": "Kite flying (放风筝)",
+      "facet": "Qingming Festival (清明节)",
+      "known_at": 3
+    },
+    {
+      "name": "Wearing willow branches (插柳)",
+      "facet": "Qingming Festival (清明节)",
+      "known_at": 8
+    },
+    {
+      "name": "Jie Zitui (介子推)",
+      "facet": "Qingming Festival (清明节)",
+      "known_at": 11
+    },
+    {
+      "name": "Online memorial (网上祭扫)",
+      "facet": "Qingming Festival (清明节)",
+      "known_at": 10
+    },
+    {
+      "name": "Swinging (荡秋千)",
+      "facet": "Qingming Festival (清明节)",
+      "known_at": 8
+    },
+    {
+      "name": "Cuju (蹴鞠)",
+      "facet": "Qingming Festival (清明节)",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Zeduan (张择端)",
+      "facet": "Qingming Festival (清明节)",
+      "known_at": 11
+    },
+    {
+      "name": "Honouring revolutionary martyrs (祭英烈)",
+      "facet": "Qingming Festival (清明节)",
+      "known_at": 7
+    },
+    {
+      "name": "Yellow Emperor Mausoleum ceremony (黄帝陵祭典)",
+      "facet": "Qingming Festival (清明节)",
+      "known_at": 10
+    },
+    {
+      "name": "Pre-Qingming tea (明前茶)",
+      "facet": "Qingming Festival (清明节)",
+      "known_at": 11
+    },
+    {
+      "name": "Tug of war (拔河)",
+      "facet": "Qingming Festival (清明节)",
+      "known_at": 10
+    },
+    {
+      "name": "Tree planting (植树)",
+      "facet": "Qingming Festival (清明节)",
+      "known_at": 6
+    },
+    {
+      "name": "Dragon boat racing (赛龙舟)",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 2
+    },
+    {
+      "name": "Qu Yuan (屈原)",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 4
+    },
+    {
+      "name": "Miluo River (汨罗江)",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 9
+    },
+    {
+      "name": "Realgar wine (雄黄酒)",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 9
+    },
+    {
+      "name": "Mugwort (艾草)",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 6
+    },
+    {
+      "name": "Calamus (菖蒲)",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 10
+    },
+    {
+      "name": "Five-colour threads (五彩绳)",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 6
+    },
+    {
+      "name": "Fragrant sachet (香囊)",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 6
+    },
+    {
+      "name": "Wu Zixu (伍子胥)",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 13
+    },
+    {
+      "name": "Cao E (曹娥)",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 14
+    },
+    {
+      "name": "Standing an egg at noon (立蛋)",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 8
+    },
+    {
+      "name": "Five poisonous creatures (五毒)",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 10
+    },
+    {
+      "name": "Dotting the dragon's eyes (点睛)",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 9
+    },
+    {
+      "name": "Dragon boat drummer (鼓手)",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 5
+    },
+    {
+      "name": "Herbal bath (兰汤)",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 12
+    },
+    {
+      "name": "Hong Kong Dragon Boat Carnival",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 12
+    },
+    {
+      "name": "Dragon boat rains (龙舟水)",
+      "facet": "Dragon Boat Festival (端午节)",
+      "known_at": 12
+    },
+    {
+      "name": "Magpie bridge (鹊桥)",
+      "facet": "Qixi Festival (七夕)",
+      "known_at": 5
+    },
+    {
+      "name": "The Cowherd and the Weaver Girl (牛郎织女)",
+      "facet": "Qixi Festival (七夕)",
+      "known_at": 4
+    },
+    {
+      "name": "Vega (织女星)",
+      "facet": "Qixi Festival (七夕)",
+      "known_at": 10
+    },
+    {
+      "name": "Altair (牛郎星)",
+      "facet": "Qixi Festival (七夕)",
+      "known_at": 10
+    },
+    {
+      "name": "Milky Way (银河)",
+      "facet": "Qixi Festival (七夕)",
+      "known_at": 5
+    },
+    {
+      "name": "Begging for skills (乞巧)",
+      "facet": "Qixi Festival (七夕)",
+      "known_at": 9
+    },
+    {
+      "name": "Threading needles by moonlight (穿针乞巧)",
+      "facet": "Qixi Festival (七夕)",
+      "known_at": 10
+    },
+    {
+      "name": "Queen Mother of the West (王母娘娘)",
+      "facet": "Qixi Festival (七夕)",
+      "known_at": 6
+    },
+    {
+      "name": "Chinese Valentine's Day",
+      "facet": "Qixi Festival (七夕)",
+      "known_at": 5
+    },
+    {
+      "name": "Spider web divination (喜蛛应巧)",
+      "facet": "Qixi Festival (七夕)",
+      "known_at": 13
+    },
+    {
+      "name": "Floating a needle on water (投针验巧)",
+      "facet": "Qixi Festival (七夕)",
+      "known_at": 13
+    },
+    {
+      "name": "Listening under the grape trellis (葡萄架下听悄悄话)",
+      "facet": "Qixi Festival (七夕)",
+      "known_at": 11
+    },
+    {
+      "name": "Daughters' Festival (女儿节)",
+      "facet": "Qixi Festival (七夕)",
+      "known_at": 11
+    },
+    {
+      "name": "Seven Sisters' Festival (七姐诞)",
+      "facet": "Qixi Festival (七夕)",
+      "known_at": 13
+    },
+    {
+      "name": "Kuixing (魁星)",
+      "facet": "Qixi Festival (七夕)",
+      "known_at": 14
+    },
+    {
+      "name": "The old ox (老牛)",
+      "facet": "Qixi Festival (七夕)",
+      "known_at": 7
+    },
+    {
+      "name": "Hungry ghosts (饿鬼)",
+      "facet": "Ghost Festival (中元节)",
+      "known_at": 9
+    },
+    {
+      "name": "Floating river lanterns (放河灯)",
+      "facet": "Ghost Festival (中元节)",
+      "known_at": 6
+    },
+    {
+      "name": "Joss paper (纸钱)",
+      "facet": "Ghost Festival (中元节)",
+      "known_at": 7
+    },
+    {
+      "name": "Yulanpen Festival (盂兰盆节)",
+      "facet": "Ghost Festival (中元节)",
+      "known_at": 12
+    },
+    {
+      "name": "Mulian Rescues His Mother (目连救母)",
+      "facet": "Ghost Festival (中元节)",
+      "known_at": 12
+    },
+    {
+      "name": "Ghost Month (鬼月)",
+      "facet": "Ghost Festival (中元节)",
+      "known_at": 9
+    },
+    {
+      "name": "Ksitigarbha (地藏菩萨)",
+      "facet": "Ghost Festival (中元节)",
+      "known_at": 12
+    },
+    {
+      "name": "Earth Official (地官)",
+      "facet": "Ghost Festival (中元节)",
+      "known_at": 14
+    },
+    {
+      "name": "Getai (歌台)",
+      "facet": "Ghost Festival (中元节)",
+      "known_at": 13
+    },
+    {
+      "name": "Keelung Ghost Festival (基隆中元祭)",
+      "facet": "Ghost Festival (中元节)",
+      "known_at": 13
+    },
+    {
+      "name": "Pudu (普渡)",
+      "facet": "Ghost Festival (中元节)",
+      "known_at": 13
+    },
+    {
+      "name": "Obon (Japan)",
+      "facet": "Ghost Festival (中元节)",
+      "known_at": 11
+    },
+    {
+      "name": "Paper offerings (纸扎)",
+      "facet": "Ghost Festival (中元节)",
+      "known_at": 10
+    },
+    {
+      "name": "Ghost Month taboos (鬼月禁忌)",
+      "facet": "Ghost Festival (中元节)",
+      "known_at": 10
+    },
+    {
+      "name": "Grappling with the ghosts (抢孤)",
+      "facet": "Ghost Festival (中元节)",
+      "known_at": 14
+    },
+    {
+      "name": "Chrysanthemum (菊花)",
+      "facet": "Double Ninth Festival (重阳节)",
+      "known_at": 4
+    },
+    {
+      "name": "Cornel (茱萸)",
+      "facet": "Double Ninth Festival (重阳节)",
+      "known_at": 9
+    },
+    {
+      "name": "Seniors' Day (老年节)",
+      "facet": "Double Ninth Festival (重阳节)",
+      "known_at": 6
+    },
+    {
+      "name": "Huan Jing (桓景)",
+      "facet": "Double Ninth Festival (重阳节)",
+      "known_at": 14
+    },
+    {
+      "name": "Fei Changfang (费长房)",
+      "facet": "Double Ninth Festival (重阳节)",
+      "known_at": 14
+    },
+    {
+      "name": "Tao Yuanming (陶渊明)",
+      "facet": "Double Ninth Festival (重阳节)",
+      "known_at": 10
+    },
+    {
+      "name": "Chrysanthemum show (菊展)",
+      "facet": "Double Ninth Festival (重阳节)",
+      "known_at": 7
+    },
+    {
+      "name": "Filial piety (孝道)",
+      "facet": "Double Ninth Festival (重阳节)",
+      "known_at": 6
+    },
+    {
+      "name": "Autumn outing (秋游)",
+      "facet": "Double Ninth Festival (重阳节)",
+      "known_at": 6
+    },
+    {
+      "name": "Sunning the autumn harvest (晒秋)",
+      "facet": "Double Ninth Festival (重阳节)",
+      "known_at": 10
+    },
+    {
+      "name": "Chrysanthemum tea (菊花茶)",
+      "facet": "Double Ninth Festival (重阳节)",
+      "known_at": 5
+    },
+    {
+      "name": "Kaifeng Chrysanthemum Festival (开封菊花文化节)",
+      "facet": "Double Ninth Festival (重阳节)",
+      "known_at": 12
+    },
+    {
+      "name": "Meng Jia loses his hat (孟嘉落帽)",
+      "facet": "Double Ninth Festival (重阳节)",
+      "known_at": 15
+    },
+    {
+      "name": "Laba porridge (腊八粥)",
+      "facet": "Laba Festival (腊八节)",
+      "known_at": 4
+    },
+    {
+      "name": "Bodhi tree (菩提树)",
+      "facet": "Laba Festival (腊八节)",
+      "known_at": 10
+    },
+    {
+      "name": "Shakyamuni (释迦牟尼)",
+      "facet": "Laba Festival (腊八节)",
+      "known_at": 9
+    },
+    {
+      "name": "Yonghe Temple (雍和宫)",
+      "facet": "Laba Festival (腊八节)",
+      "known_at": 11
+    },
+    {
+      "name": "Giving out porridge (施粥)",
+      "facet": "Laba Festival (腊八节)",
+      "known_at": 8
+    },
+    {
+      "name": "La sacrifice (腊祭)",
+      "facet": "Laba Festival (腊八节)",
+      "known_at": 13
+    },
+    {
+      "name": "Laba tofu (腊八豆腐)",
+      "facet": "Laba Festival (腊八节)",
+      "known_at": 13
+    },
+    {
+      "name": "Laba noodles (腊八面)",
+      "facet": "Laba Festival (腊八节)",
+      "known_at": 12
+    },
+    {
+      "name": "Sujata (苏耶妲)",
+      "facet": "Laba Festival (腊八节)",
+      "known_at": 14
+    },
+    {
+      "name": "Red dates (红枣)",
+      "facet": "Laba Festival (腊八节)",
+      "known_at": 3
+    },
+    {
+      "name": "Lotus seeds (莲子)",
+      "facet": "Laba Festival (腊八节)",
+      "known_at": 6
+    },
+    {
+      "name": "Longan (桂圆)",
+      "facet": "Laba Festival (腊八节)",
+      "known_at": 6
+    },
+    {
+      "name": "Zongzi (粽子)",
+      "facet": "Festival foods and snacks",
+      "known_at": 2
+    },
+    {
+      "name": "Qingtuan (青团)",
+      "facet": "Festival foods and snacks",
+      "known_at": 6
+    },
+    {
+      "name": "Chongyang cake (重阳糕)",
+      "facet": "Festival foods and snacks",
+      "known_at": 8
+    },
+    {
+      "name": "Qiaoguo (巧果)",
+      "facet": "Festival foods and snacks",
+      "known_at": 12
+    },
+    {
+      "name": "Salted duck egg (咸鸭蛋)",
+      "facet": "Festival foods and snacks",
+      "known_at": 5
+    },
+    {
+      "name": "Jiaxing zongzi (嘉兴粽子)",
+      "facet": "Festival foods and snacks",
+      "known_at": 10
+    },
+    {
+      "name": "Bamboo leaves (粽叶)",
+      "facet": "Festival foods and snacks",
+      "known_at": 5
+    },
+    {
+      "name": "Black sesame filling (黑芝麻馅)",
+      "facet": "Festival foods and snacks",
+      "known_at": 5
+    },
+    {
+      "name": "Runbing (润饼)",
+      "facet": "Festival foods and snacks",
+      "known_at": 12
+    },
+    {
+      "name": "Five yellows of Duanwu (端午五黄)",
+      "facet": "Festival foods and snacks",
+      "known_at": 13
+    },
+    {
+      "name": "Five-poison cake (五毒饼)",
+      "facet": "Festival foods and snacks",
+      "known_at": 12
+    },
+    {
+      "name": "Glutinous rice (糯米)",
+      "facet": "Festival foods and snacks",
+      "known_at": 4
+    },
+    {
+      "name": "Zhongyuan duck (中元鸭)",
+      "facet": "Festival foods and snacks",
+      "known_at": 11
+    },
+    {
+      "name": "Longevity peach bun (寿桃)",
+      "facet": "Festival foods and snacks",
+      "known_at": 5
+    },
+    {
+      "name": "Fifth day of the fifth month (五月初五)",
+      "facet": "Festival dates and the lunar calendar",
+      "known_at": 5
+    },
+    {
+      "name": "Seventh day of the seventh month (七月初七)",
+      "facet": "Festival dates and the lunar calendar",
+      "known_at": 7
+    },
+    {
+      "name": "Fifteenth day of the seventh month (七月十五)",
+      "facet": "Festival dates and the lunar calendar",
+      "known_at": 10
+    },
+    {
+      "name": "Ninth day of the ninth month (九月初九)",
+      "facet": "Festival dates and the lunar calendar",
+      "known_at": 7
+    },
+    {
+      "name": "Eighth day of the twelfth month (腊月初八)",
+      "facet": "Festival dates and the lunar calendar",
+      "known_at": 8
+    },
+    {
+      "name": "Fifteenth day of the first month (正月十五)",
+      "facet": "Festival dates and the lunar calendar",
+      "known_at": 5
+    },
+    {
+      "name": "Spring Equinox (春分)",
+      "facet": "Festival dates and the lunar calendar",
+      "known_at": 9
+    },
+    {
+      "name": "Full moon (满月)",
+      "facet": "Festival dates and the lunar calendar",
+      "known_at": 3
+    },
+    {
+      "name": "5 April",
+      "facet": "Festival dates and the lunar calendar",
+      "known_at": 7
+    },
+    {
+      "name": "Yang numbers (阳数)",
+      "facet": "Festival dates and the lunar calendar",
+      "known_at": 11
+    },
+    {
+      "name": "Double Third Festival (上巳节)",
+      "facet": "Festival dates and the lunar calendar",
+      "known_at": 12
+    },
+    {
+      "name": "Three Yuan festivals (三元)",
+      "facet": "Festival dates and the lunar calendar",
+      "known_at": 13
+    },
+    {
+      "name": "Xiayuan Festival (下元节)",
+      "facet": "Festival dates and the lunar calendar",
+      "known_at": 14
+    },
+    {
+      "name": "Summer solstice (夏至)",
+      "facet": "Festival dates and the lunar calendar",
+      "known_at": 6
+    },
+    {
+      "name": "Qingming (清明) by Du Mu",
+      "facet": "Festival poems and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Li Sao (离骚)",
+      "facet": "Festival poems and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Chu Ci (楚辞)",
+      "facet": "Festival poems and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Que Qiao Xian (鹊桥仙) by Qin Guan",
+      "facet": "Festival poems and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Sheng Cha Zi: Yuan Xi (生查子·元夕)",
+      "facet": "Festival poems and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Qing Yu An: Yuan Xi (青玉案·元夕) by Xin Qiji",
+      "facet": "Festival poems and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Deng Gao (登高) by Du Fu",
+      "facet": "Festival poems and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Autumn Evening (秋夕) by Du Mu",
+      "facet": "Festival poems and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "After Laba comes the New Year (过了腊八就是年)",
+      "facet": "Festival poems and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Around Qingming, plant melons and beans (清明前后，种瓜点豆)",
+      "facet": "Festival poems and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Jiujiu and jiujiu (九九 and 久久)",
+      "facet": "Festival poems and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Tian Wen (天问)",
+      "facet": "Festival poems and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Far, Far Away the Cowherd Star (迢迢牵牛星)",
+      "facet": "Festival poems and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Drinking Wine (饮酒) by Tao Yuanming",
+      "facet": "Festival poems and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Shadow puppetry (皮影戏)",
+      "facet": "Festival customs and games",
+      "known_at": 7
+    },
+    {
+      "name": "Diabolo (空竹)",
+      "facet": "Festival customs and games",
+      "known_at": 8
+    },
+    {
+      "name": "Shuttlecock kicking (踢毽子)",
+      "facet": "Festival customs and games",
+      "known_at": 6
+    },
+    {
+      "name": "Burning incense (烧香)",
+      "facet": "Festival customs and games",
+      "known_at": 5
+    },
+    {
+      "name": "Kowtowing (磕头)",
+      "facet": "Festival customs and games",
+      "known_at": 6
+    },
+    {
+      "name": "Dough figurines (面人)",
+      "facet": "Festival customs and games",
+      "known_at": 8
+    },
+    {
+      "name": "Waist drum dance (腰鼓)",
+      "facet": "Festival customs and games",
+      "known_at": 8
+    },
+    {
+      "name": "Molten iron fireworks (打铁花)",
+      "facet": "Festival customs and games",
+      "known_at": 10
+    },
+    {
+      "name": "UNESCO Intangible Cultural Heritage",
+      "facet": "Festivals as heritage and public holidays",
+      "known_at": 9
+    },
+    {
+      "name": "Dragon Boat Festival on the UNESCO list (2009)",
+      "facet": "Festivals as heritage and public holidays",
+      "known_at": 11
+    },
+    {
+      "name": "National intangible cultural heritage list (国家级非物质文化遗产)",
+      "facet": "Festivals as heritage and public holidays",
+      "known_at": 11
+    },
+    {
+      "name": "2008 public holiday reform",
+      "facet": "Festivals as heritage and public holidays",
+      "known_at": 12
+    },
+    {
+      "name": "Three-day mini holiday (小长假)",
+      "facet": "Festivals as heritage and public holidays",
+      "known_at": 6
+    },
+    {
+      "name": "Make-up working day (调休)",
+      "facet": "Festivals as heritage and public holidays",
+      "known_at": 7
+    },
+    {
+      "name": "Gangneung Danoje Festival (江陵端午祭)",
+      "facet": "Festivals as heritage and public holidays",
+      "known_at": 13
+    },
+    {
+      "name": "Tanabata (Japan)",
+      "facet": "Festivals as heritage and public holidays",
+      "known_at": 10
+    },
+    {
+      "name": "Tuen Ng (Hong Kong holiday name)",
+      "facet": "Festivals as heritage and public holidays",
+      "known_at": 13
+    },
+    {
+      "name": "Chinatown",
+      "facet": "Festivals as heritage and public holidays",
+      "known_at": 6
+    },
+    {
+      "name": "Cultural and Natural Heritage Day (文化和自然遗产日)",
+      "facet": "Festivals as heritage and public holidays",
+      "known_at": 13
+    },
+    {
+      "name": "Dragon boat at the Asian Games",
+      "facet": "Festivals as heritage and public holidays",
+      "known_at": 11
+    },
+    {
+      "name": "International Dragon Boat Federation",
+      "facet": "Festivals as heritage and public holidays",
+      "known_at": 14
+    },
+    {
+      "name": "Qixi wedding registration (七夕登记结婚)",
+      "facet": "Festivals as heritage and public holidays",
+      "known_at": 10
+    },
+    {
+      "name": "Zigui (秭归)",
+      "facet": "Festivals as heritage and public holidays",
+      "known_at": 13
+    },
+    {
+      "name": "Toll-free highways on holidays (节假日高速免费)",
+      "facet": "Festivals as heritage and public holidays",
+      "known_at": 8
+    }
+  ]
+}

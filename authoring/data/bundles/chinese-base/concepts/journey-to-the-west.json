@@ -1,0 +1,771 @@
+{
+  "subcategory": "journey-to-the-west",
+  "facets": [
+    "Sun Wukong's life and powers",
+    "The pilgrims and the dragon horse",
+    "Weapons and magic treasures",
+    "Famous demons and monsters",
+    "Gods, Buddhas and Bodhisattvas",
+    "Famous episodes and battles",
+    "Places of the journey",
+    "Havoc in Heaven",
+    "Numbers, transformations and tribulations",
+    "Wu Cheng'en and the novel's history",
+    "Sayings and idioms from the novel"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 2,
+      "record": 1,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Stone Monkey (石猴)",
+      "facet": "Sun Wukong's life and powers",
+      "known_at": 2
+    },
+    {
+      "name": "Handsome Monkey King (美猴王)",
+      "facet": "Sun Wukong's life and powers",
+      "known_at": 4
+    },
+    {
+      "name": "Patriarch Subhuti (须菩提祖师)",
+      "facet": "Sun Wukong's life and powers",
+      "known_at": 8
+    },
+    {
+      "name": "Cloud somersault (筋斗云)",
+      "facet": "Sun Wukong's life and powers",
+      "known_at": 2
+    },
+    {
+      "name": "Fiery golden eyes (火眼金睛)",
+      "facet": "Sun Wukong's life and powers",
+      "known_at": 3
+    },
+    {
+      "name": "Book of Life and Death (生死簿)",
+      "facet": "Sun Wukong's life and powers",
+      "known_at": 9
+    },
+    {
+      "name": "Immobilizing spell (定身法)",
+      "facet": "Sun Wukong's life and powers",
+      "known_at": 6
+    },
+    {
+      "name": "Hair clones (毫毛分身)",
+      "facet": "Sun Wukong's life and powers",
+      "known_at": 4
+    },
+    {
+      "name": "Tiger-skin skirt (虎皮裙)",
+      "facet": "Sun Wukong's life and powers",
+      "known_at": 5
+    },
+    {
+      "name": "Pilgrim Sun (孙行者)",
+      "facet": "Sun Wukong's life and powers",
+      "known_at": 8
+    },
+    {
+      "name": "Victorious Fighting Buddha (斗战胜佛)",
+      "facet": "Sun Wukong's life and powers",
+      "known_at": 8
+    },
+    {
+      "name": "Indestructible diamond body (金刚不坏之身)",
+      "facet": "Sun Wukong's life and powers",
+      "known_at": 10
+    },
+    {
+      "name": "Seven Great Sages (七大圣)",
+      "facet": "Sun Wukong's life and powers",
+      "known_at": 13
+    },
+    {
+      "name": "Monkey troops of Flower Fruit Mountain (猴子猴孙)",
+      "facet": "Sun Wukong's life and powers",
+      "known_at": 4
+    },
+    {
+      "name": "Dharma name Wukong (悟空)",
+      "facet": "Sun Wukong's life and powers",
+      "known_at": 9
+    },
+    {
+      "name": "Tang Seng (唐僧)",
+      "facet": "The pilgrims and the dragon horse",
+      "known_at": 1
+    },
+    {
+      "name": "Marshal Tianpeng (天蓬元帅)",
+      "facet": "The pilgrims and the dragon horse",
+      "known_at": 6
+    },
+    {
+      "name": "Curtain-Lifting General (卷帘大将)",
+      "facet": "The pilgrims and the dragon horse",
+      "known_at": 9
+    },
+    {
+      "name": "Golden Cicada (金蝉子)",
+      "facet": "The pilgrims and the dragon horse",
+      "known_at": 10
+    },
+    {
+      "name": "Jiangliu'er (江流儿)",
+      "facet": "The pilgrims and the dragon horse",
+      "known_at": 11
+    },
+    {
+      "name": "Chen Guangrui (陈光蕊)",
+      "facet": "The pilgrims and the dragon horse",
+      "known_at": 14
+    },
+    {
+      "name": "Gao Cuilan (高翠兰)",
+      "facet": "The pilgrims and the dragon horse",
+      "known_at": 12
+    },
+    {
+      "name": "Altar Cleaner (净坛使者)",
+      "facet": "The pilgrims and the dragon horse",
+      "known_at": 12
+    },
+    {
+      "name": "Golden Body Arhat (金身罗汉)",
+      "facet": "The pilgrims and the dragon horse",
+      "known_at": 13
+    },
+    {
+      "name": "Sandalwood Merit Buddha (旃檀功德佛)",
+      "facet": "The pilgrims and the dragon horse",
+      "known_at": 12
+    },
+    {
+      "name": "Golden-hooped staff (如意金箍棒)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 1
+    },
+    {
+      "name": "Nine-toothed rake (九齿钉耙)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 3
+    },
+    {
+      "name": "Demon-quelling staff (降妖宝杖)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 7
+    },
+    {
+      "name": "Golden headband (紧箍)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 2
+    },
+    {
+      "name": "Palm-leaf fan (芭蕉扇)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 3
+    },
+    {
+      "name": "Purple-gold gourd (紫金红葫芦)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 6
+    },
+    {
+      "name": "Suet-jade vase (羊脂玉净瓶)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 12
+    },
+    {
+      "name": "Golden cymbals (金铙)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 12
+    },
+    {
+      "name": "Brocade kasaya (锦襕袈裟)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 8
+    },
+    {
+      "name": "Nine-ring monk's staff (九环锡杖)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 9
+    },
+    {
+      "name": "Phoenix-feather golden cap (凤翅紫金冠)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 11
+    },
+    {
+      "name": "Cloud-stepping boots (藕丝步云履)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 12
+    },
+    {
+      "name": "Golden chain mail (锁子黄金甲)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 11
+    },
+    {
+      "name": "Diamond snare (金刚琢)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 12
+    },
+    {
+      "name": "Yin-yang vase (阴阳二气瓶)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 13
+    },
+    {
+      "name": "Pagoda of Heavenly King Li (玲珑宝塔)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 7
+    },
+    {
+      "name": "Wind-fire wheels (风火轮)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 4
+    },
+    {
+      "name": "Wind-settling pill (定风丹)",
+      "facet": "Weapons and magic treasures",
+      "known_at": 13
+    },
+    {
+      "name": "White Mouse Demon (老鼠精)",
+      "facet": "Famous demons and monsters",
+      "known_at": 10
+    },
+    {
+      "name": "Golden-winged Great Peng (金翅大鹏雕)",
+      "facet": "Famous demons and monsters",
+      "known_at": 10
+    },
+    {
+      "name": "Yellow Brows King (黄眉大王)",
+      "facet": "Famous demons and monsters",
+      "known_at": 11
+    },
+    {
+      "name": "Hundred-eyed Demon Lord (百眼魔君)",
+      "facet": "Famous demons and monsters",
+      "known_at": 13
+    },
+    {
+      "name": "Great King of Spiritual Power (灵感大王)",
+      "facet": "Famous demons and monsters",
+      "known_at": 12
+    },
+    {
+      "name": "Three Immortals of Chechi (车迟国三仙)",
+      "facet": "Famous demons and monsters",
+      "known_at": 12
+    },
+    {
+      "name": "Nine-headed Bird (九头虫)",
+      "facet": "Famous demons and monsters",
+      "known_at": 14
+    },
+    {
+      "name": "Guanyin (观音菩萨)",
+      "facet": "Gods, Buddhas and Bodhisattvas",
+      "known_at": 2
+    },
+    {
+      "name": "Tathagata Buddha (如来佛祖)",
+      "facet": "Gods, Buddhas and Bodhisattvas",
+      "known_at": 3
+    },
+    {
+      "name": "Heavenly King Li Jing (托塔天王李靖)",
+      "facet": "Gods, Buddhas and Bodhisattvas",
+      "known_at": 7
+    },
+    {
+      "name": "Dragon King of the East Sea (东海龙王)",
+      "facet": "Gods, Buddhas and Bodhisattvas",
+      "known_at": 3
+    },
+    {
+      "name": "King Yama (阎罗王)",
+      "facet": "Gods, Buddhas and Bodhisattvas",
+      "known_at": 6
+    },
+    {
+      "name": "Thousand-li Eye and Wind-following Ear (千里眼和顺风耳)",
+      "facet": "Gods, Buddhas and Bodhisattvas",
+      "known_at": 7
+    },
+    {
+      "name": "Maitreya Buddha (弥勒佛)",
+      "facet": "Gods, Buddhas and Bodhisattvas",
+      "known_at": 9
+    },
+    {
+      "name": "Ksitigarbha (地藏王菩萨)",
+      "facet": "Gods, Buddhas and Bodhisattvas",
+      "known_at": 11
+    },
+    {
+      "name": "Diting (谛听)",
+      "facet": "Gods, Buddhas and Bodhisattvas",
+      "known_at": 12
+    },
+    {
+      "name": "Zhenyuan Daxian (镇元大仙)",
+      "facet": "Gods, Buddhas and Bodhisattvas",
+      "known_at": 10
+    },
+    {
+      "name": "Local Earth God (土地公)",
+      "facet": "Gods, Buddhas and Bodhisattvas",
+      "known_at": 5
+    },
+    {
+      "name": "Three fights with White Bone Demon (三打白骨精)",
+      "facet": "Famous episodes and battles",
+      "known_at": 3
+    },
+    {
+      "name": "True and False Monkey King (真假美猴王)",
+      "facet": "Famous episodes and battles",
+      "known_at": 5
+    },
+    {
+      "name": "Three borrowings of the palm-leaf fan (三借芭蕉扇)",
+      "facet": "Famous episodes and battles",
+      "known_at": 5
+    },
+    {
+      "name": "Stealing the ginseng fruit (偷吃人参果)",
+      "facet": "Famous episodes and battles",
+      "known_at": 5
+    },
+    {
+      "name": "Subduing Red Boy (收服红孩儿)",
+      "facet": "Famous episodes and battles",
+      "known_at": 7
+    },
+    {
+      "name": "Contest of magic in Chechi Kingdom (车迟国斗法)",
+      "facet": "Famous episodes and battles",
+      "known_at": 11
+    },
+    {
+      "name": "Crossing the Tongtian River (过通天河)",
+      "facet": "Famous episodes and battles",
+      "known_at": 10
+    },
+    {
+      "name": "Emperor Taizong's visit to the underworld (唐太宗入冥)",
+      "facet": "Famous episodes and battles",
+      "known_at": 13
+    },
+    {
+      "name": "Wei Zheng beheads the Dragon King (魏征斩龙王)",
+      "facet": "Famous episodes and battles",
+      "known_at": 12
+    },
+    {
+      "name": "Wukong inside Princess Iron Fan's belly (钻进铁扇公主肚子)",
+      "facet": "Famous episodes and battles",
+      "known_at": 6
+    },
+    {
+      "name": "Wordless scriptures (无字真经)",
+      "facet": "Famous episodes and battles",
+      "known_at": 10
+    },
+    {
+      "name": "Wukong freed from Five Elements Mountain (揭帖救悟空)",
+      "facet": "Famous episodes and battles",
+      "known_at": 6
+    },
+    {
+      "name": "Theft of the kasaya at Guanyin Temple (观音院失袈裟)",
+      "facet": "Famous episodes and battles",
+      "known_at": 10
+    },
+    {
+      "name": "Battle at Lotus Flower Cave (莲花洞)",
+      "facet": "Famous episodes and battles",
+      "known_at": 9
+    },
+    {
+      "name": "Taming the White Dragon Horse (收白龙马)",
+      "facet": "Famous episodes and battles",
+      "known_at": 7
+    },
+    {
+      "name": "Mount Lingtai Fangcun (灵台方寸山)",
+      "facet": "Places of the journey",
+      "known_at": 10
+    },
+    {
+      "name": "Dragon Palace of the East Sea (东海龙宫)",
+      "facet": "Places of the journey",
+      "known_at": 4
+    },
+    {
+      "name": "Lingxiao Palace (凌霄宝殿)",
+      "facet": "Places of the journey",
+      "known_at": 7
+    },
+    {
+      "name": "Five Elements Mountain (五行山)",
+      "facet": "Places of the journey",
+      "known_at": 5
+    },
+    {
+      "name": "Women's Kingdom (女儿国)",
+      "facet": "Places of the journey",
+      "known_at": 5
+    },
+    {
+      "name": "Spider Cave (盘丝洞)",
+      "facet": "Places of the journey",
+      "known_at": 6
+    },
+    {
+      "name": "Tongtian River (通天河)",
+      "facet": "Places of the journey",
+      "known_at": 10
+    },
+    {
+      "name": "Flowing Sand River (流沙河)",
+      "facet": "Places of the journey",
+      "known_at": 7
+    },
+    {
+      "name": "Gao Village (高老庄)",
+      "facet": "Places of the journey",
+      "known_at": 6
+    },
+    {
+      "name": "Eagle Grief Stream (鹰愁涧)",
+      "facet": "Places of the journey",
+      "known_at": 12
+    },
+    {
+      "name": "Wuzhuang Temple (五庄观)",
+      "facet": "Places of the journey",
+      "known_at": 10
+    },
+    {
+      "name": "Lion Camel Ridge (狮驼岭)",
+      "facet": "Places of the journey",
+      "known_at": 11
+    },
+    {
+      "name": "Fire Cloud Cave (火云洞)",
+      "facet": "Places of the journey",
+      "known_at": 11
+    },
+    {
+      "name": "Underworld (地府)",
+      "facet": "Places of the journey",
+      "known_at": 7
+    },
+    {
+      "name": "Great Sage Equal to Heaven (齐天大圣)",
+      "facet": "Havoc in Heaven",
+      "known_at": 3
+    },
+    {
+      "name": "Immortal peaches (蟠桃)",
+      "facet": "Havoc in Heaven",
+      "known_at": 3
+    },
+    {
+      "name": "Eight Trigrams Furnace (八卦炉)",
+      "facet": "Havoc in Heaven",
+      "known_at": 5
+    },
+    {
+      "name": "Elixir pills of Laojun (金丹)",
+      "facet": "Havoc in Heaven",
+      "known_at": 6
+    },
+    {
+      "name": "Battle with Erlang Shen (大战二郎神)",
+      "facet": "Havoc in Heaven",
+      "known_at": 7
+    },
+    {
+      "name": "Celestial Hound (哮天犬)",
+      "facet": "Havoc in Heaven",
+      "known_at": 6
+    },
+    {
+      "name": "Wager on the Buddha's palm (如来佛掌)",
+      "facet": "Havoc in Heaven",
+      "known_at": 3
+    },
+    {
+      "name": "“The Great Sage was here” (齐天大圣到此一游)",
+      "facet": "Havoc in Heaven",
+      "known_at": 5
+    },
+    {
+      "name": "100,000 heavenly soldiers (十万天兵天将)",
+      "facet": "Havoc in Heaven",
+      "known_at": 7
+    },
+    {
+      "name": "Seven Fairies (七仙女)",
+      "facet": "Havoc in Heaven",
+      "known_at": 7
+    },
+    {
+      "name": "Battle with Nezha (大战哪吒)",
+      "facet": "Havoc in Heaven",
+      "known_at": 6
+    },
+    {
+      "name": "Temple transformation (变土地庙)",
+      "facet": "Havoc in Heaven",
+      "known_at": 10
+    },
+    {
+      "name": "72 transformations (七十二变)",
+      "facet": "Numbers, transformations and tribulations",
+      "known_at": 2
+    },
+    {
+      "name": "81 tribulations (九九八十一难)",
+      "facet": "Numbers, transformations and tribulations",
+      "known_at": 5
+    },
+    {
+      "name": "108,000 li (十万八千里)",
+      "facet": "Numbers, transformations and tribulations",
+      "known_at": 6
+    },
+    {
+      "name": "36 transformations (三十六变)",
+      "facet": "Numbers, transformations and tribulations",
+      "known_at": 8
+    },
+    {
+      "name": "14-year journey (十四年)",
+      "facet": "Numbers, transformations and tribulations",
+      "known_at": 12
+    },
+    {
+      "name": "5,048 scrolls of scripture (五千零四十八卷)",
+      "facet": "Numbers, transformations and tribulations",
+      "known_at": 14
+    },
+    {
+      "name": "500 years under the mountain (五百年)",
+      "facet": "Numbers, transformations and tribulations",
+      "known_at": 5
+    },
+    {
+      "name": "49 days in the furnace (七七四十九天)",
+      "facet": "Numbers, transformations and tribulations",
+      "known_at": 8
+    },
+    {
+      "name": "13,500 jin (一万三千五百斤)",
+      "facet": "Numbers, transformations and tribulations",
+      "known_at": 11
+    },
+    {
+      "name": "100 chapters (一百回)",
+      "facet": "Numbers, transformations and tribulations",
+      "known_at": 11
+    },
+    {
+      "name": "Ginseng fruit's 9,000-year cycle (九千年)",
+      "facet": "Numbers, transformations and tribulations",
+      "known_at": 13
+    },
+    {
+      "name": "Sanzang (三藏)",
+      "facet": "Numbers, transformations and tribulations",
+      "known_at": 10
+    },
+    {
+      "name": "3,600 peach trees (三千六百株蟠桃树)",
+      "facet": "Numbers, transformations and tribulations",
+      "known_at": 14
+    },
+    {
+      "name": "1,750 kalpas (一千七百五十劫)",
+      "facet": "Numbers, transformations and tribulations",
+      "known_at": 15
+    },
+    {
+      "name": "Wu Cheng'en (吴承恩)",
+      "facet": "Wu Cheng'en and the novel's history",
+      "known_at": 5
+    },
+    {
+      "name": "Huai'an (淮安)",
+      "facet": "Wu Cheng'en and the novel's history",
+      "known_at": 12
+    },
+    {
+      "name": "Poetic Tale of Tang Sanzang Fetching the Scriptures (大唐三藏取经诗话)",
+      "facet": "Wu Cheng'en and the novel's history",
+      "known_at": 14
+    },
+    {
+      "name": "Four Great Classical Novels (四大名著)",
+      "facet": "Wu Cheng'en and the novel's history",
+      "known_at": 4
+    },
+    {
+      "name": "Gods-and-demons novel (神魔小说)",
+      "facet": "Wu Cheng'en and the novel's history",
+      "known_at": 11
+    },
+    {
+      "name": "Lu Xun (鲁迅)",
+      "facet": "Wu Cheng'en and the novel's history",
+      "known_at": 9
+    },
+    {
+      "name": "Hanuman (哈奴曼)",
+      "facet": "Wu Cheng'en and the novel's history",
+      "known_at": 13
+    },
+    {
+      "name": "Wuzhiqi (无支祁)",
+      "facet": "Wu Cheng'en and the novel's history",
+      "known_at": 15
+    },
+    {
+      "name": "Shidetang edition (世德堂本)",
+      "facet": "Wu Cheng'en and the novel's history",
+      "known_at": 15
+    },
+    {
+      "name": "Chapter-based novel (章回体小说)",
+      "facet": "Wu Cheng'en and the novel's history",
+      "known_at": 10
+    },
+    {
+      "name": "Supplement to the Journey to the West (西游补)",
+      "facet": "Wu Cheng'en and the novel's history",
+      "known_at": 15
+    },
+    {
+      "name": "Hu Shi (胡适)",
+      "facet": "Wu Cheng'en and the novel's history",
+      "known_at": 13
+    },
+    {
+      "name": "猪八戒照镜子——里外不是人",
+      "facet": "Sayings and idioms from the novel",
+      "known_at": 6
+    },
+    {
+      "name": "猪八戒倒打一耙",
+      "facet": "Sayings and idioms from the novel",
+      "known_at": 7
+    },
+    {
+      "name": "猪八戒吃人参果——全不知滋味",
+      "facet": "Sayings and idioms from the novel",
+      "known_at": 8
+    },
+    {
+      "name": "猪八戒背媳妇",
+      "facet": "Sayings and idioms from the novel",
+      "known_at": 5
+    },
+    {
+      "name": "Tang Seng's flesh (唐僧肉)",
+      "facet": "Sayings and idioms from the novel",
+      "known_at": 4
+    },
+    {
+      "name": "心猿意马",
+      "facet": "Sayings and idioms from the novel",
+      "known_at": 10
+    },
+    {
+      "name": "Bottomless pit (无底洞)",
+      "facet": "Sayings and idioms from the novel",
+      "known_at": 8
+    },
+    {
+      "name": "天上一日，地上一年",
+      "facet": "Sayings and idioms from the novel",
+      "known_at": 8
+    },
+    {
+      "name": "九九归一",
+      "facet": "Sayings and idioms from the novel",
+      "known_at": 11
+    },
+    {
+      "name": "Fetching scriptures from the West (西天取经)",
+      "facet": "Sayings and idioms from the novel",
+      "known_at": 4
+    },
+    {
+      "name": "Tightening spell (紧箍咒)",
+      "facet": "Sayings and idioms from the novel",
+      "known_at": 4
+    },
+    {
+      "name": "三头六臂",
+      "facet": "Sayings and idioms from the novel",
+      "known_at": 6
+    },
+    {
+      "name": "Splitting the luggage (分行李)",
+      "facet": "Sayings and idioms from the novel",
+      "known_at": 10
+    },
+    {
+      "name": "Cheeky monkey (泼猴)",
+      "facet": "Sayings and idioms from the novel",
+      "known_at": 7
+    }
+  ]
+}

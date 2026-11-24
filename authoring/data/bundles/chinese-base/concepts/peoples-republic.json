@@ -1,0 +1,922 @@
+{
+  "subcategory": "peoples-republic",
+  "facets": [
+    "Founding on 1 October 1949",
+    "National flag, emblem and anthem",
+    "Public holidays and memorial days",
+    "Atomic bomb and satellite milestones",
+    "Crewed spaceflight and lunar missions",
+    "Reform and opening from 1978",
+    "Special economic zones and new areas",
+    "Hong Kong and Macau handovers",
+    "Olympic and sporting milestones",
+    "Landmark bridges, dams and railways",
+    "Joining world bodies and hosting expos",
+    "Famous science and farming breakthroughs"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 4,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "1 October 1949 founding",
+      "facet": "Founding on 1 October 1949",
+      "known_at": 3
+    },
+    {
+      "name": "Founding ceremony (开国大典)",
+      "facet": "Founding on 1 October 1949",
+      "known_at": 5
+    },
+    {
+      "name": "Tiananmen Rostrum",
+      "facet": "Founding on 1 October 1949",
+      "known_at": 3
+    },
+    {
+      "name": "Monument to the People's Heroes",
+      "facet": "Founding on 1 October 1949",
+      "known_at": 6
+    },
+    {
+      "name": "Beijing named capital in 1949",
+      "facet": "Founding on 1 October 1949",
+      "known_at": 6
+    },
+    {
+      "name": "Founding military parade 1949",
+      "facet": "Founding on 1 October 1949",
+      "known_at": 8
+    },
+    {
+      "name": "54-gun salute",
+      "facet": "Founding on 1 October 1949",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese People's Political Consultative Conference",
+      "facet": "Founding on 1 October 1949",
+      "known_at": 10
+    },
+    {
+      "name": "First CPPCC plenary session 1949",
+      "facet": "Founding on 1 October 1949",
+      "known_at": 11
+    },
+    {
+      "name": "Gregorian calendar adopted 1949",
+      "facet": "Founding on 1 October 1949",
+      "known_at": 13
+    },
+    {
+      "name": "The Founding Ceremony of the Nation (painting)",
+      "facet": "Founding on 1 October 1949",
+      "known_at": 12
+    },
+    {
+      "name": "Ten Great Buildings 1959",
+      "facet": "Founding on 1 October 1949",
+      "known_at": 11
+    },
+    {
+      "name": "National Day military parade",
+      "facet": "Founding on 1 October 1949",
+      "known_at": 6
+    },
+    {
+      "name": "70th anniversary parade 2019",
+      "facet": "Founding on 1 October 1949",
+      "known_at": 8
+    },
+    {
+      "name": "My People, My Country (film)",
+      "facet": "Founding on 1 October 1949",
+      "known_at": 7
+    },
+    {
+      "name": "The Founding of a Republic (film)",
+      "facet": "Founding on 1 October 1949",
+      "known_at": 9
+    },
+    {
+      "name": "Five-star Red Flag",
+      "facet": "National flag, emblem and anthem",
+      "known_at": 1
+    },
+    {
+      "name": "Large star and four small stars",
+      "facet": "National flag, emblem and anthem",
+      "known_at": 4
+    },
+    {
+      "name": "Zeng Liansong, designer of the flag",
+      "facet": "National flag, emblem and anthem",
+      "known_at": 9
+    },
+    {
+      "name": "Flag adopted 27 September 1949",
+      "facet": "National flag, emblem and anthem",
+      "known_at": 12
+    },
+    {
+      "name": "Tiananmen on the national emblem",
+      "facet": "National flag, emblem and anthem",
+      "known_at": 6
+    },
+    {
+      "name": "Ears of grain on the emblem",
+      "facet": "National flag, emblem and anthem",
+      "known_at": 8
+    },
+    {
+      "name": "Gear wheel on the emblem",
+      "facet": "National flag, emblem and anthem",
+      "known_at": 8
+    },
+    {
+      "name": "Lin Huiyin",
+      "facet": "National flag, emblem and anthem",
+      "known_at": 10
+    },
+    {
+      "name": "Nie Er, composer of the anthem",
+      "facet": "National flag, emblem and anthem",
+      "known_at": 7
+    },
+    {
+      "name": "Tian Han, lyricist of the anthem",
+      "facet": "National flag, emblem and anthem",
+      "known_at": 9
+    },
+    {
+      "name": "Children of Troubled Times (风云儿女)",
+      "facet": "National flag, emblem and anthem",
+      "known_at": 13
+    },
+    {
+      "name": "Tiananmen flag-raising ceremony",
+      "facet": "National flag, emblem and anthem",
+      "known_at": 4
+    },
+    {
+      "name": "Monday school flag-raising",
+      "facet": "National flag, emblem and anthem",
+      "known_at": 2
+    },
+    {
+      "name": "National Flag Law",
+      "facet": "National flag, emblem and anthem",
+      "known_at": 13
+    },
+    {
+      "name": "Ode to the Motherland (歌唱祖国)",
+      "facet": "National flag, emblem and anthem",
+      "known_at": 6
+    },
+    {
+      "name": "National Day Golden Week",
+      "facet": "Public holidays and memorial days",
+      "known_at": 2
+    },
+    {
+      "name": "Teachers' Day 10 September",
+      "facet": "Public holidays and memorial days",
+      "known_at": 3
+    },
+    {
+      "name": "Tree Planting Day 12 March",
+      "facet": "Public holidays and memorial days",
+      "known_at": 5
+    },
+    {
+      "name": "Lei Feng Day 5 March",
+      "facet": "Public holidays and memorial days",
+      "known_at": 7
+    },
+    {
+      "name": "Party founding anniversary 1 July",
+      "facet": "Public holidays and memorial days",
+      "known_at": 8
+    },
+    {
+      "name": "Qingming public holiday since 2008",
+      "facet": "Public holidays and memorial days",
+      "known_at": 9
+    },
+    {
+      "name": "China Space Day 24 April",
+      "facet": "Public holidays and memorial days",
+      "known_at": 10
+    },
+    {
+      "name": "National Memorial Day 13 December",
+      "facet": "Public holidays and memorial days",
+      "known_at": 11
+    },
+    {
+      "name": "Martyrs' Day 30 September",
+      "facet": "Public holidays and memorial days",
+      "known_at": 12
+    },
+    {
+      "name": "National Constitution Day 4 December",
+      "facet": "Public holidays and memorial days",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese Farmers' Harvest Festival",
+      "facet": "Public holidays and memorial days",
+      "known_at": 13
+    },
+    {
+      "name": "First atomic test 1964",
+      "facet": "Atomic bomb and satellite milestones",
+      "known_at": 7
+    },
+    {
+      "name": "First hydrogen bomb test 1967",
+      "facet": "Atomic bomb and satellite milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Two Bombs, One Satellite (两弹一星)",
+      "facet": "Atomic bomb and satellite milestones",
+      "known_at": 9
+    },
+    {
+      "name": "Dongfanghong-1 satellite 1970",
+      "facet": "Atomic bomb and satellite milestones",
+      "known_at": 7
+    },
+    {
+      "name": "Qian Xuesen",
+      "facet": "Atomic bomb and satellite milestones",
+      "known_at": 7
+    },
+    {
+      "name": "Deng Jiaxian",
+      "facet": "Atomic bomb and satellite milestones",
+      "known_at": 9
+    },
+    {
+      "name": "Qian Sanqiang",
+      "facet": "Atomic bomb and satellite milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Guo Yonghuai",
+      "facet": "Atomic bomb and satellite milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Long March rocket",
+      "facet": "Atomic bomb and satellite milestones",
+      "known_at": 5
+    },
+    {
+      "name": "Jiuquan Satellite Launch Center",
+      "facet": "Atomic bomb and satellite milestones",
+      "known_at": 9
+    },
+    {
+      "name": "Xichang Satellite Launch Center",
+      "facet": "Atomic bomb and satellite milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Wenchang Space Launch Site",
+      "facet": "Atomic bomb and satellite milestones",
+      "known_at": 8
+    },
+    {
+      "name": "Micius quantum satellite (墨子号)",
+      "facet": "Atomic bomb and satellite milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Fengyun weather satellites",
+      "facet": "Atomic bomb and satellite milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Yang Liwei",
+      "facet": "Crewed spaceflight and lunar missions",
+      "known_at": 4
+    },
+    {
+      "name": "Shenzhou 5",
+      "facet": "Crewed spaceflight and lunar missions",
+      "known_at": 6
+    },
+    {
+      "name": "Zhai Zhigang's first spacewalk 2008",
+      "facet": "Crewed spaceflight and lunar missions",
+      "known_at": 8
+    },
+    {
+      "name": "Liu Yang, first Chinese woman in space",
+      "facet": "Crewed spaceflight and lunar missions",
+      "known_at": 8
+    },
+    {
+      "name": "Wang Yaping",
+      "facet": "Crewed spaceflight and lunar missions",
+      "known_at": 5
+    },
+    {
+      "name": "Tiangong Classroom (天宫课堂)",
+      "facet": "Crewed spaceflight and lunar missions",
+      "known_at": 5
+    },
+    {
+      "name": "Tiangong-1",
+      "facet": "Crewed spaceflight and lunar missions",
+      "known_at": 9
+    },
+    {
+      "name": "Chang'e 4 far side landing",
+      "facet": "Crewed spaceflight and lunar missions",
+      "known_at": 7
+    },
+    {
+      "name": "Chang'e 5 sample return",
+      "facet": "Crewed spaceflight and lunar missions",
+      "known_at": 8
+    },
+    {
+      "name": "Chang'e 6 far side samples",
+      "facet": "Crewed spaceflight and lunar missions",
+      "known_at": 9
+    },
+    {
+      "name": "Zhurong Mars rover",
+      "facet": "Crewed spaceflight and lunar missions",
+      "known_at": 6
+    },
+    {
+      "name": "Reform and opening 1978",
+      "facet": "Reform and opening from 1978",
+      "known_at": 6
+    },
+    {
+      "name": "Third Plenary Session 1978",
+      "facet": "Reform and opening from 1978",
+      "known_at": 11
+    },
+    {
+      "name": "Gaokao restored 1977",
+      "facet": "Reform and opening from 1978",
+      "known_at": 8
+    },
+    {
+      "name": "Xiaogang Village",
+      "facet": "Reform and opening from 1978",
+      "known_at": 9
+    },
+    {
+      "name": "Household responsibility system",
+      "facet": "Reform and opening from 1978",
+      "known_at": 11
+    },
+    {
+      "name": "Township and village enterprises",
+      "facet": "Reform and opening from 1978",
+      "known_at": 13
+    },
+    {
+      "name": "Individual households (个体户)",
+      "facet": "Reform and opening from 1978",
+      "known_at": 11
+    },
+    {
+      "name": "Fourteen coastal open cities 1984",
+      "facet": "Reform and opening from 1978",
+      "known_at": 13
+    },
+    {
+      "name": "“Time is money, efficiency is life” slogan",
+      "facet": "Reform and opening from 1978",
+      "known_at": 12
+    },
+    {
+      "name": "Grain ration coupons (粮票)",
+      "facet": "Reform and opening from 1978",
+      "known_at": 8
+    },
+    {
+      "name": "Foreign Exchange Certificates (外汇券)",
+      "facet": "Reform and opening from 1978",
+      "known_at": 13
+    },
+    {
+      "name": "Shanghai Stock Exchange 1990",
+      "facet": "Reform and opening from 1978",
+      "known_at": 10
+    },
+    {
+      "name": "Shenzhen Stock Exchange 1990",
+      "facet": "Reform and opening from 1978",
+      "known_at": 11
+    },
+    {
+      "name": "40th anniversary of reform 2018",
+      "facet": "Reform and opening from 1978",
+      "known_at": 10
+    },
+    {
+      "name": "Shenzhen special economic zone 1980",
+      "facet": "Special economic zones and new areas",
+      "known_at": 5
+    },
+    {
+      "name": "Zhuhai special economic zone",
+      "facet": "Special economic zones and new areas",
+      "known_at": 8
+    },
+    {
+      "name": "Shantou special economic zone",
+      "facet": "Special economic zones and new areas",
+      "known_at": 10
+    },
+    {
+      "name": "Xiamen special economic zone",
+      "facet": "Special economic zones and new areas",
+      "known_at": 9
+    },
+    {
+      "name": "Hainan special economic zone 1988",
+      "facet": "Special economic zones and new areas",
+      "known_at": 9
+    },
+    {
+      "name": "Shekou Industrial Zone",
+      "facet": "Special economic zones and new areas",
+      "known_at": 12
+    },
+    {
+      "name": "Pudong New Area 1990",
+      "facet": "Special economic zones and new areas",
+      "known_at": 8
+    },
+    {
+      "name": "Tianjin Binhai New Area",
+      "facet": "Special economic zones and new areas",
+      "known_at": 11
+    },
+    {
+      "name": "Chongqing Liangjiang New Area",
+      "facet": "Special economic zones and new areas",
+      "known_at": 13
+    },
+    {
+      "name": "Shanghai Free Trade Zone 2013",
+      "facet": "Special economic zones and new areas",
+      "known_at": 11
+    },
+    {
+      "name": "Hainan Free Trade Port",
+      "facet": "Special economic zones and new areas",
+      "known_at": 10
+    },
+    {
+      "name": "Greater Bay Area",
+      "facet": "Special economic zones and new areas",
+      "known_at": 8
+    },
+    {
+      "name": "Hong Kong handover 1 July 1997",
+      "facet": "Hong Kong and Macau handovers",
+      "known_at": 5
+    },
+    {
+      "name": "Macau handover 20 December 1999",
+      "facet": "Hong Kong and Macau handovers",
+      "known_at": 6
+    },
+    {
+      "name": "Sino-British Joint Declaration 1984",
+      "facet": "Hong Kong and Macau handovers",
+      "known_at": 11
+    },
+    {
+      "name": "Sino-Portuguese Joint Declaration 1987",
+      "facet": "Hong Kong and Macau handovers",
+      "known_at": 13
+    },
+    {
+      "name": "Hong Kong Basic Law 1990",
+      "facet": "Hong Kong and Macau handovers",
+      "known_at": 12
+    },
+    {
+      "name": "Bauhinia flower",
+      "facet": "Hong Kong and Macau handovers",
+      "known_at": 8
+    },
+    {
+      "name": "Golden Bauhinia Square",
+      "facet": "Hong Kong and Macau handovers",
+      "known_at": 9
+    },
+    {
+      "name": "Lotus flower of Macau",
+      "facet": "Hong Kong and Macau handovers",
+      "known_at": 8
+    },
+    {
+      "name": "Lotus Square, Macau",
+      "facet": "Hong Kong and Macau handovers",
+      "known_at": 11
+    },
+    {
+      "name": "Hong Kong Convention and Exhibition Centre",
+      "facet": "Hong Kong and Macau handovers",
+      "known_at": 11
+    },
+    {
+      "name": "Handover countdown clock at Tiananmen",
+      "facet": "Hong Kong and Macau handovers",
+      "known_at": 12
+    },
+    {
+      "name": "Song of the Seven Sons (七子之歌)",
+      "facet": "Hong Kong and Macau handovers",
+      "known_at": 7
+    },
+    {
+      "name": "Handover midnight ceremony",
+      "facet": "Hong Kong and Macau handovers",
+      "known_at": 9
+    },
+    {
+      "name": "Beijing 2008 Olympics",
+      "facet": "Olympic and sporting milestones",
+      "known_at": 3
+    },
+    {
+      "name": "Li Ning lighting the cauldron",
+      "facet": "Olympic and sporting milestones",
+      "known_at": 7
+    },
+    {
+      "name": "2008 Olympic torch on Everest",
+      "facet": "Olympic and sporting milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Beijing 2022 Winter Olympics",
+      "facet": "Olympic and sporting milestones",
+      "known_at": 4
+    },
+    {
+      "name": "Xu Haifeng, first Olympic gold 1984",
+      "facet": "Olympic and sporting milestones",
+      "known_at": 8
+    },
+    {
+      "name": "Rong Guotuan, first world champion 1959",
+      "facet": "Olympic and sporting milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Ping-pong diplomacy 1971",
+      "facet": "Olympic and sporting milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese women's volleyball team",
+      "facet": "Olympic and sporting milestones",
+      "known_at": 5
+    },
+    {
+      "name": "Yao Ming",
+      "facet": "Olympic and sporting milestones",
+      "known_at": 3
+    },
+    {
+      "name": "Li Na",
+      "facet": "Olympic and sporting milestones",
+      "known_at": 7
+    },
+    {
+      "name": "Beijing 1990 Asian Games",
+      "facet": "Olympic and sporting milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Guangzhou 2010 Asian Games",
+      "facet": "Olympic and sporting milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Hangzhou 2022 Asian Games",
+      "facet": "Olympic and sporting milestones",
+      "known_at": 8
+    },
+    {
+      "name": "First Chinese ascent of Everest 1960",
+      "facet": "Olympic and sporting milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Gezhouba Dam",
+      "facet": "Landmark bridges, dams and railways",
+      "known_at": 11
+    },
+    {
+      "name": "Baihetan Dam",
+      "facet": "Landmark bridges, dams and railways",
+      "known_at": 12
+    },
+    {
+      "name": "Wuhan Yangtze River Bridge 1957",
+      "facet": "Landmark bridges, dams and railways",
+      "known_at": 9
+    },
+    {
+      "name": "Nanjing Yangtze River Bridge 1968",
+      "facet": "Landmark bridges, dams and railways",
+      "known_at": 9
+    },
+    {
+      "name": "Danyang–Kunshan Grand Bridge",
+      "facet": "Landmark bridges, dams and railways",
+      "known_at": 12
+    },
+    {
+      "name": "Beipanjiang Bridge",
+      "facet": "Landmark bridges, dams and railways",
+      "known_at": 13
+    },
+    {
+      "name": "Chengdu–Kunming Railway",
+      "facet": "Landmark bridges, dams and railways",
+      "known_at": 12
+    },
+    {
+      "name": "Tanzania–Zambia Railway",
+      "facet": "Landmark bridges, dams and railways",
+      "known_at": 11
+    },
+    {
+      "name": "Beijing–Shanghai high-speed railway",
+      "facet": "Landmark bridges, dams and railways",
+      "known_at": 6
+    },
+    {
+      "name": "Hexie (CRH) trains",
+      "facet": "Landmark bridges, dams and railways",
+      "known_at": 6
+    },
+    {
+      "name": "Fuxing train",
+      "facet": "Landmark bridges, dams and railways",
+      "known_at": 3
+    },
+    {
+      "name": "Beijing Subway 1969",
+      "facet": "Landmark bridges, dams and railways",
+      "known_at": 9
+    },
+    {
+      "name": "Red Flag Canal",
+      "facet": "Landmark bridges, dams and railways",
+      "known_at": 8
+    },
+    {
+      "name": "South–North Water Transfer Project",
+      "facet": "Landmark bridges, dams and railways",
+      "known_at": 8
+    },
+    {
+      "name": "Beijing Daxing Airport",
+      "facet": "Landmark bridges, dams and railways",
+      "known_at": 5
+    },
+    {
+      "name": "United Nations seat 1971",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 10
+    },
+    {
+      "name": "WTO accession 2001",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 9
+    },
+    {
+      "name": "China Pavilion “Oriental Crown”",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 7
+    },
+    {
+      "name": "Haibao mascot",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 6
+    },
+    {
+      "name": "Kunming 1999 Horticultural Expo",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 11
+    },
+    {
+      "name": "Beijing 2019 Horticultural Expo",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 11
+    },
+    {
+      "name": "Canton Fair",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 8
+    },
+    {
+      "name": "China International Import Expo",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 9
+    },
+    {
+      "name": "Boao Forum for Asia",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 10
+    },
+    {
+      "name": "APEC 2014 Beijing",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 11
+    },
+    {
+      "name": "G20 Hangzhou 2016",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 10
+    },
+    {
+      "name": "World Internet Conference, Wuzhen",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 11
+    },
+    {
+      "name": "Fourth World Conference on Women 1995",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 12
+    },
+    {
+      "name": "Shanghai Cooperation Organisation",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 10
+    },
+    {
+      "name": "BRICS",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 9
+    },
+    {
+      "name": "Asian Infrastructure Investment Bank",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 11
+    },
+    {
+      "name": "Belt and Road Initiative",
+      "facet": "Joining world bodies and hosting expos",
+      "known_at": 7
+    },
+    {
+      "name": "Yuan Longping",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 3
+    },
+    {
+      "name": "Hybrid rice",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 4
+    },
+    {
+      "name": "Seawater rice (海水稻)",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 9
+    },
+    {
+      "name": "Tu Youyou",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 6
+    },
+    {
+      "name": "Artemisinin",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 8
+    },
+    {
+      "name": "Synthetic bovine insulin 1965",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 11
+    },
+    {
+      "name": "Chen Jingrun",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 8
+    },
+    {
+      "name": "Goldbach conjecture",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 11
+    },
+    {
+      "name": "FAST telescope (天眼)",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 5
+    },
+    {
+      "name": "Nan Rendong",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 10
+    },
+    {
+      "name": "Jiaolong submersible",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 8
+    },
+    {
+      "name": "Fendouzhe submersible",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 9
+    },
+    {
+      "name": "EAST tokamak “artificial sun”",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 8
+    },
+    {
+      "name": "Jiuzhang quantum computer",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 11
+    },
+    {
+      "name": "Hualong One reactor",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 11
+    },
+    {
+      "name": "Cloned monkeys Zhong Zhong and Hua Hua",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 10
+    },
+    {
+      "name": "Daqing oil field",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 8
+    },
+    {
+      "name": "Saihanba forest",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 8
+    },
+    {
+      "name": "Great Wall Station, Antarctica 1985",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 9
+    },
+    {
+      "name": "Xuelong icebreaker",
+      "facet": "Famous science and farming breakthroughs",
+      "known_at": 9
+    }
+  ]
+}

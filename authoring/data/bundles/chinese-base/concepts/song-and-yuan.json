@@ -1,0 +1,927 @@
+{
+  "subcategory": "song-and-yuan",
+  "facets": [
+    "Founding of the Song dynasty",
+    "Song emperors and court politics",
+    "Northern Song capital Kaifeng",
+    "Southern Song and Hangzhou",
+    "Wars with Liao, Xia and Jin",
+    "Yue Fei and loyal generals",
+    "Judge Bao and famous officials",
+    "Song inventions and science",
+    "Song poetry, painting and calligraphy",
+    "Song city life and trade",
+    "Genghis Khan and the Mongol Empire",
+    "Kublai Khan, Yuan rule and Marco Polo"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Yellow robe draped on him (黄袍加身)",
+      "facet": "Founding of the Song dynasty",
+      "known_at": 6
+    },
+    {
+      "name": "Releasing military power over a cup of wine (杯酒释兵权)",
+      "facet": "Founding of the Song dynasty",
+      "known_at": 8
+    },
+    {
+      "name": "Zhao Guangyi (赵光义)",
+      "facet": "Founding of the Song dynasty",
+      "known_at": 10
+    },
+    {
+      "name": "Candle shadow and axe sound (烛影斧声)",
+      "facet": "Founding of the Song dynasty",
+      "known_at": 13
+    },
+    {
+      "name": "Golden Chest Oath (金匮之盟)",
+      "facet": "Founding of the Song dynasty",
+      "known_at": 14
+    },
+    {
+      "name": "Southern Tang (南唐)",
+      "facet": "Founding of the Song dynasty",
+      "known_at": 11
+    },
+    {
+      "name": "Li Yu (李煜)",
+      "facet": "Founding of the Song dynasty",
+      "known_at": 8
+    },
+    {
+      "name": "Northern Han (北汉)",
+      "facet": "Founding of the Song dynasty",
+      "known_at": 12
+    },
+    {
+      "name": "First the south, then the north (先南后北)",
+      "facet": "Founding of the Song dynasty",
+      "known_at": 13
+    },
+    {
+      "name": "Favouring civil officials over generals (重文轻武)",
+      "facet": "Founding of the Song dynasty",
+      "known_at": 10
+    },
+    {
+      "name": "Taizu Long Fist (太祖长拳)",
+      "facet": "Founding of the Song dynasty",
+      "known_at": 12
+    },
+    {
+      "name": "Escorting Jingniang a thousand li (千里送京娘)",
+      "facet": "Founding of the Song dynasty",
+      "known_at": 12
+    },
+    {
+      "name": "Emperor Huizong of Song (宋徽宗)",
+      "facet": "Song emperors and court politics",
+      "known_at": 7
+    },
+    {
+      "name": "Emperor Renzong of Song (宋仁宗)",
+      "facet": "Song emperors and court politics",
+      "known_at": 9
+    },
+    {
+      "name": "Emperor Zhenzong of Song (宋真宗)",
+      "facet": "Song emperors and court politics",
+      "known_at": 12
+    },
+    {
+      "name": "Emperor Shenzong of Song (宋神宗)",
+      "facet": "Song emperors and court politics",
+      "known_at": 12
+    },
+    {
+      "name": "Emperor Qinzong of Song (宋钦宗)",
+      "facet": "Song emperors and court politics",
+      "known_at": 10
+    },
+    {
+      "name": "Emperor Xiaozong of Song (宋孝宗)",
+      "facet": "Song emperors and court politics",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Anshi's reforms (王安石变法)",
+      "facet": "Song emperors and court politics",
+      "known_at": 8
+    },
+    {
+      "name": "Sima Guang (司马光)",
+      "facet": "Song emperors and court politics",
+      "known_at": 3
+    },
+    {
+      "name": "Comprehensive Mirror in Aid of Governance (资治通鉴)",
+      "facet": "Song emperors and court politics",
+      "known_at": 9
+    },
+    {
+      "name": "Qingli Reforms (庆历新政)",
+      "facet": "Song emperors and court politics",
+      "known_at": 12
+    },
+    {
+      "name": "Cai Jing (蔡京)",
+      "facet": "Song emperors and court politics",
+      "known_at": 11
+    },
+    {
+      "name": "Gao Qiu (高俅)",
+      "facet": "Song emperors and court politics",
+      "known_at": 9
+    },
+    {
+      "name": "Empress Dowager Liu (刘太后)",
+      "facet": "Song emperors and court politics",
+      "known_at": 12
+    },
+    {
+      "name": "Han Tuozhou (韩侂胄)",
+      "facet": "Song emperors and court politics",
+      "known_at": 14
+    },
+    {
+      "name": "Fang La Rebellion (方腊起义)",
+      "facet": "Song emperors and court politics",
+      "known_at": 12
+    },
+    {
+      "name": "Bian River (汴河)",
+      "facet": "Northern Song capital Kaifeng",
+      "known_at": 11
+    },
+    {
+      "name": "Lu Zhishen uproots the willow (鲁智深倒拔垂杨柳)",
+      "facet": "Northern Song capital Kaifeng",
+      "known_at": 6
+    },
+    {
+      "name": "Kaifeng Prefecture (开封府)",
+      "facet": "Northern Song capital Kaifeng",
+      "known_at": 6
+    },
+    {
+      "name": "Dragon Pavilion (龙亭)",
+      "facet": "Northern Song capital Kaifeng",
+      "known_at": 12
+    },
+    {
+      "name": "Fan Tower restaurant (樊楼)",
+      "facet": "Northern Song capital Kaifeng",
+      "known_at": 13
+    },
+    {
+      "name": "Fan Pagoda (繁塔)",
+      "facet": "Northern Song capital Kaifeng",
+      "known_at": 14
+    },
+    {
+      "name": "Dreams of Splendour of the Eastern Capital (东京梦华录)",
+      "facet": "Northern Song capital Kaifeng",
+      "known_at": 13
+    },
+    {
+      "name": "City stacked on city (城摞城)",
+      "facet": "Northern Song capital Kaifeng",
+      "known_at": 13
+    },
+    {
+      "name": "Millennium City Park (清明上河园)",
+      "facet": "Northern Song capital Kaifeng",
+      "known_at": 11
+    },
+    {
+      "name": "Kaifeng Jews",
+      "facet": "Northern Song capital Kaifeng",
+      "known_at": 14
+    },
+    {
+      "name": "Genyue garden (艮岳)",
+      "facet": "Northern Song capital Kaifeng",
+      "known_at": 13
+    },
+    {
+      "name": "Flower and Rock Convoy (花石纲)",
+      "facet": "Northern Song capital Kaifeng",
+      "known_at": 11
+    },
+    {
+      "name": "Kaifeng soup dumplings (灌汤包)",
+      "facet": "Northern Song capital Kaifeng",
+      "known_at": 9
+    },
+    {
+      "name": "Ji Gong (济公)",
+      "facet": "Southern Song and Hangzhou",
+      "known_at": 4
+    },
+    {
+      "name": "Sister Song's fish soup (宋嫂鱼羹)",
+      "facet": "Southern Song and Hangzhou",
+      "known_at": 13
+    },
+    {
+      "name": "Longjing tea (龙井茶)",
+      "facet": "Southern Song and Hangzhou",
+      "known_at": 4
+    },
+    {
+      "name": "Qiantang River tidal bore (钱塘江大潮)",
+      "facet": "Southern Song and Hangzhou",
+      "known_at": 6
+    },
+    {
+      "name": "Southern Song Imperial Street (南宋御街)",
+      "facet": "Southern Song and Hangzhou",
+      "known_at": 13
+    },
+    {
+      "name": "Southern Song Guan ware (南宋官窑)",
+      "facet": "Southern Song and Hangzhou",
+      "known_at": 13
+    },
+    {
+      "name": "Jianyan southern crossing (建炎南渡)",
+      "facet": "Southern Song and Hangzhou",
+      "known_at": 13
+    },
+    {
+      "name": "Jia Sidao (贾似道)",
+      "facet": "Southern Song and Hangzhou",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Yashan (崖山海战)",
+      "facet": "Southern Song and Hangzhou",
+      "known_at": 11
+    },
+    {
+      "name": "Lu Xiufu (陆秀夫)",
+      "facet": "Southern Song and Hangzhou",
+      "known_at": 12
+    },
+    {
+      "name": "Liao dynasty (辽)",
+      "facet": "Wars with Liao, Xia and Jin",
+      "known_at": 8
+    },
+    {
+      "name": "Jin dynasty (金)",
+      "facet": "Wars with Liao, Xia and Jin",
+      "known_at": 8
+    },
+    {
+      "name": "Jin Wuzhu (金兀术)",
+      "facet": "Wars with Liao, Xia and Jin",
+      "known_at": 8
+    },
+    {
+      "name": "Li Yuanhao (李元昊)",
+      "facet": "Wars with Liao, Xia and Jin",
+      "known_at": 12
+    },
+    {
+      "name": "Empress Dowager Xiao (萧太后)",
+      "facet": "Wars with Liao, Xia and Jin",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Gaoliang River (高粱河之战)",
+      "facet": "Wars with Liao, Xia and Jin",
+      "known_at": 14
+    },
+    {
+      "name": "Sixteen Prefectures of Yan and Yun (燕云十六州)",
+      "facet": "Wars with Liao, Xia and Jin",
+      "known_at": 10
+    },
+    {
+      "name": "Battle of Caishi (采石之战)",
+      "facet": "Wars with Liao, Xia and Jin",
+      "known_at": 14
+    },
+    {
+      "name": "Alliance Conducted at Sea (海上之盟)",
+      "facet": "Wars with Liao, Xia and Jin",
+      "known_at": 13
+    },
+    {
+      "name": "Western Xia Imperial Tombs (西夏王陵)",
+      "facet": "Wars with Liao, Xia and Jin",
+      "known_at": 11
+    },
+    {
+      "name": "Yanmen Pass (雁门关)",
+      "facet": "Wars with Liao, Xia and Jin",
+      "known_at": 9
+    },
+    {
+      "name": "Annual payments to the north (岁币)",
+      "facet": "Wars with Liao, Xia and Jin",
+      "known_at": 12
+    },
+    {
+      "name": "Serve the country with utmost loyalty (精忠报国)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 4
+    },
+    {
+      "name": "Twelve gold plaques (十二道金牌)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 8
+    },
+    {
+      "name": "Qin Hui (秦桧)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 6
+    },
+    {
+      "name": "Groundless charge (莫须有)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 11
+    },
+    {
+      "name": "Fengbo Pavilion (风波亭)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 11
+    },
+    {
+      "name": "Man Jiang Hong (满江红)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 6
+    },
+    {
+      "name": "Yue Family Army (岳家军)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 7
+    },
+    {
+      "name": "Battle of Yancheng (郾城之战)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 13
+    },
+    {
+      "name": "Yue Yun (岳云)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 11
+    },
+    {
+      "name": "Niu Gao (牛皋)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 11
+    },
+    {
+      "name": "Han Shizhong (韩世忠)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 11
+    },
+    {
+      "name": "Liang Hongyu (梁红玉)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 10
+    },
+    {
+      "name": "Yang family generals (杨家将)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 5
+    },
+    {
+      "name": "Yang Ye (杨业)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 10
+    },
+    {
+      "name": "She Saihua (佘太君)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 9
+    },
+    {
+      "name": "Mu Guiying (穆桂英)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 6
+    },
+    {
+      "name": "Di Qing (狄青)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 11
+    },
+    {
+      "name": "Zong Ze (宗泽)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 12
+    },
+    {
+      "name": "Wen Tianxiang (文天祥)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 7
+    },
+    {
+      "name": "Crossing the Lingding Sea (过零丁洋)",
+      "facet": "Yue Fei and loyal generals",
+      "known_at": 8
+    },
+    {
+      "name": "Bao Zheng (包拯)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 3
+    },
+    {
+      "name": "Three guillotines of Judge Bao (三口铡刀)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 7
+    },
+    {
+      "name": "Crescent moon on Judge Bao's forehead (月牙)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 5
+    },
+    {
+      "name": "Zhan Zhao (展昭)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 5
+    },
+    {
+      "name": "Gongsun Ce (公孙策)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 8
+    },
+    {
+      "name": "Wang Chao and Ma Han (王朝马汉)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 8
+    },
+    {
+      "name": "Bai Yutang (白玉堂)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 9
+    },
+    {
+      "name": "Chen Shimei (陈世美)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 6
+    },
+    {
+      "name": "Qin Xianglian (秦香莲)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 8
+    },
+    {
+      "name": "Swapping the prince for a civet cat (狸猫换太子)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 8
+    },
+    {
+      "name": "Grand Tutor Pang (庞太师)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 9
+    },
+    {
+      "name": "The Seven Heroes and Five Gallants (七侠五义)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 10
+    },
+    {
+      "name": "Bao Zheng throws away the inkstone (包拯掷砚)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 13
+    },
+    {
+      "name": "Hefei (合肥)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 9
+    },
+    {
+      "name": "Lord Bao Memorial Temple (包公祠)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 11
+    },
+    {
+      "name": "Kou Zhun (寇准)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 10
+    },
+    {
+      "name": "Fan Zhongyan (范仲淹)",
+      "facet": "Judge Bao and famous officials",
+      "known_at": 6
+    },
+    {
+      "name": "Movable type printing (活字印刷术)",
+      "facet": "Song inventions and science",
+      "known_at": 4
+    },
+    {
+      "name": "Bi Sheng (毕昇)",
+      "facet": "Song inventions and science",
+      "known_at": 6
+    },
+    {
+      "name": "Compass (指南针)",
+      "facet": "Song inventions and science",
+      "known_at": 3
+    },
+    {
+      "name": "Fire lance (火枪)",
+      "facet": "Song inventions and science",
+      "known_at": 12
+    },
+    {
+      "name": "Jiaozi paper money (交子)",
+      "facet": "Song inventions and science",
+      "known_at": 8
+    },
+    {
+      "name": "Ru ware (汝窑)",
+      "facet": "Song inventions and science",
+      "known_at": 11
+    },
+    {
+      "name": "Jingdezhen (景德镇)",
+      "facet": "Song inventions and science",
+      "known_at": 7
+    },
+    {
+      "name": "Watertight compartments (水密隔舱)",
+      "facet": "Song inventions and science",
+      "known_at": 12
+    },
+    {
+      "name": "Qin Jiushao (秦九韶)",
+      "facet": "Song inventions and science",
+      "known_at": 14
+    },
+    {
+      "name": "Song Ci (宋慈)",
+      "facet": "Song inventions and science",
+      "known_at": 9
+    },
+    {
+      "name": "Treatise on Architectural Methods (营造法式)",
+      "facet": "Song inventions and science",
+      "known_at": 13
+    },
+    {
+      "name": "Bronze acupuncture figure (针灸铜人)",
+      "facet": "Song inventions and science",
+      "known_at": 12
+    },
+    {
+      "name": "Li Qingzhao (李清照)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 5
+    },
+    {
+      "name": "Xin Qiji (辛弃疾)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 6
+    },
+    {
+      "name": "Lu You (陆游)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 5
+    },
+    {
+      "name": "Ouyang Xiu (欧阳修)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 7
+    },
+    {
+      "name": "Yang Wanli (杨万里)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 5
+    },
+    {
+      "name": "Liu Yong (柳永)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 11
+    },
+    {
+      "name": "Song ci poetry (宋词)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 5
+    },
+    {
+      "name": "Shuidiao Getou: When will the bright moon appear (水调歌头·明月几时有)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 4
+    },
+    {
+      "name": "Ode to the Red Cliff (赤壁赋)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 9
+    },
+    {
+      "name": "Memorial to Yueyang Tower (岳阳楼记)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 8
+    },
+    {
+      "name": "On the Love of the Lotus (爱莲说)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 8
+    },
+    {
+      "name": "Plum Blossoms by Wang Anshi (梅花)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 5
+    },
+    {
+      "name": "Reflections on Reading by Zhu Xi (观书有感)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 7
+    },
+    {
+      "name": "Written on a Wall in Lin'an (题临安邸)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 8
+    },
+    {
+      "name": "To My Son by Lu You (示儿)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 6
+    },
+    {
+      "name": "Eight Great Prose Masters of Tang and Song (唐宋八大家)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 9
+    },
+    {
+      "name": "A Thousand Li of Rivers and Mountains (千里江山图)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 7
+    },
+    {
+      "name": "Mi Fu (米芾)",
+      "facet": "Song poetry, painting and calligraphy",
+      "known_at": 12
+    },
+    {
+      "name": "Entertainment quarters (瓦子)",
+      "facet": "Song city life and trade",
+      "known_at": 12
+    },
+    {
+      "name": "Ward and market system (坊市制度)",
+      "facet": "Song city life and trade",
+      "known_at": 13
+    },
+    {
+      "name": "Quanzhou (泉州)",
+      "facet": "Song city life and trade",
+      "known_at": 9
+    },
+    {
+      "name": "Maritime Silk Road (海上丝绸之路)",
+      "facet": "Song city life and trade",
+      "known_at": 7
+    },
+    {
+      "name": "Maritime Trade Office (市舶司)",
+      "facet": "Song city life and trade",
+      "known_at": 13
+    },
+    {
+      "name": "Nanhai One shipwreck (南海一号)",
+      "facet": "Song city life and trade",
+      "known_at": 10
+    },
+    {
+      "name": "Tea-horse trade (茶马互市)",
+      "facet": "Song city life and trade",
+      "known_at": 11
+    },
+    {
+      "name": "Whisked tea (点茶)",
+      "facet": "Song city life and trade",
+      "known_at": 10
+    },
+    {
+      "name": "Storyteller scripts (话本)",
+      "facet": "Song city life and trade",
+      "known_at": 13
+    },
+    {
+      "name": "Water Margin (水浒传)",
+      "facet": "Song city life and trade",
+      "known_at": 4
+    },
+    {
+      "name": "Song Jiang (宋江)",
+      "facet": "Song city life and trade",
+      "known_at": 6
+    },
+    {
+      "name": "Wu Song (武松)",
+      "facet": "Song city life and trade",
+      "known_at": 3
+    },
+    {
+      "name": "Xiangqi (象棋)",
+      "facet": "Song city life and trade",
+      "known_at": 3
+    },
+    {
+      "name": "He only knew how to draw his bow at great eagles (只识弯弓射大雕)",
+      "facet": "Genghis Khan and the Mongol Empire",
+      "known_at": 7
+    },
+    {
+      "name": "Kurultai (忽里勒台)",
+      "facet": "Genghis Khan and the Mongol Empire",
+      "known_at": 14
+    },
+    {
+      "name": "Karakorum (哈拉和林)",
+      "facet": "Genghis Khan and the Mongol Empire",
+      "known_at": 12
+    },
+    {
+      "name": "Ögedei Khan (窝阔台)",
+      "facet": "Genghis Khan and the Mongol Empire",
+      "known_at": 11
+    },
+    {
+      "name": "Tolui (拖雷)",
+      "facet": "Genghis Khan and the Mongol Empire",
+      "known_at": 13
+    },
+    {
+      "name": "Möngke Khan (蒙哥)",
+      "facet": "Genghis Khan and the Mongol Empire",
+      "known_at": 12
+    },
+    {
+      "name": "Diaoyu Fortress (钓鱼城)",
+      "facet": "Genghis Khan and the Mongol Empire",
+      "known_at": 12
+    },
+    {
+      "name": "Golden Horde (金帐汗国)",
+      "facet": "Genghis Khan and the Mongol Empire",
+      "known_at": 12
+    },
+    {
+      "name": "Ilkhanate (伊尔汗国)",
+      "facet": "Genghis Khan and the Mongol Empire",
+      "known_at": 13
+    },
+    {
+      "name": "Subutai (速不台)",
+      "facet": "Genghis Khan and the Mongol Empire",
+      "known_at": 14
+    },
+    {
+      "name": "Yelü Chucai (耶律楚材)",
+      "facet": "Genghis Khan and the Mongol Empire",
+      "known_at": 13
+    },
+    {
+      "name": "Jebe (哲别)",
+      "facet": "Genghis Khan and the Mongol Empire",
+      "known_at": 11
+    },
+    {
+      "name": "The Secret History of the Mongols (蒙古秘史)",
+      "facet": "Genghis Khan and the Mongol Empire",
+      "known_at": 12
+    },
+    {
+      "name": "Mausoleum of Genghis Khan (成吉思汗陵)",
+      "facet": "Genghis Khan and the Mongol Empire",
+      "known_at": 11
+    },
+    {
+      "name": "Yam relay stations (驿站)",
+      "facet": "Genghis Khan and the Mongol Empire",
+      "known_at": 12
+    },
+    {
+      "name": "The Legend of the Condor Heroes (射雕英雄传)",
+      "facet": "Genghis Khan and the Mongol Empire",
+      "known_at": 6
+    },
+    {
+      "name": "Dadu (元大都)",
+      "facet": "Kublai Khan, Yuan rule and Marco Polo",
+      "known_at": 9
+    },
+    {
+      "name": "Shangdu (元上都)",
+      "facet": "Kublai Khan, Yuan rule and Marco Polo",
+      "known_at": 12
+    },
+    {
+      "name": "Marco Polo (马可·波罗)",
+      "facet": "Kublai Khan, Yuan rule and Marco Polo",
+      "known_at": 5
+    },
+    {
+      "name": "The Travels of Marco Polo (马可·波罗游记)",
+      "facet": "Kublai Khan, Yuan rule and Marco Polo",
+      "known_at": 8
+    },
+    {
+      "name": "Siege of Xiangyang (襄阳之战)",
+      "facet": "Kublai Khan, Yuan rule and Marco Polo",
+      "known_at": 10
+    },
+    {
+      "name": "Mongol invasions of Japan (元日战争)",
+      "facet": "Kublai Khan, Yuan rule and Marco Polo",
+      "known_at": 12
+    },
+    {
+      "name": "Four-class system (四等人制)",
+      "facet": "Kublai Khan, Yuan rule and Marco Polo",
+      "known_at": 10
+    },
+    {
+      "name": "Province system (行省制度)",
+      "facet": "Kublai Khan, Yuan rule and Marco Polo",
+      "known_at": 9
+    },
+    {
+      "name": "Huang Daopo (黄道婆)",
+      "facet": "Kublai Khan, Yuan rule and Marco Polo",
+      "known_at": 7
+    },
+    {
+      "name": "Yuan qu (元曲)",
+      "facet": "Kublai Khan, Yuan rule and Marco Polo",
+      "known_at": 7
+    },
+    {
+      "name": "Guan Hanqing (关汉卿)",
+      "facet": "Kublai Khan, Yuan rule and Marco Polo",
+      "known_at": 8
+    },
+    {
+      "name": "The Injustice to Dou E (窦娥冤)",
+      "facet": "Kublai Khan, Yuan rule and Marco Polo",
+      "known_at": 7
+    },
+    {
+      "name": "Autumn Thoughts by Ma Zhiyuan (天净沙·秋思)",
+      "facet": "Kublai Khan, Yuan rule and Marco Polo",
+      "known_at": 4
+    },
+    {
+      "name": "Zhao Mengfu (赵孟頫)",
+      "facet": "Kublai Khan, Yuan rule and Marco Polo",
+      "known_at": 11
+    },
+    {
+      "name": "Red Turban Rebellion (红巾军起义)",
+      "facet": "Kublai Khan, Yuan rule and Marco Polo",
+      "known_at": 11
+    }
+  ]
+}

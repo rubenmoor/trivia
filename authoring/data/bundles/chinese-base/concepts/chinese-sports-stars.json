@@ -1,0 +1,737 @@
+{
+  "subcategory": "chinese-sports-stars",
+  "facets": [
+    "Sprinters and hurdlers",
+    "Distance running and race walking",
+    "Field events: jumps and throws",
+    "Swimming stars",
+    "Tennis stars",
+    "Snooker and billiards",
+    "Badminton champions",
+    "Gymnastics legends",
+    "Weightlifting, boxing and martial arts",
+    "Shooting, archery and fencing",
+    "Winter sports stars",
+    "Chess and Go masters"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 3,
+      "record": 5,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 5,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Athens 2004 110 m hurdles final",
+      "facet": "Sprinters and hurdlers",
+      "known_at": 7
+    },
+    {
+      "name": "110 m hurdles world record 12.88",
+      "facet": "Sprinters and hurdlers",
+      "known_at": 10
+    },
+    {
+      "name": "Tokyo 2020 men's 100 m final",
+      "facet": "Sprinters and hurdlers",
+      "known_at": 8
+    },
+    {
+      "name": "Xie Zhenye",
+      "facet": "Sprinters and hurdlers",
+      "known_at": 10
+    },
+    {
+      "name": "Sun Haiping",
+      "facet": "Sprinters and hurdlers",
+      "known_at": 12
+    },
+    {
+      "name": "Shi Dongpeng",
+      "facet": "Sprinters and hurdlers",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Peimeng",
+      "facet": "Sprinters and hurdlers",
+      "known_at": 13
+    },
+    {
+      "name": "Ge Manqi",
+      "facet": "Sprinters and hurdlers",
+      "known_at": 13,
+      "retired": "unaskable: Not confident of Ge Manqi's times and dates."
+    },
+    {
+      "name": "Wu Yanni",
+      "facet": "Sprinters and hurdlers",
+      "known_at": 12
+    },
+    {
+      "name": "Liang Xiaojing",
+      "facet": "Sprinters and hurdlers",
+      "known_at": 14,
+      "retired": "unaskable: Too little verified, well-known detail about Liang Xiaojing's career for a fair question."
+    },
+    {
+      "name": "Wei Yongli",
+      "facet": "Sprinters and hurdlers",
+      "known_at": 15
+    },
+    {
+      "name": "Chinese men's 4×100 m relay team",
+      "facet": "Sprinters and hurdlers",
+      "known_at": 10
+    },
+    {
+      "name": "Chen Jiapeng",
+      "facet": "Sprinters and hurdlers",
+      "known_at": 15
+    },
+    {
+      "name": "Xu Zhuoyi",
+      "facet": "Sprinters and hurdlers",
+      "known_at": 15
+    },
+    {
+      "name": "Qu Yunxia",
+      "facet": "Distance running and race walking",
+      "known_at": 13
+    },
+    {
+      "name": "Ma Junren",
+      "facet": "Distance running and race walking",
+      "known_at": 12
+    },
+    {
+      "name": "Ma Family Army (马家军)",
+      "facet": "Distance running and race walking",
+      "known_at": 12
+    },
+    {
+      "name": "1993 Stuttgart World Championships",
+      "facet": "Distance running and race walking",
+      "known_at": 14
+    },
+    {
+      "name": "Xing Huina",
+      "facet": "Distance running and race walking",
+      "known_at": 13
+    },
+    {
+      "name": "Sun Yingjie",
+      "facet": "Distance running and race walking",
+      "known_at": 14
+    },
+    {
+      "name": "Chen Ding",
+      "facet": "Distance running and race walking",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Hong",
+      "facet": "Distance running and race walking",
+      "known_at": 12
+    },
+    {
+      "name": "Qieyang Shenjie",
+      "facet": "Distance running and race walking",
+      "known_at": 13
+    },
+    {
+      "name": "Yang Jiayu",
+      "facet": "Distance running and race walking",
+      "known_at": 14
+    },
+    {
+      "name": "Chen Yueling",
+      "facet": "Distance running and race walking",
+      "known_at": 15
+    },
+    {
+      "name": "Zhou Chunxiu",
+      "facet": "Distance running and race walking",
+      "known_at": 14
+    },
+    {
+      "name": "Bai Xue",
+      "facet": "Distance running and race walking",
+      "known_at": 14
+    },
+    {
+      "name": "Dong Guojian",
+      "facet": "Distance running and race walking",
+      "known_at": 15
+    },
+    {
+      "name": "Beijing Marathon",
+      "facet": "Distance running and race walking",
+      "known_at": 8
+    },
+    {
+      "name": "Liu Shiying",
+      "facet": "Field events: jumps and throws",
+      "known_at": 11
+    },
+    {
+      "name": "Ni Zhiqin",
+      "facet": "Field events: jumps and throws",
+      "known_at": 14
+    },
+    {
+      "name": "Wang Zheng",
+      "facet": "Field events: jumps and throws",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Wenxiu",
+      "facet": "Field events: jumps and throws",
+      "known_at": 14
+    },
+    {
+      "name": "Lü Huihui",
+      "facet": "Field events: jumps and throws",
+      "known_at": 12
+    },
+    {
+      "name": "Wang Jianan",
+      "facet": "Field events: jumps and throws",
+      "known_at": 12
+    },
+    {
+      "name": "Zhu Yaming",
+      "facet": "Field events: jumps and throws",
+      "known_at": 13
+    },
+    {
+      "name": "Feng Bin",
+      "facet": "Field events: jumps and throws",
+      "known_at": 14
+    },
+    {
+      "name": "Huang Zhihong",
+      "facet": "Field events: jumps and throws",
+      "known_at": 14
+    },
+    {
+      "name": "Sui Xinmei",
+      "facet": "Field events: jumps and throws",
+      "known_at": 15
+    },
+    {
+      "name": "Zheng Xingjuan",
+      "facet": "Field events: jumps and throws",
+      "known_at": 15
+    },
+    {
+      "name": "Wang Yu",
+      "facet": "Field events: jumps and throws",
+      "known_at": 15
+    },
+    {
+      "name": "Li Yanfeng",
+      "facet": "Field events: jumps and throws",
+      "known_at": 15
+    },
+    {
+      "name": "Sun Yang",
+      "facet": "Swimming stars",
+      "known_at": 4
+    },
+    {
+      "name": "Ye Shiwen",
+      "facet": "Swimming stars",
+      "known_at": 7
+    },
+    {
+      "name": "Fu Yuanhui",
+      "facet": "Swimming stars",
+      "known_at": 4
+    },
+    {
+      "name": "Wang Shun",
+      "facet": "Swimming stars",
+      "known_at": 8
+    },
+    {
+      "name": "Xu Jiayu",
+      "facet": "Swimming stars",
+      "known_at": 9
+    },
+    {
+      "name": "Qin Haiyang",
+      "facet": "Swimming stars",
+      "known_at": 7
+    },
+    {
+      "name": "Zhang Lin",
+      "facet": "Swimming stars",
+      "known_at": 13
+    },
+    {
+      "name": "Luo Xuejuan",
+      "facet": "Swimming stars",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Zige",
+      "facet": "Swimming stars",
+      "known_at": 13
+    },
+    {
+      "name": "Jiao Liuyang",
+      "facet": "Swimming stars",
+      "known_at": 13
+    },
+    {
+      "name": "Li Bingjie",
+      "facet": "Swimming stars",
+      "known_at": 12
+    },
+    {
+      "name": "Yang Junxuan",
+      "facet": "Swimming stars",
+      "known_at": 12
+    },
+    {
+      "name": "Zhuang Yong",
+      "facet": "Swimming stars",
+      "known_at": 14
+    },
+    {
+      "name": "Qian Hong",
+      "facet": "Swimming stars",
+      "known_at": 15
+    },
+    {
+      "name": "Le Jingyi",
+      "facet": "Swimming stars",
+      "known_at": 14
+    },
+    {
+      "name": "Ning Zetao",
+      "facet": "Swimming stars",
+      "known_at": 10
+    },
+    {
+      "name": "2011 French Open",
+      "facet": "Tennis stars",
+      "known_at": 9
+    },
+    {
+      "name": "2014 Australian Open",
+      "facet": "Tennis stars",
+      "known_at": 11
+    },
+    {
+      "name": "Paris 2024 women's singles tennis",
+      "facet": "Tennis stars",
+      "known_at": 8
+    },
+    {
+      "name": "Zheng Jie",
+      "facet": "Tennis stars",
+      "known_at": 12
+    },
+    {
+      "name": "Yan Zi",
+      "facet": "Tennis stars",
+      "known_at": 14
+    },
+    {
+      "name": "Zhang Shuai",
+      "facet": "Tennis stars",
+      "known_at": 12
+    },
+    {
+      "name": "Wang Qiang",
+      "facet": "Tennis stars",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Xinyu",
+      "facet": "Tennis stars",
+      "known_at": 13
+    },
+    {
+      "name": "Wu Yibing",
+      "facet": "Tennis stars",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Zhizhen",
+      "facet": "Tennis stars",
+      "known_at": 11
+    },
+    {
+      "name": "Shang Juncheng",
+      "facet": "Tennis stars",
+      "known_at": 13
+    },
+    {
+      "name": "China Open (tennis)",
+      "facet": "Tennis stars",
+      "known_at": 10
+    },
+    {
+      "name": "Shanghai Masters (tennis)",
+      "facet": "Tennis stars",
+      "known_at": 11
+    },
+    {
+      "name": "Wuhan Open",
+      "facet": "Tennis stars",
+      "known_at": 13
+    },
+    {
+      "name": "Ding Junhui",
+      "facet": "Snooker and billiards",
+      "known_at": 6
+    },
+    {
+      "name": "Zhao Xintong",
+      "facet": "Snooker and billiards",
+      "known_at": 9
+    },
+    {
+      "name": "2025 World Snooker Championship",
+      "facet": "Snooker and billiards",
+      "known_at": 11
+    },
+    {
+      "name": "Yan Bingtao",
+      "facet": "Snooker and billiards",
+      "known_at": 12
+    },
+    {
+      "name": "Liang Wenbo",
+      "facet": "Snooker and billiards",
+      "known_at": 12
+    },
+    {
+      "name": "Zhou Yuelong",
+      "facet": "Snooker and billiards",
+      "known_at": 14
+    },
+    {
+      "name": "Xiao Guodong",
+      "facet": "Snooker and billiards",
+      "known_at": 14,
+      "retired": "unaskable: No fact about Xiao Guodong I'm confident of that fits a record or group question."
+    },
+    {
+      "name": "Si Jiahui",
+      "facet": "Snooker and billiards",
+      "known_at": 13
+    },
+    {
+      "name": "Wu Yize",
+      "facet": "Snooker and billiards",
+      "known_at": 14
+    },
+    {
+      "name": "Marco Fu (Fu Jiajun)",
+      "facet": "Snooker and billiards",
+      "known_at": 13
+    },
+    {
+      "name": "Ng On-yee",
+      "facet": "Snooker and billiards",
+      "known_at": 14
+    },
+    {
+      "name": "Bai Yulu",
+      "facet": "Snooker and billiards",
+      "known_at": 15
+    },
+    {
+      "name": "Pan Xiaoting",
+      "facet": "Snooker and billiards",
+      "known_at": 11
+    },
+    {
+      "name": "Chen Siming",
+      "facet": "Snooker and billiards",
+      "known_at": 13
+    },
+    {
+      "name": "Liu Shasha",
+      "facet": "Snooker and billiards",
+      "known_at": 15
+    },
+    {
+      "name": "Chinese eight-ball (中式八球)",
+      "facet": "Snooker and billiards",
+      "known_at": 9
+    },
+    {
+      "name": "Maximum break 147",
+      "facet": "Snooker and billiards",
+      "known_at": 9
+    },
+    {
+      "name": "Crucible Theatre",
+      "facet": "Snooker and billiards",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Yihan",
+      "facet": "Badminton champions",
+      "known_at": 13
+    },
+    {
+      "name": "Gao Ling",
+      "facet": "Badminton champions",
+      "known_at": 13
+    },
+    {
+      "name": "Fu Haifeng and Cai Yun",
+      "facet": "Badminton champions",
+      "known_at": 13
+    },
+    {
+      "name": "Zheng Siwei and Huang Yaqiong",
+      "facet": "Badminton champions",
+      "known_at": 10
+    },
+    {
+      "name": "Chen Qingchen and Jia Yifan",
+      "facet": "Badminton champions",
+      "known_at": 11
+    },
+    {
+      "name": "Ge Fei and Gu Jun",
+      "facet": "Badminton champions",
+      "known_at": 14
+    },
+    {
+      "name": "Yang Yang (badminton)",
+      "facet": "Badminton champions",
+      "known_at": 15
+    },
+    {
+      "name": "Han Aiping",
+      "facet": "Badminton champions",
+      "known_at": 15,
+      "retired": "unaskable: Han Aiping's record is too obscure for these options, and I'm not confident of the details."
+    },
+    {
+      "name": "Huang Xu",
+      "facet": "Gymnastics legends",
+      "known_at": 14
+    },
+    {
+      "name": "Zhou Yaqin",
+      "facet": "Gymnastics legends",
+      "known_at": 10
+    },
+    {
+      "name": "Liu Yang (gymnast)",
+      "facet": "Gymnastics legends",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Zhilei",
+      "facet": "Weightlifting, boxing and martial arts",
+      "known_at": 12
+    },
+    {
+      "name": "Li Qian (boxer)",
+      "facet": "Weightlifting, boxing and martial arts",
+      "known_at": 14
+    },
+    {
+      "name": "Zhang Weili",
+      "facet": "Weightlifting, boxing and martial arts",
+      "known_at": 10
+    },
+    {
+      "name": "Wu Jingyu",
+      "facet": "Weightlifting, boxing and martial arts",
+      "known_at": 12
+    },
+    {
+      "name": "Zhuang Xiaoyan",
+      "facet": "Weightlifting, boxing and martial arts",
+      "known_at": 14
+    },
+    {
+      "name": "Xian Dongmei",
+      "facet": "Weightlifting, boxing and martial arts",
+      "known_at": 14
+    },
+    {
+      "name": "Tong Wen",
+      "facet": "Weightlifting, boxing and martial arts",
+      "known_at": 14
+    },
+    {
+      "name": "Wang Jiao",
+      "facet": "Weightlifting, boxing and martial arts",
+      "known_at": 15
+    },
+    {
+      "name": "Li Duihong",
+      "facet": "Shooting, archery and fencing",
+      "known_at": 15
+    },
+    {
+      "name": "Yi Siling",
+      "facet": "Shooting, archery and fencing",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Juanjuan",
+      "facet": "Shooting, archery and fencing",
+      "known_at": 13
+    },
+    {
+      "name": "Li Lingjuan",
+      "facet": "Shooting, archery and fencing",
+      "known_at": 15
+    },
+    {
+      "name": "Zhong Man",
+      "facet": "Shooting, archery and fencing",
+      "known_at": 13
+    },
+    {
+      "name": "Lei Sheng",
+      "facet": "Shooting, archery and fencing",
+      "known_at": 14
+    },
+    {
+      "name": "Sun Yiwen",
+      "facet": "Shooting, archery and fencing",
+      "known_at": 12
+    },
+    {
+      "name": "Sun Yujie",
+      "facet": "Shooting, archery and fencing",
+      "known_at": 15
+    },
+    {
+      "name": "Yang Yang (short track)",
+      "facet": "Winter sports stars",
+      "known_at": 12
+    },
+    {
+      "name": "Zhou Yang",
+      "facet": "Winter sports stars",
+      "known_at": 12
+    },
+    {
+      "name": "Han Xiaopeng",
+      "facet": "Winter sports stars",
+      "known_at": 13
+    },
+    {
+      "name": "Li Nina",
+      "facet": "Winter sports stars",
+      "known_at": 14
+    },
+    {
+      "name": "Sui Wenjing and Han Cong",
+      "facet": "Winter sports stars",
+      "known_at": 10
+    },
+    {
+      "name": "Chen Lu",
+      "facet": "Winter sports stars",
+      "known_at": 14
+    },
+    {
+      "name": "Jin Boyang",
+      "facet": "Winter sports stars",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Jiayu",
+      "facet": "Winter sports stars",
+      "known_at": 14
+    },
+    {
+      "name": "Xie Jun",
+      "facet": "Chess and Go masters",
+      "known_at": 12
+    },
+    {
+      "name": "Hou Yifan",
+      "facet": "Chess and Go masters",
+      "known_at": 10
+    },
+    {
+      "name": "Ju Wenjun",
+      "facet": "Chess and Go masters",
+      "known_at": 12
+    },
+    {
+      "name": "Ding Liren",
+      "facet": "Chess and Go masters",
+      "known_at": 9
+    },
+    {
+      "name": "Wei Yi",
+      "facet": "Chess and Go masters",
+      "known_at": 13
+    },
+    {
+      "name": "Zhu Chen",
+      "facet": "Chess and Go masters",
+      "known_at": 14
+    },
+    {
+      "name": "Tan Zhongyi",
+      "facet": "Chess and Go masters",
+      "known_at": 15
+    },
+    {
+      "name": "China-Japan Super Go series (中日围棋擂台赛)",
+      "facet": "Chess and Go masters",
+      "known_at": 13
+    },
+    {
+      "name": "Chen Yaoye",
+      "facet": "Chess and Go masters",
+      "known_at": 14,
+      "retired": "unaskable: Not confident of Chen Yaoye's key dates, such as when he became 9-dan."
+    }
+  ]
+}

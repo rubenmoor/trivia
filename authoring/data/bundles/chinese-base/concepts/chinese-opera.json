@@ -1,0 +1,1092 @@
+{
+  "subcategory": "chinese-opera",
+  "facets": [
+    "Peking opera roles",
+    "Face paint colours and meanings",
+    "Masters and famous performers",
+    "Famous Peking opera plays",
+    "Kunqu and The Peony Pavilion",
+    "Yue, Huangmei and regional forms",
+    "Sichuan opera and stage tricks",
+    "Costumes, props and headdresses",
+    "Music, instruments and singing",
+    "Stage conventions and gestures",
+    "Opera history and troupes",
+    "Opera in films, sayings and daily life"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sheng (生)",
+      "facet": "Peking opera roles",
+      "known_at": 5
+    },
+    {
+      "name": "Dan (旦)",
+      "facet": "Peking opera roles",
+      "known_at": 5
+    },
+    {
+      "name": "Jing (净)",
+      "facet": "Peking opera roles",
+      "known_at": 6
+    },
+    {
+      "name": "Mo (末)",
+      "facet": "Peking opera roles",
+      "known_at": 11
+    },
+    {
+      "name": "Laosheng (老生)",
+      "facet": "Peking opera roles",
+      "known_at": 9
+    },
+    {
+      "name": "Xiaosheng (小生)",
+      "facet": "Peking opera roles",
+      "known_at": 8
+    },
+    {
+      "name": "Wusheng (武生)",
+      "facet": "Peking opera roles",
+      "known_at": 9
+    },
+    {
+      "name": "Hongsheng (红生)",
+      "facet": "Peking opera roles",
+      "known_at": 13
+    },
+    {
+      "name": "Wawasheng (娃娃生)",
+      "facet": "Peking opera roles",
+      "known_at": 13
+    },
+    {
+      "name": "Qingyi (青衣)",
+      "facet": "Peking opera roles",
+      "known_at": 9
+    },
+    {
+      "name": "Huadan (花旦)",
+      "facet": "Peking opera roles",
+      "known_at": 8
+    },
+    {
+      "name": "Laodan (老旦)",
+      "facet": "Peking opera roles",
+      "known_at": 9
+    },
+    {
+      "name": "Wudan (武旦)",
+      "facet": "Peking opera roles",
+      "known_at": 10
+    },
+    {
+      "name": "Daomadan (刀马旦)",
+      "facet": "Peking opera roles",
+      "known_at": 11
+    },
+    {
+      "name": "Caidan (彩旦)",
+      "facet": "Peking opera roles",
+      "known_at": 12
+    },
+    {
+      "name": "Hualian (花脸)",
+      "facet": "Peking opera roles",
+      "known_at": 8
+    },
+    {
+      "name": "Tongchui (铜锤花脸)",
+      "facet": "Peking opera roles",
+      "known_at": 13
+    },
+    {
+      "name": "Wenchou (文丑)",
+      "facet": "Peking opera roles",
+      "known_at": 11
+    },
+    {
+      "name": "Wuchou (武丑)",
+      "facet": "Peking opera roles",
+      "known_at": 11
+    },
+    {
+      "name": "Nandan (男旦)",
+      "facet": "Peking opera roles",
+      "known_at": 9
+    },
+    {
+      "name": "Lianpu (脸谱)",
+      "facet": "Face paint colours and meanings",
+      "known_at": 3
+    },
+    {
+      "name": "Red face",
+      "facet": "Face paint colours and meanings",
+      "known_at": 3
+    },
+    {
+      "name": "Black face",
+      "facet": "Face paint colours and meanings",
+      "known_at": 3
+    },
+    {
+      "name": "White face",
+      "facet": "Face paint colours and meanings",
+      "known_at": 4
+    },
+    {
+      "name": "Blue face",
+      "facet": "Face paint colours and meanings",
+      "known_at": 6
+    },
+    {
+      "name": "Green face",
+      "facet": "Face paint colours and meanings",
+      "known_at": 7
+    },
+    {
+      "name": "Yellow face",
+      "facet": "Face paint colours and meanings",
+      "known_at": 7
+    },
+    {
+      "name": "Purple face",
+      "facet": "Face paint colours and meanings",
+      "known_at": 8
+    },
+    {
+      "name": "Gold and silver faces",
+      "facet": "Face paint colours and meanings",
+      "known_at": 8
+    },
+    {
+      "name": "Tofu patch (豆腐块)",
+      "facet": "Face paint colours and meanings",
+      "known_at": 8
+    },
+    {
+      "name": "Crescent moon on the forehead",
+      "facet": "Face paint colours and meanings",
+      "known_at": 5
+    },
+    {
+      "name": "Bao Zheng",
+      "facet": "Face paint colours and meanings",
+      "known_at": 3
+    },
+    {
+      "name": "Dou Erdun",
+      "facet": "Face paint colours and meanings",
+      "known_at": 6
+    },
+    {
+      "name": "Zhong Kui",
+      "facet": "Face paint colours and meanings",
+      "known_at": 9
+    },
+    {
+      "name": "Hand-drawn face (勾脸)",
+      "facet": "Face paint colours and meanings",
+      "known_at": 10
+    },
+    {
+      "name": "Four Great Dan (四大名旦)",
+      "facet": "Masters and famous performers",
+      "known_at": 9
+    },
+    {
+      "name": "Cheng Yanqiu",
+      "facet": "Masters and famous performers",
+      "known_at": 11
+    },
+    {
+      "name": "Shang Xiaoyun",
+      "facet": "Masters and famous performers",
+      "known_at": 12
+    },
+    {
+      "name": "Xun Huisheng",
+      "facet": "Masters and famous performers",
+      "known_at": 12
+    },
+    {
+      "name": "Cheng Changgeng",
+      "facet": "Masters and famous performers",
+      "known_at": 12
+    },
+    {
+      "name": "Tan Xinpei",
+      "facet": "Masters and famous performers",
+      "known_at": 11
+    },
+    {
+      "name": "Yu Shuyan",
+      "facet": "Masters and famous performers",
+      "known_at": 13
+    },
+    {
+      "name": "Ma Lianliang",
+      "facet": "Masters and famous performers",
+      "known_at": 12
+    },
+    {
+      "name": "Zhou Xinfang",
+      "facet": "Masters and famous performers",
+      "known_at": 12
+    },
+    {
+      "name": "Yang Xiaolou",
+      "facet": "Masters and famous performers",
+      "known_at": 12
+    },
+    {
+      "name": "Qiu Shengrong",
+      "facet": "Masters and famous performers",
+      "known_at": 14
+    },
+    {
+      "name": "Yuan Shihai",
+      "facet": "Masters and famous performers",
+      "known_at": 14
+    },
+    {
+      "name": "Zhang Junqiu",
+      "facet": "Masters and famous performers",
+      "known_at": 13
+    },
+    {
+      "name": "Li Shaochun",
+      "facet": "Masters and famous performers",
+      "known_at": 14
+    },
+    {
+      "name": "Yan Huizhu",
+      "facet": "Masters and famous performers",
+      "known_at": 13
+    },
+    {
+      "name": "Wei Changsheng",
+      "facet": "Masters and famous performers",
+      "known_at": 14
+    },
+    {
+      "name": "Li Yugang",
+      "facet": "Masters and famous performers",
+      "known_at": 10
+    },
+    {
+      "name": "Yu Kuizhi",
+      "facet": "Masters and famous performers",
+      "known_at": 12
+    },
+    {
+      "name": "Mei Baojiu",
+      "facet": "Masters and famous performers",
+      "known_at": 12
+    },
+    {
+      "name": "Havoc in Heaven (闹天宫)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 4
+    },
+    {
+      "name": "The Empty City Stratagem (空城计)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 6
+    },
+    {
+      "name": "At the Crossroads (三岔口)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 9
+    },
+    {
+      "name": "The Case of Qin Xianglian (铡美案)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 8
+    },
+    {
+      "name": "Lady White Snake (白蛇传)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 4
+    },
+    {
+      "name": "Mu Guiying Takes Command (穆桂英挂帅)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 8
+    },
+    {
+      "name": "Silang Visits His Mother (四郎探母)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 11
+    },
+    {
+      "name": "The Fisherman's Revenge (打渔杀家)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 12
+    },
+    {
+      "name": "Su San Under Escort (苏三起解)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 11
+    },
+    {
+      "name": "The Red Lantern (红灯记)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 9
+    },
+    {
+      "name": "Taking Tiger Mountain by Strategy (智取威虎山)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 8
+    },
+    {
+      "name": "Shajiabang (沙家浜)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 10
+    },
+    {
+      "name": "The Unicorn Purse (锁麟囊)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 13
+    },
+    {
+      "name": "Women Generals of the Yang Family (杨门女将)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 9
+    },
+    {
+      "name": "Picking Up the Jade Bracelet (拾玉镯)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 12
+    },
+    {
+      "name": "Lost Jieting (失街亭)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 12
+    },
+    {
+      "name": "The Hegemon King's Banquet: Meeting at Qunying (群英会)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 13
+    },
+    {
+      "name": "Stealing the Imperial Horse (盗御马)",
+      "facet": "Famous Peking opera plays",
+      "known_at": 14
+    },
+    {
+      "name": "Liu Mengmei",
+      "facet": "Kunqu and The Peony Pavilion",
+      "known_at": 12
+    },
+    {
+      "name": "Wandering in the Garden, Waking from a Dream (游园惊梦)",
+      "facet": "Kunqu and The Peony Pavilion",
+      "known_at": 11
+    },
+    {
+      "name": "The Palace of Eternal Youth (长生殿)",
+      "facet": "Kunqu and The Peony Pavilion",
+      "known_at": 11
+    },
+    {
+      "name": "The Peach Blossom Fan (桃花扇)",
+      "facet": "Kunqu and The Peony Pavilion",
+      "known_at": 11
+    },
+    {
+      "name": "Hong Sheng",
+      "facet": "Kunqu and The Peony Pavilion",
+      "known_at": 13
+    },
+    {
+      "name": "Kong Shangren",
+      "facet": "Kunqu and The Peony Pavilion",
+      "known_at": 13
+    },
+    {
+      "name": "Kunshan",
+      "facet": "Kunqu and The Peony Pavilion",
+      "known_at": 8
+    },
+    {
+      "name": "Water-mill tune (水磨调)",
+      "facet": "Kunqu and The Peony Pavilion",
+      "known_at": 13
+    },
+    {
+      "name": "Youth Version of The Peony Pavilion",
+      "facet": "Kunqu and The Peony Pavilion",
+      "known_at": 12
+    },
+    {
+      "name": "Bai Xianyong",
+      "facet": "Kunqu and The Peony Pavilion",
+      "known_at": 13
+    },
+    {
+      "name": "Fifteen Strings of Cash (十五贯)",
+      "facet": "Kunqu and The Peony Pavilion",
+      "known_at": 12
+    },
+    {
+      "name": "The Story of the Western Chamber (西厢记)",
+      "facet": "Kunqu and The Peony Pavilion",
+      "known_at": 9
+    },
+    {
+      "name": "Four Dreams of Linchuan (临川四梦)",
+      "facet": "Kunqu and The Peony Pavilion",
+      "known_at": 13
+    },
+    {
+      "name": "Qupai (曲牌)",
+      "facet": "Kunqu and The Peony Pavilion",
+      "known_at": 14
+    },
+    {
+      "name": "Mother of a Hundred Operas (百戏之祖)",
+      "facet": "Kunqu and The Peony Pavilion",
+      "known_at": 11
+    },
+    {
+      "name": "The Butterfly Lovers (梁山伯与祝英台)",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 4
+    },
+    {
+      "name": "Dream of the Red Chamber (Yue opera)",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 9
+    },
+    {
+      "name": "The Female Consort Prince (女驸马)",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 9
+    },
+    {
+      "name": "Yan Fengying",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 11
+    },
+    {
+      "name": "Yuan Xuefen",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 12
+    },
+    {
+      "name": "Shengzhou",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 12
+    },
+    {
+      "name": "Anqing",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 11
+    },
+    {
+      "name": "Qinqiang",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 9
+    },
+    {
+      "name": "Henan opera (豫剧)",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 7
+    },
+    {
+      "name": "Hua Mulan (豫剧)",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 9
+    },
+    {
+      "name": "Chang Xiangyu",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 12
+    },
+    {
+      "name": "Cantonese opera",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 7
+    },
+    {
+      "name": "Ping opera (评剧)",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 10
+    },
+    {
+      "name": "Gezaixi (歌仔戏)",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 11
+    },
+    {
+      "name": "Jin opera (晋剧)",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 12
+    },
+    {
+      "name": "Huagu opera (花鼓戏)",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 10
+    },
+    {
+      "name": "Liu Hai Chops Wood (刘海砍樵)",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 10
+    },
+    {
+      "name": "Chaozhou opera (潮剧)",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 12
+    },
+    {
+      "name": "Shadow puppet play (皮影戏)",
+      "facet": "Yue, Huangmei and regional forms",
+      "known_at": 4
+    },
+    {
+      "name": "Sichuan opera",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 4
+    },
+    {
+      "name": "Face-changing (变脸)",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 3
+    },
+    {
+      "name": "Fire-spitting (吐火)",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 6
+    },
+    {
+      "name": "Gaoqiang (高腔)",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 12
+    },
+    {
+      "name": "Rolling the lamp (滚灯)",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 10
+    },
+    {
+      "name": "Hiding the knife (藏刀)",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 12
+    },
+    {
+      "name": "Pulling the mask (扯脸)",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 11
+    },
+    {
+      "name": "Wiping the face (抹脸)",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 11
+    },
+    {
+      "name": "Blowing the face (吹脸)",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 12
+    },
+    {
+      "name": "Hair-whirling (甩发)",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 10
+    },
+    {
+      "name": "Five tunes of Sichuan opera (五腔)",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 13
+    },
+    {
+      "name": "Bangqiang chorus (帮腔)",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 12
+    },
+    {
+      "name": "Chengdu teahouse",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 7
+    },
+    {
+      "name": "Kicking the eye (踢慧眼)",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 13
+    },
+    {
+      "name": "Somersaults (翻跟头)",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 4
+    },
+    {
+      "name": "Beard-tossing (甩髯)",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 11
+    },
+    {
+      "name": "Fan face-changing",
+      "facet": "Sichuan opera and stage tricks",
+      "known_at": 10
+    },
+    {
+      "name": "Water sleeves (水袖)",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 6
+    },
+    {
+      "name": "Pheasant feathers (翎子)",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 7
+    },
+    {
+      "name": "Python robe (蟒袍)",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 10
+    },
+    {
+      "name": "Armour costume (靠)",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 11
+    },
+    {
+      "name": "Back flags (靠旗)",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 8
+    },
+    {
+      "name": "Horsewhip (马鞭)",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 6
+    },
+    {
+      "name": "Oar (桨)",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 8
+    },
+    {
+      "name": "Stage beard (髯口)",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 8
+    },
+    {
+      "name": "Thick-soled boots (厚底靴)",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 9
+    },
+    {
+      "name": "Gauze hat (乌纱帽)",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 6
+    },
+    {
+      "name": "Kingfisher-feather headdress (点翠)",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 12
+    },
+    {
+      "name": "One table, two chairs (一桌二椅)",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 10
+    },
+    {
+      "name": "Costume trunk (衣箱)",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 13
+    },
+    {
+      "name": "Fly whisk (拂尘)",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 8
+    },
+    {
+      "name": "Folding fan",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 5
+    },
+    {
+      "name": "Red-tasselled spear (红缨枪)",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 5
+    },
+    {
+      "name": "Fake hair buns and wigs (头面)",
+      "facet": "Costumes, props and headdresses",
+      "known_at": 12
+    },
+    {
+      "name": "Erhu",
+      "facet": "Music, instruments and singing",
+      "known_at": 4
+    },
+    {
+      "name": "Suona",
+      "facet": "Music, instruments and singing",
+      "known_at": 5
+    },
+    {
+      "name": "Danpi drum (单皮鼓)",
+      "facet": "Music, instruments and singing",
+      "known_at": 12
+    },
+    {
+      "name": "Wooden clappers (板)",
+      "facet": "Music, instruments and singing",
+      "known_at": 7
+    },
+    {
+      "name": "Gong",
+      "facet": "Music, instruments and singing",
+      "known_at": 2
+    },
+    {
+      "name": "Cymbals",
+      "facet": "Music, instruments and singing",
+      "known_at": 3
+    },
+    {
+      "name": "Xipi and Erhuang (西皮二黄)",
+      "facet": "Music, instruments and singing",
+      "known_at": 11
+    },
+    {
+      "name": "Dizi",
+      "facet": "Music, instruments and singing",
+      "known_at": 5
+    },
+    {
+      "name": "Falsetto (小嗓)",
+      "facet": "Music, instruments and singing",
+      "known_at": 10
+    },
+    {
+      "name": "Nianbai (念白)",
+      "facet": "Music, instruments and singing",
+      "known_at": 11
+    },
+    {
+      "name": "Gong-and-drum patterns (锣鼓经)",
+      "facet": "Music, instruments and singing",
+      "known_at": 13
+    },
+    {
+      "name": "Banyan rhythm (板眼)",
+      "facet": "Music, instruments and singing",
+      "known_at": 12
+    },
+    {
+      "name": "Liushui ban (流水板)",
+      "facet": "Music, instruments and singing",
+      "known_at": 14
+    },
+    {
+      "name": "Wenchang and wuchang (文场武场)",
+      "facet": "Music, instruments and singing",
+      "known_at": 13
+    },
+    {
+      "name": "Singing, reciting, acting, fighting (唱念做打)",
+      "facet": "Stage conventions and gestures",
+      "known_at": 8
+    },
+    {
+      "name": "Liangxiang (亮相)",
+      "facet": "Stage conventions and gestures",
+      "known_at": 10
+    },
+    {
+      "name": "Yuanchang (圆场)",
+      "facet": "Stage conventions and gestures",
+      "known_at": 11
+    },
+    {
+      "name": "Orchid fingers (兰花指)",
+      "facet": "Stage conventions and gestures",
+      "known_at": 7
+    },
+    {
+      "name": "Miming a door",
+      "facet": "Stage conventions and gestures",
+      "known_at": 7
+    },
+    {
+      "name": "Riding a horse with a whip",
+      "facet": "Stage conventions and gestures",
+      "known_at": 6
+    },
+    {
+      "name": "Shouting “Hao!” (叫好)",
+      "facet": "Stage conventions and gestures",
+      "known_at": 8
+    },
+    {
+      "name": "Qiba (起霸)",
+      "facet": "Stage conventions and gestures",
+      "known_at": 13
+    },
+    {
+      "name": "Zoubian (走边)",
+      "facet": "Stage conventions and gestures",
+      "known_at": 13
+    },
+    {
+      "name": "Longtao extras (龙套)",
+      "facet": "Stage conventions and gestures",
+      "known_at": 9
+    },
+    {
+      "name": "Entrance and exit doors (上场门、下场门)",
+      "facet": "Stage conventions and gestures",
+      "known_at": 12
+    },
+    {
+      "name": "Dachushou (打出手)",
+      "facet": "Stage conventions and gestures",
+      "known_at": 13
+    },
+    {
+      "name": "Fighting in the dark",
+      "facet": "Stage conventions and gestures",
+      "known_at": 10
+    },
+    {
+      "name": "Self-introduction poem (定场诗)",
+      "facet": "Stage conventions and gestures",
+      "known_at": 13
+    },
+    {
+      "name": "Four soldiers as an army",
+      "facet": "Stage conventions and gestures",
+      "known_at": 9
+    },
+    {
+      "name": "Flag as wind or water",
+      "facet": "Stage conventions and gestures",
+      "known_at": 10
+    },
+    {
+      "name": "Splits and leg kicks (腿功)",
+      "facet": "Stage conventions and gestures",
+      "known_at": 9
+    },
+    {
+      "name": "Eye technique (眼神)",
+      "facet": "Stage conventions and gestures",
+      "known_at": 10
+    },
+    {
+      "name": "Four Great Anhui Troupes (四大徽班)",
+      "facet": "Opera history and troupes",
+      "known_at": 9
+    },
+    {
+      "name": "Anhui troupes enter Beijing (徽班进京)",
+      "facet": "Opera history and troupes",
+      "known_at": 9
+    },
+    {
+      "name": "Han opera (汉剧)",
+      "facet": "Opera history and troupes",
+      "known_at": 12
+    },
+    {
+      "name": "Yuan zaju (元杂剧)",
+      "facet": "Opera history and troupes",
+      "known_at": 10
+    },
+    {
+      "name": "Huguang Guild Hall (湖广会馆)",
+      "facet": "Opera history and troupes",
+      "known_at": 13
+    },
+    {
+      "name": "Changyin Pavilion (畅音阁)",
+      "facet": "Opera history and troupes",
+      "known_at": 12
+    },
+    {
+      "name": "Fuliancheng school (富连成)",
+      "facet": "Opera history and troupes",
+      "known_at": 14
+    },
+    {
+      "name": "Model operas (样板戏)",
+      "facet": "Opera history and troupes",
+      "known_at": 9
+    },
+    {
+      "name": "Mei Lanfang's tour of Japan",
+      "facet": "Opera history and troupes",
+      "known_at": 13
+    },
+    {
+      "name": "UNESCO intangible heritage list",
+      "facet": "Opera history and troupes",
+      "known_at": 8
+    },
+    {
+      "name": "National Peking Opera Company (国家京剧院)",
+      "facet": "Opera history and troupes",
+      "known_at": 12
+    },
+    {
+      "name": "Nanxi (南戏)",
+      "facet": "Opera history and troupes",
+      "known_at": 12
+    },
+    {
+      "name": "Grand National Theatre (国家大剧院)",
+      "facet": "Opera history and troupes",
+      "known_at": 7
+    },
+    {
+      "name": "Four great schools of tunes (四大声腔)",
+      "facet": "Opera history and troupes",
+      "known_at": 14
+    },
+    {
+      "name": "Farewell My Concubine (1993 film)",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 9
+    },
+    {
+      "name": "Chen Kaige",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Leslie Cheung",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Forever Enthralled (梅兰芳, 2008 film)",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 11
+    },
+    {
+      "name": "The King of Masks (变脸, 1996 film)",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 11
+    },
+    {
+      "name": "Dingjun Mountain (定军山, 1905 film)",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 9
+    },
+    {
+      "name": "Shuo Chang Lianpu (说唱脸谱)",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 5
+    },
+    {
+      "name": "唱红脸唱白脸 (chàng hóng liǎn chàng bái liǎn, “one plays the red face, one the white face”)",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 7
+    },
+    {
+      "name": "跑龙套 (pǎo lóngtào, “running as an extra”)",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 8
+    },
+    {
+      "name": "粉墨登场 (fěn mò dēng chǎng, “making up and going on stage”)",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 10
+    },
+    {
+      "name": "唱对台戏 (chàng duìtái xì, “staging a rival show”)",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 10
+    },
+    {
+      "name": "压轴 (yāzhòu, “the second-to-last act”)",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 10
+    },
+    {
+      "name": "台上一分钟，台下十年功 (“one minute on stage, ten years of practice”)",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 6
+    },
+    {
+      "name": "Piaoyou (票友)",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 11
+    },
+    {
+      "name": "Xiyuan teahouse theatre (戏园子)",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Peking opera mask souvenir",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 3
+    },
+    {
+      "name": "Opera in the Spring Festival Gala",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 5
+    },
+    {
+      "name": "Village stage (戏台)",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 7
+    },
+    {
+      "name": "Peking Opera Blues (刀马旦, 1986 film)",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 13
+    },
+    {
+      "name": "Opera in Lu Xun's “Village Opera” (社戏)",
+      "facet": "Opera in films, sayings and daily life",
+      "known_at": 8
+    }
+  ]
+}

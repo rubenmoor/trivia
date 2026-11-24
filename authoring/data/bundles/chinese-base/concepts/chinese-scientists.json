@@ -1,0 +1,1022 @@
+{
+  "subcategory": "chinese-scientists",
+  "facets": [
+    "Rice, wheat and farm science",
+    "Medicine and public health",
+    "Mathematicians and famous problems",
+    "Physicists and Nobel Prizes",
+    "Atomic and hydrogen bomb scientists",
+    "Rockets, missiles and early aviation",
+    "Railways, bridges and big engineering",
+    "Geology, oil and weather science",
+    "Chemistry and industry pioneers",
+    "Biology firsts: insulin to cloned monkeys",
+    "Computers, typesetting and quantum science",
+    "Telescopes and big science facilities"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 1,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 4,
+      "science_news": 4,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 3,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Super hybrid rice",
+      "facet": "Rice, wheat and farm science",
+      "known_at": 7
+    },
+    {
+      "name": "Seawater rice",
+      "facet": "Rice, wheat and farm science",
+      "known_at": 7
+    },
+    {
+      "name": "Three-line hybrid rice system",
+      "facet": "Rice, wheat and farm science",
+      "known_at": 12
+    },
+    {
+      "name": "Two-line hybrid rice",
+      "facet": "Rice, wheat and farm science",
+      "known_at": 13
+    },
+    {
+      "name": "Wild abortive rice (野败)",
+      "facet": "Rice, wheat and farm science",
+      "known_at": 12
+    },
+    {
+      "name": "Li Bihu",
+      "facet": "Rice, wheat and farm science",
+      "known_at": 14
+    },
+    {
+      "name": "Nanfan breeding base in Sanya",
+      "facet": "Rice, wheat and farm science",
+      "known_at": 11
+    },
+    {
+      "name": "Ding Ying",
+      "facet": "Rice, wheat and farm science",
+      "known_at": 13
+    },
+    {
+      "name": "Li Zhensheng",
+      "facet": "Rice, wheat and farm science",
+      "known_at": 11
+    },
+    {
+      "name": "Xiaoyan 6 wheat",
+      "facet": "Rice, wheat and farm science",
+      "known_at": 13
+    },
+    {
+      "name": "Bao Wenkui",
+      "facet": "Rice, wheat and farm science",
+      "known_at": 14
+    },
+    {
+      "name": "Xie Hua'an",
+      "facet": "Rice, wheat and farm science",
+      "known_at": 14
+    },
+    {
+      "name": "Shanyou 63",
+      "facet": "Rice, wheat and farm science",
+      "known_at": 14
+    },
+    {
+      "name": "Li Denghai",
+      "facet": "Rice, wheat and farm science",
+      "known_at": 13
+    },
+    {
+      "name": "Juncao",
+      "facet": "Rice, wheat and farm science",
+      "known_at": 12
+    },
+    {
+      "name": "Bt insect-resistant cotton",
+      "facet": "Rice, wheat and farm science",
+      "known_at": 12
+    },
+    {
+      "name": "Project 523",
+      "facet": "Medicine and public health",
+      "known_at": 12
+    },
+    {
+      "name": "Handbook of Prescriptions for Emergencies (肘后备急方)",
+      "facet": "Medicine and public health",
+      "known_at": 11
+    },
+    {
+      "name": "Manchurian plague of 1910",
+      "facet": "Medicine and public health",
+      "known_at": 12
+    },
+    {
+      "name": "Wu mask",
+      "facet": "Medicine and public health",
+      "known_at": 13
+    },
+    {
+      "name": "Tang Feifan",
+      "facet": "Medicine and public health",
+      "known_at": 13
+    },
+    {
+      "name": "Zhong Nanshan",
+      "facet": "Medicine and public health",
+      "known_at": 5
+    },
+    {
+      "name": "Lin Qiaozhi",
+      "facet": "Medicine and public health",
+      "known_at": 9
+    },
+    {
+      "name": "Wu Mengchao",
+      "facet": "Medicine and public health",
+      "known_at": 11
+    },
+    {
+      "name": "Gu Fangzhou",
+      "facet": "Medicine and public health",
+      "known_at": 9
+    },
+    {
+      "name": "Polio sugar pill vaccine",
+      "facet": "Medicine and public health",
+      "known_at": 6
+    },
+    {
+      "name": "Zhang Tingdong",
+      "facet": "Medicine and public health",
+      "known_at": 14
+    },
+    {
+      "name": "Arsenic trioxide for leukemia",
+      "facet": "Medicine and public health",
+      "known_at": 13
+    },
+    {
+      "name": "Patriotic Health Campaign",
+      "facet": "Medicine and public health",
+      "known_at": 11
+    },
+    {
+      "name": "Li Lanjuan",
+      "facet": "Medicine and public health",
+      "known_at": 9
+    },
+    {
+      "name": "Hua Luogeng",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 5
+    },
+    {
+      "name": "Overall planning method (统筹方法)",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 8
+    },
+    {
+      "name": "Optimization method (优选法)",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 12
+    },
+    {
+      "name": "Xiong Qinglai",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 12
+    },
+    {
+      "name": "Chen's theorem (1+2)",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 9
+    },
+    {
+      "name": "Xu Chi's reportage “Goldbach Conjecture”",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 12
+    },
+    {
+      "name": "Su Buqing",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 10
+    },
+    {
+      "name": "Chern Shiing-shen",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 11
+    },
+    {
+      "name": "Chern classes",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 14
+    },
+    {
+      "name": "Wu Wenjun",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 12
+    },
+    {
+      "name": "Wu's method of mechanical theorem proving",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 14
+    },
+    {
+      "name": "Feng Kang",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 13
+    },
+    {
+      "name": "Finite element method",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 13
+    },
+    {
+      "name": "Yau Shing-Tung",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 10
+    },
+    {
+      "name": "Calabi–Yau manifold",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 14
+    },
+    {
+      "name": "Fields Medal",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Yitang",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 11
+    },
+    {
+      "name": "Twin prime conjecture",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 10
+    },
+    {
+      "name": "Hua Luogeng Cup (华杯赛)",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 7
+    },
+    {
+      "name": "Wang Yuan",
+      "facet": "Mathematicians and famous problems",
+      "known_at": 14
+    },
+    {
+      "name": "Yang Zhenning",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 7
+    },
+    {
+      "name": "Lee Tsung-dao",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 9
+    },
+    {
+      "name": "Parity violation",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 12
+    },
+    {
+      "name": "Wu Chien-Shiung",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 11
+    },
+    {
+      "name": "Yang–Mills theory",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 13
+    },
+    {
+      "name": "Samuel Ting",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 11
+    },
+    {
+      "name": "J/psi particle",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 14
+    },
+    {
+      "name": "Charles Kao",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 10
+    },
+    {
+      "name": "Daniel Tsui",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 13
+    },
+    {
+      "name": "Fractional quantum Hall effect",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 14
+    },
+    {
+      "name": "Steven Chu",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 13
+    },
+    {
+      "name": "Laser cooling",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 13
+    },
+    {
+      "name": "Wu Youxun",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 12
+    },
+    {
+      "name": "Ye Qisun",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 13
+    },
+    {
+      "name": "Zhao Zhongyao",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 13
+    },
+    {
+      "name": "Huang Kun",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 12
+    },
+    {
+      "name": "Xie Xide",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 12
+    },
+    {
+      "name": "Zhou Peiyuan",
+      "facet": "Physicists and Nobel Prizes",
+      "known_at": 13
+    },
+    {
+      "name": "He Zehui",
+      "facet": "Atomic and hydrogen bomb scientists",
+      "known_at": 12
+    },
+    {
+      "name": "Wang Ganchang",
+      "facet": "Atomic and hydrogen bomb scientists",
+      "known_at": 11
+    },
+    {
+      "name": "Yu Min",
+      "facet": "Atomic and hydrogen bomb scientists",
+      "known_at": 10
+    },
+    {
+      "name": "Zhou Guangzhao",
+      "facet": "Atomic and hydrogen bomb scientists",
+      "known_at": 12
+    },
+    {
+      "name": "Peng Huanwu",
+      "facet": "Atomic and hydrogen bomb scientists",
+      "known_at": 12
+    },
+    {
+      "name": "Cheng Kaijia",
+      "facet": "Atomic and hydrogen bomb scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Zhu Guangya",
+      "facet": "Atomic and hydrogen bomb scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Lin Junde",
+      "facet": "Atomic and hydrogen bomb scientists",
+      "known_at": 12
+    },
+    {
+      "name": "Huang Xuhua",
+      "facet": "Atomic and hydrogen bomb scientists",
+      "known_at": 10
+    },
+    {
+      "name": "Nuclear submarine",
+      "facet": "Atomic and hydrogen bomb scientists",
+      "known_at": 7
+    },
+    {
+      "name": "Project 596",
+      "facet": "Atomic and hydrogen bomb scientists",
+      "known_at": 12
+    },
+    {
+      "name": "China's first atomic bomb test (1964)",
+      "facet": "Atomic and hydrogen bomb scientists",
+      "known_at": 7
+    },
+    {
+      "name": "China's first hydrogen bomb test (1967)",
+      "facet": "Atomic and hydrogen bomb scientists",
+      "known_at": 9
+    },
+    {
+      "name": "Jinyintan Base 221",
+      "facet": "Atomic and hydrogen bomb scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Two Bombs, One Satellite Merit Medal",
+      "facet": "Atomic and hydrogen bomb scientists",
+      "known_at": 11
+    },
+    {
+      "name": "Qian Xuesen's return to China (1955)",
+      "facet": "Rockets, missiles and early aviation",
+      "known_at": 9
+    },
+    {
+      "name": "Engineering cybernetics",
+      "facet": "Rockets, missiles and early aviation",
+      "known_at": 14
+    },
+    {
+      "name": "Qian Weichang",
+      "facet": "Rockets, missiles and early aviation",
+      "known_at": 10
+    },
+    {
+      "name": "Dongfeng-1 missile",
+      "facet": "Rockets, missiles and early aviation",
+      "known_at": 11
+    },
+    {
+      "name": "Ren Xinmin",
+      "facet": "Rockets, missiles and early aviation",
+      "known_at": 13
+    },
+    {
+      "name": "Huang Weilu",
+      "facet": "Rockets, missiles and early aviation",
+      "known_at": 13
+    },
+    {
+      "name": "Tu Shou'e",
+      "facet": "Rockets, missiles and early aviation",
+      "known_at": 14
+    },
+    {
+      "name": "Liang Shoupan",
+      "facet": "Rockets, missiles and early aviation",
+      "known_at": 14
+    },
+    {
+      "name": "Sun Jiadong",
+      "facet": "Rockets, missiles and early aviation",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Xiji",
+      "facet": "Rockets, missiles and early aviation",
+      "known_at": 14
+    },
+    {
+      "name": "Gu Songfen",
+      "facet": "Rockets, missiles and early aviation",
+      "known_at": 13
+    },
+    {
+      "name": "Song Wencong",
+      "facet": "Rockets, missiles and early aviation",
+      "known_at": 13
+    },
+    {
+      "name": "Luo Yang",
+      "facet": "Rockets, missiles and early aviation",
+      "known_at": 11
+    },
+    {
+      "name": "J-15 carrier fighter",
+      "facet": "Rockets, missiles and early aviation",
+      "known_at": 9
+    },
+    {
+      "name": "Y-10 airliner",
+      "facet": "Rockets, missiles and early aviation",
+      "known_at": 13
+    },
+    {
+      "name": "C919 airliner",
+      "facet": "Rockets, missiles and early aviation",
+      "known_at": 6
+    },
+    {
+      "name": "Zigzag line at Qinglongqiao",
+      "facet": "Railways, bridges and big engineering",
+      "known_at": 7
+    },
+    {
+      "name": "Badaling Tunnel",
+      "facet": "Railways, bridges and big engineering",
+      "known_at": 9
+    },
+    {
+      "name": "Automatic coupler",
+      "facet": "Railways, bridges and big engineering",
+      "known_at": 10
+    },
+    {
+      "name": "Nanjing Yangtze River Bridge",
+      "facet": "Railways, bridges and big engineering",
+      "known_at": 8
+    },
+    {
+      "name": "Hong Kong–Zhuhai–Macao Bridge",
+      "facet": "Railways, bridges and big engineering",
+      "known_at": 4
+    },
+    {
+      "name": "Lin Ming",
+      "facet": "Railways, bridges and big engineering",
+      "known_at": 14
+    },
+    {
+      "name": "Huang Wanli",
+      "facet": "Railways, bridges and big engineering",
+      "known_at": 13
+    },
+    {
+      "name": "Sanmenxia Dam",
+      "facet": "Railways, bridges and big engineering",
+      "known_at": 12
+    },
+    {
+      "name": "Fuxing bullet train",
+      "facet": "Railways, bridges and big engineering",
+      "known_at": 3
+    },
+    {
+      "name": "Li Siguang",
+      "facet": "Geology, oil and weather science",
+      "known_at": 6
+    },
+    {
+      "name": "Geomechanics",
+      "facet": "Geology, oil and weather science",
+      "known_at": 12
+    },
+    {
+      "name": "Theory of continental oil formation (陆相生油)",
+      "facet": "Geology, oil and weather science",
+      "known_at": 12
+    },
+    {
+      "name": "Daqing Oilfield",
+      "facet": "Geology, oil and weather science",
+      "known_at": 6
+    },
+    {
+      "name": "Wang Jinxi",
+      "facet": "Geology, oil and weather science",
+      "known_at": 7
+    },
+    {
+      "name": "Shengli Oilfield",
+      "facet": "Geology, oil and weather science",
+      "known_at": 11
+    },
+    {
+      "name": "Weng Wenhao",
+      "facet": "Geology, oil and weather science",
+      "known_at": 13
+    },
+    {
+      "name": "Ding Wenjiang",
+      "facet": "Geology, oil and weather science",
+      "known_at": 13
+    },
+    {
+      "name": "Huang Jiqing",
+      "facet": "Geology, oil and weather science",
+      "known_at": 13
+    },
+    {
+      "name": "Liu Dongsheng",
+      "facet": "Geology, oil and weather science",
+      "known_at": 13
+    },
+    {
+      "name": "Zhu Kezhen",
+      "facet": "Geology, oil and weather science",
+      "known_at": 9
+    },
+    {
+      "name": "Phenology",
+      "facet": "Geology, oil and weather science",
+      "known_at": 10
+    },
+    {
+      "name": "Ye Duzheng",
+      "facet": "Geology, oil and weather science",
+      "known_at": 13
+    },
+    {
+      "name": "Huang Danian",
+      "facet": "Geology, oil and weather science",
+      "known_at": 11
+    },
+    {
+      "name": "Height of Mount Qomolangma (2020 survey)",
+      "facet": "Geology, oil and weather science",
+      "known_at": 7
+    },
+    {
+      "name": "Hou Debang",
+      "facet": "Chemistry and industry pioneers",
+      "known_at": 7
+    },
+    {
+      "name": "Hou's soda process",
+      "facet": "Chemistry and industry pioneers",
+      "known_at": 9
+    },
+    {
+      "name": "Soda ash",
+      "facet": "Chemistry and industry pioneers",
+      "known_at": 8
+    },
+    {
+      "name": "Fan Xudong",
+      "facet": "Chemistry and industry pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Yongli Soda Company",
+      "facet": "Chemistry and industry pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Xu Guangxian",
+      "facet": "Chemistry and industry pioneers",
+      "known_at": 11
+    },
+    {
+      "name": "Rare earth elements",
+      "facet": "Chemistry and industry pioneers",
+      "known_at": 8
+    },
+    {
+      "name": "Bayan Obo",
+      "facet": "Chemistry and industry pioneers",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Qinglian",
+      "facet": "Chemistry and industry pioneers",
+      "known_at": 9
+    },
+    {
+      "name": "Relative atomic mass",
+      "facet": "Chemistry and industry pioneers",
+      "known_at": 8
+    },
+    {
+      "name": "Huang Minlon reduction",
+      "facet": "Chemistry and industry pioneers",
+      "known_at": 14
+    },
+    {
+      "name": "Min Enze",
+      "facet": "Chemistry and industry pioneers",
+      "known_at": 12
+    },
+    {
+      "name": "Lu Jiaxi",
+      "facet": "Chemistry and industry pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Tang Aoqing",
+      "facet": "Chemistry and industry pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Cunhao",
+      "facet": "Chemistry and industry pioneers",
+      "known_at": 14
+    },
+    {
+      "name": "Artificial starch from carbon dioxide",
+      "facet": "Chemistry and industry pioneers",
+      "known_at": 9
+    },
+    {
+      "name": "Synthetic crystalline bovine insulin",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 8
+    },
+    {
+      "name": "Insulin",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 7
+    },
+    {
+      "name": "Wang Yinglai",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 13
+    },
+    {
+      "name": "Niu Jingyi",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 14
+    },
+    {
+      "name": "Zou Chenglu",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 14
+    },
+    {
+      "name": "Synthetic yeast alanine tRNA",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 14
+    },
+    {
+      "name": "Tong Dizhou",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 12
+    },
+    {
+      "name": "Cloned fish",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 12
+    },
+    {
+      "name": "Zhong Zhong and Hua Hua",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 8
+    },
+    {
+      "name": "Somatic cell nuclear transfer",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 13
+    },
+    {
+      "name": "Tan Jiazhen",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 12
+    },
+    {
+      "name": "Chen Zhen",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 14
+    },
+    {
+      "name": "Goldfish genetics",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 13
+    },
+    {
+      "name": "Human Genome Project 1% task",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 11
+    },
+    {
+      "name": "Yang Huanming",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 14
+    },
+    {
+      "name": "Shi Yigong",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 12
+    },
+    {
+      "name": "Pan Wenshi",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 13
+    },
+    {
+      "name": "Giant panda field research",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 5
+    },
+    {
+      "name": "Sinosauropteryx",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 10
+    },
+    {
+      "name": "Chengjiang biota",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 12
+    },
+    {
+      "name": "Wu Zhengyi",
+      "facet": "Biology firsts: insulin to cloned monkeys",
+      "known_at": 13
+    },
+    {
+      "name": "Chinese laser phototypesetting",
+      "facet": "Computers, typesetting and quantum science",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Yongmin",
+      "facet": "Computers, typesetting and quantum science",
+      "known_at": 12
+    },
+    {
+      "name": "Xia Peisu",
+      "facet": "Computers, typesetting and quantum science",
+      "known_at": 13
+    },
+    {
+      "name": "Model 103 computer",
+      "facet": "Computers, typesetting and quantum science",
+      "known_at": 14
+    },
+    {
+      "name": "Yinhe-1 supercomputer",
+      "facet": "Computers, typesetting and quantum science",
+      "known_at": 11
+    },
+    {
+      "name": "Loongson processor",
+      "facet": "Computers, typesetting and quantum science",
+      "known_at": 11
+    },
+    {
+      "name": "Andrew Yao (Yao Qizhi)",
+      "facet": "Computers, typesetting and quantum science",
+      "known_at": 11
+    },
+    {
+      "name": "Turing Award",
+      "facet": "Computers, typesetting and quantum science",
+      "known_at": 11
+    },
+    {
+      "name": "Pan Jianwei",
+      "facet": "Computers, typesetting and quantum science",
+      "known_at": 10
+    },
+    {
+      "name": "Micius quantum satellite",
+      "facet": "Computers, typesetting and quantum science",
+      "known_at": 8
+    },
+    {
+      "name": "Quantum entanglement",
+      "facet": "Computers, typesetting and quantum science",
+      "known_at": 10
+    },
+    {
+      "name": "Zuchongzhi quantum processor",
+      "facet": "Computers, typesetting and quantum science",
+      "known_at": 12
+    },
+    {
+      "name": "Xue Qikun",
+      "facet": "Computers, typesetting and quantum science",
+      "known_at": 13
+    },
+    {
+      "name": "Quantum anomalous Hall effect",
+      "facet": "Computers, typesetting and quantum science",
+      "known_at": 14
+    },
+    {
+      "name": "Beijing–Shanghai quantum communication line",
+      "facet": "Computers, typesetting and quantum science",
+      "known_at": 12
+    },
+    {
+      "name": "FAST radio telescope",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 5
+    },
+    {
+      "name": "Pingtang County",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 11
+    },
+    {
+      "name": "Pulsar",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 10
+    },
+    {
+      "name": "LAMOST (Guo Shoujing Telescope)",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 12
+    },
+    {
+      "name": "Purple Mountain Observatory",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Yuzhe",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 13
+    },
+    {
+      "name": "Tianma radio telescope",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 13
+    },
+    {
+      "name": "Daya Bay Reactor Neutrino Experiment",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 13
+    },
+    {
+      "name": "Neutrino",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Yifang",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 14
+    },
+    {
+      "name": "Jiangmen Underground Neutrino Observatory",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 13
+    },
+    {
+      "name": "China Jinping Underground Laboratory",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 12
+    },
+    {
+      "name": "Beijing Electron–Positron Collider",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 12
+    },
+    {
+      "name": "Nuclear fusion",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 9
+    },
+    {
+      "name": "Shanghai Synchrotron Radiation Facility",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 13
+    },
+    {
+      "name": "China Spallation Neutron Source",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 13
+    },
+    {
+      "name": "LHAASO cosmic ray observatory",
+      "facet": "Telescopes and big science facilities",
+      "known_at": 13
+    }
+  ]
+}

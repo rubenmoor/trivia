@@ -1,0 +1,912 @@
+{
+  "subcategory": "noodles-and-dumplings",
+  "facets": [
+    "Famous regional noodle dishes",
+    "Hand-pulled and cut noodle crafts",
+    "Rice noodles and rice-flour foods",
+    "Rice dishes and fried rice",
+    "Congee and rice porridge",
+    "Jiaozi and boiled dumplings",
+    "Steamed buns and baozi",
+    "Xiaolongbao and soup dumplings",
+    "Wontons and small dumplings",
+    "Dim sum staples",
+    "Festival staple foods",
+    "Northern wheat vs. southern rice"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Lanzhou beef noodles (兰州牛肉面)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 4
+    },
+    {
+      "name": "Dandan noodles (担担面)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 6
+    },
+    {
+      "name": "Chongqing xiaomian (重庆小面)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 7
+    },
+    {
+      "name": "Yangchun noodles (阳春面)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 9
+    },
+    {
+      "name": "Scallion oil noodles (葱油拌面)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 6
+    },
+    {
+      "name": "Aozao noodles (奥灶面)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 13
+    },
+    {
+      "name": "Henan braised noodles (烩面)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 10
+    },
+    {
+      "name": "Yibin burning noodles (燃面)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 11
+    },
+    {
+      "name": "Qishan saozi noodles (岐山臊子面)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 10
+    },
+    {
+      "name": "Oil-splashed noodles (油泼面)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 8
+    },
+    {
+      "name": "Pian'erchuan noodles (片儿川)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 12
+    },
+    {
+      "name": "Xinjiang laghman (新疆拌面)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 9
+    },
+    {
+      "name": "Hot and sour noodles (酸辣粉)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 5
+    },
+    {
+      "name": "Taiwanese beef noodle soup (台湾牛肉面)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 9
+    },
+    {
+      "name": "Yanji cold noodles (延吉冷面)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 10
+    },
+    {
+      "name": "Instant noodles (方便面)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 1
+    },
+    {
+      "name": "Liangpi (凉皮)",
+      "facet": "Famous regional noodle dishes",
+      "known_at": 6
+    },
+    {
+      "name": "Lamian (拉面)",
+      "facet": "Hand-pulled and cut noodle crafts",
+      "known_at": 5
+    },
+    {
+      "name": "Biangbiang noodles",
+      "facet": "Hand-pulled and cut noodle crafts",
+      "known_at": 8
+    },
+    {
+      "name": "Knife-cut noodles (刀削面)",
+      "facet": "Hand-pulled and cut noodle crafts",
+      "known_at": 6
+    },
+    {
+      "name": "Hand-rolled noodles (手擀面)",
+      "facet": "Hand-pulled and cut noodle crafts",
+      "known_at": 4
+    },
+    {
+      "name": "Dragon beard noodles (龙须面)",
+      "facet": "Hand-pulled and cut noodle crafts",
+      "known_at": 9
+    },
+    {
+      "name": "Cat's ear noodles (猫耳朵)",
+      "facet": "Hand-pulled and cut noodle crafts",
+      "known_at": 10
+    },
+    {
+      "name": "Oat-flour kaolaolao (莜面栲栳栳)",
+      "facet": "Hand-pulled and cut noodle crafts",
+      "known_at": 12
+    },
+    {
+      "name": "Bamboo-pressed noodles (竹升面)",
+      "facet": "Hand-pulled and cut noodle crafts",
+      "known_at": 12
+    },
+    {
+      "name": "Tijian noodles (剔尖)",
+      "facet": "Hand-pulled and cut noodle crafts",
+      "known_at": 13
+    },
+    {
+      "name": "Boyu noodles (拨鱼)",
+      "facet": "Hand-pulled and cut noodle crafts",
+      "known_at": 13
+    },
+    {
+      "name": "Hele noodles (饸饹面)",
+      "facet": "Hand-pulled and cut noodle crafts",
+      "known_at": 12
+    },
+    {
+      "name": "Suomian (索面)",
+      "facet": "Hand-pulled and cut noodle crafts",
+      "known_at": 13
+    },
+    {
+      "name": "Yi mein (伊面)",
+      "facet": "Hand-pulled and cut noodle crafts",
+      "known_at": 11
+    },
+    {
+      "name": "Alkaline water (碱水)",
+      "facet": "Hand-pulled and cut noodle crafts",
+      "known_at": 10
+    },
+    {
+      "name": "Penghui (蓬灰)",
+      "facet": "Hand-pulled and cut noodle crafts",
+      "known_at": 13
+    },
+    {
+      "name": "Rolling pin (擀面杖)",
+      "facet": "Hand-pulled and cut noodle crafts",
+      "known_at": 3
+    },
+    {
+      "name": "Guilin rice noodles (桂林米粉)",
+      "facet": "Rice noodles and rice-flour foods",
+      "known_at": 6
+    },
+    {
+      "name": "Crossing-the-bridge rice noodles (过桥米线)",
+      "facet": "Rice noodles and rice-flour foods",
+      "known_at": 6
+    },
+    {
+      "name": "Cheung fun (肠粉)",
+      "facet": "Rice noodles and rice-flour foods",
+      "known_at": 5
+    },
+    {
+      "name": "Shahe fen (沙河粉)",
+      "facet": "Rice noodles and rice-flour foods",
+      "known_at": 8
+    },
+    {
+      "name": "Beef chow fun (干炒牛河)",
+      "facet": "Rice noodles and rice-flour foods",
+      "known_at": 7
+    },
+    {
+      "name": "Nanchang mixed rice noodles (南昌拌粉)",
+      "facet": "Rice noodles and rice-flour foods",
+      "known_at": 10
+    },
+    {
+      "name": "Changde rice noodles (常德米粉)",
+      "facet": "Rice noodles and rice-flour foods",
+      "known_at": 11
+    },
+    {
+      "name": "Rice vermicelli (米粉)",
+      "facet": "Rice noodles and rice-flour foods",
+      "known_at": 3
+    },
+    {
+      "name": "Mixian (米线)",
+      "facet": "Rice noodles and rice-flour foods",
+      "known_at": 5
+    },
+    {
+      "name": "Singapore-style fried vermicelli (星洲炒米)",
+      "facet": "Rice noodles and rice-flour foods",
+      "known_at": 11
+    },
+    {
+      "name": "Erkuai (饵块)",
+      "facet": "Rice noodles and rice-flour foods",
+      "known_at": 11
+    },
+    {
+      "name": "Ciba (糍粑)",
+      "facet": "Rice noodles and rice-flour foods",
+      "known_at": 6
+    },
+    {
+      "name": "Laifen (濑粉)",
+      "facet": "Rice noodles and rice-flour foods",
+      "known_at": 12
+    },
+    {
+      "name": "Xinghua rice noodles (兴化米粉)",
+      "facet": "Rice noodles and rice-flour foods",
+      "known_at": 12
+    },
+    {
+      "name": "Kway teow (粿条)",
+      "facet": "Rice noodles and rice-flour foods",
+      "known_at": 10
+    },
+    {
+      "name": "Laoyou rice noodles (老友粉)",
+      "facet": "Rice noodles and rice-flour foods",
+      "known_at": 11
+    },
+    {
+      "name": "Egg fried rice (蛋炒饭)",
+      "facet": "Rice dishes and fried rice",
+      "known_at": 1
+    },
+    {
+      "name": "Steamed rice (米饭)",
+      "facet": "Rice dishes and fried rice",
+      "known_at": 1
+    },
+    {
+      "name": "Hainanese chicken rice (海南鸡饭)",
+      "facet": "Rice dishes and fried rice",
+      "known_at": 7
+    },
+    {
+      "name": "Char siu rice (叉烧饭)",
+      "facet": "Rice dishes and fried rice",
+      "known_at": 6
+    },
+    {
+      "name": "Bamboo tube rice (竹筒饭)",
+      "facet": "Rice dishes and fried rice",
+      "known_at": 7
+    },
+    {
+      "name": "Pineapple rice (菠萝饭)",
+      "facet": "Rice dishes and fried rice",
+      "known_at": 7
+    },
+    {
+      "name": "Rice crust (锅巴)",
+      "facet": "Rice dishes and fried rice",
+      "known_at": 6
+    },
+    {
+      "name": "Gaifan (盖浇饭)",
+      "facet": "Rice dishes and fried rice",
+      "known_at": 5
+    },
+    {
+      "name": "Rice ball (饭团)",
+      "facet": "Rice dishes and fried rice",
+      "known_at": 3
+    },
+    {
+      "name": "Black rice (乌米饭)",
+      "facet": "Rice dishes and fried rice",
+      "known_at": 12
+    },
+    {
+      "name": "Lard rice (猪油拌饭)",
+      "facet": "Rice dishes and fried rice",
+      "known_at": 10
+    },
+    {
+      "name": "Shanghai vegetable rice (菜饭)",
+      "facet": "Rice dishes and fried rice",
+      "known_at": 11
+    },
+    {
+      "name": "Rice cooker (电饭煲)",
+      "facet": "Rice dishes and fried rice",
+      "known_at": 2
+    },
+    {
+      "name": "Congee (粥)",
+      "facet": "Congee and rice porridge",
+      "known_at": 2
+    },
+    {
+      "name": "Century egg and pork congee (皮蛋瘦肉粥)",
+      "facet": "Congee and rice porridge",
+      "known_at": 5
+    },
+    {
+      "name": "Millet congee (小米粥)",
+      "facet": "Congee and rice porridge",
+      "known_at": 4
+    },
+    {
+      "name": "Chaozhou porridge (潮州糜)",
+      "facet": "Congee and rice porridge",
+      "known_at": 11
+    },
+    {
+      "name": "Boat congee (艇仔粥)",
+      "facet": "Congee and rice porridge",
+      "known_at": 11
+    },
+    {
+      "name": "Jidi congee (及第粥)",
+      "facet": "Congee and rice porridge",
+      "known_at": 12
+    },
+    {
+      "name": "Fish slice congee (鱼片粥)",
+      "facet": "Congee and rice porridge",
+      "known_at": 7
+    },
+    {
+      "name": "Eight-treasure congee (八宝粥)",
+      "facet": "Congee and rice porridge",
+      "known_at": 3
+    },
+    {
+      "name": "Pumpkin congee (南瓜粥)",
+      "facet": "Congee and rice porridge",
+      "known_at": 4
+    },
+    {
+      "name": "Sweet potato congee (地瓜粥)",
+      "facet": "Congee and rice porridge",
+      "known_at": 7
+    },
+    {
+      "name": "Cornmeal porridge (玉米糊)",
+      "facet": "Congee and rice porridge",
+      "known_at": 6
+    },
+    {
+      "name": "Rice water (米汤)",
+      "facet": "Congee and rice porridge",
+      "known_at": 6
+    },
+    {
+      "name": "Youtiao (油条)",
+      "facet": "Congee and rice porridge",
+      "known_at": 3
+    },
+    {
+      "name": "Zhacai (榨菜)",
+      "facet": "Congee and rice porridge",
+      "known_at": 5
+    },
+    {
+      "name": "Fermented tofu (腐乳)",
+      "facet": "Congee and rice porridge",
+      "known_at": 6
+    },
+    {
+      "name": "Jiaozi (饺子)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 1
+    },
+    {
+      "name": "Pork and cabbage filling (猪肉白菜馅)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 4
+    },
+    {
+      "name": "Chinese chives filling (韭菜馅)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 5
+    },
+    {
+      "name": "Three-delicacies filling (三鲜馅)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 6
+    },
+    {
+      "name": "Dumpling wrapper (饺子皮)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 3
+    },
+    {
+      "name": "Dumpling vinegar (饺子醋)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 3
+    },
+    {
+      "name": "Zhang Zhongjing (张仲景)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 8
+    },
+    {
+      "name": "Jiao'er (娇耳)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 10
+    },
+    {
+      "name": "Guotie (锅贴)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 5
+    },
+    {
+      "name": "Steamed dumplings (蒸饺)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 5
+    },
+    {
+      "name": "Sour soup dumplings (酸汤水饺)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 9
+    },
+    {
+      "name": "Coin in a dumpling (饺子里包硬币)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 4
+    },
+    {
+      "name": "Mackerel dumplings (鲅鱼水饺)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 9
+    },
+    {
+      "name": "Laobian dumplings (老边饺子)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 12
+    },
+    {
+      "name": "Xi'an dumpling banquet (饺子宴)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 11
+    },
+    {
+      "name": "Astana Tombs dumplings (阿斯塔那古墓饺子)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 13
+    },
+    {
+      "name": "Frozen dumplings (速冻饺子)",
+      "facet": "Jiaozi and boiled dumplings",
+      "known_at": 4
+    },
+    {
+      "name": "Baozi (包子)",
+      "facet": "Steamed buns and baozi",
+      "known_at": 1
+    },
+    {
+      "name": "Mantou (馒头)",
+      "facet": "Steamed buns and baozi",
+      "known_at": 1
+    },
+    {
+      "name": "Goubuli buns (狗不理包子)",
+      "facet": "Steamed buns and baozi",
+      "known_at": 7
+    },
+    {
+      "name": "Huajuan (花卷)",
+      "facet": "Steamed buns and baozi",
+      "known_at": 4
+    },
+    {
+      "name": "Liushabao (流沙包)",
+      "facet": "Steamed buns and baozi",
+      "known_at": 6
+    },
+    {
+      "name": "Custard bun (奶黄包)",
+      "facet": "Steamed buns and baozi",
+      "known_at": 5
+    },
+    {
+      "name": "Red bean bun (豆沙包)",
+      "facet": "Steamed buns and baozi",
+      "known_at": 3
+    },
+    {
+      "name": "Shengjian bao (生煎包)",
+      "facet": "Steamed buns and baozi",
+      "known_at": 6
+    },
+    {
+      "name": "Zhuge Liang (诸葛亮)",
+      "facet": "Steamed buns and baozi",
+      "known_at": 5
+    },
+    {
+      "name": "Wotou (窝头)",
+      "facet": "Steamed buns and baozi",
+      "known_at": 7
+    },
+    {
+      "name": "Gua bao (刈包)",
+      "facet": "Steamed buns and baozi",
+      "known_at": 9
+    },
+    {
+      "name": "Yeast (酵母)",
+      "facet": "Steamed buns and baozi",
+      "known_at": 6
+    },
+    {
+      "name": "Qingfeng Steamed Dumpling Shop (庆丰包子铺)",
+      "facet": "Steamed buns and baozi",
+      "known_at": 11
+    },
+    {
+      "name": "Xiaolongbao (小笼包)",
+      "facet": "Xiaolongbao and soup dumplings",
+      "known_at": 4
+    },
+    {
+      "name": "Nanxiang (南翔)",
+      "facet": "Xiaolongbao and soup dumplings",
+      "known_at": 10
+    },
+    {
+      "name": "Din Tai Fung (鼎泰丰)",
+      "facet": "Xiaolongbao and soup dumplings",
+      "known_at": 8
+    },
+    {
+      "name": "Pork aspic (皮冻)",
+      "facet": "Xiaolongbao and soup dumplings",
+      "known_at": 11
+    },
+    {
+      "name": "Dumpling pleats (褶子)",
+      "facet": "Xiaolongbao and soup dumplings",
+      "known_at": 9
+    },
+    {
+      "name": "Tangbao (汤包)",
+      "facet": "Xiaolongbao and soup dumplings",
+      "known_at": 6
+    },
+    {
+      "name": "Kaifeng guantang bao (开封灌汤包)",
+      "facet": "Xiaolongbao and soup dumplings",
+      "known_at": 10
+    },
+    {
+      "name": "Crab roe soup dumplings (蟹黄汤包)",
+      "facet": "Xiaolongbao and soup dumplings",
+      "known_at": 8
+    },
+    {
+      "name": "Ginger and vinegar dip (姜丝醋)",
+      "facet": "Xiaolongbao and soup dumplings",
+      "known_at": 6
+    },
+    {
+      "name": "Yu Garden (豫园)",
+      "facet": "Xiaolongbao and soup dumplings",
+      "known_at": 9
+    },
+    {
+      "name": "Benbang cuisine (本帮菜)",
+      "facet": "Xiaolongbao and soup dumplings",
+      "known_at": 11
+    },
+    {
+      "name": "Wuxi xiaolongbao (无锡小笼)",
+      "facet": "Xiaolongbao and soup dumplings",
+      "known_at": 11
+    },
+    {
+      "name": "Soup spoon (汤匙)",
+      "facet": "Xiaolongbao and soup dumplings",
+      "known_at": 3
+    },
+    {
+      "name": "Shanghai (上海)",
+      "facet": "Xiaolongbao and soup dumplings",
+      "known_at": 3
+    },
+    {
+      "name": "Wonton (馄饨)",
+      "facet": "Wontons and small dumplings",
+      "known_at": 2
+    },
+    {
+      "name": "Wonton noodles (云吞面)",
+      "facet": "Wontons and small dumplings",
+      "known_at": 6
+    },
+    {
+      "name": "Chaoshou (抄手)",
+      "facet": "Wontons and small dumplings",
+      "known_at": 7
+    },
+    {
+      "name": "Chili oil wontons (红油抄手)",
+      "facet": "Wontons and small dumplings",
+      "known_at": 8
+    },
+    {
+      "name": "Bianrou (扁肉)",
+      "facet": "Wontons and small dumplings",
+      "known_at": 10
+    },
+    {
+      "name": "Pianshi (扁食)",
+      "facet": "Wontons and small dumplings",
+      "known_at": 12
+    },
+    {
+      "name": "Big wontons (大馄饨)",
+      "facet": "Wontons and small dumplings",
+      "known_at": 8
+    },
+    {
+      "name": "Small wontons (小馄饨)",
+      "facet": "Wontons and small dumplings",
+      "known_at": 6
+    },
+    {
+      "name": "Shepherd's purse (荠菜)",
+      "facet": "Wontons and small dumplings",
+      "known_at": 8
+    },
+    {
+      "name": "Yanpi (燕皮)",
+      "facet": "Wontons and small dumplings",
+      "known_at": 13
+    },
+    {
+      "name": "Winter Solstice wontons (冬至馄饨)",
+      "facet": "Wontons and small dumplings",
+      "known_at": 9
+    },
+    {
+      "name": "Wonton wrapper (馄饨皮)",
+      "facet": "Wontons and small dumplings",
+      "known_at": 4
+    },
+    {
+      "name": "Dried baby shrimp (虾皮)",
+      "facet": "Wontons and small dumplings",
+      "known_at": 6
+    },
+    {
+      "name": "Fried wontons (炸馄饨)",
+      "facet": "Wontons and small dumplings",
+      "known_at": 5
+    },
+    {
+      "name": "Har gow (虾饺)",
+      "facet": "Dim sum staples",
+      "known_at": 6
+    },
+    {
+      "name": "Siu mai (烧卖)",
+      "facet": "Dim sum staples",
+      "known_at": 5
+    },
+    {
+      "name": "Taro dumplings (芋角)",
+      "facet": "Dim sum staples",
+      "known_at": 10
+    },
+    {
+      "name": "Spare ribs in black bean sauce (豉汁排骨)",
+      "facet": "Dim sum staples",
+      "known_at": 9
+    },
+    {
+      "name": "Ma lai go (马拉糕)",
+      "facet": "Dim sum staples",
+      "known_at": 10
+    },
+    {
+      "name": "Sesame balls (煎堆)",
+      "facet": "Dim sum staples",
+      "known_at": 7
+    },
+    {
+      "name": "Ham sui gok (咸水角)",
+      "facet": "Dim sum staples",
+      "known_at": 11
+    },
+    {
+      "name": "Four Heavenly Kings of dim sum (点心四大天王)",
+      "facet": "Dim sum staples",
+      "known_at": 11
+    },
+    {
+      "name": "Finger tapping (叩指礼)",
+      "facet": "Dim sum staples",
+      "known_at": 10
+    },
+    {
+      "name": "Dim sum trolley (点心车)",
+      "facet": "Dim sum staples",
+      "known_at": 9
+    },
+    {
+      "name": "Wheat starch (澄面)",
+      "facet": "Dim sum staples",
+      "known_at": 12
+    },
+    {
+      "name": "Lin Heung Tea House (莲香楼)",
+      "facet": "Dim sum staples",
+      "known_at": 12
+    },
+    {
+      "name": "Longevity peach buns (寿桃包)",
+      "facet": "Festival staple foods",
+      "known_at": 6
+    },
+    {
+      "name": "New Year's Eve dinner (年夜饭)",
+      "facet": "Festival staple foods",
+      "known_at": 3
+    },
+    {
+      "name": "Zongzi leaves (粽叶)",
+      "facet": "Festival staple foods",
+      "known_at": 7
+    },
+    {
+      "name": "Dragon Raises Its Head (龙抬头)",
+      "facet": "Festival staple foods",
+      "known_at": 10
+    },
+    {
+      "name": "Qinling–Huaihe Line (秦岭—淮河线)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 9
+    },
+    {
+      "name": "Yangtze River (长江)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 3
+    },
+    {
+      "name": "Yellow River (黄河)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 3
+    },
+    {
+      "name": "Wheat (小麦)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 2
+    },
+    {
+      "name": "Rice paddy (稻田)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 2
+    },
+    {
+      "name": "Yuan Longping (袁隆平)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 4
+    },
+    {
+      "name": "Hemudu culture (河姆渡文化)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 11
+    },
+    {
+      "name": "Shangshan culture (上山文化)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 13
+    },
+    {
+      "name": "Millet (小米)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 4
+    },
+    {
+      "name": "Sorghum (高粱)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 6
+    },
+    {
+      "name": "Wheaten foods (面食)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 5
+    },
+    {
+      "name": "Southern rice, northern noodles (南米北面)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 7
+    },
+    {
+      "name": "Hani rice terraces (哈尼梯田)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 8
+    },
+    {
+      "name": "Longji rice terraces (龙脊梯田)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 9
+    },
+    {
+      "name": "Wuchang rice (五常大米)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 9
+    },
+    {
+      "name": "Northeast China Plain (东北平原)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 8
+    },
+    {
+      "name": "Winter wheat (冬小麦)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 9
+    },
+    {
+      "name": "Double-cropping rice (双季稻)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 10
+    },
+    {
+      "name": "Rice theory (稻米理论)",
+      "facet": "Northern wheat vs. southern rice",
+      "known_at": 14
+    }
+  ]
+}

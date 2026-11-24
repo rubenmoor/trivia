@@ -1,0 +1,982 @@
+{
+  "subcategory": "chinese-cinema",
+  "facets": [
+    "Fifth Generation directors",
+    "Zhang Yimou's films",
+    "Taiwanese cinema and directors",
+    "Ang Lee's films",
+    "Wuxia and martial arts epics",
+    "Chinese science fiction films",
+    "New Year comedies (贺岁片)",
+    "Box-office blockbusters",
+    "Film stars and actors",
+    "Animated films and classics",
+    "Early and classic Chinese cinema",
+    "Film festivals and awards"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 4,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Tian Zhuangzhuang",
+      "facet": "Fifth Generation directors",
+      "known_at": 13
+    },
+    {
+      "name": "Wu Ziniu",
+      "facet": "Fifth Generation directors",
+      "known_at": 15
+    },
+    {
+      "name": "Li Shaohong",
+      "facet": "Fifth Generation directors",
+      "known_at": 14
+    },
+    {
+      "name": "Huang Jianxin",
+      "facet": "Fifth Generation directors",
+      "known_at": 14
+    },
+    {
+      "name": "Zhang Junzhao",
+      "facet": "Fifth Generation directors",
+      "known_at": 15
+    },
+    {
+      "name": "Beijing Film Academy",
+      "facet": "Fifth Generation directors",
+      "known_at": 8
+    },
+    {
+      "name": "Yellow Earth",
+      "facet": "Fifth Generation directors",
+      "known_at": 13
+    },
+    {
+      "name": "One and Eight",
+      "facet": "Fifth Generation directors",
+      "known_at": 15
+    },
+    {
+      "name": "Farewell My Concubine",
+      "facet": "Fifth Generation directors",
+      "known_at": 9
+    },
+    {
+      "name": "The Horse Thief",
+      "facet": "Fifth Generation directors",
+      "known_at": 15
+    },
+    {
+      "name": "The Blue Kite",
+      "facet": "Fifth Generation directors",
+      "known_at": 14
+    },
+    {
+      "name": "The Big Parade",
+      "facet": "Fifth Generation directors",
+      "known_at": 15
+    },
+    {
+      "name": "Gu Changwei",
+      "facet": "Fifth Generation directors",
+      "known_at": 14
+    },
+    {
+      "name": "Xi'an Film Studio",
+      "facet": "Fifth Generation directors",
+      "known_at": 13
+    },
+    {
+      "name": "Guangxi Film Studio",
+      "facet": "Fifth Generation directors",
+      "known_at": 15
+    },
+    {
+      "name": "Wu Tianming",
+      "facet": "Fifth Generation directors",
+      "known_at": 14
+    },
+    {
+      "name": "Together (2002)",
+      "facet": "Fifth Generation directors",
+      "known_at": 13
+    },
+    {
+      "name": "The Emperor and the Assassin",
+      "facet": "Fifth Generation directors",
+      "known_at": 13
+    },
+    {
+      "name": "The Promise (2005)",
+      "facet": "Fifth Generation directors",
+      "known_at": 11
+    },
+    {
+      "name": "Legend of the Demon Cat",
+      "facet": "Fifth Generation directors",
+      "known_at": 11
+    },
+    {
+      "name": "Forever Enthralled",
+      "facet": "Fifth Generation directors",
+      "known_at": 13
+    },
+    {
+      "name": "Red Sorghum",
+      "facet": "Zhang Yimou's films",
+      "known_at": 9
+    },
+    {
+      "name": "Ju Dou",
+      "facet": "Zhang Yimou's films",
+      "known_at": 13
+    },
+    {
+      "name": "Raise the Red Lantern",
+      "facet": "Zhang Yimou's films",
+      "known_at": 10
+    },
+    {
+      "name": "The Story of Qiu Ju",
+      "facet": "Zhang Yimou's films",
+      "known_at": 10
+    },
+    {
+      "name": "To Live",
+      "facet": "Zhang Yimou's films",
+      "known_at": 9
+    },
+    {
+      "name": "Not One Less",
+      "facet": "Zhang Yimou's films",
+      "known_at": 8
+    },
+    {
+      "name": "The Road Home",
+      "facet": "Zhang Yimou's films",
+      "known_at": 10
+    },
+    {
+      "name": "Hero (2002)",
+      "facet": "Zhang Yimou's films",
+      "known_at": 6
+    },
+    {
+      "name": "House of Flying Daggers",
+      "facet": "Zhang Yimou's films",
+      "known_at": 8
+    },
+    {
+      "name": "Curse of the Golden Flower",
+      "facet": "Zhang Yimou's films",
+      "known_at": 8
+    },
+    {
+      "name": "The Great Wall (2016)",
+      "facet": "Zhang Yimou's films",
+      "known_at": 7
+    },
+    {
+      "name": "Shadow (2018)",
+      "facet": "Zhang Yimou's films",
+      "known_at": 10
+    },
+    {
+      "name": "Cliff Walkers",
+      "facet": "Zhang Yimou's films",
+      "known_at": 10
+    },
+    {
+      "name": "Full River Red",
+      "facet": "Zhang Yimou's films",
+      "known_at": 7
+    },
+    {
+      "name": "Article 20",
+      "facet": "Zhang Yimou's films",
+      "known_at": 9
+    },
+    {
+      "name": "One Second",
+      "facet": "Zhang Yimou's films",
+      "known_at": 11
+    },
+    {
+      "name": "Coming Home",
+      "facet": "Zhang Yimou's films",
+      "known_at": 10
+    },
+    {
+      "name": "Under the Hawthorn Tree",
+      "facet": "Zhang Yimou's films",
+      "known_at": 9
+    },
+    {
+      "name": "Shanghai Triad",
+      "facet": "Zhang Yimou's films",
+      "known_at": 13
+    },
+    {
+      "name": "2008 Beijing Olympics opening ceremony",
+      "facet": "Zhang Yimou's films",
+      "known_at": 5
+    },
+    {
+      "name": "Impression Liu Sanjie",
+      "facet": "Zhang Yimou's films",
+      "known_at": 11
+    },
+    {
+      "name": "Hou Hsiao-hsien",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 12
+    },
+    {
+      "name": "Edward Yang",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 13
+    },
+    {
+      "name": "Tsai Ming-liang",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 13
+    },
+    {
+      "name": "Taiwan New Cinema",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 13
+    },
+    {
+      "name": "A City of Sadness",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 13
+    },
+    {
+      "name": "Yi Yi",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 13
+    },
+    {
+      "name": "A Brighter Summer Day",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 14
+    },
+    {
+      "name": "The Assassin (2015)",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 12
+    },
+    {
+      "name": "You Are the Apple of My Eye",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 8
+    },
+    {
+      "name": "Giddens Ko",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 11
+    },
+    {
+      "name": "Our Times",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 8
+    },
+    {
+      "name": "Cape No. 7",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 11
+    },
+    {
+      "name": "Wei Te-sheng",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 13
+    },
+    {
+      "name": "Seediq Bale",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 12
+    },
+    {
+      "name": "Monga",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 12
+    },
+    {
+      "name": "Secret (2007)",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 7
+    },
+    {
+      "name": "Dragon Inn (1967)",
+      "facet": "Taiwanese cinema and directors",
+      "known_at": 13
+    },
+    {
+      "name": "Life of Pi",
+      "facet": "Ang Lee's films",
+      "known_at": 6
+    },
+    {
+      "name": "Richard Parker",
+      "facet": "Ang Lee's films",
+      "known_at": 9
+    },
+    {
+      "name": "Brokeback Mountain",
+      "facet": "Ang Lee's films",
+      "known_at": 11
+    },
+    {
+      "name": "Lust, Caution",
+      "facet": "Ang Lee's films",
+      "known_at": 11
+    },
+    {
+      "name": "Eat Drink Man Woman",
+      "facet": "Ang Lee's films",
+      "known_at": 11
+    },
+    {
+      "name": "The Wedding Banquet",
+      "facet": "Ang Lee's films",
+      "known_at": 12
+    },
+    {
+      "name": "Pushing Hands",
+      "facet": "Ang Lee's films",
+      "known_at": 13
+    },
+    {
+      "name": "Father Knows Best trilogy",
+      "facet": "Ang Lee's films",
+      "known_at": 14
+    },
+    {
+      "name": "Sense and Sensibility (1995)",
+      "facet": "Ang Lee's films",
+      "known_at": 13
+    },
+    {
+      "name": "Hulk (2003)",
+      "facet": "Ang Lee's films",
+      "known_at": 10
+    },
+    {
+      "name": "Gemini Man",
+      "facet": "Ang Lee's films",
+      "known_at": 11
+    },
+    {
+      "name": "Billy Lynn's Long Halftime Walk",
+      "facet": "Ang Lee's films",
+      "known_at": 13
+    },
+    {
+      "name": "Taking Woodstock",
+      "facet": "Ang Lee's films",
+      "known_at": 14
+    },
+    {
+      "name": "Bamboo forest fight",
+      "facet": "Ang Lee's films",
+      "known_at": 9
+    },
+    {
+      "name": "Wuxia",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 6
+    },
+    {
+      "name": "Jianghu",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 7
+    },
+    {
+      "name": "Qinggong",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 7
+    },
+    {
+      "name": "Wire work",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 8
+    },
+    {
+      "name": "King Hu",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 13
+    },
+    {
+      "name": "A Touch of Zen",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 13
+    },
+    {
+      "name": "Shaolin Temple (1982)",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 8
+    },
+    {
+      "name": "Shaolin Kung Fu",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 3
+    },
+    {
+      "name": "Yuen Woo-ping",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 12
+    },
+    {
+      "name": "The Swordsman in Double-Flag Town",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 14
+    },
+    {
+      "name": "Brotherhood of Blades",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 12
+    },
+    {
+      "name": "Monk Comes Down the Mountain",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 12
+    },
+    {
+      "name": "Xu Haofeng",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 15
+    },
+    {
+      "name": "The Wandering Earth 2",
+      "facet": "Chinese science fiction films",
+      "known_at": 5
+    },
+    {
+      "name": "Guo Fan",
+      "facet": "Chinese science fiction films",
+      "known_at": 10
+    },
+    {
+      "name": "Planetary engines",
+      "facet": "Chinese science fiction films",
+      "known_at": 5
+    },
+    {
+      "name": "MOSS",
+      "facet": "Chinese science fiction films",
+      "known_at": 7
+    },
+    {
+      "name": "Space elevator",
+      "facet": "Chinese science fiction films",
+      "known_at": 8
+    },
+    {
+      "name": "Liu Peiqiang",
+      "facet": "Chinese science fiction films",
+      "known_at": 8
+    },
+    {
+      "name": "Liu Qi",
+      "facet": "Chinese science fiction films",
+      "known_at": 9
+    },
+    {
+      "name": "Tu Hengyu",
+      "facet": "Chinese science fiction films",
+      "known_at": 9
+    },
+    {
+      "name": "Digital life",
+      "facet": "Chinese science fiction films",
+      "known_at": 9
+    },
+    {
+      "name": "Crazy Alien",
+      "facet": "Chinese science fiction films",
+      "known_at": 9
+    },
+    {
+      "name": "Moon Man (2022)",
+      "facet": "Chinese science fiction films",
+      "known_at": 6
+    },
+    {
+      "name": "Duckweed",
+      "facet": "Chinese science fiction films",
+      "known_at": 11
+    },
+    {
+      "name": "Shanghai Fortress",
+      "facet": "Chinese science fiction films",
+      "known_at": 11
+    },
+    {
+      "name": "Feng Xiaogang",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 8
+    },
+    {
+      "name": "New Year film (贺岁片)",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 6
+    },
+    {
+      "name": "Spring Festival box office season (春节档)",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 6
+    },
+    {
+      "name": "The Dream Factory (甲方乙方)",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 11
+    },
+    {
+      "name": "Be There or Be Square",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 12
+    },
+    {
+      "name": "Big Shot's Funeral",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 12
+    },
+    {
+      "name": "Cell Phone (2003)",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 11
+    },
+    {
+      "name": "A World Without Thieves",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 9
+    },
+    {
+      "name": "If You Are the One",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 10
+    },
+    {
+      "name": "Personal Tailor",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 11
+    },
+    {
+      "name": "Lost on Journey",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 9
+    },
+    {
+      "name": "Lost in Thailand",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 7
+    },
+    {
+      "name": "Detective Chinatown",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 6
+    },
+    {
+      "name": "Pegasus (飞驰人生)",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 8
+    },
+    {
+      "name": "Han Han",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 9
+    },
+    {
+      "name": "Mahua FunAge",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 9
+    },
+    {
+      "name": "Goodbye Mr. Loser",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 8
+    },
+    {
+      "name": "Hello Mr. Billionaire",
+      "facet": "New Year comedies (贺岁片)",
+      "known_at": 8
+    },
+    {
+      "name": "Hi, Mom",
+      "facet": "Box-office blockbusters",
+      "known_at": 5
+    },
+    {
+      "name": "YOLO (热辣滚烫)",
+      "facet": "Box-office blockbusters",
+      "known_at": 6
+    },
+    {
+      "name": "Wolf Warrior 2",
+      "facet": "Box-office blockbusters",
+      "known_at": 6
+    },
+    {
+      "name": "The Battle at Lake Changjin",
+      "facet": "Box-office blockbusters",
+      "known_at": 6
+    },
+    {
+      "name": "Operation Red Sea",
+      "facet": "Box-office blockbusters",
+      "known_at": 8
+    },
+    {
+      "name": "Dying to Survive",
+      "facet": "Box-office blockbusters",
+      "known_at": 9
+    },
+    {
+      "name": "My People, My Country",
+      "facet": "Box-office blockbusters",
+      "known_at": 8
+    },
+    {
+      "name": "The Eight Hundred",
+      "facet": "Box-office blockbusters",
+      "known_at": 9
+    },
+    {
+      "name": "Let the Bullets Fly",
+      "facet": "Box-office blockbusters",
+      "known_at": 9
+    },
+    {
+      "name": "Monster Hunt",
+      "facet": "Box-office blockbusters",
+      "known_at": 8
+    },
+    {
+      "name": "Better Days",
+      "facet": "Box-office blockbusters",
+      "known_at": 9
+    },
+    {
+      "name": "No More Bets",
+      "facet": "Box-office blockbusters",
+      "known_at": 9
+    },
+    {
+      "name": "Lost in the Stars",
+      "facet": "Box-office blockbusters",
+      "known_at": 10
+    },
+    {
+      "name": "Born to Fly",
+      "facet": "Box-office blockbusters",
+      "known_at": 10
+    },
+    {
+      "name": "Lost in Russia",
+      "facet": "Box-office blockbusters",
+      "known_at": 10
+    },
+    {
+      "name": "Wuershan",
+      "facet": "Box-office blockbusters",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Ziyi",
+      "facet": "Film stars and actors",
+      "known_at": 7
+    },
+    {
+      "name": "Jia Ling",
+      "facet": "Film stars and actors",
+      "known_at": 4
+    },
+    {
+      "name": "Shen Teng",
+      "facet": "Film stars and actors",
+      "known_at": 5
+    },
+    {
+      "name": "Huang Bo",
+      "facet": "Film stars and actors",
+      "known_at": 6
+    },
+    {
+      "name": "Xu Zheng",
+      "facet": "Film stars and actors",
+      "known_at": 7
+    },
+    {
+      "name": "Wang Baoqiang",
+      "facet": "Film stars and actors",
+      "known_at": 6
+    },
+    {
+      "name": "Jiang Wen",
+      "facet": "Film stars and actors",
+      "known_at": 10
+    },
+    {
+      "name": "Tang Wei",
+      "facet": "Film stars and actors",
+      "known_at": 10
+    },
+    {
+      "name": "Jackson Yee",
+      "facet": "Film stars and actors",
+      "known_at": 6
+    },
+    {
+      "name": "Zhou Dongyu",
+      "facet": "Film stars and actors",
+      "known_at": 9
+    },
+    {
+      "name": "Brigitte Lin",
+      "facet": "Film stars and actors",
+      "known_at": 11
+    },
+    {
+      "name": "Shu Qi",
+      "facet": "Film stars and actors",
+      "known_at": 10
+    },
+    {
+      "name": "Chen Daoming",
+      "facet": "Film stars and actors",
+      "known_at": 10
+    },
+    {
+      "name": "Joan Chen",
+      "facet": "Film stars and actors",
+      "known_at": 12
+    },
+    {
+      "name": "Princess Iron Fan (1941)",
+      "facet": "Animated films and classics",
+      "known_at": 12
+    },
+    {
+      "name": "White Snake (2019)",
+      "facet": "Animated films and classics",
+      "known_at": 8
+    },
+    {
+      "name": "Jiang Ziya (2020)",
+      "facet": "Animated films and classics",
+      "known_at": 7
+    },
+    {
+      "name": "Chang'an (2023)",
+      "facet": "Animated films and classics",
+      "known_at": 7
+    },
+    {
+      "name": "Deep Sea (2023)",
+      "facet": "Animated films and classics",
+      "known_at": 9
+    },
+    {
+      "name": "Dingjun Mountain (1905)",
+      "facet": "Early and classic Chinese cinema",
+      "known_at": 10
+    },
+    {
+      "name": "Fengtai Photo Studio",
+      "facet": "Early and classic Chinese cinema",
+      "known_at": 13
+    },
+    {
+      "name": "Lianhua Film Company",
+      "facet": "Early and classic Chinese cinema",
+      "known_at": 14
+    },
+    {
+      "name": "The Goddess (1934)",
+      "facet": "Early and classic Chinese cinema",
+      "known_at": 14
+    },
+    {
+      "name": "Song of the Fishermen",
+      "facet": "Early and classic Chinese cinema",
+      "known_at": 14
+    },
+    {
+      "name": "Street Angel (1937)",
+      "facet": "Early and classic Chinese cinema",
+      "known_at": 14
+    },
+    {
+      "name": "Children of Troubled Times",
+      "facet": "Early and classic Chinese cinema",
+      "known_at": 11
+    },
+    {
+      "name": "The Spring River Flows East",
+      "facet": "Early and classic Chinese cinema",
+      "known_at": 12
+    },
+    {
+      "name": "Spring in a Small Town",
+      "facet": "Early and classic Chinese cinema",
+      "known_at": 14
+    },
+    {
+      "name": "The White-Haired Girl (1950)",
+      "facet": "Early and classic Chinese cinema",
+      "known_at": 9
+    },
+    {
+      "name": "Changchun Film Studio",
+      "facet": "Early and classic Chinese cinema",
+      "known_at": 11
+    },
+    {
+      "name": "Battle on Shangganling Mountain",
+      "facet": "Early and classic Chinese cinema",
+      "known_at": 9
+    },
+    {
+      "name": "Tunnel Warfare",
+      "facet": "Early and classic Chinese cinema",
+      "known_at": 8
+    },
+    {
+      "name": "The Red Detachment of Women (1961)",
+      "facet": "Early and classic Chinese cinema",
+      "known_at": 11
+    },
+    {
+      "name": "Hibiscus Town",
+      "facet": "Early and classic Chinese cinema",
+      "known_at": 13
+    },
+    {
+      "name": "Golden Rooster Award",
+      "facet": "Film festivals and awards",
+      "known_at": 8
+    },
+    {
+      "name": "Hundred Flowers Award",
+      "facet": "Film festivals and awards",
+      "known_at": 9
+    },
+    {
+      "name": "Golden Horse Award",
+      "facet": "Film festivals and awards",
+      "known_at": 8
+    },
+    {
+      "name": "Huabiao Award",
+      "facet": "Film festivals and awards",
+      "known_at": 12
+    },
+    {
+      "name": "Beijing International Film Festival",
+      "facet": "Film festivals and awards",
+      "known_at": 10
+    },
+    {
+      "name": "Pingyao International Film Festival",
+      "facet": "Film festivals and awards",
+      "known_at": 13
+    },
+    {
+      "name": "Hainan Island International Film Festival",
+      "facet": "Film festivals and awards",
+      "known_at": 13
+    },
+    {
+      "name": "Palme d'Or",
+      "facet": "Film festivals and awards",
+      "known_at": 10
+    },
+    {
+      "name": "Golden Bear",
+      "facet": "Film festivals and awards",
+      "known_at": 11
+    },
+    {
+      "name": "Golden Lion",
+      "facet": "Film festivals and awards",
+      "known_at": 11
+    },
+    {
+      "name": "Silver Bear",
+      "facet": "Film festivals and awards",
+      "known_at": 13
+    },
+    {
+      "name": "Jia Zhangke",
+      "facet": "Film festivals and awards",
+      "known_at": 11
+    },
+    {
+      "name": "Still Life (2006)",
+      "facet": "Film festivals and awards",
+      "known_at": 13
+    },
+    {
+      "name": "Black Coal, Thin Ice",
+      "facet": "Film festivals and awards",
+      "known_at": 13
+    },
+    {
+      "name": "Tuya's Marriage",
+      "facet": "Film festivals and awards",
+      "known_at": 14
+    },
+    {
+      "name": "Wang Xiaoshuai",
+      "facet": "Film festivals and awards",
+      "known_at": 14
+    },
+    {
+      "name": "Volpi Cup",
+      "facet": "Film festivals and awards",
+      "known_at": 14
+    }
+  ]
+}

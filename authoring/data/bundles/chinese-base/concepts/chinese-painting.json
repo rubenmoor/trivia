@@ -1,0 +1,1038 @@
+{
+  "subcategory": "chinese-painting",
+  "facets": [
+    "Ink and brush basics",
+    "Famous scrolls and masterpieces",
+    "Early and Tang masters",
+    "Song and Yuan painters",
+    "Ming and Qing painters",
+    "Modern masters (Qi Baishi, Xu Beihong)",
+    "Bird-and-flower painting",
+    "Landscape (shanshui) painting",
+    "Figure painting and court life",
+    "Dunhuang and cave murals",
+    "Four Gentlemen and painting symbols",
+    "Folk painting and New Year pictures",
+    "Painting stories and idioms"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 4,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 5,
+      "nature": 4,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Hui ink (徽墨)",
+      "facet": "Ink and brush basics",
+      "known_at": 10
+    },
+    {
+      "name": "Hu brush (湖笔)",
+      "facet": "Ink and brush basics",
+      "known_at": 11
+    },
+    {
+      "name": "Ink wash painting (水墨画)",
+      "facet": "Ink and brush basics",
+      "known_at": 3
+    },
+    {
+      "name": "Freehand brushwork (写意)",
+      "facet": "Ink and brush basics",
+      "known_at": 7
+    },
+    {
+      "name": "Meticulous brushwork (工笔)",
+      "facet": "Ink and brush basics",
+      "known_at": 7
+    },
+    {
+      "name": "Splashed ink (泼墨)",
+      "facet": "Ink and brush basics",
+      "known_at": 9
+    },
+    {
+      "name": "Leaving blank space (留白)",
+      "facet": "Ink and brush basics",
+      "known_at": 8
+    },
+    {
+      "name": "Hanging scroll (立轴)",
+      "facet": "Ink and brush basics",
+      "known_at": 5
+    },
+    {
+      "name": "Handscroll (手卷)",
+      "facet": "Ink and brush basics",
+      "known_at": 7
+    },
+    {
+      "name": "Album leaf (册页)",
+      "facet": "Ink and brush basics",
+      "known_at": 11
+    },
+    {
+      "name": "Fan painting (扇面)",
+      "facet": "Ink and brush basics",
+      "known_at": 6
+    },
+    {
+      "name": "Texture strokes (皴法)",
+      "facet": "Ink and brush basics",
+      "known_at": 12
+    },
+    {
+      "name": "Boneless technique (没骨法)",
+      "facet": "Ink and brush basics",
+      "known_at": 13
+    },
+    {
+      "name": "Painting on silk (绢本)",
+      "facet": "Ink and brush basics",
+      "known_at": 10
+    },
+    {
+      "name": "Mineral blue and green pigments (石青石绿)",
+      "facet": "Ink and brush basics",
+      "known_at": 12
+    },
+    {
+      "name": "Along the River during Qingming (清明上河图)",
+      "facet": "Famous scrolls and masterpieces",
+      "known_at": 3
+    },
+    {
+      "name": "Night Revels of Han Xizai (韩熙载夜宴图)",
+      "facet": "Famous scrolls and masterpieces",
+      "known_at": 9
+    },
+    {
+      "name": "Five Oxen (五牛图)",
+      "facet": "Famous scrolls and masterpieces",
+      "known_at": 8
+    },
+    {
+      "name": "Admonitions of the Instructress to the Court Ladies (女史箴图)",
+      "facet": "Famous scrolls and masterpieces",
+      "known_at": 12
+    },
+    {
+      "name": "Nymph of the Luo River (洛神赋图)",
+      "facet": "Famous scrolls and masterpieces",
+      "known_at": 10
+    },
+    {
+      "name": "Travelers among Mountains and Streams (溪山行旅图)",
+      "facet": "Famous scrolls and masterpieces",
+      "known_at": 12
+    },
+    {
+      "name": "Early Spring (早春图)",
+      "facet": "Famous scrolls and masterpieces",
+      "known_at": 13
+    },
+    {
+      "name": "Lady Guoguo's Spring Outing (虢国夫人游春图)",
+      "facet": "Famous scrolls and masterpieces",
+      "known_at": 12
+    },
+    {
+      "name": "Spring Outing (游春图)",
+      "facet": "Famous scrolls and masterpieces",
+      "known_at": 12
+    },
+    {
+      "name": "Eighty-seven Immortals (八十七神仙卷)",
+      "facet": "Famous scrolls and masterpieces",
+      "known_at": 12
+    },
+    {
+      "name": "Auspicious Cranes (瑞鹤图)",
+      "facet": "Famous scrolls and masterpieces",
+      "known_at": 12
+    },
+    {
+      "name": "Portraits of Emperors of Successive Dynasties (历代帝王图)",
+      "facet": "Famous scrolls and masterpieces",
+      "known_at": 13
+    },
+    {
+      "name": "Lofty Mount Lu (庐山高图)",
+      "facet": "Famous scrolls and masterpieces",
+      "known_at": 14
+    },
+    {
+      "name": "Hundred Horses (百骏图)",
+      "facet": "Famous scrolls and masterpieces",
+      "known_at": 12
+    },
+    {
+      "name": "Palace Museum (故宫博物院)",
+      "facet": "Famous scrolls and masterpieces",
+      "known_at": 3
+    },
+    {
+      "name": "National Palace Museum in Taipei (台北故宫博物院)",
+      "facet": "Famous scrolls and masterpieces",
+      "known_at": 8
+    },
+    {
+      "name": "Gu Kaizhi (顾恺之)",
+      "facet": "Early and Tang masters",
+      "known_at": 9
+    },
+    {
+      "name": "Wu Daozi (吴道子)",
+      "facet": "Early and Tang masters",
+      "known_at": 8
+    },
+    {
+      "name": "Yan Liben (阎立本)",
+      "facet": "Early and Tang masters",
+      "known_at": 9
+    },
+    {
+      "name": "Zhan Ziqian (展子虔)",
+      "facet": "Early and Tang masters",
+      "known_at": 12
+    },
+    {
+      "name": "Li Sixun (李思训)",
+      "facet": "Early and Tang masters",
+      "known_at": 13
+    },
+    {
+      "name": "Han Gan (韩干)",
+      "facet": "Early and Tang masters",
+      "known_at": 12
+    },
+    {
+      "name": "Han Huang (韩滉)",
+      "facet": "Early and Tang masters",
+      "known_at": 10
+    },
+    {
+      "name": "Zhang Sengyou (张僧繇)",
+      "facet": "Early and Tang masters",
+      "known_at": 10
+    },
+    {
+      "name": "Lu Tanwei (陆探微)",
+      "facet": "Early and Tang masters",
+      "known_at": 14
+    },
+    {
+      "name": "Cao Zhongda (曹仲达)",
+      "facet": "Early and Tang masters",
+      "known_at": 14
+    },
+    {
+      "name": "Xie He's Six Principles (谢赫六法)",
+      "facet": "Early and Tang masters",
+      "known_at": 13
+    },
+    {
+      "name": "Wu's belts in the wind (吴带当风)",
+      "facet": "Early and Tang masters",
+      "known_at": 13
+    },
+    {
+      "name": "Dai Song (戴嵩)",
+      "facet": "Early and Tang masters",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Zao (张璪)",
+      "facet": "Early and Tang masters",
+      "known_at": 14
+    },
+    {
+      "name": "Painting Sage (画圣)",
+      "facet": "Early and Tang masters",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Ximeng (王希孟)",
+      "facet": "Song and Yuan painters",
+      "known_at": 8
+    },
+    {
+      "name": "Fan Kuan (范宽)",
+      "facet": "Song and Yuan painters",
+      "known_at": 12
+    },
+    {
+      "name": "Guo Xi (郭熙)",
+      "facet": "Song and Yuan painters",
+      "known_at": 12
+    },
+    {
+      "name": "Li Cheng (李成)",
+      "facet": "Song and Yuan painters",
+      "known_at": 13
+    },
+    {
+      "name": "Wen Tong (文同)",
+      "facet": "Song and Yuan painters",
+      "known_at": 10
+    },
+    {
+      "name": "Ma Yuan (马远)",
+      "facet": "Song and Yuan painters",
+      "known_at": 12
+    },
+    {
+      "name": "Xia Gui (夏圭)",
+      "facet": "Song and Yuan painters",
+      "known_at": 13
+    },
+    {
+      "name": "Li Tang (李唐)",
+      "facet": "Song and Yuan painters",
+      "known_at": 13
+    },
+    {
+      "name": "Liang Kai (梁楷)",
+      "facet": "Song and Yuan painters",
+      "known_at": 13
+    },
+    {
+      "name": "Muqi (牧溪)",
+      "facet": "Song and Yuan painters",
+      "known_at": 14
+    },
+    {
+      "name": "Huang Gongwang (黄公望)",
+      "facet": "Song and Yuan painters",
+      "known_at": 9
+    },
+    {
+      "name": "Ni Zan (倪瓒)",
+      "facet": "Song and Yuan painters",
+      "known_at": 12
+    },
+    {
+      "name": "Wu Zhen (吴镇)",
+      "facet": "Song and Yuan painters",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Meng (王蒙)",
+      "facet": "Song and Yuan painters",
+      "known_at": 13
+    },
+    {
+      "name": "Four Masters of the Yuan (元四家)",
+      "facet": "Song and Yuan painters",
+      "known_at": 12
+    },
+    {
+      "name": "Hanlin Painting Academy (翰林图画院)",
+      "facet": "Song and Yuan painters",
+      "known_at": 12
+    },
+    {
+      "name": "Tang Yin (唐寅)",
+      "facet": "Ming and Qing painters",
+      "known_at": 5
+    },
+    {
+      "name": "Shen Zhou (沈周)",
+      "facet": "Ming and Qing painters",
+      "known_at": 11
+    },
+    {
+      "name": "Wen Zhengming (文徵明)",
+      "facet": "Ming and Qing painters",
+      "known_at": 9
+    },
+    {
+      "name": "Qiu Ying (仇英)",
+      "facet": "Ming and Qing painters",
+      "known_at": 11
+    },
+    {
+      "name": "Four Masters of the Ming (明四家)",
+      "facet": "Ming and Qing painters",
+      "known_at": 11
+    },
+    {
+      "name": "Four Talents of Wuzhong (江南四大才子)",
+      "facet": "Ming and Qing painters",
+      "known_at": 7
+    },
+    {
+      "name": "Dong Qichang (董其昌)",
+      "facet": "Ming and Qing painters",
+      "known_at": 12
+    },
+    {
+      "name": "Xu Wei (徐渭)",
+      "facet": "Ming and Qing painters",
+      "known_at": 9
+    },
+    {
+      "name": "Chen Hongshou (陈洪绶)",
+      "facet": "Ming and Qing painters",
+      "known_at": 13
+    },
+    {
+      "name": "Bada Shanren (八大山人)",
+      "facet": "Ming and Qing painters",
+      "known_at": 9
+    },
+    {
+      "name": "Shitao (石涛)",
+      "facet": "Ming and Qing painters",
+      "known_at": 11
+    },
+    {
+      "name": "Jin Nong (金农)",
+      "facet": "Ming and Qing painters",
+      "known_at": 13
+    },
+    {
+      "name": "Huang Shen (黄慎)",
+      "facet": "Ming and Qing painters",
+      "known_at": 14
+    },
+    {
+      "name": "Four Wangs (四王)",
+      "facet": "Ming and Qing painters",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Hui (王翚)",
+      "facet": "Ming and Qing painters",
+      "known_at": 14
+    },
+    {
+      "name": "Yun Shouping (恽寿平)",
+      "facet": "Ming and Qing painters",
+      "known_at": 14
+    },
+    {
+      "name": "Ren Bonian (任伯年)",
+      "facet": "Ming and Qing painters",
+      "known_at": 12
+    },
+    {
+      "name": "Wu Changshuo (吴昌硕)",
+      "facet": "Ming and Qing painters",
+      "known_at": 10
+    },
+    {
+      "name": "Shanghai School (海派)",
+      "facet": "Ming and Qing painters",
+      "known_at": 12
+    },
+    {
+      "name": "Wu School (吴门画派)",
+      "facet": "Ming and Qing painters",
+      "known_at": 12
+    },
+    {
+      "name": "Qi Baishi (齐白石)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 3
+    },
+    {
+      "name": "Qi Baishi's shrimp",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 4
+    },
+    {
+      "name": "Xu Beihong (徐悲鸿)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 4
+    },
+    {
+      "name": "Xu Beihong's horses",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 4
+    },
+    {
+      "name": "Zhang Daqian (张大千)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 7
+    },
+    {
+      "name": "Splashed color (泼彩)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 12
+    },
+    {
+      "name": "Huang Binhong (黄宾虹)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 12
+    },
+    {
+      "name": "Pan Tianshou (潘天寿)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 11
+    },
+    {
+      "name": "Li Keran (李可染)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 10
+    },
+    {
+      "name": "Li Keran's water buffaloes",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 11
+    },
+    {
+      "name": "Fu Baoshi (傅抱石)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 11
+    },
+    {
+      "name": "This Land So Rich in Beauty (江山如此多娇)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 10
+    },
+    {
+      "name": "Lin Fengmian (林风眠)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 12
+    },
+    {
+      "name": "Wu Guanzhong (吴冠中)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 10
+    },
+    {
+      "name": "Liu Haisu (刘海粟)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 12
+    },
+    {
+      "name": "Jiang Zhaohe (蒋兆和)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 13
+    },
+    {
+      "name": "Huang Zhou (黄胄)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 12
+    },
+    {
+      "name": "Lingnan School (岭南画派)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 12
+    },
+    {
+      "name": "Guan Shanyue (关山月)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 12
+    },
+    {
+      "name": "Feng Zikai (丰子恺)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 7
+    },
+    {
+      "name": "Wu Zuoren (吴作人)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 12
+    },
+    {
+      "name": "Galloping Horse (奔马图)",
+      "facet": "Modern masters (Qi Baishi, Xu Beihong)",
+      "known_at": 6
+    },
+    {
+      "name": "Huang Quan (黄筌)",
+      "facet": "Bird-and-flower painting",
+      "known_at": 12
+    },
+    {
+      "name": "Xu Xi (徐熙)",
+      "facet": "Bird-and-flower painting",
+      "known_at": 13
+    },
+    {
+      "name": "Sketches of Rare Birds (写生珍禽图)",
+      "facet": "Bird-and-flower painting",
+      "known_at": 12
+    },
+    {
+      "name": "Cui Bai (崔白)",
+      "facet": "Bird-and-flower painting",
+      "known_at": 14
+    },
+    {
+      "name": "Magpies and Hare (双喜图)",
+      "facet": "Bird-and-flower painting",
+      "known_at": 14
+    },
+    {
+      "name": "Crane (鹤)",
+      "facet": "Bird-and-flower painting",
+      "known_at": 3
+    },
+    {
+      "name": "Peacock (孔雀)",
+      "facet": "Bird-and-flower painting",
+      "known_at": 2
+    },
+    {
+      "name": "Eagle (鹰)",
+      "facet": "Bird-and-flower painting",
+      "known_at": 3
+    },
+    {
+      "name": "Goldfish (金鱼)",
+      "facet": "Bird-and-flower painting",
+      "known_at": 2
+    },
+    {
+      "name": "Carp (鲤鱼)",
+      "facet": "Bird-and-flower painting",
+      "known_at": 3
+    },
+    {
+      "name": "Grapes (葡萄)",
+      "facet": "Bird-and-flower painting",
+      "known_at": 5
+    },
+    {
+      "name": "Cicada (蝉)",
+      "facet": "Bird-and-flower painting",
+      "known_at": 4
+    },
+    {
+      "name": "Insects and grasses (草虫)",
+      "facet": "Bird-and-flower painting",
+      "known_at": 9
+    },
+    {
+      "name": "Chinese cabbage (白菜)",
+      "facet": "Bird-and-flower painting",
+      "known_at": 5
+    },
+    {
+      "name": "Kingfisher (翠鸟)",
+      "facet": "Bird-and-flower painting",
+      "known_at": 5
+    },
+    {
+      "name": "Shanshui painting (山水画)",
+      "facet": "Landscape (shanshui) painting",
+      "known_at": 5
+    },
+    {
+      "name": "Blue-green landscape (青绿山水)",
+      "facet": "Landscape (shanshui) painting",
+      "known_at": 10
+    },
+    {
+      "name": "Literati painting (文人画)",
+      "facet": "Landscape (shanshui) painting",
+      "known_at": 11
+    },
+    {
+      "name": "Axe-cut texture strokes (斧劈皴)",
+      "facet": "Landscape (shanshui) painting",
+      "known_at": 14
+    },
+    {
+      "name": "Hemp-fiber texture strokes (披麻皴)",
+      "facet": "Landscape (shanshui) painting",
+      "known_at": 14
+    },
+    {
+      "name": "Mi dots (米点)",
+      "facet": "Landscape (shanshui) painting",
+      "known_at": 14
+    },
+    {
+      "name": "Three distances (三远)",
+      "facet": "Landscape (shanshui) painting",
+      "known_at": 13
+    },
+    {
+      "name": "Lofty Message of Forests and Streams (林泉高致)",
+      "facet": "Landscape (shanshui) painting",
+      "known_at": 14
+    },
+    {
+      "name": "Northern and Southern Schools (南北宗)",
+      "facet": "Landscape (shanshui) painting",
+      "known_at": 14
+    },
+    {
+      "name": "One-corner Ma, half-side Xia (马一角夏半边)",
+      "facet": "Landscape (shanshui) painting",
+      "known_at": 13
+    },
+    {
+      "name": "Dong Yuan (董源)",
+      "facet": "Landscape (shanshui) painting",
+      "known_at": 13
+    },
+    {
+      "name": "Juran (巨然)",
+      "facet": "Landscape (shanshui) painting",
+      "known_at": 14
+    },
+    {
+      "name": "Jing Hao (荆浩)",
+      "facet": "Landscape (shanshui) painting",
+      "known_at": 14
+    },
+    {
+      "name": "Fisherman in a lone boat (寒江独钓)",
+      "facet": "Landscape (shanshui) painting",
+      "known_at": 7
+    },
+    {
+      "name": "Gu Hongzhong (顾闳中)",
+      "facet": "Figure painting and court life",
+      "known_at": 11
+    },
+    {
+      "name": "Zhou Fang (周昉)",
+      "facet": "Figure painting and court life",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Xuan (张萱)",
+      "facet": "Figure painting and court life",
+      "known_at": 13
+    },
+    {
+      "name": "Li Gonglin (李公麟)",
+      "facet": "Figure painting and court life",
+      "known_at": 13
+    },
+    {
+      "name": "Plain line drawing (白描)",
+      "facet": "Figure painting and court life",
+      "known_at": 9
+    },
+    {
+      "name": "Paintings of beautiful women (仕女画)",
+      "facet": "Figure painting and court life",
+      "known_at": 9
+    },
+    {
+      "name": "Emperor Qianlong (乾隆)",
+      "facet": "Figure painting and court life",
+      "known_at": 4
+    },
+    {
+      "name": "Twelve Beauties (十二美人图)",
+      "facet": "Figure painting and court life",
+      "known_at": 13
+    },
+    {
+      "name": "Han Xizai (韩熙载)",
+      "facet": "Figure painting and court life",
+      "known_at": 11
+    },
+    {
+      "name": "Kangxi Emperor's Southern Inspection Tour (康熙南巡图)",
+      "facet": "Figure painting and court life",
+      "known_at": 12
+    },
+    {
+      "name": "Guanxiu's Arhats (贯休罗汉)",
+      "facet": "Figure painting and court life",
+      "known_at": 14
+    },
+    {
+      "name": "Iron-wire line (铁线描)",
+      "facet": "Figure painting and court life",
+      "known_at": 14
+    },
+    {
+      "name": "Imperial portrait (御容像)",
+      "facet": "Figure painting and court life",
+      "known_at": 11
+    },
+    {
+      "name": "Immortal in Splashed Ink (泼墨仙人图)",
+      "facet": "Figure painting and court life",
+      "known_at": 13
+    },
+    {
+      "name": "Flying apsaras of Dunhuang (飞天)",
+      "facet": "Dunhuang and cave murals",
+      "known_at": 5
+    },
+    {
+      "name": "Chang Shuhong (常书鸿)",
+      "facet": "Dunhuang and cave murals",
+      "known_at": 12
+    },
+    {
+      "name": "Fan Jinshi (樊锦诗)",
+      "facet": "Dunhuang and cave murals",
+      "known_at": 11
+    },
+    {
+      "name": "Tales of the Silk Road (丝路花雨)",
+      "facet": "Dunhuang and cave murals",
+      "known_at": 11
+    },
+    {
+      "name": "Yulin Caves (榆林窟)",
+      "facet": "Dunhuang and cave murals",
+      "known_at": 14
+    },
+    {
+      "name": "Yongle Palace murals (永乐宫壁画)",
+      "facet": "Dunhuang and cave murals",
+      "known_at": 13
+    },
+    {
+      "name": "Fahai Temple murals (法海寺壁画)",
+      "facet": "Dunhuang and cave murals",
+      "known_at": 14
+    },
+    {
+      "name": "Silk Road (丝绸之路)",
+      "facet": "Dunhuang and cave murals",
+      "known_at": 4
+    },
+    {
+      "name": "Tomb murals of Princess Yongtai (永泰公主墓壁画)",
+      "facet": "Dunhuang and cave murals",
+      "known_at": 14
+    },
+    {
+      "name": "Gansu Province (甘肃)",
+      "facet": "Dunhuang and cave murals",
+      "known_at": 5
+    },
+    {
+      "name": "Pine tree (松)",
+      "facet": "Four Gentlemen and painting symbols",
+      "known_at": 3
+    },
+    {
+      "name": "Wang Mian's Ink Plum (王冕墨梅)",
+      "facet": "Four Gentlemen and painting symbols",
+      "known_at": 7
+    },
+    {
+      "name": "Zheng Sixiao's rootless orchid (郑思肖墨兰)",
+      "facet": "Four Gentlemen and painting symbols",
+      "known_at": 14
+    },
+    {
+      "name": "Bat (蝙蝠)",
+      "facet": "Four Gentlemen and painting symbols",
+      "known_at": 7
+    },
+    {
+      "name": "Peach of longevity (寿桃)",
+      "facet": "Four Gentlemen and painting symbols",
+      "known_at": 4
+    },
+    {
+      "name": "Deer (鹿)",
+      "facet": "Four Gentlemen and painting symbols",
+      "known_at": 7
+    },
+    {
+      "name": "Scholar's rock (太湖石)",
+      "facet": "Four Gentlemen and painting symbols",
+      "known_at": 9
+    },
+    {
+      "name": "New Year pictures (年画)",
+      "facet": "Folk painting and New Year pictures",
+      "known_at": 3
+    },
+    {
+      "name": "Yangliuqing New Year pictures (杨柳青年画)",
+      "facet": "Folk painting and New Year pictures",
+      "known_at": 9
+    },
+    {
+      "name": "Taohuawu New Year pictures (桃花坞年画)",
+      "facet": "Folk painting and New Year pictures",
+      "known_at": 11
+    },
+    {
+      "name": "Yangjiabu New Year pictures (杨家埠年画)",
+      "facet": "Folk painting and New Year pictures",
+      "known_at": 12
+    },
+    {
+      "name": "Mianzhu New Year pictures (绵竹年画)",
+      "facet": "Folk painting and New Year pictures",
+      "known_at": 12
+    },
+    {
+      "name": "Zhuxian Town New Year pictures (朱仙镇年画)",
+      "facet": "Folk painting and New Year pictures",
+      "known_at": 13
+    },
+    {
+      "name": "Qin Qiong and Yuchi Gong (秦琼和尉迟恭)",
+      "facet": "Folk painting and New Year pictures",
+      "known_at": 8
+    },
+    {
+      "name": "Chubby baby holding a carp (娃娃抱鱼)",
+      "facet": "Folk painting and New Year pictures",
+      "known_at": 4
+    },
+    {
+      "name": "The Rat's Wedding (老鼠娶亲)",
+      "facet": "Folk painting and New Year pictures",
+      "known_at": 5
+    },
+    {
+      "name": "Huxian peasant painting (户县农民画)",
+      "facet": "Folk painting and New Year pictures",
+      "known_at": 13
+    },
+    {
+      "name": "Jinshan peasant painting (金山农民画)",
+      "facet": "Folk painting and New Year pictures",
+      "known_at": 13
+    },
+    {
+      "name": "Long Corridor of the Summer Palace (颐和园长廊)",
+      "facet": "Folk painting and New Year pictures",
+      "known_at": 7
+    },
+    {
+      "name": "Inside-painted snuff bottle (内画鼻烟壶)",
+      "facet": "Folk painting and New Year pictures",
+      "known_at": 11
+    },
+    {
+      "name": "Woodblock printing (木版印刷)",
+      "facet": "Folk painting and New Year pictures",
+      "known_at": 5
+    },
+    {
+      "name": "Painted lantern (彩灯)",
+      "facet": "Folk painting and New Year pictures",
+      "known_at": 3
+    },
+    {
+      "name": "胸有成竹 (xiōng yǒu chéng zhú)",
+      "facet": "Painting stories and idioms",
+      "known_at": 5
+    },
+    {
+      "name": "画饼充饥 (huà bǐng chōng jī)",
+      "facet": "Painting stories and idioms",
+      "known_at": 5
+    },
+    {
+      "name": "画虎不成反类犬 (huà hǔ bù chéng fǎn lèi quǎn)",
+      "facet": "Painting stories and idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Ma Liang and the Magic Brush (神笔马良)",
+      "facet": "Painting stories and idioms",
+      "known_at": 2
+    },
+    {
+      "name": "丹青 (dānqīng)",
+      "facet": "Painting stories and idioms",
+      "known_at": 9
+    },
+    {
+      "name": "依样画葫芦 (yī yàng huà hú lu)",
+      "facet": "Painting stories and idioms",
+      "known_at": 8
+    },
+    {
+      "name": "画地为牢 (huà dì wéi láo)",
+      "facet": "Painting stories and idioms",
+      "known_at": 10
+    },
+    {
+      "name": "诗中有画，画中有诗 (shī zhōng yǒu huà, huà zhōng yǒu shī)",
+      "facet": "Painting stories and idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Dai Song's fighting oxen and the herd boy (牧童评画)",
+      "facet": "Painting stories and idioms",
+      "known_at": 5
+    },
+    {
+      "name": "Wu Daozi painting the Jialing River in one day (一日画嘉陵江)",
+      "facet": "Painting stories and idioms",
+      "known_at": 12
+    },
+    {
+      "name": "Su Shi's red bamboo (朱竹)",
+      "facet": "Painting stories and idioms",
+      "known_at": 13
+    },
+    {
+      "name": "Huizong's painting exam (踏花归去马蹄香)",
+      "facet": "Painting stories and idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Temple hidden in deep mountains (深山藏古寺)",
+      "facet": "Painting stories and idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Gu Kaizhi dotting the eyes last (传神阿堵)",
+      "facet": "Painting stories and idioms",
+      "known_at": 13
+    },
+    {
+      "name": "栩栩如生 (xǔ xǔ rú shēng)",
+      "facet": "Painting stories and idioms",
+      "known_at": 4
+    },
+    {
+      "name": "浓墨重彩 (nóng mò zhòng cǎi)",
+      "facet": "Painting stories and idioms",
+      "known_at": 9
+    }
+  ]
+}
