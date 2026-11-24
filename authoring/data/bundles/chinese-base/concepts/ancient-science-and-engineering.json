@@ -1,0 +1,467 @@
+{
+  "subcategory": "ancient-science-and-engineering",
+  "facets": [
+    "Legendary inventors and craftsmen",
+    "Astronomy and calendars",
+    "Instruments and measuring devices",
+    "Water control and canals",
+    "Bridges, walls and great buildings",
+    "Optics, magnetism and early physics",
+    "Mathematics and counting tools",
+    "Medicine and herbal knowledge",
+    "Farming tools and techniques",
+    "Textiles, silk and porcelain",
+    "Metalwork, bronze and casting",
+    "Scholars and their famous books"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 4,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Ding Huan",
+      "facet": "Legendary inventors and craftsmen",
+      "known_at": 13
+    },
+    {
+      "name": "Four Great Inventions (四大发明)",
+      "facet": "Legendary inventors and craftsmen",
+      "known_at": 3
+    },
+    {
+      "name": "Kite (风筝)",
+      "facet": "Legendary inventors and craftsmen",
+      "known_at": 3
+    },
+    {
+      "name": "Saw (锯)",
+      "facet": "Legendary inventors and craftsmen",
+      "known_at": 3
+    },
+    {
+      "name": "Heavenly Stems and Earthly Branches (天干地支)",
+      "facet": "Astronomy and calendars",
+      "known_at": 7
+    },
+    {
+      "name": "Twenty-eight lunar mansions (二十八宿)",
+      "facet": "Astronomy and calendars",
+      "known_at": 11
+    },
+    {
+      "name": "Beijing Ancient Observatory",
+      "facet": "Astronomy and calendars",
+      "known_at": 10
+    },
+    {
+      "name": "Gan De and Shi Shen",
+      "facet": "Astronomy and calendars",
+      "known_at": 13
+    },
+    {
+      "name": "Supernova of 1054",
+      "facet": "Astronomy and calendars",
+      "known_at": 13
+    },
+    {
+      "name": "Sunspot records",
+      "facet": "Astronomy and calendars",
+      "known_at": 12
+    },
+    {
+      "name": "Huntian theory (浑天说)",
+      "facet": "Astronomy and calendars",
+      "known_at": 12
+    },
+    {
+      "name": "Halley's Comet records",
+      "facet": "Astronomy and calendars",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Heng's seismograph (地动仪)",
+      "facet": "Instruments and measuring devices",
+      "known_at": 5
+    },
+    {
+      "name": "Simplified armillary (简仪)",
+      "facet": "Instruments and measuring devices",
+      "known_at": 12
+    },
+    {
+      "name": "Odometer cart (记里鼓车)",
+      "facet": "Instruments and measuring devices",
+      "known_at": 9
+    },
+    {
+      "name": "Unified weights and measures of Qin",
+      "facet": "Instruments and measuring devices",
+      "known_at": 6
+    },
+    {
+      "name": "Ink line (墨斗)",
+      "facet": "Instruments and measuring devices",
+      "known_at": 8
+    },
+    {
+      "name": "Carpenter's square (矩)",
+      "facet": "Instruments and measuring devices",
+      "known_at": 9
+    },
+    {
+      "name": "Incense clock",
+      "facet": "Instruments and measuring devices",
+      "known_at": 11
+    },
+    {
+      "name": "Karez wells (坎儿井)",
+      "facet": "Water control and canals",
+      "known_at": 8
+    },
+    {
+      "name": "Precious Bottle Neck (宝瓶口)",
+      "facet": "Water control and canals",
+      "known_at": 11
+    },
+    {
+      "name": "Flying Sand Weir (飞沙堰)",
+      "facet": "Water control and canals",
+      "known_at": 12
+    },
+    {
+      "name": "Pound lock",
+      "facet": "Water control and canals",
+      "known_at": 14
+    },
+    {
+      "name": "Qiantang River seawall",
+      "facet": "Water control and canals",
+      "known_at": 12
+    },
+    {
+      "name": "Pan Jixun",
+      "facet": "Water control and canals",
+      "known_at": 14
+    },
+    {
+      "name": "Luoyang Bridge (洛阳桥)",
+      "facet": "Bridges, walls and great buildings",
+      "known_at": 11
+    },
+    {
+      "name": "Guangji Bridge (广济桥)",
+      "facet": "Bridges, walls and great buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Rainbow Bridge of Bianjing (汴水虹桥)",
+      "facet": "Bridges, walls and great buildings",
+      "known_at": 10
+    },
+    {
+      "name": "Dougong (斗拱)",
+      "facet": "Bridges, walls and great buildings",
+      "known_at": 8
+    },
+    {
+      "name": "Sticky rice mortar",
+      "facet": "Bridges, walls and great buildings",
+      "known_at": 9
+    },
+    {
+      "name": "Sinan (司南)",
+      "facet": "Optics, magnetism and early physics",
+      "known_at": 4
+    },
+    {
+      "name": "Lodestone",
+      "facet": "Optics, magnetism and early physics",
+      "known_at": 7
+    },
+    {
+      "name": "Magnetic declination (磁偏角)",
+      "facet": "Optics, magnetism and early physics",
+      "known_at": 12
+    },
+    {
+      "name": "Fish-shaped compass (指南鱼)",
+      "facet": "Optics, magnetism and early physics",
+      "known_at": 9
+    },
+    {
+      "name": "Floating-needle compass",
+      "facet": "Optics, magnetism and early physics",
+      "known_at": 11
+    },
+    {
+      "name": "Burning mirror (阳燧)",
+      "facet": "Optics, magnetism and early physics",
+      "known_at": 10
+    },
+    {
+      "name": "Magic mirror (透光镜)",
+      "facet": "Optics, magnetism and early physics",
+      "known_at": 12
+    },
+    {
+      "name": "Concave mirror",
+      "facet": "Optics, magnetism and early physics",
+      "known_at": 8
+    },
+    {
+      "name": "Ice lens (削冰取火)",
+      "facet": "Optics, magnetism and early physics",
+      "known_at": 12
+    },
+    {
+      "name": "Spouting bowl (鱼洗)",
+      "facet": "Optics, magnetism and early physics",
+      "known_at": 10
+    },
+    {
+      "name": "Trotting horse lantern (走马灯)",
+      "facet": "Optics, magnetism and early physics",
+      "known_at": 8
+    },
+    {
+      "name": "Lever in the Mohist Canon",
+      "facet": "Optics, magnetism and early physics",
+      "known_at": 11
+    },
+    {
+      "name": "Cao Chong weighing the elephant (曹冲称象)",
+      "facet": "Optics, magnetism and early physics",
+      "known_at": 3
+    },
+    {
+      "name": "Circle-cutting method (割圆术)",
+      "facet": "Mathematics and counting tools",
+      "known_at": 11
+    },
+    {
+      "name": "Chinese remainder theorem (韩信点兵)",
+      "facet": "Mathematics and counting tools",
+      "known_at": 10
+    },
+    {
+      "name": "Yang Hui's triangle",
+      "facet": "Mathematics and counting tools",
+      "known_at": 9
+    },
+    {
+      "name": "Lo Shu magic square (洛书)",
+      "facet": "Mathematics and counting tools",
+      "known_at": 9
+    },
+    {
+      "name": "Shennong's Herbal Classic (神农本草经)",
+      "facet": "Medicine and herbal knowledge",
+      "known_at": 10
+    },
+    {
+      "name": "Five Animal Exercises (五禽戏)",
+      "facet": "Medicine and herbal knowledge",
+      "known_at": 8
+    },
+    {
+      "name": "Bian Que",
+      "facet": "Medicine and herbal knowledge",
+      "known_at": 5
+    },
+    {
+      "name": "Huangdi Neijing (黄帝内经)",
+      "facet": "Medicine and herbal knowledge",
+      "known_at": 9
+    },
+    {
+      "name": "Four diagnostic methods (望闻问切)",
+      "facet": "Medicine and herbal knowledge",
+      "known_at": 6
+    },
+    {
+      "name": "Moxibustion",
+      "facet": "Medicine and herbal knowledge",
+      "known_at": 9
+    },
+    {
+      "name": "Cupping (拔罐)",
+      "facet": "Medicine and herbal knowledge",
+      "known_at": 5
+    },
+    {
+      "name": "Variolation (人痘接种)",
+      "facet": "Medicine and herbal knowledge",
+      "known_at": 12
+    },
+    {
+      "name": "Dragon backbone water lift (龙骨水车)",
+      "facet": "Farming tools and techniques",
+      "known_at": 7
+    },
+    {
+      "name": "Noria water wheel (筒车)",
+      "facet": "Farming tools and techniques",
+      "known_at": 8
+    },
+    {
+      "name": "Iron plough and ox ploughing (铁犁牛耕)",
+      "facet": "Farming tools and techniques",
+      "known_at": 8
+    },
+    {
+      "name": "Winnowing machine (风扇车)",
+      "facet": "Farming tools and techniques",
+      "known_at": 10
+    },
+    {
+      "name": "Water-powered trip hammer (水碓)",
+      "facet": "Farming tools and techniques",
+      "known_at": 10
+    },
+    {
+      "name": "Terraced fields (梯田)",
+      "facet": "Farming tools and techniques",
+      "known_at": 5
+    },
+    {
+      "name": "Nongzheng Quanshu (农政全书)",
+      "facet": "Farming tools and techniques",
+      "known_at": 12
+    },
+    {
+      "name": "Mulberry dike fish ponds (桑基鱼塘)",
+      "facet": "Farming tools and techniques",
+      "known_at": 10
+    },
+    {
+      "name": "Millet (粟)",
+      "facet": "Farming tools and techniques",
+      "known_at": 7
+    },
+    {
+      "name": "Alternating ridge farming (代田法)",
+      "facet": "Farming tools and techniques",
+      "known_at": 13
+    },
+    {
+      "name": "Sericulture (养蚕)",
+      "facet": "Textiles, silk and porcelain",
+      "known_at": 3
+    },
+    {
+      "name": "Five Great Kilns (五大名窑)",
+      "facet": "Textiles, silk and porcelain",
+      "known_at": 12
+    },
+    {
+      "name": "Yunjin brocade (云锦)",
+      "facet": "Textiles, silk and porcelain",
+      "known_at": 10
+    },
+    {
+      "name": "Drawloom (提花机)",
+      "facet": "Textiles, silk and porcelain",
+      "known_at": 12
+    },
+    {
+      "name": "Batik (蜡染)",
+      "facet": "Textiles, silk and porcelain",
+      "known_at": 8
+    },
+    {
+      "name": "Chime bells of Marquis Yi of Zeng (曾侯乙编钟)",
+      "facet": "Metalwork, bronze and casting",
+      "known_at": 7
+    },
+    {
+      "name": "Bronze chariots of the Qin mausoleum",
+      "facet": "Metalwork, bronze and casting",
+      "known_at": 9
+    },
+    {
+      "name": "Ou Yezi",
+      "facet": "Metalwork, bronze and casting",
+      "known_at": 10
+    },
+    {
+      "name": "Gan Jiang and Mo Ye",
+      "facet": "Metalwork, bronze and casting",
+      "known_at": 8
+    },
+    {
+      "name": "Du Shi's water-powered bellows",
+      "facet": "Metalwork, bronze and casting",
+      "known_at": 13
+    },
+    {
+      "name": "Four-goat square zun (四羊方尊)",
+      "facet": "Metalwork, bronze and casting",
+      "known_at": 8
+    },
+    {
+      "name": "Cloisonné (景泰蓝)",
+      "facet": "Metalwork, bronze and casting",
+      "known_at": 7
+    },
+    {
+      "name": "Hundred-times refined steel (百炼钢)",
+      "facet": "Metalwork, bronze and casting",
+      "known_at": 10
+    },
+    {
+      "name": "Iron Lion of Cangzhou",
+      "facet": "Metalwork, bronze and casting",
+      "known_at": 11
+    },
+    {
+      "name": "Li Daoyuan",
+      "facet": "Scholars and their famous books",
+      "known_at": 11
+    },
+    {
+      "name": "Li Jie",
+      "facet": "Scholars and their famous books",
+      "known_at": 13
+    }
+  ]
+}

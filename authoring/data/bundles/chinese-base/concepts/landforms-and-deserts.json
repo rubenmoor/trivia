@@ -1,0 +1,822 @@
+{
+  "subcategory": "landforms-and-deserts",
+  "facets": [
+    "Qinghai–Tibet Plateau",
+    "Loess Plateau and Yungui Plateau",
+    "Inner Mongolia Plateau and grasslands",
+    "Sichuan Basin",
+    "Tarim and Junggar Basins",
+    "Qaidam and Turpan Basins",
+    "Great plains of China",
+    "Taklamakan and Gobi deserts",
+    "Dunes, oases and desert life",
+    "Karst landscapes",
+    "Coastline, peninsulas and bays",
+    "Landform names and terrain steps"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 2,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 1,
+      "when": 1
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Himalayas",
+      "facet": "Qinghai–Tibet Plateau",
+      "known_at": 4
+    },
+    {
+      "name": "Tanggula Mountains",
+      "facet": "Qinghai–Tibet Plateau",
+      "known_at": 11
+    },
+    {
+      "name": "Yarlung Tsangpo River",
+      "facet": "Qinghai–Tibet Plateau",
+      "known_at": 10
+    },
+    {
+      "name": "Yak",
+      "facet": "Qinghai–Tibet Plateau",
+      "known_at": 3
+    },
+    {
+      "name": "Qinghai–Tibet Railway",
+      "facet": "Qinghai–Tibet Plateau",
+      "known_at": 8
+    },
+    {
+      "name": "Altitude sickness",
+      "facet": "Qinghai–Tibet Plateau",
+      "known_at": 7
+    },
+    {
+      "name": "Namtso Lake",
+      "facet": "Qinghai–Tibet Plateau",
+      "known_at": 11
+    },
+    {
+      "name": "Mount Kailash",
+      "facet": "Qinghai–Tibet Plateau",
+      "known_at": 12
+    },
+    {
+      "name": "Sanjiangyuan (Source of Three Rivers)",
+      "facet": "Qinghai–Tibet Plateau",
+      "known_at": 11
+    },
+    {
+      "name": "Tibetan mastiff",
+      "facet": "Qinghai–Tibet Plateau",
+      "known_at": 7
+    },
+    {
+      "name": "Highland barley",
+      "facet": "Qinghai–Tibet Plateau",
+      "known_at": 9
+    },
+    {
+      "name": "Loess",
+      "facet": "Loess Plateau and Yungui Plateau",
+      "known_at": 9
+    },
+    {
+      "name": "Yaodong cave dwelling",
+      "facet": "Loess Plateau and Yungui Plateau",
+      "known_at": 7
+    },
+    {
+      "name": "Soil erosion",
+      "facet": "Loess Plateau and Yungui Plateau",
+      "known_at": 8
+    },
+    {
+      "name": "Loess gully",
+      "facet": "Loess Plateau and Yungui Plateau",
+      "known_at": 11
+    },
+    {
+      "name": "Check dam",
+      "facet": "Loess Plateau and Yungui Plateau",
+      "known_at": 13
+    },
+    {
+      "name": "Yan'an",
+      "facet": "Loess Plateau and Yungui Plateau",
+      "known_at": 8
+    },
+    {
+      "name": "Grain for Green",
+      "facet": "Loess Plateau and Yungui Plateau",
+      "known_at": 12
+    },
+    {
+      "name": "Ansai waist drum",
+      "facet": "Loess Plateau and Yungui Plateau",
+      "known_at": 10
+    },
+    {
+      "name": "Yungui Plateau",
+      "facet": "Loess Plateau and Yungui Plateau",
+      "known_at": 7
+    },
+    {
+      "name": "Dian Lake",
+      "facet": "Loess Plateau and Yungui Plateau",
+      "known_at": 10
+    },
+    {
+      "name": "Dali",
+      "facet": "Loess Plateau and Yungui Plateau",
+      "known_at": 7
+    },
+    {
+      "name": "Inner Mongolia Plateau",
+      "facet": "Inner Mongolia Plateau and grasslands",
+      "known_at": 6
+    },
+    {
+      "name": "Xilin Gol Grassland",
+      "facet": "Inner Mongolia Plateau and grasslands",
+      "known_at": 11
+    },
+    {
+      "name": "Naadam Festival",
+      "facet": "Inner Mongolia Plateau and grasslands",
+      "known_at": 10
+    },
+    {
+      "name": "Morin khuur (horse-head fiddle)",
+      "facet": "Inner Mongolia Plateau and grasslands",
+      "known_at": 9
+    },
+    {
+      "name": "Mongolian horse",
+      "facet": "Inner Mongolia Plateau and grasslands",
+      "known_at": 6
+    },
+    {
+      "name": "Grassland",
+      "facet": "Inner Mongolia Plateau and grasslands",
+      "known_at": 2
+    },
+    {
+      "name": "Steppe",
+      "facet": "Inner Mongolia Plateau and grasslands",
+      "known_at": 7
+    },
+    {
+      "name": "Mongolian wrestling (Bökh)",
+      "facet": "Inner Mongolia Plateau and grasslands",
+      "known_at": 10
+    },
+    {
+      "name": "Hand-held mutton (手把肉)",
+      "facet": "Inner Mongolia Plateau and grasslands",
+      "known_at": 10
+    },
+    {
+      "name": "Song of the Chile (敕勒歌)",
+      "facet": "Inner Mongolia Plateau and grasslands",
+      "known_at": 8
+    },
+    {
+      "name": "Greater Khingan Mountains (大兴安岭)",
+      "facet": "Inner Mongolia Plateau and grasslands",
+      "known_at": 9
+    },
+    {
+      "name": "Yinshan Mountains",
+      "facet": "Inner Mongolia Plateau and grasslands",
+      "known_at": 11
+    },
+    {
+      "name": "Hulun Lake",
+      "facet": "Inner Mongolia Plateau and grasslands",
+      "known_at": 11
+    },
+    {
+      "name": "Erguna River",
+      "facet": "Inner Mongolia Plateau and grasslands",
+      "known_at": 12
+    },
+    {
+      "name": "Wolf Totem",
+      "facet": "Inner Mongolia Plateau and grasslands",
+      "known_at": 12
+    },
+    {
+      "name": "Chengdu Plain",
+      "facet": "Sichuan Basin",
+      "known_at": 9
+    },
+    {
+      "name": "Purple soil",
+      "facet": "Sichuan Basin",
+      "known_at": 11
+    },
+    {
+      "name": "Hotpot",
+      "facet": "Sichuan Basin",
+      "known_at": 3
+    },
+    {
+      "name": "Sichuan pepper",
+      "facet": "Sichuan Basin",
+      "known_at": 6
+    },
+    {
+      "name": "Basin fog",
+      "facet": "Sichuan Basin",
+      "known_at": 10
+    },
+    {
+      "name": "Jialing River",
+      "facet": "Sichuan Basin",
+      "known_at": 10
+    },
+    {
+      "name": "Minjiang River",
+      "facet": "Sichuan Basin",
+      "known_at": 9
+    },
+    {
+      "name": "Hard Roads to Shu (蜀道难)",
+      "facet": "Sichuan Basin",
+      "known_at": 8
+    },
+    {
+      "name": "Junggar Basin",
+      "facet": "Tarim and Junggar Basins",
+      "known_at": 10
+    },
+    {
+      "name": "Tarim River",
+      "facet": "Tarim and Junggar Basins",
+      "known_at": 9
+    },
+    {
+      "name": "Tianshan Mountains",
+      "facet": "Tarim and Junggar Basins",
+      "known_at": 6
+    },
+    {
+      "name": "Altai Mountains",
+      "facet": "Tarim and Junggar Basins",
+      "known_at": 9
+    },
+    {
+      "name": "Gurbantünggüt Desert",
+      "facet": "Tarim and Junggar Basins",
+      "known_at": 13
+    },
+    {
+      "name": "Karamay",
+      "facet": "Tarim and Junggar Basins",
+      "known_at": 11
+    },
+    {
+      "name": "West–East Gas Pipeline",
+      "facet": "Tarim and Junggar Basins",
+      "known_at": 11
+    },
+    {
+      "name": "Hami melon",
+      "facet": "Tarim and Junggar Basins",
+      "known_at": 5
+    },
+    {
+      "name": "Bosten Lake",
+      "facet": "Tarim and Junggar Basins",
+      "known_at": 12
+    },
+    {
+      "name": "Ili River Valley",
+      "facet": "Tarim and Junggar Basins",
+      "known_at": 11
+    },
+    {
+      "name": "Lop Nur",
+      "facet": "Tarim and Junggar Basins",
+      "known_at": 10
+    },
+    {
+      "name": "Loulan",
+      "facet": "Tarim and Junggar Basins",
+      "known_at": 9
+    },
+    {
+      "name": "Bogda Peak",
+      "facet": "Tarim and Junggar Basins",
+      "known_at": 12
+    },
+    {
+      "name": "Qaidam Basin",
+      "facet": "Qaidam and Turpan Basins",
+      "known_at": 9
+    },
+    {
+      "name": "Turpan Basin",
+      "facet": "Qaidam and Turpan Basins",
+      "known_at": 8
+    },
+    {
+      "name": "Ayding Lake",
+      "facet": "Qaidam and Turpan Basins",
+      "known_at": 12
+    },
+    {
+      "name": "Karez well",
+      "facet": "Qaidam and Turpan Basins",
+      "known_at": 9
+    },
+    {
+      "name": "Grape Valley",
+      "facet": "Qaidam and Turpan Basins",
+      "known_at": 8
+    },
+    {
+      "name": "Raisins",
+      "facet": "Qaidam and Turpan Basins",
+      "known_at": 4
+    },
+    {
+      "name": "Qarhan Salt Lake",
+      "facet": "Qaidam and Turpan Basins",
+      "known_at": 11
+    },
+    {
+      "name": "Potash",
+      "facet": "Qaidam and Turpan Basins",
+      "known_at": 13
+    },
+    {
+      "name": "Golmud",
+      "facet": "Qaidam and Turpan Basins",
+      "known_at": 11
+    },
+    {
+      "name": "Yardang",
+      "facet": "Qaidam and Turpan Basins",
+      "known_at": 12
+    },
+    {
+      "name": "Bezeklik Caves",
+      "facet": "Qaidam and Turpan Basins",
+      "known_at": 13
+    },
+    {
+      "name": "Emerald Lake (翡翠湖)",
+      "facet": "Qaidam and Turpan Basins",
+      "known_at": 12
+    },
+    {
+      "name": "Chaka Salt Lake",
+      "facet": "Qaidam and Turpan Basins",
+      "known_at": 9
+    },
+    {
+      "name": "Princess Iron Fan",
+      "facet": "Qaidam and Turpan Basins",
+      "known_at": 6
+    },
+    {
+      "name": "Wanzhang Salt Bridge (万丈盐桥)",
+      "facet": "Qaidam and Turpan Basins",
+      "known_at": 13
+    },
+    {
+      "name": "North China Plain",
+      "facet": "Great plains of China",
+      "known_at": 7
+    },
+    {
+      "name": "Northeast China Plain",
+      "facet": "Great plains of China",
+      "known_at": 7
+    },
+    {
+      "name": "Middle–Lower Yangtze Plain",
+      "facet": "Great plains of China",
+      "known_at": 8
+    },
+    {
+      "name": "Black soil",
+      "facet": "Great plains of China",
+      "known_at": 9
+    },
+    {
+      "name": "Sanjiang Plain",
+      "facet": "Great plains of China",
+      "known_at": 11
+    },
+    {
+      "name": "Songnen Plain",
+      "facet": "Great plains of China",
+      "known_at": 12
+    },
+    {
+      "name": "Liaohe Plain",
+      "facet": "Great plains of China",
+      "known_at": 12
+    },
+    {
+      "name": "Great Northern Wilderness (北大荒)",
+      "facet": "Great plains of China",
+      "known_at": 10
+    },
+    {
+      "name": "Huai River",
+      "facet": "Great plains of China",
+      "known_at": 8
+    },
+    {
+      "name": "Taihu Lake",
+      "facet": "Great plains of China",
+      "known_at": 7
+    },
+    {
+      "name": "Guanzhong Plain",
+      "facet": "Great plains of China",
+      "known_at": 11
+    },
+    {
+      "name": "Hetao Plain",
+      "facet": "Great plains of China",
+      "known_at": 11
+    },
+    {
+      "name": "Winter wheat",
+      "facet": "Great plains of China",
+      "known_at": 9
+    },
+    {
+      "name": "Kumtag Desert",
+      "facet": "Taklamakan and Gobi deserts",
+      "known_at": 13
+    },
+    {
+      "name": "Mu Us Desert",
+      "facet": "Taklamakan and Gobi deserts",
+      "known_at": 11
+    },
+    {
+      "name": "Kubuqi Desert",
+      "facet": "Taklamakan and Gobi deserts",
+      "known_at": 11
+    },
+    {
+      "name": "Horqin Sandy Land",
+      "facet": "Taklamakan and Gobi deserts",
+      "known_at": 13
+    },
+    {
+      "name": "Tarim Desert Highway",
+      "facet": "Taklamakan and Gobi deserts",
+      "known_at": 11
+    },
+    {
+      "name": "Three-North Shelter Forest",
+      "facet": "Taklamakan and Gobi deserts",
+      "known_at": 10
+    },
+    {
+      "name": "Desertification",
+      "facet": "Taklamakan and Gobi deserts",
+      "known_at": 9
+    },
+    {
+      "name": "Straw checkerboard (草方格)",
+      "facet": "Taklamakan and Gobi deserts",
+      "known_at": 11
+    },
+    {
+      "name": "Saihanba",
+      "facet": "Taklamakan and Gobi deserts",
+      "known_at": 11
+    },
+    {
+      "name": "Sand dune",
+      "facet": "Dunes, oases and desert life",
+      "known_at": 3
+    },
+    {
+      "name": "Barchan (crescent dune)",
+      "facet": "Dunes, oases and desert life",
+      "known_at": 11
+    },
+    {
+      "name": "Wild Bactrian camel",
+      "facet": "Dunes, oases and desert life",
+      "known_at": 10
+    },
+    {
+      "name": "Desert poplar (胡杨)",
+      "facet": "Dunes, oases and desert life",
+      "known_at": 8
+    },
+    {
+      "name": "Saxaul",
+      "facet": "Dunes, oases and desert life",
+      "known_at": 13
+    },
+    {
+      "name": "Tamarisk",
+      "facet": "Dunes, oases and desert life",
+      "known_at": 11
+    },
+    {
+      "name": "Jerboa",
+      "facet": "Dunes, oases and desert life",
+      "known_at": 9
+    },
+    {
+      "name": "Mirage",
+      "facet": "Dunes, oases and desert life",
+      "known_at": 7
+    },
+    {
+      "name": "Camel caravan",
+      "facet": "Dunes, oases and desert life",
+      "known_at": 5
+    },
+    {
+      "name": "Crescent Spring",
+      "facet": "Dunes, oases and desert life",
+      "known_at": 7
+    },
+    {
+      "name": "Hotan jade",
+      "facet": "Dunes, oases and desert life",
+      "known_at": 10
+    },
+    {
+      "name": "Cistanche",
+      "facet": "Dunes, oases and desert life",
+      "known_at": 13
+    },
+    {
+      "name": "Large daily temperature range (早穿皮袄午穿纱)",
+      "facet": "Dunes, oases and desert life",
+      "known_at": 9
+    },
+    {
+      "name": "Xinjiang cotton",
+      "facet": "Dunes, oases and desert life",
+      "known_at": 8
+    },
+    {
+      "name": "Goitered gazelle",
+      "facet": "Dunes, oases and desert life",
+      "known_at": 13
+    },
+    {
+      "name": "Wulong Three Natural Bridges",
+      "facet": "Karst landscapes",
+      "known_at": 10
+    },
+    {
+      "name": "Stalactite",
+      "facet": "Karst landscapes",
+      "known_at": 6
+    },
+    {
+      "name": "Stalagmite",
+      "facet": "Karst landscapes",
+      "known_at": 7
+    },
+    {
+      "name": "Limestone",
+      "facet": "Karst landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "Tiankeng (giant sinkhole)",
+      "facet": "Karst landscapes",
+      "known_at": 10
+    },
+    {
+      "name": "Libo karst forest",
+      "facet": "Karst landscapes",
+      "known_at": 13
+    },
+    {
+      "name": "Peak forest (峰林)",
+      "facet": "Karst landscapes",
+      "known_at": 12
+    },
+    {
+      "name": "Underground river",
+      "facet": "Karst landscapes",
+      "known_at": 9
+    },
+    {
+      "name": "20-yuan banknote",
+      "facet": "Karst landscapes",
+      "known_at": 7
+    },
+    {
+      "name": "Carbonic acid",
+      "facet": "Karst landscapes",
+      "known_at": 12
+    },
+    {
+      "name": "Yellow Sea",
+      "facet": "Coastline, peninsulas and bays",
+      "known_at": 6
+    },
+    {
+      "name": "East China Sea",
+      "facet": "Coastline, peninsulas and bays",
+      "known_at": 7
+    },
+    {
+      "name": "South China Sea",
+      "facet": "Coastline, peninsulas and bays",
+      "known_at": 6
+    },
+    {
+      "name": "Taiwan Island",
+      "facet": "Coastline, peninsulas and bays",
+      "known_at": 4
+    },
+    {
+      "name": "Chongming Island",
+      "facet": "Coastline, peninsulas and bays",
+      "known_at": 9
+    },
+    {
+      "name": "Bohai Bay",
+      "facet": "Coastline, peninsulas and bays",
+      "known_at": 10
+    },
+    {
+      "name": "Hangzhou Bay",
+      "facet": "Coastline, peninsulas and bays",
+      "known_at": 9
+    },
+    {
+      "name": "Zhoushan Archipelago",
+      "facet": "Coastline, peninsulas and bays",
+      "known_at": 10
+    },
+    {
+      "name": "Beibu Gulf",
+      "facet": "Coastline, peninsulas and bays",
+      "known_at": 11
+    },
+    {
+      "name": "Tidal flat",
+      "facet": "Coastline, peninsulas and bays",
+      "known_at": 9
+    },
+    {
+      "name": "Yellow River Delta",
+      "facet": "Coastline, peninsulas and bays",
+      "known_at": 11
+    },
+    {
+      "name": "Mangrove",
+      "facet": "Coastline, peninsulas and bays",
+      "known_at": 9
+    },
+    {
+      "name": "Mainland coastline",
+      "facet": "Coastline, peninsulas and bays",
+      "known_at": 10
+    },
+    {
+      "name": "Laoshan",
+      "facet": "Coastline, peninsulas and bays",
+      "known_at": 11
+    },
+    {
+      "name": "Three terrain steps (三级阶梯)",
+      "facet": "Landform names and terrain steps",
+      "known_at": 9
+    },
+    {
+      "name": "High in the west, low in the east",
+      "facet": "Landform names and terrain steps",
+      "known_at": 8
+    },
+    {
+      "name": "Plateau",
+      "facet": "Landform names and terrain steps",
+      "known_at": 4
+    },
+    {
+      "name": "Basin",
+      "facet": "Landform names and terrain steps",
+      "known_at": 5
+    },
+    {
+      "name": "Plain",
+      "facet": "Landform names and terrain steps",
+      "known_at": 3
+    },
+    {
+      "name": "Hills",
+      "facet": "Landform names and terrain steps",
+      "known_at": 4
+    },
+    {
+      "name": "Wushan Mountains",
+      "facet": "Landform names and terrain steps",
+      "known_at": 11
+    },
+    {
+      "name": "Xuefeng Mountains",
+      "facet": "Landform names and terrain steps",
+      "known_at": 13
+    },
+    {
+      "name": "Hengduan Mountains",
+      "facet": "Landform names and terrain steps",
+      "known_at": 11
+    },
+    {
+      "name": "Danxia landform",
+      "facet": "Landform names and terrain steps",
+      "known_at": 9
+    },
+    {
+      "name": "Suspended river (地上河)",
+      "facet": "Landform names and terrain steps",
+      "known_at": 10
+    },
+    {
+      "name": "Southeastern Hills (东南丘陵)",
+      "facet": "Landform names and terrain steps",
+      "known_at": 11
+    },
+    {
+      "name": "Contour line",
+      "facet": "Landform names and terrain steps",
+      "known_at": 9
+    },
+    {
+      "name": "Glacier",
+      "facet": "Landform names and terrain steps",
+      "known_at": 5
+    },
+    {
+      "name": "Delta",
+      "facet": "Landform names and terrain steps",
+      "known_at": 6
+    },
+    {
+      "name": "Canyon",
+      "facet": "Landform names and terrain steps",
+      "known_at": 5
+    },
+    {
+      "name": "Nanling Mountains",
+      "facet": "Landform names and terrain steps",
+      "known_at": 11
+    },
+    {
+      "name": "Changbai Mountains",
+      "facet": "Landform names and terrain steps",
+      "known_at": 7
+    }
+  ]
+}

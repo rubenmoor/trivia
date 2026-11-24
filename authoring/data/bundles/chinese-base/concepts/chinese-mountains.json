@@ -1,0 +1,1042 @@
+{
+  "subcategory": "chinese-mountains",
+  "facets": [
+    "Five Great Mountains (五岳)",
+    "Buddhist sacred mountains",
+    "Taoist sacred mountains",
+    "Scenic mountains: Huangshan and Lushan",
+    "Himalaya and Everest (珠穆朗玛峰)",
+    "Great western ranges: Kunlun, Tianshan, Karakoram",
+    "Dividing ranges: Qinling, Taihang, Nanling",
+    "Mountains in poems and idioms",
+    "Mountains in myths and legends",
+    "Emperors, pilgrims and climbers",
+    "Karst peaks and Zhangjiajie",
+    "Mountain plants, animals and weather"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mount Hua (华山)",
+      "facet": "Five Great Mountains (五岳)",
+      "known_at": 4
+    },
+    {
+      "name": "Mount Heng, Hunan (衡山)",
+      "facet": "Five Great Mountains (五岳)",
+      "known_at": 8
+    },
+    {
+      "name": "Mount Heng, Shanxi (恒山)",
+      "facet": "Five Great Mountains (五岳)",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Song (嵩山)",
+      "facet": "Five Great Mountains (五岳)",
+      "known_at": 7
+    },
+    {
+      "name": "Shaolin Temple (少林寺)",
+      "facet": "Five Great Mountains (五岳)",
+      "known_at": 3
+    },
+    {
+      "name": "Hanging Temple (悬空寺)",
+      "facet": "Five Great Mountains (五岳)",
+      "known_at": 8
+    },
+    {
+      "name": "Jade Emperor Peak (玉皇顶)",
+      "facet": "Five Great Mountains (五岳)",
+      "known_at": 10
+    },
+    {
+      "name": "Eighteen Bends (十八盘)",
+      "facet": "Five Great Mountains (五岳)",
+      "known_at": 10
+    },
+    {
+      "name": "Southern Heavenly Gate (南天门)",
+      "facet": "Five Great Mountains (五岳)",
+      "known_at": 7
+    },
+    {
+      "name": "Long Sky Plank Road (长空栈道)",
+      "facet": "Five Great Mountains (五岳)",
+      "known_at": 9
+    },
+    {
+      "name": "Dai Temple (岱庙)",
+      "facet": "Five Great Mountains (五岳)",
+      "known_at": 12
+    },
+    {
+      "name": "Zhurong Peak (祝融峰)",
+      "facet": "Five Great Mountains (五岳)",
+      "known_at": 12
+    },
+    {
+      "name": "Zhongyue Temple (中岳庙)",
+      "facet": "Five Great Mountains (五岳)",
+      "known_at": 13
+    },
+    {
+      "name": "Taishan stone (泰山石敢当)",
+      "facet": "Five Great Mountains (五岳)",
+      "known_at": 11
+    },
+    {
+      "name": "Four Sacred Buddhist Mountains (四大佛教名山)",
+      "facet": "Buddhist sacred mountains",
+      "known_at": 8
+    },
+    {
+      "name": "Mount Emei (峨眉山)",
+      "facet": "Buddhist sacred mountains",
+      "known_at": 4
+    },
+    {
+      "name": "Mount Wutai (五台山)",
+      "facet": "Buddhist sacred mountains",
+      "known_at": 8
+    },
+    {
+      "name": "Mount Putuo (普陀山)",
+      "facet": "Buddhist sacred mountains",
+      "known_at": 8
+    },
+    {
+      "name": "Mount Jiuhua (九华山)",
+      "facet": "Buddhist sacred mountains",
+      "known_at": 9
+    },
+    {
+      "name": "Leshan Giant Buddha (乐山大佛)",
+      "facet": "Buddhist sacred mountains",
+      "known_at": 5
+    },
+    {
+      "name": "Golden Summit of Mount Emei (金顶)",
+      "facet": "Buddhist sacred mountains",
+      "known_at": 9
+    },
+    {
+      "name": "Manjushri (文殊菩萨)",
+      "facet": "Buddhist sacred mountains",
+      "known_at": 11
+    },
+    {
+      "name": "Samantabhadra (普贤菩萨)",
+      "facet": "Buddhist sacred mountains",
+      "known_at": 12
+    },
+    {
+      "name": "Guanyin (观音)",
+      "facet": "Buddhist sacred mountains",
+      "known_at": 3
+    },
+    {
+      "name": "Baoguo Temple (报国寺)",
+      "facet": "Buddhist sacred mountains",
+      "known_at": 13
+    },
+    {
+      "name": "Foguang Temple (佛光寺)",
+      "facet": "Buddhist sacred mountains",
+      "known_at": 14
+    },
+    {
+      "name": "Puji Temple (普济寺)",
+      "facet": "Buddhist sacred mountains",
+      "known_at": 14
+    },
+    {
+      "name": "Emei school of martial arts (峨眉派)",
+      "facet": "Buddhist sacred mountains",
+      "known_at": 8
+    },
+    {
+      "name": "Wudang Mountains (武当山)",
+      "facet": "Taoist sacred mountains",
+      "known_at": 5
+    },
+    {
+      "name": "Mount Qingcheng (青城山)",
+      "facet": "Taoist sacred mountains",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Longhu (龙虎山)",
+      "facet": "Taoist sacred mountains",
+      "known_at": 12
+    },
+    {
+      "name": "Mount Qiyun (齐云山)",
+      "facet": "Taoist sacred mountains",
+      "known_at": 14
+    },
+    {
+      "name": "Laoshan (崂山)",
+      "facet": "Taoist sacred mountains",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Zhongnan (终南山)",
+      "facet": "Taoist sacred mountains",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Mao (茅山)",
+      "facet": "Taoist sacred mountains",
+      "known_at": 11
+    },
+    {
+      "name": "Golden Hall of Wudang (金殿)",
+      "facet": "Taoist sacred mountains",
+      "known_at": 12
+    },
+    {
+      "name": "Purple Cloud Palace (紫霄宫)",
+      "facet": "Taoist sacred mountains",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Sanfeng (张三丰)",
+      "facet": "Taoist sacred mountains",
+      "known_at": 6
+    },
+    {
+      "name": "Wudang tai chi (武当太极)",
+      "facet": "Taoist sacred mountains",
+      "known_at": 7
+    },
+    {
+      "name": "Zhenwu (真武大帝)",
+      "facet": "Taoist sacred mountains",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Daoling (张道陵)",
+      "facet": "Taoist sacred mountains",
+      "known_at": 13
+    },
+    {
+      "name": "Laozi (老子)",
+      "facet": "Taoist sacred mountains",
+      "known_at": 5
+    },
+    {
+      "name": "Louguantai (楼观台)",
+      "facet": "Taoist sacred mountains",
+      "known_at": 14
+    },
+    {
+      "name": "Hermits of Mount Zhongnan (终南隐士)",
+      "facet": "Taoist sacred mountains",
+      "known_at": 12
+    },
+    {
+      "name": "Lushan (庐山)",
+      "facet": "Scenic mountains: Huangshan and Lushan",
+      "known_at": 5
+    },
+    {
+      "name": "Welcoming Guest Pine (迎客松)",
+      "facet": "Scenic mountains: Huangshan and Lushan",
+      "known_at": 5
+    },
+    {
+      "name": "Sea of clouds (云海)",
+      "facet": "Scenic mountains: Huangshan and Lushan",
+      "known_at": 4
+    },
+    {
+      "name": "Four wonders of Huangshan (黄山四绝)",
+      "facet": "Scenic mountains: Huangshan and Lushan",
+      "known_at": 9
+    },
+    {
+      "name": "Lotus Peak (莲花峰)",
+      "facet": "Scenic mountains: Huangshan and Lushan",
+      "known_at": 11
+    },
+    {
+      "name": "Bright Summit (光明顶)",
+      "facet": "Scenic mountains: Huangshan and Lushan",
+      "known_at": 10
+    },
+    {
+      "name": "Sandiequan Waterfall (三叠泉)",
+      "facet": "Scenic mountains: Huangshan and Lushan",
+      "known_at": 13
+    },
+    {
+      "name": "Five Old Men Peaks (五老峰)",
+      "facet": "Scenic mountains: Huangshan and Lushan",
+      "known_at": 12
+    },
+    {
+      "name": "Lushan Conference (庐山会议)",
+      "facet": "Scenic mountains: Huangshan and Lushan",
+      "known_at": 13
+    },
+    {
+      "name": "Xidi and Hongcun (西递宏村)",
+      "facet": "Scenic mountains: Huangshan and Lushan",
+      "known_at": 10
+    },
+    {
+      "name": "Lushan Yunwu tea (庐山云雾茶)",
+      "facet": "Scenic mountains: Huangshan and Lushan",
+      "known_at": 11
+    },
+    {
+      "name": "Romance on Lushan Mountain (庐山恋)",
+      "facet": "Scenic mountains: Huangshan and Lushan",
+      "known_at": 12
+    },
+    {
+      "name": "Mount Wuyi (武夷山)",
+      "facet": "Scenic mountains: Huangshan and Lushan",
+      "known_at": 7
+    },
+    {
+      "name": "Da Hong Pao tea (大红袍)",
+      "facet": "Scenic mountains: Huangshan and Lushan",
+      "known_at": 8
+    },
+    {
+      "name": "Mount Sanqing (三清山)",
+      "facet": "Scenic mountains: Huangshan and Lushan",
+      "known_at": 12
+    },
+    {
+      "name": "Mount Yandang (雁荡山)",
+      "facet": "Scenic mountains: Huangshan and Lushan",
+      "known_at": 11
+    },
+    {
+      "name": "Himalayas (喜马拉雅山脉)",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 3
+    },
+    {
+      "name": "Everest at 8848.86 m",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 6
+    },
+    {
+      "name": "2020 Everest height survey (珠峰高程测量)",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 10
+    },
+    {
+      "name": "Everest Base Camp (珠峰大本营)",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 7
+    },
+    {
+      "name": "Rongbuk Monastery (绒布寺)",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 13
+    },
+    {
+      "name": "Rongbuk Glacier (绒布冰川)",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 13
+    },
+    {
+      "name": "North Col (北坳)",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 14
+    },
+    {
+      "name": "Second Step (第二台阶)",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 14
+    },
+    {
+      "name": "Lhotse (洛子峰)",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 13
+    },
+    {
+      "name": "Cho Oyu (卓奥友峰)",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 13
+    },
+    {
+      "name": "Makalu (马卡鲁峰)",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 14
+    },
+    {
+      "name": "Shishapangma (希夏邦马峰)",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 13
+    },
+    {
+      "name": "Namcha Barwa (南迦巴瓦峰)",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 11
+    },
+    {
+      "name": "Qomolangma National Nature Reserve (珠穆朗玛峰国家级自然保护区)",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 12
+    },
+    {
+      "name": "Indian Plate (印度洋板块)",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 9
+    },
+    {
+      "name": "Sherpa (夏尔巴人)",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 10
+    },
+    {
+      "name": "2008 Olympic torch on Everest (奥运火炬登顶珠峰)",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 9
+    },
+    {
+      "name": "Marine fossils on Everest",
+      "facet": "Himalaya and Everest (珠穆朗玛峰)",
+      "known_at": 10
+    },
+    {
+      "name": "Kunlun Mountains (昆仑山)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 5
+    },
+    {
+      "name": "Tianshan (天山)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 5
+    },
+    {
+      "name": "Karakoram (喀喇昆仑山脉)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 10
+    },
+    {
+      "name": "K2 (乔戈里峰)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 10
+    },
+    {
+      "name": "Pamirs (帕米尔)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 9
+    },
+    {
+      "name": "Muztagh Ata (慕士塔格峰)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 12
+    },
+    {
+      "name": "Altai Mountains (阿尔泰山)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 9
+    },
+    {
+      "name": "Qilian Mountains (祁连山)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 8
+    },
+    {
+      "name": "Altun Mountains (阿尔金山)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 12
+    },
+    {
+      "name": "Gangdise Mountains (冈底斯山脉)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 11
+    },
+    {
+      "name": "Tanggula Mountains (唐古拉山)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 9
+    },
+    {
+      "name": "Hengduan Mountains (横断山脉)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 10
+    },
+    {
+      "name": "Mount Gongga (贡嘎山)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 12
+    },
+    {
+      "name": "Jade Dragon Snow Mountain (玉龙雪山)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 8
+    },
+    {
+      "name": "Meili Snow Mountains (梅里雪山)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 11
+    },
+    {
+      "name": "Bogda Peak (博格达峰)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 13
+    },
+    {
+      "name": "Tianchi, Heavenly Lake of Tianshan (天山天池)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 8
+    },
+    {
+      "name": "Tomur Peak (托木尔峰)",
+      "facet": "Great western ranges: Kunlun, Tianshan, Karakoram",
+      "known_at": 14
+    },
+    {
+      "name": "Qinling (秦岭)",
+      "facet": "Dividing ranges: Qinling, Taihang, Nanling",
+      "known_at": 6
+    },
+    {
+      "name": "Mount Taibai (太白山)",
+      "facet": "Dividing ranges: Qinling, Taihang, Nanling",
+      "known_at": 12
+    },
+    {
+      "name": "Taihang Mountains (太行山)",
+      "facet": "Dividing ranges: Qinling, Taihang, Nanling",
+      "known_at": 7
+    },
+    {
+      "name": "Nanling Mountains (南岭)",
+      "facet": "Dividing ranges: Qinling, Taihang, Nanling",
+      "known_at": 9
+    },
+    {
+      "name": "Greater Khingan Range (大兴安岭)",
+      "facet": "Dividing ranges: Qinling, Taihang, Nanling",
+      "known_at": 8
+    },
+    {
+      "name": "Lesser Khingan Range (小兴安岭)",
+      "facet": "Dividing ranges: Qinling, Taihang, Nanling",
+      "known_at": 8
+    },
+    {
+      "name": "Changbai Mountains (长白山)",
+      "facet": "Dividing ranges: Qinling, Taihang, Nanling",
+      "known_at": 6
+    },
+    {
+      "name": "Heaven Lake of Changbai (长白山天池)",
+      "facet": "Dividing ranges: Qinling, Taihang, Nanling",
+      "known_at": 9
+    },
+    {
+      "name": "Yin Mountains (阴山)",
+      "facet": "Dividing ranges: Qinling, Taihang, Nanling",
+      "known_at": 9
+    },
+    {
+      "name": "Helan Mountains (贺兰山)",
+      "facet": "Dividing ranges: Qinling, Taihang, Nanling",
+      "known_at": 10
+    },
+    {
+      "name": "Yan Mountains (燕山)",
+      "facet": "Dividing ranges: Qinling, Taihang, Nanling",
+      "known_at": 11
+    },
+    {
+      "name": "Daba Mountains (大巴山)",
+      "facet": "Dividing ranges: Qinling, Taihang, Nanling",
+      "known_at": 12
+    },
+    {
+      "name": "Wu Mountains (巫山)",
+      "facet": "Dividing ranges: Qinling, Taihang, Nanling",
+      "known_at": 10
+    },
+    {
+      "name": "Dabie Mountains (大别山)",
+      "facet": "Dividing ranges: Qinling, Taihang, Nanling",
+      "known_at": 11
+    },
+    {
+      "name": "Lüliang Mountains (吕梁山)",
+      "facet": "Dividing ranges: Qinling, Taihang, Nanling",
+      "known_at": 12
+    },
+    {
+      "name": "Wuling Mountains (武陵山)",
+      "facet": "Dividing ranges: Qinling, Taihang, Nanling",
+      "known_at": 12
+    },
+    {
+      "name": "Inscription on the Wall of Xilin Temple (题西林壁)",
+      "facet": "Mountains in poems and idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Moon over Mount Emei (峨眉山月歌)",
+      "facet": "Mountains in poems and idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Sitting Alone on Jingting Mountain (独坐敬亭山)",
+      "facet": "Mountains in poems and idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Mountain Travel (山行)",
+      "facet": "Mountains in poems and idioms",
+      "known_at": 6
+    },
+    {
+      "name": "Drinking Wine (饮酒·结庐在人境)",
+      "facet": "Mountains in poems and idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Seven-Character Verse: The Long March (七律·长征)",
+      "facet": "Mountains in poems and idioms",
+      "known_at": 10
+    },
+    {
+      "name": "泰山北斗 (Taishan Beidou)",
+      "facet": "Mountains in poems and idioms",
+      "known_at": 10
+    },
+    {
+      "name": "有眼不识泰山 (yǒu yǎn bù shí Tàishān)",
+      "facet": "Mountains in poems and idioms",
+      "known_at": 7
+    },
+    {
+      "name": "重于泰山 (zhòng yú Tàishān)",
+      "facet": "Mountains in poems and idioms",
+      "known_at": 10
+    },
+    {
+      "name": "稳如泰山 (wěn rú Tàishān)",
+      "facet": "Mountains in poems and idioms",
+      "known_at": 7
+    },
+    {
+      "name": "高山流水 (gāo shān liú shuǐ)",
+      "facet": "Mountains in poems and idioms",
+      "known_at": 9
+    },
+    {
+      "name": "调虎离山 (diào hǔ lí shān)",
+      "facet": "Mountains in poems and idioms",
+      "known_at": 8
+    },
+    {
+      "name": "开门见山 (kāi mén jiàn shān)",
+      "facet": "Mountains in poems and idioms",
+      "known_at": 6
+    },
+    {
+      "name": "五岳归来不看山 (wǔ yuè guī lái bù kàn shān)",
+      "facet": "Mountains in poems and idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Dwelling in the Fuchun Mountains (富春山居图)",
+      "facet": "Mountains in poems and idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Foolish Old Man Who Removed the Mountains (愚公移山)",
+      "facet": "Mountains in myths and legends",
+      "known_at": 4
+    },
+    {
+      "name": "Mount Buzhou (不周山)",
+      "facet": "Mountains in myths and legends",
+      "known_at": 10
+    },
+    {
+      "name": "Pangu (盘古)",
+      "facet": "Mountains in myths and legends",
+      "known_at": 4
+    },
+    {
+      "name": "Kunlun in myth (昆仑神话)",
+      "facet": "Mountains in myths and legends",
+      "known_at": 10
+    },
+    {
+      "name": "Queen Mother of the West (西王母)",
+      "facet": "Mountains in myths and legends",
+      "known_at": 8
+    },
+    {
+      "name": "Mount Penglai (蓬莱仙山)",
+      "facet": "Mountains in myths and legends",
+      "known_at": 9
+    },
+    {
+      "name": "Flower Fruit Mountain (花果山)",
+      "facet": "Mountains in myths and legends",
+      "known_at": 3
+    },
+    {
+      "name": "Five Finger Mountain (五指山)",
+      "facet": "Mountains in myths and legends",
+      "known_at": 4
+    },
+    {
+      "name": "Flaming Mountains (火焰山)",
+      "facet": "Mountains in myths and legends",
+      "known_at": 4
+    },
+    {
+      "name": "Vulture Peak (灵山)",
+      "facet": "Mountains in myths and legends",
+      "known_at": 8
+    },
+    {
+      "name": "Chenxiang Splits the Mountain (劈山救母)",
+      "facet": "Mountains in myths and legends",
+      "known_at": 7
+    },
+    {
+      "name": "Goddess Peak (神女峰)",
+      "facet": "Mountains in myths and legends",
+      "known_at": 11
+    },
+    {
+      "name": "Kuafu Chases the Sun (夸父逐日)",
+      "facet": "Mountains in myths and legends",
+      "known_at": 5
+    },
+    {
+      "name": "Mount Liang (梁山)",
+      "facet": "Mountains in myths and legends",
+      "known_at": 8
+    },
+    {
+      "name": "Gan Jiang and Mo Ye (干将莫邪)",
+      "facet": "Mountains in myths and legends",
+      "known_at": 12
+    },
+    {
+      "name": "Taoist of Laoshan (崂山道士)",
+      "facet": "Mountains in myths and legends",
+      "known_at": 9
+    },
+    {
+      "name": "Kangxi Emperor (康熙)",
+      "facet": "Emperors, pilgrims and climbers",
+      "known_at": 6
+    },
+    {
+      "name": "Xu Xiake (徐霞客)",
+      "facet": "Emperors, pilgrims and climbers",
+      "known_at": 8
+    },
+    {
+      "name": "The Travel Diaries of Xu Xiake (徐霞客游记)",
+      "facet": "Emperors, pilgrims and climbers",
+      "known_at": 10
+    },
+    {
+      "name": "Xuanzang (玄奘)",
+      "facet": "Emperors, pilgrims and climbers",
+      "known_at": 5
+    },
+    {
+      "name": "Faxian (法显)",
+      "facet": "Emperors, pilgrims and climbers",
+      "known_at": 12
+    },
+    {
+      "name": "Bodhidharma (达摩)",
+      "facet": "Emperors, pilgrims and climbers",
+      "known_at": 9
+    },
+    {
+      "name": "Xie Lingyun (谢灵运)",
+      "facet": "Emperors, pilgrims and climbers",
+      "known_at": 13
+    },
+    {
+      "name": "Huiyuan of Mount Lu (慧远)",
+      "facet": "Emperors, pilgrims and climbers",
+      "known_at": 14
+    },
+    {
+      "name": "1960 Chinese north-ridge ascent of Everest",
+      "facet": "Emperors, pilgrims and climbers",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Fuzhou (王富洲)",
+      "facet": "Emperors, pilgrims and climbers",
+      "known_at": 13
+    },
+    {
+      "name": "Gonpo (贡布)",
+      "facet": "Emperors, pilgrims and climbers",
+      "known_at": 14
+    },
+    {
+      "name": "Qu Yinhua (屈银华)",
+      "facet": "Emperors, pilgrims and climbers",
+      "known_at": 14
+    },
+    {
+      "name": "Pan Duo (潘多)",
+      "facet": "Emperors, pilgrims and climbers",
+      "known_at": 12
+    },
+    {
+      "name": "Xia Boyu (夏伯渝)",
+      "facet": "Emperors, pilgrims and climbers",
+      "known_at": 13
+    },
+    {
+      "name": "Zhangjiajie (张家界)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 5
+    },
+    {
+      "name": "Wulingyuan (武陵源)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 10
+    },
+    {
+      "name": "Avatar Hallelujah Mountain (乾坤柱)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 7
+    },
+    {
+      "name": "Tianmen Mountain (天门山)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 7
+    },
+    {
+      "name": "Zhangjiajie Glass Bridge (张家界大峡谷玻璃桥)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 7
+    },
+    {
+      "name": "Bailong Elevator (百龙天梯)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 10
+    },
+    {
+      "name": "Guilin landscape (桂林山水)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 4
+    },
+    {
+      "name": "20-yuan banknote Li River scene (20元人民币背面)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 8
+    },
+    {
+      "name": "Elephant Trunk Hill (象鼻山)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 6
+    },
+    {
+      "name": "Yangshuo (阳朔)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 9
+    },
+    {
+      "name": "Reed Flute Cave (芦笛岩)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 11
+    },
+    {
+      "name": "Stone Forest (石林)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 7
+    },
+    {
+      "name": "Karst (喀斯特地貌)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 9
+    },
+    {
+      "name": "Limestone (石灰岩)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 8
+    },
+    {
+      "name": "Wulong Three Natural Bridges (武隆天生三桥)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 11
+    },
+    {
+      "name": "Wanfenglin (万峰林)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 13
+    },
+    {
+      "name": "Zhangye Danxia (张掖丹霞)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Danxia (丹霞山)",
+      "facet": "Karst peaks and Zhangjiajie",
+      "known_at": 11
+    },
+    {
+      "name": "Golden snub-nosed monkey (金丝猴)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 5
+    },
+    {
+      "name": "Tibetan macaque (藏酋猴)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 8
+    },
+    {
+      "name": "Snow leopard (雪豹)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 5
+    },
+    {
+      "name": "Takin (羚牛)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 10
+    },
+    {
+      "name": "Red panda (小熊猫)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 3
+    },
+    {
+      "name": "Crested ibis (朱鹮)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 8
+    },
+    {
+      "name": "Amur tiger (东北虎)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 4
+    },
+    {
+      "name": "Yak (牦牛)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 3
+    },
+    {
+      "name": "Himalayan marmot (喜马拉雅旱獭)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 11
+    },
+    {
+      "name": "Bar-headed goose (斑头雁)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 12
+    },
+    {
+      "name": "Arrow bamboo (箭竹)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 7
+    },
+    {
+      "name": "Snow lotus (天山雪莲)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 6
+    },
+    {
+      "name": "Rhododendron (杜鹃花)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 6
+    },
+    {
+      "name": "Huangshan pine (黄山松)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 10
+    },
+    {
+      "name": "Dove tree (珙桐)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 11
+    },
+    {
+      "name": "Dawn redwood (水杉)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 11
+    },
+    {
+      "name": "Altitude sickness (高原反应)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 6
+    },
+    {
+      "name": "Temperature drop with altitude (气温垂直递减)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 8
+    },
+    {
+      "name": "Snow line (雪线)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 10
+    },
+    {
+      "name": "Rime ice (雾凇)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 8
+    },
+    {
+      "name": "Windward slope rain (迎风坡降水)",
+      "facet": "Mountain plants, animals and weather",
+      "known_at": 10
+    }
+  ]
+}

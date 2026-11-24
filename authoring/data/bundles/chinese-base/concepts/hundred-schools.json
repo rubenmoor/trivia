@@ -1,0 +1,901 @@
+{
+  "subcategory": "hundred-schools",
+  "facets": [
+    "Sunzi and The Art of War",
+    "Other military strategists",
+    "Mozi and Mohism",
+    "Legalism and Han Feizi",
+    "Shang Yang and Qin reforms",
+    "Xunzi and his ideas",
+    "Guiguzi and the Diplomatists",
+    "Logicians, Yin-Yang and other schools",
+    "Idioms and stories from the thinkers",
+    "Warring States courts and academies",
+    "Thinkers' legacy and modern life"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sunzi (孙武)",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 4
+    },
+    {
+      "name": "The Art of War (孙子兵法)",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 4
+    },
+    {
+      "name": "知己知彼，百战不殆 (zhī jǐ zhī bǐ, bǎi zhàn bù dài)",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 5
+    },
+    {
+      "name": "攻其无备，出其不意 (gōng qí wú bèi, chū qí bù yì)",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 7
+    },
+    {
+      "name": "不战而屈人之兵 (bù zhàn ér qū rén zhī bīng)",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 9
+    },
+    {
+      "name": "兵者，诡道也 (bīng zhě, guǐ dào yě)",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 11
+    },
+    {
+      "name": "上兵伐谋 (shàng bīng fá móu)",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 12
+    },
+    {
+      "name": "避实击虚 (bì shí jī xū)",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 12
+    },
+    {
+      "name": "Thirteen chapters of The Art of War",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 9
+    },
+    {
+      "name": "Sunzi drills the palace ladies (吴宫教战)",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 11
+    },
+    {
+      "name": "King Helü of Wu (吴王阖闾)",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 11
+    },
+    {
+      "name": "State of Wu (吴国)",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 8
+    },
+    {
+      "name": "Battle of Boju (柏举之战)",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 13
+    },
+    {
+      "name": "Yinqueshan Han bamboo slips (银雀山汉简)",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 13
+    },
+    {
+      "name": "Five factors of war (道天地将法)",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 13
+    },
+    {
+      "name": "Use of Spies chapter (用间篇)",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 13
+    },
+    {
+      "name": "其疾如风，其徐如林 (qí jí rú fēng, qí xú rú lín)",
+      "facet": "Sunzi and The Art of War",
+      "known_at": 12
+    },
+    {
+      "name": "Sun Bin (孙膑)",
+      "facet": "Other military strategists",
+      "known_at": 7
+    },
+    {
+      "name": "Pang Juan (庞涓)",
+      "facet": "Other military strategists",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Guiling (桂陵之战)",
+      "facet": "Other military strategists",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of Maling (马陵之战)",
+      "facet": "Other military strategists",
+      "known_at": 12
+    },
+    {
+      "name": "Sun Bin's Art of War (孙膑兵法)",
+      "facet": "Other military strategists",
+      "known_at": 12
+    },
+    {
+      "name": "Wu Qi (吴起)",
+      "facet": "Other military strategists",
+      "known_at": 11
+    },
+    {
+      "name": "Wuzi (吴子)",
+      "facet": "Other military strategists",
+      "known_at": 13
+    },
+    {
+      "name": "Wei Liaozi (尉缭子)",
+      "facet": "Other military strategists",
+      "known_at": 14
+    },
+    {
+      "name": "Six Secret Teachings (六韬)",
+      "facet": "Other military strategists",
+      "known_at": 13
+    },
+    {
+      "name": "Jiang Ziya (姜太公)",
+      "facet": "Other military strategists",
+      "known_at": 5
+    },
+    {
+      "name": "Thirty-Six Stratagems (三十六计)",
+      "facet": "Other military strategists",
+      "known_at": 6
+    },
+    {
+      "name": "Bai Qi (白起)",
+      "facet": "Other military strategists",
+      "known_at": 10
+    },
+    {
+      "name": "Lian Po (廉颇)",
+      "facet": "Other military strategists",
+      "known_at": 8
+    },
+    {
+      "name": "Li Mu (李牧)",
+      "facet": "Other military strategists",
+      "known_at": 12
+    },
+    {
+      "name": "Zhao Kuo (赵括)",
+      "facet": "Other military strategists",
+      "known_at": 9
+    },
+    {
+      "name": "Seven Military Classics (武经七书)",
+      "facet": "Other military strategists",
+      "known_at": 14
+    },
+    {
+      "name": "Sima Rangju (司马穰苴)",
+      "facet": "Other military strategists",
+      "known_at": 14
+    },
+    {
+      "name": "Yue Yi (乐毅)",
+      "facet": "Other military strategists",
+      "known_at": 13
+    },
+    {
+      "name": "Tian Dan's fire oxen (火牛阵)",
+      "facet": "Other military strategists",
+      "known_at": 12
+    },
+    {
+      "name": "Mozi (墨子)",
+      "facet": "Mozi and Mohism",
+      "known_at": 5
+    },
+    {
+      "name": "Mohism (墨家)",
+      "facet": "Mozi and Mohism",
+      "known_at": 8
+    },
+    {
+      "name": "Condemning offensive war (非攻)",
+      "facet": "Mozi and Mohism",
+      "known_at": 10
+    },
+    {
+      "name": "Mozi (book)",
+      "facet": "Mozi and Mohism",
+      "known_at": 11
+    },
+    {
+      "name": "Pinhole image (小孔成像)",
+      "facet": "Mozi and Mohism",
+      "known_at": 7
+    },
+    {
+      "name": "Mozi stops Chu attacking Song (止楚攻宋)",
+      "facet": "Mozi and Mohism",
+      "known_at": 11
+    },
+    {
+      "name": "Wooden kite (木鸢)",
+      "facet": "Mozi and Mohism",
+      "known_at": 11
+    },
+    {
+      "name": "Honoring the worthy (尚贤)",
+      "facet": "Mozi and Mohism",
+      "known_at": 12
+    },
+    {
+      "name": "Moderation in spending (节用)",
+      "facet": "Mozi and Mohism",
+      "known_at": 12
+    },
+    {
+      "name": "Moderate funerals (节葬)",
+      "facet": "Mozi and Mohism",
+      "known_at": 13
+    },
+    {
+      "name": "Condemning music (非乐)",
+      "facet": "Mozi and Mohism",
+      "known_at": 13
+    },
+    {
+      "name": "Against fate (非命)",
+      "facet": "Mozi and Mohism",
+      "known_at": 14
+    },
+    {
+      "name": "Will of Heaven (天志)",
+      "facet": "Mozi and Mohism",
+      "known_at": 14
+    },
+    {
+      "name": "Juzi, the Mohist leader (巨子)",
+      "facet": "Mozi and Mohism",
+      "known_at": 14
+    },
+    {
+      "name": "Mohist city defense (墨家守城)",
+      "facet": "Mozi and Mohism",
+      "known_at": 13
+    },
+    {
+      "name": "Mozi weeps over dyed silk (墨子悲丝)",
+      "facet": "Mozi and Mohism",
+      "known_at": 13
+    },
+    {
+      "name": "Han Feizi (韩非子)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 6
+    },
+    {
+      "name": "Legalism (法家)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 7
+    },
+    {
+      "name": "Han Feizi (book)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 10
+    },
+    {
+      "name": "Law, method and power (法术势)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 13
+    },
+    {
+      "name": "Two handles (二柄)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 14
+    },
+    {
+      "name": "Five Vermin (五蠹)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 13
+    },
+    {
+      "name": "Li Si (李斯)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 8
+    },
+    {
+      "name": "Guan Zhong (管仲)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 9
+    },
+    {
+      "name": "Guanzi (book)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 13
+    },
+    {
+      "name": "Shen Buhai (申不害)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 14
+    },
+    {
+      "name": "Shen Dao (慎到)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 14
+    },
+    {
+      "name": "Li Kui (李悝)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 13
+    },
+    {
+      "name": "Canon of Laws (法经)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 13
+    },
+    {
+      "name": "Zichan's cast law code (铸刑书)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 14
+    },
+    {
+      "name": "State of Han (韩国)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 8
+    },
+    {
+      "name": "Burning of books and burying of scholars (焚书坑儒)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 8
+    },
+    {
+      "name": "法不阿贵 (fǎ bù ē guì)",
+      "facet": "Legalism and Han Feizi",
+      "known_at": 12
+    },
+    {
+      "name": "Shang Yang (商鞅)",
+      "facet": "Shang Yang and Qin reforms",
+      "known_at": 7
+    },
+    {
+      "name": "Shang Yang's reforms (商鞅变法)",
+      "facet": "Shang Yang and Qin reforms",
+      "known_at": 7
+    },
+    {
+      "name": "Duke Xiao of Qin (秦孝公)",
+      "facet": "Shang Yang and Qin reforms",
+      "known_at": 10
+    },
+    {
+      "name": "The Book of Lord Shang (商君书)",
+      "facet": "Shang Yang and Qin reforms",
+      "known_at": 12
+    },
+    {
+      "name": "Twenty ranks of military merit (二十等爵)",
+      "facet": "Shang Yang and Qin reforms",
+      "known_at": 13
+    },
+    {
+      "name": "Abolishing the well-field system (废井田)",
+      "facet": "Shang Yang and Qin reforms",
+      "known_at": 11
+    },
+    {
+      "name": "Mutual responsibility groups (什伍连坐)",
+      "facet": "Shang Yang and Qin reforms",
+      "known_at": 13
+    },
+    {
+      "name": "Shang Yang square sheng (商鞅方升)",
+      "facet": "Shang Yang and Qin reforms",
+      "known_at": 13
+    },
+    {
+      "name": "State of Qin (秦国)",
+      "facet": "Shang Yang and Qin reforms",
+      "known_at": 5
+    },
+    {
+      "name": "Qin unification of China",
+      "facet": "Shang Yang and Qin reforms",
+      "known_at": 6
+    },
+    {
+      "name": "Standard weights and measures (统一度量衡)",
+      "facet": "Shang Yang and Qin reforms",
+      "known_at": 7
+    },
+    {
+      "name": "Same script (书同文)",
+      "facet": "Shang Yang and Qin reforms",
+      "known_at": 8
+    },
+    {
+      "name": "Shuihudi Qin bamboo slips (睡虎地秦简)",
+      "facet": "Shang Yang and Qin reforms",
+      "known_at": 13
+    },
+    {
+      "name": "Human nature is bad (性恶论)",
+      "facet": "Xunzi and his ideas",
+      "known_at": 9
+    },
+    {
+      "name": "Encouraging Learning (劝学)",
+      "facet": "Xunzi and his ideas",
+      "known_at": 8
+    },
+    {
+      "name": "不积跬步，无以至千里 (bù jī kuǐ bù, wú yǐ zhì qiān lǐ)",
+      "facet": "Xunzi and his ideas",
+      "known_at": 6
+    },
+    {
+      "name": "骐骥一跃，不能十步 (qí jì yī yuè, bù néng shí bù)",
+      "facet": "Xunzi and his ideas",
+      "known_at": 9
+    },
+    {
+      "name": "君者舟也，庶人者水也 (jūn zhě zhōu yě, shù rén zhě shuǐ yě)",
+      "facet": "Xunzi and his ideas",
+      "known_at": 9
+    },
+    {
+      "name": "蓬生麻中，不扶而直 (péng shēng má zhōng, bù fú ér zhí)",
+      "facet": "Xunzi and his ideas",
+      "known_at": 11
+    },
+    {
+      "name": "善假于物 (shàn jiǎ yú wù)",
+      "facet": "Xunzi and his ideas",
+      "known_at": 10
+    },
+    {
+      "name": "吾尝终日而思矣 (wú cháng zhōng rì ér sī yǐ)",
+      "facet": "Xunzi and his ideas",
+      "known_at": 10
+    },
+    {
+      "name": "Xunzi (book)",
+      "facet": "Xunzi and his ideas",
+      "known_at": 11
+    },
+    {
+      "name": "Discourse on Heaven (天论)",
+      "facet": "Xunzi and his ideas",
+      "known_at": 13
+    },
+    {
+      "name": "制天命而用之 (zhì tiān mìng ér yòng zhī)",
+      "facet": "Xunzi and his ideas",
+      "known_at": 13
+    },
+    {
+      "name": "Discourse on Ritual (礼论)",
+      "facet": "Xunzi and his ideas",
+      "known_at": 13
+    },
+    {
+      "name": "Rectifying names (正名)",
+      "facet": "Xunzi and his ideas",
+      "known_at": 14
+    },
+    {
+      "name": "Transforming nature by effort (化性起伪)",
+      "facet": "Xunzi and his ideas",
+      "known_at": 14
+    },
+    {
+      "name": "Lanling (兰陵)",
+      "facet": "Xunzi and his ideas",
+      "known_at": 13
+    },
+    {
+      "name": "Guiguzi (鬼谷子)",
+      "facet": "Guiguzi and the Diplomatists",
+      "known_at": 8
+    },
+    {
+      "name": "Guiguzi (book)",
+      "facet": "Guiguzi and the Diplomatists",
+      "known_at": 12
+    },
+    {
+      "name": "School of Diplomacy (纵横家)",
+      "facet": "Guiguzi and the Diplomatists",
+      "known_at": 10
+    },
+    {
+      "name": "Su Qin (苏秦)",
+      "facet": "Guiguzi and the Diplomatists",
+      "known_at": 8
+    },
+    {
+      "name": "Zhang Yi (张仪)",
+      "facet": "Guiguzi and the Diplomatists",
+      "known_at": 9
+    },
+    {
+      "name": "Vertical Alliance (合纵)",
+      "facet": "Guiguzi and the Diplomatists",
+      "known_at": 9
+    },
+    {
+      "name": "Horizontal Alliance (连横)",
+      "facet": "Guiguzi and the Diplomatists",
+      "known_at": 9
+    },
+    {
+      "name": "Strategies of the Warring States (战国策)",
+      "facet": "Guiguzi and the Diplomatists",
+      "known_at": 11
+    },
+    {
+      "name": "Opening and closing (捭阖)",
+      "facet": "Guiguzi and the Diplomatists",
+      "known_at": 14
+    },
+    {
+      "name": "Yunmeng Mountain (云梦山)",
+      "facet": "Guiguzi and the Diplomatists",
+      "known_at": 14
+    },
+    {
+      "name": "Su Qin's seals of six states (佩六国相印)",
+      "facet": "Guiguzi and the Diplomatists",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Yi's 600 li trick on Chu",
+      "facet": "Guiguzi and the Diplomatists",
+      "known_at": 14
+    },
+    {
+      "name": "Fan Ju (范雎)",
+      "facet": "Guiguzi and the Diplomatists",
+      "known_at": 12
+    },
+    {
+      "name": "Befriend the far, attack the near (远交近攻)",
+      "facet": "Guiguzi and the Diplomatists",
+      "known_at": 11
+    },
+    {
+      "name": "Lin Xiangru (蔺相如)",
+      "facet": "Guiguzi and the Diplomatists",
+      "known_at": 7
+    },
+    {
+      "name": "Lu Zhonglian (鲁仲连)",
+      "facet": "Guiguzi and the Diplomatists",
+      "known_at": 14
+    },
+    {
+      "name": "School of Names (名家)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 11
+    },
+    {
+      "name": "Gongsun Long (公孙龙)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 11
+    },
+    {
+      "name": "A white horse is not a horse (白马非马)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 8
+    },
+    {
+      "name": "Separating hard and white (离坚白)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 14
+    },
+    {
+      "name": "Hui Shi (惠施)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 11
+    },
+    {
+      "name": "Deng Xi (邓析)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 14
+    },
+    {
+      "name": "Yin-Yang school (阴阳家)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 11
+    },
+    {
+      "name": "Zou Yan (邹衍)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 12
+    },
+    {
+      "name": "Five Phases (五行)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 6
+    },
+    {
+      "name": "Cycle of the Five Virtues (五德终始)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 14
+    },
+    {
+      "name": "Agriculturalists (农家)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 13
+    },
+    {
+      "name": "Xu Xing (许行)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 14
+    },
+    {
+      "name": "Miscellaneous school (杂家)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 13
+    },
+    {
+      "name": "Lü Buwei (吕不韦)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 9
+    },
+    {
+      "name": "Lüshi Chunqiu (吕氏春秋)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 11
+    },
+    {
+      "name": "Yang Zhu (杨朱)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 12
+    },
+    {
+      "name": "Nine Streams and Ten Schools (九流十家)",
+      "facet": "Logicians, Yin-Yang and other schools",
+      "known_at": 13
+    },
+    {
+      "name": "郑人买履 (zhèng rén mǎi lǚ)",
+      "facet": "Idioms and stories from the thinkers",
+      "known_at": 5
+    },
+    {
+      "name": "滥竽充数 (làn yú chōng shù)",
+      "facet": "Idioms and stories from the thinkers",
+      "known_at": 4
+    },
+    {
+      "name": "扁鹊见蔡桓公 (biǎn què jiàn cài huán gōng)",
+      "facet": "Idioms and stories from the thinkers",
+      "known_at": 8
+    },
+    {
+      "name": "买椟还珠 (mǎi dú huán zhū)",
+      "facet": "Idioms and stories from the thinkers",
+      "known_at": 7
+    },
+    {
+      "name": "曾子杀彘 (zēng zǐ shā zhì)",
+      "facet": "Idioms and stories from the thinkers",
+      "known_at": 8
+    },
+    {
+      "name": "和氏璧 (hé shì bì)",
+      "facet": "Idioms and stories from the thinkers",
+      "known_at": 9
+    },
+    {
+      "name": "墨守成规 (mò shǒu chéng guī)",
+      "facet": "Idioms and stories from the thinkers",
+      "known_at": 9
+    },
+    {
+      "name": "青出于蓝 (qīng chū yú lán)",
+      "facet": "Idioms and stories from the thinkers",
+      "known_at": 6
+    },
+    {
+      "name": "锲而不舍 (qiè ér bù shě)",
+      "facet": "Idioms and stories from the thinkers",
+      "known_at": 6
+    },
+    {
+      "name": "一字千金 (yī zì qiān jīn)",
+      "facet": "Idioms and stories from the thinkers",
+      "known_at": 9
+    },
+    {
+      "name": "悬梁刺股 (xuán liáng cì gǔ)",
+      "facet": "Idioms and stories from the thinkers",
+      "known_at": 7
+    },
+    {
+      "name": "作法自毙 (zuò fǎ zì bì)",
+      "facet": "Idioms and stories from the thinkers",
+      "known_at": 12
+    },
+    {
+      "name": "一毛不拔 (yī máo bù bá)",
+      "facet": "Idioms and stories from the thinkers",
+      "known_at": 7
+    },
+    {
+      "name": "Hundred Schools contending (百家争鸣)",
+      "facet": "Warring States courts and academies",
+      "known_at": 7
+    },
+    {
+      "name": "Linzi (临淄)",
+      "facet": "Warring States courts and academies",
+      "known_at": 11
+    },
+    {
+      "name": "Four Lords of the Warring States (战国四公子)",
+      "facet": "Warring States courts and academies",
+      "known_at": 10
+    },
+    {
+      "name": "Lord Mengchang (孟尝君)",
+      "facet": "Warring States courts and academies",
+      "known_at": 9
+    },
+    {
+      "name": "Lord Xinling (信陵君)",
+      "facet": "Warring States courts and academies",
+      "known_at": 11
+    },
+    {
+      "name": "Lord Pingyuan (平原君)",
+      "facet": "Warring States courts and academies",
+      "known_at": 11
+    },
+    {
+      "name": "Lord Chunshen (春申君)",
+      "facet": "Warring States courts and academies",
+      "known_at": 12
+    },
+    {
+      "name": "Retainers (门客)",
+      "facet": "Warring States courts and academies",
+      "known_at": 9
+    },
+    {
+      "name": "King Wuling of Zhao's Hu clothing and mounted archery (胡服骑射)",
+      "facet": "Warring States courts and academies",
+      "known_at": 9
+    },
+    {
+      "name": "Zou Ji (邹忌)",
+      "facet": "Warring States courts and academies",
+      "known_at": 9
+    },
+    {
+      "name": "Chu Long (触龙)",
+      "facet": "Warring States courts and academies",
+      "known_at": 12
+    },
+    {
+      "name": "Marquis Wen of Wei (魏文侯)",
+      "facet": "Warring States courts and academies",
+      "known_at": 12
+    },
+    {
+      "name": "Ximen Bao (西门豹)",
+      "facet": "Warring States courts and academies",
+      "known_at": 7
+    },
+    {
+      "name": "Bian Que (扁鹊)",
+      "facet": "Warring States courts and academies",
+      "known_at": 7
+    },
+    {
+      "name": "Micius satellite (墨子号)",
+      "facet": "Thinkers' legacy and modern life",
+      "known_at": 9
+    },
+    {
+      "name": "The Art of War in business",
+      "facet": "Thinkers' legacy and modern life",
+      "known_at": 9
+    },
+    {
+      "name": "The Qin Empire (大秦帝国)",
+      "facet": "Thinkers' legacy and modern life",
+      "known_at": 11
+    },
+    {
+      "name": "The Legend of Mi Yue (芈月传)",
+      "facet": "Thinkers' legacy and modern life",
+      "known_at": 9
+    },
+    {
+      "name": "The Legend of Qin (秦时明月)",
+      "facet": "Thinkers' legacy and modern life",
+      "known_at": 8
+    },
+    {
+      "name": "Battle of Wits (墨攻)",
+      "facet": "Thinkers' legacy and modern life",
+      "known_at": 13
+    },
+    {
+      "name": "Hero (英雄, film)",
+      "facet": "Thinkers' legacy and modern life",
+      "known_at": 8
+    },
+    {
+      "name": "Kingdom (manga)",
+      "facet": "Thinkers' legacy and modern life",
+      "known_at": 10
+    },
+    {
+      "name": "Guiguzi descending the mountain jar (鬼谷下山图罐)",
+      "facet": "Thinkers' legacy and modern life",
+      "known_at": 13
+    },
+    {
+      "name": "Lu Ban ruler (鲁班尺)",
+      "facet": "Thinkers' legacy and modern life",
+      "known_at": 12
+    },
+    {
+      "name": "Rule of law (法治)",
+      "facet": "Thinkers' legacy and modern life",
+      "known_at": 9
+    }
+  ]
+}

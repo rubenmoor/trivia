@@ -1,0 +1,906 @@
+{
+  "subcategory": "spring-festival-gala",
+  "facets": [
+    "Spring Festival Gala history",
+    "Gala sketches and comedians",
+    "Crosstalk and comic arts",
+    "Gala songs and moments",
+    "Gala hosts and presenters",
+    "Gala stage technology and dance",
+    "Gala catchphrases and memes",
+    "Reality and travel shows",
+    "Singing and talent contests",
+    "Other galas and festival evenings",
+    "Quiz and cultural TV shows"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "CCTV (China Central Television)",
+      "facet": "Spring Festival Gala history",
+      "known_at": 3
+    },
+    {
+      "name": "China Media Group (CMG)",
+      "facet": "Spring Festival Gala history",
+      "known_at": 9
+    },
+    {
+      "name": "CCTV-1",
+      "facet": "Spring Festival Gala history",
+      "known_at": 6
+    },
+    {
+      "name": "Midnight bell countdown (零点钟声)",
+      "facet": "Spring Festival Gala history",
+      "known_at": 4
+    },
+    {
+      "name": "Live broadcast (直播)",
+      "facet": "Spring Festival Gala history",
+      "known_at": 6
+    },
+    {
+      "name": "Viewer hotline of the first Gala",
+      "facet": "Spring Festival Gala history",
+      "known_at": 13
+    },
+    {
+      "name": "Huang Yihe (黄一鹤)",
+      "facet": "Spring Festival Gala history",
+      "known_at": 14
+    },
+    {
+      "name": "Sub-venues (分会场)",
+      "facet": "Spring Festival Gala history",
+      "known_at": 8
+    },
+    {
+      "name": "WeChat red envelope shake (摇一摇)",
+      "facet": "Spring Festival Gala history",
+      "known_at": 7
+    },
+    {
+      "name": "Gala rehearsal (彩排)",
+      "facet": "Spring Festival Gala history",
+      "known_at": 10
+    },
+    {
+      "name": "Gala programme list (节目单)",
+      "facet": "Spring Festival Gala history",
+      "known_at": 8
+    },
+    {
+      "name": "Language programmes (语言类节目)",
+      "facet": "Spring Festival Gala history",
+      "known_at": 10
+    },
+    {
+      "name": "Favourite Gala Programme Vote (我最喜爱的春晚节目)",
+      "facet": "Spring Festival Gala history",
+      "known_at": 12
+    },
+    {
+      "name": "CCTV Studio One (一号演播大厅)",
+      "facet": "Spring Festival Gala history",
+      "known_at": 13
+    },
+    {
+      "name": "Guinness record for most-watched TV show",
+      "facet": "Spring Festival Gala history",
+      "known_at": 9
+    },
+    {
+      "name": "Gala 40th anniversary (2023)",
+      "facet": "Spring Festival Gala history",
+      "known_at": 11
+    },
+    {
+      "name": "Sketch (小品)",
+      "facet": "Gala sketches and comedians",
+      "known_at": 3
+    },
+    {
+      "name": "Zhu Shimao",
+      "facet": "Gala sketches and comedians",
+      "known_at": 10
+    },
+    {
+      "name": "Huang Hong",
+      "facet": "Gala sketches and comedians",
+      "known_at": 9
+    },
+    {
+      "name": "Cai Ming",
+      "facet": "Gala sketches and comedians",
+      "known_at": 6
+    },
+    {
+      "name": "Pan Changjiang",
+      "facet": "Gala sketches and comedians",
+      "known_at": 7
+    },
+    {
+      "name": "Gao Xiumin",
+      "facet": "Gala sketches and comedians",
+      "known_at": 9
+    },
+    {
+      "name": "Fan Wei",
+      "facet": "Gala sketches and comedians",
+      "known_at": 7
+    },
+    {
+      "name": "Xiao Shenyang",
+      "facet": "Gala sketches and comedians",
+      "known_at": 5
+    },
+    {
+      "name": "Ma Li",
+      "facet": "Gala sketches and comedians",
+      "known_at": 6
+    },
+    {
+      "name": "Guo Donglin",
+      "facet": "Gala sketches and comedians",
+      "known_at": 10
+    },
+    {
+      "name": "Gong Hanlin",
+      "facet": "Gala sketches and comedians",
+      "known_at": 10
+    },
+    {
+      "name": "Eating Noodles (吃面条)",
+      "facet": "Gala sketches and comedians",
+      "known_at": 11
+    },
+    {
+      "name": "Selling Crutches (卖拐)",
+      "facet": "Gala sketches and comedians",
+      "known_at": 8
+    },
+    {
+      "name": "Yesterday, Today, Tomorrow (昨天今天明天)",
+      "facet": "Gala sketches and comedians",
+      "known_at": 8
+    },
+    {
+      "name": "Hourly Worker (钟点工)",
+      "facet": "Gala sketches and comedians",
+      "known_at": 11
+    },
+    {
+      "name": "Guo Degang",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 5
+    },
+    {
+      "name": "Yue Yunpeng",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 5
+    },
+    {
+      "name": "Sun Yue (孙越)",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 10
+    },
+    {
+      "name": "Deyunshe (德云社)",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 7
+    },
+    {
+      "name": "Hou Baolin",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 11
+    },
+    {
+      "name": "Ma Ji",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 10
+    },
+    {
+      "name": "Jiang Kun",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 9
+    },
+    {
+      "name": "Feng Gong",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 7
+    },
+    {
+      "name": "Niu Qun",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 10
+    },
+    {
+      "name": "Duet crosstalk (对口相声)",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 10
+    },
+    {
+      "name": "Solo crosstalk (单口相声)",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 10
+    },
+    {
+      "name": "Group crosstalk (群口相声)",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 12
+    },
+    {
+      "name": "Dougen (逗哏)",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 12
+    },
+    {
+      "name": "Penggen (捧哏)",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 12
+    },
+    {
+      "name": "Speaking, imitating, joking, singing (说学逗唱)",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 12
+    },
+    {
+      "name": "Xingmu gavel block (醒木)",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 11
+    },
+    {
+      "name": "Kuaiban clappers (快板)",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 8
+    },
+    {
+      "name": "Pingshu storytelling (评书)",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 10
+    },
+    {
+      "name": "Shan Tianfang",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 12
+    },
+    {
+      "name": "Shandong kuaishu (山东快书)",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 12
+    },
+    {
+      "name": "Vocal mimicry (口技)",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 7
+    },
+    {
+      "name": "Tianqiao (天桥)",
+      "facet": "Crosstalk and comic arts",
+      "known_at": 13
+    },
+    {
+      "name": "Longing for Home (乡恋)",
+      "facet": "Gala songs and moments",
+      "known_at": 13
+    },
+    {
+      "name": "My Chinese Heart (我的中国心)",
+      "facet": "Gala songs and moments",
+      "known_at": 7
+    },
+    {
+      "name": "Clouds of Home (故乡的云)",
+      "facet": "Gala songs and moments",
+      "known_at": 12
+    },
+    {
+      "name": "Song of Heroes (好汉歌)",
+      "facet": "Gala songs and moments",
+      "known_at": 7
+    },
+    {
+      "name": "Meet in '98 (相约九八)",
+      "facet": "Gala songs and moments",
+      "known_at": 11
+    },
+    {
+      "name": "Little Apple (小苹果)",
+      "facet": "Gala songs and moments",
+      "known_at": 5
+    },
+    {
+      "name": "Wang Jingyu",
+      "facet": "Gala hosts and presenters",
+      "known_at": 14
+    },
+    {
+      "name": "Liu Xiaoqing",
+      "facet": "Gala hosts and presenters",
+      "known_at": 12
+    },
+    {
+      "name": "Zhao Zhongxiang",
+      "facet": "Gala hosts and presenters",
+      "known_at": 10
+    },
+    {
+      "name": "Ni Ping",
+      "facet": "Gala hosts and presenters",
+      "known_at": 10
+    },
+    {
+      "name": "Zhu Jun",
+      "facet": "Gala hosts and presenters",
+      "known_at": 6
+    },
+    {
+      "name": "Dong Qing",
+      "facet": "Gala hosts and presenters",
+      "known_at": 6
+    },
+    {
+      "name": "Li Yong",
+      "facet": "Gala hosts and presenters",
+      "known_at": 8
+    },
+    {
+      "name": "Zhou Tao",
+      "facet": "Gala hosts and presenters",
+      "known_at": 9
+    },
+    {
+      "name": "Sa Beining",
+      "facet": "Gala hosts and presenters",
+      "known_at": 8
+    },
+    {
+      "name": "Kang Hui",
+      "facet": "Gala hosts and presenters",
+      "known_at": 9
+    },
+    {
+      "name": "Ren Luyu",
+      "facet": "Gala hosts and presenters",
+      "known_at": 10
+    },
+    {
+      "name": "Zhu Xun",
+      "facet": "Gala hosts and presenters",
+      "known_at": 10
+    },
+    {
+      "name": "Bai Yansong",
+      "facet": "Gala hosts and presenters",
+      "known_at": 10
+    },
+    {
+      "name": "Nigmat Rahman (尼格买提)",
+      "facet": "Gala hosts and presenters",
+      "known_at": 8
+    },
+    {
+      "name": "Long Yang (龙洋)",
+      "facet": "Gala hosts and presenters",
+      "known_at": 12
+    },
+    {
+      "name": "Li Sisi",
+      "facet": "Gala hosts and presenters",
+      "known_at": 12
+    },
+    {
+      "name": "Robot yangge dance (2025)",
+      "facet": "Gala stage technology and dance",
+      "known_at": 6
+    },
+    {
+      "name": "Alpha robot dancers (2016)",
+      "facet": "Gala stage technology and dance",
+      "known_at": 11
+    },
+    {
+      "name": "Thousand-Hand Guanyin (千手观音)",
+      "facet": "Gala stage technology and dance",
+      "known_at": 7
+    },
+    {
+      "name": "Tai Lihua",
+      "facet": "Gala stage technology and dance",
+      "known_at": 11
+    },
+    {
+      "name": "Spirit of the Peacock (雀之灵)",
+      "facet": "Gala stage technology and dance",
+      "known_at": 8
+    },
+    {
+      "name": "Only This Green (只此青绿)",
+      "facet": "Gala stage technology and dance",
+      "known_at": 8
+    },
+    {
+      "name": "Acrobatics (杂技)",
+      "facet": "Gala stage technology and dance",
+      "known_at": 5
+    },
+    {
+      "name": "LED stage screen",
+      "facet": "Gala stage technology and dance",
+      "known_at": 9
+    },
+    {
+      "name": "Augmented reality (AR)",
+      "facet": "Gala stage technology and dance",
+      "known_at": 10
+    },
+    {
+      "name": "Hologram",
+      "facet": "Gala stage technology and dance",
+      "known_at": 11
+    },
+    {
+      "name": "8K ultra-high-definition broadcast",
+      "facet": "Gala stage technology and dance",
+      "known_at": 11
+    },
+    {
+      "name": "Stage wire flying (威亚)",
+      "facet": "Gala stage technology and dance",
+      "known_at": 12
+    },
+    {
+      "name": "Huyou (忽悠)",
+      "facet": "Gala catchphrases and memes",
+      "known_at": 8
+    },
+    {
+      "name": "Palace Jade Liquor (宫廷玉液酒)",
+      "facet": "Gala catchphrases and memes",
+      "known_at": 9
+    },
+    {
+      "name": "Witness the moment of miracle (见证奇迹的时刻)",
+      "facet": "Gala catchphrases and memes",
+      "known_at": 7
+    },
+    {
+      "name": "I miss you all to death (我想死你们了)",
+      "facet": "Gala catchphrases and memes",
+      "known_at": 6
+    },
+    {
+      "name": "The spring breeze of reform (改革春风吹满地)",
+      "facet": "Gala catchphrases and memes",
+      "known_at": 9
+    },
+    {
+      "name": "Eyes shut, eyes open (眼睛一闭一睁)",
+      "facet": "Gala catchphrases and memes",
+      "known_at": 10
+    },
+    {
+      "name": "Bu Cha Qian (不差钱)",
+      "facet": "Gala catchphrases and memes",
+      "known_at": 8
+    },
+    {
+      "name": "Su Gelan skirt (苏格兰)",
+      "facet": "Gala catchphrases and memes",
+      "known_at": 11
+    },
+    {
+      "name": "Fighter jet among roosters (公鸡中的战斗机)",
+      "facet": "Gala catchphrases and memes",
+      "known_at": 11
+    },
+    {
+      "name": "Who needs a bicycle (要啥自行车)",
+      "facet": "Gala catchphrases and memes",
+      "known_at": 10
+    },
+    {
+      "name": "Bai Yun and Hei Tu (白云黑土)",
+      "facet": "Gala catchphrases and memes",
+      "known_at": 9
+    },
+    {
+      "name": "Kangkang monkey mascot (2016)",
+      "facet": "Gala catchphrases and memes",
+      "known_at": 12
+    },
+    {
+      "name": "Gala tucao (吐槽春晚)",
+      "facet": "Gala catchphrases and memes",
+      "known_at": 10
+    },
+    {
+      "name": "Guichu remix (鬼畜)",
+      "facet": "Gala catchphrases and memes",
+      "known_at": 11
+    },
+    {
+      "name": "Bilibili bullet comments (弹幕)",
+      "facet": "Gala catchphrases and memes",
+      "known_at": 8
+    },
+    {
+      "name": "Happy Camp (快乐大本营)",
+      "facet": "Reality and travel shows",
+      "known_at": 4
+    },
+    {
+      "name": "Keep Running (奔跑吧)",
+      "facet": "Reality and travel shows",
+      "known_at": 4
+    },
+    {
+      "name": "Dad, Where Are We Going? (爸爸去哪儿)",
+      "facet": "Reality and travel shows",
+      "known_at": 5
+    },
+    {
+      "name": "Day Day Up (天天向上)",
+      "facet": "Reality and travel shows",
+      "known_at": 8
+    },
+    {
+      "name": "Go Fighting! (极限挑战)",
+      "facet": "Reality and travel shows",
+      "known_at": 7
+    },
+    {
+      "name": "Back to Field (向往的生活)",
+      "facet": "Reality and travel shows",
+      "known_at": 7
+    },
+    {
+      "name": "Divas Hit the Road (花儿与少年)",
+      "facet": "Reality and travel shows",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese Restaurant (中餐厅)",
+      "facet": "Reality and travel shows",
+      "known_at": 10
+    },
+    {
+      "name": "Who's the Murderer (明星大侦探)",
+      "facet": "Reality and travel shows",
+      "known_at": 8
+    },
+    {
+      "name": "Ace vs Ace (王牌对王牌)",
+      "facet": "Reality and travel shows",
+      "known_at": 7
+    },
+    {
+      "name": "If You Are the One (非诚勿扰)",
+      "facet": "Reality and travel shows",
+      "known_at": 8
+    },
+    {
+      "name": "Hunan TV",
+      "facet": "Reality and travel shows",
+      "known_at": 6
+    },
+    {
+      "name": "Zhejiang TV",
+      "facet": "Reality and travel shows",
+      "known_at": 9
+    },
+    {
+      "name": "He Jiong",
+      "facet": "Reality and travel shows",
+      "known_at": 4
+    },
+    {
+      "name": "Xie Na",
+      "facet": "Reality and travel shows",
+      "known_at": 6
+    },
+    {
+      "name": "Huang Lei",
+      "facet": "Reality and travel shows",
+      "known_at": 7
+    },
+    {
+      "name": "Deng Chao",
+      "facet": "Reality and travel shows",
+      "known_at": 5
+    },
+    {
+      "name": "Angelababy",
+      "facet": "Reality and travel shows",
+      "known_at": 5
+    },
+    {
+      "name": "Meng Fei",
+      "facet": "Reality and travel shows",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Han",
+      "facet": "Reality and travel shows",
+      "known_at": 9
+    },
+    {
+      "name": "Super Girl (超级女声)",
+      "facet": "Singing and talent contests",
+      "known_at": 7
+    },
+    {
+      "name": "Super Boy (快乐男声)",
+      "facet": "Singing and talent contests",
+      "known_at": 10
+    },
+    {
+      "name": "The Voice of China (中国好声音)",
+      "facet": "Singing and talent contests",
+      "known_at": 6
+    },
+    {
+      "name": "Blind audition (盲选)",
+      "facet": "Singing and talent contests",
+      "known_at": 8
+    },
+    {
+      "name": "I Am a Singer (我是歌手)",
+      "facet": "Singing and talent contests",
+      "known_at": 7
+    },
+    {
+      "name": "China's Got Talent (中国达人秀)",
+      "facet": "Singing and talent contests",
+      "known_at": 8
+    },
+    {
+      "name": "Masked Singer China (蒙面唱将猜猜猜)",
+      "facet": "Singing and talent contests",
+      "known_at": 11
+    },
+    {
+      "name": "Idol Producer (偶像练习生)",
+      "facet": "Singing and talent contests",
+      "known_at": 9
+    },
+    {
+      "name": "Produce 101 China (创造101)",
+      "facet": "Singing and talent contests",
+      "known_at": 9
+    },
+    {
+      "name": "Youth With You (青春有你)",
+      "facet": "Singing and talent contests",
+      "known_at": 10
+    },
+    {
+      "name": "Street Dance of China (这！就是街舞)",
+      "facet": "Singing and talent contests",
+      "known_at": 8
+    },
+    {
+      "name": "The Rap of China (中国有嘻哈)",
+      "facet": "Singing and talent contests",
+      "known_at": 9
+    },
+    {
+      "name": "Sisters Who Make Waves (乘风破浪的姐姐)",
+      "facet": "Singing and talent contests",
+      "known_at": 9
+    },
+    {
+      "name": "The Big Band (乐队的夏天)",
+      "facet": "Singing and talent contests",
+      "known_at": 10
+    },
+    {
+      "name": "Rock & Roast (脱口秀大会)",
+      "facet": "Singing and talent contests",
+      "known_at": 9
+    },
+    {
+      "name": "Avenue of Stars (星光大道)",
+      "facet": "Singing and talent contests",
+      "known_at": 8
+    },
+    {
+      "name": "Zhu Zhiwen (大衣哥)",
+      "facet": "Singing and talent contests",
+      "known_at": 10
+    },
+    {
+      "name": "CCTV Young Singers Contest (青年歌手大奖赛)",
+      "facet": "Singing and talent contests",
+      "known_at": 12
+    },
+    {
+      "name": "The Coming One (明日之子)",
+      "facet": "Singing and talent contests",
+      "known_at": 11
+    },
+    {
+      "name": "Mid-Autumn Festival Gala (中秋晚会)",
+      "facet": "Other galas and festival evenings",
+      "known_at": 8
+    },
+    {
+      "name": "New Year's Day Gala (元旦晚会)",
+      "facet": "Other galas and festival evenings",
+      "known_at": 9
+    },
+    {
+      "name": "Children's Day Gala (六一晚会)",
+      "facet": "Other galas and festival evenings",
+      "known_at": 6
+    },
+    {
+      "name": "Henan TV Spring Festival Gala",
+      "facet": "Other galas and festival evenings",
+      "known_at": 10
+    },
+    {
+      "name": "Tang Palace Night Banquet (唐宫夜宴)",
+      "facet": "Other galas and festival evenings",
+      "known_at": 8
+    },
+    {
+      "name": "Luoshen Water Ode (洛神水赋)",
+      "facet": "Other galas and festival evenings",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese Festivals series (中国节日)",
+      "facet": "Other galas and festival evenings",
+      "known_at": 11
+    },
+    {
+      "name": "Hunan TV New Year's Eve Concert (跨年演唱会)",
+      "facet": "Other galas and festival evenings",
+      "known_at": 9
+    },
+    {
+      "name": "Bilibili New Year's Eve Gala (最美的夜)",
+      "facet": "Other galas and festival evenings",
+      "known_at": 10
+    },
+    {
+      "name": "Beijing TV Spring Festival Gala",
+      "facet": "Other galas and festival evenings",
+      "known_at": 11
+    },
+    {
+      "name": "Liaoning TV Spring Festival Gala",
+      "facet": "Other galas and festival evenings",
+      "known_at": 12
+    },
+    {
+      "name": "Village Gala (村晚)",
+      "facet": "Other galas and festival evenings",
+      "known_at": 10
+    },
+    {
+      "name": "Touching China (感动中国)",
+      "facet": "Other galas and festival evenings",
+      "known_at": 9
+    },
+    {
+      "name": "Happy Chinese New Year (欢乐春节)",
+      "facet": "Other galas and festival evenings",
+      "known_at": 13
+    },
+    {
+      "name": "Flying flower order (飞花令)",
+      "facet": "Quiz and cultural TV shows",
+      "known_at": 8
+    },
+    {
+      "name": "Wu Yishu (武亦姝)",
+      "facet": "Quiz and cultural TV shows",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese Idioms Competition (中国成语大会)",
+      "facet": "Quiz and cultural TV shows",
+      "known_at": 10
+    },
+    {
+      "name": "The Reader (朗读者)",
+      "facet": "Quiz and cultural TV shows",
+      "known_at": 9
+    },
+    {
+      "name": "Classic Chant (经典咏流传)",
+      "facet": "Quiz and cultural TV shows",
+      "known_at": 10
+    },
+    {
+      "name": "Letters Alive (见字如面)",
+      "facet": "Quiz and cultural TV shows",
+      "known_at": 12
+    },
+    {
+      "name": "Yi Zhongtian",
+      "facet": "Quiz and cultural TV shows",
+      "known_at": 10
+    },
+    {
+      "name": "Yu Dan",
+      "facet": "Quiz and cultural TV shows",
+      "known_at": 12
+    },
+    {
+      "name": "Lucky 52 (幸运52)",
+      "facet": "Quiz and cultural TV shows",
+      "known_at": 9
+    },
+    {
+      "name": "Happy Dictionary (开心辞典)",
+      "facet": "Quiz and cultural TV shows",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Xiaoya",
+      "facet": "Quiz and cultural TV shows",
+      "known_at": 12
+    },
+    {
+      "name": "The Brain (最强大脑)",
+      "facet": "Quiz and cultural TV shows",
+      "known_at": 8
+    },
+    {
+      "name": "Zhengda Variety (正大综艺)",
+      "facet": "Quiz and cultural TV shows",
+      "known_at": 11
+    },
+    {
+      "name": "U Can U BiBi (奇葩说)",
+      "facet": "Quiz and cultural TV shows",
+      "known_at": 10
+    }
+  ]
+}

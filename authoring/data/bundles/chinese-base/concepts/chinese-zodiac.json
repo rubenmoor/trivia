@@ -1,0 +1,857 @@
+{
+  "subcategory": "chinese-zodiac",
+  "facets": [
+    "The twelve animals",
+    "Order of the zodiac",
+    "The Great Race legend",
+    "Birth years and animal signs",
+    "Benmingnian (本命年) customs",
+    "Heavenly stems and earthly branches",
+    "Zodiac and the five elements",
+    "Zodiac hours and directions",
+    "Zodiac matching and personality lore",
+    "Zodiac idioms and sayings",
+    "Zodiac in art, stamps and gifts",
+    "Zodiac in films, stories and media"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 1,
+      "record": 1,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 5,
+      "connection": 2,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Twelve zodiac animals (十二生肖)",
+      "facet": "The twelve animals",
+      "known_at": 1
+    },
+    {
+      "name": "Rat (鼠)",
+      "facet": "The twelve animals",
+      "known_at": 1
+    },
+    {
+      "name": "Ox (牛)",
+      "facet": "The twelve animals",
+      "known_at": 1
+    },
+    {
+      "name": "Tiger (虎)",
+      "facet": "The twelve animals",
+      "known_at": 1
+    },
+    {
+      "name": "Rabbit (兔)",
+      "facet": "The twelve animals",
+      "known_at": 1
+    },
+    {
+      "name": "Snake (蛇)",
+      "facet": "The twelve animals",
+      "known_at": 1
+    },
+    {
+      "name": "Goat (羊)",
+      "facet": "The twelve animals",
+      "known_at": 1
+    },
+    {
+      "name": "Monkey (猴)",
+      "facet": "The twelve animals",
+      "known_at": 1
+    },
+    {
+      "name": "Rooster (鸡)",
+      "facet": "The twelve animals",
+      "known_at": 1
+    },
+    {
+      "name": "Dog (狗)",
+      "facet": "The twelve animals",
+      "known_at": 1
+    },
+    {
+      "name": "Pig (猪)",
+      "facet": "The twelve animals",
+      "known_at": 1
+    },
+    {
+      "name": "Little dragon (小龙)",
+      "facet": "The twelve animals",
+      "known_at": 6
+    },
+    {
+      "name": "Vietnamese zodiac",
+      "facet": "The twelve animals",
+      "known_at": 12
+    },
+    {
+      "name": "Japanese zodiac (干支 eto)",
+      "facet": "The twelve animals",
+      "known_at": 12
+    },
+    {
+      "name": "Korean zodiac",
+      "facet": "The twelve animals",
+      "known_at": 13
+    },
+    {
+      "name": "Rat first in the zodiac",
+      "facet": "Order of the zodiac",
+      "known_at": 2
+    },
+    {
+      "name": "Ox second in the zodiac",
+      "facet": "Order of the zodiac",
+      "known_at": 3
+    },
+    {
+      "name": "Tiger third in the zodiac",
+      "facet": "Order of the zodiac",
+      "known_at": 3
+    },
+    {
+      "name": "Rabbit fourth in the zodiac",
+      "facet": "Order of the zodiac",
+      "known_at": 4
+    },
+    {
+      "name": "Zodiac animal after the dragon: snake",
+      "facet": "Order of the zodiac",
+      "known_at": 4
+    },
+    {
+      "name": "Horse seventh in the zodiac",
+      "facet": "Order of the zodiac",
+      "known_at": 5
+    },
+    {
+      "name": "Goat eighth in the zodiac",
+      "facet": "Order of the zodiac",
+      "known_at": 5
+    },
+    {
+      "name": "Monkey ninth in the zodiac",
+      "facet": "Order of the zodiac",
+      "known_at": 5
+    },
+    {
+      "name": "Rooster tenth in the zodiac",
+      "facet": "Order of the zodiac",
+      "known_at": 5
+    },
+    {
+      "name": "Dog eleventh in the zodiac",
+      "facet": "Order of the zodiac",
+      "known_at": 5
+    },
+    {
+      "name": "Pig last in the zodiac",
+      "facet": "Order of the zodiac",
+      "known_at": 2
+    },
+    {
+      "name": "Twelve-year zodiac cycle",
+      "facet": "Order of the zodiac",
+      "known_at": 3
+    },
+    {
+      "name": "Zodiac order rhyme (鼠牛虎兔)",
+      "facet": "Order of the zodiac",
+      "known_at": 4
+    },
+    {
+      "name": "Zodiac wheel",
+      "facet": "Order of the zodiac",
+      "known_at": 5
+    },
+    {
+      "name": "Great Race (十二生肖排座次)",
+      "facet": "The Great Race legend",
+      "known_at": 3
+    },
+    {
+      "name": "Rat riding on the ox",
+      "facet": "The Great Race legend",
+      "known_at": 3
+    },
+    {
+      "name": "Why the cat is missing",
+      "facet": "The Great Race legend",
+      "known_at": 3
+    },
+    {
+      "name": "River crossing in the race",
+      "facet": "The Great Race legend",
+      "known_at": 5
+    },
+    {
+      "name": "Dragon stopping to make rain",
+      "facet": "The Great Race legend",
+      "known_at": 7
+    },
+    {
+      "name": "Rabbit hopping across stepping stones",
+      "facet": "The Great Race legend",
+      "known_at": 7
+    },
+    {
+      "name": "Rooster, monkey and goat on a raft",
+      "facet": "The Great Race legend",
+      "known_at": 9
+    },
+    {
+      "name": "Pig napping on the way",
+      "facet": "The Great Race legend",
+      "known_at": 5
+    },
+    {
+      "name": "Dog playing in the water",
+      "facet": "The Great Race legend",
+      "known_at": 7
+    },
+    {
+      "name": "Snake hiding on the horse's hoof",
+      "facet": "The Great Race legend",
+      "known_at": 7
+    },
+    {
+      "name": "Ox the strong swimmer",
+      "facet": "The Great Race legend",
+      "known_at": 5
+    },
+    {
+      "name": "Cat oversleeping",
+      "facet": "The Great Race legend",
+      "known_at": 4
+    },
+    {
+      "name": "Buddha's version of the race",
+      "facet": "The Great Race legend",
+      "known_at": 12
+    },
+    {
+      "name": "Shuxiang (属相)",
+      "facet": "Birth years and animal signs",
+      "known_at": 3
+    },
+    {
+      "name": "Asking “你属什么?”",
+      "facet": "Birth years and animal signs",
+      "known_at": 3
+    },
+    {
+      "name": "2026 year of the Horse",
+      "facet": "Birth years and animal signs",
+      "known_at": 3
+    },
+    {
+      "name": "2025 year of the Snake",
+      "facet": "Birth years and animal signs",
+      "known_at": 4
+    },
+    {
+      "name": "2024 year of the Dragon",
+      "facet": "Birth years and animal signs",
+      "known_at": 4
+    },
+    {
+      "name": "2027 year of the Goat",
+      "facet": "Birth years and animal signs",
+      "known_at": 6
+    },
+    {
+      "name": "2023 year of the Rabbit",
+      "facet": "Birth years and animal signs",
+      "known_at": 5
+    },
+    {
+      "name": "2020 year of the Rat",
+      "facet": "Birth years and animal signs",
+      "known_at": 7
+    },
+    {
+      "name": "2008 year of the Rat",
+      "facet": "Birth years and animal signs",
+      "known_at": 9
+    },
+    {
+      "name": "2022 year of the Tiger",
+      "facet": "Birth years and animal signs",
+      "known_at": 7
+    },
+    {
+      "name": "2000 millennium Dragon",
+      "facet": "Birth years and animal signs",
+      "known_at": 10
+    },
+    {
+      "name": "1949 year of the Ox",
+      "facet": "Birth years and animal signs",
+      "known_at": 12
+    },
+    {
+      "name": "Zodiac year starting at Lunar New Year",
+      "facet": "Birth years and animal signs",
+      "known_at": 6
+    },
+    {
+      "name": "Lichun (立春) as start of the zodiac year",
+      "facet": "Birth years and animal signs",
+      "known_at": 12
+    },
+    {
+      "name": "Twelve-year age gap",
+      "facet": "Birth years and animal signs",
+      "known_at": 5
+    },
+    {
+      "name": "Dragon baby boom",
+      "facet": "Birth years and animal signs",
+      "known_at": 10
+    },
+    {
+      "name": "Red underwear in your benmingnian (本命年)",
+      "facet": "Benmingnian (本命年) customs",
+      "known_at": 4
+    },
+    {
+      "name": "Red belt (红腰带)",
+      "facet": "Benmingnian (本命年) customs",
+      "known_at": 6
+    },
+    {
+      "name": "Red string bracelet (红绳)",
+      "facet": "Benmingnian (本命年) customs",
+      "known_at": 4
+    },
+    {
+      "name": "Red socks",
+      "facet": "Benmingnian (本命年) customs",
+      "known_at": 5
+    },
+    {
+      "name": "Taisui (太岁)",
+      "facet": "Benmingnian (本命年) customs",
+      "known_at": 9
+    },
+    {
+      "name": "Fan Taisui (犯太岁)",
+      "facet": "Benmingnian (本命年) customs",
+      "known_at": 9
+    },
+    {
+      "name": "Bai Taisui (拜太岁)",
+      "facet": "Benmingnian (本命年) customs",
+      "known_at": 11
+    },
+    {
+      "name": "Zodiac jade pendant",
+      "facet": "Benmingnian (本命年) customs",
+      "known_at": 6
+    },
+    {
+      "name": "Gold zodiac charm",
+      "facet": "Benmingnian (本命年) customs",
+      "known_at": 6
+    },
+    {
+      "name": "Bixie (辟邪)",
+      "facet": "Benmingnian (本命年) customs",
+      "known_at": 9
+    },
+    {
+      "name": "Age 12 benmingnian",
+      "facet": "Benmingnian (本命年) customs",
+      "known_at": 5
+    },
+    {
+      "name": "Age 36 benmingnian",
+      "facet": "Benmingnian (本命年) customs",
+      "known_at": 8
+    },
+    {
+      "name": "Red as the lucky colour",
+      "facet": "Benmingnian (本命年) customs",
+      "known_at": 2
+    },
+    {
+      "name": "Benmingnian bad-luck belief",
+      "facet": "Benmingnian (本命年) customs",
+      "known_at": 7
+    },
+    {
+      "name": "Ganzhi (干支)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 9
+    },
+    {
+      "name": "Tiangan (天干)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 9
+    },
+    {
+      "name": "Dizhi (地支)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 9
+    },
+    {
+      "name": "Zi (子)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 9
+    },
+    {
+      "name": "Sexagenary cycle (六十甲子)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 10
+    },
+    {
+      "name": "Jiazi (甲子)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 9
+    },
+    {
+      "name": "Bingwu year (丙午)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 12
+    },
+    {
+      "name": "Yisi year (乙巳)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 12
+    },
+    {
+      "name": "Jiawu War (甲午战争)",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 9
+    },
+    {
+      "name": "Oracle bone ganzhi table",
+      "facet": "Heavenly stems and earthly branches",
+      "known_at": 14
+    },
+    {
+      "name": "Wuxing (五行)",
+      "facet": "Zodiac and the five elements",
+      "known_at": 6
+    },
+    {
+      "name": "Xiangsheng (相生)",
+      "facet": "Zodiac and the five elements",
+      "known_at": 10
+    },
+    {
+      "name": "Xiangke (相克)",
+      "facet": "Zodiac and the five elements",
+      "known_at": 10
+    },
+    {
+      "name": "Fire Horse",
+      "facet": "Zodiac and the five elements",
+      "known_at": 10
+    },
+    {
+      "name": "Wood Dragon",
+      "facet": "Zodiac and the five elements",
+      "known_at": 11
+    },
+    {
+      "name": "Wood Snake",
+      "facet": "Zodiac and the five elements",
+      "known_at": 11
+    },
+    {
+      "name": "Golden Pig baby (金猪宝宝)",
+      "facet": "Zodiac and the five elements",
+      "known_at": 9
+    },
+    {
+      "name": "Golden Rat",
+      "facet": "Zodiac and the five elements",
+      "known_at": 10
+    },
+    {
+      "name": "Five element colours",
+      "facet": "Zodiac and the five elements",
+      "known_at": 11
+    },
+    {
+      "name": "Wuxing missing in a name (五行缺)",
+      "facet": "Zodiac and the five elements",
+      "known_at": 10
+    },
+    {
+      "name": "Chou hour (丑时)",
+      "facet": "Zodiac hours and directions",
+      "known_at": 11
+    },
+    {
+      "name": "Mao hour (卯时)",
+      "facet": "Zodiac hours and directions",
+      "known_at": 10
+    },
+    {
+      "name": "Wushi sanke (午时三刻)",
+      "facet": "Zodiac hours and directions",
+      "known_at": 11
+    },
+    {
+      "name": "Midnight (子夜)",
+      "facet": "Zodiac hours and directions",
+      "known_at": 7
+    },
+    {
+      "name": "Zhongwu (中午)",
+      "facet": "Zodiac hours and directions",
+      "known_at": 6
+    },
+    {
+      "name": "Ziwu line (子午线)",
+      "facet": "Zodiac hours and directions",
+      "known_at": 10
+    },
+    {
+      "name": "Rat in the north",
+      "facet": "Zodiac hours and directions",
+      "known_at": 12
+    },
+    {
+      "name": "Horse in the south",
+      "facet": "Zodiac hours and directions",
+      "known_at": 12
+    },
+    {
+      "name": "Rabbit in the east",
+      "facet": "Zodiac hours and directions",
+      "known_at": 13
+    },
+    {
+      "name": "Rooster in the west",
+      "facet": "Zodiac hours and directions",
+      "known_at": 13
+    },
+    {
+      "name": "Luopan compass (罗盘)",
+      "facet": "Zodiac hours and directions",
+      "known_at": 11
+    },
+    {
+      "name": "Zodiac matching in marriage",
+      "facet": "Zodiac matching and personality lore",
+      "known_at": 7
+    },
+    {
+      "name": "Liuhe (六合)",
+      "facet": "Zodiac matching and personality lore",
+      "known_at": 12
+    },
+    {
+      "name": "Sanhe (三合)",
+      "facet": "Zodiac matching and personality lore",
+      "known_at": 12
+    },
+    {
+      "name": "Liuchong (六冲)",
+      "facet": "Zodiac matching and personality lore",
+      "known_at": 12
+    },
+    {
+      "name": "Rat and Horse clash",
+      "facet": "Zodiac matching and personality lore",
+      "known_at": 10
+    },
+    {
+      "name": "Tiger and Monkey clash",
+      "facet": "Zodiac matching and personality lore",
+      "known_at": 11
+    },
+    {
+      "name": "Matchmaker (媒人)",
+      "facet": "Zodiac matching and personality lore",
+      "known_at": 6
+    },
+    {
+      "name": "Fortune teller (算命先生)",
+      "facet": "Zodiac matching and personality lore",
+      "known_at": 6
+    },
+    {
+      "name": "Hardworking Ox personality",
+      "facet": "Zodiac matching and personality lore",
+      "known_at": 4
+    },
+    {
+      "name": "Clever Monkey personality",
+      "facet": "Zodiac matching and personality lore",
+      "known_at": 4
+    },
+    {
+      "name": "Brave Tiger personality",
+      "facet": "Zodiac matching and personality lore",
+      "known_at": 4
+    },
+    {
+      "name": "Gentle Rabbit personality",
+      "facet": "Zodiac matching and personality lore",
+      "known_at": 5
+    },
+    {
+      "name": "Loyal Dog personality",
+      "facet": "Zodiac matching and personality lore",
+      "known_at": 4
+    },
+    {
+      "name": "Western star signs (星座)",
+      "facet": "Zodiac matching and personality lore",
+      "known_at": 6
+    },
+    {
+      "name": "白马怕青牛 (bái mǎ pà qīng niú)",
+      "facet": "Zodiac idioms and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "胆小如鼠 (dǎn xiǎo rú shǔ)",
+      "facet": "Zodiac idioms and sayings",
+      "known_at": 5
+    },
+    {
+      "name": "鼠目寸光 (shǔ mù cùn guāng)",
+      "facet": "Zodiac idioms and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "对牛弹琴 (duì niú tán qín)",
+      "facet": "Zodiac idioms and sayings",
+      "known_at": 4
+    },
+    {
+      "name": "九牛一毛 (jiǔ niú yī máo)",
+      "facet": "Zodiac idioms and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "虎头蛇尾 (hǔ tóu shé wěi)",
+      "facet": "Zodiac idioms and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "狡兔三窟 (jiǎo tù sān kū)",
+      "facet": "Zodiac idioms and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "打草惊蛇 (dǎ cǎo jīng shé)",
+      "facet": "Zodiac idioms and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "马到成功 (mǎ dào chéng gōng)",
+      "facet": "Zodiac idioms and sayings",
+      "known_at": 4
+    },
+    {
+      "name": "塞翁失马 (sài wēng shī mǎ)",
+      "facet": "Zodiac idioms and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "亡羊补牢 (wáng yáng bǔ láo)",
+      "facet": "Zodiac idioms and sayings",
+      "known_at": 4
+    },
+    {
+      "name": "杀鸡儆猴 (shā jī jǐng hóu)",
+      "facet": "Zodiac idioms and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "闻鸡起舞 (wén jī qǐ wǔ)",
+      "facet": "Zodiac idioms and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "狗急跳墙 (gǒu jí tiào qiáng)",
+      "facet": "Zodiac idioms and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "生龙活虎 (shēng lóng huó hǔ)",
+      "facet": "Zodiac idioms and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "龙马精神 (lóng mǎ jīng shén)",
+      "facet": "Zodiac idioms and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Zodiac stamps (生肖邮票)",
+      "facet": "Zodiac in art, stamps and gifts",
+      "known_at": 7
+    },
+    {
+      "name": "1980 Monkey stamp (庚申猴)",
+      "facet": "Zodiac in art, stamps and gifts",
+      "known_at": 12
+    },
+    {
+      "name": "Huang Yongyu (黄永玉)",
+      "facet": "Zodiac in art, stamps and gifts",
+      "known_at": 13
+    },
+    {
+      "name": "Old Summer Palace bronze zodiac heads (圆明园十二兽首)",
+      "facet": "Zodiac in art, stamps and gifts",
+      "known_at": 9
+    },
+    {
+      "name": "Zodiac paper cuts (剪纸)",
+      "facet": "Zodiac in art, stamps and gifts",
+      "known_at": 4
+    },
+    {
+      "name": "Zodiac lanterns",
+      "facet": "Zodiac in art, stamps and gifts",
+      "known_at": 3
+    },
+    {
+      "name": "Zodiac red envelopes",
+      "facet": "Zodiac in art, stamps and gifts",
+      "known_at": 3
+    },
+    {
+      "name": "Dough figurines (面塑)",
+      "facet": "Zodiac in art, stamps and gifts",
+      "known_at": 7
+    },
+    {
+      "name": "Tiger-head shoes (虎头鞋)",
+      "facet": "Zodiac in art, stamps and gifts",
+      "known_at": 6
+    },
+    {
+      "name": "Tang dynasty zodiac tomb figures",
+      "facet": "Zodiac in art, stamps and gifts",
+      "known_at": 13
+    },
+    {
+      "name": "Zodiac bronze mirror",
+      "facet": "Zodiac in art, stamps and gifts",
+      "known_at": 13
+    },
+    {
+      "name": "Zodiac plush toys",
+      "facet": "Zodiac in art, stamps and gifts",
+      "known_at": 2
+    },
+    {
+      "name": "Zodiac jade carving",
+      "facet": "Zodiac in art, stamps and gifts",
+      "known_at": 8
+    },
+    {
+      "name": "Chinese Zodiac (十二生肖, 2012 film)",
+      "facet": "Zodiac in films, stories and media",
+      "known_at": 9
+    },
+    {
+      "name": "Jackie Chan (成龙)",
+      "facet": "Zodiac in films, stories and media",
+      "known_at": 5
+    },
+    {
+      "name": "Sun Wukong (孙悟空)",
+      "facet": "Zodiac in films, stories and media",
+      "known_at": 1
+    },
+    {
+      "name": "Zhu Bajie (猪八戒)",
+      "facet": "Zodiac in films, stories and media",
+      "known_at": 2
+    },
+    {
+      "name": "Havoc in Heaven (大闹天宫)",
+      "facet": "Zodiac in films, stories and media",
+      "known_at": 6
+    },
+    {
+      "name": "Black Myth: Wukong (黑神话：悟空)",
+      "facet": "Zodiac in films, stories and media",
+      "known_at": 7
+    },
+    {
+      "name": "Legend of the White Snake (白蛇传)",
+      "facet": "Zodiac in films, stories and media",
+      "known_at": 6
+    },
+    {
+      "name": "Yutu lunar rover (玉兔号)",
+      "facet": "Zodiac in films, stories and media",
+      "known_at": 8
+    },
+    {
+      "name": "Pleasant Goat and Big Big Wolf (喜羊羊与灰太狼)",
+      "facet": "Zodiac in films, stories and media",
+      "known_at": 2
+    },
+    {
+      "name": "The Mouse's Wedding (老鼠嫁女)",
+      "facet": "Zodiac in films, stories and media",
+      "known_at": 7
+    },
+    {
+      "name": "Wu Song fights the tiger (武松打虎)",
+      "facet": "Zodiac in films, stories and media",
+      "known_at": 6
+    },
+    {
+      "name": "Peppa Celebrates Chinese New Year (小猪佩奇过大年)",
+      "facet": "Zodiac in films, stories and media",
+      "known_at": 7
+    },
+    {
+      "name": "Spring Festival Gala zodiac mascot",
+      "facet": "Zodiac in films, stories and media",
+      "known_at": 6
+    }
+  ]
+}

@@ -1,0 +1,1175 @@
+{
+  "subcategory": "toys",
+  "facets": [
+    "Dolls and action figures",
+    "Plush toys and soft toys",
+    "Building blocks and construction sets",
+    "Toy cars, trains and remote control",
+    "Yo-yos, tops and skill toys",
+    "Blind boxes and designer toys",
+    "Toys from cartoons and anime",
+    "Electronic toys and robot pets",
+    "Science and physics toys",
+    "Outdoor and water toys",
+    "Baby and early learning toys",
+    "Toy makers and toy history"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 3,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Barbie",
+      "facet": "Dolls and action figures",
+      "known_at": 2
+    },
+    {
+      "name": "Ken",
+      "facet": "Dolls and action figures",
+      "known_at": 6
+    },
+    {
+      "name": "Matryoshka doll",
+      "facet": "Dolls and action figures",
+      "known_at": 4
+    },
+    {
+      "name": "Rag doll",
+      "facet": "Dolls and action figures",
+      "known_at": 3
+    },
+    {
+      "name": "Porcelain doll",
+      "facet": "Dolls and action figures",
+      "known_at": 5
+    },
+    {
+      "name": "Paper doll",
+      "facet": "Dolls and action figures",
+      "known_at": 3
+    },
+    {
+      "name": "Marionette",
+      "facet": "Dolls and action figures",
+      "known_at": 5
+    },
+    {
+      "name": "Hand puppet",
+      "facet": "Dolls and action figures",
+      "known_at": 2
+    },
+    {
+      "name": "Kokeshi",
+      "facet": "Dolls and action figures",
+      "known_at": 12
+    },
+    {
+      "name": "Daruma doll",
+      "facet": "Dolls and action figures",
+      "known_at": 10
+    },
+    {
+      "name": "Hina dolls",
+      "facet": "Dolls and action figures",
+      "known_at": 12
+    },
+    {
+      "name": "Licca-chan",
+      "facet": "Dolls and action figures",
+      "known_at": 12
+    },
+    {
+      "name": "Ball-jointed doll",
+      "facet": "Dolls and action figures",
+      "known_at": 10
+    },
+    {
+      "name": "Sylvanian Families",
+      "facet": "Dolls and action figures",
+      "known_at": 8
+    },
+    {
+      "name": "G.I. Joe",
+      "facet": "Dolls and action figures",
+      "known_at": 13
+    },
+    {
+      "name": "Nendoroid",
+      "facet": "Dolls and action figures",
+      "known_at": 11
+    },
+    {
+      "name": "Bobblehead",
+      "facet": "Dolls and action figures",
+      "known_at": 7
+    },
+    {
+      "name": "Worry doll",
+      "facet": "Dolls and action figures",
+      "known_at": 14
+    },
+    {
+      "name": "Cabbage Patch Kids",
+      "facet": "Dolls and action figures",
+      "known_at": 14
+    },
+    {
+      "name": "Garage kit",
+      "facet": "Dolls and action figures",
+      "known_at": 13
+    },
+    {
+      "name": "Teddy bear",
+      "facet": "Plush toys and soft toys",
+      "known_at": 1
+    },
+    {
+      "name": "Theodore Roosevelt",
+      "facet": "Plush toys and soft toys",
+      "known_at": 12
+    },
+    {
+      "name": "Steiff",
+      "facet": "Plush toys and soft toys",
+      "known_at": 13
+    },
+    {
+      "name": "Jellycat",
+      "facet": "Plush toys and soft toys",
+      "known_at": 9
+    },
+    {
+      "name": "Squishmallows",
+      "facet": "Plush toys and soft toys",
+      "known_at": 11
+    },
+    {
+      "name": "Beanie Babies",
+      "facet": "Plush toys and soft toys",
+      "known_at": 14
+    },
+    {
+      "name": "Build-A-Bear Workshop",
+      "facet": "Plush toys and soft toys",
+      "known_at": 13
+    },
+    {
+      "name": "Panda plush",
+      "facet": "Plush toys and soft toys",
+      "known_at": 1
+    },
+    {
+      "name": "Duffy",
+      "facet": "Plush toys and soft toys",
+      "known_at": 8
+    },
+    {
+      "name": "LinaBell",
+      "facet": "Plush toys and soft toys",
+      "known_at": 6
+    },
+    {
+      "name": "Rilakkuma",
+      "facet": "Plush toys and soft toys",
+      "known_at": 8
+    },
+    {
+      "name": "Sumikko Gurashi",
+      "facet": "Plush toys and soft toys",
+      "known_at": 9
+    },
+    {
+      "name": "Blåhaj",
+      "facet": "Plush toys and soft toys",
+      "known_at": 9
+    },
+    {
+      "name": "Capybara plush",
+      "facet": "Plush toys and soft toys",
+      "known_at": 5
+    },
+    {
+      "name": "Polyester fiberfill",
+      "facet": "Plush toys and soft toys",
+      "known_at": 10
+    },
+    {
+      "name": "Sock monkey",
+      "facet": "Plush toys and soft toys",
+      "known_at": 12
+    },
+    {
+      "name": "Comfort blanket",
+      "facet": "Plush toys and soft toys",
+      "known_at": 4
+    },
+    {
+      "name": "Tickle Me Elmo",
+      "facet": "Plush toys and soft toys",
+      "known_at": 14
+    },
+    {
+      "name": "LEGO",
+      "facet": "Building blocks and construction sets",
+      "known_at": 1
+    },
+    {
+      "name": "LEGO minifigure",
+      "facet": "Building blocks and construction sets",
+      "known_at": 4
+    },
+    {
+      "name": "LEGO Technic",
+      "facet": "Building blocks and construction sets",
+      "known_at": 9
+    },
+    {
+      "name": "Duplo",
+      "facet": "Building blocks and construction sets",
+      "known_at": 5
+    },
+    {
+      "name": "Wooden blocks",
+      "facet": "Building blocks and construction sets",
+      "known_at": 1
+    },
+    {
+      "name": "Meccano",
+      "facet": "Building blocks and construction sets",
+      "known_at": 13
+    },
+    {
+      "name": "K'Nex",
+      "facet": "Building blocks and construction sets",
+      "known_at": 14
+    },
+    {
+      "name": "Magnetic tiles",
+      "facet": "Building blocks and construction sets",
+      "known_at": 4
+    },
+    {
+      "name": "Mega Bloks",
+      "facet": "Building blocks and construction sets",
+      "known_at": 11
+    },
+    {
+      "name": "Nanoblock",
+      "facet": "Building blocks and construction sets",
+      "known_at": 11
+    },
+    {
+      "name": "Keeppley",
+      "facet": "Building blocks and construction sets",
+      "known_at": 10
+    },
+    {
+      "name": "Bloks",
+      "facet": "Building blocks and construction sets",
+      "known_at": 8
+    },
+    {
+      "name": "Ole Kirk Christiansen",
+      "facet": "Building blocks and construction sets",
+      "known_at": 13
+    },
+    {
+      "name": "Billund",
+      "facet": "Building blocks and construction sets",
+      "known_at": 14
+    },
+    {
+      "name": "ABS plastic",
+      "facet": "Building blocks and construction sets",
+      "known_at": 13
+    },
+    {
+      "name": "Legoland",
+      "facet": "Building blocks and construction sets",
+      "known_at": 6
+    },
+    {
+      "name": "Plastic model kit",
+      "facet": "Building blocks and construction sets",
+      "known_at": 8
+    },
+    {
+      "name": "Hot Wheels",
+      "facet": "Toy cars, trains and remote control",
+      "known_at": 5
+    },
+    {
+      "name": "Matchbox",
+      "facet": "Toy cars, trains and remote control",
+      "known_at": 12
+    },
+    {
+      "name": "Tomica",
+      "facet": "Toy cars, trains and remote control",
+      "known_at": 9
+    },
+    {
+      "name": "Die-cast car",
+      "facet": "Toy cars, trains and remote control",
+      "known_at": 8
+    },
+    {
+      "name": "Pull-back car",
+      "facet": "Toy cars, trains and remote control",
+      "known_at": 3
+    },
+    {
+      "name": "Friction-powered car",
+      "facet": "Toy cars, trains and remote control",
+      "known_at": 6
+    },
+    {
+      "name": "Remote-controlled car",
+      "facet": "Toy cars, trains and remote control",
+      "known_at": 2
+    },
+    {
+      "name": "Quadcopter drone",
+      "facet": "Toy cars, trains and remote control",
+      "known_at": 3
+    },
+    {
+      "name": "Mini 4WD",
+      "facet": "Toy cars, trains and remote control",
+      "known_at": 8
+    },
+    {
+      "name": "Slot car",
+      "facet": "Toy cars, trains and remote control",
+      "known_at": 13
+    },
+    {
+      "name": "Model railway",
+      "facet": "Toy cars, trains and remote control",
+      "known_at": 8
+    },
+    {
+      "name": "Wooden train set",
+      "facet": "Toy cars, trains and remote control",
+      "known_at": 3
+    },
+    {
+      "name": "BRIO",
+      "facet": "Toy cars, trains and remote control",
+      "known_at": 13
+    },
+    {
+      "name": "Märklin",
+      "facet": "Toy cars, trains and remote control",
+      "known_at": 14
+    },
+    {
+      "name": "Monster truck",
+      "facet": "Toy cars, trains and remote control",
+      "known_at": 5
+    },
+    {
+      "name": "Radio-controlled boat",
+      "facet": "Toy cars, trains and remote control",
+      "known_at": 4
+    },
+    {
+      "name": "Spinning top",
+      "facet": "Yo-yos, tops and skill toys",
+      "known_at": 1
+    },
+    {
+      "name": "Fidget spinner",
+      "facet": "Yo-yos, tops and skill toys",
+      "known_at": 3
+    },
+    {
+      "name": "Pop It",
+      "facet": "Yo-yos, tops and skill toys",
+      "known_at": 3
+    },
+    {
+      "name": "Fidget cube",
+      "facet": "Yo-yos, tops and skill toys",
+      "known_at": 8
+    },
+    {
+      "name": "Squishy",
+      "facet": "Yo-yos, tops and skill toys",
+      "known_at": 3
+    },
+    {
+      "name": "Kendama",
+      "facet": "Yo-yos, tops and skill toys",
+      "known_at": 11
+    },
+    {
+      "name": "Rubik's Cube",
+      "facet": "Yo-yos, tops and skill toys",
+      "known_at": 2
+    },
+    {
+      "name": "Ernő Rubik",
+      "facet": "Yo-yos, tops and skill toys",
+      "known_at": 11
+    },
+    {
+      "name": "Speedcubing",
+      "facet": "Yo-yos, tops and skill toys",
+      "known_at": 8
+    },
+    {
+      "name": "Megaminx",
+      "facet": "Yo-yos, tops and skill toys",
+      "known_at": 13
+    },
+    {
+      "name": "Pyraminx",
+      "facet": "Yo-yos, tops and skill toys",
+      "known_at": 12
+    },
+    {
+      "name": "Juggling balls",
+      "facet": "Yo-yos, tops and skill toys",
+      "known_at": 5
+    },
+    {
+      "name": "Devil sticks",
+      "facet": "Yo-yos, tops and skill toys",
+      "known_at": 13
+    },
+    {
+      "name": "Firestorm yo-yo (火力少年王)",
+      "facet": "Yo-yos, tops and skill toys",
+      "known_at": 8
+    },
+    {
+      "name": "Labyrinth game",
+      "facet": "Yo-yos, tops and skill toys",
+      "known_at": 5
+    },
+    {
+      "name": "Blind box (盲盒)",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 4
+    },
+    {
+      "name": "Pop Mart",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 6
+    },
+    {
+      "name": "Labubu",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 4
+    },
+    {
+      "name": "Molly",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 8
+    },
+    {
+      "name": "Skullpanda",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 11
+    },
+    {
+      "name": "Dimoo",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 10
+    },
+    {
+      "name": "Crybaby",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 11
+    },
+    {
+      "name": "Hirono",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 11
+    },
+    {
+      "name": "The Monsters",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 11
+    },
+    {
+      "name": "Kasing Lung",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Ning",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 13
+    },
+    {
+      "name": "Kenny Wong",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 14
+    },
+    {
+      "name": "Be@rbrick",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 10
+    },
+    {
+      "name": "KAWS",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 12
+    },
+    {
+      "name": "Funko Pop",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 10
+    },
+    {
+      "name": "Gashapon",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 6
+    },
+    {
+      "name": "Secret edition (隐藏款)",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 7
+    },
+    {
+      "name": "Sonny Angel",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 9
+    },
+    {
+      "name": "Vinyl art toy",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 13
+    },
+    {
+      "name": "52TOYS",
+      "facet": "Blind boxes and designer toys",
+      "known_at": 13
+    },
+    {
+      "name": "Transformers",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 3
+    },
+    {
+      "name": "Optimus Prime",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 4
+    },
+    {
+      "name": "Ultraman",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 2
+    },
+    {
+      "name": "Gundam",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 9
+    },
+    {
+      "name": "Kamen Rider",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 10
+    },
+    {
+      "name": "Pikachu",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 1
+    },
+    {
+      "name": "Doraemon",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 1
+    },
+    {
+      "name": "Hello Kitty",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 2
+    },
+    {
+      "name": "Toy Story",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 2
+    },
+    {
+      "name": "Woody",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 2
+    },
+    {
+      "name": "Buzz Lightyear",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 3
+    },
+    {
+      "name": "Forky",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 7
+    },
+    {
+      "name": "Mr. Potato Head",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 8
+    },
+    {
+      "name": "Lightning McQueen",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 3
+    },
+    {
+      "name": "Thomas the Tank Engine",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 3
+    },
+    {
+      "name": "Pleasant Goat (喜羊羊)",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 2
+    },
+    {
+      "name": "Armor Hero (铠甲勇士)",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 6
+    },
+    {
+      "name": "Ye Luoli (叶罗丽)",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 6
+    },
+    {
+      "name": "Super Wings",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 3
+    },
+    {
+      "name": "Peppa Pig",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 2
+    },
+    {
+      "name": "Paw Patrol",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 3
+    },
+    {
+      "name": "Totoro",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 4
+    },
+    {
+      "name": "Snoopy",
+      "facet": "Toys from cartoons and anime",
+      "known_at": 5
+    },
+    {
+      "name": "Furby",
+      "facet": "Electronic toys and robot pets",
+      "known_at": 10
+    },
+    {
+      "name": "Aibo",
+      "facet": "Electronic toys and robot pets",
+      "known_at": 10
+    },
+    {
+      "name": "Robot dog",
+      "facet": "Electronic toys and robot pets",
+      "known_at": 4
+    },
+    {
+      "name": "Toy robot",
+      "facet": "Electronic toys and robot pets",
+      "known_at": 1
+    },
+    {
+      "name": "Robosapien",
+      "facet": "Electronic toys and robot pets",
+      "known_at": 14
+    },
+    {
+      "name": "Hexbug",
+      "facet": "Electronic toys and robot pets",
+      "known_at": 11
+    },
+    {
+      "name": "Sphero",
+      "facet": "Electronic toys and robot pets",
+      "known_at": 13
+    },
+    {
+      "name": "Bop It",
+      "facet": "Electronic toys and robot pets",
+      "known_at": 13,
+      "retired": "unaskable: Bop It is almost unknown in China; no fair chinese-base question."
+    },
+    {
+      "name": "Simon",
+      "facet": "Electronic toys and robot pets",
+      "known_at": 13
+    },
+    {
+      "name": "Speak & Spell",
+      "facet": "Electronic toys and robot pets",
+      "known_at": 14
+    },
+    {
+      "name": "Walkie-talkie",
+      "facet": "Electronic toys and robot pets",
+      "known_at": 4
+    },
+    {
+      "name": "Laser tag",
+      "facet": "Electronic toys and robot pets",
+      "known_at": 8
+    },
+    {
+      "name": "LEGO Mindstorms",
+      "facet": "Electronic toys and robot pets",
+      "known_at": 12
+    },
+    {
+      "name": "mBot",
+      "facet": "Electronic toys and robot pets",
+      "known_at": 11
+    },
+    {
+      "name": "Slinky",
+      "facet": "Science and physics toys",
+      "known_at": 6
+    },
+    {
+      "name": "Newton's cradle",
+      "facet": "Science and physics toys",
+      "known_at": 7
+    },
+    {
+      "name": "Kaleidoscope",
+      "facet": "Science and physics toys",
+      "known_at": 4
+    },
+    {
+      "name": "Prism",
+      "facet": "Science and physics toys",
+      "known_at": 7
+    },
+    {
+      "name": "Magnet",
+      "facet": "Science and physics toys",
+      "known_at": 1
+    },
+    {
+      "name": "Magnifying glass",
+      "facet": "Science and physics toys",
+      "known_at": 2
+    },
+    {
+      "name": "Microscope",
+      "facet": "Science and physics toys",
+      "known_at": 4
+    },
+    {
+      "name": "Telescope",
+      "facet": "Science and physics toys",
+      "known_at": 2
+    },
+    {
+      "name": "Periscope",
+      "facet": "Science and physics toys",
+      "known_at": 8
+    },
+    {
+      "name": "Pendulum",
+      "facet": "Science and physics toys",
+      "known_at": 6
+    },
+    {
+      "name": "Drinking bird",
+      "facet": "Science and physics toys",
+      "known_at": 10
+    },
+    {
+      "name": "Lava lamp",
+      "facet": "Science and physics toys",
+      "known_at": 8
+    },
+    {
+      "name": "Plasma ball",
+      "facet": "Science and physics toys",
+      "known_at": 8
+    },
+    {
+      "name": "Ant farm",
+      "facet": "Science and physics toys",
+      "known_at": 6
+    },
+    {
+      "name": "Crystal growing kit",
+      "facet": "Science and physics toys",
+      "known_at": 8
+    },
+    {
+      "name": "Baking soda volcano",
+      "facet": "Science and physics toys",
+      "known_at": 5,
+      "retired": "used_up: Baking soda already asked; the remaining options (odd-one-out about places or people, a year) would make the model volcano just a backdrop, not the topic of the question."
+    },
+    {
+      "name": "Water rocket",
+      "facet": "Science and physics toys",
+      "known_at": 8
+    },
+    {
+      "name": "Snap Circuits",
+      "facet": "Science and physics toys",
+      "known_at": 12
+    },
+    {
+      "name": "Soma cube",
+      "facet": "Science and physics toys",
+      "known_at": 13
+    },
+    {
+      "name": "Icosahedron",
+      "facet": "Science and physics toys",
+      "known_at": 11
+    },
+    {
+      "name": "Slime",
+      "facet": "Science and physics toys",
+      "known_at": 3
+    },
+    {
+      "name": "Levitron",
+      "facet": "Science and physics toys",
+      "known_at": 14
+    },
+    {
+      "name": "Stirling engine",
+      "facet": "Science and physics toys",
+      "known_at": 14
+    },
+    {
+      "name": "Frisbee",
+      "facet": "Outdoor and water toys",
+      "known_at": 3
+    },
+    {
+      "name": "Water balloon",
+      "facet": "Outdoor and water toys",
+      "known_at": 2
+    },
+    {
+      "name": "Super Soaker",
+      "facet": "Outdoor and water toys",
+      "known_at": 12
+    },
+    {
+      "name": "Skateboard",
+      "facet": "Outdoor and water toys",
+      "known_at": 2
+    },
+    {
+      "name": "Kick scooter",
+      "facet": "Outdoor and water toys",
+      "known_at": 2
+    },
+    {
+      "name": "Roller skates",
+      "facet": "Outdoor and water toys",
+      "known_at": 3
+    },
+    {
+      "name": "Swing",
+      "facet": "Outdoor and water toys",
+      "known_at": 1
+    },
+    {
+      "name": "Slide",
+      "facet": "Outdoor and water toys",
+      "known_at": 1
+    },
+    {
+      "name": "Seesaw",
+      "facet": "Outdoor and water toys",
+      "known_at": 1
+    },
+    {
+      "name": "Sandbox",
+      "facet": "Outdoor and water toys",
+      "known_at": 1
+    },
+    {
+      "name": "Soap bubbles",
+      "facet": "Outdoor and water toys",
+      "known_at": 1
+    },
+    {
+      "name": "Swim ring",
+      "facet": "Outdoor and water toys",
+      "known_at": 2
+    },
+    {
+      "name": "Boomerang",
+      "facet": "Outdoor and water toys",
+      "known_at": 4
+    },
+    {
+      "name": "Beach ball",
+      "facet": "Outdoor and water toys",
+      "known_at": 2
+    },
+    {
+      "name": "Balance bike",
+      "facet": "Outdoor and water toys",
+      "known_at": 4
+    },
+    {
+      "name": "Jump rope",
+      "facet": "Outdoor and water toys",
+      "known_at": 1
+    },
+    {
+      "name": "Sidewalk chalk",
+      "facet": "Outdoor and water toys",
+      "known_at": 2
+    },
+    {
+      "name": "Rattle",
+      "facet": "Baby and early learning toys",
+      "known_at": 1
+    },
+    {
+      "name": "Teether",
+      "facet": "Baby and early learning toys",
+      "known_at": 4
+    },
+    {
+      "name": "Shape sorter",
+      "facet": "Baby and early learning toys",
+      "known_at": 2
+    },
+    {
+      "name": "Stacking rings",
+      "facet": "Baby and early learning toys",
+      "known_at": 2
+    },
+    {
+      "name": "Baby play gym",
+      "facet": "Baby and early learning toys",
+      "known_at": 5
+    },
+    {
+      "name": "Crib mobile",
+      "facet": "Baby and early learning toys",
+      "known_at": 5
+    },
+    {
+      "name": "Bead maze",
+      "facet": "Baby and early learning toys",
+      "known_at": 4
+    },
+    {
+      "name": "Jack-in-the-box",
+      "facet": "Baby and early learning toys",
+      "known_at": 5
+    },
+    {
+      "name": "Toy xylophone",
+      "facet": "Baby and early learning toys",
+      "known_at": 3
+    },
+    {
+      "name": "Rocking horse",
+      "facet": "Baby and early learning toys",
+      "known_at": 3
+    },
+    {
+      "name": "Push-along toy",
+      "facet": "Baby and early learning toys",
+      "known_at": 4
+    },
+    {
+      "name": "Rubber duck",
+      "facet": "Baby and early learning toys",
+      "known_at": 1
+    },
+    {
+      "name": "Cloth book",
+      "facet": "Baby and early learning toys",
+      "known_at": 4
+    },
+    {
+      "name": "Busy board",
+      "facet": "Baby and early learning toys",
+      "known_at": 7
+    },
+    {
+      "name": "Flash cards",
+      "facet": "Baby and early learning toys",
+      "known_at": 4
+    },
+    {
+      "name": "Point-reading pen (点读笔)",
+      "facet": "Baby and early learning toys",
+      "known_at": 5
+    },
+    {
+      "name": "Story machine (故事机)",
+      "facet": "Baby and early learning toys",
+      "known_at": 6
+    },
+    {
+      "name": "Toy telephone",
+      "facet": "Baby and early learning toys",
+      "known_at": 2
+    },
+    {
+      "name": "Montessori toys",
+      "facet": "Baby and early learning toys",
+      "known_at": 10
+    },
+    {
+      "name": "Maria Montessori",
+      "facet": "Baby and early learning toys",
+      "known_at": 12
+    },
+    {
+      "name": "Friedrich Fröbel",
+      "facet": "Baby and early learning toys",
+      "known_at": 14
+    },
+    {
+      "name": "Fisher-Price",
+      "facet": "Baby and early learning toys",
+      "known_at": 12
+    },
+    {
+      "name": "Mattel",
+      "facet": "Toy makers and toy history",
+      "known_at": 12
+    },
+    {
+      "name": "Hasbro",
+      "facet": "Toy makers and toy history",
+      "known_at": 12
+    },
+    {
+      "name": "Bandai",
+      "facet": "Toy makers and toy history",
+      "known_at": 11
+    },
+    {
+      "name": "Takara Tomy",
+      "facet": "Toy makers and toy history",
+      "known_at": 13
+    },
+    {
+      "name": "Spin Master",
+      "facet": "Toy makers and toy history",
+      "known_at": 14,
+      "retired": "unaskable: Spin Master's founders are unknown to Chinese families and the photo options need trademarked material."
+    },
+    {
+      "name": "Ruth Handler",
+      "facet": "Toy makers and toy history",
+      "known_at": 13
+    },
+    {
+      "name": "Toys \"R\" Us",
+      "facet": "Toy makers and toy history",
+      "known_at": 12
+    },
+    {
+      "name": "Hamleys",
+      "facet": "Toy makers and toy history",
+      "known_at": 14
+    },
+    {
+      "name": "Chenghai",
+      "facet": "Toy makers and toy history",
+      "known_at": 13
+    },
+    {
+      "name": "Tin toy",
+      "facet": "Toy makers and toy history",
+      "known_at": 8
+    },
+    {
+      "name": "Wind-up toy",
+      "facet": "Toy makers and toy history",
+      "known_at": 4
+    },
+    {
+      "name": "Toy soldier",
+      "facet": "Toy makers and toy history",
+      "known_at": 5
+    },
+    {
+      "name": "Nutcracker",
+      "facet": "Toy makers and toy history",
+      "known_at": 6
+    },
+    {
+      "name": "Kinder Surprise",
+      "facet": "Toy makers and toy history",
+      "known_at": 5
+    },
+    {
+      "name": "Happy Meal toy",
+      "facet": "Toy makers and toy history",
+      "known_at": 4
+    },
+    {
+      "name": "Nuremberg International Toy Fair",
+      "facet": "Toy makers and toy history",
+      "known_at": 15
+    },
+    {
+      "name": "Celluloid",
+      "facet": "Toy makers and toy history",
+      "known_at": 13
+    }
+  ]
+}

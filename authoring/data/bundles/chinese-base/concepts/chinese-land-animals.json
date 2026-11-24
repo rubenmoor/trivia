@@ -1,0 +1,901 @@
+{
+  "subcategory": "chinese-land-animals",
+  "facets": [
+    "Big cats of China",
+    "Primates and gibbons",
+    "Plateau hoofed animals",
+    "Deer of China",
+    "Elephants and forest giants",
+    "Reptiles and amphibians",
+    "Desert and steppe animals",
+    "Bears, wolves and small carnivores",
+    "Conservation and nature reserves",
+    "Animals in Chinese culture",
+    "Famous animal news stories"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 4,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Siberian tiger",
+      "facet": "Big cats of China",
+      "known_at": 3
+    },
+    {
+      "name": "South China tiger",
+      "facet": "Big cats of China",
+      "known_at": 5
+    },
+    {
+      "name": "Bengal tiger",
+      "facet": "Big cats of China",
+      "known_at": 8
+    },
+    {
+      "name": "Indochinese tiger",
+      "facet": "Big cats of China",
+      "known_at": 12
+    },
+    {
+      "name": "Snow leopard",
+      "facet": "Big cats of China",
+      "known_at": 5
+    },
+    {
+      "name": "Amur leopard",
+      "facet": "Big cats of China",
+      "known_at": 10
+    },
+    {
+      "name": "North China leopard",
+      "facet": "Big cats of China",
+      "known_at": 12
+    },
+    {
+      "name": "Clouded leopard",
+      "facet": "Big cats of China",
+      "known_at": 10
+    },
+    {
+      "name": "Eurasian lynx",
+      "facet": "Big cats of China",
+      "known_at": 9
+    },
+    {
+      "name": "Pallas's cat (兔狲)",
+      "facet": "Big cats of China",
+      "known_at": 9
+    },
+    {
+      "name": "Chinese mountain cat",
+      "facet": "Big cats of China",
+      "known_at": 13
+    },
+    {
+      "name": "Leopard cat",
+      "facet": "Big cats of China",
+      "known_at": 11
+    },
+    {
+      "name": "Asian golden cat",
+      "facet": "Big cats of China",
+      "known_at": 13
+    },
+    {
+      "name": "Marbled cat",
+      "facet": "Big cats of China",
+      "known_at": 14
+    },
+    {
+      "name": "Harbin Siberian Tiger Park",
+      "facet": "Big cats of China",
+      "known_at": 8
+    },
+    {
+      "name": "Tiger stripes",
+      "facet": "Big cats of China",
+      "known_at": 2
+    },
+    {
+      "name": "Black snub-nosed monkey",
+      "facet": "Primates and gibbons",
+      "known_at": 10
+    },
+    {
+      "name": "Guizhou snub-nosed monkey",
+      "facet": "Primates and gibbons",
+      "known_at": 12
+    },
+    {
+      "name": "Myanmar snub-nosed monkey",
+      "facet": "Primates and gibbons",
+      "known_at": 14
+    },
+    {
+      "name": "Hainan gibbon",
+      "facet": "Primates and gibbons",
+      "known_at": 9
+    },
+    {
+      "name": "Skywalker hoolock gibbon",
+      "facet": "Primates and gibbons",
+      "known_at": 11
+    },
+    {
+      "name": "White-headed langur",
+      "facet": "Primates and gibbons",
+      "known_at": 12
+    },
+    {
+      "name": "François' langur",
+      "facet": "Primates and gibbons",
+      "known_at": 13
+    },
+    {
+      "name": "Rhesus macaque",
+      "facet": "Primates and gibbons",
+      "known_at": 7
+    },
+    {
+      "name": "Tibetan macaque",
+      "facet": "Primates and gibbons",
+      "known_at": 10
+    },
+    {
+      "name": "Mount Emei monkeys",
+      "facet": "Primates and gibbons",
+      "known_at": 5
+    },
+    {
+      "name": "Northern pig-tailed macaque",
+      "facet": "Primates and gibbons",
+      "known_at": 14
+    },
+    {
+      "name": "Stump-tailed macaque",
+      "facet": "Primates and gibbons",
+      "known_at": 14
+    },
+    {
+      "name": "Assam macaque",
+      "facet": "Primates and gibbons",
+      "known_at": 14
+    },
+    {
+      "name": "Slow loris",
+      "facet": "Primates and gibbons",
+      "known_at": 10
+    },
+    {
+      "name": "Gibbon song",
+      "facet": "Primates and gibbons",
+      "known_at": 9
+    },
+    {
+      "name": "Wild yak",
+      "facet": "Plateau hoofed animals",
+      "known_at": 6
+    },
+    {
+      "name": "Domestic yak",
+      "facet": "Plateau hoofed animals",
+      "known_at": 3
+    },
+    {
+      "name": "Kiang (Tibetan wild ass)",
+      "facet": "Plateau hoofed animals",
+      "known_at": 9
+    },
+    {
+      "name": "Tibetan gazelle",
+      "facet": "Plateau hoofed animals",
+      "known_at": 10
+    },
+    {
+      "name": "Przewalski's gazelle",
+      "facet": "Plateau hoofed animals",
+      "known_at": 12
+    },
+    {
+      "name": "Blue sheep (岩羊)",
+      "facet": "Plateau hoofed animals",
+      "known_at": 10
+    },
+    {
+      "name": "Argali",
+      "facet": "Plateau hoofed animals",
+      "known_at": 12
+    },
+    {
+      "name": "Tibetan sheep",
+      "facet": "Plateau hoofed animals",
+      "known_at": 9
+    },
+    {
+      "name": "Himalayan tahr",
+      "facet": "Plateau hoofed animals",
+      "known_at": 14
+    },
+    {
+      "name": "Chinese goral",
+      "facet": "Plateau hoofed animals",
+      "known_at": 13
+    },
+    {
+      "name": "Chinese serow",
+      "facet": "Plateau hoofed animals",
+      "known_at": 13
+    },
+    {
+      "name": "Shahtoosh",
+      "facet": "Plateau hoofed animals",
+      "known_at": 13
+    },
+    {
+      "name": "Zonag Lake",
+      "facet": "Plateau hoofed animals",
+      "known_at": 13
+    },
+    {
+      "name": "Plateau pika",
+      "facet": "Plateau hoofed animals",
+      "known_at": 10
+    },
+    {
+      "name": "Himalayan marmot",
+      "facet": "Plateau hoofed animals",
+      "known_at": 8
+    },
+    {
+      "name": "Père David's deer (麋鹿)",
+      "facet": "Deer of China",
+      "known_at": 5
+    },
+    {
+      "name": "Sika deer",
+      "facet": "Deer of China",
+      "known_at": 4
+    },
+    {
+      "name": "Water deer",
+      "facet": "Deer of China",
+      "known_at": 9
+    },
+    {
+      "name": "Musk deer",
+      "facet": "Deer of China",
+      "known_at": 8
+    },
+    {
+      "name": "Reeves's muntjac",
+      "facet": "Deer of China",
+      "known_at": 11
+    },
+    {
+      "name": "Black muntjac",
+      "facet": "Deer of China",
+      "known_at": 14
+    },
+    {
+      "name": "Tufted deer",
+      "facet": "Deer of China",
+      "known_at": 13
+    },
+    {
+      "name": "White-lipped deer",
+      "facet": "Deer of China",
+      "known_at": 12
+    },
+    {
+      "name": "Wapiti (马鹿)",
+      "facet": "Deer of China",
+      "known_at": 10
+    },
+    {
+      "name": "Siberian roe deer (狍子)",
+      "facet": "Deer of China",
+      "known_at": 7
+    },
+    {
+      "name": "Hainan Eld's deer",
+      "facet": "Deer of China",
+      "known_at": 12
+    },
+    {
+      "name": "Sambar",
+      "facet": "Deer of China",
+      "known_at": 12
+    },
+    {
+      "name": "Reindeer of Aoluguya",
+      "facet": "Deer of China",
+      "known_at": 9
+    },
+    {
+      "name": "Moose",
+      "facet": "Deer of China",
+      "known_at": 7
+    },
+    {
+      "name": "Deer antlers",
+      "facet": "Deer of China",
+      "known_at": 3
+    },
+    {
+      "name": "Asian elephant",
+      "facet": "Elephants and forest giants",
+      "known_at": 2
+    },
+    {
+      "name": "Wild Elephant Valley",
+      "facet": "Elephants and forest giants",
+      "known_at": 9
+    },
+    {
+      "name": "Elephant trunk",
+      "facet": "Elephants and forest giants",
+      "known_at": 1
+    },
+    {
+      "name": "Elephant tusks",
+      "facet": "Elephants and forest giants",
+      "known_at": 3
+    },
+    {
+      "name": "Gaur",
+      "facet": "Elephants and forest giants",
+      "known_at": 11
+    },
+    {
+      "name": "Chinese pangolin",
+      "facet": "Elephants and forest giants",
+      "known_at": 6
+    },
+    {
+      "name": "Sunda pangolin",
+      "facet": "Elephants and forest giants",
+      "known_at": 13
+    },
+    {
+      "name": "Wild boar",
+      "facet": "Elephants and forest giants",
+      "known_at": 4
+    },
+    {
+      "name": "Javan rhinoceros",
+      "facet": "Elephants and forest giants",
+      "known_at": 13
+    },
+    {
+      "name": "Sumatran rhinoceros",
+      "facet": "Elephants and forest giants",
+      "known_at": 13
+    },
+    {
+      "name": "Malayan tapir",
+      "facet": "Elephants and forest giants",
+      "known_at": 11
+    },
+    {
+      "name": "Gigantopithecus",
+      "facet": "Elephants and forest giants",
+      "known_at": 13
+    },
+    {
+      "name": "Stegodon (Yellow River elephant)",
+      "facet": "Elephants and forest giants",
+      "known_at": 12
+    },
+    {
+      "name": "Woolly mammoth",
+      "facet": "Elephants and forest giants",
+      "known_at": 6
+    },
+    {
+      "name": "Woolly rhinoceros",
+      "facet": "Elephants and forest giants",
+      "known_at": 11
+    },
+    {
+      "name": "Shang dynasty elephants",
+      "facet": "Elephants and forest giants",
+      "known_at": 12
+    },
+    {
+      "name": "Yangtze alligator",
+      "facet": "Reptiles and amphibians",
+      "known_at": 5
+    },
+    {
+      "name": "Chinese giant salamander",
+      "facet": "Reptiles and amphibians",
+      "known_at": 5
+    },
+    {
+      "name": "Chinese softshell turtle",
+      "facet": "Reptiles and amphibians",
+      "known_at": 6
+    },
+    {
+      "name": "Yangtze giant softshell turtle",
+      "facet": "Reptiles and amphibians",
+      "known_at": 11
+    },
+    {
+      "name": "Golden coin turtle",
+      "facet": "Reptiles and amphibians",
+      "known_at": 10
+    },
+    {
+      "name": "Reeves's turtle (草龟)",
+      "facet": "Reptiles and amphibians",
+      "known_at": 7
+    },
+    {
+      "name": "Chinese stripe-necked turtle",
+      "facet": "Reptiles and amphibians",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese cobra",
+      "facet": "Reptiles and amphibians",
+      "known_at": 7
+    },
+    {
+      "name": "King cobra",
+      "facet": "Reptiles and amphibians",
+      "known_at": 5
+    },
+    {
+      "name": "Many-banded krait",
+      "facet": "Reptiles and amphibians",
+      "known_at": 9
+    },
+    {
+      "name": "Burmese python",
+      "facet": "Reptiles and amphibians",
+      "known_at": 7
+    },
+    {
+      "name": "Five-pacer viper (五步蛇)",
+      "facet": "Reptiles and amphibians",
+      "known_at": 9
+    },
+    {
+      "name": "Shedao Island pit viper",
+      "facet": "Reptiles and amphibians",
+      "known_at": 11
+    },
+    {
+      "name": "Chinese crocodile lizard",
+      "facet": "Reptiles and amphibians",
+      "known_at": 12
+    },
+    {
+      "name": "Tokay gecko",
+      "facet": "Reptiles and amphibians",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese water dragon",
+      "facet": "Reptiles and amphibians",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese fire-bellied newt",
+      "facet": "Reptiles and amphibians",
+      "known_at": 11
+    },
+    {
+      "name": "Asiatic toad",
+      "facet": "Reptiles and amphibians",
+      "known_at": 4
+    },
+    {
+      "name": "Black-spotted pond frog",
+      "facet": "Reptiles and amphibians",
+      "known_at": 4
+    },
+    {
+      "name": "Przewalski's horse",
+      "facet": "Desert and steppe animals",
+      "known_at": 8
+    },
+    {
+      "name": "Mongolian wild ass",
+      "facet": "Desert and steppe animals",
+      "known_at": 11
+    },
+    {
+      "name": "Mongolian gazelle",
+      "facet": "Desert and steppe animals",
+      "known_at": 10
+    },
+    {
+      "name": "Saiga antelope",
+      "facet": "Desert and steppe animals",
+      "known_at": 11
+    },
+    {
+      "name": "Long-eared jerboa",
+      "facet": "Desert and steppe animals",
+      "known_at": 10
+    },
+    {
+      "name": "Mongolian gerbil",
+      "facet": "Desert and steppe animals",
+      "known_at": 8
+    },
+    {
+      "name": "Brandt's vole",
+      "facet": "Desert and steppe animals",
+      "known_at": 13
+    },
+    {
+      "name": "Corsac fox",
+      "facet": "Desert and steppe animals",
+      "known_at": 11
+    },
+    {
+      "name": "Long-eared hedgehog",
+      "facet": "Desert and steppe animals",
+      "known_at": 9
+    },
+    {
+      "name": "Toad-headed agama",
+      "facet": "Desert and steppe animals",
+      "known_at": 12
+    },
+    {
+      "name": "Asiatic black bear",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 5
+    },
+    {
+      "name": "Brown bear",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 4
+    },
+    {
+      "name": "Tibetan blue bear",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 12
+    },
+    {
+      "name": "Sun bear",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 9
+    },
+    {
+      "name": "Gobi bear",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 13
+    },
+    {
+      "name": "Grey wolf",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 2
+    },
+    {
+      "name": "Tibetan wolf",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 11
+    },
+    {
+      "name": "Dhole",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 11
+    },
+    {
+      "name": "Red fox",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 3
+    },
+    {
+      "name": "Tibetan fox",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 7
+    },
+    {
+      "name": "Raccoon dog",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 8
+    },
+    {
+      "name": "Yellow-throated marten",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 12
+    },
+    {
+      "name": "Sable",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 10
+    },
+    {
+      "name": "Asian badger",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 7
+    },
+    {
+      "name": "Hog badger",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 10
+    },
+    {
+      "name": "Masked palm civet",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 10
+    },
+    {
+      "name": "Siberian weasel",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 5
+    },
+    {
+      "name": "Eurasian otter",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 8
+    },
+    {
+      "name": "Asian small-clawed otter",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 11
+    },
+    {
+      "name": "Chinese ferret-badger",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 13
+    },
+    {
+      "name": "Binturong",
+      "facet": "Bears, wolves and small carnivores",
+      "known_at": 13
+    },
+    {
+      "name": "Sanjiangyuan National Park",
+      "facet": "Conservation and nature reserves",
+      "known_at": 9
+    },
+    {
+      "name": "Northeast China Tiger and Leopard National Park",
+      "facet": "Conservation and nature reserves",
+      "known_at": 10
+    },
+    {
+      "name": "Dafeng Milu Nature Reserve",
+      "facet": "Conservation and nature reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Changtang Nature Reserve",
+      "facet": "Conservation and nature reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Lop Nur Wild Camel Reserve",
+      "facet": "Conservation and nature reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Fanjingshan",
+      "facet": "Conservation and nature reserves",
+      "known_at": 11
+    },
+    {
+      "name": "Chinese Alligator Nature Reserve (Xuancheng)",
+      "facet": "Conservation and nature reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Qinghai–Tibet Railway wildlife passages",
+      "facet": "Conservation and nature reserves",
+      "known_at": 9
+    },
+    {
+      "name": "Sonam Dargye (索南达杰)",
+      "facet": "Conservation and nature reserves",
+      "known_at": 12
+    },
+    {
+      "name": "State first-class protected animals (国家一级保护动物)",
+      "facet": "Conservation and nature reserves",
+      "known_at": 7
+    },
+    {
+      "name": "Wildlife Protection Law",
+      "facet": "Conservation and nature reserves",
+      "known_at": 10
+    },
+    {
+      "name": "China ivory trade ban",
+      "facet": "Conservation and nature reserves",
+      "known_at": 11
+    },
+    {
+      "name": "IUCN Red List",
+      "facet": "Conservation and nature reserves",
+      "known_at": 11
+    },
+    {
+      "name": "COP15 Kunming biodiversity conference",
+      "facet": "Conservation and nature reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese zodiac",
+      "facet": "Animals in Chinese culture",
+      "known_at": 1
+    },
+    {
+      "name": "Year of the Tiger",
+      "facet": "Animals in Chinese culture",
+      "known_at": 2
+    },
+    {
+      "name": "王 mark on the tiger's forehead",
+      "facet": "Animals in Chinese culture",
+      "known_at": 3
+    },
+    {
+      "name": "Lion dance",
+      "facet": "Animals in Chinese culture",
+      "known_at": 2
+    },
+    {
+      "name": "Stone lions",
+      "facet": "Animals in Chinese culture",
+      "known_at": 4
+    },
+    {
+      "name": "指鹿为马 (zhǐ lù wéi mǎ)",
+      "facet": "Animals in Chinese culture",
+      "known_at": 8
+    },
+    {
+      "name": "朝三暮四 (zhāo sān mù sì)",
+      "facet": "Animals in Chinese culture",
+      "known_at": 8
+    },
+    {
+      "name": "盲人摸象 (máng rén mō xiàng)",
+      "facet": "Animals in Chinese culture",
+      "known_at": 4
+    },
+    {
+      "name": "Cao Chong weighs the elephant (曹冲称象)",
+      "facet": "Animals in Chinese culture",
+      "known_at": 3
+    },
+    {
+      "name": "黔驴技穷 (qián lǘ jì qióng)",
+      "facet": "Animals in Chinese culture",
+      "known_at": 7
+    },
+    {
+      "name": "Gilded bronze rhinoceros zun (错金银云纹铜犀尊)",
+      "facet": "Animals in Chinese culture",
+      "known_at": 13
+    },
+    {
+      "name": "Yingying the Tibetan antelope (Beijing 2008 Fuwa)",
+      "facet": "Animals in Chinese culture",
+      "known_at": 8
+    },
+    {
+      "name": "Yunnan elephants walk north 2021",
+      "facet": "Famous animal news stories",
+      "known_at": 6
+    },
+    {
+      "name": "Wandashan No. 1 tiger (2021)",
+      "facet": "Famous animal news stories",
+      "known_at": 11
+    },
+    {
+      "name": "South China tiger photo hoax 2007",
+      "facet": "Famous animal news stories",
+      "known_at": 12
+    },
+    {
+      "name": "Hangzhou Safari Park leopard escape 2021",
+      "facet": "Famous animal news stories",
+      "known_at": 11
+    },
+    {
+      "name": "Tibetan antelope removed from Endangered list 2016",
+      "facet": "Famous animal news stories",
+      "known_at": 12
+    },
+    {
+      "name": "Skywalker gibbon naming 2017",
+      "facet": "Famous animal news stories",
+      "known_at": 12
+    },
+    {
+      "name": "Last female Yangtze giant softshell turtle 2019",
+      "facet": "Famous animal news stories",
+      "known_at": 13
+    },
+    {
+      "name": "Chinese giant salamander split into several species 2019",
+      "facet": "Famous animal news stories",
+      "known_at": 14
+    },
+    {
+      "name": "Pangolins raised to first-class protection 2020",
+      "facet": "Famous animal news stories",
+      "known_at": 11
+    },
+    {
+      "name": "Père David's deer return to China 1985",
+      "facet": "Famous animal news stories",
+      "known_at": 12
+    },
+    {
+      "name": "Przewalski's horses return to Xinjiang 1985",
+      "facet": "Famous animal news stories",
+      "known_at": 13
+    },
+    {
+      "name": "Hainan gibbon population recovery",
+      "facet": "Famous animal news stories",
+      "known_at": 12
+    },
+    {
+      "name": "Wild Siberian tigers on Hunchun camera traps",
+      "facet": "Famous animal news stories",
+      "known_at": 11
+    },
+    {
+      "name": "Hoh Xil World Heritage listing 2017",
+      "facet": "Famous animal news stories",
+      "known_at": 12
+    },
+    {
+      "name": "Tibetan antelope mass birth migration",
+      "facet": "Famous animal news stories",
+      "known_at": 10
+    }
+  ]
+}

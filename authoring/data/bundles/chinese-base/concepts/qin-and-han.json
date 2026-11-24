@@ -1,0 +1,1042 @@
+{
+  "subcategory": "qin-and-han",
+  "facets": [
+    "Qin Shi Huang and unification",
+    "Qin standards and reforms",
+    "Qin wonders and the Terracotta Army",
+    "Fall of Qin and uprisings",
+    "Chu–Han contention",
+    "Founding of the Han",
+    "Emperor Wu and Han expansion",
+    "Han generals and frontier wars",
+    "Han scholars and inventions",
+    "Famous Han women",
+    "Han idioms and stories",
+    "Han daily life and culture"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Unification in 221 BC",
+      "facet": "Qin Shi Huang and unification",
+      "known_at": 6
+    },
+    {
+      "name": "Ying Zheng",
+      "facet": "Qin Shi Huang and unification",
+      "known_at": 8
+    },
+    {
+      "name": "Title Huangdi (皇帝)",
+      "facet": "Qin Shi Huang and unification",
+      "known_at": 7
+    },
+    {
+      "name": "Warring States",
+      "facet": "Qin Shi Huang and unification",
+      "known_at": 6
+    },
+    {
+      "name": "Six States",
+      "facet": "Qin Shi Huang and unification",
+      "known_at": 7
+    },
+    {
+      "name": "Lü Buwei",
+      "facet": "Qin Shi Huang and unification",
+      "known_at": 10
+    },
+    {
+      "name": "Gao Jianli",
+      "facet": "Qin Shi Huang and unification",
+      "known_at": 12
+    },
+    {
+      "name": "Wang Jian",
+      "facet": "Qin Shi Huang and unification",
+      "known_at": 11
+    },
+    {
+      "name": "Han Fei",
+      "facet": "Qin Shi Huang and unification",
+      "known_at": 10
+    },
+    {
+      "name": "Xu Fu",
+      "facet": "Qin Shi Huang and unification",
+      "known_at": 9
+    },
+    {
+      "name": "Imperial tours of Qin Shi Huang",
+      "facet": "Qin Shi Huang and unification",
+      "known_at": 12
+    },
+    {
+      "name": "Standard weights and measures",
+      "facet": "Qin standards and reforms",
+      "known_at": 6
+    },
+    {
+      "name": "Ban Liang coin (半两钱)",
+      "facet": "Qin standards and reforms",
+      "known_at": 9
+    },
+    {
+      "name": "Round coin with a square hole",
+      "facet": "Qin standards and reforms",
+      "known_at": 5
+    },
+    {
+      "name": "Same axle width (车同轨)",
+      "facet": "Qin standards and reforms",
+      "known_at": 8
+    },
+    {
+      "name": "Commandery-county system (郡县制)",
+      "facet": "Qin standards and reforms",
+      "known_at": 9
+    },
+    {
+      "name": "Enfeoffment system (分封制)",
+      "facet": "Qin standards and reforms",
+      "known_at": 10
+    },
+    {
+      "name": "Moving the log to win trust (徙木立信)",
+      "facet": "Qin standards and reforms",
+      "known_at": 10
+    },
+    {
+      "name": "Burning books and burying scholars",
+      "facet": "Qin standards and reforms",
+      "known_at": 7
+    },
+    {
+      "name": "Qin Straight Road (秦直道)",
+      "facet": "Qin standards and reforms",
+      "known_at": 11
+    },
+    {
+      "name": "Tiger tally (虎符)",
+      "facet": "Qin standards and reforms",
+      "known_at": 10
+    },
+    {
+      "name": "Twenty ranks of military merit",
+      "facet": "Qin standards and reforms",
+      "known_at": 13
+    },
+    {
+      "name": "Shuihudi Qin bamboo slips",
+      "facet": "Qin standards and reforms",
+      "known_at": 13
+    },
+    {
+      "name": "Liye multiplication table slip",
+      "facet": "Qin standards and reforms",
+      "known_at": 13
+    },
+    {
+      "name": "Lintong",
+      "facet": "Qin wonders and the Terracotta Army",
+      "known_at": 11
+    },
+    {
+      "name": "Discovery of the Terracotta Army in 1974",
+      "facet": "Qin wonders and the Terracotta Army",
+      "known_at": 9
+    },
+    {
+      "name": "Bronze chariots and horses (铜车马)",
+      "facet": "Qin wonders and the Terracotta Army",
+      "known_at": 9
+    },
+    {
+      "name": "Pit 1 of the Terracotta Army",
+      "facet": "Qin wonders and the Terracotta Army",
+      "known_at": 11
+    },
+    {
+      "name": "Rivers of mercury in the tomb",
+      "facet": "Qin wonders and the Terracotta Army",
+      "known_at": 10
+    },
+    {
+      "name": "Mount Li (骊山)",
+      "facet": "Qin wonders and the Terracotta Army",
+      "known_at": 10
+    },
+    {
+      "name": "Great Wall of Qin",
+      "facet": "Qin wonders and the Terracotta Army",
+      "known_at": 5
+    },
+    {
+      "name": "Meng Jiangnü (孟姜女)",
+      "facet": "Qin wonders and the Terracotta Army",
+      "known_at": 6
+    },
+    {
+      "name": "Ode to Epang Palace (阿房宫赋)",
+      "facet": "Qin wonders and the Terracotta Army",
+      "known_at": 12
+    },
+    {
+      "name": "Twelve bronze giants (十二金人)",
+      "facet": "Qin wonders and the Terracotta Army",
+      "known_at": 12
+    },
+    {
+      "name": "Chen Sheng and Wu Guang",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 7
+    },
+    {
+      "name": "Dazexiang Uprising",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 9
+    },
+    {
+      "name": "王侯将相宁有种乎",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 9
+    },
+    {
+      "name": "燕雀安知鸿鹄之志",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 9
+    },
+    {
+      "name": "Silk note in a fish belly (鱼腹丹书)",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Chu (张楚)",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 12
+    },
+    {
+      "name": "Zhao Gao",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 8
+    },
+    {
+      "name": "Calling a deer a horse (指鹿为马)",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 6
+    },
+    {
+      "name": "Qin Er Shi (Huhai)",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 9
+    },
+    {
+      "name": "Fusu",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 10
+    },
+    {
+      "name": "Shaqiu Plot (沙丘之变)",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 12
+    },
+    {
+      "name": "Ziying",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 12
+    },
+    {
+      "name": "Xiang Liang",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of Julu",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 9
+    },
+    {
+      "name": "Breaking the cauldrons and sinking the boats (破釜沉舟)",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 6
+    },
+    {
+      "name": "Zhang Han",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 12
+    },
+    {
+      "name": "Fall of Qin in 207 BC",
+      "facet": "Fall of Qin and uprisings",
+      "known_at": 9
+    },
+    {
+      "name": "Hegemon-King of Western Chu",
+      "facet": "Chu–Han contention",
+      "known_at": 8
+    },
+    {
+      "name": "Hongmen Banquet",
+      "facet": "Chu–Han contention",
+      "known_at": 6
+    },
+    {
+      "name": "Xiang Zhuang's sword dance (项庄舞剑，意在沛公)",
+      "facet": "Chu–Han contention",
+      "known_at": 9
+    },
+    {
+      "name": "Fan Zeng",
+      "facet": "Chu–Han contention",
+      "known_at": 10
+    },
+    {
+      "name": "Fan Kuai",
+      "facet": "Chu–Han contention",
+      "known_at": 10
+    },
+    {
+      "name": "Zhang Liang",
+      "facet": "Chu–Han contention",
+      "known_at": 8
+    },
+    {
+      "name": "Han Xin",
+      "facet": "Chu–Han contention",
+      "known_at": 7
+    },
+    {
+      "name": "Chen Ping",
+      "facet": "Chu–Han contention",
+      "known_at": 11
+    },
+    {
+      "name": "Three-article covenant (约法三章)",
+      "facet": "Chu–Han contention",
+      "known_at": 9
+    },
+    {
+      "name": "明修栈道，暗度陈仓",
+      "facet": "Chu–Han contention",
+      "known_at": 9
+    },
+    {
+      "name": "Hong Canal (鸿沟)",
+      "facet": "Chu–Han contention",
+      "known_at": 11
+    },
+    {
+      "name": "Chu River and Han Border (楚河汉界)",
+      "facet": "Chu–Han contention",
+      "known_at": 5
+    },
+    {
+      "name": "Battle of Pengcheng",
+      "facet": "Chu–Han contention",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Gaixia",
+      "facet": "Chu–Han contention",
+      "known_at": 9
+    },
+    {
+      "name": "Songs of Chu on all sides (四面楚歌)",
+      "facet": "Chu–Han contention",
+      "known_at": 6
+    },
+    {
+      "name": "Consort Yu (虞姬)",
+      "facet": "Chu–Han contention",
+      "known_at": 6
+    },
+    {
+      "name": "Farewell My Concubine (霸王别姬)",
+      "facet": "Chu–Han contention",
+      "known_at": 6
+    },
+    {
+      "name": "Wuzhui (乌骓)",
+      "facet": "Chu–Han contention",
+      "known_at": 11
+    },
+    {
+      "name": "Wujiang River (乌江)",
+      "facet": "Chu–Han contention",
+      "known_at": 10
+    },
+    {
+      "name": "Li Qingzhao's 夏日绝句",
+      "facet": "Chu–Han contention",
+      "known_at": 10
+    },
+    {
+      "name": "Peng Yue",
+      "facet": "Chu–Han contention",
+      "known_at": 13
+    },
+    {
+      "name": "Ying Bu",
+      "facet": "Chu–Han contention",
+      "known_at": 13
+    },
+    {
+      "name": "Han dynasty",
+      "facet": "Founding of the Han",
+      "known_at": 3
+    },
+    {
+      "name": "Founding of the Han in 202 BC",
+      "facet": "Founding of the Han",
+      "known_at": 8
+    },
+    {
+      "name": "Pei County",
+      "facet": "Founding of the Han",
+      "known_at": 12
+    },
+    {
+      "name": "Slaying the white snake (斩白蛇)",
+      "facet": "Founding of the Han",
+      "known_at": 11
+    },
+    {
+      "name": "Chang'an",
+      "facet": "Founding of the Han",
+      "known_at": 7
+    },
+    {
+      "name": "Weiyang Palace",
+      "facet": "Founding of the Han",
+      "known_at": 11
+    },
+    {
+      "name": "Xiao He",
+      "facet": "Founding of the Han",
+      "known_at": 9
+    },
+    {
+      "name": "Three Heroes of early Han (汉初三杰)",
+      "facet": "Founding of the Han",
+      "known_at": 10
+    },
+    {
+      "name": "Xiao He chasing Han Xin under the moon",
+      "facet": "Founding of the Han",
+      "known_at": 9
+    },
+    {
+      "name": "Song of the Great Wind (大风歌)",
+      "facet": "Founding of the Han",
+      "known_at": 10
+    },
+    {
+      "name": "Siege of Baideng",
+      "facet": "Founding of the Han",
+      "known_at": 12
+    },
+    {
+      "name": "Heqin marriage alliance (和亲)",
+      "facet": "Founding of the Han",
+      "known_at": 10
+    },
+    {
+      "name": "Governing by non-action (无为而治)",
+      "facet": "Founding of the Han",
+      "known_at": 11
+    },
+    {
+      "name": "Rule of Wen and Jing (文景之治)",
+      "facet": "Founding of the Han",
+      "known_at": 9
+    },
+    {
+      "name": "Emperor Wen of Han",
+      "facet": "Founding of the Han",
+      "known_at": 10
+    },
+    {
+      "name": "Emperor Jing of Han",
+      "facet": "Founding of the Han",
+      "known_at": 11
+    },
+    {
+      "name": "Rebellion of the Seven States",
+      "facet": "Founding of the Han",
+      "known_at": 11
+    },
+    {
+      "name": "Chao Cuo",
+      "facet": "Founding of the Han",
+      "known_at": 12
+    },
+    {
+      "name": "Western Han and Eastern Han",
+      "facet": "Founding of the Han",
+      "known_at": 7
+    },
+    {
+      "name": "Red Eyebrows",
+      "facet": "Founding of the Han",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Xiu",
+      "facet": "Founding of the Han",
+      "known_at": 10
+    },
+    {
+      "name": "Han people (汉族)",
+      "facet": "Founding of the Han",
+      "known_at": 5
+    },
+    {
+      "name": "Liu Che",
+      "facet": "Emperor Wu and Han expansion",
+      "known_at": 10
+    },
+    {
+      "name": "秦皇汉武",
+      "facet": "Emperor Wu and Han expansion",
+      "known_at": 8
+    },
+    {
+      "name": "Dong Zhongshu",
+      "facet": "Emperor Wu and Han expansion",
+      "known_at": 9
+    },
+    {
+      "name": "罢黜百家，独尊儒术",
+      "facet": "Emperor Wu and Han expansion",
+      "known_at": 9
+    },
+    {
+      "name": "Imperial Academy (太学)",
+      "facet": "Emperor Wu and Han expansion",
+      "known_at": 11
+    },
+    {
+      "name": "Xiaolian recommendation (察举制)",
+      "facet": "Emperor Wu and Han expansion",
+      "known_at": 12
+    },
+    {
+      "name": "Edict of Grace (推恩令)",
+      "facet": "Emperor Wu and Han expansion",
+      "known_at": 11
+    },
+    {
+      "name": "Salt and iron monopoly",
+      "facet": "Emperor Wu and Han expansion",
+      "known_at": 11
+    },
+    {
+      "name": "Wuzhu coin (五铢钱)",
+      "facet": "Emperor Wu and Han expansion",
+      "known_at": 11
+    },
+    {
+      "name": "Era names (年号)",
+      "facet": "Emperor Wu and Han expansion",
+      "known_at": 12
+    },
+    {
+      "name": "Four Commanderies of Hexi",
+      "facet": "Emperor Wu and Han expansion",
+      "known_at": 11
+    },
+    {
+      "name": "Jiuquan",
+      "facet": "Emperor Wu and Han expansion",
+      "known_at": 10
+    },
+    {
+      "name": "Ferghana heavenly horses (汗血宝马)",
+      "facet": "Emperor Wu and Han expansion",
+      "known_at": 9
+    },
+    {
+      "name": "Conquest of Nanyue",
+      "facet": "Emperor Wu and Han expansion",
+      "known_at": 12
+    },
+    {
+      "name": "Witchcraft affair (巫蛊之祸)",
+      "facet": "Emperor Wu and Han expansion",
+      "known_at": 13
+    },
+    {
+      "name": "Xiongnu",
+      "facet": "Han generals and frontier wars",
+      "known_at": 6
+    },
+    {
+      "name": "Modu Chanyu",
+      "facet": "Han generals and frontier wars",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Mayi",
+      "facet": "Han generals and frontier wars",
+      "known_at": 13
+    },
+    {
+      "name": "Wei Qing",
+      "facet": "Han generals and frontier wars",
+      "known_at": 9
+    },
+    {
+      "name": "Huo Qubing",
+      "facet": "Han generals and frontier wars",
+      "known_at": 8
+    },
+    {
+      "name": "匈奴未灭，何以家为",
+      "facet": "Han generals and frontier wars",
+      "known_at": 10
+    },
+    {
+      "name": "Sealing Mount Langjuxu (封狼居胥)",
+      "facet": "Han generals and frontier wars",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of Mobei",
+      "facet": "Han generals and frontier wars",
+      "known_at": 12
+    },
+    {
+      "name": "Li Guang",
+      "facet": "Han generals and frontier wars",
+      "known_at": 9
+    },
+    {
+      "name": "Out of the Frontier (出塞) by Wang Changling",
+      "facet": "Han generals and frontier wars",
+      "known_at": 8
+    },
+    {
+      "name": "Li Ling",
+      "facet": "Han generals and frontier wars",
+      "known_at": 12
+    },
+    {
+      "name": "Su Wu",
+      "facet": "Han generals and frontier wars",
+      "known_at": 8
+    },
+    {
+      "name": "Lake Baikal (北海)",
+      "facet": "Han generals and frontier wars",
+      "known_at": 11
+    },
+    {
+      "name": "Chen Tang",
+      "facet": "Han generals and frontier wars",
+      "known_at": 9
+    },
+    {
+      "name": "Ban Chao",
+      "facet": "Han generals and frontier wars",
+      "known_at": 9
+    },
+    {
+      "name": "Throwing aside the brush to join the army (投笔从戎)",
+      "facet": "Han generals and frontier wars",
+      "known_at": 9
+    },
+    {
+      "name": "不入虎穴，焉得虎子",
+      "facet": "Han generals and frontier wars",
+      "known_at": 7
+    },
+    {
+      "name": "Protectorate of the Western Regions",
+      "facet": "Han generals and frontier wars",
+      "known_at": 10
+    },
+    {
+      "name": "Ma Yuan",
+      "facet": "Han generals and frontier wars",
+      "known_at": 12
+    },
+    {
+      "name": "Inscription on Mount Yanran (勒石燕然)",
+      "facet": "Han generals and frontier wars",
+      "known_at": 13
+    },
+    {
+      "name": "Seismoscope (地动仪)",
+      "facet": "Han scholars and inventions",
+      "known_at": 5
+    },
+    {
+      "name": "Armillary sphere (浑天仪)",
+      "facet": "Han scholars and inventions",
+      "known_at": 10
+    },
+    {
+      "name": "Records of the Grand Historian (史记)",
+      "facet": "Han scholars and inventions",
+      "known_at": 7
+    },
+    {
+      "name": "Ban Gu",
+      "facet": "Han scholars and inventions",
+      "known_at": 10
+    },
+    {
+      "name": "Book of Han (汉书)",
+      "facet": "Han scholars and inventions",
+      "known_at": 11
+    },
+    {
+      "name": "Hua Tuo",
+      "facet": "Han scholars and inventions",
+      "known_at": 6
+    },
+    {
+      "name": "Mafeisan (麻沸散)",
+      "facet": "Han scholars and inventions",
+      "known_at": 9
+    },
+    {
+      "name": "Five Animals Exercise (五禽戏)",
+      "facet": "Han scholars and inventions",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Zhongjing",
+      "facet": "Han scholars and inventions",
+      "known_at": 9
+    },
+    {
+      "name": "Treatise on Cold Damage (伤寒杂病论)",
+      "facet": "Han scholars and inventions",
+      "known_at": 11
+    },
+    {
+      "name": "Nine Chapters on the Mathematical Art (九章算术)",
+      "facet": "Han scholars and inventions",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Chong",
+      "facet": "Han scholars and inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Zheng Xuan",
+      "facet": "Han scholars and inventions",
+      "known_at": 14
+    },
+    {
+      "name": "Seed drill (耧车)",
+      "facet": "Han scholars and inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Empress Lü",
+      "facet": "Famous Han women",
+      "known_at": 9
+    },
+    {
+      "name": "Empress Dowager Dou",
+      "facet": "Famous Han women",
+      "known_at": 13
+    },
+    {
+      "name": "Ban Zhao",
+      "facet": "Famous Han women",
+      "known_at": 11
+    },
+    {
+      "name": "Lessons for Women (女诫)",
+      "facet": "Famous Han women",
+      "known_at": 13
+    },
+    {
+      "name": "Ban Jieyu",
+      "facet": "Famous Han women",
+      "known_at": 12
+    },
+    {
+      "name": "Cai Wenji",
+      "facet": "Famous Han women",
+      "known_at": 9
+    },
+    {
+      "name": "Eighteen Songs of a Nomad Flute (胡笳十八拍)",
+      "facet": "Famous Han women",
+      "known_at": 12
+    },
+    {
+      "name": "Zhuo Wenjun",
+      "facet": "Famous Han women",
+      "known_at": 9
+    },
+    {
+      "name": "Sima Xiangru",
+      "facet": "Famous Han women",
+      "known_at": 10
+    },
+    {
+      "name": "Phoenix Seeks Phoenix (凤求凰)",
+      "facet": "Famous Han women",
+      "known_at": 11
+    },
+    {
+      "name": "Zhao Feiyan",
+      "facet": "Famous Han women",
+      "known_at": 9
+    },
+    {
+      "name": "Wei Zifu",
+      "facet": "Famous Han women",
+      "known_at": 10
+    },
+    {
+      "name": "Chen Ajiao",
+      "facet": "Famous Han women",
+      "known_at": 11
+    },
+    {
+      "name": "Lady Li (李夫人)",
+      "facet": "Famous Han women",
+      "known_at": 12
+    },
+    {
+      "name": "Ti Ying (缇萦)",
+      "facet": "Famous Han women",
+      "known_at": 10
+    },
+    {
+      "name": "Liu Xijun",
+      "facet": "Famous Han women",
+      "known_at": 12
+    },
+    {
+      "name": "Princess Jieyou",
+      "facet": "Famous Han women",
+      "known_at": 13
+    },
+    {
+      "name": "Xin Zhui (Lady Dai)",
+      "facet": "Famous Han women",
+      "known_at": 11
+    },
+    {
+      "name": "Meng Guang",
+      "facet": "Famous Han women",
+      "known_at": 10
+    },
+    {
+      "name": "Boring through the wall to steal light (凿壁偷光)",
+      "facet": "Han idioms and stories",
+      "known_at": 5
+    },
+    {
+      "name": "Kuang Heng",
+      "facet": "Han idioms and stories",
+      "known_at": 9
+    },
+    {
+      "name": "Hanging hair from the beam (头悬梁)",
+      "facet": "Han idioms and stories",
+      "known_at": 6
+    },
+    {
+      "name": "Kong Rong giving up the pears (孔融让梨)",
+      "facet": "Han idioms and stories",
+      "known_at": 3
+    },
+    {
+      "name": "Huang Xiang warming the bed (黄香温席)",
+      "facet": "Han idioms and stories",
+      "known_at": 7
+    },
+    {
+      "name": "Humiliation of crawling between the legs (胯下之辱)",
+      "facet": "Han idioms and stories",
+      "known_at": 8
+    },
+    {
+      "name": "A meal repaid with a thousand gold (一饭千金)",
+      "facet": "Han idioms and stories",
+      "known_at": 9
+    },
+    {
+      "name": "The more the better (多多益善)",
+      "facet": "Han idioms and stories",
+      "known_at": 8
+    },
+    {
+      "name": "成也萧何，败也萧何",
+      "facet": "Han idioms and stories",
+      "known_at": 10
+    },
+    {
+      "name": "The old man at the frontier loses his horse (塞翁失马)",
+      "facet": "Han idioms and stories",
+      "known_at": 4
+    },
+    {
+      "name": "Golden house for Ajiao (金屋藏娇)",
+      "facet": "Han idioms and stories",
+      "known_at": 10
+    },
+    {
+      "name": "Old but still vigorous (老当益壮)",
+      "facet": "Han idioms and stories",
+      "known_at": 9
+    },
+    {
+      "name": "Heavier than Mount Tai, lighter than a feather",
+      "facet": "Han idioms and stories",
+      "known_at": 8
+    },
+    {
+      "name": "桃李不言，下自成蹊",
+      "facet": "Han idioms and stories",
+      "known_at": 11
+    },
+    {
+      "name": "Watching from the ramparts (作壁上观)",
+      "facet": "Han idioms and stories",
+      "known_at": 12
+    },
+    {
+      "name": "Raising the tray to the brows (举案齐眉)",
+      "facet": "Han idioms and stories",
+      "known_at": 10
+    },
+    {
+      "name": "Yang Zhen's four knows (杨震四知)",
+      "facet": "Han idioms and stories",
+      "known_at": 12
+    },
+    {
+      "name": "Not peeking at the garden for three years (三年不窥园)",
+      "facet": "Han idioms and stories",
+      "known_at": 12
+    },
+    {
+      "name": "Dongfang Shuo",
+      "facet": "Han idioms and stories",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Chang painting eyebrows (张敞画眉)",
+      "facet": "Han idioms and stories",
+      "known_at": 13
+    },
+    {
+      "name": "Tofu",
+      "facet": "Han daily life and culture",
+      "known_at": 5
+    },
+    {
+      "name": "Jiaozi",
+      "facet": "Han daily life and culture",
+      "known_at": 2
+    },
+    {
+      "name": "Mawangdui tombs",
+      "facet": "Han daily life and culture",
+      "known_at": 10
+    },
+    {
+      "name": "Plain gauze robe (素纱襌衣)",
+      "facet": "Han daily life and culture",
+      "known_at": 12
+    },
+    {
+      "name": "Jade burial suit (金缕玉衣)",
+      "facet": "Han daily life and culture",
+      "known_at": 9
+    },
+    {
+      "name": "Liu Sheng's tomb at Mancheng",
+      "facet": "Han daily life and culture",
+      "known_at": 13
+    },
+    {
+      "name": "Changxin Palace Lamp (长信宫灯)",
+      "facet": "Han daily life and culture",
+      "known_at": 10
+    },
+    {
+      "name": "Galloping Horse Treading on a Flying Swallow (马踏飞燕)",
+      "facet": "Han daily life and culture",
+      "known_at": 6
+    },
+    {
+      "name": "Han stone reliefs (汉画像石)",
+      "facet": "Han daily life and culture",
+      "known_at": 12
+    },
+    {
+      "name": "Han lacquerware",
+      "facet": "Han daily life and culture",
+      "known_at": 11
+    },
+    {
+      "name": "Southeast Fly the Peacocks (孔雀东南飞)",
+      "facet": "Han daily life and culture",
+      "known_at": 10
+    },
+    {
+      "name": "Nineteen Old Poems (古诗十九首)",
+      "facet": "Han daily life and culture",
+      "known_at": 12
+    },
+    {
+      "name": "Han fu rhapsody (汉赋)",
+      "facet": "Han daily life and culture",
+      "known_at": 11
+    }
+  ]
+}

@@ -1,0 +1,857 @@
+{
+  "subcategory": "chinese-plants-and-flowers",
+  "facets": [
+    "Four Gentlemen and symbolic plants",
+    "Bamboo and its uses",
+    "Peony and flower kings",
+    "Lotus and water plants",
+    "Living fossil trees",
+    "Ancient and famous trees",
+    "City and provincial flowers",
+    "Flowers of the seasons and festivals",
+    "Plants in poems and idioms",
+    "Medicinal and useful plants",
+    "Fruit trees and native crops",
+    "Wild plants and mountain forests"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Four Gentlemen (四君子)",
+      "facet": "Four Gentlemen and symbolic plants",
+      "known_at": 8
+    },
+    {
+      "name": "Orchid (兰花)",
+      "facet": "Four Gentlemen and symbolic plants",
+      "known_at": 4
+    },
+    {
+      "name": "Three Friends of Winter (岁寒三友)",
+      "facet": "Four Gentlemen and symbolic plants",
+      "known_at": 8
+    },
+    {
+      "name": "Pine tree (松树)",
+      "facet": "Four Gentlemen and symbolic plants",
+      "known_at": 2
+    },
+    {
+      "name": "Willow (柳树)",
+      "facet": "Four Gentlemen and symbolic plants",
+      "known_at": 3
+    },
+    {
+      "name": "Cypress (柏树)",
+      "facet": "Four Gentlemen and symbolic plants",
+      "known_at": 7
+    },
+    {
+      "name": "Wutong tree (梧桐)",
+      "facet": "Four Gentlemen and symbolic plants",
+      "known_at": 9
+    },
+    {
+      "name": "Peach of immortality (蟠桃)",
+      "facet": "Four Gentlemen and symbolic plants",
+      "known_at": 4
+    },
+    {
+      "name": "Chinese crabapple (海棠)",
+      "facet": "Four Gentlemen and symbolic plants",
+      "known_at": 9
+    },
+    {
+      "name": "Wisteria (紫藤)",
+      "facet": "Four Gentlemen and symbolic plants",
+      "known_at": 9
+    },
+    {
+      "name": "Silk tree (合欢)",
+      "facet": "Four Gentlemen and symbolic plants",
+      "known_at": 11
+    },
+    {
+      "name": "Bamboo (竹子)",
+      "facet": "Bamboo and its uses",
+      "known_at": 1
+    },
+    {
+      "name": "Moso bamboo (毛竹)",
+      "facet": "Bamboo and its uses",
+      "known_at": 10
+    },
+    {
+      "name": "Bamboo raft (竹筏)",
+      "facet": "Bamboo and its uses",
+      "known_at": 5
+    },
+    {
+      "name": "Bamboo pole dance (竹竿舞)",
+      "facet": "Bamboo and its uses",
+      "known_at": 8
+    },
+    {
+      "name": "Bamboo weaving (竹编)",
+      "facet": "Bamboo and its uses",
+      "known_at": 7
+    },
+    {
+      "name": "Lucky bamboo (富贵竹)",
+      "facet": "Bamboo and its uses",
+      "known_at": 6
+    },
+    {
+      "name": "Xiangfei bamboo (湘妃竹)",
+      "facet": "Bamboo and its uses",
+      "known_at": 12
+    },
+    {
+      "name": "Shunan Bamboo Sea (蜀南竹海)",
+      "facet": "Bamboo and its uses",
+      "known_at": 11
+    },
+    {
+      "name": "Firecrackers (爆竹)",
+      "facet": "Bamboo and its uses",
+      "known_at": 6
+    },
+    {
+      "name": "Bamboo flowering (竹子开花)",
+      "facet": "Bamboo and its uses",
+      "known_at": 10
+    },
+    {
+      "name": "Bamboo-copter (竹蜻蜓)",
+      "facet": "Bamboo and its uses",
+      "known_at": 3
+    },
+    {
+      "name": "Bamboo scaffolding (竹棚架)",
+      "facet": "Bamboo and its uses",
+      "known_at": 9
+    },
+    {
+      "name": "Zheng Banqiao (郑板桥)",
+      "facet": "Bamboo and its uses",
+      "known_at": 9
+    },
+    {
+      "name": "Luoyang Peony Festival (洛阳牡丹文化节)",
+      "facet": "Peony and flower kings",
+      "known_at": 9
+    },
+    {
+      "name": "Heze (菏泽)",
+      "facet": "Peony and flower kings",
+      "known_at": 11
+    },
+    {
+      "name": "Chinese herbaceous peony (芍药)",
+      "facet": "Peony and flower kings",
+      "known_at": 9
+    },
+    {
+      "name": "Yao Huang and Wei Zi (姚黄魏紫)",
+      "facet": "Peony and flower kings",
+      "known_at": 13
+    },
+    {
+      "name": "The Peony Pavilion (牡丹亭)",
+      "facet": "Peony and flower kings",
+      "known_at": 10
+    },
+    {
+      "name": "Tang Xianzu (汤显祖)",
+      "facet": "Peony and flower kings",
+      "known_at": 11
+    },
+    {
+      "name": "Ten Famous Flowers of China (中国十大名花)",
+      "facet": "Peony and flower kings",
+      "known_at": 10
+    },
+    {
+      "name": "Flower Goddess (花神)",
+      "facet": "Peony and flower kings",
+      "known_at": 10
+    },
+    {
+      "name": "Blossoming wealth and honour (花开富贵)",
+      "facet": "Peony and flower kings",
+      "known_at": 8
+    },
+    {
+      "name": "Moutan bark (丹皮)",
+      "facet": "Peony and flower kings",
+      "known_at": 13
+    },
+    {
+      "name": "Lotus seed (莲子)",
+      "facet": "Lotus and water plants",
+      "known_at": 4
+    },
+    {
+      "name": "Lotus effect",
+      "facet": "Lotus and water plants",
+      "known_at": 10
+    },
+    {
+      "name": "Water lily (睡莲)",
+      "facet": "Lotus and water plants",
+      "known_at": 4
+    },
+    {
+      "name": "Wild rice stem (茭白)",
+      "facet": "Lotus and water plants",
+      "known_at": 8
+    },
+    {
+      "name": "Fox nut (芡实)",
+      "facet": "Lotus and water plants",
+      "known_at": 12
+    },
+    {
+      "name": "Duckweed (浮萍)",
+      "facet": "Lotus and water plants",
+      "known_at": 4
+    },
+    {
+      "name": "Reed (芦苇)",
+      "facet": "Lotus and water plants",
+      "known_at": 3
+    },
+    {
+      "name": "Cattail (香蒲)",
+      "facet": "Lotus and water plants",
+      "known_at": 6
+    },
+    {
+      "name": "Ancient lotus seeds of Pulandian (普兰店古莲子)",
+      "facet": "Lotus and water plants",
+      "known_at": 13
+    },
+    {
+      "name": "Baiyangdian (白洋淀)",
+      "facet": "Lotus and water plants",
+      "known_at": 11
+    },
+    {
+      "name": "Moonlight over the Lotus Pond (荷塘月色)",
+      "facet": "Lotus and water plants",
+      "known_at": 9
+    },
+    {
+      "name": "Ginkgo (银杏)",
+      "facet": "Living fossil trees",
+      "known_at": 3
+    },
+    {
+      "name": "Cathaya (银杉)",
+      "facet": "Living fossil trees",
+      "known_at": 12
+    },
+    {
+      "name": "Cycad (苏铁)",
+      "facet": "Living fossil trees",
+      "known_at": 7
+    },
+    {
+      "name": "Tree fern (桫椤)",
+      "facet": "Living fossil trees",
+      "known_at": 11
+    },
+    {
+      "name": "Chinese tulip tree (鹅掌楸)",
+      "facet": "Living fossil trees",
+      "known_at": 11
+    },
+    {
+      "name": "Chinese yew (红豆杉)",
+      "facet": "Living fossil trees",
+      "known_at": 10
+    },
+    {
+      "name": "Taiwania (台湾杉)",
+      "facet": "Living fossil trees",
+      "known_at": 13
+    },
+    {
+      "name": "Golden larch (金钱松)",
+      "facet": "Living fossil trees",
+      "known_at": 12
+    },
+    {
+      "name": "Baishanzu fir (百山祖冷杉)",
+      "facet": "Living fossil trees",
+      "known_at": 14
+    },
+    {
+      "name": "Hu Xiansu (胡先骕)",
+      "facet": "Living fossil trees",
+      "known_at": 13
+    },
+    {
+      "name": "Moudao, Lichuan (谋道镇)",
+      "facet": "Living fossil trees",
+      "known_at": 14
+    },
+    {
+      "name": "Living fossil (活化石)",
+      "facet": "Living fossil trees",
+      "known_at": 6
+    },
+    {
+      "name": "Chinese swamp cypress (水松)",
+      "facet": "Living fossil trees",
+      "known_at": 13
+    },
+    {
+      "name": "Armand David (谭卫道)",
+      "facet": "Living fossil trees",
+      "known_at": 13
+    },
+    {
+      "name": "Torreya (香榧)",
+      "facet": "Living fossil trees",
+      "known_at": 11
+    },
+    {
+      "name": "Yellow Emperor Cypress (轩辕柏)",
+      "facet": "Ancient and famous trees",
+      "known_at": 11
+    },
+    {
+      "name": "Gu Guanyin Temple ginkgo (古观音禅寺银杏)",
+      "facet": "Ancient and famous trees",
+      "known_at": 12
+    },
+    {
+      "name": "General Cypresses of Songyang Academy (将军柏)",
+      "facet": "Ancient and famous trees",
+      "known_at": 13
+    },
+    {
+      "name": "Big Locust Tree of Hongtong (洪洞大槐树)",
+      "facet": "Ancient and famous trees",
+      "known_at": 11
+    },
+    {
+      "name": "Pagoda tree (槐树)",
+      "facet": "Ancient and famous trees",
+      "known_at": 7
+    },
+    {
+      "name": "Banyan (榕树)",
+      "facet": "Ancient and famous trees",
+      "known_at": 4
+    },
+    {
+      "name": "Bird's Paradise (鸟的天堂)",
+      "facet": "Ancient and famous trees",
+      "known_at": 8
+    },
+    {
+      "name": "Nine Dragon Cypress (九龙柏)",
+      "facet": "Ancient and famous trees",
+      "known_at": 12
+    },
+    {
+      "name": "Confucius's juniper (孔子手植桧)",
+      "facet": "Ancient and famous trees",
+      "known_at": 13
+    },
+    {
+      "name": "Cuiyun Corridor (翠云廊)",
+      "facet": "Ancient and famous trees",
+      "known_at": 13
+    },
+    {
+      "name": "Wudafu Pine (五大夫松)",
+      "facet": "Ancient and famous trees",
+      "known_at": 13
+    },
+    {
+      "name": "Camphor tree (樟树)",
+      "facet": "Ancient and famous trees",
+      "known_at": 6
+    },
+    {
+      "name": "Fengshui tree (风水树)",
+      "facet": "Ancient and famous trees",
+      "known_at": 10
+    },
+    {
+      "name": "Da Hong Pao mother trees (大红袍母树)",
+      "facet": "Ancient and famous trees",
+      "known_at": 11
+    },
+    {
+      "name": "Wu Gang and the moon osmanthus (吴刚伐桂)",
+      "facet": "Ancient and famous trees",
+      "known_at": 6
+    },
+    {
+      "name": "Magnolia (玉兰)",
+      "facet": "City and provincial flowers",
+      "known_at": 7
+    },
+    {
+      "name": "Chinese rose (月季)",
+      "facet": "City and provincial flowers",
+      "known_at": 6
+    },
+    {
+      "name": "Kapok tree (木棉)",
+      "facet": "City and provincial flowers",
+      "known_at": 8
+    },
+    {
+      "name": "Camellia (山茶花)",
+      "facet": "City and provincial flowers",
+      "known_at": 7
+    },
+    {
+      "name": "Bauhinia (洋紫荆)",
+      "facet": "City and provincial flowers",
+      "known_at": 6
+    },
+    {
+      "name": "Plum Blossom Hill, Nanjing (梅花山)",
+      "facet": "City and provincial flowers",
+      "known_at": 11
+    },
+    {
+      "name": "Guilin (桂林)",
+      "facet": "City and provincial flowers",
+      "known_at": 7
+    },
+    {
+      "name": "Cotton rose hibiscus (木芙蓉)",
+      "facet": "City and provincial flowers",
+      "known_at": 10
+    },
+    {
+      "name": "Kunming (昆明)",
+      "facet": "City and provincial flowers",
+      "known_at": 6
+    },
+    {
+      "name": "Jasmine (茉莉花)",
+      "facet": "City and provincial flowers",
+      "known_at": 4
+    },
+    {
+      "name": "Lotus on the Macao flag",
+      "facet": "City and provincial flowers",
+      "known_at": 8
+    },
+    {
+      "name": "Flower City Guangzhou (花城)",
+      "facet": "City and provincial flowers",
+      "known_at": 8
+    },
+    {
+      "name": "Dounan Flower Market (斗南花卉市场)",
+      "facet": "City and provincial flowers",
+      "known_at": 12
+    },
+    {
+      "name": "Narcissus (水仙)",
+      "facet": "Flowers of the seasons and festivals",
+      "known_at": 7
+    },
+    {
+      "name": "Wuhan University cherry blossoms (武大樱花)",
+      "facet": "Flowers of the seasons and festivals",
+      "known_at": 9
+    },
+    {
+      "name": "Kumquat (金桔)",
+      "facet": "Flowers of the seasons and festivals",
+      "known_at": 6
+    },
+    {
+      "name": "Flower Festival (花朝节)",
+      "facet": "Flowers of the seasons and festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Willow branches at Qingming (清明插柳)",
+      "facet": "Flowers of the seasons and festivals",
+      "known_at": 9
+    },
+    {
+      "name": "Rapeseed flowers (油菜花)",
+      "facet": "Flowers of the seasons and festivals",
+      "known_at": 5
+    },
+    {
+      "name": "Spring Festival flower market (年宵花市)",
+      "facet": "Flowers of the seasons and festivals",
+      "known_at": 8
+    },
+    {
+      "name": "Crape myrtle (紫薇)",
+      "facet": "Flowers of the seasons and festivals",
+      "known_at": 9
+    },
+    {
+      "name": "Pear blossom (梨花)",
+      "facet": "Flowers of the seasons and festivals",
+      "known_at": 5
+    },
+    {
+      "name": "Twelve Flower Gods (十二花神)",
+      "facet": "Flowers of the seasons and festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Morning glory (牵牛花)",
+      "facet": "Flowers of the seasons and festivals",
+      "known_at": 3
+    },
+    {
+      "name": "Fragrant Hills red leaves (香山红叶)",
+      "facet": "Flowers of the seasons and festivals",
+      "known_at": 8
+    },
+    {
+      "name": "Red bean (红豆)",
+      "facet": "Plants in poems and idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Grass on the Ancient Plain (赋得古原草送别)",
+      "facet": "Plants in poems and idioms",
+      "known_at": 5
+    },
+    {
+      "name": "Wang Anshi's Plum Blossoms (梅花)",
+      "facet": "Plants in poems and idioms",
+      "known_at": 6
+    },
+    {
+      "name": "Lu You's Ode to the Plum (卜算子·咏梅)",
+      "facet": "Plants in poems and idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Waiting by a tree stump for a hare (守株待兔)",
+      "facet": "Plants in poems and idioms",
+      "known_at": 4
+    },
+    {
+      "name": "Bamboo already in the chest (胸有成竹)",
+      "facet": "Plants in poems and idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Quenching thirst by thinking of plums (望梅止渴)",
+      "facet": "Plants in poems and idioms",
+      "known_at": 6
+    },
+    {
+      "name": "Bamboo shoots after spring rain (雨后春笋)",
+      "facet": "Plants in poems and idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Yesterday's chrysanthemums (明日黄花)",
+      "facet": "Plants in poems and idioms",
+      "known_at": 13
+    },
+    {
+      "name": "Jiangnan lotus picking (江南可采莲)",
+      "facet": "Plants in poems and idioms",
+      "known_at": 6
+    },
+    {
+      "name": "Oath of the Peach Garden (桃园结义)",
+      "facet": "Plants in poems and idioms",
+      "known_at": 5
+    },
+    {
+      "name": "Ginseng (人参)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 4
+    },
+    {
+      "name": "Goji berry (枸杞)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 5
+    },
+    {
+      "name": "Lingzhi (灵芝)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 6
+    },
+    {
+      "name": "Sweet wormwood (青蒿)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 9
+    },
+    {
+      "name": "Tu Youyou (屠呦呦)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 8
+    },
+    {
+      "name": "Li Shizhen (李时珍)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 8
+    },
+    {
+      "name": "Compendium of Materia Medica (本草纲目)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 9
+    },
+    {
+      "name": "Astragalus (黄芪)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 11
+    },
+    {
+      "name": "Honeysuckle (金银花)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 8
+    },
+    {
+      "name": "Ginger (生姜)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 3
+    },
+    {
+      "name": "Chinese angelica (当归)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 11
+    },
+    {
+      "name": "Ginkgo nut (白果)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 7
+    },
+    {
+      "name": "Mulberry tree (桑树)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 5
+    },
+    {
+      "name": "Tung oil tree (油桐)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 12
+    },
+    {
+      "name": "Lacquer tree (漆树)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 11
+    },
+    {
+      "name": "Ramie (苎麻)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 12
+    },
+    {
+      "name": "Paper mulberry (构树)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 11
+    },
+    {
+      "name": "Notoginseng (三七)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 11
+    },
+    {
+      "name": "Gastrodia (天麻)",
+      "facet": "Medicinal and useful plants",
+      "known_at": 12
+    },
+    {
+      "name": "Lychee (荔枝)",
+      "facet": "Fruit trees and native crops",
+      "known_at": 3
+    },
+    {
+      "name": "Longan (龙眼)",
+      "facet": "Fruit trees and native crops",
+      "known_at": 4
+    },
+    {
+      "name": "Kiwi fruit (猕猴桃)",
+      "facet": "Fruit trees and native crops",
+      "known_at": 6
+    },
+    {
+      "name": "Peach (桃子)",
+      "facet": "Fruit trees and native crops",
+      "known_at": 2
+    },
+    {
+      "name": "Mandarin orange (橘子)",
+      "facet": "Fruit trees and native crops",
+      "known_at": 3
+    },
+    {
+      "name": "Jujube (枣)",
+      "facet": "Fruit trees and native crops",
+      "known_at": 4
+    },
+    {
+      "name": "Loquat (枇杷)",
+      "facet": "Fruit trees and native crops",
+      "known_at": 5
+    },
+    {
+      "name": "Yangmei (杨梅)",
+      "facet": "Fruit trees and native crops",
+      "known_at": 6
+    },
+    {
+      "name": "Hawthorn (山楂)",
+      "facet": "Fruit trees and native crops",
+      "known_at": 3
+    },
+    {
+      "name": "Rice (水稻)",
+      "facet": "Fruit trees and native crops",
+      "known_at": 1
+    },
+    {
+      "name": "Foxtail millet (粟)",
+      "facet": "Fruit trees and native crops",
+      "known_at": 9
+    },
+    {
+      "name": "Tea plant (茶树)",
+      "facet": "Fruit trees and native crops",
+      "known_at": 5
+    },
+    {
+      "name": "Apricot (杏)",
+      "facet": "Fruit trees and native crops",
+      "known_at": 5
+    },
+    {
+      "name": "Chinese chestnut (板栗)",
+      "facet": "Fruit trees and native crops",
+      "known_at": 4
+    },
+    {
+      "name": "Hami melon (哈密瓜)",
+      "facet": "Fruit trees and native crops",
+      "known_at": 5
+    },
+    {
+      "name": "Turpan grapes (吐鲁番葡萄)",
+      "facet": "Fruit trees and native crops",
+      "known_at": 6
+    },
+    {
+      "name": "Snow lotus (雪莲)",
+      "facet": "Wild plants and mountain forests",
+      "known_at": 6
+    },
+    {
+      "name": "Euphrates poplar (胡杨)",
+      "facet": "Wild plants and mountain forests",
+      "known_at": 8
+    },
+    {
+      "name": "Xishuangbanna rainforest (西双版纳)",
+      "facet": "Wild plants and mountain forests",
+      "known_at": 8
+    },
+    {
+      "name": "Korean pine (红松)",
+      "facet": "Wild plants and mountain forests",
+      "known_at": 11
+    },
+    {
+      "name": "Birch (白桦)",
+      "facet": "Wild plants and mountain forests",
+      "known_at": 6
+    },
+    {
+      "name": "Shennongjia (神农架)",
+      "facet": "Wild plants and mountain forests",
+      "known_at": 10
+    },
+    {
+      "name": "Sea buckthorn (沙棘)",
+      "facet": "Wild plants and mountain forests",
+      "known_at": 9
+    },
+    {
+      "name": "Maple (枫树)",
+      "facet": "Wild plants and mountain forests",
+      "known_at": 3
+    },
+    {
+      "name": "Gesang flower (格桑花)",
+      "facet": "Wild plants and mountain forests",
+      "known_at": 8
+    },
+    {
+      "name": "Blue poppy (绿绒蒿)",
+      "facet": "Wild plants and mountain forests",
+      "known_at": 13
+    },
+    {
+      "name": "Tamarisk (红柳)",
+      "facet": "Wild plants and mountain forests",
+      "known_at": 10
+    },
+    {
+      "name": "Wangtianshu (望天树)",
+      "facet": "Wild plants and mountain forests",
+      "known_at": 13
+    },
+    {
+      "name": "Dandelion (蒲公英)",
+      "facet": "Wild plants and mountain forests",
+      "known_at": 2
+    }
+  ]
+}

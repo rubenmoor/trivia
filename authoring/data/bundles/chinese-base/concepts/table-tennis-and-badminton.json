@@ -1,0 +1,1033 @@
+{
+  "subcategory": "table-tennis-and-badminton",
+  "facets": [
+    "Table tennis legends of China",
+    "Today's table tennis stars",
+    "Badminton champions of China",
+    "Great rivals from abroad",
+    "Table tennis rules and scoring",
+    "Badminton rules and scoring",
+    "Equipment, grips and strokes",
+    "World Championships and Olympic titles",
+    "Table tennis history and ping-pong diplomacy",
+    "Coaches, teams and training system",
+    "Badminton and table tennis in daily life"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 4,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Deng Yaping",
+      "facet": "Table tennis legends of China",
+      "known_at": 5
+    },
+    {
+      "name": "Zhang Yining",
+      "facet": "Table tennis legends of China",
+      "known_at": 8
+    },
+    {
+      "name": "Rong Guotuan",
+      "facet": "Table tennis legends of China",
+      "known_at": 8
+    },
+    {
+      "name": "Zhuang Zedong",
+      "facet": "Table tennis legends of China",
+      "known_at": 10
+    },
+    {
+      "name": "Xu Yinsheng",
+      "facet": "Table tennis legends of China",
+      "known_at": 12
+    },
+    {
+      "name": "Wang Nan",
+      "facet": "Table tennis legends of China",
+      "known_at": 8
+    },
+    {
+      "name": "Kong Linghui",
+      "facet": "Table tennis legends of China",
+      "known_at": 8
+    },
+    {
+      "name": "Wang Liqin",
+      "facet": "Table tennis legends of China",
+      "known_at": 9
+    },
+    {
+      "name": "Ma Lin",
+      "facet": "Table tennis legends of China",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Hao",
+      "facet": "Table tennis legends of China",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Jike",
+      "facet": "Table tennis legends of China",
+      "known_at": 6
+    },
+    {
+      "name": "Ding Ning",
+      "facet": "Table tennis legends of China",
+      "known_at": 7
+    },
+    {
+      "name": "Li Xiaoxia",
+      "facet": "Table tennis legends of China",
+      "known_at": 9
+    },
+    {
+      "name": "Liu Shiwen",
+      "facet": "Table tennis legends of China",
+      "known_at": 7
+    },
+    {
+      "name": "Guo Yue",
+      "facet": "Table tennis legends of China",
+      "known_at": 10
+    },
+    {
+      "name": "Jiang Jialiang",
+      "facet": "Table tennis legends of China",
+      "known_at": 12
+    },
+    {
+      "name": "Qiu Zhonghui",
+      "facet": "Table tennis legends of China",
+      "known_at": 13
+    },
+    {
+      "name": "Guo Yuehua",
+      "facet": "Table tennis legends of China",
+      "known_at": 13
+    },
+    {
+      "name": "Chen Jing",
+      "facet": "Table tennis legends of China",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Chuqin",
+      "facet": "Today's table tennis stars",
+      "known_at": 4
+    },
+    {
+      "name": "Wang Manyu",
+      "facet": "Today's table tennis stars",
+      "known_at": 5
+    },
+    {
+      "name": "Chen Meng",
+      "facet": "Today's table tennis stars",
+      "known_at": 5
+    },
+    {
+      "name": "Chen Xingtong",
+      "facet": "Today's table tennis stars",
+      "known_at": 9
+    },
+    {
+      "name": "Lin Shidong",
+      "facet": "Today's table tennis stars",
+      "known_at": 8
+    },
+    {
+      "name": "Liang Jingkun",
+      "facet": "Today's table tennis stars",
+      "known_at": 8
+    },
+    {
+      "name": "Lin Gaoyuan",
+      "facet": "Today's table tennis stars",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Yidi",
+      "facet": "Today's table tennis stars",
+      "known_at": 10
+    },
+    {
+      "name": "Kuai Man",
+      "facet": "Today's table tennis stars",
+      "known_at": 11
+    },
+    {
+      "name": "Xiang Peng",
+      "facet": "Today's table tennis stars",
+      "known_at": 12
+    },
+    {
+      "name": "Qian Tianyi",
+      "facet": "Today's table tennis stars",
+      "known_at": 12
+    },
+    {
+      "name": "Zhou Qihao",
+      "facet": "Today's table tennis stars",
+      "known_at": 13
+    },
+    {
+      "name": "Huang Youzheng",
+      "facet": "Today's table tennis stars",
+      "known_at": 13
+    },
+    {
+      "name": "Shatou pairing (莎头)",
+      "facet": "Today's table tennis stars",
+      "known_at": 6
+    },
+    {
+      "name": "Chen Long",
+      "facet": "Badminton champions of China",
+      "known_at": 7
+    },
+    {
+      "name": "Shi Yuqi",
+      "facet": "Badminton champions of China",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Ning",
+      "facet": "Badminton champions of China",
+      "known_at": 10
+    },
+    {
+      "name": "Xie Xingfang",
+      "facet": "Badminton champions of China",
+      "known_at": 11
+    },
+    {
+      "name": "Gong Zhichao",
+      "facet": "Badminton champions of China",
+      "known_at": 13
+    },
+    {
+      "name": "Ge Fei",
+      "facet": "Badminton champions of China",
+      "known_at": 12
+    },
+    {
+      "name": "Gu Jun",
+      "facet": "Badminton champions of China",
+      "known_at": 13
+    },
+    {
+      "name": "Zhao Yunlei",
+      "facet": "Badminton champions of China",
+      "known_at": 10
+    },
+    {
+      "name": "Zhang Nan",
+      "facet": "Badminton champions of China",
+      "known_at": 11
+    },
+    {
+      "name": "Fu Haifeng",
+      "facet": "Badminton champions of China",
+      "known_at": 11
+    },
+    {
+      "name": "Cai Yun",
+      "facet": "Badminton champions of China",
+      "known_at": 11
+    },
+    {
+      "name": "Zheng Siwei",
+      "facet": "Badminton champions of China",
+      "known_at": 9
+    },
+    {
+      "name": "Huang Yaqiong",
+      "facet": "Badminton champions of China",
+      "known_at": 9
+    },
+    {
+      "name": "Huang Dongping",
+      "facet": "Badminton champions of China",
+      "known_at": 11
+    },
+    {
+      "name": "Li Lingwei",
+      "facet": "Badminton champions of China",
+      "known_at": 13
+    },
+    {
+      "name": "Li Xuerui",
+      "facet": "Badminton champions of China",
+      "known_at": 11
+    },
+    {
+      "name": "Chen Qingchen",
+      "facet": "Badminton champions of China",
+      "known_at": 11
+    },
+    {
+      "name": "Jia Yifan",
+      "facet": "Badminton champions of China",
+      "known_at": 11
+    },
+    {
+      "name": "Lee Chong Wei",
+      "facet": "Great rivals from abroad",
+      "known_at": 5
+    },
+    {
+      "name": "Lin Dan vs. Lee Chong Wei",
+      "facet": "Great rivals from abroad",
+      "known_at": 5
+    },
+    {
+      "name": "Taufik Hidayat",
+      "facet": "Great rivals from abroad",
+      "known_at": 11
+    },
+    {
+      "name": "Peter Gade",
+      "facet": "Great rivals from abroad",
+      "known_at": 12
+    },
+    {
+      "name": "Viktor Axelsen",
+      "facet": "Great rivals from abroad",
+      "known_at": 9
+    },
+    {
+      "name": "Kento Momota",
+      "facet": "Great rivals from abroad",
+      "known_at": 10
+    },
+    {
+      "name": "Carolina Marín",
+      "facet": "Great rivals from abroad",
+      "known_at": 11
+    },
+    {
+      "name": "Tai Tzu-ying",
+      "facet": "Great rivals from abroad",
+      "known_at": 9
+    },
+    {
+      "name": "An Se-young",
+      "facet": "Great rivals from abroad",
+      "known_at": 9
+    },
+    {
+      "name": "P. V. Sindhu",
+      "facet": "Great rivals from abroad",
+      "known_at": 11
+    },
+    {
+      "name": "Rudy Hartono",
+      "facet": "Great rivals from abroad",
+      "known_at": 14
+    },
+    {
+      "name": "Jan-Ove Waldner",
+      "facet": "Great rivals from abroad",
+      "known_at": 9
+    },
+    {
+      "name": "Jörgen Persson",
+      "facet": "Great rivals from abroad",
+      "known_at": 13
+    },
+    {
+      "name": "Timo Boll",
+      "facet": "Great rivals from abroad",
+      "known_at": 8
+    },
+    {
+      "name": "Dimitrij Ovtcharov",
+      "facet": "Great rivals from abroad",
+      "known_at": 12
+    },
+    {
+      "name": "Tomokazu Harimoto",
+      "facet": "Great rivals from abroad",
+      "known_at": 6
+    },
+    {
+      "name": "Hina Hayata",
+      "facet": "Great rivals from abroad",
+      "known_at": 9
+    },
+    {
+      "name": "Mima Ito",
+      "facet": "Great rivals from abroad",
+      "known_at": 7
+    },
+    {
+      "name": "Ai Fukuhara",
+      "facet": "Great rivals from abroad",
+      "known_at": 6
+    },
+    {
+      "name": "Ryu Seung-min",
+      "facet": "Great rivals from abroad",
+      "known_at": 11
+    },
+    {
+      "name": "Truls Möregårdh",
+      "facet": "Great rivals from abroad",
+      "known_at": 9
+    },
+    {
+      "name": "Felix Lebrun",
+      "facet": "Great rivals from abroad",
+      "known_at": 10
+    },
+    {
+      "name": "Jean-Philippe Gatien",
+      "facet": "Great rivals from abroad",
+      "known_at": 14
+    },
+    {
+      "name": "Lin Yun-ju",
+      "facet": "Great rivals from abroad",
+      "known_at": 10
+    },
+    {
+      "name": "Deuce at 10–10",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 5
+    },
+    {
+      "name": "Two serves each",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 5
+    },
+    {
+      "name": "Let serve",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 6
+    },
+    {
+      "name": "Edge ball (擦边球)",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 5
+    },
+    {
+      "name": "Open-palm service toss",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 10
+    },
+    {
+      "name": "16 cm toss rule",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 12
+    },
+    {
+      "name": "Hidden serve ban",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 12
+    },
+    {
+      "name": "Best of seven games",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 8
+    },
+    {
+      "name": "Old 21-point system",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 10
+    },
+    {
+      "name": "Free hand on the table fault",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 10
+    },
+    {
+      "name": "Volley ban in table tennis",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 7
+    },
+    {
+      "name": "Doubles alternate hitting",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 8
+    },
+    {
+      "name": "Diagonal doubles serve",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 9
+    },
+    {
+      "name": "Expedite system",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 14
+    },
+    {
+      "name": "Time-out",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 9
+    },
+    {
+      "name": "Change of ends",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 8
+    },
+    {
+      "name": "Table height 76 cm",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 12
+    },
+    {
+      "name": "Net height 15.25 cm",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 12
+    },
+    {
+      "name": "40 mm ball",
+      "facet": "Table tennis rules and scoring",
+      "known_at": 11
+    },
+    {
+      "name": "21-point rally scoring",
+      "facet": "Badminton rules and scoring",
+      "known_at": 6
+    },
+    {
+      "name": "30-point cap",
+      "facet": "Badminton rules and scoring",
+      "known_at": 11
+    },
+    {
+      "name": "Old 15-point system",
+      "facet": "Badminton rules and scoring",
+      "known_at": 11
+    },
+    {
+      "name": "Best of three games",
+      "facet": "Badminton rules and scoring",
+      "known_at": 7
+    },
+    {
+      "name": "Interval at 11 points",
+      "facet": "Badminton rules and scoring",
+      "known_at": 11
+    },
+    {
+      "name": "Diagonal serve in badminton",
+      "facet": "Badminton rules and scoring",
+      "known_at": 6
+    },
+    {
+      "name": "1.15 m service height rule",
+      "facet": "Badminton rules and scoring",
+      "known_at": 13
+    },
+    {
+      "name": "Even-odd service court",
+      "facet": "Badminton rules and scoring",
+      "known_at": 10
+    },
+    {
+      "name": "Net height 1.55 m",
+      "facet": "Badminton rules and scoring",
+      "known_at": 12
+    },
+    {
+      "name": "Singles and doubles court lines",
+      "facet": "Badminton rules and scoring",
+      "known_at": 8
+    },
+    {
+      "name": "Court length 13.4 m",
+      "facet": "Badminton rules and scoring",
+      "known_at": 13
+    },
+    {
+      "name": "Shuttle touching the body",
+      "facet": "Badminton rules and scoring",
+      "known_at": 7
+    },
+    {
+      "name": "Double hit fault",
+      "facet": "Badminton rules and scoring",
+      "known_at": 8
+    },
+    {
+      "name": "Touching the net fault",
+      "facet": "Badminton rules and scoring",
+      "known_at": 6
+    },
+    {
+      "name": "Line call in badminton",
+      "facet": "Badminton rules and scoring",
+      "known_at": 7
+    },
+    {
+      "name": "Service judge",
+      "facet": "Badminton rules and scoring",
+      "known_at": 12
+    },
+    {
+      "name": "Penhold grip",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 5
+    },
+    {
+      "name": "Shakehand grip",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 6
+    },
+    {
+      "name": "Reverse penhold backhand (直拍横打)",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 11
+    },
+    {
+      "name": "Loop drive",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 9
+    },
+    {
+      "name": "Chop",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 9
+    },
+    {
+      "name": "Push",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 9
+    },
+    {
+      "name": "Topspin",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 7
+    },
+    {
+      "name": "Backspin",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 7
+    },
+    {
+      "name": "Banana flick",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 11
+    },
+    {
+      "name": "Pimpled rubber",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 11
+    },
+    {
+      "name": "Speed glue",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 13
+    },
+    {
+      "name": "Celluloid ball",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 12
+    },
+    {
+      "name": "Badminton racket",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 1
+    },
+    {
+      "name": "Goose feathers",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 6
+    },
+    {
+      "name": "Smash",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 4
+    },
+    {
+      "name": "Jump smash",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 8
+    },
+    {
+      "name": "Drop shot",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 8
+    },
+    {
+      "name": "High clear",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 8
+    },
+    {
+      "name": "Net shot",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 9
+    },
+    {
+      "name": "String tension",
+      "facet": "Equipment, grips and strokes",
+      "known_at": 11
+    },
+    {
+      "name": "Swaythling Cup",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 12
+    },
+    {
+      "name": "Corbillon Cup",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 13
+    },
+    {
+      "name": "Thomas Cup",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 10
+    },
+    {
+      "name": "Uber Cup",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 11
+    },
+    {
+      "name": "Sudirman Cup",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 11
+    },
+    {
+      "name": "Career Grand Slam in table tennis",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 9
+    },
+    {
+      "name": "Seoul 1988 Olympics",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 11
+    },
+    {
+      "name": "Barcelona 1992 Olympics",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 12
+    },
+    {
+      "name": "Beijing 2008 table tennis podium sweep",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 10
+    },
+    {
+      "name": "London 2012 badminton gold sweep",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 12
+    },
+    {
+      "name": "Olympic mixed doubles table tennis",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 8
+    },
+    {
+      "name": "Table Tennis World Cup",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 9
+    },
+    {
+      "name": "World Table Tennis Championships",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 7
+    },
+    {
+      "name": "BWF World Championships",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 9
+    },
+    {
+      "name": "All England Open",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 12
+    },
+    {
+      "name": "WTT Champions",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 12
+    },
+    {
+      "name": "Asian Games",
+      "facet": "World Championships and Olympic titles",
+      "known_at": 7
+    },
+    {
+      "name": "Table tennis as national ball",
+      "facet": "Table tennis history and ping-pong diplomacy",
+      "known_at": 4
+    },
+    {
+      "name": "Glenn Cowan",
+      "facet": "Table tennis history and ping-pong diplomacy",
+      "known_at": 13
+    },
+    {
+      "name": "1971 Nagoya World Championships",
+      "facet": "Table tennis history and ping-pong diplomacy",
+      "known_at": 13
+    },
+    {
+      "name": "1959 Dortmund World Championships",
+      "facet": "Table tennis history and ping-pong diplomacy",
+      "known_at": 12
+    },
+    {
+      "name": "1961 Beijing World Championships",
+      "facet": "Table tennis history and ping-pong diplomacy",
+      "known_at": 13
+    },
+    {
+      "name": "“人生能有几回搏”",
+      "facet": "Table tennis history and ping-pong diplomacy",
+      "known_at": 11
+    },
+    {
+      "name": "“小球转动大球”",
+      "facet": "Table tennis history and ping-pong diplomacy",
+      "known_at": 11
+    },
+    {
+      "name": "Gossima",
+      "facet": "Table tennis history and ping-pong diplomacy",
+      "known_at": 14
+    },
+    {
+      "name": "Victorian parlour table tennis",
+      "facet": "Table tennis history and ping-pong diplomacy",
+      "known_at": 11
+    },
+    {
+      "name": "Ping-pong name origin",
+      "facet": "Table tennis history and ping-pong diplomacy",
+      "known_at": 7
+    },
+    {
+      "name": "ITTF",
+      "facet": "Table tennis history and ping-pong diplomacy",
+      "known_at": 11
+    },
+    {
+      "name": "Battledore and shuttlecock",
+      "facet": "Table tennis history and ping-pong diplomacy",
+      "known_at": 12
+    },
+    {
+      "name": "Badminton House",
+      "facet": "Table tennis history and ping-pong diplomacy",
+      "known_at": 13
+    },
+    {
+      "name": "Poona",
+      "facet": "Table tennis history and ping-pong diplomacy",
+      "known_at": 14
+    },
+    {
+      "name": "Switch to the 40 mm ball in 2000",
+      "facet": "Table tennis history and ping-pong diplomacy",
+      "known_at": 12
+    },
+    {
+      "name": "Switch to 11-point games in 2001",
+      "facet": "Table tennis history and ping-pong diplomacy",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Guoliang",
+      "facet": "Coaches, teams and training system",
+      "known_at": 6
+    },
+    {
+      "name": "Cai Zhenhua",
+      "facet": "Coaches, teams and training system",
+      "known_at": 12
+    },
+    {
+      "name": "Li Yongbo",
+      "facet": "Coaches, teams and training system",
+      "known_at": 11
+    },
+    {
+      "name": "Xia Xuanze",
+      "facet": "Coaches, teams and training system",
+      "known_at": 13,
+      "retired": "unaskable: Not sure enough of Xia Xuanze's coaching roles, and he is too obscure for a fair question."
+    },
+    {
+      "name": "Tang Xianhu",
+      "facet": "Coaches, teams and training system",
+      "known_at": 14
+    },
+    {
+      "name": "Qin Zhijian",
+      "facet": "Coaches, teams and training system",
+      "known_at": 13
+    },
+    {
+      "name": "Chinese national table tennis team",
+      "facet": "Coaches, teams and training system",
+      "known_at": 5
+    },
+    {
+      "name": "Chinese national badminton team",
+      "facet": "Coaches, teams and training system",
+      "known_at": 7
+    },
+    {
+      "name": "Chinese Table Tennis Association",
+      "facet": "Coaches, teams and training system",
+      "known_at": 11
+    },
+    {
+      "name": "Sparring partner (陪练)",
+      "facet": "Coaches, teams and training system",
+      "known_at": 10
+    },
+    {
+      "name": "Sports school (体校)",
+      "facet": "Coaches, teams and training system",
+      "known_at": 7
+    },
+    {
+      "name": "Shichahai Sports School",
+      "facet": "Coaches, teams and training system",
+      "known_at": 13
+    },
+    {
+      "name": "National Games of China",
+      "facet": "Coaches, teams and training system",
+      "known_at": 9
+    },
+    {
+      "name": "China Table Tennis Super League",
+      "facet": "Coaches, teams and training system",
+      "known_at": 11
+    },
+    {
+      "name": "Bayi team",
+      "facet": "Coaches, teams and training system",
+      "known_at": 13
+    },
+    {
+      "name": "Provincial teams",
+      "facet": "Coaches, teams and training system",
+      "known_at": 10
+    },
+    {
+      "name": "Multi-ball training",
+      "facet": "Coaches, teams and training system",
+      "known_at": 10
+    },
+    {
+      "name": "Concrete ping-pong tables in parks",
+      "facet": "Badminton and table tennis in daily life",
+      "known_at": 2
+    },
+    {
+      "name": "Street badminton",
+      "facet": "Badminton and table tennis in daily life",
+      "known_at": 2
+    },
+    {
+      "name": "Jianzi (毽子)",
+      "facet": "Badminton and table tennis in daily life",
+      "known_at": 2
+    },
+    {
+      "name": "Double Happiness (红双喜)",
+      "facet": "Badminton and table tennis in daily life",
+      "known_at": 7
+    },
+    {
+      "name": "Fixing a dented ball in hot water",
+      "facet": "Badminton and table tennis in daily life",
+      "known_at": 6
+    },
+    {
+      "name": "School PE badminton",
+      "facet": "Badminton and table tennis in daily life",
+      "known_at": 3
+    },
+    {
+      "name": "Ping-pong in Forrest Gump",
+      "facet": "Badminton and table tennis in daily life",
+      "known_at": 11
+    },
+    {
+      "name": "Ping-Pong of China (2023 film)",
+      "facet": "Badminton and table tennis in daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Table tennis robot",
+      "facet": "Badminton and table tennis in daily life",
+      "known_at": 8
+    },
+    {
+      "name": "Wind and outdoor badminton",
+      "facet": "Badminton and table tennis in daily life",
+      "known_at": 4
+    },
+    {
+      "name": "Ping-pong ball in a cup game",
+      "facet": "Badminton and table tennis in daily life",
+      "known_at": 5,
+      "retired": "unaskable: The cup game is mostly beer pong, which isn't family-friendly, and it has no real record to ask about."
+    },
+    {
+      "name": "Folding ping-pong table",
+      "facet": "Badminton and table tennis in daily life",
+      "known_at": 4
+    },
+    {
+      "name": "Badminton for eye health",
+      "facet": "Badminton and table tennis in daily life",
+      "known_at": 7
+    },
+    {
+      "name": "Senior citizens' table tennis",
+      "facet": "Badminton and table tennis in daily life",
+      "known_at": 5
+    }
+  ]
+}

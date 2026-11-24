@@ -1,0 +1,877 @@
+{
+  "subcategory": "song-ci",
+  "facets": [
+    "Qu Yuan and the Chu Ci",
+    "Han, Wei and Jin poetry",
+    "Tao Yuanming and pastoral poems",
+    "Su Shi's life and works",
+    "Li Qingzhao and women poets",
+    "Heroic and patriotic ci",
+    "Graceful-school ci poets",
+    "Ci tunes and poetic forms",
+    "Yuan qu and Ming-Qing poetry",
+    "Modern Chinese poetry",
+    "Places and landmarks in poems",
+    "Festivals, seasons and occasions in poems"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Jiu Ge (九歌)",
+      "facet": "Qu Yuan and the Chu Ci",
+      "known_at": 11
+    },
+    {
+      "name": "Jiu Zhang (九章)",
+      "facet": "Qu Yuan and the Chu Ci",
+      "known_at": 13
+    },
+    {
+      "name": "Guo Shang (国殇)",
+      "facet": "Qu Yuan and the Chu Ci",
+      "known_at": 13
+    },
+    {
+      "name": "Shan Gui (山鬼)",
+      "facet": "Qu Yuan and the Chu Ci",
+      "known_at": 14
+    },
+    {
+      "name": "Ju Song (橘颂)",
+      "facet": "Qu Yuan and the Chu Ci",
+      "known_at": 12
+    },
+    {
+      "name": "Yu Fu (渔父)",
+      "facet": "Qu Yuan and the Chu Ci",
+      "known_at": 12
+    },
+    {
+      "name": "Huai Sha (怀沙)",
+      "facet": "Qu Yuan and the Chu Ci",
+      "known_at": 14
+    },
+    {
+      "name": "Zhao Hun (招魂)",
+      "facet": "Qu Yuan and the Chu Ci",
+      "known_at": 14
+    },
+    {
+      "name": "Miluo River",
+      "facet": "Qu Yuan and the Chu Ci",
+      "known_at": 6
+    },
+    {
+      "name": "King Huai of Chu",
+      "facet": "Qu Yuan and the Chu Ci",
+      "known_at": 11
+    },
+    {
+      "name": "Ying (郢), capital of Chu",
+      "facet": "Qu Yuan and the Chu Ci",
+      "known_at": 13
+    },
+    {
+      "name": "Song Yu",
+      "facet": "Qu Yuan and the Chu Ci",
+      "known_at": 13
+    },
+    {
+      "name": "Jia Yi",
+      "facet": "Qu Yuan and the Chu Ci",
+      "known_at": 13
+    },
+    {
+      "name": "Sao-style poetry (骚体)",
+      "facet": "Qu Yuan and the Chu Ci",
+      "known_at": 13
+    },
+    {
+      "name": "Xiang Jun and Xiang Furen",
+      "facet": "Qu Yuan and the Chu Ci",
+      "known_at": 13
+    },
+    {
+      "name": "Duan Ge Xing (短歌行)",
+      "facet": "Han, Wei and Jin poetry",
+      "known_at": 10
+    },
+    {
+      "name": "Guan Cang Hai (观沧海)",
+      "facet": "Han, Wei and Jin poetry",
+      "known_at": 8
+    },
+    {
+      "name": "Gui Sui Shou (龟虽寿)",
+      "facet": "Han, Wei and Jin poetry",
+      "known_at": 11
+    },
+    {
+      "name": "Luo Shen Fu (洛神赋)",
+      "facet": "Han, Wei and Jin poetry",
+      "known_at": 10
+    },
+    {
+      "name": "Ballad of Mulan (木兰诗)",
+      "facet": "Han, Wei and Jin poetry",
+      "known_at": 3
+    },
+    {
+      "name": "Kongque Dongnan Fei (孔雀东南飞)",
+      "facet": "Han, Wei and Jin poetry",
+      "known_at": 10
+    },
+    {
+      "name": "Seven Masters of Jian'an",
+      "facet": "Han, Wei and Jin poetry",
+      "known_at": 12
+    },
+    {
+      "name": "Ruan Ji",
+      "facet": "Han, Wei and Jin poetry",
+      "known_at": 13
+    },
+    {
+      "name": "Xi Kang",
+      "facet": "Han, Wei and Jin poetry",
+      "known_at": 12
+    },
+    {
+      "name": "Chile Ge (敕勒歌)",
+      "facet": "Han, Wei and Jin poetry",
+      "known_at": 5
+    },
+    {
+      "name": "Zuo Si",
+      "facet": "Han, Wei and Jin poetry",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Can",
+      "facet": "Han, Wei and Jin poetry",
+      "known_at": 14
+    },
+    {
+      "name": "Peach Blossom Spring (桃花源记)",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 4
+    },
+    {
+      "name": "Yin Jiu (饮酒)",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 9
+    },
+    {
+      "name": "Gui Yuan Tian Ju (归园田居)",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 9
+    },
+    {
+      "name": "Gui Qu Lai Xi Ci (归去来兮辞)",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 11
+    },
+    {
+      "name": "Wuliu Xiansheng Zhuan (五柳先生传)",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 11
+    },
+    {
+      "name": "Chrysanthemum",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 3
+    },
+    {
+      "name": "Five pecks of rice (五斗米)",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 10
+    },
+    {
+      "name": "Pengze County",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 12
+    },
+    {
+      "name": "Nanshan (南山)",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 9
+    },
+    {
+      "name": "Pastoral poetry (田园诗)",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 11
+    },
+    {
+      "name": "Hermit (隐士)",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 10
+    },
+    {
+      "name": "Yang Wanli",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 8
+    },
+    {
+      "name": "Weng Juan",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 12
+    },
+    {
+      "name": "Gao Ding's Cun Ju (村居)",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 6
+    },
+    {
+      "name": "Qing Ping Le · Cun Ju (清平乐·村居)",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 8
+    },
+    {
+      "name": "Zhong Rong's Shipin (诗品)",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 14
+    },
+    {
+      "name": "Chaisang (柴桑)",
+      "facet": "Tao Yuanming and pastoral poems",
+      "known_at": 14
+    },
+    {
+      "name": "Red Cliff Ode (赤壁赋)",
+      "facet": "Su Shi's life and works",
+      "known_at": 9
+    },
+    {
+      "name": "Nian Nu Jiao · Chibi Huai Gu (念奴娇·赤壁怀古)",
+      "facet": "Su Shi's life and works",
+      "known_at": 9
+    },
+    {
+      "name": "Ti Xilin Bi (题西林壁)",
+      "facet": "Su Shi's life and works",
+      "known_at": 6
+    },
+    {
+      "name": "Jiang Cheng Zi for his late wife",
+      "facet": "Su Shi's life and works",
+      "known_at": 11
+    },
+    {
+      "name": "Ding Feng Bo (定风波)",
+      "facet": "Su Shi's life and works",
+      "known_at": 11
+    },
+    {
+      "name": "Dongpo pork",
+      "facet": "Su Shi's life and works",
+      "known_at": 4
+    },
+    {
+      "name": "Huangzhou",
+      "facet": "Su Shi's life and works",
+      "known_at": 11
+    },
+    {
+      "name": "Wutai Poetry Case (乌台诗案)",
+      "facet": "Su Shi's life and works",
+      "known_at": 12
+    },
+    {
+      "name": "Danzhou, Hainan",
+      "facet": "Su Shi's life and works",
+      "known_at": 12
+    },
+    {
+      "name": "Huizhou lychees",
+      "facet": "Su Shi's life and works",
+      "known_at": 9
+    },
+    {
+      "name": "Three Su (三苏)",
+      "facet": "Su Shi's life and works",
+      "known_at": 8
+    },
+    {
+      "name": "Su Xun",
+      "facet": "Su Shi's life and works",
+      "known_at": 9
+    },
+    {
+      "name": "Su Zhe",
+      "facet": "Su Shi's life and works",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Fu, Su Shi's wife",
+      "facet": "Su Shi's life and works",
+      "known_at": 13
+    },
+    {
+      "name": "Foyin",
+      "facet": "Su Shi's life and works",
+      "known_at": 12
+    },
+    {
+      "name": "Li Qingzhao",
+      "facet": "Li Qingzhao and women poets",
+      "known_at": 5
+    },
+    {
+      "name": "Ru Meng Ling (如梦令)",
+      "facet": "Li Qingzhao and women poets",
+      "known_at": 9
+    },
+    {
+      "name": "Sheng Sheng Man (声声慢)",
+      "facet": "Li Qingzhao and women poets",
+      "known_at": 10
+    },
+    {
+      "name": "Yi Jian Mei (一剪梅)",
+      "facet": "Li Qingzhao and women poets",
+      "known_at": 11
+    },
+    {
+      "name": "Xia Ri Jue Ju (夏日绝句)",
+      "facet": "Li Qingzhao and women poets",
+      "known_at": 9
+    },
+    {
+      "name": "Zhao Mingcheng",
+      "facet": "Li Qingzhao and women poets",
+      "known_at": 12
+    },
+    {
+      "name": "Jinshi Lu (金石录)",
+      "facet": "Li Qingzhao and women poets",
+      "known_at": 13
+    },
+    {
+      "name": "Su Hui's Xuanji Tu (璇玑图)",
+      "facet": "Li Qingzhao and women poets",
+      "known_at": 13
+    },
+    {
+      "name": "Zhu Shuzhen",
+      "facet": "Li Qingzhao and women poets",
+      "known_at": 13
+    },
+    {
+      "name": "Gu Taiqing",
+      "facet": "Li Qingzhao and women poets",
+      "known_at": 14
+    },
+    {
+      "name": "Shu Ting",
+      "facet": "Li Qingzhao and women poets",
+      "known_at": 11
+    },
+    {
+      "name": "Xi Murong",
+      "facet": "Li Qingzhao and women poets",
+      "known_at": 10
+    },
+    {
+      "name": "Xin Qiji",
+      "facet": "Heroic and patriotic ci",
+      "known_at": 6
+    },
+    {
+      "name": "Shi Er (示儿)",
+      "facet": "Heroic and patriotic ci",
+      "known_at": 6
+    },
+    {
+      "name": "Guo Lingdingyang (过零丁洋)",
+      "facet": "Heroic and patriotic ci",
+      "known_at": 8
+    },
+    {
+      "name": "Zhengqi Ge (正气歌)",
+      "facet": "Heroic and patriotic ci",
+      "known_at": 11
+    },
+    {
+      "name": "Po Zhen Zi for Chen Tongfu (破阵子)",
+      "facet": "Heroic and patriotic ci",
+      "known_at": 10
+    },
+    {
+      "name": "Yong Yu Le · Jingkou Beigu Ting Huai Gu (永遇乐)",
+      "facet": "Heroic and patriotic ci",
+      "known_at": 11
+    },
+    {
+      "name": "Pusa Man · Shu Jiangxi Zaokou Bi (菩萨蛮)",
+      "facet": "Heroic and patriotic ci",
+      "known_at": 13
+    },
+    {
+      "name": "Haofang school (豪放派)",
+      "facet": "Heroic and patriotic ci",
+      "known_at": 11
+    },
+    {
+      "name": "Chen Liang",
+      "facet": "Heroic and patriotic ci",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Xiaoxiang",
+      "facet": "Heroic and patriotic ci",
+      "known_at": 14
+    },
+    {
+      "name": "Liu Kezhuang",
+      "facet": "Heroic and patriotic ci",
+      "known_at": 14
+    },
+    {
+      "name": "Jin dynasty (Jurchen)",
+      "facet": "Heroic and patriotic ci",
+      "known_at": 9
+    },
+    {
+      "name": "Jiannan Shigao (剑南诗稿)",
+      "facet": "Heroic and patriotic ci",
+      "known_at": 13
+    },
+    {
+      "name": "Yu Lin Ling (雨霖铃)",
+      "facet": "Graceful-school ci poets",
+      "known_at": 11
+    },
+    {
+      "name": "Wanyue school (婉约派)",
+      "facet": "Graceful-school ci poets",
+      "known_at": 11
+    },
+    {
+      "name": "Li Yu, ruler of Southern Tang",
+      "facet": "Graceful-school ci poets",
+      "known_at": 8
+    },
+    {
+      "name": "Yan Shu",
+      "facet": "Graceful-school ci poets",
+      "known_at": 10
+    },
+    {
+      "name": "Yan Jidao",
+      "facet": "Graceful-school ci poets",
+      "known_at": 13
+    },
+    {
+      "name": "Qin Guan",
+      "facet": "Graceful-school ci poets",
+      "known_at": 11
+    },
+    {
+      "name": "Zhou Bangyan",
+      "facet": "Graceful-school ci poets",
+      "known_at": 13
+    },
+    {
+      "name": "Jiang Kui",
+      "facet": "Graceful-school ci poets",
+      "known_at": 13
+    },
+    {
+      "name": "Wu Wenying",
+      "facet": "Graceful-school ci poets",
+      "known_at": 14
+    },
+    {
+      "name": "Zhang Xian",
+      "facet": "Graceful-school ci poets",
+      "known_at": 14
+    },
+    {
+      "name": "He Zhu",
+      "facet": "Graceful-school ci poets",
+      "known_at": 14
+    },
+    {
+      "name": "Feng Yansi",
+      "facet": "Graceful-school ci poets",
+      "known_at": 14
+    },
+    {
+      "name": "Huajian Ji (花间集)",
+      "facet": "Graceful-school ci poets",
+      "known_at": 13
+    },
+    {
+      "name": "Chai Tou Feng (钗头凤)",
+      "facet": "Graceful-school ci poets",
+      "known_at": 10
+    },
+    {
+      "name": "Tang Wan",
+      "facet": "Graceful-school ci poets",
+      "known_at": 11
+    },
+    {
+      "name": "Cipai (词牌)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 10
+    },
+    {
+      "name": "Yu Meiren (虞美人)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 9
+    },
+    {
+      "name": "Die Lian Hua (蝶恋花)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 11
+    },
+    {
+      "name": "Huan Xi Sha (浣溪沙)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 10
+    },
+    {
+      "name": "Xi Jiang Yue (西江月)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 10
+    },
+    {
+      "name": "Qin Yuan Chun (沁园春)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 9
+    },
+    {
+      "name": "Bu Suan Zi (卜算子)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 11
+    },
+    {
+      "name": "Lang Tao Sha (浪淘沙)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 11
+    },
+    {
+      "name": "Ta Suo Xing (踏莎行)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 12
+    },
+    {
+      "name": "Chang Xiang Si (长相思)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 11
+    },
+    {
+      "name": "Shang que and xia que (上阕/下阕)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 12
+    },
+    {
+      "name": "Changduanju (长短句)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 13
+    },
+    {
+      "name": "Xiaoling (小令)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 13
+    },
+    {
+      "name": "Fu (赋)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 11
+    },
+    {
+      "name": "Sanqu (散曲)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 12
+    },
+    {
+      "name": "Couplet (对联)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 5
+    },
+    {
+      "name": "Palindrome poem (回文诗)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 11
+    },
+    {
+      "name": "Shiyu (诗余)",
+      "facet": "Ci tunes and poetic forms",
+      "known_at": 14
+    },
+    {
+      "name": "Ma Zhiyuan",
+      "facet": "Yuan qu and Ming-Qing poetry",
+      "known_at": 9
+    },
+    {
+      "name": "Tian Jing Sha · Qiu Si (天净沙·秋思)",
+      "facet": "Yuan qu and Ming-Qing poetry",
+      "known_at": 7
+    },
+    {
+      "name": "Guan Hanqing",
+      "facet": "Yuan qu and Ming-Qing poetry",
+      "known_at": 9
+    },
+    {
+      "name": "Bai Pu",
+      "facet": "Yuan qu and Ming-Qing poetry",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Yanghao",
+      "facet": "Yuan qu and Ming-Qing poetry",
+      "known_at": 12
+    },
+    {
+      "name": "Four Great Yuan Playwrights",
+      "facet": "Yuan qu and Ming-Qing poetry",
+      "known_at": 12
+    },
+    {
+      "name": "Yuan Haowen",
+      "facet": "Yuan qu and Ming-Qing poetry",
+      "known_at": 11
+    },
+    {
+      "name": "Shi Hui Yin (石灰吟)",
+      "facet": "Yuan qu and Ming-Qing poetry",
+      "known_at": 7
+    },
+    {
+      "name": "Zhao Yi",
+      "facet": "Yuan qu and Ming-Qing poetry",
+      "known_at": 12
+    },
+    {
+      "name": "Gong Zizhen",
+      "facet": "Yuan qu and Ming-Qing poetry",
+      "known_at": 9
+    },
+    {
+      "name": "Ji Hai Za Shi (己亥杂诗)",
+      "facet": "Yuan qu and Ming-Qing poetry",
+      "known_at": 9
+    },
+    {
+      "name": "Zang Hua Yin (葬花吟)",
+      "facet": "Yuan qu and Ming-Qing poetry",
+      "known_at": 11
+    },
+    {
+      "name": "Saying Goodbye to Cambridge Again (再别康桥)",
+      "facet": "Modern Chinese poetry",
+      "known_at": 7
+    },
+    {
+      "name": "Hai Zi",
+      "facet": "Modern Chinese poetry",
+      "known_at": 9
+    },
+    {
+      "name": "Facing the Sea, with Spring Blossoms (面朝大海，春暖花开)",
+      "facet": "Modern Chinese poetry",
+      "known_at": 9
+    },
+    {
+      "name": "Gu Cheng",
+      "facet": "Modern Chinese poetry",
+      "known_at": 9
+    },
+    {
+      "name": "Bei Dao",
+      "facet": "Modern Chinese poetry",
+      "known_at": 11
+    },
+    {
+      "name": "Ai Qing",
+      "facet": "Modern Chinese poetry",
+      "known_at": 9
+    },
+    {
+      "name": "Dai Wangshu",
+      "facet": "Modern Chinese poetry",
+      "known_at": 9
+    },
+    {
+      "name": "Rain Alley (雨巷)",
+      "facet": "Modern Chinese poetry",
+      "known_at": 10
+    },
+    {
+      "name": "Wen Yiduo",
+      "facet": "Modern Chinese poetry",
+      "known_at": 9
+    },
+    {
+      "name": "Yu Guangzhong",
+      "facet": "Modern Chinese poetry",
+      "known_at": 7
+    },
+    {
+      "name": "Nostalgia (乡愁)",
+      "facet": "Modern Chinese poetry",
+      "known_at": 7
+    },
+    {
+      "name": "Qin Yuan Chun · Xue (沁园春·雪)",
+      "facet": "Modern Chinese poetry",
+      "known_at": 8
+    },
+    {
+      "name": "Zang Kejia",
+      "facet": "Modern Chinese poetry",
+      "known_at": 9
+    },
+    {
+      "name": "Bian Zhilin",
+      "facet": "Modern Chinese poetry",
+      "known_at": 10
+    },
+    {
+      "name": "Zheng Chouyu",
+      "facet": "Modern Chinese poetry",
+      "known_at": 12
+    },
+    {
+      "name": "Shi Zhi",
+      "facet": "Modern Chinese poetry",
+      "known_at": 13
+    },
+    {
+      "name": "Misty Poets (朦胧诗)",
+      "facet": "Modern Chinese poetry",
+      "known_at": 11
+    },
+    {
+      "name": "Crescent Moon Society (新月派)",
+      "facet": "Modern Chinese poetry",
+      "known_at": 12
+    },
+    {
+      "name": "Shen Garden (沈园)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 12
+    },
+    {
+      "name": "Beigu Pavilion (北固亭)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 13
+    },
+    {
+      "name": "Guazhou (瓜洲)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 11
+    },
+    {
+      "name": "Twenty-Four Bridge (二十四桥)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 12
+    },
+    {
+      "name": "Drunkard's Pavilion (醉翁亭)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 8
+    },
+    {
+      "name": "Tongguan (潼关)",
+      "facet": "Places and landmarks in poems",
+      "known_at": 12
+    },
+    {
+      "name": "Qiantang River tide",
+      "facet": "Places and landmarks in poems",
+      "known_at": 10
+    },
+    {
+      "name": "Qing Yu An · Yuan Xi (青玉案·元夕)",
+      "facet": "Festivals, seasons and occasions in poems",
+      "known_at": 10
+    },
+    {
+      "name": "Zongzi",
+      "facet": "Festivals, seasons and occasions in poems",
+      "known_at": 2
+    },
+    {
+      "name": "Plum blossom",
+      "facet": "Festivals, seasons and occasions in poems",
+      "known_at": 4
+    },
+    {
+      "name": "Ai Lian Shuo (爱莲说)",
+      "facet": "Festivals, seasons and occasions in poems",
+      "known_at": 8
+    },
+    {
+      "name": "Willow branch at farewell (折柳)",
+      "facet": "Festivals, seasons and occasions in poems",
+      "known_at": 7
+    },
+    {
+      "name": "Wild geese",
+      "facet": "Festivals, seasons and occasions in poems",
+      "known_at": 6
+    },
+    {
+      "name": "Osmanthus",
+      "facet": "Festivals, seasons and occasions in poems",
+      "known_at": 6
+    },
+    {
+      "name": "Twenty-four solar terms",
+      "facet": "Festivals, seasons and occasions in poems",
+      "known_at": 6
+    },
+    {
+      "name": "Farewell poem (送别诗)",
+      "facet": "Festivals, seasons and occasions in poems",
+      "known_at": 9
+    }
+  ]
+}

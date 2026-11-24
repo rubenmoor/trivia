@@ -1,0 +1,977 @@
+{
+  "subcategory": "chinese-buddhism",
+  "facets": [
+    "Arrival and spread in China",
+    "Bodhisattvas and Buddhas",
+    "Chan masters and patriarchs",
+    "Pilgrims and translators",
+    "Four Sacred Buddhist Mountains",
+    "Grottoes and Buddhist art",
+    "Monks and monastic life",
+    "Buddhist festivals and customs",
+    "Sutras, teachings and schools",
+    "Buddhist words in Chinese",
+    "Buddhism in legends and novels",
+    "Buddhist symbols and ritual objects"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Tianzhu (天竺)",
+      "facet": "Arrival and spread in China",
+      "known_at": 7
+    },
+    {
+      "name": "Emperor Wu of Liang (梁武帝)",
+      "facet": "Arrival and spread in China",
+      "known_at": 12
+    },
+    {
+      "name": "Four hundred and eighty temples of the Southern Dynasties (南朝四百八十寺)",
+      "facet": "Arrival and spread in China",
+      "known_at": 9
+    },
+    {
+      "name": "Northern Wei dynasty",
+      "facet": "Arrival and spread in China",
+      "known_at": 10
+    },
+    {
+      "name": "Huichang persecution of Buddhism (会昌灭佛)",
+      "facet": "Arrival and spread in China",
+      "known_at": 13
+    },
+    {
+      "name": "Han Yu's memorial on the Buddha bone (谏迎佛骨表)",
+      "facet": "Arrival and spread in China",
+      "known_at": 13
+    },
+    {
+      "name": "Famen Temple finger relic (法门寺佛指舍利)",
+      "facet": "Arrival and spread in China",
+      "known_at": 12
+    },
+    {
+      "name": "Khotan (于阗)",
+      "facet": "Arrival and spread in China",
+      "known_at": 13
+    },
+    {
+      "name": "Han Buddhism (汉传佛教)",
+      "facet": "Arrival and spread in China",
+      "known_at": 10
+    },
+    {
+      "name": "Tibetan Buddhism (藏传佛教)",
+      "facet": "Arrival and spread in China",
+      "known_at": 9
+    },
+    {
+      "name": "Theravada Buddhism in Yunnan (南传佛教)",
+      "facet": "Arrival and spread in China",
+      "known_at": 12
+    },
+    {
+      "name": "Maitreya, the Laughing Buddha (弥勒佛)",
+      "facet": "Bodhisattvas and Buddhas",
+      "known_at": 3
+    },
+    {
+      "name": "Shakyamuni Buddha (释迦牟尼)",
+      "facet": "Bodhisattvas and Buddhas",
+      "known_at": 4
+    },
+    {
+      "name": "Amitabha (阿弥陀佛)",
+      "facet": "Bodhisattvas and Buddhas",
+      "known_at": 5
+    },
+    {
+      "name": "Medicine Buddha (药师佛)",
+      "facet": "Bodhisattvas and Buddhas",
+      "known_at": 10
+    },
+    {
+      "name": "Mahasthamaprapta (大势至菩萨)",
+      "facet": "Bodhisattvas and Buddhas",
+      "known_at": 13
+    },
+    {
+      "name": "Vairocana (毗卢遮那佛)",
+      "facet": "Bodhisattvas and Buddhas",
+      "known_at": 13
+    },
+    {
+      "name": "Dipankara (燃灯古佛)",
+      "facet": "Bodhisattvas and Buddhas",
+      "known_at": 11
+    },
+    {
+      "name": "Thousand-Armed Guanyin (千手观音)",
+      "facet": "Bodhisattvas and Buddhas",
+      "known_at": 4
+    },
+    {
+      "name": "Eighteen Arhats (十八罗汉)",
+      "facet": "Bodhisattvas and Buddhas",
+      "known_at": 6
+    },
+    {
+      "name": "Skanda (韦陀)",
+      "facet": "Bodhisattvas and Buddhas",
+      "known_at": 11
+    },
+    {
+      "name": "Sudhana (善财童子)",
+      "facet": "Bodhisattvas and Buddhas",
+      "known_at": 8
+    },
+    {
+      "name": "Dragon Girl (龙女)",
+      "facet": "Bodhisattvas and Buddhas",
+      "known_at": 10
+    },
+    {
+      "name": "Ananda and Kashyapa (阿难 迦叶)",
+      "facet": "Bodhisattvas and Buddhas",
+      "known_at": 11
+    },
+    {
+      "name": "Guan Yu as Sangharama (伽蓝菩萨)",
+      "facet": "Bodhisattvas and Buddhas",
+      "known_at": 13
+    },
+    {
+      "name": "Huike (慧可)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 11
+    },
+    {
+      "name": "Sengcan (僧璨)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 14
+    },
+    {
+      "name": "Daoxin (道信)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 14
+    },
+    {
+      "name": "Hongren (弘忍)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 12
+    },
+    {
+      "name": "Huineng (慧能)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 9
+    },
+    {
+      "name": "Shenxiu (神秀)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 11
+    },
+    {
+      "name": "Mazu Daoyi (马祖道一)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 13
+    },
+    {
+      "name": "Baizhang Huaihai (百丈怀海)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 13
+    },
+    {
+      "name": "Linji Yixuan (临济义玄)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 13
+    },
+    {
+      "name": "Zhaozhou Congshen (赵州从谂)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 13
+    },
+    {
+      "name": "Nanquan Puyuan (南泉普愿)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 14
+    },
+    {
+      "name": "Deshan Xuanjian (德山宣鉴)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 14
+    },
+    {
+      "name": "Dongshan Liangjie (洞山良价)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 14
+    },
+    {
+      "name": "Yunmen Wenyan (云门文偃)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 14
+    },
+    {
+      "name": "Dahui Zonggao (大慧宗杲)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 14
+    },
+    {
+      "name": "Hanshan (寒山)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 11
+    },
+    {
+      "name": "Shide (拾得)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 13
+    },
+    {
+      "name": "Xuyun (虚云)",
+      "facet": "Chan masters and patriarchs",
+      "known_at": 13
+    },
+    {
+      "name": "Yijing (义净)",
+      "facet": "Pilgrims and translators",
+      "known_at": 13
+    },
+    {
+      "name": "Kumarajiva (鸠摩罗什)",
+      "facet": "Pilgrims and translators",
+      "known_at": 11
+    },
+    {
+      "name": "Jianzhen (鉴真)",
+      "facet": "Pilgrims and translators",
+      "known_at": 8
+    },
+    {
+      "name": "An Shigao (安世高)",
+      "facet": "Pilgrims and translators",
+      "known_at": 14
+    },
+    {
+      "name": "Kashyapa Matanga and Dharmaratna (摄摩腾 竺法兰)",
+      "facet": "Pilgrims and translators",
+      "known_at": 13
+    },
+    {
+      "name": "Zhu Shixing (朱士行)",
+      "facet": "Pilgrims and translators",
+      "known_at": 14
+    },
+    {
+      "name": "Dao'an (道安)",
+      "facet": "Pilgrims and translators",
+      "known_at": 13
+    },
+    {
+      "name": "Paramartha (真谛)",
+      "facet": "Pilgrims and translators",
+      "known_at": 14
+    },
+    {
+      "name": "Amoghavajra (不空)",
+      "facet": "Pilgrims and translators",
+      "known_at": 14
+    },
+    {
+      "name": "Nalanda (那烂陀寺)",
+      "facet": "Pilgrims and translators",
+      "known_at": 11
+    },
+    {
+      "name": "Qu Wentai, King of Gaochang (麹文泰)",
+      "facet": "Pilgrims and translators",
+      "known_at": 14
+    },
+    {
+      "name": "Kukai (空海)",
+      "facet": "Pilgrims and translators",
+      "known_at": 12
+    },
+    {
+      "name": "Ennin (圆仁)",
+      "facet": "Pilgrims and translators",
+      "known_at": 14
+    },
+    {
+      "name": "Golden Summit of Emei (金顶)",
+      "facet": "Four Sacred Buddhist Mountains",
+      "known_at": 9
+    },
+    {
+      "name": "Emei monkeys",
+      "facet": "Four Sacred Buddhist Mountains",
+      "known_at": 6
+    },
+    {
+      "name": "Nanhai Guanyin statue of Putuo (南海观音)",
+      "facet": "Four Sacred Buddhist Mountains",
+      "known_at": 10
+    },
+    {
+      "name": "Reluctant-to-Leave Guanyin (不肯去观音)",
+      "facet": "Four Sacred Buddhist Mountains",
+      "known_at": 13
+    },
+    {
+      "name": "Kim Kyo-gak (金乔觉)",
+      "facet": "Four Sacred Buddhist Mountains",
+      "known_at": 13
+    },
+    {
+      "name": "Flesh-body bodhisattvas of Jiuhua (肉身菩萨)",
+      "facet": "Four Sacred Buddhist Mountains",
+      "known_at": 13
+    },
+    {
+      "name": "Five Terraces of Wutai (五台)",
+      "facet": "Four Sacred Buddhist Mountains",
+      "known_at": 11
+    },
+    {
+      "name": "Mount Lu (庐山)",
+      "facet": "Four Sacred Buddhist Mountains",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Jizu (鸡足山)",
+      "facet": "Four Sacred Buddhist Mountains",
+      "known_at": 13
+    },
+    {
+      "name": "Mount Fanjing (梵净山)",
+      "facet": "Four Sacred Buddhist Mountains",
+      "known_at": 11
+    },
+    {
+      "name": "Yungang Grottoes (云冈石窟)",
+      "facet": "Grottoes and Buddhist art",
+      "known_at": 9
+    },
+    {
+      "name": "Longmen Grottoes (龙门石窟)",
+      "facet": "Grottoes and Buddhist art",
+      "known_at": 8
+    },
+    {
+      "name": "Maijishan Grottoes (麦积山石窟)",
+      "facet": "Grottoes and Buddhist art",
+      "known_at": 11
+    },
+    {
+      "name": "Dazu Rock Carvings (大足石刻)",
+      "facet": "Grottoes and Buddhist art",
+      "known_at": 11
+    },
+    {
+      "name": "Bingling Temple Grottoes (炳灵寺石窟)",
+      "facet": "Grottoes and Buddhist art",
+      "known_at": 13
+    },
+    {
+      "name": "Kizil Caves (克孜尔千佛洞)",
+      "facet": "Grottoes and Buddhist art",
+      "known_at": 13
+    },
+    {
+      "name": "Vairocana Buddha of Fengxian Temple (卢舍那大佛)",
+      "facet": "Grottoes and Buddhist art",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Yuanlu (王圆箓)",
+      "facet": "Grottoes and Buddhist art",
+      "known_at": 12
+    },
+    {
+      "name": "Dunhuang Diamond Sutra",
+      "facet": "Grottoes and Buddhist art",
+      "known_at": 10
+    },
+    {
+      "name": "Reclining Buddha (卧佛)",
+      "facet": "Grottoes and Buddhist art",
+      "known_at": 7
+    },
+    {
+      "name": "Thangka (唐卡)",
+      "facet": "Grottoes and Buddhist art",
+      "known_at": 9
+    },
+    {
+      "name": "Spring Temple Buddha (中原大佛)",
+      "facet": "Grottoes and Buddhist art",
+      "known_at": 12
+    },
+    {
+      "name": "Thousand-Hand Bodhisattva dance (千手观音舞)",
+      "facet": "Grottoes and Buddhist art",
+      "known_at": 6
+    },
+    {
+      "name": "Zhang Daqian",
+      "facet": "Grottoes and Buddhist art",
+      "known_at": 12
+    },
+    {
+      "name": "Shaolin warrior monks (少林武僧)",
+      "facet": "Monks and monastic life",
+      "known_at": 4
+    },
+    {
+      "name": "Heshang (和尚)",
+      "facet": "Monks and monastic life",
+      "known_at": 2
+    },
+    {
+      "name": "Buddhist nun (尼姑)",
+      "facet": "Monks and monastic life",
+      "known_at": 4
+    },
+    {
+      "name": "Abbot (方丈)",
+      "facet": "Monks and monastic life",
+      "known_at": 7
+    },
+    {
+      "name": "Kasaya (袈裟)",
+      "facet": "Monks and monastic life",
+      "known_at": 6
+    },
+    {
+      "name": "Ordination scars (戒疤)",
+      "facet": "Monks and monastic life",
+      "known_at": 7
+    },
+    {
+      "name": "Tonsure (剃度)",
+      "facet": "Monks and monastic life",
+      "known_at": 8
+    },
+    {
+      "name": "Dharma name (法号)",
+      "facet": "Monks and monastic life",
+      "known_at": 7
+    },
+    {
+      "name": "Alms round (化缘)",
+      "facet": "Monks and monastic life",
+      "known_at": 7
+    },
+    {
+      "name": "Seated meditation (打坐)",
+      "facet": "Monks and monastic life",
+      "known_at": 5
+    },
+    {
+      "name": "Chanting sutras (念经)",
+      "facet": "Monks and monastic life",
+      "known_at": 3
+    },
+    {
+      "name": "Buddhist vegetarian food (素斋)",
+      "facet": "Monks and monastic life",
+      "known_at": 5
+    },
+    {
+      "name": "Pure Rules of Baizhang (百丈清规)",
+      "facet": "Monks and monastic life",
+      "known_at": 13
+    },
+    {
+      "name": "Tea and Chan (禅茶一味)",
+      "facet": "Monks and monastic life",
+      "known_at": 12
+    },
+    {
+      "name": "Master Hongyi (弘一法师)",
+      "facet": "Monks and monastic life",
+      "known_at": 10
+    },
+    {
+      "name": "Taixu (太虚)",
+      "facet": "Monks and monastic life",
+      "known_at": 14
+    },
+    {
+      "name": "Huiyuan (慧远)",
+      "facet": "Monks and monastic life",
+      "known_at": 13
+    },
+    {
+      "name": "Buddha's Birthday, Bathing the Buddha (浴佛节)",
+      "facet": "Buddhist festivals and customs",
+      "known_at": 9
+    },
+    {
+      "name": "Ghost Festival (盂兰盆节)",
+      "facet": "Buddhist festivals and customs",
+      "known_at": 8
+    },
+    {
+      "name": "Guanyin's birthday (观音诞)",
+      "facet": "Buddhist festivals and customs",
+      "known_at": 11
+    },
+    {
+      "name": "Water-Sprinkling Festival (泼水节)",
+      "facet": "Buddhist festivals and customs",
+      "known_at": 5
+    },
+    {
+      "name": "Shoton Festival (雪顿节)",
+      "facet": "Buddhist festivals and customs",
+      "known_at": 11
+    },
+    {
+      "name": "Buddha unveiling (晒佛)",
+      "facet": "Buddhist festivals and customs",
+      "known_at": 11
+    },
+    {
+      "name": "Bowing to the Buddha (拜佛)",
+      "facet": "Buddhist festivals and customs",
+      "known_at": 4
+    },
+    {
+      "name": "Releasing animals (放生)",
+      "facet": "Buddhist festivals and customs",
+      "known_at": 8
+    },
+    {
+      "name": "Drawing fortune sticks (求签)",
+      "facet": "Buddhist festivals and customs",
+      "known_at": 6
+    },
+    {
+      "name": "New Year bell of Hanshan Temple (寒山寺钟声)",
+      "facet": "Buddhist festivals and customs",
+      "known_at": 10
+    },
+    {
+      "name": "Butter lamps (酥油灯)",
+      "facet": "Buddhist festivals and customs",
+      "known_at": 10
+    },
+    {
+      "name": "Vegetarian days on the 1st and 15th (初一十五吃素)",
+      "facet": "Buddhist festivals and customs",
+      "known_at": 8
+    },
+    {
+      "name": "Water and Land Ceremony (水陆法会)",
+      "facet": "Buddhist festivals and customs",
+      "known_at": 13
+    },
+    {
+      "name": "Heart Sutra (心经)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 6
+    },
+    {
+      "name": "Diamond Sutra (金刚经)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 8
+    },
+    {
+      "name": "Lotus Sutra (法华经)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 11
+    },
+    {
+      "name": "Platform Sutra (坛经)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 12
+    },
+    {
+      "name": "Great Compassion Mantra (大悲咒)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 9
+    },
+    {
+      "name": "Om mani padme hum (六字真言)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 9
+    },
+    {
+      "name": "Chan Buddhism (禅宗)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 7
+    },
+    {
+      "name": "Pure Land Buddhism (净土宗)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 9
+    },
+    {
+      "name": "Tiantai school (天台宗)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 12
+    },
+    {
+      "name": "Huayan school (华严宗)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 13
+    },
+    {
+      "name": "Consciousness-Only school (唯识宗)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 13
+    },
+    {
+      "name": "Esoteric Buddhism (密宗)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 11
+    },
+    {
+      "name": "Mahayana (大乘)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 10
+    },
+    {
+      "name": "Hinayana (小乘)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 11
+    },
+    {
+      "name": "Karma (因果报应)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 5
+    },
+    {
+      "name": "Samsara (轮回)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 5
+    },
+    {
+      "name": "Nirvana (涅槃)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 7
+    },
+    {
+      "name": "Four Noble Truths (四谛)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 11
+    },
+    {
+      "name": "Five Precepts (五戒)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 9
+    },
+    {
+      "name": "Three Jewels (三宝)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 10
+    },
+    {
+      "name": "Sudden enlightenment (顿悟)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 10
+    },
+    {
+      "name": "Gong'an (公案)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 13
+    },
+    {
+      "name": "Western Pure Land (西方极乐世界)",
+      "facet": "Sutras, teachings and schools",
+      "known_at": 7
+    },
+    {
+      "name": "刹那 (chànà)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 9
+    },
+    {
+      "name": "世界 (shìjiè)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 10
+    },
+    {
+      "name": "缘分 (yuánfèn)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 7
+    },
+    {
+      "name": "不可思议 (bù kě sī yì)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 10
+    },
+    {
+      "name": "一尘不染 (yī chén bù rǎn)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 11
+    },
+    {
+      "name": "当头棒喝 (dāng tóu bàng hè)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 11
+    },
+    {
+      "name": "天花乱坠 (tiān huā luàn zhuì)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 11
+    },
+    {
+      "name": "五体投地 (wǔ tǐ tóu dì)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 9
+    },
+    {
+      "name": "醍醐灌顶 (tí hú guàn dǐng)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 11
+    },
+    {
+      "name": "回头是岸 (huí tóu shì àn)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 7
+    },
+    {
+      "name": "放下屠刀，立地成佛 (fàng xià tú dāo, lì dì chéng fó)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 8
+    },
+    {
+      "name": "借花献佛 (jiè huā xiàn fó)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 9
+    },
+    {
+      "name": "临时抱佛脚 (lín shí bào fó jiǎo)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 6
+    },
+    {
+      "name": "心心相印 (xīn xīn xiāng yìn)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 11
+    },
+    {
+      "name": "不二法门 (bú èr fǎ mén)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 12
+    },
+    {
+      "name": "现身说法 (xiàn shēn shuō fǎ)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 12
+    },
+    {
+      "name": "抛砖引玉 (pāo zhuān yǐn yù)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 12
+    },
+    {
+      "name": "七级浮屠 (qī jí fú tú)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 9
+    },
+    {
+      "name": "大千世界 (dà qiān shì jiè)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 11
+    },
+    {
+      "name": "色即是空 (sè jí shì kōng)",
+      "facet": "Buddhist words in Chinese",
+      "known_at": 9
+    },
+    {
+      "name": "Sha Wujing (沙僧)",
+      "facet": "Buddhism in legends and novels",
+      "known_at": 3
+    },
+    {
+      "name": "Eighty-one tribulations (九九八十一难)",
+      "facet": "Buddhism in legends and novels",
+      "known_at": 5
+    },
+    {
+      "name": "Yellow Brow Great King (黄眉大王)",
+      "facet": "Buddhism in legends and novels",
+      "known_at": 11
+    },
+    {
+      "name": "Jigong (济公)",
+      "facet": "Buddhism in legends and novels",
+      "known_at": 6
+    },
+    {
+      "name": "Flooding of Jinshan Temple (水漫金山)",
+      "facet": "Buddhism in legends and novels",
+      "known_at": 7
+    },
+    {
+      "name": "Lu Zhishen (鲁智深)",
+      "facet": "Buddhism in legends and novels",
+      "known_at": 9
+    },
+    {
+      "name": "Princess Miaoshan (妙善公主)",
+      "facet": "Buddhism in legends and novels",
+      "known_at": 13
+    },
+    {
+      "name": "Crossing the river on a reed (一苇渡江)",
+      "facet": "Buddhism in legends and novels",
+      "known_at": 10
+    },
+    {
+      "name": "Nine years facing the wall (面壁九年)",
+      "facet": "Buddhism in legends and novels",
+      "known_at": 10
+    },
+    {
+      "name": "Ikkyu-san (聪明的一休)",
+      "facet": "Buddhism in legends and novels",
+      "known_at": 4
+    },
+    {
+      "name": "The Shaolin Temple (1982 film)",
+      "facet": "Buddhism in legends and novels",
+      "known_at": 9
+    },
+    {
+      "name": "Lotus (莲花)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 3
+    },
+    {
+      "name": "Lotus throne (莲花座)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 7
+    },
+    {
+      "name": "Wan symbol (卍)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 6
+    },
+    {
+      "name": "Prayer beads (佛珠)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 4
+    },
+    {
+      "name": "Alms bowl (钵盂)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 7
+    },
+    {
+      "name": "Incense burner (香炉)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 4
+    },
+    {
+      "name": "Temple bell (梵钟)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 6
+    },
+    {
+      "name": "Prayer wheel (转经筒)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 7
+    },
+    {
+      "name": "Prayer flags (经幡)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 8
+    },
+    {
+      "name": "Khata (哈达)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 8
+    },
+    {
+      "name": "Vajra (金刚杵)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 11
+    },
+    {
+      "name": "Monk's tin staff (锡杖)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 9
+    },
+    {
+      "name": "Guanyin's vase and willow branch (净瓶)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 7
+    },
+    {
+      "name": "Sarira (舍利子)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 8
+    },
+    {
+      "name": "Eight Auspicious Symbols (八吉祥)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 12
+    },
+    {
+      "name": "Endless knot (吉祥结)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 10
+    },
+    {
+      "name": "Mudra (手印)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 11
+    },
+    {
+      "name": "Urna (白毫)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 13
+    },
+    {
+      "name": "Buddha's snail-shell curls (螺发)",
+      "facet": "Buddhist symbols and ritual objects",
+      "known_at": 12
+    }
+  ]
+}

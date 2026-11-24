@@ -1,0 +1,697 @@
+{
+  "subcategory": "climate-and-regions",
+  "facets": [
+    "Monsoon and seasonal winds",
+    "Climate zones and types",
+    "Qinling–Huai River line",
+    "North–south differences",
+    "East–west divide and Hu Line",
+    "Temperature extremes and records",
+    "Rain, floods and droughts",
+    "Wind, sand and dust storms",
+    "Typhoons and coastal weather",
+    "Jiangnan and the south",
+    "Northeast and the north",
+    "Plateau and desert regions"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 5,
+      "origin": 2,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "East Asian monsoon",
+      "facet": "Monsoon and seasonal winds",
+      "known_at": 8
+    },
+    {
+      "name": "Summer monsoon",
+      "facet": "Monsoon and seasonal winds",
+      "known_at": 7
+    },
+    {
+      "name": "Winter monsoon",
+      "facet": "Monsoon and seasonal winds",
+      "known_at": 8
+    },
+    {
+      "name": "Monsoon climate",
+      "facet": "Monsoon and seasonal winds",
+      "known_at": 7
+    },
+    {
+      "name": "Northwest wind (西北风)",
+      "facet": "Monsoon and seasonal winds",
+      "known_at": 5
+    },
+    {
+      "name": "Southeast monsoon",
+      "facet": "Monsoon and seasonal winds",
+      "known_at": 8
+    },
+    {
+      "name": "Southwest monsoon",
+      "facet": "Monsoon and seasonal winds",
+      "known_at": 10
+    },
+    {
+      "name": "Cold wave (寒潮)",
+      "facet": "Monsoon and seasonal winds",
+      "known_at": 6
+    },
+    {
+      "name": "Siberian High",
+      "facet": "Monsoon and seasonal winds",
+      "known_at": 12
+    },
+    {
+      "name": "Western Pacific Subtropical High (副热带高压)",
+      "facet": "Monsoon and seasonal winds",
+      "known_at": 12
+    },
+    {
+      "name": "Rain belt (雨带)",
+      "facet": "Monsoon and seasonal winds",
+      "known_at": 10
+    },
+    {
+      "name": "Monsoon and non-monsoon regions",
+      "facet": "Monsoon and seasonal winds",
+      "known_at": 10
+    },
+    {
+      "name": "Monsoon boundary line",
+      "facet": "Monsoon and seasonal winds",
+      "known_at": 11
+    },
+    {
+      "name": "Land–sea thermal contrast (海陆热力性质差异)",
+      "facet": "Monsoon and seasonal winds",
+      "known_at": 11
+    },
+    {
+      "name": "Tropical monsoon climate",
+      "facet": "Climate zones and types",
+      "known_at": 8
+    },
+    {
+      "name": "Subtropical monsoon climate",
+      "facet": "Climate zones and types",
+      "known_at": 8
+    },
+    {
+      "name": "Temperate monsoon climate",
+      "facet": "Climate zones and types",
+      "known_at": 8
+    },
+    {
+      "name": "Temperate continental climate",
+      "facet": "Climate zones and types",
+      "known_at": 9
+    },
+    {
+      "name": "Plateau mountain climate (高原山地气候)",
+      "facet": "Climate zones and types",
+      "known_at": 9
+    },
+    {
+      "name": "Tropical zone (热带)",
+      "facet": "Climate zones and types",
+      "known_at": 6
+    },
+    {
+      "name": "Subtropical zone (亚热带)",
+      "facet": "Climate zones and types",
+      "known_at": 8
+    },
+    {
+      "name": "Warm temperate zone (暖温带)",
+      "facet": "Climate zones and types",
+      "known_at": 9
+    },
+    {
+      "name": "Middle temperate zone (中温带)",
+      "facet": "Climate zones and types",
+      "known_at": 10
+    },
+    {
+      "name": "Cold temperate zone (寒温带)",
+      "facet": "Climate zones and types",
+      "known_at": 11
+    },
+    {
+      "name": "Arid region (干旱区)",
+      "facet": "Climate zones and types",
+      "known_at": 8
+    },
+    {
+      "name": "Semi-arid region (半干旱区)",
+      "facet": "Climate zones and types",
+      "known_at": 9
+    },
+    {
+      "name": "Humid region (湿润区)",
+      "facet": "Climate zones and types",
+      "known_at": 8
+    },
+    {
+      "name": "Semi-humid region (半湿润区)",
+      "facet": "Climate zones and types",
+      "known_at": 9
+    },
+    {
+      "name": "Accumulated temperature (积温)",
+      "facet": "Climate zones and types",
+      "known_at": 12
+    },
+    {
+      "name": "Vertical zonation (垂直地带性)",
+      "facet": "Climate zones and types",
+      "known_at": 11
+    },
+    {
+      "name": "0 °C January isotherm",
+      "facet": "Qinling–Huai River line",
+      "known_at": 10
+    },
+    {
+      "name": "800 mm isohyet",
+      "facet": "Qinling–Huai River line",
+      "known_at": 10
+    },
+    {
+      "name": "Paddy fields and dry fields (水田与旱地)",
+      "facet": "Qinling–Huai River line",
+      "known_at": 8
+    },
+    {
+      "name": "南橘北枳 (nán jú běi zhǐ, \"oranges in the south, bitter oranges in the north\")",
+      "facet": "Qinling–Huai River line",
+      "known_at": 11
+    },
+    {
+      "name": "Mount Taibai",
+      "facet": "Qinling–Huai River line",
+      "known_at": 12
+    },
+    {
+      "name": "Qinling giant panda",
+      "facet": "Qinling–Huai River line",
+      "known_at": 11
+    },
+    {
+      "name": "Bengbu",
+      "facet": "Qinling–Huai River line",
+      "known_at": 13
+    },
+    {
+      "name": "Central heating line (集中供暖线)",
+      "facet": "Qinling–Huai River line",
+      "known_at": 6
+    },
+    {
+      "name": "Hanzhong",
+      "facet": "Qinling–Huai River line",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Xiangwen",
+      "facet": "Qinling–Huai River line",
+      "known_at": 14
+    },
+    {
+      "name": "River freezing period (结冰期)",
+      "facet": "Qinling–Huai River line",
+      "known_at": 9
+    },
+    {
+      "name": "Wei River",
+      "facet": "Qinling–Huai River line",
+      "known_at": 10
+    },
+    {
+      "name": "Dabie Mountains",
+      "facet": "Qinling–Huai River line",
+      "known_at": 11
+    },
+    {
+      "name": "Wheaten food (面食)",
+      "facet": "North–south differences",
+      "known_at": 5
+    },
+    {
+      "name": "Douhua (豆腐脑)",
+      "facet": "North–south differences",
+      "known_at": 6
+    },
+    {
+      "name": "Kang (炕)",
+      "facet": "North–south differences",
+      "known_at": 7
+    },
+    {
+      "name": "Siheyuan (四合院)",
+      "facet": "North–south differences",
+      "known_at": 6
+    },
+    {
+      "name": "Stilt house (吊脚楼)",
+      "facet": "North–south differences",
+      "known_at": 9
+    },
+    {
+      "name": "南船北马 (nán chuán běi mǎ, \"boats in the south, horses in the north\")",
+      "facet": "North–south differences",
+      "known_at": 11
+    },
+    {
+      "name": "Wet cold (湿冷)",
+      "facet": "North–south differences",
+      "known_at": 8
+    },
+    {
+      "name": "Hu Huanyong Line",
+      "facet": "East–west divide and Hu Line",
+      "known_at": 11
+    },
+    {
+      "name": "Hu Huanyong",
+      "facet": "East–west divide and Hu Line",
+      "known_at": 13
+    },
+    {
+      "name": "Tengchong",
+      "facet": "East–west divide and Hu Line",
+      "known_at": 11
+    },
+    {
+      "name": "Population density",
+      "facet": "East–west divide and Hu Line",
+      "known_at": 8
+    },
+    {
+      "name": "400 mm isohyet",
+      "facet": "East–west divide and Hu Line",
+      "known_at": 11
+    },
+    {
+      "name": "Three-step terrain (地势三级阶梯)",
+      "facet": "East–west divide and Hu Line",
+      "known_at": 8
+    },
+    {
+      "name": "West–East Gas Transmission (西气东输)",
+      "facet": "East–west divide and Hu Line",
+      "known_at": 9
+    },
+    {
+      "name": "West–East Electricity Transmission (西电东送)",
+      "facet": "East–west divide and Hu Line",
+      "known_at": 10
+    },
+    {
+      "name": "Western Development (西部大开发)",
+      "facet": "East–west divide and Hu Line",
+      "known_at": 10
+    },
+    {
+      "name": "Farming–pastoral ecotone (农牧交错带)",
+      "facet": "East–west divide and Hu Line",
+      "known_at": 12
+    },
+    {
+      "name": "Pastoral region (牧区)",
+      "facet": "East–west divide and Hu Line",
+      "known_at": 9
+    },
+    {
+      "name": "Eastward-flowing rivers (大江东去)",
+      "facet": "East–west divide and Hu Line",
+      "known_at": 9
+    },
+    {
+      "name": "Beijing Time",
+      "facet": "East–west divide and Hu Line",
+      "known_at": 6
+    },
+    {
+      "name": "Xinjiang Time",
+      "facet": "East–west divide and Hu Line",
+      "known_at": 10
+    },
+    {
+      "name": "Fuyuan (抚远)",
+      "facet": "East–west divide and Hu Line",
+      "known_at": 11
+    },
+    {
+      "name": "Beiji Village (北极村)",
+      "facet": "Temperature extremes and records",
+      "known_at": 8
+    },
+    {
+      "name": "Genhe",
+      "facet": "Temperature extremes and records",
+      "known_at": 13
+    },
+    {
+      "name": "Aydingkol Lake",
+      "facet": "Temperature extremes and records",
+      "known_at": 13
+    },
+    {
+      "name": "Counting the Nines (数九)",
+      "facet": "Temperature extremes and records",
+      "known_at": 8
+    },
+    {
+      "name": "Sauna days (桑拿天)",
+      "facet": "Temperature extremes and records",
+      "known_at": 8
+    },
+    {
+      "name": "早穿皮袄午穿纱 (zǎo chuān pí ǎo wǔ chuān shā, \"fur coat in the morning, silk at noon\")",
+      "facet": "Temperature extremes and records",
+      "known_at": 10
+    },
+    {
+      "name": "White nights (白夜)",
+      "facet": "Temperature extremes and records",
+      "known_at": 12
+    },
+    {
+      "name": "1998 Yangtze River floods",
+      "facet": "Rain, floods and droughts",
+      "known_at": 10
+    },
+    {
+      "name": "Three Gorges Dam",
+      "facet": "Rain, floods and droughts",
+      "known_at": 5
+    },
+    {
+      "name": "Ya'an, the Rain City",
+      "facet": "Rain, floods and droughts",
+      "known_at": 12
+    },
+    {
+      "name": "Spring drought in North China (华北春旱)",
+      "facet": "Rain, floods and droughts",
+      "known_at": 10
+    },
+    {
+      "name": "South–North Water Diversion (南水北调)",
+      "facet": "Rain, floods and droughts",
+      "known_at": 8
+    },
+    {
+      "name": "Night rain in Bashan (巴山夜雨)",
+      "facet": "Rain, floods and droughts",
+      "known_at": 11
+    },
+    {
+      "name": "Flood season (汛期)",
+      "facet": "Rain, floods and droughts",
+      "known_at": 8
+    },
+    {
+      "name": "Rainstorm warning (暴雨预警)",
+      "facet": "Rain, floods and droughts",
+      "known_at": 6
+    },
+    {
+      "name": "Sandstorm (沙尘暴)",
+      "facet": "Wind, sand and dust storms",
+      "known_at": 4
+    },
+    {
+      "name": "Three-North Shelterbelt (三北防护林)",
+      "facet": "Wind, sand and dust storms",
+      "known_at": 9
+    },
+    {
+      "name": "Saihanba (塞罕坝)",
+      "facet": "Wind, sand and dust storms",
+      "known_at": 10
+    },
+    {
+      "name": "Mu Us Desert (毛乌素)",
+      "facet": "Wind, sand and dust storms",
+      "known_at": 12
+    },
+    {
+      "name": "Yardang (雅丹)",
+      "facet": "Wind, sand and dust storms",
+      "known_at": 11
+    },
+    {
+      "name": "Urho Devil City (魔鬼城)",
+      "facet": "Wind, sand and dust storms",
+      "known_at": 11
+    },
+    {
+      "name": "Alashankou",
+      "facet": "Wind, sand and dust storms",
+      "known_at": 13
+    },
+    {
+      "name": "Dabancheng",
+      "facet": "Wind, sand and dust storms",
+      "known_at": 11
+    },
+    {
+      "name": "Wind turbine",
+      "facet": "Wind, sand and dust storms",
+      "known_at": 3
+    },
+    {
+      "name": "Singing Sand Mountain (鸣沙山)",
+      "facet": "Wind, sand and dust storms",
+      "known_at": 9
+    },
+    {
+      "name": "Saxaul (梭梭)",
+      "facet": "Wind, sand and dust storms",
+      "known_at": 12
+    },
+    {
+      "name": "Desertification (荒漠化)",
+      "facet": "Wind, sand and dust storms",
+      "known_at": 8
+    },
+    {
+      "name": "Eye of the typhoon",
+      "facet": "Typhoons and coastal weather",
+      "known_at": 6
+    },
+    {
+      "name": "Typhoon Mangkhut",
+      "facet": "Typhoons and coastal weather",
+      "known_at": 12
+    },
+    {
+      "name": "Typhoon warning signal",
+      "facet": "Typhoons and coastal weather",
+      "known_at": 6
+    },
+    {
+      "name": "Hong Kong Signal No. 8",
+      "facet": "Typhoons and coastal weather",
+      "known_at": 11
+    },
+    {
+      "name": "Huinantian (回南天)",
+      "facet": "Typhoons and coastal weather",
+      "known_at": 8
+    },
+    {
+      "name": "Sea fog",
+      "facet": "Typhoons and coastal weather",
+      "known_at": 9
+    },
+    {
+      "name": "Storm surge",
+      "facet": "Typhoons and coastal weather",
+      "known_at": 10
+    },
+    {
+      "name": "Sea breeze",
+      "facet": "Typhoons and coastal weather",
+      "known_at": 8
+    },
+    {
+      "name": "Red tide",
+      "facet": "Typhoons and coastal weather",
+      "known_at": 9
+    },
+    {
+      "name": "Bohai Sea ice",
+      "facet": "Typhoons and coastal weather",
+      "known_at": 11
+    },
+    {
+      "name": "Taiwan Strait",
+      "facet": "Typhoons and coastal weather",
+      "known_at": 7
+    },
+    {
+      "name": "Typhoon season",
+      "facet": "Typhoons and coastal weather",
+      "known_at": 6
+    },
+    {
+      "name": "Kunming, the Spring City",
+      "facet": "Jiangnan and the south",
+      "known_at": 7
+    },
+    {
+      "name": "Xishuangbanna",
+      "facet": "Jiangnan and the south",
+      "known_at": 8
+    },
+    {
+      "name": "Lingnan",
+      "facet": "Jiangnan and the south",
+      "known_at": 11
+    },
+    {
+      "name": "Karst landscape",
+      "facet": "Jiangnan and the south",
+      "known_at": 9
+    },
+    {
+      "name": "Lychee",
+      "facet": "Jiangnan and the south",
+      "known_at": 3
+    },
+    {
+      "name": "Hui-style architecture (徽派建筑)",
+      "facet": "Jiangnan and the south",
+      "known_at": 10
+    },
+    {
+      "name": "Guangzhou, the Flower City",
+      "facet": "Jiangnan and the south",
+      "known_at": 8
+    },
+    {
+      "name": "Northeast China (东北)",
+      "facet": "Northeast and the north",
+      "known_at": 4
+    },
+    {
+      "name": "Heaven Lake (天池) of Changbai",
+      "facet": "Northeast and the north",
+      "known_at": 9
+    },
+    {
+      "name": "Amur tiger",
+      "facet": "Northeast and the north",
+      "known_at": 5
+    },
+    {
+      "name": "Black soil (黑土地)",
+      "facet": "Northeast and the north",
+      "known_at": 8
+    },
+    {
+      "name": "Greater Khingan Range",
+      "facet": "Northeast and the north",
+      "known_at": 9
+    },
+    {
+      "name": "Frozen pear (冻梨)",
+      "facet": "Northeast and the north",
+      "known_at": 8
+    },
+    {
+      "name": "Yurt (蒙古包)",
+      "facet": "Northeast and the north",
+      "known_at": 4
+    },
+    {
+      "name": "Snow Town (雪乡)",
+      "facet": "Northeast and the north",
+      "known_at": 10
+    },
+    {
+      "name": "Songhua River",
+      "facet": "Northeast and the north",
+      "known_at": 8
+    },
+    {
+      "name": "Three treasures of the Northeast (东北三宝)",
+      "facet": "Northeast and the north",
+      "known_at": 9
+    },
+    {
+      "name": "Three-River Source (三江源)",
+      "facet": "Plateau and desert regions",
+      "known_at": 10
+    },
+    {
+      "name": "Cave dwelling (窑洞)",
+      "facet": "Plateau and desert regions",
+      "known_at": 7
+    },
+    {
+      "name": "Yunnan–Guizhou Plateau",
+      "facet": "Plateau and desert regions",
+      "known_at": 9
+    },
+    {
+      "name": "Inner Mongolian Plateau",
+      "facet": "Plateau and desert regions",
+      "known_at": 9
+    },
+    {
+      "name": "Hoh Xil (可可西里)",
+      "facet": "Plateau and desert regions",
+      "known_at": 10
+    },
+    {
+      "name": "Pamir Plateau",
+      "facet": "Plateau and desert regions",
+      "known_at": 11
+    }
+  ]
+}

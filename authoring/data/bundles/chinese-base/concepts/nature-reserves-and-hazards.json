@@ -1,0 +1,681 @@
+{
+  "subcategory": "nature-reserves-and-hazards",
+  "facets": [
+    "Giant panda and wildlife reserves",
+    "Forests and rainforest reserves",
+    "Lakes, karst and wetland ecosystems",
+    "Plateau and river-source reserves",
+    "Deserts and desertification",
+    "Sandstorms and dust weather",
+    "River floods and flood control",
+    "Earthquakes and geological hazards",
+    "Typhoons, droughts and extreme weather",
+    "Afforestation and ecological restoration",
+    "Endangered species protection"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 2,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 1,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Wolong Nature Reserve",
+      "facet": "Giant panda and wildlife reserves",
+      "known_at": 7
+    },
+    {
+      "name": "Yunnan elephant herd journey north (2021)",
+      "facet": "Giant panda and wildlife reserves",
+      "known_at": 6
+    },
+    {
+      "name": "Wanglang Nature Reserve",
+      "facet": "Giant panda and wildlife reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Foping Nature Reserve",
+      "facet": "Giant panda and wildlife reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Xishuangbanna rainforest",
+      "facet": "Forests and rainforest reserves",
+      "known_at": 6
+    },
+    {
+      "name": "Xishuangbanna Tropical Botanical Garden",
+      "facet": "Forests and rainforest reserves",
+      "known_at": 11
+    },
+    {
+      "name": "Hainan Tropical Rainforest National Park",
+      "facet": "Forests and rainforest reserves",
+      "known_at": 10
+    },
+    {
+      "name": "Lesser Khingan Range",
+      "facet": "Forests and rainforest reserves",
+      "known_at": 9
+    },
+    {
+      "name": "Shennongjia Wild Man (Yeren)",
+      "facet": "Forests and rainforest reserves",
+      "known_at": 9
+    },
+    {
+      "name": "Dinghushan",
+      "facet": "Forests and rainforest reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Zhangjiajie National Forest Park",
+      "facet": "Forests and rainforest reserves",
+      "known_at": 6
+    },
+    {
+      "name": "Korean pine",
+      "facet": "Forests and rainforest reserves",
+      "known_at": 11
+    },
+    {
+      "name": "Parashorea chinensis (望天树)",
+      "facet": "Forests and rainforest reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Strangler fig",
+      "facet": "Forests and rainforest reserves",
+      "known_at": 10
+    },
+    {
+      "name": "Buttress roots",
+      "facet": "Forests and rainforest reserves",
+      "known_at": 9
+    },
+    {
+      "name": "Daxing'anling forest fire (1987)",
+      "facet": "Forests and rainforest reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Jiuzhaigou lakes",
+      "facet": "Lakes, karst and wetland ecosystems",
+      "known_at": 5
+    },
+    {
+      "name": "Huanglong travertine pools",
+      "facet": "Lakes, karst and wetland ecosystems",
+      "known_at": 9
+    },
+    {
+      "name": "Karst landform",
+      "facet": "Lakes, karst and wetland ecosystems",
+      "known_at": 8
+    },
+    {
+      "name": "Guilin karst hills",
+      "facet": "Lakes, karst and wetland ecosystems",
+      "known_at": 4
+    },
+    {
+      "name": "Tiankeng",
+      "facet": "Lakes, karst and wetland ecosystems",
+      "known_at": 10
+    },
+    {
+      "name": "Wetland",
+      "facet": "Lakes, karst and wetland ecosystems",
+      "known_at": 4
+    },
+    {
+      "name": "Yellow River Delta wetland",
+      "facet": "Lakes, karst and wetland ecosystems",
+      "known_at": 11
+    },
+    {
+      "name": "Xixi National Wetland Park",
+      "facet": "Lakes, karst and wetland ecosystems",
+      "known_at": 11
+    },
+    {
+      "name": "Sanjiangyuan",
+      "facet": "Plateau and river-source reserves",
+      "known_at": 8
+    },
+    {
+      "name": "Source of the Yangtze",
+      "facet": "Plateau and river-source reserves",
+      "known_at": 8
+    },
+    {
+      "name": "Source of the Yellow River",
+      "facet": "Plateau and river-source reserves",
+      "known_at": 8
+    },
+    {
+      "name": "Source of the Lancang River",
+      "facet": "Plateau and river-source reserves",
+      "known_at": 11
+    },
+    {
+      "name": "Geladaindong",
+      "facet": "Plateau and river-source reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Gyaring and Ngoring Lakes",
+      "facet": "Plateau and river-source reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Water Tower of Asia",
+      "facet": "Plateau and river-source reserves",
+      "known_at": 10
+    },
+    {
+      "name": "Suonan Dajie",
+      "facet": "Plateau and river-source reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Qinghai-Tibet Railway wildlife crossings",
+      "facet": "Plateau and river-source reserves",
+      "known_at": 9
+    },
+    {
+      "name": "Qiangtang Nature Reserve",
+      "facet": "Plateau and river-source reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Mount Qomolangma National Nature Reserve",
+      "facet": "Plateau and river-source reserves",
+      "known_at": 10
+    },
+    {
+      "name": "Glacier retreat",
+      "facet": "Plateau and river-source reserves",
+      "known_at": 8
+    },
+    {
+      "name": "Permafrost",
+      "facet": "Plateau and river-source reserves",
+      "known_at": 9
+    },
+    {
+      "name": "Tibetan wild ass (kiang)",
+      "facet": "Plateau and river-source reserves",
+      "known_at": 10
+    },
+    {
+      "name": "Taklimakan Desert",
+      "facet": "Deserts and desertification",
+      "known_at": 6
+    },
+    {
+      "name": "Oasis",
+      "facet": "Deserts and desertification",
+      "known_at": 4
+    },
+    {
+      "name": "Karez well system",
+      "facet": "Deserts and desertification",
+      "known_at": 10
+    },
+    {
+      "name": "Turpan Depression",
+      "facet": "Deserts and desertification",
+      "known_at": 8
+    },
+    {
+      "name": "Rocky desertification",
+      "facet": "Deserts and desertification",
+      "known_at": 11
+    },
+    {
+      "name": "Sandstorms in spring",
+      "facet": "Sandstorms and dust weather",
+      "known_at": 4
+    },
+    {
+      "name": "Beijing sandstorm of March 2021",
+      "facet": "Sandstorms and dust weather",
+      "known_at": 9
+    },
+    {
+      "name": "Floating dust (浮尘)",
+      "facet": "Sandstorms and dust weather",
+      "known_at": 9
+    },
+    {
+      "name": "Blowing sand (扬沙)",
+      "facet": "Sandstorms and dust weather",
+      "known_at": 9
+    },
+    {
+      "name": "Severe sandstorm (强沙尘暴)",
+      "facet": "Sandstorms and dust weather",
+      "known_at": 7
+    },
+    {
+      "name": "Black storm (黑风暴)",
+      "facet": "Sandstorms and dust weather",
+      "known_at": 11
+    },
+    {
+      "name": "Mongolian cyclone",
+      "facet": "Sandstorms and dust weather",
+      "known_at": 12
+    },
+    {
+      "name": "Northwest wind",
+      "facet": "Sandstorms and dust weather",
+      "known_at": 5
+    },
+    {
+      "name": "Asian dust in Korea and Japan",
+      "facet": "Sandstorms and dust weather",
+      "known_at": 11
+    },
+    {
+      "name": "Wind erosion",
+      "facet": "Sandstorms and dust weather",
+      "known_at": 8
+    },
+    {
+      "name": "PM2.5",
+      "facet": "Sandstorms and dust weather",
+      "known_at": 7
+    },
+    {
+      "name": "PM10",
+      "facet": "Sandstorms and dust weather",
+      "known_at": 10
+    },
+    {
+      "name": "Air Quality Index",
+      "facet": "Sandstorms and dust weather",
+      "known_at": 8
+    },
+    {
+      "name": "Visibility",
+      "facet": "Sandstorms and dust weather",
+      "known_at": 7
+    },
+    {
+      "name": "Dust mask",
+      "facet": "Sandstorms and dust weather",
+      "known_at": 3
+    },
+    {
+      "name": "Dust devil",
+      "facet": "Sandstorms and dust weather",
+      "known_at": 9
+    },
+    {
+      "name": "Yellow River floods",
+      "facet": "River floods and flood control",
+      "known_at": 6
+    },
+    {
+      "name": "Gun (father of Yu)",
+      "facet": "River floods and flood control",
+      "known_at": 8
+    },
+    {
+      "name": "Yellow River silt",
+      "facet": "River floods and flood control",
+      "known_at": 6
+    },
+    {
+      "name": "Yellow River course changes",
+      "facet": "River floods and flood control",
+      "known_at": 12
+    },
+    {
+      "name": "Xiaolangdi Dam",
+      "facet": "River floods and flood control",
+      "known_at": 11
+    },
+    {
+      "name": "Water and sediment regulation (调水调沙)",
+      "facet": "River floods and flood control",
+      "known_at": 12
+    },
+    {
+      "name": "Jingjiang Flood Diversion Area",
+      "facet": "River floods and flood control",
+      "known_at": 13
+    },
+    {
+      "name": "Zhengzhou rainstorm of July 2021",
+      "facet": "River floods and flood control",
+      "known_at": 9
+    },
+    {
+      "name": "Sponge city",
+      "facet": "River floods and flood control",
+      "known_at": 9
+    },
+    {
+      "name": "Dike",
+      "facet": "River floods and flood control",
+      "known_at": 5
+    },
+    {
+      "name": "Sandbags",
+      "facet": "River floods and flood control",
+      "known_at": 3
+    },
+    {
+      "name": "Flood peak (洪峰)",
+      "facet": "River floods and flood control",
+      "known_at": 9
+    },
+    {
+      "name": "Wenchuan earthquake",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 5
+    },
+    {
+      "name": "Tangshan earthquake",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 7
+    },
+    {
+      "name": "Yushu earthquake",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 10
+    },
+    {
+      "name": "Lushan earthquake",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 12
+    },
+    {
+      "name": "Jiji earthquake (921)",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 11
+    },
+    {
+      "name": "Haiyuan earthquake",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 13
+    },
+    {
+      "name": "Houfeng Didong Yi (候风地动仪)",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 6
+    },
+    {
+      "name": "Longmenshan Fault",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 12
+    },
+    {
+      "name": "Beichuan earthquake ruins",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 11
+    },
+    {
+      "name": "Yingxiu",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 11
+    },
+    {
+      "name": "National Disaster Prevention and Reduction Day",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 7
+    },
+    {
+      "name": "Aftershock",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 7
+    },
+    {
+      "name": "Earthquake magnitude",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 7
+    },
+    {
+      "name": "Tangjiashan barrier lake",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 12
+    },
+    {
+      "name": "Landslide",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 5
+    },
+    {
+      "name": "Debris flow (泥石流)",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 6
+    },
+    {
+      "name": "Zhouqu debris flow",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 12
+    },
+    {
+      "name": "Changbai Mountain Tianchi volcano",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 9
+    },
+    {
+      "name": "Wudalianchi volcanoes",
+      "facet": "Earthquakes and geological hazards",
+      "known_at": 11
+    },
+    {
+      "name": "Typhoon naming list",
+      "facet": "Typhoons, droughts and extreme weather",
+      "known_at": 10
+    },
+    {
+      "name": "Typhoon Rammasun",
+      "facet": "Typhoons, droughts and extreme weather",
+      "known_at": 12
+    },
+    {
+      "name": "Typhoon Hato",
+      "facet": "Typhoons, droughts and extreme weather",
+      "known_at": 12
+    },
+    {
+      "name": "Typhoon Doksuri",
+      "facet": "Typhoons, droughts and extreme weather",
+      "known_at": 11
+    },
+    {
+      "name": "Hong Kong Typhoon Signal No. 8",
+      "facet": "Typhoons, droughts and extreme weather",
+      "known_at": 9
+    },
+    {
+      "name": "Rainstorm warning signals",
+      "facet": "Typhoons, droughts and extreme weather",
+      "known_at": 7
+    },
+    {
+      "name": "2022 Yangtze River drought",
+      "facet": "Typhoons, droughts and extreme weather",
+      "known_at": 10
+    },
+    {
+      "name": "2010 Southwest China drought",
+      "facet": "Typhoons, droughts and extreme weather",
+      "known_at": 12
+    },
+    {
+      "name": "2008 southern China snowstorms",
+      "facet": "Typhoons, droughts and extreme weather",
+      "known_at": 10
+    },
+    {
+      "name": "Hail",
+      "facet": "Typhoons, droughts and extreme weather",
+      "known_at": 3
+    },
+    {
+      "name": "Cloud seeding",
+      "facet": "Typhoons, droughts and extreme weather",
+      "known_at": 8
+    },
+    {
+      "name": "Fengyun satellites",
+      "facet": "Typhoons, droughts and extreme weather",
+      "known_at": 10
+    },
+    {
+      "name": "China Meteorological Administration",
+      "facet": "Typhoons, droughts and extreme weather",
+      "known_at": 10
+    },
+    {
+      "name": "Heat wave",
+      "facet": "Typhoons, droughts and extreme weather",
+      "known_at": 4
+    },
+    {
+      "name": "Ant Forest",
+      "facet": "Afforestation and ecological restoration",
+      "known_at": 7
+    },
+    {
+      "name": "Straw checkerboard sand barriers",
+      "facet": "Afforestation and ecological restoration",
+      "known_at": 9
+    },
+    {
+      "name": "Loess Plateau terraces",
+      "facet": "Afforestation and ecological restoration",
+      "known_at": 9
+    },
+    {
+      "name": "Natural Forest Protection Program",
+      "facet": "Afforestation and ecological restoration",
+      "known_at": 13
+    },
+    {
+      "name": "Beijing-Tianjin Sandstorm Source Control Project",
+      "facet": "Afforestation and ecological restoration",
+      "known_at": 13
+    },
+    {
+      "name": "Yin Yuzhen",
+      "facet": "Afforestation and ecological restoration",
+      "known_at": 13
+    },
+    {
+      "name": "Gu Wenchang",
+      "facet": "Afforestation and ecological restoration",
+      "known_at": 13
+    },
+    {
+      "name": "Youyu County greening",
+      "facet": "Afforestation and ecological restoration",
+      "known_at": 14
+    },
+    {
+      "name": "Lucid waters and lush mountains are invaluable assets",
+      "facet": "Afforestation and ecological restoration",
+      "known_at": 8
+    },
+    {
+      "name": "Anji Yucun",
+      "facet": "Afforestation and ecological restoration",
+      "known_at": 12
+    },
+    {
+      "name": "Ecological protection red line",
+      "facet": "Afforestation and ecological restoration",
+      "known_at": 13
+    },
+    {
+      "name": "Grazing ban and grassland recovery",
+      "facet": "Afforestation and ecological restoration",
+      "known_at": 11
+    },
+    {
+      "name": "Shelterbelt",
+      "facet": "Afforestation and ecological restoration",
+      "known_at": 8
+    },
+    {
+      "name": "Sea buckthorn",
+      "facet": "Afforestation and ecological restoration",
+      "known_at": 11
+    },
+    {
+      "name": "Carbon neutrality by 2060",
+      "facet": "Afforestation and ecological restoration",
+      "known_at": 10
+    },
+    {
+      "name": "Yangtze River ten-year fishing ban",
+      "facet": "Endangered species protection",
+      "known_at": 10
+    },
+    {
+      "name": "Metasequoia",
+      "facet": "Endangered species protection",
+      "known_at": 10
+    },
+    {
+      "name": "Ginkgo",
+      "facet": "Endangered species protection",
+      "known_at": 5
+    },
+    {
+      "name": "National first-class protected animals",
+      "facet": "Endangered species protection",
+      "known_at": 8
+    },
+    {
+      "name": "CITES",
+      "facet": "Endangered species protection",
+      "known_at": 13
+    }
+  ]
+}

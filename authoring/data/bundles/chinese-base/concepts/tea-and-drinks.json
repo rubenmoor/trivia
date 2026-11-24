@@ -1,0 +1,1022 @@
+{
+  "subcategory": "tea-and-drinks",
+  "facets": [
+    "The six tea types",
+    "Famous teas and their regions",
+    "Tea plants, picking and processing",
+    "Teaware and brewing tools",
+    "Tea customs and etiquette",
+    "Tea history, Lu Yu and the Tea Horse Road",
+    "Tea in poems, sayings and stories",
+    "Baijiu and Chinese liquor",
+    "Yellow wine and rice wine",
+    "Herbal and medicinal drinks",
+    "Bubble tea and modern tea drinks",
+    "Everyday drinks: soy milk, soups and sweet drinks"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Green tea",
+      "facet": "The six tea types",
+      "known_at": 2
+    },
+    {
+      "name": "Black tea (红茶)",
+      "facet": "The six tea types",
+      "known_at": 3
+    },
+    {
+      "name": "Oolong tea",
+      "facet": "The six tea types",
+      "known_at": 5
+    },
+    {
+      "name": "White tea",
+      "facet": "The six tea types",
+      "known_at": 6
+    },
+    {
+      "name": "Yellow tea",
+      "facet": "The six tea types",
+      "known_at": 10
+    },
+    {
+      "name": "Dark tea (黑茶)",
+      "facet": "The six tea types",
+      "known_at": 9
+    },
+    {
+      "name": "Six types of tea",
+      "facet": "The six tea types",
+      "known_at": 8
+    },
+    {
+      "name": "Tea oxidation",
+      "facet": "The six tea types",
+      "known_at": 10
+    },
+    {
+      "name": "Jasmine tea",
+      "facet": "The six tea types",
+      "known_at": 3
+    },
+    {
+      "name": "Reprocessed tea (再加工茶)",
+      "facet": "The six tea types",
+      "known_at": 12
+    },
+    {
+      "name": "Tea brick",
+      "facet": "The six tea types",
+      "known_at": 8
+    },
+    {
+      "name": "Tea polyphenols",
+      "facet": "The six tea types",
+      "known_at": 11
+    },
+    {
+      "name": "Caffeine",
+      "facet": "The six tea types",
+      "known_at": 6
+    },
+    {
+      "name": "Theanine",
+      "facet": "The six tea types",
+      "known_at": 13
+    },
+    {
+      "name": "Tieguanyin",
+      "facet": "Famous teas and their regions",
+      "known_at": 7
+    },
+    {
+      "name": "Biluochun",
+      "facet": "Famous teas and their regions",
+      "known_at": 8
+    },
+    {
+      "name": "Da Hong Pao",
+      "facet": "Famous teas and their regions",
+      "known_at": 8
+    },
+    {
+      "name": "Huangshan Maofeng",
+      "facet": "Famous teas and their regions",
+      "known_at": 9
+    },
+    {
+      "name": "Lu'an Guapian",
+      "facet": "Famous teas and their regions",
+      "known_at": 11
+    },
+    {
+      "name": "Junshan Yinzhen",
+      "facet": "Famous teas and their regions",
+      "known_at": 12
+    },
+    {
+      "name": "Keemun black tea",
+      "facet": "Famous teas and their regions",
+      "known_at": 11
+    },
+    {
+      "name": "Lapsang souchong",
+      "facet": "Famous teas and their regions",
+      "known_at": 12
+    },
+    {
+      "name": "Silver Needle white tea (白毫银针)",
+      "facet": "Famous teas and their regions",
+      "known_at": 12
+    },
+    {
+      "name": "Anji white tea",
+      "facet": "Famous teas and their regions",
+      "known_at": 11
+    },
+    {
+      "name": "Xinyang Maojian",
+      "facet": "Famous teas and their regions",
+      "known_at": 11
+    },
+    {
+      "name": "Dianhong black tea",
+      "facet": "Famous teas and their regions",
+      "known_at": 12
+    },
+    {
+      "name": "Fuding",
+      "facet": "Famous teas and their regions",
+      "known_at": 12
+    },
+    {
+      "name": "Anxi",
+      "facet": "Famous teas and their regions",
+      "known_at": 11
+    },
+    {
+      "name": "Wuyi Mountains",
+      "facet": "Famous teas and their regions",
+      "known_at": 9
+    },
+    {
+      "name": "Alishan oolong",
+      "facet": "Famous teas and their regions",
+      "known_at": 11
+    },
+    {
+      "name": "Dongding oolong",
+      "facet": "Famous teas and their regions",
+      "known_at": 12
+    },
+    {
+      "name": "Oriental Beauty tea",
+      "facet": "Famous teas and their regions",
+      "known_at": 12
+    },
+    {
+      "name": "Ten famous teas of China",
+      "facet": "Famous teas and their regions",
+      "known_at": 10
+    },
+    {
+      "name": "Tea bud",
+      "facet": "Tea plants, picking and processing",
+      "known_at": 9
+    },
+    {
+      "name": "Spring tea",
+      "facet": "Tea plants, picking and processing",
+      "known_at": 6
+    },
+    {
+      "name": "Autumn tea",
+      "facet": "Tea plants, picking and processing",
+      "known_at": 10
+    },
+    {
+      "name": "Tea picking",
+      "facet": "Tea plants, picking and processing",
+      "known_at": 4
+    },
+    {
+      "name": "Tea terraces",
+      "facet": "Tea plants, picking and processing",
+      "known_at": 5
+    },
+    {
+      "name": "Kill-green (杀青)",
+      "facet": "Tea plants, picking and processing",
+      "known_at": 11
+    },
+    {
+      "name": "Withering",
+      "facet": "Tea plants, picking and processing",
+      "known_at": 12
+    },
+    {
+      "name": "Rolling",
+      "facet": "Tea plants, picking and processing",
+      "known_at": 12
+    },
+    {
+      "name": "Roasting (焙火)",
+      "facet": "Tea plants, picking and processing",
+      "known_at": 12
+    },
+    {
+      "name": "Tea cake (饼茶)",
+      "facet": "Tea plants, picking and processing",
+      "known_at": 8
+    },
+    {
+      "name": "Ancient tea trees",
+      "facet": "Tea plants, picking and processing",
+      "known_at": 10
+    },
+    {
+      "name": "Jingmai Mountain",
+      "facet": "Tea plants, picking and processing",
+      "known_at": 13
+    },
+    {
+      "name": "Tea seed oil",
+      "facet": "Tea plants, picking and processing",
+      "known_at": 10
+    },
+    {
+      "name": "Pile fermentation (渥堆)",
+      "facet": "Tea plants, picking and processing",
+      "known_at": 14
+    },
+    {
+      "name": "Tea bag",
+      "facet": "Tea plants, picking and processing",
+      "known_at": 3
+    },
+    {
+      "name": "Yixing clay teapot",
+      "facet": "Teaware and brewing tools",
+      "known_at": 8
+    },
+    {
+      "name": "Gaiwan",
+      "facet": "Teaware and brewing tools",
+      "known_at": 7
+    },
+    {
+      "name": "Tea tray (茶盘)",
+      "facet": "Teaware and brewing tools",
+      "known_at": 7
+    },
+    {
+      "name": "Fairness pitcher (公道杯)",
+      "facet": "Teaware and brewing tools",
+      "known_at": 10
+    },
+    {
+      "name": "Tea pet (茶宠)",
+      "facet": "Teaware and brewing tools",
+      "known_at": 9
+    },
+    {
+      "name": "Tea tongs",
+      "facet": "Teaware and brewing tools",
+      "known_at": 10
+    },
+    {
+      "name": "Tea strainer",
+      "facet": "Teaware and brewing tools",
+      "known_at": 6
+    },
+    {
+      "name": "Tea set",
+      "facet": "Teaware and brewing tools",
+      "known_at": 3
+    },
+    {
+      "name": "Celadon",
+      "facet": "Teaware and brewing tools",
+      "known_at": 10
+    },
+    {
+      "name": "Jingdezhen porcelain",
+      "facet": "Teaware and brewing tools",
+      "known_at": 7
+    },
+    {
+      "name": "Jian ware tea bowl (建盏)",
+      "facet": "Teaware and brewing tools",
+      "known_at": 12
+    },
+    {
+      "name": "Tea whisk",
+      "facet": "Teaware and brewing tools",
+      "known_at": 9
+    },
+    {
+      "name": "Tea caddy",
+      "facet": "Teaware and brewing tools",
+      "known_at": 8
+    },
+    {
+      "name": "Aroma cup (闻香杯)",
+      "facet": "Teaware and brewing tools",
+      "known_at": 12
+    },
+    {
+      "name": "Glass tea cup",
+      "facet": "Teaware and brewing tools",
+      "known_at": 4
+    },
+    {
+      "name": "Long-spout copper kettle (长嘴壶)",
+      "facet": "Teaware and brewing tools",
+      "known_at": 9
+    },
+    {
+      "name": "Gongfu tea",
+      "facet": "Tea customs and etiquette",
+      "known_at": 7
+    },
+    {
+      "name": "Finger tapping to say thanks (叩手礼)",
+      "facet": "Tea customs and etiquette",
+      "known_at": 8
+    },
+    {
+      "name": "Yum cha (morning tea)",
+      "facet": "Tea customs and etiquette",
+      "known_at": 6
+    },
+    {
+      "name": "Teahouse",
+      "facet": "Tea customs and etiquette",
+      "known_at": 4
+    },
+    {
+      "name": "Serving tea to elders",
+      "facet": "Tea customs and etiquette",
+      "known_at": 4
+    },
+    {
+      "name": "Wedding tea ceremony (敬茶)",
+      "facet": "Tea customs and etiquette",
+      "known_at": 6
+    },
+    {
+      "name": "Pouring tea seven-tenths full",
+      "facet": "Tea customs and etiquette",
+      "known_at": 10
+    },
+    {
+      "name": "Three-course tea of the Bai (三道茶)",
+      "facet": "Tea customs and etiquette",
+      "known_at": 12
+    },
+    {
+      "name": "Butter tea",
+      "facet": "Tea customs and etiquette",
+      "known_at": 7
+    },
+    {
+      "name": "Lei cha (擂茶)",
+      "facet": "Tea customs and etiquette",
+      "known_at": 11
+    },
+    {
+      "name": "Guan Gong patrolling the city (关公巡城)",
+      "facet": "Tea customs and etiquette",
+      "known_at": 12
+    },
+    {
+      "name": "Tea competition (斗茶)",
+      "facet": "Tea customs and etiquette",
+      "known_at": 12
+    },
+    {
+      "name": "Sichuan teahouse",
+      "facet": "Tea customs and etiquette",
+      "known_at": 8
+    },
+    {
+      "name": "Tea art performance (茶艺)",
+      "facet": "Tea customs and etiquette",
+      "known_at": 8
+    },
+    {
+      "name": "Lifting the teapot lid for a refill",
+      "facet": "Tea customs and etiquette",
+      "known_at": 11
+    },
+    {
+      "name": "Offering tea to guests",
+      "facet": "Tea customs and etiquette",
+      "known_at": 3
+    },
+    {
+      "name": "Mongolian milk tea",
+      "facet": "Tea customs and etiquette",
+      "known_at": 8
+    },
+    {
+      "name": "Serving tea to see guests off (端茶送客)",
+      "facet": "Tea customs and etiquette",
+      "known_at": 11
+    },
+    {
+      "name": "Lu Yu",
+      "facet": "Tea history, Lu Yu and the Tea Horse Road",
+      "known_at": 8
+    },
+    {
+      "name": "The Classic of Tea (茶经)",
+      "facet": "Tea history, Lu Yu and the Tea Horse Road",
+      "known_at": 9
+    },
+    {
+      "name": "Tea Horse Road",
+      "facet": "Tea history, Lu Yu and the Tea Horse Road",
+      "known_at": 9
+    },
+    {
+      "name": "Tang dynasty",
+      "facet": "Tea history, Lu Yu and the Tea Horse Road",
+      "known_at": 10
+    },
+    {
+      "name": "Song dynasty whisked tea (点茶)",
+      "facet": "Tea history, Lu Yu and the Tea Horse Road",
+      "known_at": 12
+    },
+    {
+      "name": "Tea Road to Russia (万里茶道)",
+      "facet": "Tea history, Lu Yu and the Tea Horse Road",
+      "known_at": 12
+    },
+    {
+      "name": "Robert Fortune",
+      "facet": "Tea history, Lu Yu and the Tea Horse Road",
+      "known_at": 14
+    },
+    {
+      "name": "Thirteen Hongs of Canton",
+      "facet": "Tea history, Lu Yu and the Tea Horse Road",
+      "known_at": 13
+    },
+    {
+      "name": "Boston Tea Party",
+      "facet": "Tea history, Lu Yu and the Tea Horse Road",
+      "known_at": 10
+    },
+    {
+      "name": "Lijiang",
+      "facet": "Tea history, Lu Yu and the Tea Horse Road",
+      "known_at": 8
+    },
+    {
+      "name": "Eisai",
+      "facet": "Tea history, Lu Yu and the Tea Horse Road",
+      "known_at": 14
+    },
+    {
+      "name": "Seven necessities of daily life (柴米油盐酱醋茶)",
+      "facet": "Tea in poems, sayings and stories",
+      "known_at": 7
+    },
+    {
+      "name": "Lu Tong's Seven Bowls of Tea (七碗茶歌)",
+      "facet": "Tea in poems, sayings and stories",
+      "known_at": 13
+    },
+    {
+      "name": "Teahouse (play)",
+      "facet": "Tea in poems, sayings and stories",
+      "known_at": 9
+    },
+    {
+      "name": "Lao She",
+      "facet": "Tea in poems, sayings and stories",
+      "known_at": 8
+    },
+    {
+      "name": "Legend of Tieguanyin",
+      "facet": "Tea in poems, sayings and stories",
+      "known_at": 11
+    },
+    {
+      "name": "Legend of Da Hong Pao",
+      "facet": "Tea in poems, sayings and stories",
+      "known_at": 11
+    },
+    {
+      "name": "Eighteen imperial Longjing tea trees",
+      "facet": "Tea in poems, sayings and stories",
+      "known_at": 11
+    },
+    {
+      "name": "人走茶凉 (rén zǒu chá liáng)",
+      "facet": "Tea in poems, sayings and stories",
+      "known_at": 9
+    },
+    {
+      "name": "以茶代酒 (yǐ chá dài jiǔ)",
+      "facet": "Tea in poems, sayings and stories",
+      "known_at": 7
+    },
+    {
+      "name": "粗茶淡饭 (cū chá dàn fàn)",
+      "facet": "Tea in poems, sayings and stories",
+      "known_at": 8
+    },
+    {
+      "name": "茶余饭后 (chá yú fàn hòu)",
+      "facet": "Tea in poems, sayings and stories",
+      "known_at": 7
+    },
+    {
+      "name": "Miaoyu's tea in Dream of the Red Chamber",
+      "facet": "Tea in poems, sayings and stories",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Wits in Shajiabang (智斗)",
+      "facet": "Tea in poems, sayings and stories",
+      "known_at": 12
+    },
+    {
+      "name": "寒夜客来茶当酒 (Du Lei)",
+      "facet": "Tea in poems, sayings and stories",
+      "known_at": 12
+    },
+    {
+      "name": "Baijiu",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 6
+    },
+    {
+      "name": "Moutai",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 6
+    },
+    {
+      "name": "Maotai town",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 10
+    },
+    {
+      "name": "Fenjiu",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 10
+    },
+    {
+      "name": "Wuliangye",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 9
+    },
+    {
+      "name": "Erguotou",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 7
+    },
+    {
+      "name": "Sorghum",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 7
+    },
+    {
+      "name": "Jiuqu (酒曲)",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 13
+    },
+    {
+      "name": "Sauce aroma (酱香)",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 11
+    },
+    {
+      "name": "Strong aroma (浓香)",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 11
+    },
+    {
+      "name": "Light aroma (清香)",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 12
+    },
+    {
+      "name": "Kinmen Kaoliang liquor",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 11
+    },
+    {
+      "name": "Xinghua Village (杏花村)",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 10
+    },
+    {
+      "name": "Du Kang",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 10
+    },
+    {
+      "name": "Yi Di",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 13
+    },
+    {
+      "name": "Luzhou Laojiao",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 10
+    },
+    {
+      "name": "Chishui River",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 12
+    },
+    {
+      "name": "Ganbei",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 4
+    },
+    {
+      "name": "Medicinal liquor (药酒)",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 8
+    },
+    {
+      "name": "Distillation",
+      "facet": "Baijiu and Chinese liquor",
+      "known_at": 9
+    },
+    {
+      "name": "Shaoxing yellow wine",
+      "facet": "Yellow wine and rice wine",
+      "known_at": 8
+    },
+    {
+      "name": "Huadiao wine",
+      "facet": "Yellow wine and rice wine",
+      "known_at": 11
+    },
+    {
+      "name": "Nü'er hong (女儿红)",
+      "facet": "Yellow wine and rice wine",
+      "known_at": 11
+    },
+    {
+      "name": "Jiafan wine (加饭酒)",
+      "facet": "Yellow wine and rice wine",
+      "known_at": 12
+    },
+    {
+      "name": "Fermented glutinous rice (酒酿)",
+      "facet": "Yellow wine and rice wine",
+      "known_at": 6
+    },
+    {
+      "name": "Red yeast rice wine (红曲酒)",
+      "facet": "Yellow wine and rice wine",
+      "known_at": 12
+    },
+    {
+      "name": "Kong Yiji",
+      "facet": "Yellow wine and rice wine",
+      "known_at": 9
+    },
+    {
+      "name": "Xianheng Tavern",
+      "facet": "Yellow wine and rice wine",
+      "known_at": 10
+    },
+    {
+      "name": "Cooking wine (料酒)",
+      "facet": "Yellow wine and rice wine",
+      "known_at": 5
+    },
+    {
+      "name": "Osmanthus wine",
+      "facet": "Yellow wine and rice wine",
+      "known_at": 9
+    },
+    {
+      "name": "Chrysanthemum wine",
+      "facet": "Yellow wine and rice wine",
+      "known_at": 10
+    },
+    {
+      "name": "Discussing heroes over warm wine (煮酒论英雄)",
+      "facet": "Yellow wine and rice wine",
+      "known_at": 10
+    },
+    {
+      "name": "Wu Song at Jingyang Ridge (三碗不过冈)",
+      "facet": "Yellow wine and rice wine",
+      "known_at": 9
+    },
+    {
+      "name": "Jue (bronze wine vessel)",
+      "facet": "Yellow wine and rice wine",
+      "known_at": 11
+    },
+    {
+      "name": "Cantonese herbal tea (凉茶)",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Chrysanthemum tea",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 4
+    },
+    {
+      "name": "Goji berry tea",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 5
+    },
+    {
+      "name": "Brown sugar ginger tea",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 4
+    },
+    {
+      "name": "Jujube tea",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Barley tea",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Honeysuckle tea",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 8
+    },
+    {
+      "name": "Isatis root (板蓝根)",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Ginseng tea",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 7
+    },
+    {
+      "name": "Monk fruit (罗汉果)",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 8
+    },
+    {
+      "name": "Hawthorn drink",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 5
+    },
+    {
+      "name": "Rock sugar pear soup",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 5
+    },
+    {
+      "name": "Five-flower tea (五花茶)",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 11
+    },
+    {
+      "name": "Twenty-four flavours tea (廿四味)",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 13
+    },
+    {
+      "name": "Ginger cola",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Licorice root",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 10
+    },
+    {
+      "name": "Lotus leaf tea",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 9
+    },
+    {
+      "name": "Cassia seed tea (决明子)",
+      "facet": "Herbal and medicinal drinks",
+      "known_at": 12
+    },
+    {
+      "name": "Bubble tea",
+      "facet": "Bubble tea and modern tea drinks",
+      "known_at": 2
+    },
+    {
+      "name": "Tapioca pearls",
+      "facet": "Bubble tea and modern tea drinks",
+      "known_at": 3
+    },
+    {
+      "name": "Taichung",
+      "facet": "Bubble tea and modern tea drinks",
+      "known_at": 11
+    },
+    {
+      "name": "Yuenyeung (鸳鸯)",
+      "facet": "Bubble tea and modern tea drinks",
+      "known_at": 9
+    },
+    {
+      "name": "Cheese foam tea",
+      "facet": "Bubble tea and modern tea drinks",
+      "known_at": 8
+    },
+    {
+      "name": "Fruit tea",
+      "facet": "Bubble tea and modern tea drinks",
+      "known_at": 4
+    },
+    {
+      "name": "Taro balls",
+      "facet": "Bubble tea and modern tea drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Brown sugar boba",
+      "facet": "Bubble tea and modern tea drinks",
+      "known_at": 5
+    },
+    {
+      "name": "Hong Kong lemon tea",
+      "facet": "Bubble tea and modern tea drinks",
+      "known_at": 5
+    },
+    {
+      "name": "Grass jelly",
+      "facet": "Bubble tea and modern tea drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Coconut jelly",
+      "facet": "Bubble tea and modern tea drinks",
+      "known_at": 7
+    },
+    {
+      "name": "Bottled iced tea",
+      "facet": "Bubble tea and modern tea drinks",
+      "known_at": 4
+    },
+    {
+      "name": "Sugar level (half sugar)",
+      "facet": "Bubble tea and modern tea drinks",
+      "known_at": 5
+    },
+    {
+      "name": "Taro milk tea",
+      "facet": "Bubble tea and modern tea drinks",
+      "known_at": 4
+    },
+    {
+      "name": "Cassava",
+      "facet": "Bubble tea and modern tea drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Soy milk",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 2
+    },
+    {
+      "name": "Soy milk maker",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 5
+    },
+    {
+      "name": "Salty soy milk (咸豆浆)",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 9
+    },
+    {
+      "name": "Mung bean soup",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 4
+    },
+    {
+      "name": "Red bean soup",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 4
+    },
+    {
+      "name": "Douzhi (豆汁)",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 10
+    },
+    {
+      "name": "Almond tea (杏仁茶)",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 10
+    },
+    {
+      "name": "Tong sui (糖水)",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 9
+    },
+    {
+      "name": "Drinking hot water",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 3
+    },
+    {
+      "name": "Lotus root starch drink (藕粉)",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 8
+    },
+    {
+      "name": "Walnut milk",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Coconut water",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 5
+    },
+    {
+      "name": "Black sesame paste (芝麻糊)",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Sugarcane juice",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 4
+    },
+    {
+      "name": "Corn juice",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Tremella soup (银耳汤)",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Cantonese slow-cooked soup (老火汤)",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 9
+    },
+    {
+      "name": "Winter melon tea (冬瓜茶)",
+      "facet": "Everyday drinks: soy milk, soups and sweet drinks",
+      "known_at": 10
+    }
+  ]
+}

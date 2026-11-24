@@ -1,0 +1,817 @@
+{
+  "subcategory": "silk-road-and-voyages",
+  "facets": [
+    "Zhang Qian and the Western Regions",
+    "Han envoys and generals abroad",
+    "Overland Silk Road routes and oases",
+    "Dunhuang and Mogao Caves",
+    "Trade goods along the Silk Road",
+    "Buddhist pilgrims to India",
+    "Xuanzang and Journey to the West",
+    "Jianzhen and Tang contacts with Japan",
+    "Tang Chang'an as world city",
+    "Zheng He's treasure fleets",
+    "Maritime Silk Road ports and ships",
+    "Foreign visitors and envoys to China"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Western Regions (西域)",
+      "facet": "Zhang Qian and the Western Regions",
+      "known_at": 5
+    },
+    {
+      "name": "Yuezhi",
+      "facet": "Zhang Qian and the Western Regions",
+      "known_at": 10
+    },
+    {
+      "name": "Dayuan (Ferghana)",
+      "facet": "Zhang Qian and the Western Regions",
+      "known_at": 11
+    },
+    {
+      "name": "Ferghana horses (汗血宝马)",
+      "facet": "Zhang Qian and the Western Regions",
+      "known_at": 8
+    },
+    {
+      "name": "Wusun",
+      "facet": "Zhang Qian and the Western Regions",
+      "known_at": 11
+    },
+    {
+      "name": "Daxia (Bactria)",
+      "facet": "Zhang Qian and the Western Regions",
+      "known_at": 12
+    },
+    {
+      "name": "Kangju",
+      "facet": "Zhang Qian and the Western Regions",
+      "known_at": 13
+    },
+    {
+      "name": "Záokōng (凿空)",
+      "facet": "Zhang Qian and the Western Regions",
+      "known_at": 12
+    },
+    {
+      "name": "Ganfu",
+      "facet": "Zhang Qian and the Western Regions",
+      "known_at": 14
+    },
+    {
+      "name": "Marquis Bowang (博望侯)",
+      "facet": "Zhang Qian and the Western Regions",
+      "known_at": 13
+    },
+    {
+      "name": "Shu cloth and Qiong bamboo staffs",
+      "facet": "Zhang Qian and the Western Regions",
+      "known_at": 14
+    },
+    {
+      "name": "Alfalfa",
+      "facet": "Zhang Qian and the Western Regions",
+      "known_at": 11
+    },
+    {
+      "name": "Gan Ying",
+      "facet": "Han envoys and generals abroad",
+      "known_at": 11
+    },
+    {
+      "name": "Protectorate of the Western Regions (西域都护府)",
+      "facet": "Han envoys and generals abroad",
+      "known_at": 10
+    },
+    {
+      "name": "Zheng Ji",
+      "facet": "Han envoys and generals abroad",
+      "known_at": 13
+    },
+    {
+      "name": "Li Guangli",
+      "facet": "Han envoys and generals abroad",
+      "known_at": 12
+    },
+    {
+      "name": "不入虎穴，焉得虎子 (bù rù hǔ xué, yān dé hǔ zǐ)",
+      "facet": "Han envoys and generals abroad",
+      "known_at": 8
+    },
+    {
+      "name": "投笔从戎 (tóu bǐ cóng róng)",
+      "facet": "Han envoys and generals abroad",
+      "known_at": 9
+    },
+    {
+      "name": "Fu Jiezi",
+      "facet": "Han envoys and generals abroad",
+      "known_at": 13
+    },
+    {
+      "name": "封狼居胥 (fēng láng jū xū)",
+      "facet": "Han envoys and generals abroad",
+      "known_at": 11
+    },
+    {
+      "name": "Book of the Later Han",
+      "facet": "Han envoys and generals abroad",
+      "known_at": 11
+    },
+    {
+      "name": "Da Qin (大秦)",
+      "facet": "Han envoys and generals abroad",
+      "known_at": 11
+    },
+    {
+      "name": "Jade Gate Pass (玉门关)",
+      "facet": "Overland Silk Road routes and oases",
+      "known_at": 6
+    },
+    {
+      "name": "Yang Pass (阳关)",
+      "facet": "Overland Silk Road routes and oases",
+      "known_at": 7
+    },
+    {
+      "name": "Gaochang",
+      "facet": "Overland Silk Road routes and oases",
+      "known_at": 10
+    },
+    {
+      "name": "Khotan (Hotan)",
+      "facet": "Overland Silk Road routes and oases",
+      "known_at": 10
+    },
+    {
+      "name": "Kucha",
+      "facet": "Overland Silk Road routes and oases",
+      "known_at": 11
+    },
+    {
+      "name": "Pamir Mountains",
+      "facet": "Overland Silk Road routes and oases",
+      "known_at": 9
+    },
+    {
+      "name": "Samarkand",
+      "facet": "Overland Silk Road routes and oases",
+      "known_at": 11
+    },
+    {
+      "name": "Wuwei",
+      "facet": "Overland Silk Road routes and oases",
+      "known_at": 9
+    },
+    {
+      "name": "Zhangye",
+      "facet": "Overland Silk Road routes and oases",
+      "known_at": 9
+    },
+    {
+      "name": "Karez wells",
+      "facet": "Overland Silk Road routes and oases",
+      "known_at": 10
+    },
+    {
+      "name": "Caravanserai",
+      "facet": "Overland Silk Road routes and oases",
+      "known_at": 12
+    },
+    {
+      "name": "Niya",
+      "facet": "Overland Silk Road routes and oases",
+      "known_at": 14
+    },
+    {
+      "name": "Ferdinand von Richthofen",
+      "facet": "Overland Silk Road routes and oases",
+      "known_at": 12
+    },
+    {
+      "name": "Silk Roads: Chang'an–Tianshan Corridor",
+      "facet": "Overland Silk Road routes and oases",
+      "known_at": 12
+    },
+    {
+      "name": "Mingsha Mountain (鸣沙山)",
+      "facet": "Dunhuang and Mogao Caves",
+      "known_at": 7
+    },
+    {
+      "name": "Aurel Stein",
+      "facet": "Dunhuang and Mogao Caves",
+      "known_at": 12
+    },
+    {
+      "name": "Paul Pelliot",
+      "facet": "Dunhuang and Mogao Caves",
+      "known_at": 13
+    },
+    {
+      "name": "Dunhuang Academy",
+      "facet": "Dunhuang and Mogao Caves",
+      "known_at": 13
+    },
+    {
+      "name": "Dunhuang studies (敦煌学)",
+      "facet": "Dunhuang and Mogao Caves",
+      "known_at": 13
+    },
+    {
+      "name": "Nine-Storey Building (九层楼)",
+      "facet": "Dunhuang and Mogao Caves",
+      "known_at": 13
+    },
+    {
+      "name": "Dunhuang Star Chart",
+      "facet": "Dunhuang and Mogao Caves",
+      "known_at": 13
+    },
+    {
+      "name": "Playing the pipa behind the back (反弹琵琶)",
+      "facet": "Dunhuang and Mogao Caves",
+      "known_at": 9
+    },
+    {
+      "name": "Flower Rain on the Silk Road (丝路花雨)",
+      "facet": "Dunhuang and Mogao Caves",
+      "known_at": 11
+    },
+    {
+      "name": "Yulin Caves",
+      "facet": "Dunhuang and Mogao Caves",
+      "known_at": 13
+    },
+    {
+      "name": "Nine-Coloured Deer (九色鹿)",
+      "facet": "Dunhuang and Mogao Caves",
+      "known_at": 6
+    },
+    {
+      "name": "Silk",
+      "facet": "Trade goods along the Silk Road",
+      "known_at": 2
+    },
+    {
+      "name": "Porcelain",
+      "facet": "Trade goods along the Silk Road",
+      "known_at": 4
+    },
+    {
+      "name": "Grapes",
+      "facet": "Trade goods along the Silk Road",
+      "known_at": 2
+    },
+    {
+      "name": "Pomegranate",
+      "facet": "Trade goods along the Silk Road",
+      "known_at": 4
+    },
+    {
+      "name": "Walnut",
+      "facet": "Trade goods along the Silk Road",
+      "known_at": 5
+    },
+    {
+      "name": "Cucumber (胡瓜)",
+      "facet": "Trade goods along the Silk Road",
+      "known_at": 6
+    },
+    {
+      "name": "Carrot (胡萝卜)",
+      "facet": "Trade goods along the Silk Road",
+      "known_at": 5
+    },
+    {
+      "name": "Sesame (胡麻)",
+      "facet": "Trade goods along the Silk Road",
+      "known_at": 8
+    },
+    {
+      "name": "Black pepper (胡椒)",
+      "facet": "Trade goods along the Silk Road",
+      "known_at": 7
+    },
+    {
+      "name": "Coriander",
+      "facet": "Trade goods along the Silk Road",
+      "known_at": 11
+    },
+    {
+      "name": "Glassware",
+      "facet": "Trade goods along the Silk Road",
+      "known_at": 8
+    },
+    {
+      "name": "Lapis lazuli",
+      "facet": "Trade goods along the Silk Road",
+      "known_at": 11
+    },
+    {
+      "name": "Paper",
+      "facet": "Trade goods along the Silk Road",
+      "known_at": 4
+    },
+    {
+      "name": "Rhubarb",
+      "facet": "Trade goods along the Silk Road",
+      "known_at": 13
+    },
+    {
+      "name": "Byzantine gold coins",
+      "facet": "Trade goods along the Silk Road",
+      "known_at": 12
+    },
+    {
+      "name": "A Record of Buddhist Kingdoms (佛国记)",
+      "facet": "Buddhist pilgrims to India",
+      "known_at": 13
+    },
+    {
+      "name": "Yijing (monk)",
+      "facet": "Buddhist pilgrims to India",
+      "known_at": 12
+    },
+    {
+      "name": "Nalanda",
+      "facet": "Buddhist pilgrims to India",
+      "known_at": 11
+    },
+    {
+      "name": "Emperor Ming of Han's dream",
+      "facet": "Buddhist pilgrims to India",
+      "known_at": 12
+    },
+    {
+      "name": "Kasyapa Matanga",
+      "facet": "Buddhist pilgrims to India",
+      "known_at": 14
+    },
+    {
+      "name": "Bodh Gaya",
+      "facet": "Buddhist pilgrims to India",
+      "known_at": 12
+    },
+    {
+      "name": "Lion Kingdom (师子国)",
+      "facet": "Buddhist pilgrims to India",
+      "known_at": 12
+    },
+    {
+      "name": "Ganges River",
+      "facet": "Buddhist pilgrims to India",
+      "known_at": 6
+    },
+    {
+      "name": "Bamiyan Buddhas",
+      "facet": "Buddhist pilgrims to India",
+      "known_at": 11
+    },
+    {
+      "name": "Buddhist sutras",
+      "facet": "Buddhist pilgrims to India",
+      "known_at": 5
+    },
+    {
+      "name": "Gautama Buddha",
+      "facet": "Buddhist pilgrims to India",
+      "known_at": 3
+    },
+    {
+      "name": "Gandhara",
+      "facet": "Buddhist pilgrims to India",
+      "known_at": 13
+    },
+    {
+      "name": "Hyecho",
+      "facet": "Buddhist pilgrims to India",
+      "known_at": 14
+    },
+    {
+      "name": "Sanskrit",
+      "facet": "Buddhist pilgrims to India",
+      "known_at": 9
+    },
+    {
+      "name": "Tang Sanzang (唐僧)",
+      "facet": "Xuanzang and Journey to the West",
+      "known_at": 1
+    },
+    {
+      "name": "White Dragon Horse",
+      "facet": "Xuanzang and Journey to the West",
+      "known_at": 3
+    },
+    {
+      "name": "Golden Cudgel (如意金箍棒)",
+      "facet": "Xuanzang and Journey to the West",
+      "known_at": 2
+    },
+    {
+      "name": "Great Tang Records on the Western Regions (大唐西域记)",
+      "facet": "Xuanzang and Journey to the West",
+      "known_at": 10
+    },
+    {
+      "name": "Bianji",
+      "facet": "Xuanzang and Journey to the West",
+      "known_at": 14
+    },
+    {
+      "name": "Giant Wild Goose Pagoda",
+      "facet": "Xuanzang and Journey to the West",
+      "known_at": 6
+    },
+    {
+      "name": "Heart Sutra",
+      "facet": "Xuanzang and Journey to the West",
+      "known_at": 9
+    },
+    {
+      "name": "Eighty-one difficulties (九九八十一难)",
+      "facet": "Xuanzang and Journey to the West",
+      "known_at": 6
+    },
+    {
+      "name": "Thunderclap Monastery (雷音寺)",
+      "facet": "Xuanzang and Journey to the West",
+      "known_at": 6
+    },
+    {
+      "name": "Kingdom of Women (女儿国)",
+      "facet": "Xuanzang and Journey to the West",
+      "known_at": 4
+    },
+    {
+      "name": "Qu Wentai",
+      "facet": "Xuanzang and Journey to the West",
+      "known_at": 13
+    },
+    {
+      "name": "Harsha",
+      "facet": "Xuanzang and Journey to the West",
+      "known_at": 14
+    },
+    {
+      "name": "Jianzhen",
+      "facet": "Jianzhen and Tang contacts with Japan",
+      "known_at": 7
+    },
+    {
+      "name": "Tōshōdai-ji",
+      "facet": "Jianzhen and Tang contacts with Japan",
+      "known_at": 11
+    },
+    {
+      "name": "Daming Temple (Yangzhou)",
+      "facet": "Jianzhen and Tang contacts with Japan",
+      "known_at": 11
+    },
+    {
+      "name": "Nara",
+      "facet": "Jianzhen and Tang contacts with Japan",
+      "known_at": 8
+    },
+    {
+      "name": "Heian-kyō (Kyoto)",
+      "facet": "Jianzhen and Tang contacts with Japan",
+      "known_at": 8
+    },
+    {
+      "name": "Japanese missions to Tang China (遣唐使)",
+      "facet": "Jianzhen and Tang contacts with Japan",
+      "known_at": 8
+    },
+    {
+      "name": "Abe no Nakamaro (晁衡)",
+      "facet": "Jianzhen and Tang contacts with Japan",
+      "known_at": 11
+    },
+    {
+      "name": "Mourning Chao Heng (哭晁卿衡)",
+      "facet": "Jianzhen and Tang contacts with Japan",
+      "known_at": 12
+    },
+    {
+      "name": "Kūkai",
+      "facet": "Jianzhen and Tang contacts with Japan",
+      "known_at": 12
+    },
+    {
+      "name": "Saichō",
+      "facet": "Jianzhen and Tang contacts with Japan",
+      "known_at": 14
+    },
+    {
+      "name": "Ennin",
+      "facet": "Jianzhen and Tang contacts with Japan",
+      "known_at": 14
+    },
+    {
+      "name": "Choe Chiwon",
+      "facet": "Jianzhen and Tang contacts with Japan",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Baijiangkou",
+      "facet": "Jianzhen and Tang contacts with Japan",
+      "known_at": 13
+    },
+    {
+      "name": "West Market (西市)",
+      "facet": "Tang Chang'an as world city",
+      "known_at": 8
+    },
+    {
+      "name": "East Market (东市)",
+      "facet": "Tang Chang'an as world city",
+      "known_at": 10
+    },
+    {
+      "name": "Tang sancai",
+      "facet": "Tang Chang'an as world city",
+      "known_at": 8
+    },
+    {
+      "name": "Nestorian Stele (大秦景教流行中国碑)",
+      "facet": "Tang Chang'an as world city",
+      "known_at": 13
+    },
+    {
+      "name": "Zoroastrianism",
+      "facet": "Tang Chang'an as world city",
+      "known_at": 13
+    },
+    {
+      "name": "Liangzhou Ci (凉州词)",
+      "facet": "Tang Chang'an as world city",
+      "known_at": 7
+    },
+    {
+      "name": "Prosperity of Kaiyuan (开元盛世)",
+      "facet": "Tang Chang'an as world city",
+      "known_at": 9
+    },
+    {
+      "name": "Grand Tang Everbright City (大唐不夜城)",
+      "facet": "Tang Chang'an as world city",
+      "known_at": 7
+    },
+    {
+      "name": "Zheng He's seven voyages",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 6
+    },
+    {
+      "name": "Treasure ships (宝船)",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 8
+    },
+    {
+      "name": "Sanbao Eunuch (三宝太监)",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 10
+    },
+    {
+      "name": "Liujiagang",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 13
+    },
+    {
+      "name": "Longjiang Shipyard",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 13
+    },
+    {
+      "name": "Changle",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 13
+    },
+    {
+      "name": "Calicut",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 12
+    },
+    {
+      "name": "Malacca",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 10
+    },
+    {
+      "name": "Hormuz",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 13
+    },
+    {
+      "name": "Malindi",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 13
+    },
+    {
+      "name": "Giraffe (麒麟)",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 9
+    },
+    {
+      "name": "Ma Huan",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 14
+    },
+    {
+      "name": "Yingya Shenglan (瀛涯胜览)",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 14
+    },
+    {
+      "name": "Kunyang (Zheng He's hometown)",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 11
+    },
+    {
+      "name": "Mazu",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 9
+    },
+    {
+      "name": "Galle Trilingual Inscription",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 14
+    },
+    {
+      "name": "China Maritime Day (航海日)",
+      "facet": "Zheng He's treasure fleets",
+      "known_at": 12
+    },
+    {
+      "name": "Ningbo (明州)",
+      "facet": "Maritime Silk Road ports and ships",
+      "known_at": 10
+    },
+    {
+      "name": "Hepu",
+      "facet": "Maritime Silk Road ports and ships",
+      "known_at": 13
+    },
+    {
+      "name": "Nanhai One (南海一号)",
+      "facet": "Maritime Silk Road ports and ships",
+      "known_at": 10
+    },
+    {
+      "name": "Belitung shipwreck",
+      "facet": "Maritime Silk Road ports and ships",
+      "known_at": 14
+    },
+    {
+      "name": "Junk",
+      "facet": "Maritime Silk Road ports and ships",
+      "known_at": 6
+    },
+    {
+      "name": "Compass",
+      "facet": "Maritime Silk Road ports and ships",
+      "known_at": 3
+    },
+    {
+      "name": "Watertight compartments",
+      "facet": "Maritime Silk Road ports and ships",
+      "known_at": 11
+    },
+    {
+      "name": "Shibosi (市舶司)",
+      "facet": "Maritime Silk Road ports and ships",
+      "known_at": 12
+    },
+    {
+      "name": "Qingjing Mosque",
+      "facet": "Maritime Silk Road ports and ships",
+      "known_at": 13
+    },
+    {
+      "name": "Kaiyuan Temple (Quanzhou)",
+      "facet": "Maritime Silk Road ports and ships",
+      "known_at": 12
+    },
+    {
+      "name": "Huaisheng Mosque",
+      "facet": "Maritime Silk Road ports and ships",
+      "known_at": 13
+    },
+    {
+      "name": "Dhow",
+      "facet": "Maritime Silk Road ports and ships",
+      "known_at": 12
+    },
+    {
+      "name": "Longquan celadon",
+      "facet": "Maritime Silk Road ports and ships",
+      "known_at": 11
+    },
+    {
+      "name": "Pu Shougeng",
+      "facet": "Maritime Silk Road ports and ships",
+      "known_at": 14
+    },
+    {
+      "name": "Thirteen Factories (十三行)",
+      "facet": "Maritime Silk Road ports and ships",
+      "known_at": 12
+    },
+    {
+      "name": "The Travels of Marco Polo",
+      "facet": "Foreign visitors and envoys to China",
+      "known_at": 9
+    },
+    {
+      "name": "Khanbaliq (大都)",
+      "facet": "Foreign visitors and envoys to China",
+      "known_at": 11
+    },
+    {
+      "name": "Shangdu (Xanadu)",
+      "facet": "Foreign visitors and envoys to China",
+      "known_at": 11
+    },
+    {
+      "name": "Ibn Battuta",
+      "facet": "Foreign visitors and envoys to China",
+      "known_at": 11
+    },
+    {
+      "name": "Rabban Bar Sauma",
+      "facet": "Foreign visitors and envoys to China",
+      "known_at": 14
+    },
+    {
+      "name": "Johann Adam Schall von Bell",
+      "facet": "Foreign visitors and envoys to China",
+      "known_at": 13
+    },
+    {
+      "name": "Giuseppe Castiglione (郎世宁)",
+      "facet": "Foreign visitors and envoys to China",
+      "known_at": 12
+    },
+    {
+      "name": "Tributary system",
+      "facet": "Foreign visitors and envoys to China",
+      "known_at": 12
+    },
+    {
+      "name": "Portraits of Periodical Offering (职贡图)",
+      "facet": "Foreign visitors and envoys to China",
+      "known_at": 13
+    },
+    {
+      "name": "Gar Tongtsen (禄东赞)",
+      "facet": "Foreign visitors and envoys to China",
+      "known_at": 12
+    }
+  ]
+}

@@ -1,0 +1,967 @@
+{
+  "subcategory": "classic-tv-series",
+  "facets": [
+    "Journey to the West 1986",
+    "Dream of the Red Chamber 1987",
+    "Three Kingdoms 1994",
+    "Water Margin 1998",
+    "My Fair Princess (还珠格格)",
+    "Sitcoms: Home with Kids, My Own Swordsman",
+    "Wuxia drama adaptations (Jin Yong)",
+    "Palace and historical dramas",
+    "Legend and fantasy dramas (Bao Qingtian, White Snake)",
+    "Theme songs and TV music",
+    "Classic TV actors and directors",
+    "Taiwan and Hong Kong idol dramas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Liu Xiao Ling Tong (六小龄童)",
+      "facet": "Journey to the West 1986",
+      "known_at": 5
+    },
+    {
+      "name": "Ma Dehua (马德华)",
+      "facet": "Journey to the West 1986",
+      "known_at": 10
+    },
+    {
+      "name": "Chi Chongrui (迟重瑞)",
+      "facet": "Journey to the West 1986",
+      "known_at": 12
+    },
+    {
+      "name": "Yan Huaili (闫怀礼)",
+      "facet": "Journey to the West 1986",
+      "known_at": 12
+    },
+    {
+      "name": "Golden Cudgel (金箍棒)",
+      "facet": "Journey to the West 1986",
+      "known_at": 2
+    },
+    {
+      "name": "Tightening Headband Spell (紧箍咒)",
+      "facet": "Journey to the West 1986",
+      "known_at": 4
+    },
+    {
+      "name": "Bone Demon (白骨精)",
+      "facet": "Journey to the West 1986",
+      "known_at": 4
+    },
+    {
+      "name": "Jia Baoyu (贾宝玉)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 6
+    },
+    {
+      "name": "Lin Daiyu (林黛玉)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 5
+    },
+    {
+      "name": "Xue Baochai (薛宝钗)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 7
+    },
+    {
+      "name": "Wang Xifeng (王熙凤)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 8
+    },
+    {
+      "name": "Grandmother Jia (贾母)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 8
+    },
+    {
+      "name": "Granny Liu (刘姥姥)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 8
+    },
+    {
+      "name": "Shi Xiangyun (史湘云)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 10
+    },
+    {
+      "name": "Jia Tanchun (贾探春)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 11
+    },
+    {
+      "name": "Qingwen (晴雯)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 11
+    },
+    {
+      "name": "Grand View Garden (大观园)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 8
+    },
+    {
+      "name": "Rongguo Mansion (荣国府)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 11
+    },
+    {
+      "name": "Daiyu Burying Flowers (黛玉葬花)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 8
+    },
+    {
+      "name": "Tongling Jade (通灵宝玉)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 9
+    },
+    {
+      "name": "Cao Xueqin (曹雪芹)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 7
+    },
+    {
+      "name": "Chen Xiaoxu (陈晓旭)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 9
+    },
+    {
+      "name": "Ouyang Fenqiang (欧阳奋强)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Li (张莉)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 13
+    },
+    {
+      "name": "Deng Jie (邓婕)",
+      "facet": "Dream of the Red Chamber 1987",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Fei (张飞)",
+      "facet": "Three Kingdoms 1994",
+      "known_at": 5
+    },
+    {
+      "name": "Zhao Yun (赵云)",
+      "facet": "Three Kingdoms 1994",
+      "known_at": 6
+    },
+    {
+      "name": "Lü Bu (吕布)",
+      "facet": "Three Kingdoms 1994",
+      "known_at": 7
+    },
+    {
+      "name": "Diaochan (貂蝉)",
+      "facet": "Three Kingdoms 1994",
+      "known_at": 8
+    },
+    {
+      "name": "Borrowing Arrows with Straw Boats (草船借箭)",
+      "facet": "Three Kingdoms 1994",
+      "known_at": 6
+    },
+    {
+      "name": "Red Hare (赤兔马)",
+      "facet": "Three Kingdoms 1994",
+      "known_at": 7
+    },
+    {
+      "name": "Luo Guanzhong (罗贯中)",
+      "facet": "Three Kingdoms 1994",
+      "known_at": 8
+    },
+    {
+      "name": "Tang Guoqiang (唐国强)",
+      "facet": "Three Kingdoms 1994",
+      "known_at": 9
+    },
+    {
+      "name": "Bao Guo'an (鲍国安)",
+      "facet": "Three Kingdoms 1994",
+      "known_at": 11
+    },
+    {
+      "name": "Lu Shuming (陆树铭)",
+      "facet": "Three Kingdoms 1994",
+      "known_at": 12
+    },
+    {
+      "name": "Sun Yanjun (孙彦军)",
+      "facet": "Three Kingdoms 1994",
+      "known_at": 13
+    },
+    {
+      "name": "Li Kui (李逵)",
+      "facet": "Water Margin 1998",
+      "known_at": 7
+    },
+    {
+      "name": "Lin Chong (林冲)",
+      "facet": "Water Margin 1998",
+      "known_at": 8
+    },
+    {
+      "name": "Wu Yong (吴用)",
+      "facet": "Water Margin 1998",
+      "known_at": 9
+    },
+    {
+      "name": "Chao Gai (晁盖)",
+      "facet": "Water Margin 1998",
+      "known_at": 10
+    },
+    {
+      "name": "Yang Zhi (杨志)",
+      "facet": "Water Margin 1998",
+      "known_at": 10
+    },
+    {
+      "name": "Yan Qing (燕青)",
+      "facet": "Water Margin 1998",
+      "known_at": 11
+    },
+    {
+      "name": "Hu Sanniang (扈三娘)",
+      "facet": "Water Margin 1998",
+      "known_at": 11
+    },
+    {
+      "name": "108 Heroes of Liangshan (一百零八将)",
+      "facet": "Water Margin 1998",
+      "known_at": 6
+    },
+    {
+      "name": "Lu Zhishen Uproots the Willow (倒拔垂杨柳)",
+      "facet": "Water Margin 1998",
+      "known_at": 8
+    },
+    {
+      "name": "Seizing the Birthday Gifts (智取生辰纲)",
+      "facet": "Water Margin 1998",
+      "known_at": 9
+    },
+    {
+      "name": "Shi Nai'an (施耐庵)",
+      "facet": "Water Margin 1998",
+      "known_at": 8
+    },
+    {
+      "name": "Ding Haifeng (丁海峰)",
+      "facet": "Water Margin 1998",
+      "known_at": 12
+    },
+    {
+      "name": "Zang Jinsheng (臧金生)",
+      "facet": "Water Margin 1998",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Shaolin (张绍林)",
+      "facet": "Water Margin 1998",
+      "known_at": 13
+    },
+    {
+      "name": "Xiao Yanzi (小燕子)",
+      "facet": "My Fair Princess (还珠格格)",
+      "known_at": 4
+    },
+    {
+      "name": "Ziwei (紫薇)",
+      "facet": "My Fair Princess (还珠格格)",
+      "known_at": 5
+    },
+    {
+      "name": "Yongqi, the Fifth Prince (五阿哥)",
+      "facet": "My Fair Princess (还珠格格)",
+      "known_at": 6
+    },
+    {
+      "name": "Erkang (尔康)",
+      "facet": "My Fair Princess (还珠格格)",
+      "known_at": 6
+    },
+    {
+      "name": "Jinsuo (金锁)",
+      "facet": "My Fair Princess (还珠格格)",
+      "known_at": 7
+    },
+    {
+      "name": "Rong Mama (容嬷嬷)",
+      "facet": "My Fair Princess (还珠格格)",
+      "known_at": 6
+    },
+    {
+      "name": "Xia Yuhe (夏雨荷)",
+      "facet": "My Fair Princess (还珠格格)",
+      "known_at": 7
+    },
+    {
+      "name": "Hanxiang (含香)",
+      "facet": "My Fair Princess (还珠格格)",
+      "known_at": 8
+    },
+    {
+      "name": "Gege (格格)",
+      "facet": "My Fair Princess (还珠格格)",
+      "known_at": 7
+    },
+    {
+      "name": "Chiung Yao (琼瑶)",
+      "facet": "My Fair Princess (还珠格格)",
+      "known_at": 7
+    },
+    {
+      "name": "Zhao Wei (赵薇)",
+      "facet": "My Fair Princess (还珠格格)",
+      "known_at": 5
+    },
+    {
+      "name": "Fan Bingbing (范冰冰)",
+      "facet": "My Fair Princess (还珠格格)",
+      "known_at": 7
+    },
+    {
+      "name": "Su Youpeng (苏有朋)",
+      "facet": "My Fair Princess (还珠格格)",
+      "known_at": 7
+    },
+    {
+      "name": "Zhou Jie (周杰)",
+      "facet": "My Fair Princess (还珠格格)",
+      "known_at": 8
+    },
+    {
+      "name": "Zhang Tielin (张铁林)",
+      "facet": "My Fair Princess (还珠格格)",
+      "known_at": 9
+    },
+    {
+      "name": "Home with Kids (家有儿女)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 4
+    },
+    {
+      "name": "Liu Xing (刘星)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 5
+    },
+    {
+      "name": "Xia Xue (夏雪)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 6
+    },
+    {
+      "name": "Xia Yu (夏雨)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 6
+    },
+    {
+      "name": "Liu Mei (刘梅)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 7
+    },
+    {
+      "name": "Xia Donghai (夏东海)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 7
+    },
+    {
+      "name": "Zhang Yishan (张一山)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 6
+    },
+    {
+      "name": "Yang Zi (杨紫)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 6
+    },
+    {
+      "name": "Song Dandan (宋丹丹)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 7
+    },
+    {
+      "name": "My Own Swordsman (武林外传)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 5
+    },
+    {
+      "name": "Tong Xiangyu (佟湘玉)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 6
+    },
+    {
+      "name": "Bai Zhantang (白展堂)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 6
+    },
+    {
+      "name": "Guo Furong (郭芙蓉)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 7
+    },
+    {
+      "name": "Lü Xiucai (吕秀才)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 7
+    },
+    {
+      "name": "Li Dazui (李大嘴)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 7
+    },
+    {
+      "name": "Mo Xiaobei (莫小贝)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 8
+    },
+    {
+      "name": "Tongfu Inn (同福客栈)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 6
+    },
+    {
+      "name": "Qixia Town (七侠镇)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 9
+    },
+    {
+      "name": "Sunflower Acupoint Hand (葵花点穴手)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 8
+    },
+    {
+      "name": "Yan Ni (闫妮)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 9
+    },
+    {
+      "name": "Shang Jing (尚敬)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 12
+    },
+    {
+      "name": "Ning Caishen (宁财神)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 12
+    },
+    {
+      "name": "I Love My Family (我爱我家)",
+      "facet": "Sitcoms: Home with Kids, My Own Swordsman",
+      "known_at": 9
+    },
+    {
+      "name": "Jin Yong (金庸)",
+      "facet": "Wuxia drama adaptations (Jin Yong)",
+      "known_at": 6
+    },
+    {
+      "name": "Guo Jing (郭靖)",
+      "facet": "Wuxia drama adaptations (Jin Yong)",
+      "known_at": 6
+    },
+    {
+      "name": "Huang Rong (黄蓉)",
+      "facet": "Wuxia drama adaptations (Jin Yong)",
+      "known_at": 6
+    },
+    {
+      "name": "Yang Guo (杨过)",
+      "facet": "Wuxia drama adaptations (Jin Yong)",
+      "known_at": 7
+    },
+    {
+      "name": "Zhang Wuji (张无忌)",
+      "facet": "Wuxia drama adaptations (Jin Yong)",
+      "known_at": 8
+    },
+    {
+      "name": "Linghu Chong (令狐冲)",
+      "facet": "Wuxia drama adaptations (Jin Yong)",
+      "known_at": 9
+    },
+    {
+      "name": "Wei Xiaobao (韦小宝)",
+      "facet": "Wuxia drama adaptations (Jin Yong)",
+      "known_at": 8
+    },
+    {
+      "name": "Qiao Feng (乔峰)",
+      "facet": "Wuxia drama adaptations (Jin Yong)",
+      "known_at": 9
+    },
+    {
+      "name": "Duan Yu (段誉)",
+      "facet": "Wuxia drama adaptations (Jin Yong)",
+      "known_at": 9
+    },
+    {
+      "name": "Wudang Sect (武当派)",
+      "facet": "Wuxia drama adaptations (Jin Yong)",
+      "known_at": 8
+    },
+    {
+      "name": "Felix Wong (黄日华)",
+      "facet": "Wuxia drama adaptations (Jin Yong)",
+      "known_at": 12
+    },
+    {
+      "name": "Carman Lee (李若彤)",
+      "facet": "Wuxia drama adaptations (Jin Yong)",
+      "known_at": 12
+    },
+    {
+      "name": "Kangxi Dynasty (康熙王朝)",
+      "facet": "Palace and historical dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Yongzheng Dynasty (雍正王朝)",
+      "facet": "Palace and historical dramas",
+      "known_at": 10
+    },
+    {
+      "name": "The Bronze Teeth (铁齿铜牙纪晓岚)",
+      "facet": "Palace and historical dramas",
+      "known_at": 8
+    },
+    {
+      "name": "Ji Xiaolan (纪晓岚)",
+      "facet": "Palace and historical dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Heshen (和珅)",
+      "facet": "Palace and historical dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Prime Minister Liu Luoguo (宰相刘罗锅)",
+      "facet": "Palace and historical dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Kangxi Incognito Travels (康熙微服私访记)",
+      "facet": "Palace and historical dramas",
+      "known_at": 10
+    },
+    {
+      "name": "The Great Emperor in Han Dynasty (汉武大帝)",
+      "facet": "Palace and historical dramas",
+      "known_at": 11
+    },
+    {
+      "name": "The Grand Mansion Gate (大宅门)",
+      "facet": "Palace and historical dramas",
+      "known_at": 11
+    },
+    {
+      "name": "Towards the Republic (走向共和)",
+      "facet": "Palace and historical dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Ming Dynasty in 1566 (大明王朝1566)",
+      "facet": "Palace and historical dramas",
+      "known_at": 13
+    },
+    {
+      "name": "The Story of Xiaozhuang (孝庄秘史)",
+      "facet": "Palace and historical dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Imperial Edict (圣旨)",
+      "facet": "Palace and historical dramas",
+      "known_at": 6
+    },
+    {
+      "name": "Zha (喳)",
+      "facet": "Palace and historical dramas",
+      "known_at": 8
+    },
+    {
+      "name": "Wansui (万岁)",
+      "facet": "Palace and historical dramas",
+      "known_at": 6
+    },
+    {
+      "name": "Justice Bao (包青天)",
+      "facet": "Legend and fantasy dramas (Bao Qingtian, White Snake)",
+      "known_at": 5
+    },
+    {
+      "name": "Crescent Moon Mark (月牙)",
+      "facet": "Legend and fantasy dramas (Bao Qingtian, White Snake)",
+      "known_at": 7
+    },
+    {
+      "name": "Jin Chao-chun (金超群)",
+      "facet": "Legend and fantasy dramas (Bao Qingtian, White Snake)",
+      "known_at": 11
+    },
+    {
+      "name": "New Legend of Madame White Snake (新白娘子传奇)",
+      "facet": "Legend and fantasy dramas (Bao Qingtian, White Snake)",
+      "known_at": 5
+    },
+    {
+      "name": "Angie Chiu (赵雅芝)",
+      "facet": "Legend and fantasy dramas (Bao Qingtian, White Snake)",
+      "known_at": 8
+    },
+    {
+      "name": "Ye Tong (叶童)",
+      "facet": "Legend and fantasy dramas (Bao Qingtian, White Snake)",
+      "known_at": 10
+    },
+    {
+      "name": "Investiture of the Gods (封神榜)",
+      "facet": "Legend and fantasy dramas (Bao Qingtian, White Snake)",
+      "known_at": 8
+    },
+    {
+      "name": "Li Xiaoyao (李逍遥)",
+      "facet": "Legend and fantasy dramas (Bao Qingtian, White Snake)",
+      "known_at": 9
+    },
+    {
+      "name": "You Benchang (游本昌)",
+      "facet": "Legend and fantasy dramas (Bao Qingtian, White Snake)",
+      "known_at": 11
+    },
+    {
+      "name": "Strange Tales from a Chinese Studio (聊斋)",
+      "facet": "Legend and fantasy dramas (Bao Qingtian, White Snake)",
+      "known_at": 9
+    },
+    {
+      "name": "The Song of Heroes (好汉歌)",
+      "facet": "Theme songs and TV music",
+      "known_at": 7
+    },
+    {
+      "name": "Liu Huan (刘欢)",
+      "facet": "Theme songs and TV music",
+      "known_at": 9
+    },
+    {
+      "name": "Dare to Ask Where the Road Is (敢问路在何方)",
+      "facet": "Theme songs and TV music",
+      "known_at": 7
+    },
+    {
+      "name": "Yun Gong Xun Yin (云宫迅音)",
+      "facet": "Theme songs and TV music",
+      "known_at": 10
+    },
+    {
+      "name": "Nü'er Qing (女儿情)",
+      "facet": "Theme songs and TV music",
+      "known_at": 8
+    },
+    {
+      "name": "Jiang Dawei (蒋大为)",
+      "facet": "Theme songs and TV music",
+      "known_at": 10
+    },
+    {
+      "name": "Xu Jingqing (许镜清)",
+      "facet": "Theme songs and TV music",
+      "known_at": 13
+    },
+    {
+      "name": "Rolling Yangtze River Flows East (滚滚长江东逝水)",
+      "facet": "Theme songs and TV music",
+      "known_at": 9
+    },
+    {
+      "name": "Yang Hongji (杨洪基)",
+      "facet": "Theme songs and TV music",
+      "known_at": 12
+    },
+    {
+      "name": "Wang Ning Mei (枉凝眉)",
+      "facet": "Theme songs and TV music",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Liping (王立平)",
+      "facet": "Theme songs and TV music",
+      "known_at": 12
+    },
+    {
+      "name": "A Thousand Years Wait (千年等一回)",
+      "facet": "Theme songs and TV music",
+      "known_at": 6
+    },
+    {
+      "name": "Gao Shengmei (高胜美)",
+      "facet": "Theme songs and TV music",
+      "known_at": 11
+    },
+    {
+      "name": "Tie Xue Dan Xin (铁血丹心)",
+      "facet": "Theme songs and TV music",
+      "known_at": 9
+    },
+    {
+      "name": "The Great Wall Will Never Fall (万里长城永不倒)",
+      "facet": "Theme songs and TV music",
+      "known_at": 10
+    },
+    {
+      "name": "Good People Have Peaceful Lives (好人一生平安)",
+      "facet": "Theme songs and TV music",
+      "known_at": 10
+    },
+    {
+      "name": "Youthful Ambition Knows No Sorrow (少年壮志不言愁)",
+      "facet": "Theme songs and TV music",
+      "known_at": 11
+    },
+    {
+      "name": "Dao Jian Ru Meng (刀剑如梦)",
+      "facet": "Theme songs and TV music",
+      "known_at": 10
+    },
+    {
+      "name": "Wakin Chau (周华健)",
+      "facet": "Theme songs and TV music",
+      "known_at": 10
+    },
+    {
+      "name": "Yang Jie (杨洁)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Fulin (王扶林)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Jizhong (张纪中)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 11
+    },
+    {
+      "name": "Li Xuejian (李雪健)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 11
+    },
+    {
+      "name": "Chen Daoming (陈道明)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 10
+    },
+    {
+      "name": "Zhang Guoli (张国立)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Gang (王刚)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 10
+    },
+    {
+      "name": "Chen Baoguo (陈宝国)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 11
+    },
+    {
+      "name": "Pu Cunxin (濮存昕)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Xiaoqing (刘晓庆)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 10
+    },
+    {
+      "name": "Ge You (葛优)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 8
+    },
+    {
+      "name": "Zhao Benshan (赵本山)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 5
+    },
+    {
+      "name": "Hu Ge (胡歌)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 7
+    },
+    {
+      "name": "Liu Yifei (刘亦菲)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 7
+    },
+    {
+      "name": "Huang Xiaoming (黄晓明)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 8
+    },
+    {
+      "name": "Li Yapeng (李亚鹏)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 11
+    },
+    {
+      "name": "Zhou Xun (周迅)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 9
+    },
+    {
+      "name": "Liu Tao (刘涛)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 9
+    },
+    {
+      "name": "Adam Cheng (郑少秋)",
+      "facet": "Classic TV actors and directors",
+      "known_at": 11
+    },
+    {
+      "name": "Meteor Garden (流星花园)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 6
+    },
+    {
+      "name": "Dao Ming Si (道明寺)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Shan Cai (杉菜)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 8
+    },
+    {
+      "name": "Barbie Hsu (大S)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 8
+    },
+    {
+      "name": "Jerry Yan (言承旭)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Vic Chou (周渝民)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 10
+    },
+    {
+      "name": "It Started with a Kiss (恶作剧之吻)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Fated to Love You (命中注定我爱你)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Joe Chen (陈乔恩)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 10
+    },
+    {
+      "name": "The Prince Who Turns into a Frog (王子变青蛙)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Ming Dao (明道)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 11
+    },
+    {
+      "name": "Devil Beside You (恶魔在身边)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 11
+    },
+    {
+      "name": "Rainie Yang (杨丞琳)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 10
+    },
+    {
+      "name": "The Bund (上海滩)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Chow Yun-fat (周润发)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Huo Yuanjia 1981 (霍元甲)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 10
+    },
+    {
+      "name": "War and Beauty (金枝欲孽)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Triumph in the Skies (冲上云霄)",
+      "facet": "Taiwan and Hong Kong idol dramas",
+      "known_at": 11
+    }
+  ]
+}

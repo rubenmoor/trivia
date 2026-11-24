@@ -1,0 +1,927 @@
+{
+  "subcategory": "traditional-architecture",
+  "facets": [
+    "Traditional houses and dwellings",
+    "Classical Chinese gardens",
+    "Pagodas and stupas",
+    "Buddhist and Taoist temples",
+    "Confucian temples and ancestral halls",
+    "Famous towers and pavilions",
+    "Palaces and imperial complexes",
+    "Bridges, gates and city walls",
+    "Building parts and techniques",
+    "Roofs, decoration and symbolism",
+    "Master builders and building classics",
+    "Ethnic minority architecture"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Hakka tulou (土楼)",
+      "facet": "Traditional houses and dwellings",
+      "known_at": 6
+    },
+    {
+      "name": "Cave dwellings (窑洞)",
+      "facet": "Traditional houses and dwellings",
+      "known_at": 5
+    },
+    {
+      "name": "Huizhou architecture (徽派建筑)",
+      "facet": "Traditional houses and dwellings",
+      "known_at": 9
+    },
+    {
+      "name": "Qilou arcade houses (骑楼)",
+      "facet": "Traditional houses and dwellings",
+      "known_at": 10
+    },
+    {
+      "name": "Kaiping Diaolou (开平碉楼)",
+      "facet": "Traditional houses and dwellings",
+      "known_at": 11
+    },
+    {
+      "name": "Qiao Family Compound (乔家大院)",
+      "facet": "Traditional houses and dwellings",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Family Compound (王家大院)",
+      "facet": "Traditional houses and dwellings",
+      "known_at": 12
+    },
+    {
+      "name": "Xidi Village (西递)",
+      "facet": "Traditional houses and dwellings",
+      "known_at": 11
+    },
+    {
+      "name": "Pingyao Ancient City (平遥古城)",
+      "facet": "Traditional houses and dwellings",
+      "known_at": 8
+    },
+    {
+      "name": "Lijiang Old Town (丽江古城)",
+      "facet": "Traditional houses and dwellings",
+      "known_at": 7
+    },
+    {
+      "name": "Fenghuang Ancient Town (凤凰古城)",
+      "facet": "Traditional houses and dwellings",
+      "known_at": 8
+    },
+    {
+      "name": "Hanok",
+      "facet": "Traditional houses and dwellings",
+      "known_at": 11
+    },
+    {
+      "name": "Igloo",
+      "facet": "Traditional houses and dwellings",
+      "known_at": 2
+    },
+    {
+      "name": "Suzhou gardens (苏州园林)",
+      "facet": "Classical Chinese gardens",
+      "known_at": 5
+    },
+    {
+      "name": "Humble Administrator's Garden (拙政园)",
+      "facet": "Classical Chinese gardens",
+      "known_at": 8
+    },
+    {
+      "name": "Lingering Garden (留园)",
+      "facet": "Classical Chinese gardens",
+      "known_at": 10
+    },
+    {
+      "name": "Master of the Nets Garden (网师园)",
+      "facet": "Classical Chinese gardens",
+      "known_at": 12
+    },
+    {
+      "name": "Lion Grove Garden (狮子林)",
+      "facet": "Classical Chinese gardens",
+      "known_at": 10
+    },
+    {
+      "name": "Canglang Pavilion (沧浪亭)",
+      "facet": "Classical Chinese gardens",
+      "known_at": 12
+    },
+    {
+      "name": "Summer Palace (颐和园)",
+      "facet": "Classical Chinese gardens",
+      "known_at": 4
+    },
+    {
+      "name": "Old Summer Palace (圆明园)",
+      "facet": "Classical Chinese gardens",
+      "known_at": 5
+    },
+    {
+      "name": "Chengde Mountain Resort (避暑山庄)",
+      "facet": "Classical Chinese gardens",
+      "known_at": 8
+    },
+    {
+      "name": "Ge Garden (个园)",
+      "facet": "Classical Chinese gardens",
+      "known_at": 13
+    },
+    {
+      "name": "Jichang Garden (寄畅园)",
+      "facet": "Classical Chinese gardens",
+      "known_at": 14
+    },
+    {
+      "name": "Moon gate (月洞门)",
+      "facet": "Classical Chinese gardens",
+      "known_at": 7
+    },
+    {
+      "name": "Rockery (假山)",
+      "facet": "Classical Chinese gardens",
+      "known_at": 4
+    },
+    {
+      "name": "Long Corridor (长廊)",
+      "facet": "Classical Chinese gardens",
+      "known_at": 7
+    },
+    {
+      "name": "Japanese rock garden (枯山水)",
+      "facet": "Classical Chinese gardens",
+      "known_at": 12
+    },
+    {
+      "name": "Liuhe Pagoda (六和塔)",
+      "facet": "Pagodas and stupas",
+      "known_at": 10
+    },
+    {
+      "name": "Big Wild Goose Pagoda (大雁塔)",
+      "facet": "Pagodas and stupas",
+      "known_at": 6
+    },
+    {
+      "name": "Small Wild Goose Pagoda (小雁塔)",
+      "facet": "Pagodas and stupas",
+      "known_at": 10
+    },
+    {
+      "name": "Yingxian Wooden Pagoda (应县木塔)",
+      "facet": "Pagodas and stupas",
+      "known_at": 10
+    },
+    {
+      "name": "Songyue Pagoda (嵩岳寺塔)",
+      "facet": "Pagodas and stupas",
+      "known_at": 13
+    },
+    {
+      "name": "Three Pagodas of Chongsheng Temple (崇圣寺三塔)",
+      "facet": "Pagodas and stupas",
+      "known_at": 11
+    },
+    {
+      "name": "Tiger Hill Pagoda (虎丘塔)",
+      "facet": "Pagodas and stupas",
+      "known_at": 11
+    },
+    {
+      "name": "Iron Pagoda of Kaifeng (开封铁塔)",
+      "facet": "Pagodas and stupas",
+      "known_at": 12
+    },
+    {
+      "name": "White Dagoba of Beihai (北海白塔)",
+      "facet": "Pagodas and stupas",
+      "known_at": 5
+    },
+    {
+      "name": "Shaolin Pagoda Forest (少林寺塔林)",
+      "facet": "Pagodas and stupas",
+      "known_at": 10
+    },
+    {
+      "name": "Porcelain Tower of Nanjing (大报恩寺琉璃塔)",
+      "facet": "Pagodas and stupas",
+      "known_at": 12
+    },
+    {
+      "name": "Shwedagon Pagoda",
+      "facet": "Pagodas and stupas",
+      "known_at": 12
+    },
+    {
+      "name": "Borobudur",
+      "facet": "Pagodas and stupas",
+      "known_at": 11
+    },
+    {
+      "name": "Sanchi Stupa",
+      "facet": "Pagodas and stupas",
+      "known_at": 14
+    },
+    {
+      "name": "Horyu-ji five-storey pagoda (法隆寺五重塔)",
+      "facet": "Pagodas and stupas",
+      "known_at": 13
+    },
+    {
+      "name": "White Horse Temple (白马寺)",
+      "facet": "Buddhist and Taoist temples",
+      "known_at": 8
+    },
+    {
+      "name": "Lingyin Temple (灵隐寺)",
+      "facet": "Buddhist and Taoist temples",
+      "known_at": 7
+    },
+    {
+      "name": "Hanshan Temple (寒山寺)",
+      "facet": "Buddhist and Taoist temples",
+      "known_at": 5
+    },
+    {
+      "name": "Jokhang Temple (大昭寺)",
+      "facet": "Buddhist and Taoist temples",
+      "known_at": 9
+    },
+    {
+      "name": "Famen Temple (法门寺)",
+      "facet": "Buddhist and Taoist temples",
+      "known_at": 10
+    },
+    {
+      "name": "Nanchan Temple (南禅寺)",
+      "facet": "Buddhist and Taoist temples",
+      "known_at": 13
+    },
+    {
+      "name": "Jing'an Temple (静安寺)",
+      "facet": "Buddhist and Taoist temples",
+      "known_at": 9
+    },
+    {
+      "name": "Daxiangguo Temple (大相国寺)",
+      "facet": "Buddhist and Taoist temples",
+      "known_at": 9
+    },
+    {
+      "name": "Kaiyuan Temple of Quanzhou (开元寺)",
+      "facet": "Buddhist and Taoist temples",
+      "known_at": 13
+    },
+    {
+      "name": "Mahavira Hall (大雄宝殿)",
+      "facet": "Buddhist and Taoist temples",
+      "known_at": 9
+    },
+    {
+      "name": "Mogao Caves (莫高窟)",
+      "facet": "Buddhist and Taoist temples",
+      "known_at": 7
+    },
+    {
+      "name": "Angkor Wat",
+      "facet": "Buddhist and Taoist temples",
+      "known_at": 9
+    },
+    {
+      "name": "Kinkaku-ji (金阁寺)",
+      "facet": "Buddhist and Taoist temples",
+      "known_at": 11
+    },
+    {
+      "name": "Temple of Confucius in Qufu (曲阜孔庙)",
+      "facet": "Confucian temples and ancestral halls",
+      "known_at": 7
+    },
+    {
+      "name": "Chen Clan Ancestral Hall (陈家祠)",
+      "facet": "Confucian temples and ancestral halls",
+      "known_at": 11
+    },
+    {
+      "name": "Guandi Temple of Xiezhou (解州关帝庙)",
+      "facet": "Confucian temples and ancestral halls",
+      "known_at": 13
+    },
+    {
+      "name": "Wuhou Shrine (武侯祠)",
+      "facet": "Confucian temples and ancestral halls",
+      "known_at": 8
+    },
+    {
+      "name": "Yue Fei Temple (岳王庙)",
+      "facet": "Confucian temples and ancestral halls",
+      "known_at": 9
+    },
+    {
+      "name": "Jinci Temple (晋祠)",
+      "facet": "Confucian temples and ancestral halls",
+      "known_at": 12
+    },
+    {
+      "name": "Imperial Ancestral Temple (太庙)",
+      "facet": "Confucian temples and ancestral halls",
+      "known_at": 11
+    },
+    {
+      "name": "Pavilion of Prince Teng (滕王阁)",
+      "facet": "Famous towers and pavilions",
+      "known_at": 8
+    },
+    {
+      "name": "Stork Tower (鹳雀楼)",
+      "facet": "Famous towers and pavilions",
+      "known_at": 4
+    },
+    {
+      "name": "Bell Tower of Xi'an (西安钟楼)",
+      "facet": "Famous towers and pavilions",
+      "known_at": 7
+    },
+    {
+      "name": "Drum Tower of Beijing (北京鼓楼)",
+      "facet": "Famous towers and pavilions",
+      "known_at": 8
+    },
+    {
+      "name": "Penglai Pavilion (蓬莱阁)",
+      "facet": "Famous towers and pavilions",
+      "known_at": 9
+    },
+    {
+      "name": "Zhenhai Tower (镇海楼)",
+      "facet": "Famous towers and pavilions",
+      "known_at": 13
+    },
+    {
+      "name": "Old Drunkard's Pavilion (醉翁亭)",
+      "facet": "Famous towers and pavilions",
+      "known_at": 8
+    },
+    {
+      "name": "Aiwan Pavilion (爱晚亭)",
+      "facet": "Famous towers and pavilions",
+      "known_at": 8
+    },
+    {
+      "name": "Taoran Pavilion (陶然亭)",
+      "facet": "Famous towers and pavilions",
+      "known_at": 12
+    },
+    {
+      "name": "Tianyi Pavilion (天一阁)",
+      "facet": "Famous towers and pavilions",
+      "known_at": 12
+    },
+    {
+      "name": "Jiaxiu Tower (甲秀楼)",
+      "facet": "Famous towers and pavilions",
+      "known_at": 13
+    },
+    {
+      "name": "Huxinting Teahouse (湖心亭)",
+      "facet": "Famous towers and pavilions",
+      "known_at": 10
+    },
+    {
+      "name": "Leaning Tower of Pisa",
+      "facet": "Famous towers and pavilions",
+      "known_at": 4
+    },
+    {
+      "name": "Forbidden City (故宫)",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 2
+    },
+    {
+      "name": "Hall of Supreme Harmony (太和殿)",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 7
+    },
+    {
+      "name": "Potala Palace (布达拉宫)",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 4
+    },
+    {
+      "name": "Temple of Heaven (天坛)",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 4
+    },
+    {
+      "name": "Hall of Prayer for Good Harvests (祈年殿)",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 9
+    },
+    {
+      "name": "Echo Wall (回音壁)",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 7
+    },
+    {
+      "name": "Mukden Palace (沈阳故宫)",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 9
+    },
+    {
+      "name": "Ming Tombs (明十三陵)",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 8
+    },
+    {
+      "name": "Mausoleum of Qin Shi Huang (秦始皇陵)",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 5
+    },
+    {
+      "name": "Daming Palace (大明宫)",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 11
+    },
+    {
+      "name": "Epang Palace (阿房宫)",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 10
+    },
+    {
+      "name": "Ming Xiaoling Mausoleum (明孝陵)",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 11
+    },
+    {
+      "name": "Eastern Qing Tombs (清东陵)",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 12
+    },
+    {
+      "name": "Western Xia Tombs (西夏陵)",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 13
+    },
+    {
+      "name": "Gyeongbokgung Palace",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 12
+    },
+    {
+      "name": "Himeji Castle",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 13
+    },
+    {
+      "name": "Taj Mahal",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 6
+    },
+    {
+      "name": "Palace of Versailles",
+      "facet": "Palaces and imperial complexes",
+      "known_at": 8
+    },
+    {
+      "name": "Zhaozhou Bridge (赵州桥)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 5
+    },
+    {
+      "name": "Marco Polo Bridge (卢沟桥)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 6
+    },
+    {
+      "name": "Great Wall (长城)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 1
+    },
+    {
+      "name": "Jiayu Pass (嘉峪关)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 8
+    },
+    {
+      "name": "Juyong Pass (居庸关)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 11
+    },
+    {
+      "name": "Badaling (八达岭)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 6
+    },
+    {
+      "name": "Xi'an City Wall (西安城墙)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 7
+    },
+    {
+      "name": "Nanjing City Wall (南京城墙)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 10
+    },
+    {
+      "name": "Zhonghua Gate (中华门)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 12
+    },
+    {
+      "name": "Tiananmen (天安门)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 1
+    },
+    {
+      "name": "Meridian Gate (午门)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 7
+    },
+    {
+      "name": "Zhengyangmen (正阳门)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 9
+    },
+    {
+      "name": "Baodai Bridge (宝带桥)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 13
+    },
+    {
+      "name": "Anping Bridge (安平桥)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 13
+    },
+    {
+      "name": "Luoyang Bridge of Quanzhou (洛阳桥)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 13
+    },
+    {
+      "name": "Seventeen-Arch Bridge (十七孔桥)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 7
+    },
+    {
+      "name": "Paifang (牌坊)",
+      "facet": "Bridges, gates and city walls",
+      "known_at": 7
+    },
+    {
+      "name": "Dougong brackets (斗拱)",
+      "facet": "Building parts and techniques",
+      "known_at": 9
+    },
+    {
+      "name": "Mortise and tenon (榫卯)",
+      "facet": "Building parts and techniques",
+      "known_at": 7
+    },
+    {
+      "name": "Rammed earth (夯土)",
+      "facet": "Building parts and techniques",
+      "known_at": 10
+    },
+    {
+      "name": "Glazed roof tiles (琉璃瓦)",
+      "facet": "Building parts and techniques",
+      "known_at": 7
+    },
+    {
+      "name": "Timber frame (木构架)",
+      "facet": "Building parts and techniques",
+      "known_at": 10
+    },
+    {
+      "name": "Spirit screen (影壁)",
+      "facet": "Building parts and techniques",
+      "known_at": 9
+    },
+    {
+      "name": "Lattice window (花窗)",
+      "facet": "Building parts and techniques",
+      "known_at": 7
+    },
+    {
+      "name": "Skywell (天井)",
+      "facet": "Building parts and techniques",
+      "known_at": 10
+    },
+    {
+      "name": "Feng shui (风水)",
+      "facet": "Building parts and techniques",
+      "known_at": 6
+    },
+    {
+      "name": "Caisson ceiling (藻井)",
+      "facet": "Building parts and techniques",
+      "known_at": 12
+    },
+    {
+      "name": "Sumeru pedestal (须弥座)",
+      "facet": "Building parts and techniques",
+      "known_at": 13
+    },
+    {
+      "name": "Door threshold (门槛)",
+      "facet": "Building parts and techniques",
+      "known_at": 5
+    },
+    {
+      "name": "Door studs (门钉)",
+      "facet": "Building parts and techniques",
+      "known_at": 8
+    },
+    {
+      "name": "Kang bed-stove (炕)",
+      "facet": "Building parts and techniques",
+      "known_at": 6
+    },
+    {
+      "name": "Central axis (中轴线)",
+      "facet": "Building parts and techniques",
+      "known_at": 9
+    },
+    {
+      "name": "Hip roof (庑殿顶)",
+      "facet": "Roofs, decoration and symbolism",
+      "known_at": 12
+    },
+    {
+      "name": "Gable-and-hip roof (歇山顶)",
+      "facet": "Roofs, decoration and symbolism",
+      "known_at": 13
+    },
+    {
+      "name": "Upturned eaves (飞檐)",
+      "facet": "Roofs, decoration and symbolism",
+      "known_at": 6
+    },
+    {
+      "name": "Roof ridge beasts (脊兽)",
+      "facet": "Roofs, decoration and symbolism",
+      "known_at": 9
+    },
+    {
+      "name": "Chiwen (鸱吻)",
+      "facet": "Roofs, decoration and symbolism",
+      "known_at": 12
+    },
+    {
+      "name": "Nine-Dragon Wall (九龙壁)",
+      "facet": "Roofs, decoration and symbolism",
+      "known_at": 8
+    },
+    {
+      "name": "Stone guardian lions (石狮)",
+      "facet": "Roofs, decoration and symbolism",
+      "known_at": 3
+    },
+    {
+      "name": "Horizontal inscribed board (匾额)",
+      "facet": "Roofs, decoration and symbolism",
+      "known_at": 8
+    },
+    {
+      "name": "Hexi painting (和玺彩画)",
+      "facet": "Roofs, decoration and symbolism",
+      "known_at": 14
+    },
+    {
+      "name": "Su-style painting (苏式彩画)",
+      "facet": "Roofs, decoration and symbolism",
+      "known_at": 13
+    },
+    {
+      "name": "Imperial yellow (明黄)",
+      "facet": "Roofs, decoration and symbolism",
+      "known_at": 6
+    },
+    {
+      "name": "Dragon motif (龙纹)",
+      "facet": "Roofs, decoration and symbolism",
+      "known_at": 3
+    },
+    {
+      "name": "Bat motif (蝙蝠纹)",
+      "facet": "Roofs, decoration and symbolism",
+      "known_at": 9
+    },
+    {
+      "name": "Window paper-cuts (窗花)",
+      "facet": "Roofs, decoration and symbolism",
+      "known_at": 4
+    },
+    {
+      "name": "Huabiao (华表)",
+      "facet": "Roofs, decoration and symbolism",
+      "known_at": 9
+    },
+    {
+      "name": "Lu Ban (鲁班)",
+      "facet": "Master builders and building classics",
+      "known_at": 5
+    },
+    {
+      "name": "Li Chun (李春)",
+      "facet": "Master builders and building classics",
+      "known_at": 9
+    },
+    {
+      "name": "Yingzao Fashi (营造法式)",
+      "facet": "Master builders and building classics",
+      "known_at": 12
+    },
+    {
+      "name": "Li Jie (李诫)",
+      "facet": "Master builders and building classics",
+      "known_at": 13
+    },
+    {
+      "name": "Kuai Xiang (蒯祥)",
+      "facet": "Master builders and building classics",
+      "known_at": 14
+    },
+    {
+      "name": "Yangshi Lei (样式雷)",
+      "facet": "Master builders and building classics",
+      "known_at": 13
+    },
+    {
+      "name": "Liang Sicheng (梁思成)",
+      "facet": "Master builders and building classics",
+      "known_at": 10
+    },
+    {
+      "name": "Lin Huiyin (林徽因)",
+      "facet": "Master builders and building classics",
+      "known_at": 10
+    },
+    {
+      "name": "Ji Cheng (计成)",
+      "facet": "Master builders and building classics",
+      "known_at": 14
+    },
+    {
+      "name": "Yuan Ye (园冶)",
+      "facet": "Master builders and building classics",
+      "known_at": 14
+    },
+    {
+      "name": "I. M. Pei (贝聿铭)",
+      "facet": "Master builders and building classics",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Shu (王澍)",
+      "facet": "Master builders and building classics",
+      "known_at": 13
+    },
+    {
+      "name": "Kaogongji (考工记)",
+      "facet": "Master builders and building classics",
+      "known_at": 13
+    },
+    {
+      "name": "Yu Hao (喻皓)",
+      "facet": "Master builders and building classics",
+      "known_at": 14
+    },
+    {
+      "name": "Society for Research in Chinese Architecture (营造学社)",
+      "facet": "Master builders and building classics",
+      "known_at": 14
+    },
+    {
+      "name": "Pritzker Prize",
+      "facet": "Master builders and building classics",
+      "known_at": 12
+    },
+    {
+      "name": "Mongolian yurt (蒙古包)",
+      "facet": "Ethnic minority architecture",
+      "known_at": 3
+    },
+    {
+      "name": "Dai bamboo house (傣家竹楼)",
+      "facet": "Ethnic minority architecture",
+      "known_at": 7
+    },
+    {
+      "name": "Dong drum tower (侗族鼓楼)",
+      "facet": "Ethnic minority architecture",
+      "known_at": 10
+    },
+    {
+      "name": "Wind and rain bridge (风雨桥)",
+      "facet": "Ethnic minority architecture",
+      "known_at": 9
+    },
+    {
+      "name": "Diaojiaolou stilt houses (吊脚楼)",
+      "facet": "Ethnic minority architecture",
+      "known_at": 7
+    },
+    {
+      "name": "Xijiang Thousand-Household Miao Village (西江千户苗寨)",
+      "facet": "Ethnic minority architecture",
+      "known_at": 10
+    },
+    {
+      "name": "Tibetan stone house (藏式碉房)",
+      "facet": "Ethnic minority architecture",
+      "known_at": 11
+    },
+    {
+      "name": "Qiang watchtowers (羌族碉楼)",
+      "facet": "Ethnic minority architecture",
+      "known_at": 12
+    },
+    {
+      "name": "Bai house with three wings and a screen wall (三坊一照壁)",
+      "facet": "Ethnic minority architecture",
+      "known_at": 13
+    },
+    {
+      "name": "Hani mushroom houses (蘑菇房)",
+      "facet": "Ethnic minority architecture",
+      "known_at": 12
+    },
+    {
+      "name": "Id Kah Mosque (艾提尕尔清真寺)",
+      "facet": "Ethnic minority architecture",
+      "known_at": 12
+    },
+    {
+      "name": "Great Mosque of Xi'an (化觉巷清真大寺)",
+      "facet": "Ethnic minority architecture",
+      "known_at": 12
+    },
+    {
+      "name": "Kashgar Old City (喀什古城)",
+      "facet": "Ethnic minority architecture",
+      "known_at": 11
+    },
+    {
+      "name": "Labrang Monastery (拉卜楞寺)",
+      "facet": "Ethnic minority architecture",
+      "known_at": 12
+    },
+    {
+      "name": "Tashilhunpo Monastery (扎什伦布寺)",
+      "facet": "Ethnic minority architecture",
+      "known_at": 12
+    },
+    {
+      "name": "Tibetan prayer flags (经幡)",
+      "facet": "Ethnic minority architecture",
+      "known_at": 6
+    }
+  ]
+}

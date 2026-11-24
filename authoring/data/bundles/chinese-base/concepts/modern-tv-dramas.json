@@ -1,0 +1,1077 @@
+{
+  "subcategory": "modern-tv-dramas",
+  "facets": [
+    "Palace and harem dramas",
+    "Historical power and court intrigue",
+    "Xianxia and fantasy romance",
+    "Wuxia and martial arts series",
+    "Urban life and workplace dramas",
+    "Crime and anti-corruption thrillers",
+    "Family and period dramas",
+    "Youth and campus series",
+    "Lead actors and actresses",
+    "Famous characters and roles",
+    "Source novels and web literature",
+    "Catchphrases, memes and theme songs"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Ruyi's Royal Love in the Palace",
+      "facet": "Palace and harem dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Scarlet Heart",
+      "facet": "Palace and harem dramas",
+      "known_at": 6
+    },
+    {
+      "name": "The Legend of Mi Yue",
+      "facet": "Palace and harem dramas",
+      "known_at": 7
+    },
+    {
+      "name": "The Story of Ming Lan",
+      "facet": "Palace and harem dramas",
+      "known_at": 6
+    },
+    {
+      "name": "Palace (宫锁心玉)",
+      "facet": "Palace and harem dramas",
+      "known_at": 8
+    },
+    {
+      "name": "The Empress of China",
+      "facet": "Palace and harem dramas",
+      "known_at": 6
+    },
+    {
+      "name": "Beauty's Rival in Palace",
+      "facet": "Palace and harem dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Serenade of Peaceful Joy",
+      "facet": "Palace and harem dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Princess Weiyoung",
+      "facet": "Palace and harem dramas",
+      "known_at": 8
+    },
+    {
+      "name": "The Legend of Xiao Chuo",
+      "facet": "Palace and harem dramas",
+      "known_at": 11
+    },
+    {
+      "name": "The Glory of Tang Dynasty",
+      "facet": "Palace and harem dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Story of Kunning Palace",
+      "facet": "Palace and harem dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Goodbye My Princess",
+      "facet": "Palace and harem dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Untouchable Lovers",
+      "facet": "Palace and harem dramas",
+      "known_at": 11
+    },
+    {
+      "name": "The Imperial Doctress",
+      "facet": "Palace and harem dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Nirvana in Fire",
+      "facet": "Historical power and court intrigue",
+      "known_at": 5
+    },
+    {
+      "name": "Joy of Life",
+      "facet": "Historical power and court intrigue",
+      "known_at": 5
+    },
+    {
+      "name": "The Rise of Phoenixes",
+      "facet": "Historical power and court intrigue",
+      "known_at": 10
+    },
+    {
+      "name": "The Longest Day in Chang'an",
+      "facet": "Historical power and court intrigue",
+      "known_at": 7
+    },
+    {
+      "name": "The Advisors Alliance",
+      "facet": "Historical power and court intrigue",
+      "known_at": 9
+    },
+    {
+      "name": "Nirvana in Fire 2",
+      "facet": "Historical power and court intrigue",
+      "known_at": 9
+    },
+    {
+      "name": "Three Kingdoms (2010 series)",
+      "facet": "Historical power and court intrigue",
+      "known_at": 6
+    },
+    {
+      "name": "King's War",
+      "facet": "Historical power and court intrigue",
+      "known_at": 9
+    },
+    {
+      "name": "The Qin Empire",
+      "facet": "Historical power and court intrigue",
+      "known_at": 10
+    },
+    {
+      "name": "Under the Power",
+      "facet": "Historical power and court intrigue",
+      "known_at": 8
+    },
+    {
+      "name": "The Long Ballad",
+      "facet": "Historical power and court intrigue",
+      "known_at": 9
+    },
+    {
+      "name": "Luoyang (风起洛阳)",
+      "facet": "Historical power and court intrigue",
+      "known_at": 10
+    },
+    {
+      "name": "A Journey to Love",
+      "facet": "Historical power and court intrigue",
+      "known_at": 10
+    },
+    {
+      "name": "Ming Dynasty (大明风华)",
+      "facet": "Historical power and court intrigue",
+      "known_at": 10
+    },
+    {
+      "name": "Royal Nirvana",
+      "facet": "Historical power and court intrigue",
+      "known_at": 11
+    },
+    {
+      "name": "Love Like the Galaxy",
+      "facet": "Historical power and court intrigue",
+      "known_at": 8
+    },
+    {
+      "name": "Eternal Love",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 5
+    },
+    {
+      "name": "Ashes of Love",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 7
+    },
+    {
+      "name": "The Untamed",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 5
+    },
+    {
+      "name": "Love Between Fairy and Devil",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 6
+    },
+    {
+      "name": "Till the End of the Moon",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 8
+    },
+    {
+      "name": "The Journey of Flower",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 5
+    },
+    {
+      "name": "Swords of Legends",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 8
+    },
+    {
+      "name": "The Legend of White Snake (2019)",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 6
+    },
+    {
+      "name": "Lost You Forever",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 8
+    },
+    {
+      "name": "Love and Redemption",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 8
+    },
+    {
+      "name": "Immortal Samsara",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 9
+    },
+    {
+      "name": "Eternal Love of Dream",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 8
+    },
+    {
+      "name": "Fights Break Sphere",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 7
+    },
+    {
+      "name": "Novoland: The Castle in the Sky",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 10
+    },
+    {
+      "name": "The Blue Whisper",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 8
+    },
+    {
+      "name": "Ever Night",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 10
+    },
+    {
+      "name": "The Starry Love",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 10
+    },
+    {
+      "name": "Ancient Love Poetry",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 10
+    },
+    {
+      "name": "Back from the Brink",
+      "facet": "Xianxia and fantasy romance",
+      "known_at": 10
+    },
+    {
+      "name": "The Legend of the Condor Heroes (2017)",
+      "facet": "Wuxia and martial arts series",
+      "known_at": 6
+    },
+    {
+      "name": "The Romance of the Condor Heroes (2014)",
+      "facet": "Wuxia and martial arts series",
+      "known_at": 5
+    },
+    {
+      "name": "Heavenly Sword and Dragon Slaying Sabre (2019)",
+      "facet": "Wuxia and martial arts series",
+      "known_at": 7
+    },
+    {
+      "name": "Demi-Gods and Semi-Devils (2021)",
+      "facet": "Wuxia and martial arts series",
+      "known_at": 8
+    },
+    {
+      "name": "Swordsman (2013)",
+      "facet": "Wuxia and martial arts series",
+      "known_at": 7
+    },
+    {
+      "name": "The Deer and the Cauldron (2014)",
+      "facet": "Wuxia and martial arts series",
+      "known_at": 8
+    },
+    {
+      "name": "Word of Honor",
+      "facet": "Wuxia and martial arts series",
+      "known_at": 8
+    },
+    {
+      "name": "Mysterious Lotus Casebook",
+      "facet": "Wuxia and martial arts series",
+      "known_at": 8
+    },
+    {
+      "name": "Legend of Fei",
+      "facet": "Wuxia and martial arts series",
+      "known_at": 9
+    },
+    {
+      "name": "Sword Snow Stride",
+      "facet": "Wuxia and martial arts series",
+      "known_at": 8
+    },
+    {
+      "name": "Heroes (说英雄谁是英雄)",
+      "facet": "Wuxia and martial arts series",
+      "known_at": 10
+    },
+    {
+      "name": "Ode to Gallantry (2017)",
+      "facet": "Wuxia and martial arts series",
+      "known_at": 10
+    },
+    {
+      "name": "The Blood of Youth",
+      "facet": "Wuxia and martial arts series",
+      "known_at": 9
+    },
+    {
+      "name": "The Legend of Chu Liuxiang (2016)",
+      "facet": "Wuxia and martial arts series",
+      "known_at": 10
+    },
+    {
+      "name": "Fox Volant of the Snowy Mountain (2022)",
+      "facet": "Wuxia and martial arts series",
+      "known_at": 11
+    },
+    {
+      "name": "Nothing But Thirty",
+      "facet": "Urban life and workplace dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Ode to Joy",
+      "facet": "Urban life and workplace dramas",
+      "known_at": 6
+    },
+    {
+      "name": "iPartment",
+      "facet": "Urban life and workplace dramas",
+      "known_at": 5
+    },
+    {
+      "name": "The First Half of My Life",
+      "facet": "Urban life and workplace dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Go Go Squid!",
+      "facet": "Urban life and workplace dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Twenty Your Life On",
+      "facet": "Urban life and workplace dramas",
+      "known_at": 9
+    },
+    {
+      "name": "The Best Partner",
+      "facet": "Urban life and workplace dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Beijing Youth",
+      "facet": "Urban life and workplace dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Find Yourself",
+      "facet": "Urban life and workplace dramas",
+      "known_at": 9
+    },
+    {
+      "name": "The Tale of Rose",
+      "facet": "Urban life and workplace dramas",
+      "known_at": 8
+    },
+    {
+      "name": "Love Is Sweet",
+      "facet": "Urban life and workplace dramas",
+      "known_at": 10
+    },
+    {
+      "name": "You Are My Glory",
+      "facet": "Urban life and workplace dramas",
+      "known_at": 8
+    },
+    {
+      "name": "Fireworks of My Heart",
+      "facet": "Urban life and workplace dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Falling Into Your Smile",
+      "facet": "Urban life and workplace dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Women Walk the Line",
+      "facet": "Urban life and workplace dramas",
+      "known_at": 11
+    },
+    {
+      "name": "In the Name of the People",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 6
+    },
+    {
+      "name": "The Knockout",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 5
+    },
+    {
+      "name": "The Bad Kids",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 7
+    },
+    {
+      "name": "The Long Season",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 8
+    },
+    {
+      "name": "Day and Night",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 9
+    },
+    {
+      "name": "Burning Ice",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 10
+    },
+    {
+      "name": "Reset (开端)",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 7
+    },
+    {
+      "name": "The Lost Tomb",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 7
+    },
+    {
+      "name": "Candle in the Tomb",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 8
+    },
+    {
+      "name": "Medical Examiner Dr. Qin",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 9
+    },
+    {
+      "name": "The Disguiser",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 8
+    },
+    {
+      "name": "The Silent Truth",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 9
+    },
+    {
+      "name": "Under the Skin",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 9
+    },
+    {
+      "name": "The Thunder",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 9
+    },
+    {
+      "name": "Psych-Hunter",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 10
+    },
+    {
+      "name": "Strange Tales of Tang Dynasty",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 9
+    },
+    {
+      "name": "Ordinary Greatness",
+      "facet": "Crime and anti-corruption thrillers",
+      "known_at": 10
+    },
+    {
+      "name": "Blossoms Shanghai",
+      "facet": "Family and period dramas",
+      "known_at": 6
+    },
+    {
+      "name": "A Lifelong Journey",
+      "facet": "Family and period dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Like a Flowing River",
+      "facet": "Family and period dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Minning Town",
+      "facet": "Family and period dramas",
+      "known_at": 8
+    },
+    {
+      "name": "Go Ahead",
+      "facet": "Family and period dramas",
+      "known_at": 7
+    },
+    {
+      "name": "A Love for Dilemma",
+      "facet": "Family and period dramas",
+      "known_at": 9
+    },
+    {
+      "name": "A Little Reunion",
+      "facet": "Family and period dramas",
+      "known_at": 7
+    },
+    {
+      "name": "All Is Well",
+      "facet": "Family and period dramas",
+      "known_at": 7
+    },
+    {
+      "name": "To the Wonder",
+      "facet": "Family and period dramas",
+      "known_at": 8
+    },
+    {
+      "name": "A Dream of Splendor",
+      "facet": "Family and period dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Ordinary World (2015 series)",
+      "facet": "Family and period dramas",
+      "known_at": 8
+    },
+    {
+      "name": "The Age of Awakening",
+      "facet": "Family and period dramas",
+      "known_at": 8
+    },
+    {
+      "name": "Romance of Our Parents",
+      "facet": "Family and period dramas",
+      "known_at": 8
+    },
+    {
+      "name": "Flourished Peony",
+      "facet": "Family and period dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Jiawei",
+      "facet": "Family and period dramas",
+      "known_at": 9
+    },
+    {
+      "name": "A Love So Beautiful",
+      "facet": "Youth and campus series",
+      "known_at": 6
+    },
+    {
+      "name": "Love O2O",
+      "facet": "Youth and campus series",
+      "known_at": 6
+    },
+    {
+      "name": "Hidden Love",
+      "facet": "Youth and campus series",
+      "known_at": 5
+    },
+    {
+      "name": "Put Your Head on My Shoulder",
+      "facet": "Youth and campus series",
+      "known_at": 7
+    },
+    {
+      "name": "With You (最好的我们)",
+      "facet": "Youth and campus series",
+      "known_at": 7
+    },
+    {
+      "name": "Shining for One Thing",
+      "facet": "Youth and campus series",
+      "known_at": 7
+    },
+    {
+      "name": "Meteor Garden (2018)",
+      "facet": "Youth and campus series",
+      "known_at": 5
+    },
+    {
+      "name": "When I Fly Towards You",
+      "facet": "Youth and campus series",
+      "known_at": 7
+    },
+    {
+      "name": "My Huckleberry Friends",
+      "facet": "Youth and campus series",
+      "known_at": 8
+    },
+    {
+      "name": "Unrequited Love",
+      "facet": "Youth and campus series",
+      "known_at": 9
+    },
+    {
+      "name": "Lighter and Princess",
+      "facet": "Youth and campus series",
+      "known_at": 7
+    },
+    {
+      "name": "A Little Thing Called First Love",
+      "facet": "Youth and campus series",
+      "known_at": 9
+    },
+    {
+      "name": "Skate Into Love",
+      "facet": "Youth and campus series",
+      "known_at": 8
+    },
+    {
+      "name": "My Girlfriend Is an Alien",
+      "facet": "Youth and campus series",
+      "known_at": 8
+    },
+    {
+      "name": "Love Between the Lines",
+      "facet": "Youth and campus series",
+      "known_at": 10
+    },
+    {
+      "name": "Zhao Liying",
+      "facet": "Lead actors and actresses",
+      "known_at": 5
+    },
+    {
+      "name": "Yang Mi",
+      "facet": "Lead actors and actresses",
+      "known_at": 4
+    },
+    {
+      "name": "Wang Yibo",
+      "facet": "Lead actors and actresses",
+      "known_at": 5
+    },
+    {
+      "name": "Yang Zi",
+      "facet": "Lead actors and actresses",
+      "known_at": 5
+    },
+    {
+      "name": "Zhang Ruoyun",
+      "facet": "Lead actors and actresses",
+      "known_at": 7
+    },
+    {
+      "name": "Zhang Songwen",
+      "facet": "Lead actors and actresses",
+      "known_at": 8
+    },
+    {
+      "name": "Wu Jinyan",
+      "facet": "Lead actors and actresses",
+      "known_at": 8
+    },
+    {
+      "name": "Zhou Xun",
+      "facet": "Lead actors and actresses",
+      "known_at": 9
+    },
+    {
+      "name": "Liu Shishi",
+      "facet": "Lead actors and actresses",
+      "known_at": 7
+    },
+    {
+      "name": "Zhao Lusi",
+      "facet": "Lead actors and actresses",
+      "known_at": 6
+    },
+    {
+      "name": "Wang Kai",
+      "facet": "Lead actors and actresses",
+      "known_at": 8
+    },
+    {
+      "name": "Bai Lu",
+      "facet": "Lead actors and actresses",
+      "known_at": 7
+    },
+    {
+      "name": "Tan Songyun",
+      "facet": "Lead actors and actresses",
+      "known_at": 8
+    },
+    {
+      "name": "Jin Dong",
+      "facet": "Lead actors and actresses",
+      "known_at": 8
+    },
+    {
+      "name": "Li Xian",
+      "facet": "Lead actors and actresses",
+      "known_at": 7
+    },
+    {
+      "name": "Zhao Jinmai",
+      "facet": "Lead actors and actresses",
+      "known_at": 7
+    },
+    {
+      "name": "Cheng Yi",
+      "facet": "Lead actors and actresses",
+      "known_at": 8
+    },
+    {
+      "name": "Mei Changsu",
+      "facet": "Famous characters and roles",
+      "known_at": 6
+    },
+    {
+      "name": "Fan Xian",
+      "facet": "Famous characters and roles",
+      "known_at": 6
+    },
+    {
+      "name": "Wei Yingluo",
+      "facet": "Famous characters and roles",
+      "known_at": 6
+    },
+    {
+      "name": "Gao Qiqiang",
+      "facet": "Famous characters and roles",
+      "known_at": 5
+    },
+    {
+      "name": "Bai Qian",
+      "facet": "Famous characters and roles",
+      "known_at": 6
+    },
+    {
+      "name": "Wei Wuxian",
+      "facet": "Famous characters and roles",
+      "known_at": 6
+    },
+    {
+      "name": "Lan Wangji",
+      "facet": "Famous characters and roles",
+      "known_at": 6
+    },
+    {
+      "name": "Hua Qiangu",
+      "facet": "Famous characters and roles",
+      "known_at": 6
+    },
+    {
+      "name": "Consort Hua (华妃)",
+      "facet": "Famous characters and roles",
+      "known_at": 6
+    },
+    {
+      "name": "An Lingrong",
+      "facet": "Famous characters and roles",
+      "known_at": 7
+    },
+    {
+      "name": "Sheng Minglan",
+      "facet": "Famous characters and roles",
+      "known_at": 7
+    },
+    {
+      "name": "Gu Tingye",
+      "facet": "Famous characters and roles",
+      "known_at": 8
+    },
+    {
+      "name": "Li Dakang",
+      "facet": "Famous characters and roles",
+      "known_at": 8
+    },
+    {
+      "name": "Hou Liangping",
+      "facet": "Famous characters and roles",
+      "known_at": 8
+    },
+    {
+      "name": "Ah Bao (阿宝)",
+      "facet": "Famous characters and roles",
+      "known_at": 8
+    },
+    {
+      "name": "Prince Jing (靖王)",
+      "facet": "Famous characters and roles",
+      "known_at": 8
+    },
+    {
+      "name": "Ye Hua",
+      "facet": "Famous characters and roles",
+      "known_at": 7
+    },
+    {
+      "name": "Gu Jia",
+      "facet": "Famous characters and roles",
+      "known_at": 8
+    },
+    {
+      "name": "Andy (安迪)",
+      "facet": "Famous characters and roles",
+      "known_at": 8
+    },
+    {
+      "name": "Zeng Xiaoxian",
+      "facet": "Famous characters and roles",
+      "known_at": 6
+    },
+    {
+      "name": "Zhu Chaoyang",
+      "facet": "Famous characters and roles",
+      "known_at": 8
+    },
+    {
+      "name": "Dongfang Qingcang",
+      "facet": "Famous characters and roles",
+      "known_at": 8
+    },
+    {
+      "name": "Tong Hua",
+      "facet": "Source novels and web literature",
+      "known_at": 10
+    },
+    {
+      "name": "Liu Lianzi",
+      "facet": "Source novels and web literature",
+      "known_at": 11
+    },
+    {
+      "name": "Hai Yan",
+      "facet": "Source novels and web literature",
+      "known_at": 11
+    },
+    {
+      "name": "Mao Ni",
+      "facet": "Source novels and web literature",
+      "known_at": 11
+    },
+    {
+      "name": "Mo Xiang Tong Xiu",
+      "facet": "Source novels and web literature",
+      "known_at": 9
+    },
+    {
+      "name": "Tang Qi",
+      "facet": "Source novels and web literature",
+      "known_at": 11
+    },
+    {
+      "name": "Jin Yucheng",
+      "facet": "Source novels and web literature",
+      "known_at": 12
+    },
+    {
+      "name": "Zhou Meisen",
+      "facet": "Source novels and web literature",
+      "known_at": 13
+    },
+    {
+      "name": "Nanpai Sanshu",
+      "facet": "Source novels and web literature",
+      "known_at": 9
+    },
+    {
+      "name": "Tianxia Bachang",
+      "facet": "Source novels and web literature",
+      "known_at": 11
+    },
+    {
+      "name": "Guan Xin Ze Luan",
+      "facet": "Source novels and web literature",
+      "known_at": 12
+    },
+    {
+      "name": "Gu Man",
+      "facet": "Source novels and web literature",
+      "known_at": 8
+    },
+    {
+      "name": "Priest (author)",
+      "facet": "Source novels and web literature",
+      "known_at": 10
+    },
+    {
+      "name": "Tian Can Tu Dou",
+      "facet": "Source novels and web literature",
+      "known_at": 9
+    },
+    {
+      "name": "Zhu Yi (竹已)",
+      "facet": "Source novels and web literature",
+      "known_at": 10
+    },
+    {
+      "name": "Qidian",
+      "facet": "Source novels and web literature",
+      "known_at": 9
+    },
+    {
+      "name": "Jinjiang Literature City",
+      "facet": "Source novels and web literature",
+      "known_at": 10
+    },
+    {
+      "name": "Liang Liang (凉凉)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 5
+    },
+    {
+      "name": "Hong Yan Jie (红颜劫)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 9
+    },
+    {
+      "name": "Feng Qi Shi (风起时)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 9
+    },
+    {
+      "name": "Wu Ji (无羁)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 6
+    },
+    {
+      "name": "Nian Lun (年轮)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 7
+    },
+    {
+      "name": "Zhi Fou Zhi Fou (知否知否)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 7
+    },
+    {
+      "name": "Bu Ran (不染)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 7
+    },
+    {
+      "name": "San Sheng San Shi (三生三世)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 8
+    },
+    {
+      "name": "Chen Qie Zuo Bu Dao (臣妾做不到啊)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 5
+    },
+    {
+      "name": "Bengong (本宫)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 6
+    },
+    {
+      "name": "Zhen Huan Style (甄嬛体)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 9
+    },
+    {
+      "name": "Feng Lang Yue Da Yu Yue Gui (风浪越大鱼越贵)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 6
+    },
+    {
+      "name": "Hao Nanren Jiu Shi Wo (好男人就是我)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 6
+    },
+    {
+      "name": "Danmu (弹幕)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 7
+    },
+    {
+      "name": "CP shipping (嗑CP)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 8
+    },
+    {
+      "name": "Mary Sue (玛丽苏)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 9
+    },
+    {
+      "name": "Domineering CEO (霸道总裁)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 7
+    },
+    {
+      "name": "Big Heroine drama (大女主)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 10
+    },
+    {
+      "name": "Sweet pet drama (甜宠剧)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 9
+    },
+    {
+      "name": "Short drama (短剧)",
+      "facet": "Catchphrases, memes and theme songs",
+      "known_at": 7
+    }
+  ]
+}

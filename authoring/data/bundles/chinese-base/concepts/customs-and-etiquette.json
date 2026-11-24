@@ -1,0 +1,1183 @@
+{
+  "subcategory": "customs-and-etiquette",
+  "facets": [
+    "Lucky and unlucky numbers",
+    "Colours and their meanings",
+    "Lucky symbols and homophones",
+    "Gift-giving customs and taboos",
+    "Chopsticks and table manners",
+    "Tea and toasting etiquette",
+    "Wedding customs",
+    "Birthdays and longevity",
+    "Birth and childhood milestones",
+    "Family titles and kinship terms",
+    "Greetings, politeness and respect",
+    "Etiquette around the world"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 1,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Number 8 as lucky",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 3
+    },
+    {
+      "name": "Number 4 avoided",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 4
+    },
+    {
+      "name": "Number 6 for smooth luck (六六大顺)",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 6
+    },
+    {
+      "name": "Number 9 for long-lasting (久)",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 7
+    },
+    {
+      "name": "Number 9 and the emperor (九五之尊)",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 10
+    },
+    {
+      "name": "Beijing Olympics opening at 8:08 pm on 8 August 2008",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 6
+    },
+    {
+      "name": "Number 520 for “I love you”",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 5
+    },
+    {
+      "name": "Number 1314 (一生一世)",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 8
+    },
+    {
+      "name": "Number 666 (溜)",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 7
+    },
+    {
+      "name": "Number 250 as an insult (二百五)",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 7
+    },
+    {
+      "name": "Number 13 unlucky in the West",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 6
+    },
+    {
+      "name": "Friday the 13th",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 8
+    },
+    {
+      "name": "Number 17 unlucky in Italy",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 14
+    },
+    {
+      "name": "Number 4 avoided in Japan and Korea",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 9
+    },
+    {
+      "name": "Missing fourth floor in buildings",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 6
+    },
+    {
+      "name": "Even numbers for happy events (好事成双)",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 7
+    },
+    {
+      "name": "Lucky phone numbers and licence plates",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 7
+    },
+    {
+      "name": "Number 7 in mourning rites (头七)",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 11
+    },
+    {
+      "name": "Number 7 lucky in the West",
+      "facet": "Lucky and unlucky numbers",
+      "known_at": 8
+    },
+    {
+      "name": "Red for luck",
+      "facet": "Colours and their meanings",
+      "known_at": 1
+    },
+    {
+      "name": "White for mourning",
+      "facet": "Colours and their meanings",
+      "known_at": 4
+    },
+    {
+      "name": "Imperial yellow",
+      "facet": "Colours and their meanings",
+      "known_at": 6
+    },
+    {
+      "name": "Red lanterns",
+      "facet": "Colours and their meanings",
+      "known_at": 2
+    },
+    {
+      "name": "Red spring couplets (春联)",
+      "facet": "Colours and their meanings",
+      "known_at": 3
+    },
+    {
+      "name": "Names written in red ink avoided",
+      "facet": "Colours and their meanings",
+      "known_at": 8
+    },
+    {
+      "name": "Red face in Peking Opera masks",
+      "facet": "Colours and their meanings",
+      "known_at": 7
+    },
+    {
+      "name": "Black face in Peking Opera masks",
+      "facet": "Colours and their meanings",
+      "known_at": 7
+    },
+    {
+      "name": "White face in Peking Opera masks",
+      "facet": "Colours and their meanings",
+      "known_at": 8
+    },
+    {
+      "name": "Gold for wealth",
+      "facet": "Colours and their meanings",
+      "known_at": 4
+    },
+    {
+      "name": "Purple in the name of the Forbidden City (紫禁城)",
+      "facet": "Colours and their meanings",
+      "known_at": 10
+    },
+    {
+      "name": "Five colours of the Five Elements (五行)",
+      "facet": "Colours and their meanings",
+      "known_at": 11
+    },
+    {
+      "name": "Red for rising prices in Chinese stock markets",
+      "facet": "Colours and their meanings",
+      "known_at": 10
+    },
+    {
+      "name": "White wedding dress in the West",
+      "facet": "Colours and their meanings",
+      "known_at": 3
+    },
+    {
+      "name": "Black for mourning in the West",
+      "facet": "Colours and their meanings",
+      "known_at": 5
+    },
+    {
+      "name": "Saffron robes of Buddhist monks",
+      "facet": "Colours and their meanings",
+      "known_at": 10
+    },
+    {
+      "name": "Blue-and-white porcelain (青花瓷)",
+      "facet": "Colours and their meanings",
+      "known_at": 6
+    },
+    {
+      "name": "Qing (青), the colour between blue and green",
+      "facet": "Colours and their meanings",
+      "known_at": 12
+    },
+    {
+      "name": "Upside-down 福 character",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 2
+    },
+    {
+      "name": "Fish for surplus (年年有余)",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 3
+    },
+    {
+      "name": "Bat for good fortune (蝠)",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 8
+    },
+    {
+      "name": "Not sharing a pear (分梨)",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 6
+    },
+    {
+      "name": "Lucky cat (招财猫)",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 3
+    },
+    {
+      "name": "Pixiu (貔貅)",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 9
+    },
+    {
+      "name": "Jade",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 5
+    },
+    {
+      "name": "Magpie (喜鹊)",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 7
+    },
+    {
+      "name": "Crane (仙鹤)",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 7
+    },
+    {
+      "name": "Mandarin ducks (鸳鸯)",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 7
+    },
+    {
+      "name": "Lotus",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 5
+    },
+    {
+      "name": "Tangerines (桔)",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 5
+    },
+    {
+      "name": "Nian gao (年糕)",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 5
+    },
+    {
+      "name": "Apples on Christmas Eve (平安果)",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 6
+    },
+    {
+      "name": "Stone lions at the gate",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 4
+    },
+    {
+      "name": "Lucky bamboo",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 6
+    },
+    {
+      "name": "Gold ingot (元宝)",
+      "facet": "Lucky symbols and homophones",
+      "known_at": 4
+    },
+    {
+      "name": "Never give a clock as a gift",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 4
+    },
+    {
+      "name": "Red envelope (红包)",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 1
+    },
+    {
+      "name": "WeChat red envelopes",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 4
+    },
+    {
+      "name": "Umbrella as a gift taboo (散)",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 8
+    },
+    {
+      "name": "Knives and scissors as a gift taboo",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 8
+    },
+    {
+      "name": "Shoes as a gift taboo",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 10
+    },
+    {
+      "name": "Mirror as a gift taboo",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 12
+    },
+    {
+      "name": "Handkerchief as a gift taboo",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 11
+    },
+    {
+      "name": "White chrysanthemums",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 8
+    },
+    {
+      "name": "Giving and receiving with both hands",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 4
+    },
+    {
+      "name": "Politely refusing a gift before accepting",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 9
+    },
+    {
+      "name": "Not opening a gift in front of the giver",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 8
+    },
+    {
+      "name": "Mooncakes as gifts",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 2
+    },
+    {
+      "name": "Tea as a gift",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 5
+    },
+    {
+      "name": "Fruit basket for a hospital visit",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 5
+    },
+    {
+      "name": "Red gift wrapping",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 4
+    },
+    {
+      "name": "Return gift (回礼)",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 10
+    },
+    {
+      "name": "Omiyage (Japanese souvenir gifts)",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 13
+    },
+    {
+      "name": "Teacher's Day gifts",
+      "facet": "Gift-giving customs and taboos",
+      "known_at": 5
+    },
+    {
+      "name": "No chopsticks upright in rice",
+      "facet": "Chopsticks and table manners",
+      "known_at": 3
+    },
+    {
+      "name": "Serving chopsticks (公筷)",
+      "facet": "Chopsticks and table manners",
+      "known_at": 6
+    },
+    {
+      "name": "Not tapping the bowl with chopsticks",
+      "facet": "Chopsticks and table manners",
+      "known_at": 5
+    },
+    {
+      "name": "Not crossing chopsticks",
+      "facet": "Chopsticks and table manners",
+      "known_at": 9
+    },
+    {
+      "name": "Not pointing with chopsticks",
+      "facet": "Chopsticks and table manners",
+      "known_at": 5
+    },
+    {
+      "name": "Passing food chopstick to chopstick (Japan)",
+      "facet": "Chopsticks and table manners",
+      "known_at": 12
+    },
+    {
+      "name": "Chopstick rest",
+      "facet": "Chopsticks and table manners",
+      "known_at": 6
+    },
+    {
+      "name": "Old word for chopsticks (箸)",
+      "facet": "Chopsticks and table manners",
+      "known_at": 11
+    },
+    {
+      "name": "Host seat facing the door (主位)",
+      "facet": "Chopsticks and table manners",
+      "known_at": 10
+    },
+    {
+      "name": "Lazy Susan",
+      "facet": "Chopsticks and table manners",
+      "known_at": 4
+    },
+    {
+      "name": "Elders start eating first",
+      "facet": "Chopsticks and table manners",
+      "known_at": 3
+    },
+    {
+      "name": "Not flipping the fish",
+      "facet": "Chopsticks and table manners",
+      "known_at": 9
+    },
+    {
+      "name": "Fighting to pay the bill",
+      "facet": "Chopsticks and table manners",
+      "known_at": 4
+    },
+    {
+      "name": "Clean Plate Campaign (光盘行动)",
+      "facet": "Chopsticks and table manners",
+      "known_at": 6
+    },
+    {
+      "name": "Lifting the rice bowl to the mouth",
+      "facet": "Chopsticks and table manners",
+      "known_at": 6
+    },
+    {
+      "name": "Fork in the left hand, knife in the right",
+      "facet": "Chopsticks and table manners",
+      "known_at": 5
+    },
+    {
+      "name": "Napkin on the lap",
+      "facet": "Chopsticks and table manners",
+      "known_at": 7,
+      "retired": "used_up: The napkin on the lap has already been asked as a riddle and through the laptop question; the options left are only person or thing answers."
+    },
+    {
+      "name": "Eating with the right hand in India",
+      "facet": "Chopsticks and table manners",
+      "known_at": 8
+    },
+    {
+      "name": "Slurping noodles in Japan",
+      "facet": "Chopsticks and table manners",
+      "known_at": 7
+    },
+    {
+      "name": "Tapping the table to thank for tea",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 6
+    },
+    {
+      "name": "Ganbei (干杯)",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 3
+    },
+    {
+      "name": "Holding your glass lower when toasting",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 7
+    },
+    {
+      "name": "Pouring tea for others first",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 5
+    },
+    {
+      "name": "Tea half full, wine full (酒满茶半)",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 9
+    },
+    {
+      "name": "Lid off the teapot to ask for a refill",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 9
+    },
+    {
+      "name": "Serving tea to see guests out (端茶送客)",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 10
+    },
+    {
+      "name": "Gongfu tea (工夫茶)",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 8
+    },
+    {
+      "name": "Long-spout teapot pouring in Sichuan teahouses",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 8
+    },
+    {
+      "name": "Lu Yu, author of The Classic of Tea (茶经)",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 10
+    },
+    {
+      "name": "Butter tea in Tibet",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 9
+    },
+    {
+      "name": "Bai three-course tea (三道茶)",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 12
+    },
+    {
+      "name": "Japanese tea ceremony",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 7
+    },
+    {
+      "name": "Matcha",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 6
+    },
+    {
+      "name": "British afternoon tea",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 6
+    },
+    {
+      "name": "Moroccan mint tea",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 12
+    },
+    {
+      "name": "Indian chai",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 7
+    },
+    {
+      "name": "Russian samovar",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 11
+    },
+    {
+      "name": "Clinking glasses",
+      "facet": "Tea and toasting etiquette",
+      "known_at": 4
+    },
+    {
+      "name": "Serving tea at weddings (敬茶)",
+      "facet": "Wedding customs",
+      "known_at": 8
+    },
+    {
+      "name": "Red veil (红盖头)",
+      "facet": "Wedding customs",
+      "known_at": 6
+    },
+    {
+      "name": "Xiuhe wedding dress (秀禾服)",
+      "facet": "Wedding customs",
+      "known_at": 10
+    },
+    {
+      "name": "Bridal sedan chair (花轿)",
+      "facet": "Wedding customs",
+      "known_at": 6
+    },
+    {
+      "name": "Wedding candy (喜糖)",
+      "facet": "Wedding customs",
+      "known_at": 4
+    },
+    {
+      "name": "Wedding banquet (喜酒)",
+      "facet": "Wedding customs",
+      "known_at": 5
+    },
+    {
+      "name": "Door games at the bride's home (堵门)",
+      "facet": "Wedding customs",
+      "known_at": 7
+    },
+    {
+      "name": "Bride price (彩礼)",
+      "facet": "Wedding customs",
+      "known_at": 9
+    },
+    {
+      "name": "Dowry (嫁妆)",
+      "facet": "Wedding customs",
+      "known_at": 8
+    },
+    {
+      "name": "Red dates and peanuts on the wedding bed (早生贵子)",
+      "facet": "Wedding customs",
+      "known_at": 8
+    },
+    {
+      "name": "Cross-cupped wine (交杯酒)",
+      "facet": "Wedding customs",
+      "known_at": 7
+    },
+    {
+      "name": "Old Man under the Moon (月老)",
+      "facet": "Wedding customs",
+      "known_at": 8
+    },
+    {
+      "name": "Red thread of fate (红线)",
+      "facet": "Wedding customs",
+      "known_at": 7
+    },
+    {
+      "name": "Lucky wedding date from the almanac (黄道吉日)",
+      "facet": "Wedding customs",
+      "known_at": 9
+    },
+    {
+      "name": "Red marriage certificate (结婚证)",
+      "facet": "Wedding customs",
+      "known_at": 7
+    },
+    {
+      "name": "Three Letters and Six Rites (三书六礼)",
+      "facet": "Wedding customs",
+      "known_at": 13
+    },
+    {
+      "name": "Wedding rings",
+      "facet": "Wedding customs",
+      "known_at": 3
+    },
+    {
+      "name": "Throwing the bouquet",
+      "facet": "Wedding customs",
+      "known_at": 5
+    },
+    {
+      "name": "Henna (Mehndi) in Indian weddings",
+      "facet": "Wedding customs",
+      "known_at": 11
+    },
+    {
+      "name": "Longevity noodles on birthdays",
+      "facet": "Birthdays and longevity",
+      "known_at": 3
+    },
+    {
+      "name": "Longevity peach buns (寿桃)",
+      "facet": "Birthdays and longevity",
+      "known_at": 5
+    },
+    {
+      "name": "Birthday cake with candles",
+      "facet": "Birthdays and longevity",
+      "known_at": 1
+    },
+    {
+      "name": "Happy Birthday to You",
+      "facet": "Birthdays and longevity",
+      "known_at": 1
+    },
+    {
+      "name": "God of Longevity (寿星)",
+      "facet": "Birthdays and longevity",
+      "known_at": 6
+    },
+    {
+      "name": "Shou character (寿)",
+      "facet": "Birthdays and longevity",
+      "known_at": 6
+    },
+    {
+      "name": "Turtle as a symbol of long life",
+      "facet": "Birthdays and longevity",
+      "known_at": 6
+    },
+    {
+      "name": "Birthday wish 福如东海，寿比南山",
+      "facet": "Birthdays and longevity",
+      "known_at": 8
+    },
+    {
+      "name": "Elder's birthday banquet (寿宴)",
+      "facet": "Birthdays and longevity",
+      "known_at": 7
+    },
+    {
+      "name": "Lunar calendar birthday",
+      "facet": "Birthdays and longevity",
+      "known_at": 7
+    },
+    {
+      "name": "Xusui age counting (虚岁)",
+      "facet": "Birthdays and longevity",
+      "known_at": 9
+    },
+    {
+      "name": "Huajia, the 60th birthday (花甲)",
+      "facet": "Birthdays and longevity",
+      "known_at": 10
+    },
+    {
+      "name": "Guxi, age 70 (古稀)",
+      "facet": "Birthdays and longevity",
+      "known_at": 11
+    },
+    {
+      "name": "Erli, age 30 (而立)",
+      "facet": "Birthdays and longevity",
+      "known_at": 10
+    },
+    {
+      "name": "Buhuo, age 40 (不惑)",
+      "facet": "Birthdays and longevity",
+      "known_at": 10
+    },
+    {
+      "name": "Quinceañera",
+      "facet": "Birthdays and longevity",
+      "known_at": 12
+    },
+    {
+      "name": "Sweet sixteen",
+      "facet": "Birthdays and longevity",
+      "known_at": 11
+    },
+    {
+      "name": "Piñata",
+      "facet": "Birthdays and longevity",
+      "known_at": 6
+    },
+    {
+      "name": "Zhuazhou first-birthday custom (抓周)",
+      "facet": "Birth and childhood milestones",
+      "known_at": 6
+    },
+    {
+      "name": "Full-month celebration (满月酒)",
+      "facet": "Birth and childhood milestones",
+      "known_at": 6
+    },
+    {
+      "name": "Red eggs for a newborn",
+      "facet": "Birth and childhood milestones",
+      "known_at": 6
+    },
+    {
+      "name": "Hundred-day celebration (百日)",
+      "facet": "Birth and childhood milestones",
+      "known_at": 8
+    },
+    {
+      "name": "Sitting the month (坐月子)",
+      "facet": "Birth and childhood milestones",
+      "known_at": 7
+    },
+    {
+      "name": "Longevity lock (长命锁)",
+      "facet": "Birth and childhood milestones",
+      "known_at": 7
+    },
+    {
+      "name": "Milk name (小名)",
+      "facet": "Birth and childhood milestones",
+      "known_at": 5
+    },
+    {
+      "name": "Hundred-family quilt (百家被)",
+      "facet": "Birth and childhood milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Baby-hair brush (胎毛笔)",
+      "facet": "Birth and childhood milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Split pants (开裆裤)",
+      "facet": "Birth and childhood milestones",
+      "known_at": 5
+    },
+    {
+      "name": "Red scarf of the Young Pioneers",
+      "facet": "Birth and childhood milestones",
+      "known_at": 3
+    },
+    {
+      "name": "Children's Day on 1 June",
+      "facet": "Birth and childhood milestones",
+      "known_at": 2
+    },
+    {
+      "name": "Gaokao (高考)",
+      "facet": "Birth and childhood milestones",
+      "known_at": 5
+    },
+    {
+      "name": "Ancient coming-of-age capping ceremony (冠礼)",
+      "facet": "Birth and childhood milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Throwing a baby tooth onto the roof",
+      "facet": "Birth and childhood milestones",
+      "known_at": 6
+    },
+    {
+      "name": "Tooth Fairy",
+      "facet": "Birth and childhood milestones",
+      "known_at": 6
+    },
+    {
+      "name": "Shichi-Go-San (Japan)",
+      "facet": "Birth and childhood milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Coming of Age Day (Japan)",
+      "facet": "Birth and childhood milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Yeye and Nainai (爷爷, 奶奶)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 1
+    },
+    {
+      "name": "Waigong and Waipo (外公, 外婆)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 2
+    },
+    {
+      "name": "Gege and Didi (哥哥, 弟弟)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 1
+    },
+    {
+      "name": "Shushu (叔叔)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 2
+    },
+    {
+      "name": "Bobo (伯伯)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 5
+    },
+    {
+      "name": "Jiujiu (舅舅)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 4
+    },
+    {
+      "name": "Gugu (姑姑)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 4
+    },
+    {
+      "name": "Yima (姨妈)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 4
+    },
+    {
+      "name": "Tang cousins vs Biao cousins (堂, 表)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 7
+    },
+    {
+      "name": "Saozi (嫂子)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 6
+    },
+    {
+      "name": "Jiefu (姐夫)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 6
+    },
+    {
+      "name": "Yuefu (岳父)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 8
+    },
+    {
+      "name": "Popo (婆婆) as mother-in-law",
+      "facet": "Family titles and kinship terms",
+      "known_at": 7
+    },
+    {
+      "name": "Qinjia (亲家)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 9
+    },
+    {
+      "name": "Waisheng (外甥)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 9
+    },
+    {
+      "name": "Zhizi (侄子)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 8
+    },
+    {
+      "name": "Ayi (阿姨) for women in general",
+      "facet": "Family titles and kinship terms",
+      "known_at": 2
+    },
+    {
+      "name": "Shifu (师傅)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 5
+    },
+    {
+      "name": "Five generations under one roof (五世同堂)",
+      "facet": "Family titles and kinship terms",
+      "known_at": 9
+    },
+    {
+      "name": "Ni hao (你好)",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 1
+    },
+    {
+      "name": "Xiexie (谢谢)",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 1
+    },
+    {
+      "name": "“Have you eaten?” (吃了吗)",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 4
+    },
+    {
+      "name": "Nin (您)",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 3
+    },
+    {
+      "name": "Xiansheng (先生)",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 5
+    },
+    {
+      "name": "Humble reply “Nali nali” (哪里哪里)",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 6
+    },
+    {
+      "name": "Jiuyang (久仰)",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 11
+    },
+    {
+      "name": "Gongshou (拱手)",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 6
+    },
+    {
+      "name": "Kowtow (磕头)",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 7
+    },
+    {
+      "name": "Handshake",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 2
+    },
+    {
+      "name": "Business cards with both hands",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 8
+    },
+    {
+      "name": "Kong Rong gives up the bigger pear (孔融让梨)",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 4
+    },
+    {
+      "name": "Standing in the snow at Cheng's door (程门立雪)",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 8
+    },
+    {
+      "name": "Standing up when the teacher enters (起立)",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 3
+    },
+    {
+      "name": "Giving up your seat to the elderly",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 2
+    },
+    {
+      "name": "Face (面子)",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 8
+    },
+    {
+      "name": "Naming taboo (避讳)",
+      "facet": "Greetings, politeness and respect",
+      "known_at": 12
+    },
+    {
+      "name": "Bowing in Japan",
+      "facet": "Etiquette around the world",
+      "known_at": 4
+    },
+    {
+      "name": "Namaste",
+      "facet": "Etiquette around the world",
+      "known_at": 7
+    },
+    {
+      "name": "Wai (Thailand)",
+      "facet": "Etiquette around the world",
+      "known_at": 10
+    },
+    {
+      "name": "Hongi (Māori greeting)",
+      "facet": "Etiquette around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Cheek kissing in France",
+      "facet": "Etiquette around the world",
+      "known_at": 7
+    },
+    {
+      "name": "Rubbing noses (Inuit kunik)",
+      "facet": "Etiquette around the world",
+      "known_at": 9
+    },
+    {
+      "name": "Shoes off at home in Japan",
+      "facet": "Etiquette around the world",
+      "known_at": 6
+    },
+    {
+      "name": "Tipping in the United States",
+      "facet": "Etiquette around the world",
+      "known_at": 9
+    },
+    {
+      "name": "No tipping in Japan",
+      "facet": "Etiquette around the world",
+      "known_at": 10
+    },
+    {
+      "name": "Left hand taboo",
+      "facet": "Etiquette around the world",
+      "known_at": 9
+    },
+    {
+      "name": "Touching the head taboo in Thailand",
+      "facet": "Etiquette around the world",
+      "known_at": 11
+    },
+    {
+      "name": "Pointing the feet taboo in Thailand",
+      "facet": "Etiquette around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Thumbs-up as a rude gesture",
+      "facet": "Etiquette around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Nodding for “no” in Bulgaria",
+      "facet": "Etiquette around the world",
+      "known_at": 13
+    },
+    {
+      "name": "Queueing in Britain",
+      "facet": "Etiquette around the world",
+      "known_at": 9
+    },
+    {
+      "name": "Siesta in Spain",
+      "facet": "Etiquette around the world",
+      "known_at": 8
+    },
+    {
+      "name": "Punctuality in Germany",
+      "facet": "Etiquette around the world",
+      "known_at": 11
+    },
+    {
+      "name": "Ramadan fasting",
+      "facet": "Etiquette around the world",
+      "known_at": 9
+    },
+    {
+      "name": "Halal food",
+      "facet": "Etiquette around the world",
+      "known_at": 8
+    },
+    {
+      "name": "Sacred cows in India",
+      "facet": "Etiquette around the world",
+      "known_at": 7
+    },
+    {
+      "name": "Lei garland in Hawaii",
+      "facet": "Etiquette around the world",
+      "known_at": 7
+    },
+    {
+      "name": "Finnish sauna",
+      "facet": "Etiquette around the world",
+      "known_at": 11
+    }
+  ]
+}

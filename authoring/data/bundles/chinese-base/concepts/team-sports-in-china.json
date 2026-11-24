@@ -1,0 +1,1169 @@
+{
+  "subcategory": "team-sports-in-china",
+  "facets": [
+    "Women's volleyball golden eras",
+    "Volleyball stars and coaches",
+    "Women's volleyball spirit and films",
+    "Yao Ming and Chinese NBA players",
+    "CBA league and clubs",
+    "Chinese basketball national teams",
+    "Men's national football team",
+    "Steel Roses women's football",
+    "Chinese Super League and clubs",
+    "Football and basketball stars",
+    "Other team sports in China",
+    "Team sports in everyday Chinese life"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 2,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 4,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Five titles in a row 1981–86",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 8
+    },
+    {
+      "name": "1981 Women's Volleyball World Cup",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 10
+    },
+    {
+      "name": "1982 Women's Volleyball World Championship",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 13
+    },
+    {
+      "name": "1984 Los Angeles Olympics volleyball gold",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 9
+    },
+    {
+      "name": "1985 Women's Volleyball World Cup",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 13
+    },
+    {
+      "name": "1986 Women's Volleyball World Championship",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 13
+    },
+    {
+      "name": "1990 World Championship silver",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 14
+    },
+    {
+      "name": "1996 Atlanta Olympics volleyball silver",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 12
+    },
+    {
+      "name": "2003 Women's Volleyball World Cup",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 12
+    },
+    {
+      "name": "2004 Athens Olympics volleyball gold",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 9
+    },
+    {
+      "name": "Athens 2004 final against Russia",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 10
+    },
+    {
+      "name": "2008 Beijing Olympics volleyball bronze",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 12
+    },
+    {
+      "name": "2015 Women's Volleyball World Cup",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 10
+    },
+    {
+      "name": "2016 Rio Olympics volleyball gold",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 6
+    },
+    {
+      "name": "Rio 2016 quarter-final against Brazil",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 9
+    },
+    {
+      "name": "2019 Women's Volleyball World Cup",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 8
+    },
+    {
+      "name": "Ten world titles (十冠王)",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 11
+    },
+    {
+      "name": "Asian Games women's volleyball",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 10
+    },
+    {
+      "name": "FIVB Volleyball Nations League",
+      "facet": "Women's volleyball golden eras",
+      "known_at": 12
+    },
+    {
+      "name": "Chen Zhonghe",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 10
+    },
+    {
+      "name": "Hui Ruoqi",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 8
+    },
+    {
+      "name": "Feng Kun",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 10
+    },
+    {
+      "name": "Zhou Suhong",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Changning",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 9
+    },
+    {
+      "name": "Wei Qiuyue",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 10
+    },
+    {
+      "name": "Xu Yunli",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 12
+    },
+    {
+      "name": "Sun Jinfang",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Rongfang",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 12
+    },
+    {
+      "name": "Zhou Xiaolan",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 13
+    },
+    {
+      "name": "Cai Bin",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 13
+    },
+    {
+      "name": "Li Yingying",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 9
+    },
+    {
+      "name": "Gong Xiangyu",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 10
+    },
+    {
+      "name": "Ding Xia",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 9
+    },
+    {
+      "name": "Yan Ni",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 10
+    },
+    {
+      "name": "Zhao Ruirui",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 11
+    },
+    {
+      "name": "Yang Hao",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Yimei",
+      "facet": "Volleyball stars and coaches",
+      "known_at": 11
+    },
+    {
+      "name": "Women's volleyball spirit (女排精神)",
+      "facet": "Women's volleyball spirit and films",
+      "known_at": 5
+    },
+    {
+      "name": "Leap (夺冠)",
+      "facet": "Women's volleyball spirit and films",
+      "known_at": 7
+    },
+    {
+      "name": "Sha Ou (沙鸥)",
+      "facet": "Women's volleyball spirit and films",
+      "known_at": 13
+    },
+    {
+      "name": "Peter Chan",
+      "facet": "Women's volleyball spirit and films",
+      "known_at": 11
+    },
+    {
+      "name": "Bai Lang",
+      "facet": "Women's volleyball spirit and films",
+      "known_at": 12
+    },
+    {
+      "name": "Iron Hammer (铁榔头)",
+      "facet": "Women's volleyball spirit and films",
+      "known_at": 8
+    },
+    {
+      "name": "Learn from women's volleyball (学习女排)",
+      "facet": "Women's volleyball spirit and films",
+      "known_at": 11
+    },
+    {
+      "name": "Unite to revitalize China (团结起来，振兴中华)",
+      "facet": "Women's volleyball spirit and films",
+      "known_at": 12
+    },
+    {
+      "name": "2019 National Day parade float",
+      "facet": "Women's volleyball spirit and films",
+      "known_at": 11
+    },
+    {
+      "name": "Zhangzhou bamboo-shed gym (竹棚馆)",
+      "facet": "Women's volleyball spirit and films",
+      "known_at": 11
+    },
+    {
+      "name": "Moero Attack (排球女将)",
+      "facet": "Women's volleyball spirit and films",
+      "known_at": 12
+    },
+    {
+      "name": "Hirobumi Daimatsu",
+      "facet": "Women's volleyball spirit and films",
+      "known_at": 14
+    },
+    {
+      "name": "Yao Ming NBA no.1 pick 2002",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 8
+    },
+    {
+      "name": "Houston Rockets",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 4
+    },
+    {
+      "name": "Yao Ming's number 11",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 9
+    },
+    {
+      "name": "Yao Ming's height",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 6
+    },
+    {
+      "name": "Yao Ming in the Hall of Fame",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 10
+    },
+    {
+      "name": "Yao Ming and Tracy McGrady",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 10
+    },
+    {
+      "name": "Yao Ming face meme",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 6
+    },
+    {
+      "name": "Ye Li",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 12,
+      "retired": "unaskable: Only private details about a living person (wedding date, height) are left, so there is no fair or interesting fact to ask."
+    },
+    {
+      "name": "Wang Zhizhi",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 10
+    },
+    {
+      "name": "Mengke Bateer",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 12
+    },
+    {
+      "name": "Yi Jianlian",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 8
+    },
+    {
+      "name": "Yao–Yi game 2007",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 11
+    },
+    {
+      "name": "Sun Yue",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 11
+    },
+    {
+      "name": "Zhou Qi",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 9
+    },
+    {
+      "name": "Jeremy Lin",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 7
+    },
+    {
+      "name": "Linsanity",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 9
+    },
+    {
+      "name": "Cui Yongxi",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 9
+    },
+    {
+      "name": "Yang Hansen",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 8
+    },
+    {
+      "name": "Han Xu",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 9
+    },
+    {
+      "name": "Li Yueru",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 11
+    },
+    {
+      "name": "Zheng Haixia",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 13
+    },
+    {
+      "name": "NBA China Games",
+      "facet": "Yao Ming and Chinese NBA players",
+      "known_at": 12
+    },
+    {
+      "name": "CBA",
+      "facet": "CBA league and clubs",
+      "known_at": 5
+    },
+    {
+      "name": "Guangdong Southern Tigers",
+      "facet": "CBA league and clubs",
+      "known_at": 6
+    },
+    {
+      "name": "Bayi Rockets",
+      "facet": "CBA league and clubs",
+      "known_at": 9
+    },
+    {
+      "name": "Shanghai Sharks",
+      "facet": "CBA league and clubs",
+      "known_at": 8
+    },
+    {
+      "name": "Liaoning Flying Leopards",
+      "facet": "CBA league and clubs",
+      "known_at": 8
+    },
+    {
+      "name": "Beijing Ducks",
+      "facet": "CBA league and clubs",
+      "known_at": 8
+    },
+    {
+      "name": "Xinjiang Flying Tigers",
+      "facet": "CBA league and clubs",
+      "known_at": 10
+    },
+    {
+      "name": "Zhejiang Golden Bulls",
+      "facet": "CBA league and clubs",
+      "known_at": 11
+    },
+    {
+      "name": "Shenzhen Leopards",
+      "facet": "CBA league and clubs",
+      "known_at": 12
+    },
+    {
+      "name": "Shandong Heroes",
+      "facet": "CBA league and clubs",
+      "known_at": 12
+    },
+    {
+      "name": "CBA Finals",
+      "facet": "CBA league and clubs",
+      "known_at": 8
+    },
+    {
+      "name": "CBA All-Star Game",
+      "facet": "CBA league and clubs",
+      "known_at": 10
+    },
+    {
+      "name": "Founding of the CBA in 1995",
+      "facet": "CBA league and clubs",
+      "known_at": 12
+    },
+    {
+      "name": "CBA foreign player rule",
+      "facet": "CBA league and clubs",
+      "known_at": 13
+    },
+    {
+      "name": "CBA draft",
+      "facet": "CBA league and clubs",
+      "known_at": 13
+    },
+    {
+      "name": "Stephon Marbury",
+      "facet": "CBA league and clubs",
+      "known_at": 9
+    },
+    {
+      "name": "Tracy McGrady in Qingdao",
+      "facet": "CBA league and clubs",
+      "known_at": 12
+    },
+    {
+      "name": "Jimmer Fredette",
+      "facet": "CBA league and clubs",
+      "known_at": 13
+    },
+    {
+      "name": "Yao Ming as CBA president",
+      "facet": "CBA league and clubs",
+      "known_at": 9
+    },
+    {
+      "name": "Du Feng",
+      "facet": "CBA league and clubs",
+      "known_at": 9
+    },
+    {
+      "name": "Gong Luming",
+      "facet": "CBA league and clubs",
+      "known_at": 13
+    },
+    {
+      "name": "WCBA",
+      "facet": "CBA league and clubs",
+      "known_at": 11
+    },
+    {
+      "name": "NBL China",
+      "facet": "CBA league and clubs",
+      "known_at": 13
+    },
+    {
+      "name": "China men's national basketball team",
+      "facet": "Chinese basketball national teams",
+      "known_at": 5
+    },
+    {
+      "name": "China women's national basketball team",
+      "facet": "Chinese basketball national teams",
+      "known_at": 6
+    },
+    {
+      "name": "Walking Great Wall (移动长城)",
+      "facet": "Chinese basketball national teams",
+      "known_at": 9
+    },
+    {
+      "name": "Mu Tiezhu",
+      "facet": "Chinese basketball national teams",
+      "known_at": 12
+    },
+    {
+      "name": "1984 Los Angeles women's basketball bronze",
+      "facet": "Chinese basketball national teams",
+      "known_at": 13
+    },
+    {
+      "name": "1992 Barcelona women's basketball silver",
+      "facet": "Chinese basketball national teams",
+      "known_at": 12
+    },
+    {
+      "name": "1994 Women's Basketball World Championship silver",
+      "facet": "Chinese basketball national teams",
+      "known_at": 13
+    },
+    {
+      "name": "2004 Olympic win over Serbia and Montenegro",
+      "facet": "Chinese basketball national teams",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Shipeng",
+      "facet": "Chinese basketball national teams",
+      "known_at": 12
+    },
+    {
+      "name": "2008 Beijing Olympics basketball quarter-final",
+      "facet": "Chinese basketball national teams",
+      "known_at": 11
+    },
+    {
+      "name": "Yao Ming and Lin Hao at the 2008 opening ceremony",
+      "facet": "Chinese basketball national teams",
+      "known_at": 7
+    },
+    {
+      "name": "2019 FIBA Basketball World Cup in China",
+      "facet": "Chinese basketball national teams",
+      "known_at": 8
+    },
+    {
+      "name": "2022 Women's Basketball World Cup silver",
+      "facet": "Chinese basketball national teams",
+      "known_at": 9
+    },
+    {
+      "name": "FIBA Asia Cup",
+      "facet": "Chinese basketball national teams",
+      "known_at": 10
+    },
+    {
+      "name": "Asian Games basketball",
+      "facet": "Chinese basketball national teams",
+      "known_at": 9
+    },
+    {
+      "name": "3x3 basketball Olympic bronze",
+      "facet": "Chinese basketball national teams",
+      "known_at": 11
+    },
+    {
+      "name": "Guo Ailun",
+      "facet": "Chinese basketball national teams",
+      "known_at": 8
+    },
+    {
+      "name": "Hu Weidong",
+      "facet": "Chinese basketball national teams",
+      "known_at": 11
+    },
+    {
+      "name": "Zhu Fangyu",
+      "facet": "Chinese basketball national teams",
+      "known_at": 12
+    },
+    {
+      "name": "China national football team",
+      "facet": "Men's national football team",
+      "known_at": 3
+    },
+    {
+      "name": "Guozu (国足)",
+      "facet": "Men's national football team",
+      "known_at": 6
+    },
+    {
+      "name": "2002 World Cup appearance",
+      "facet": "Men's national football team",
+      "known_at": 8
+    },
+    {
+      "name": "2002 World Cup group stage",
+      "facet": "Men's national football team",
+      "known_at": 11
+    },
+    {
+      "name": "Qualification night at Wulihe Stadium 2001",
+      "facet": "Men's national football team",
+      "known_at": 12
+    },
+    {
+      "name": "Bora Milutinović",
+      "facet": "Men's national football team",
+      "known_at": 10
+    },
+    {
+      "name": "Fan Zhiyi",
+      "facet": "Men's national football team",
+      "known_at": 10
+    },
+    {
+      "name": "Hao Haidong",
+      "facet": "Men's national football team",
+      "known_at": 9
+    },
+    {
+      "name": "2004 AFC Asian Cup final in Beijing",
+      "facet": "Men's national football team",
+      "known_at": 11
+    },
+    {
+      "name": "1984 AFC Asian Cup silver",
+      "facet": "Men's national football team",
+      "known_at": 14
+    },
+    {
+      "name": "5.19 match against Hong Kong 1985",
+      "facet": "Men's national football team",
+      "known_at": 14
+    },
+    {
+      "name": "1982 World Cup play-off against New Zealand",
+      "facet": "Men's national football team",
+      "known_at": 15
+    },
+    {
+      "name": "Marcello Lippi",
+      "facet": "Men's national football team",
+      "known_at": 9
+    },
+    {
+      "name": "Branko Ivanković",
+      "facet": "Men's national football team",
+      "known_at": 12
+    },
+    {
+      "name": "Gao Hongbo",
+      "facet": "Men's national football team",
+      "known_at": 13
+    },
+    {
+      "name": "Zhu Guanghu",
+      "facet": "Men's national football team",
+      "known_at": 13
+    },
+    {
+      "name": "2026 World Cup qualifying",
+      "facet": "Men's national football team",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese Football Association",
+      "facet": "Men's national football team",
+      "known_at": 10
+    },
+    {
+      "name": "Steel Roses women's football",
+      "facet": "Steel Roses women's football",
+      "known_at": 6
+    },
+    {
+      "name": "1996 Atlanta Olympics football silver",
+      "facet": "Steel Roses women's football",
+      "known_at": 11
+    },
+    {
+      "name": "1999 Women's World Cup final",
+      "facet": "Steel Roses women's football",
+      "known_at": 10
+    },
+    {
+      "name": "Rose Bowl",
+      "facet": "Steel Roses women's football",
+      "known_at": 13
+    },
+    {
+      "name": "2007 Women's World Cup in China",
+      "facet": "Steel Roses women's football",
+      "known_at": 11
+    },
+    {
+      "name": "AFC Women's Asian Cup",
+      "facet": "Steel Roses women's football",
+      "known_at": 9
+    },
+    {
+      "name": "2022 Women's Asian Cup title",
+      "facet": "Steel Roses women's football",
+      "known_at": 8
+    },
+    {
+      "name": "Sun Wen",
+      "facet": "Steel Roses women's football",
+      "known_at": 8
+    },
+    {
+      "name": "FIFA Women's Player of the Century",
+      "facet": "Steel Roses women's football",
+      "known_at": 12
+    },
+    {
+      "name": "Ma Yuan'an",
+      "facet": "Steel Roses women's football",
+      "known_at": 13
+    },
+    {
+      "name": "Liu Ailing",
+      "facet": "Steel Roses women's football",
+      "known_at": 13
+    },
+    {
+      "name": "Gao Hong",
+      "facet": "Steel Roses women's football",
+      "known_at": 13
+    },
+    {
+      "name": "Fan Yunjie",
+      "facet": "Steel Roses women's football",
+      "known_at": 13
+    },
+    {
+      "name": "Liu Ying",
+      "facet": "Steel Roses women's football",
+      "known_at": 14
+    },
+    {
+      "name": "Wang Shuang",
+      "facet": "Steel Roses women's football",
+      "known_at": 7
+    },
+    {
+      "name": "Shui Qingxia",
+      "facet": "Steel Roses women's football",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Linyan",
+      "facet": "Steel Roses women's football",
+      "known_at": 11
+    },
+    {
+      "name": "Xiao Yuyi",
+      "facet": "Steel Roses women's football",
+      "known_at": 11
+    },
+    {
+      "name": "Tang Jiali",
+      "facet": "Steel Roses women's football",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Shanshan",
+      "facet": "Steel Roses women's football",
+      "known_at": 11
+    },
+    {
+      "name": "Chinese Super League",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 5
+    },
+    {
+      "name": "Jia-A League",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 11
+    },
+    {
+      "name": "Founding of the Chinese Super League in 2004",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 13
+    },
+    {
+      "name": "Guangzhou Evergrande",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 6
+    },
+    {
+      "name": "2013 AFC Champions League",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 10
+    },
+    {
+      "name": "2015 AFC Champions League",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 11
+    },
+    {
+      "name": "Tianhe Stadium",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 11
+    },
+    {
+      "name": "Shanghai Port",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 8
+    },
+    {
+      "name": "Shanghai Shenhua",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 8
+    },
+    {
+      "name": "Beijing Guoan",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 7
+    },
+    {
+      "name": "Shandong Taishan",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 8
+    },
+    {
+      "name": "Dalian Shide",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 11
+    },
+    {
+      "name": "Jiangsu Suning",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 11
+    },
+    {
+      "name": "Wuhan Three Towns",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 13
+    },
+    {
+      "name": "Chengdu Rongcheng",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese FA Cup",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 11
+    },
+    {
+      "name": "Oscar",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 10
+    },
+    {
+      "name": "Hulk",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 10
+    },
+    {
+      "name": "Carlos Tevez",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 11
+    },
+    {
+      "name": "Paulinho",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 11
+    },
+    {
+      "name": "Luiz Felipe Scolari",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 12
+    },
+    {
+      "name": "Elkeson (Ai Kesen)",
+      "facet": "Chinese Super League and clubs",
+      "known_at": 11
+    },
+    {
+      "name": "Wu Lei",
+      "facet": "Football and basketball stars",
+      "known_at": 6
+    },
+    {
+      "name": "Espanyol",
+      "facet": "Football and basketball stars",
+      "known_at": 9
+    },
+    {
+      "name": "Dong Fangzhuo",
+      "facet": "Football and basketball stars",
+      "known_at": 12
+    },
+    {
+      "name": "Yang Chen",
+      "facet": "Football and basketball stars",
+      "known_at": 14
+    },
+    {
+      "name": "Sun Jihai",
+      "facet": "Football and basketball stars",
+      "known_at": 10
+    },
+    {
+      "name": "Li Tie",
+      "facet": "Football and basketball stars",
+      "known_at": 11
+    },
+    {
+      "name": "Zheng Zhi",
+      "facet": "Football and basketball stars",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Yuning",
+      "facet": "Football and basketball stars",
+      "known_at": 10
+    },
+    {
+      "name": "Wei Shihao",
+      "facet": "Football and basketball stars",
+      "known_at": 10
+    },
+    {
+      "name": "Zhang Linpeng",
+      "facet": "Football and basketball stars",
+      "known_at": 10
+    },
+    {
+      "name": "Gao Lin",
+      "facet": "Football and basketball stars",
+      "known_at": 10
+    },
+    {
+      "name": "Yan Junling",
+      "facet": "Football and basketball stars",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Zhelin",
+      "facet": "Football and basketball stars",
+      "known_at": 11
+    },
+    {
+      "name": "Hu Mingxuan",
+      "facet": "Football and basketball stars",
+      "known_at": 11
+    },
+    {
+      "name": "Zhao Jiwei",
+      "facet": "Football and basketball stars",
+      "known_at": 11
+    },
+    {
+      "name": "Liu Wei",
+      "facet": "Football and basketball stars",
+      "known_at": 12
+    },
+    {
+      "name": "Chen Jianghua",
+      "facet": "Football and basketball stars",
+      "known_at": 12,
+      "retired": "unaskable: There aren't enough well-known, reliable facts about Chen Jianghua for a fair question at this level."
+    },
+    {
+      "name": "Ding Yanyuhang",
+      "facet": "Football and basketball stars",
+      "known_at": 11
+    },
+    {
+      "name": "Sun Mingming",
+      "facet": "Football and basketball stars",
+      "known_at": 13
+    },
+    {
+      "name": "Dragon boat racing",
+      "facet": "Other team sports in China",
+      "known_at": 1
+    },
+    {
+      "name": "Cuju",
+      "facet": "Other team sports in China",
+      "known_at": 6
+    },
+    {
+      "name": "Linzi",
+      "facet": "Other team sports in China",
+      "known_at": 12
+    },
+    {
+      "name": "Tang dynasty polo (马球)",
+      "facet": "Other team sports in China",
+      "known_at": 11
+    },
+    {
+      "name": "Field hockey",
+      "facet": "Other team sports in China",
+      "known_at": 13
+    },
+    {
+      "name": "Water polo",
+      "facet": "Other team sports in China",
+      "known_at": 9
+    },
+    {
+      "name": "Handball",
+      "facet": "Other team sports in China",
+      "known_at": 8
+    },
+    {
+      "name": "China Baseball League",
+      "facet": "Other team sports in China",
+      "known_at": 13
+    },
+    {
+      "name": "Kunlun Red Star",
+      "facet": "Other team sports in China",
+      "known_at": 13
+    },
+    {
+      "name": "Rugby sevens",
+      "facet": "Other team sports in China",
+      "known_at": 12
+    },
+    {
+      "name": "Wang Bingyu",
+      "facet": "Other team sports in China",
+      "known_at": 12
+    },
+    {
+      "name": "Artistic swimming team",
+      "facet": "Other team sports in China",
+      "known_at": 9
+    },
+    {
+      "name": "Xue Chen",
+      "facet": "Other team sports in China",
+      "known_at": 12
+    },
+    {
+      "name": "Honor of Kings esports",
+      "facet": "Other team sports in China",
+      "known_at": 8
+    },
+    {
+      "name": "Village Super League (村超)",
+      "facet": "Team sports in everyday Chinese life",
+      "known_at": 7
+    },
+    {
+      "name": "Village BA (村BA)",
+      "facet": "Team sports in everyday Chinese life",
+      "known_at": 8
+    },
+    {
+      "name": "Streetball",
+      "facet": "Team sports in everyday Chinese life",
+      "known_at": 5
+    },
+    {
+      "name": "Jianzi",
+      "facet": "Team sports in everyday Chinese life",
+      "known_at": 3
+    },
+    {
+      "name": "Tug of war",
+      "facet": "Team sports in everyday Chinese life",
+      "known_at": 2
+    },
+    {
+      "name": "Long rope skipping",
+      "facet": "Team sports in everyday Chinese life",
+      "known_at": 3
+    },
+    {
+      "name": "Sandbag throwing game (丢沙包)",
+      "facet": "Team sports in everyday Chinese life",
+      "known_at": 3
+    },
+    {
+      "name": "School sports day",
+      "facet": "Team sports in everyday Chinese life",
+      "known_at": 2
+    },
+    {
+      "name": "Slam Dunk",
+      "facet": "Team sports in everyday Chinese life",
+      "known_at": 6
+    },
+    {
+      "name": "Kung Fu Dunk",
+      "facet": "Team sports in everyday Chinese life",
+      "known_at": 10
+    },
+    {
+      "name": "Hupu",
+      "facet": "Team sports in everyday Chinese life",
+      "known_at": 12
+    },
+    {
+      "name": "Campus football",
+      "facet": "Team sports in everyday Chinese life",
+      "known_at": 11
+    },
+    {
+      "name": "CUBA",
+      "facet": "Team sports in everyday Chinese life",
+      "known_at": 11
+    },
+    {
+      "name": "Air volleyball (气排球)",
+      "facet": "Team sports in everyday Chinese life",
+      "known_at": 12
+    },
+    {
+      "name": "Anta",
+      "facet": "Team sports in everyday Chinese life",
+      "known_at": 7
+    }
+  ]
+}

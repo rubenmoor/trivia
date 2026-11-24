@@ -1,0 +1,989 @@
+{
+  "subcategory": "water-margin",
+  "facets": [
+    "Author and origins of the novel",
+    "Liangshan and its stronghold",
+    "The 108 heroes and their ranks",
+    "Song Jiang and the leaders",
+    "Wu Song's adventures",
+    "Lu Zhishen and Lin Chong",
+    "Li Kui and other wild warriors",
+    "Villains and corrupt officials",
+    "Women of the novel",
+    "Famous episodes and battles",
+    "Nicknames, weapons and sayings",
+    "Adaptations and Water Margin in culture"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 2,
+      "record": 1,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Historical Song Jiang uprising",
+      "facet": "Author and origins of the novel",
+      "known_at": 12
+    },
+    {
+      "name": "Vernacular Chinese novel (白话小说)",
+      "facet": "Author and origins of the novel",
+      "known_at": 11
+    },
+    {
+      "name": "Zhanghui novel (章回体)",
+      "facet": "Author and origins of the novel",
+      "known_at": 11
+    },
+    {
+      "name": "70-chapter edition",
+      "facet": "Author and origins of the novel",
+      "known_at": 13
+    },
+    {
+      "name": "100-chapter edition",
+      "facet": "Author and origins of the novel",
+      "known_at": 13
+    },
+    {
+      "name": "120-chapter edition",
+      "facet": "Author and origins of the novel",
+      "known_at": 13
+    },
+    {
+      "name": "Jin Shengtan",
+      "facet": "Author and origins of the novel",
+      "known_at": 14
+    },
+    {
+      "name": "Xuanhe Yishi (大宋宣和遗事)",
+      "facet": "Author and origins of the novel",
+      "known_at": 14
+    },
+    {
+      "name": "Storytelling (说书)",
+      "facet": "Author and origins of the novel",
+      "known_at": 9
+    },
+    {
+      "name": "Xinghua",
+      "facet": "Author and origins of the novel",
+      "known_at": 14
+    },
+    {
+      "name": "Li Zhi's commentary",
+      "facet": "Author and origins of the novel",
+      "known_at": 15
+    },
+    {
+      "name": "Mount Liang",
+      "facet": "Liangshan and its stronghold",
+      "known_at": 6
+    },
+    {
+      "name": "Dongping Lake",
+      "facet": "Liangshan and its stronghold",
+      "known_at": 13
+    },
+    {
+      "name": "Liangshan County",
+      "facet": "Liangshan and its stronghold",
+      "known_at": 12
+    },
+    {
+      "name": "Yuncheng County (郓城)",
+      "facet": "Liangshan and its stronghold",
+      "known_at": 12
+    },
+    {
+      "name": "Hall of Loyalty and Righteousness (忠义堂)",
+      "facet": "Liangshan and its stronghold",
+      "known_at": 10
+    },
+    {
+      "name": "Hall of Gathering Righteousness (聚义厅)",
+      "facet": "Liangshan and its stronghold",
+      "known_at": 10
+    },
+    {
+      "name": "Zhu Gui's tavern",
+      "facet": "Liangshan and its stronghold",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Lun",
+      "facet": "Liangshan and its stronghold",
+      "known_at": 10
+    },
+    {
+      "name": "Mount Erlong",
+      "facet": "Liangshan and its stronghold",
+      "known_at": 12
+    },
+    {
+      "name": "Mount Taohua",
+      "facet": "Liangshan and its stronghold",
+      "known_at": 12
+    },
+    {
+      "name": "Mount Shaohua",
+      "facet": "Liangshan and its stronghold",
+      "known_at": 13
+    },
+    {
+      "name": "Qingfeng Fort",
+      "facet": "Liangshan and its stronghold",
+      "known_at": 13
+    },
+    {
+      "name": "Jinsha Beach",
+      "facet": "Liangshan and its stronghold",
+      "known_at": 14
+    },
+    {
+      "name": "Reed marshes of Liangshan",
+      "facet": "Liangshan and its stronghold",
+      "known_at": 9
+    },
+    {
+      "name": "Liangshan water fortress",
+      "facet": "Liangshan and its stronghold",
+      "known_at": 10
+    },
+    {
+      "name": "108 heroes",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 4
+    },
+    {
+      "name": "36 Heavenly Spirits (天罡星)",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 9
+    },
+    {
+      "name": "72 Earthly Fiends (地煞星)",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 9
+    },
+    {
+      "name": "Stone tablet from Heaven (石碣)",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 12
+    },
+    {
+      "name": "Grand Assembly (排座次)",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 10
+    },
+    {
+      "name": "Huyan Zhuo",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 10
+    },
+    {
+      "name": "Dong Ping",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Qing",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 11
+    },
+    {
+      "name": "Yang Zhi",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 8
+    },
+    {
+      "name": "Shi Jin",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 9
+    },
+    {
+      "name": "Ruan Xiaoer",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 11
+    },
+    {
+      "name": "Ruan Xiaowu",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 11
+    },
+    {
+      "name": "Ruan Xiaoqi",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Shun",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 10
+    },
+    {
+      "name": "Yan Qing",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 10
+    },
+    {
+      "name": "Shi Qian",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 9
+    },
+    {
+      "name": "Dai Zong",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 9
+    },
+    {
+      "name": "Duan Jingzhu",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 14
+    },
+    {
+      "name": "Wang Ying",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 11
+    },
+    {
+      "name": "Xu Ning",
+      "facet": "The 108 heroes and their ranks",
+      "known_at": 12
+    },
+    {
+      "name": "Chao Gai",
+      "facet": "Song Jiang and the leaders",
+      "known_at": 8
+    },
+    {
+      "name": "Lu Junyi",
+      "facet": "Song Jiang and the leaders",
+      "known_at": 9
+    },
+    {
+      "name": "Wu Yong",
+      "facet": "Song Jiang and the leaders",
+      "known_at": 7
+    },
+    {
+      "name": "Gongsun Sheng",
+      "facet": "Song Jiang and the leaders",
+      "known_at": 9
+    },
+    {
+      "name": "Chai Jin",
+      "facet": "Song Jiang and the leaders",
+      "known_at": 10
+    },
+    {
+      "name": "Hua Rong",
+      "facet": "Song Jiang and the leaders",
+      "known_at": 9
+    },
+    {
+      "name": "Guan Sheng",
+      "facet": "Song Jiang and the leaders",
+      "known_at": 10
+    },
+    {
+      "name": "Qin Ming",
+      "facet": "Song Jiang and the leaders",
+      "known_at": 11
+    },
+    {
+      "name": "Zhu Tong",
+      "facet": "Song Jiang and the leaders",
+      "known_at": 12
+    },
+    {
+      "name": "Lei Heng",
+      "facet": "Song Jiang and the leaders",
+      "known_at": 12
+    },
+    {
+      "name": "Li Ying",
+      "facet": "Song Jiang and the leaders",
+      "known_at": 13
+    },
+    {
+      "name": "Song Qing",
+      "facet": "Song Jiang and the leaders",
+      "known_at": 14
+    },
+    {
+      "name": "Amnesty (招安)",
+      "facet": "Song Jiang and the leaders",
+      "known_at": 10
+    },
+    {
+      "name": "Mystic Lady of the Ninth Heaven (九天玄女)",
+      "facet": "Song Jiang and the leaders",
+      "known_at": 12
+    },
+    {
+      "name": "Wu Song kills the tiger",
+      "facet": "Wu Song's adventures",
+      "known_at": 3
+    },
+    {
+      "name": "Wu Song",
+      "facet": "Wu Song's adventures",
+      "known_at": 4
+    },
+    {
+      "name": "Jingyang Ridge (景阳冈)",
+      "facet": "Wu Song's adventures",
+      "known_at": 7
+    },
+    {
+      "name": "Wu Dalang",
+      "facet": "Wu Song's adventures",
+      "known_at": 6
+    },
+    {
+      "name": "Three bowls and you can't cross the ridge (三碗不过冈)",
+      "facet": "Wu Song's adventures",
+      "known_at": 9
+    },
+    {
+      "name": "Wu Dalang's steamed buns (炊饼)",
+      "facet": "Wu Song's adventures",
+      "known_at": 8
+    },
+    {
+      "name": "Wu Song avenges his brother",
+      "facet": "Wu Song's adventures",
+      "known_at": 10
+    },
+    {
+      "name": "Shi En",
+      "facet": "Wu Song's adventures",
+      "known_at": 12
+    },
+    {
+      "name": "Jiang Menshen",
+      "facet": "Wu Song's adventures",
+      "known_at": 10
+    },
+    {
+      "name": "Wu Song drunkenly beats Jiang Menshen (醉打蒋门神)",
+      "facet": "Wu Song's adventures",
+      "known_at": 10
+    },
+    {
+      "name": "Kuaihuolin (快活林)",
+      "facet": "Wu Song's adventures",
+      "known_at": 12
+    },
+    {
+      "name": "Mandarin Duck Tower (鸳鸯楼)",
+      "facet": "Wu Song's adventures",
+      "known_at": 13
+    },
+    {
+      "name": "Wu Song the Pilgrim (行者)",
+      "facet": "Wu Song's adventures",
+      "known_at": 10
+    },
+    {
+      "name": "Yanggu County",
+      "facet": "Wu Song's adventures",
+      "known_at": 12
+    },
+    {
+      "name": "Qinghe County",
+      "facet": "Wu Song's adventures",
+      "known_at": 13
+    },
+    {
+      "name": "Liuhe Pagoda",
+      "facet": "Wu Song's adventures",
+      "known_at": 13
+    },
+    {
+      "name": "Lu Zhishen uproots a willow",
+      "facet": "Lu Zhishen and Lin Chong",
+      "known_at": 4
+    },
+    {
+      "name": "Lu Zhishen",
+      "facet": "Lu Zhishen and Lin Chong",
+      "known_at": 5
+    },
+    {
+      "name": "Lu Zhishen punches Zhen Guanxi (拳打镇关西)",
+      "facet": "Lu Zhishen and Lin Chong",
+      "known_at": 8
+    },
+    {
+      "name": "Zhen Guanxi",
+      "facet": "Lu Zhishen and Lin Chong",
+      "known_at": 9
+    },
+    {
+      "name": "Lu Da",
+      "facet": "Lu Zhishen and Lin Chong",
+      "known_at": 10
+    },
+    {
+      "name": "Lu Zhishen gets drunk at Mount Wutai",
+      "facet": "Lu Zhishen and Lin Chong",
+      "known_at": 11
+    },
+    {
+      "name": "Daxiangguo Temple",
+      "facet": "Lu Zhishen and Lin Chong",
+      "known_at": 11
+    },
+    {
+      "name": "Lin Chong",
+      "facet": "Lu Zhishen and Lin Chong",
+      "known_at": 6
+    },
+    {
+      "name": "Instructor of the 800,000 Imperial Guards",
+      "facet": "Lu Zhishen and Lin Chong",
+      "known_at": 10
+    },
+    {
+      "name": "White Tiger Hall (白虎堂)",
+      "facet": "Lu Zhishen and Lin Chong",
+      "known_at": 11
+    },
+    {
+      "name": "Wild Boar Forest (野猪林)",
+      "facet": "Lu Zhishen and Lin Chong",
+      "known_at": 9
+    },
+    {
+      "name": "Cangzhou",
+      "facet": "Lu Zhishen and Lin Chong",
+      "known_at": 11
+    },
+    {
+      "name": "Fodder depot",
+      "facet": "Lu Zhishen and Lin Chong",
+      "known_at": 11
+    },
+    {
+      "name": "Snowy night at the Mountain God Temple (风雪山神庙)",
+      "facet": "Lu Zhishen and Lin Chong",
+      "known_at": 9
+    },
+    {
+      "name": "Lin Chong buys a precious sword",
+      "facet": "Lu Zhishen and Lin Chong",
+      "known_at": 12
+    },
+    {
+      "name": "Li Gui (李鬼)",
+      "facet": "Li Kui and other wild warriors",
+      "known_at": 8
+    },
+    {
+      "name": "Li Kui kills four tigers at Yiling",
+      "facet": "Li Kui and other wild warriors",
+      "known_at": 10
+    },
+    {
+      "name": "Li Kui carries his mother",
+      "facet": "Li Kui and other wild warriors",
+      "known_at": 11
+    },
+    {
+      "name": "Li Kui fights Zhang Shun in the water",
+      "facet": "Li Kui and other wild warriors",
+      "known_at": 11
+    },
+    {
+      "name": "Li Kui tears the imperial edict",
+      "facet": "Li Kui and other wild warriors",
+      "known_at": 13
+    },
+    {
+      "name": "Liu Tang",
+      "facet": "Li Kui and other wild warriors",
+      "known_at": 10
+    },
+    {
+      "name": "Shi Xiu",
+      "facet": "Li Kui and other wild warriors",
+      "known_at": 11
+    },
+    {
+      "name": "Yang Xiong",
+      "facet": "Li Kui and other wild warriors",
+      "known_at": 12
+    },
+    {
+      "name": "Sun Li",
+      "facet": "Li Kui and other wild warriors",
+      "known_at": 13
+    },
+    {
+      "name": "Xie Zhen",
+      "facet": "Li Kui and other wild warriors",
+      "known_at": 13
+    },
+    {
+      "name": "Xie Bao",
+      "facet": "Li Kui and other wild warriors",
+      "known_at": 13
+    },
+    {
+      "name": "Mu Hong",
+      "facet": "Li Kui and other wild warriors",
+      "known_at": 14
+    },
+    {
+      "name": "Bao Xu",
+      "facet": "Li Kui and other wild warriors",
+      "known_at": 14
+    },
+    {
+      "name": "Jiao Ting",
+      "facet": "Li Kui and other wild warriors",
+      "known_at": 14
+    },
+    {
+      "name": "Gao Qiu",
+      "facet": "Villains and corrupt officials",
+      "known_at": 6
+    },
+    {
+      "name": "Gao Qiu's cuju skill",
+      "facet": "Villains and corrupt officials",
+      "known_at": 9
+    },
+    {
+      "name": "Tong Guan",
+      "facet": "Villains and corrupt officials",
+      "known_at": 11
+    },
+    {
+      "name": "Yang Jian",
+      "facet": "Villains and corrupt officials",
+      "known_at": 13
+    },
+    {
+      "name": "Gao Yanei",
+      "facet": "Villains and corrupt officials",
+      "known_at": 9
+    },
+    {
+      "name": "Lu Qian",
+      "facet": "Villains and corrupt officials",
+      "known_at": 12
+    },
+    {
+      "name": "Ximen Qing",
+      "facet": "Villains and corrupt officials",
+      "known_at": 7
+    },
+    {
+      "name": "Wang Po",
+      "facet": "Villains and corrupt officials",
+      "known_at": 9
+    },
+    {
+      "name": "Huang Wenbing",
+      "facet": "Villains and corrupt officials",
+      "known_at": 13
+    },
+    {
+      "name": "Liang Zhongshu",
+      "facet": "Villains and corrupt officials",
+      "known_at": 12
+    },
+    {
+      "name": "Cai Jiu",
+      "facet": "Villains and corrupt officials",
+      "known_at": 14
+    },
+    {
+      "name": "Niu Er (牛二)",
+      "facet": "Villains and corrupt officials",
+      "known_at": 11
+    },
+    {
+      "name": "Fang La",
+      "facet": "Villains and corrupt officials",
+      "known_at": 10
+    },
+    {
+      "name": "Shi Wengong",
+      "facet": "Villains and corrupt officials",
+      "known_at": 13
+    },
+    {
+      "name": "Pan Jinlian",
+      "facet": "Women of the novel",
+      "known_at": 6,
+      "retired": "unaskable: Pan Jinlian's story is about an affair and a poisoning; the cause-effect byword option is too adult for a family game."
+    },
+    {
+      "name": "Hu Sanniang",
+      "facet": "Women of the novel",
+      "known_at": 8
+    },
+    {
+      "name": "Gu Dasao",
+      "facet": "Women of the novel",
+      "known_at": 10
+    },
+    {
+      "name": "Sun Erniang",
+      "facet": "Women of the novel",
+      "known_at": 9
+    },
+    {
+      "name": "Cross Slope inn (十字坡)",
+      "facet": "Women of the novel",
+      "known_at": 10
+    },
+    {
+      "name": "Yan Poxi",
+      "facet": "Women of the novel",
+      "known_at": 10
+    },
+    {
+      "name": "Yan Po",
+      "facet": "Women of the novel",
+      "known_at": 13
+    },
+    {
+      "name": "Pan Qiaoyun",
+      "facet": "Women of the novel",
+      "known_at": 12
+    },
+    {
+      "name": "Li Shishi",
+      "facet": "Women of the novel",
+      "known_at": 11
+    },
+    {
+      "name": "Jin Cuilian",
+      "facet": "Women of the novel",
+      "known_at": 10
+    },
+    {
+      "name": "Zhang Zhenniang",
+      "facet": "Women of the novel",
+      "known_at": 12
+    },
+    {
+      "name": "Qiong Ying",
+      "facet": "Women of the novel",
+      "known_at": 14
+    },
+    {
+      "name": "Bai Xiuying",
+      "facet": "Women of the novel",
+      "known_at": 14,
+      "retired": "unaskable: Bai Xiuying is too minor for a fair question, and her story ends in a violent killing."
+    },
+    {
+      "name": "Lady Jia",
+      "facet": "Women of the novel",
+      "known_at": 14
+    },
+    {
+      "name": "Three heroines of Liangshan",
+      "facet": "Women of the novel",
+      "known_at": 10
+    },
+    {
+      "name": "Robbery of the birthday gifts (智取生辰纲)",
+      "facet": "Famous episodes and battles",
+      "known_at": 7
+    },
+    {
+      "name": "Yellow Mud Ridge (黄泥冈)",
+      "facet": "Famous episodes and battles",
+      "known_at": 10
+    },
+    {
+      "name": "Yang Zhi sells his sword (杨志卖刀)",
+      "facet": "Famous episodes and battles",
+      "known_at": 9
+    },
+    {
+      "name": "Three attacks on the Zhu Family Village (三打祝家庄)",
+      "facet": "Famous episodes and battles",
+      "known_at": 9
+    },
+    {
+      "name": "Zhu Family Village",
+      "facet": "Famous episodes and battles",
+      "known_at": 10
+    },
+    {
+      "name": "Hu Family Village",
+      "facet": "Famous episodes and battles",
+      "known_at": 12
+    },
+    {
+      "name": "Song Jiang's poem at Xunyang Tower",
+      "facet": "Famous episodes and battles",
+      "known_at": 11
+    },
+    {
+      "name": "Rescue at the Jiangzhou execution ground",
+      "facet": "Famous episodes and battles",
+      "known_at": 11
+    },
+    {
+      "name": "Lu Junyi tricked onto Liangshan",
+      "facet": "Famous episodes and battles",
+      "known_at": 11
+    },
+    {
+      "name": "Lantern Festival raid on Daming",
+      "facet": "Famous episodes and battles",
+      "known_at": 13
+    },
+    {
+      "name": "Chain-linked cavalry (连环马)",
+      "facet": "Famous episodes and battles",
+      "known_at": 12
+    },
+    {
+      "name": "Hooked lances (钩镰枪)",
+      "facet": "Famous episodes and battles",
+      "known_at": 13
+    },
+    {
+      "name": "Shi Qian steals the golden armor",
+      "facet": "Famous episodes and battles",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Zengtou City (曾头市)",
+      "facet": "Famous episodes and battles",
+      "known_at": 13
+    },
+    {
+      "name": "Campaign against the Liao",
+      "facet": "Famous episodes and battles",
+      "known_at": 12
+    },
+    {
+      "name": "Campaign against Fang La",
+      "facet": "Famous episodes and battles",
+      "known_at": 11
+    },
+    {
+      "name": "Timely Rain (及时雨)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Black Whirlwind (黑旋风)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Flowery Monk (花和尚)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Panther Head (豹子头)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Wisdom Star (智多星)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Little Li Guang (小李广)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Divine Messenger (神行太保)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Flea on the Drum (鼓上蚤)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Blue-Faced Beast (青面兽)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Nine Dragons (九纹龙)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Ten Feet of Steel (一丈青)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Featherless Arrow (没羽箭)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Carry out justice on behalf of Heaven (替天行道)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Driven to join the Liangshan rebels (逼上梁山)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Twin axes",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Monk's spade staff (禅杖)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Dai Zong's magic horse charms (甲马)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Haohan (好汉)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Shuihu (水浒)",
+      "facet": "Nicknames, weapons and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Water Margin (1998 TV series)",
+      "facet": "Adaptations and Water Margin in culture",
+      "known_at": 6
+    },
+    {
+      "name": "All Men Are Brothers (2011 TV series)",
+      "facet": "Adaptations and Water Margin in culture",
+      "known_at": 10
+    },
+    {
+      "name": "Song of the Heroes (好汉歌)",
+      "facet": "Adaptations and Water Margin in culture",
+      "known_at": 5
+    },
+    {
+      "name": "Li Xuejian",
+      "facet": "Adaptations and Water Margin in culture",
+      "known_at": 11
+    },
+    {
+      "name": "Ding Haifeng",
+      "facet": "Adaptations and Water Margin in culture",
+      "known_at": 13
+    },
+    {
+      "name": "Little Raccoon noodle cards (小浣熊水浒卡)",
+      "facet": "Adaptations and Water Margin in culture",
+      "known_at": 8
+    },
+    {
+      "name": "Jin Ping Mei",
+      "facet": "Adaptations and Water Margin in culture",
+      "known_at": 12
+    },
+    {
+      "name": "Wu Song Fights the Tiger (Peking opera)",
+      "facet": "Adaptations and Water Margin in culture",
+      "known_at": 9
+    },
+    {
+      "name": "Lin Chong Flees by Night (林冲夜奔)",
+      "facet": "Adaptations and Water Margin in culture",
+      "known_at": 12
+    },
+    {
+      "name": "Lianhuanhua picture books (连环画)",
+      "facet": "Adaptations and Water Margin in culture",
+      "known_at": 8
+    },
+    {
+      "name": "Suikoden",
+      "facet": "Adaptations and Water Margin in culture",
+      "known_at": 12
+    },
+    {
+      "name": "Outlaws of the Marsh (Sidney Shapiro translation)",
+      "facet": "Adaptations and Water Margin in culture",
+      "known_at": 13
+    },
+    {
+      "name": "Pearl S. Buck's All Men Are Brothers",
+      "facet": "Adaptations and Water Margin in culture",
+      "known_at": 13
+    },
+    {
+      "name": "Chen Hongshou's Water Margin cards (水浒叶子)",
+      "facet": "Adaptations and Water Margin in culture",
+      "known_at": 15
+    },
+    {
+      "name": "Utagawa Kuniyoshi's 108 heroes prints",
+      "facet": "Adaptations and Water Margin in culture",
+      "known_at": 14
+    },
+    {
+      "name": "Water Margin postage stamps",
+      "facet": "Adaptations and Water Margin in culture",
+      "known_at": 12
+    }
+  ]
+}

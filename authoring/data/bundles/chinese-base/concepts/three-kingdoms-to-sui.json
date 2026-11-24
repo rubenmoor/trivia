@@ -1,0 +1,1028 @@
+{
+  "subcategory": "three-kingdoms-to-sui",
+  "facets": [
+    "Three Kingdoms rulers and states",
+    "Generals and strategists in history",
+    "Great battles of the era",
+    "Western and Eastern Jin",
+    "Sixteen Kingdoms and northern peoples",
+    "Northern Wei and Emperor Xiaowen",
+    "Southern dynasties and Jiankang",
+    "Sui reunification and emperors",
+    "Grand Canal and Sui projects",
+    "Culture, poets and calligraphers",
+    "Buddhism and grottoes of the era",
+    "Inventions, sayings and daily life"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 5,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Three Kingdoms period",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 4
+    },
+    {
+      "name": "Cao Cao",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 5
+    },
+    {
+      "name": "Liu Bei",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 5
+    },
+    {
+      "name": "Sun Quan",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 6
+    },
+    {
+      "name": "Cao Pi",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 9
+    },
+    {
+      "name": "Liu Shan",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 8
+    },
+    {
+      "name": "Sun Jian",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 10
+    },
+    {
+      "name": "Sun Ce",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 9
+    },
+    {
+      "name": "Emperor Xian of Han",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 10
+    },
+    {
+      "name": "Cao Wei",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 7
+    },
+    {
+      "name": "Shu Han",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 7
+    },
+    {
+      "name": "Eastern Wu",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 7
+    },
+    {
+      "name": "Jianye",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 11
+    },
+    {
+      "name": "Xuchang",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 11
+    },
+    {
+      "name": "Dong Zhuo",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 9
+    },
+    {
+      "name": "Yuan Shao",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 10
+    },
+    {
+      "name": "Sun Hao",
+      "facet": "Three Kingdoms rulers and states",
+      "known_at": 13
+    },
+    {
+      "name": "Guan Yu",
+      "facet": "Generals and strategists in history",
+      "known_at": 3
+    },
+    {
+      "name": "Zhang Fei",
+      "facet": "Generals and strategists in history",
+      "known_at": 4
+    },
+    {
+      "name": "Lü Bu",
+      "facet": "Generals and strategists in history",
+      "known_at": 5
+    },
+    {
+      "name": "Zhou Yu",
+      "facet": "Generals and strategists in history",
+      "known_at": 6
+    },
+    {
+      "name": "Sima Yi",
+      "facet": "Generals and strategists in history",
+      "known_at": 7
+    },
+    {
+      "name": "Lu Su",
+      "facet": "Generals and strategists in history",
+      "known_at": 9
+    },
+    {
+      "name": "Lü Meng",
+      "facet": "Generals and strategists in history",
+      "known_at": 10
+    },
+    {
+      "name": "Lu Xun (Wu general)",
+      "facet": "Generals and strategists in history",
+      "known_at": 11
+    },
+    {
+      "name": "Huang Zhong",
+      "facet": "Generals and strategists in history",
+      "known_at": 8
+    },
+    {
+      "name": "Ma Chao",
+      "facet": "Generals and strategists in history",
+      "known_at": 8
+    },
+    {
+      "name": "Huang Gai",
+      "facet": "Generals and strategists in history",
+      "known_at": 8
+    },
+    {
+      "name": "Xiahou Dun",
+      "facet": "Generals and strategists in history",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Liao",
+      "facet": "Generals and strategists in history",
+      "known_at": 9
+    },
+    {
+      "name": "Pang Tong",
+      "facet": "Generals and strategists in history",
+      "known_at": 9
+    },
+    {
+      "name": "Guo Jia",
+      "facet": "Generals and strategists in history",
+      "known_at": 10
+    },
+    {
+      "name": "Jiang Wei",
+      "facet": "Generals and strategists in history",
+      "known_at": 10
+    },
+    {
+      "name": "Gan Ning",
+      "facet": "Generals and strategists in history",
+      "known_at": 10
+    },
+    {
+      "name": "Deng Ai",
+      "facet": "Generals and strategists in history",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of Red Cliffs",
+      "facet": "Great battles of the era",
+      "known_at": 5
+    },
+    {
+      "name": "Battle of Guandu",
+      "facet": "Great battles of the era",
+      "known_at": 8
+    },
+    {
+      "name": "Battle of Changban",
+      "facet": "Great battles of the era",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Yiling",
+      "facet": "Great battles of the era",
+      "known_at": 10
+    },
+    {
+      "name": "Battle of Fan Castle",
+      "facet": "Great battles of the era",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Xiaoyao Ford",
+      "facet": "Great battles of the era",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Dingjun Mountain",
+      "facet": "Great battles of the era",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of Jieting",
+      "facet": "Great battles of the era",
+      "known_at": 10
+    },
+    {
+      "name": "Zhuge Liang's Northern Expeditions",
+      "facet": "Great battles of the era",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Wuzhang Plains",
+      "facet": "Great battles of the era",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of Hanzhong",
+      "facet": "Great battles of the era",
+      "known_at": 12
+    },
+    {
+      "name": "Wei conquest of Shu",
+      "facet": "Great battles of the era",
+      "known_at": 12
+    },
+    {
+      "name": "Jin conquest of Wu",
+      "facet": "Great battles of the era",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Fei River",
+      "facet": "Great battles of the era",
+      "known_at": 9
+    },
+    {
+      "name": "Sui conquest of Chen",
+      "facet": "Great battles of the era",
+      "known_at": 12
+    },
+    {
+      "name": "Goguryeo–Sui War",
+      "facet": "Great battles of the era",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Salsu",
+      "facet": "Great battles of the era",
+      "known_at": 14
+    },
+    {
+      "name": "Battle of Yubi",
+      "facet": "Great battles of the era",
+      "known_at": 15
+    },
+    {
+      "name": "Battle of Shayuan",
+      "facet": "Great battles of the era",
+      "known_at": 15
+    },
+    {
+      "name": "Jin dynasty",
+      "facet": "Western and Eastern Jin",
+      "known_at": 7
+    },
+    {
+      "name": "Sima Yan",
+      "facet": "Western and Eastern Jin",
+      "known_at": 9
+    },
+    {
+      "name": "Sima Zhao",
+      "facet": "Western and Eastern Jin",
+      "known_at": 10
+    },
+    {
+      "name": "Western Jin",
+      "facet": "Western and Eastern Jin",
+      "known_at": 9
+    },
+    {
+      "name": "Eastern Jin",
+      "facet": "Western and Eastern Jin",
+      "known_at": 8
+    },
+    {
+      "name": "War of the Eight Princes",
+      "facet": "Western and Eastern Jin",
+      "known_at": 12
+    },
+    {
+      "name": "Emperor Hui of Jin",
+      "facet": "Western and Eastern Jin",
+      "known_at": 12
+    },
+    {
+      "name": "Jia Nanfeng",
+      "facet": "Western and Eastern Jin",
+      "known_at": 13
+    },
+    {
+      "name": "Disaster of Yongjia",
+      "facet": "Western and Eastern Jin",
+      "known_at": 13
+    },
+    {
+      "name": "Sima Rui",
+      "facet": "Western and Eastern Jin",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Dao",
+      "facet": "Western and Eastern Jin",
+      "known_at": 13
+    },
+    {
+      "name": "Xie An",
+      "facet": "Western and Eastern Jin",
+      "known_at": 11
+    },
+    {
+      "name": "Xie Xuan",
+      "facet": "Western and Eastern Jin",
+      "known_at": 12
+    },
+    {
+      "name": "Huan Wen",
+      "facet": "Western and Eastern Jin",
+      "known_at": 13
+    },
+    {
+      "name": "Liu Kun",
+      "facet": "Western and Eastern Jin",
+      "known_at": 12
+    },
+    {
+      "name": "Tao Kan",
+      "facet": "Western and Eastern Jin",
+      "known_at": 12
+    },
+    {
+      "name": "Shi Chong",
+      "facet": "Western and Eastern Jin",
+      "known_at": 12
+    },
+    {
+      "name": "Wang and Xie clans",
+      "facet": "Western and Eastern Jin",
+      "known_at": 11
+    },
+    {
+      "name": "Southward migration of the northern gentry (衣冠南渡)",
+      "facet": "Western and Eastern Jin",
+      "known_at": 12
+    },
+    {
+      "name": "Sixteen Kingdoms",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 9
+    },
+    {
+      "name": "Five Barbarians (五胡)",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 11
+    },
+    {
+      "name": "Xianbei",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 9
+    },
+    {
+      "name": "Di people",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 12
+    },
+    {
+      "name": "Qiang people",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 11
+    },
+    {
+      "name": "Jie people",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 13
+    },
+    {
+      "name": "Fu Jian",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 10
+    },
+    {
+      "name": "Former Qin",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 11
+    },
+    {
+      "name": "Shi Le",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 12
+    },
+    {
+      "name": "Later Zhao",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Yuan",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 13
+    },
+    {
+      "name": "Han Zhao",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 13
+    },
+    {
+      "name": "Murong clan",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 13
+    },
+    {
+      "name": "Rouran",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 12
+    },
+    {
+      "name": "Helian Bobo",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 14
+    },
+    {
+      "name": "Tongwancheng",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 14
+    },
+    {
+      "name": "Ran Min",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 13
+    },
+    {
+      "name": "Northern Liang",
+      "facet": "Sixteen Kingdoms and northern peoples",
+      "known_at": 13
+    },
+    {
+      "name": "Emperor Xiaowen of Northern Wei",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 9
+    },
+    {
+      "name": "Tuoba clan",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 10
+    },
+    {
+      "name": "Pingcheng",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 11
+    },
+    {
+      "name": "Move of the capital to Luoyang (494)",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 10
+    },
+    {
+      "name": "Xiaowen's sinicization reforms",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 10
+    },
+    {
+      "name": "Tuoba surname changed to Yuan",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 11
+    },
+    {
+      "name": "Equal-field system (均田制)",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 11
+    },
+    {
+      "name": "Empress Dowager Feng",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 12
+    },
+    {
+      "name": "Emperor Taiwu of Northern Wei",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 12
+    },
+    {
+      "name": "Ballad of Mulan (木兰辞)",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 5
+    },
+    {
+      "name": "Six Garrisons Rebellion",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 13
+    },
+    {
+      "name": "Erzhu Rong",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 14
+    },
+    {
+      "name": "Eastern Wei",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 12
+    },
+    {
+      "name": "Western Wei",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 12
+    },
+    {
+      "name": "Northern Qi",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 11
+    },
+    {
+      "name": "Northern Zhou",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 11
+    },
+    {
+      "name": "Gao Huan",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 13
+    },
+    {
+      "name": "Yuwen Tai",
+      "facet": "Northern Wei and Emperor Xiaowen",
+      "known_at": 13
+    },
+    {
+      "name": "Southern and Northern Dynasties",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 7
+    },
+    {
+      "name": "Six Dynasties",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 10
+    },
+    {
+      "name": "Jiankang",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 9
+    },
+    {
+      "name": "Liu Song dynasty",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 11
+    },
+    {
+      "name": "Southern Qi",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 12
+    },
+    {
+      "name": "Liang dynasty",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 11
+    },
+    {
+      "name": "Chen dynasty",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 11
+    },
+    {
+      "name": "Liu Yu (Emperor Wu of Song)",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 11
+    },
+    {
+      "name": "Emperor Wu of Liang",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 11
+    },
+    {
+      "name": "Hou Jing Rebellion",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 13
+    },
+    {
+      "name": "Chen Shubao",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 12
+    },
+    {
+      "name": "Jade Tree Flowers in the Back Courtyard (玉树后庭花)",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 12
+    },
+    {
+      "name": "480 temples of the Southern Dynasties",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 10
+    },
+    {
+      "name": "Jiming Temple",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 12
+    },
+    {
+      "name": "Tan Daoji",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 13
+    },
+    {
+      "name": "Xiao Daocheng",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 14
+    },
+    {
+      "name": "Chen Baxian",
+      "facet": "Southern dynasties and Jiankang",
+      "known_at": 14
+    },
+    {
+      "name": "Sui dynasty",
+      "facet": "Sui reunification and emperors",
+      "known_at": 6
+    },
+    {
+      "name": "Emperor Wen of Sui (Yang Jian)",
+      "facet": "Sui reunification and emperors",
+      "known_at": 8
+    },
+    {
+      "name": "Emperor Yang of Sui (Yang Guang)",
+      "facet": "Sui reunification and emperors",
+      "known_at": 8
+    },
+    {
+      "name": "Three Departments and Six Ministries",
+      "facet": "Sui reunification and emperors",
+      "known_at": 10
+    },
+    {
+      "name": "Daxing City",
+      "facet": "Sui reunification and emperors",
+      "known_at": 11
+    },
+    {
+      "name": "Eastern Capital Luoyang (Sui)",
+      "facet": "Sui reunification and emperors",
+      "known_at": 12
+    },
+    {
+      "name": "Jiangdu",
+      "facet": "Sui reunification and emperors",
+      "known_at": 10
+    },
+    {
+      "name": "Empress Dugu",
+      "facet": "Sui reunification and emperors",
+      "known_at": 12
+    },
+    {
+      "name": "Kaihuang era",
+      "facet": "Sui reunification and emperors",
+      "known_at": 12
+    },
+    {
+      "name": "Fall of the Sui dynasty",
+      "facet": "Sui reunification and emperors",
+      "known_at": 11
+    },
+    {
+      "name": "Li Yuan",
+      "facet": "Sui reunification and emperors",
+      "known_at": 9
+    },
+    {
+      "name": "Wagang Army",
+      "facet": "Sui reunification and emperors",
+      "known_at": 13
+    },
+    {
+      "name": "Yuwen Huaji",
+      "facet": "Sui reunification and emperors",
+      "known_at": 13
+    },
+    {
+      "name": "Yang Su",
+      "facet": "Sui reunification and emperors",
+      "known_at": 13
+    },
+    {
+      "name": "Gao Jiong",
+      "facet": "Sui reunification and emperors",
+      "known_at": 14
+    },
+    {
+      "name": "Yang Yong",
+      "facet": "Sui reunification and emperors",
+      "known_at": 14
+    },
+    {
+      "name": "Tongji Canal",
+      "facet": "Grand Canal and Sui projects",
+      "known_at": 12
+    },
+    {
+      "name": "Yongji Canal",
+      "facet": "Grand Canal and Sui projects",
+      "known_at": 12
+    },
+    {
+      "name": "Jiangnan Canal",
+      "facet": "Grand Canal and Sui projects",
+      "known_at": 12
+    },
+    {
+      "name": "Shanyang Canal",
+      "facet": "Grand Canal and Sui projects",
+      "known_at": 13
+    },
+    {
+      "name": "Zhuojun",
+      "facet": "Grand Canal and Sui projects",
+      "known_at": 13
+    },
+    {
+      "name": "Emperor Yang's dragon boats",
+      "facet": "Grand Canal and Sui projects",
+      "known_at": 11
+    },
+    {
+      "name": "Yuwen Kai",
+      "facet": "Grand Canal and Sui projects",
+      "known_at": 13
+    },
+    {
+      "name": "Hanjia Granary",
+      "facet": "Grand Canal and Sui projects",
+      "known_at": 13
+    },
+    {
+      "name": "Xingluo Granary",
+      "facet": "Grand Canal and Sui projects",
+      "known_at": 14,
+      "retired": "unaskable: Several Sui granaries near Luoyang (Huiluo, Liyang, Hanjia) share the key facts, including capture by Li Mi's forces, so wrong options would be risky or ambiguous; too obscure for a fair question."
+    },
+    {
+      "name": "Sui Great Wall",
+      "facet": "Grand Canal and Sui projects",
+      "known_at": 12
+    },
+    {
+      "name": "Zhong Yao",
+      "facet": "Culture, poets and calligraphers",
+      "known_at": 12
+    },
+    {
+      "name": "Tao Yuanming",
+      "facet": "Culture, poets and calligraphers",
+      "known_at": 6
+    },
+    {
+      "name": "The Peach Blossom Spring (桃花源记)",
+      "facet": "Culture, poets and calligraphers",
+      "known_at": 5
+    },
+    {
+      "name": "Cao Zhi",
+      "facet": "Culture, poets and calligraphers",
+      "known_at": 8
+    },
+    {
+      "name": "Seven-Step Poem (七步诗)",
+      "facet": "Culture, poets and calligraphers",
+      "known_at": 6
+    },
+    {
+      "name": "Rhapsody on the Luo River Goddess (洛神赋)",
+      "facet": "Culture, poets and calligraphers",
+      "known_at": 11
+    },
+    {
+      "name": "Jian'an literature",
+      "facet": "Culture, poets and calligraphers",
+      "known_at": 12
+    },
+    {
+      "name": "Seven Sages of the Bamboo Grove",
+      "facet": "Culture, poets and calligraphers",
+      "known_at": 10
+    },
+    {
+      "name": "Ji Kang",
+      "facet": "Culture, poets and calligraphers",
+      "known_at": 12
+    },
+    {
+      "name": "Gu Kaizhi",
+      "facet": "Culture, poets and calligraphers",
+      "known_at": 11
+    },
+    {
+      "name": "Admonitions of the Instructress to the Court Ladies",
+      "facet": "Culture, poets and calligraphers",
+      "known_at": 13
+    },
+    {
+      "name": "Xie Lingyun",
+      "facet": "Culture, poets and calligraphers",
+      "known_at": 13
+    },
+    {
+      "name": "Xie Daoyun",
+      "facet": "Culture, poets and calligraphers",
+      "known_at": 12
+    },
+    {
+      "name": "A New Account of Tales of the World (世说新语)",
+      "facet": "Culture, poets and calligraphers",
+      "known_at": 13
+    },
+    {
+      "name": "Selections of Refined Literature (昭明文选)",
+      "facet": "Culture, poets and calligraphers",
+      "known_at": 14
+    },
+    {
+      "name": "The Literary Mind and the Carving of Dragons (文心雕龙)",
+      "facet": "Culture, poets and calligraphers",
+      "known_at": 14
+    },
+    {
+      "name": "Bingling Temple",
+      "facet": "Buddhism and grottoes of the era",
+      "known_at": 13
+    },
+    {
+      "name": "Bodhidharma",
+      "facet": "Buddhism and grottoes of the era",
+      "known_at": 8
+    },
+    {
+      "name": "Faxian",
+      "facet": "Buddhism and grottoes of the era",
+      "known_at": 11
+    },
+    {
+      "name": "Kumarajiva",
+      "facet": "Buddhism and grottoes of the era",
+      "known_at": 12
+    },
+    {
+      "name": "Diamond Sutra",
+      "facet": "Buddhism and grottoes of the era",
+      "known_at": 11
+    },
+    {
+      "name": "Huiyuan of Mount Lu",
+      "facet": "Buddhism and grottoes of the era",
+      "known_at": 13
+    },
+    {
+      "name": "Dao'an",
+      "facet": "Buddhism and grottoes of the era",
+      "known_at": 14
+    },
+    {
+      "name": "Zhiyi and the Tiantai school",
+      "facet": "Buddhism and grottoes of the era",
+      "known_at": 14
+    },
+    {
+      "name": "Buddhist vegetarian diet (Emperor Wu of Liang)",
+      "facet": "Buddhism and grottoes of the era",
+      "known_at": 10
+    },
+    {
+      "name": "Buddhist persecution of Emperor Taiwu",
+      "facet": "Buddhism and grottoes of the era",
+      "known_at": 14
+    },
+    {
+      "name": "Zu Chongzhi's value of pi (密率 355/113)",
+      "facet": "Inventions, sayings and daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Wooden ox and gliding horse (木牛流马)",
+      "facet": "Inventions, sayings and daily life",
+      "known_at": 8
+    },
+    {
+      "name": "Zhuge Liang's repeating crossbow",
+      "facet": "Inventions, sayings and daily life",
+      "known_at": 11
+    },
+    {
+      "name": "Kongming lantern",
+      "facet": "Inventions, sayings and daily life",
+      "known_at": 5
+    },
+    {
+      "name": "Mafeisan",
+      "facet": "Inventions, sayings and daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Ma Jun's south-pointing chariot",
+      "facet": "Inventions, sayings and daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Pei Xiu",
+      "facet": "Inventions, sayings and daily life",
+      "known_at": 14
+    },
+    {
+      "name": "Essential Techniques for the Common People (齐民要术)",
+      "facet": "Inventions, sayings and daily life",
+      "known_at": 11
+    },
+    {
+      "name": "Commentary on the Water Classic (水经注)",
+      "facet": "Inventions, sayings and daily life",
+      "known_at": 11
+    },
+    {
+      "name": "Tuntian military farms",
+      "facet": "Inventions, sayings and daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Stirrup",
+      "facet": "Inventions, sayings and daily life",
+      "known_at": 13
+    },
+    {
+      "name": "Three visits to the thatched cottage (三顾茅庐)",
+      "facet": "Inventions, sayings and daily life",
+      "known_at": 6
+    },
+    {
+      "name": "Rising at cockcrow to practise the sword (闻鸡起舞)",
+      "facet": "Inventions, sayings and daily life",
+      "known_at": 8
+    },
+    {
+      "name": "Every bush and tree looks like a soldier (草木皆兵)",
+      "facet": "Inventions, sayings and daily life",
+      "known_at": 9
+    },
+    {
+      "name": "Sima Zhao's heart is known to all (司马昭之心)",
+      "facet": "Inventions, sayings and daily life",
+      "known_at": 9
+    }
+  ]
+}

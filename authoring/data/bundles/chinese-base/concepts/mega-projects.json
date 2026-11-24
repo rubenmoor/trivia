@@ -1,0 +1,768 @@
+{
+  "subcategory": "mega-projects",
+  "facets": [
+    "Dams and hydropower",
+    "Bridges and sea crossings",
+    "Water diversion and canals",
+    "Telescopes and observatories",
+    "Supercomputers",
+    "Quantum and satellite networks",
+    "Power grids, pipelines and nuclear energy",
+    "Tunnels and underground labs",
+    "Airports, ports and landmark buildings",
+    "Green Great Wall and desert projects",
+    "Deep-sea and polar engineering",
+    "Engineers behind the projects"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 2,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 3,
+      "science_news": 5,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 3,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Three Gorges ship locks",
+      "facet": "Dams and hydropower",
+      "known_at": 9
+    },
+    {
+      "name": "Three Gorges ship lift",
+      "facet": "Dams and hydropower",
+      "known_at": 11
+    },
+    {
+      "name": "Xiluodu Dam",
+      "facet": "Dams and hydropower",
+      "known_at": 12
+    },
+    {
+      "name": "Wudongde Dam",
+      "facet": "Dams and hydropower",
+      "known_at": 13
+    },
+    {
+      "name": "Liujiaxia Dam",
+      "facet": "Dams and hydropower",
+      "known_at": 12
+    },
+    {
+      "name": "Longyangxia Dam",
+      "facet": "Dams and hydropower",
+      "known_at": 13
+    },
+    {
+      "name": "Ertan Dam",
+      "facet": "Dams and hydropower",
+      "known_at": 13
+    },
+    {
+      "name": "Fengman Dam",
+      "facet": "Dams and hydropower",
+      "known_at": 13
+    },
+    {
+      "name": "Jinping-I Dam",
+      "facet": "Dams and hydropower",
+      "known_at": 13
+    },
+    {
+      "name": "Pumped-storage power station",
+      "facet": "Dams and hydropower",
+      "known_at": 12
+    },
+    {
+      "name": "Hydroelectric generator",
+      "facet": "Dams and hydropower",
+      "known_at": 7
+    },
+    {
+      "name": "Itaipu Dam",
+      "facet": "Dams and hydropower",
+      "known_at": 13
+    },
+    {
+      "name": "Hoover Dam",
+      "facet": "Dams and hydropower",
+      "known_at": 10
+    },
+    {
+      "name": "Aswan High Dam",
+      "facet": "Dams and hydropower",
+      "known_at": 11
+    },
+    {
+      "name": "Grand Ethiopian Renaissance Dam",
+      "facet": "Dams and hydropower",
+      "known_at": 13
+    },
+    {
+      "name": "Hangzhou Bay Bridge",
+      "facet": "Bridges and sea crossings",
+      "known_at": 9
+    },
+    {
+      "name": "Jiaozhou Bay Bridge",
+      "facet": "Bridges and sea crossings",
+      "known_at": 11
+    },
+    {
+      "name": "Shenzhen–Zhongshan Link",
+      "facet": "Bridges and sea crossings",
+      "known_at": 11
+    },
+    {
+      "name": "Duge Bridge",
+      "facet": "Bridges and sea crossings",
+      "known_at": 12
+    },
+    {
+      "name": "Huajiang Grand Canyon Bridge",
+      "facet": "Bridges and sea crossings",
+      "known_at": 11
+    },
+    {
+      "name": "Lupu Bridge",
+      "facet": "Bridges and sea crossings",
+      "known_at": 12
+    },
+    {
+      "name": "Chaotianmen Bridge",
+      "facet": "Bridges and sea crossings",
+      "known_at": 13
+    },
+    {
+      "name": "Sutong Bridge",
+      "facet": "Bridges and sea crossings",
+      "known_at": 12
+    },
+    {
+      "name": "Pingtan Strait Rail-Road Bridge",
+      "facet": "Bridges and sea crossings",
+      "known_at": 13
+    },
+    {
+      "name": "Tsing Ma Bridge",
+      "facet": "Bridges and sea crossings",
+      "known_at": 11
+    },
+    {
+      "name": "Zhangjiajie Glass Bridge",
+      "facet": "Bridges and sea crossings",
+      "known_at": 7
+    },
+    {
+      "name": "Artificial island",
+      "facet": "Bridges and sea crossings",
+      "known_at": 8
+    },
+    {
+      "name": "Golden Gate Bridge",
+      "facet": "Bridges and sea crossings",
+      "known_at": 4
+    },
+    {
+      "name": "Akashi Kaikyō Bridge",
+      "facet": "Bridges and sea crossings",
+      "known_at": 13
+    },
+    {
+      "name": "Øresund Bridge",
+      "facet": "Bridges and sea crossings",
+      "known_at": 13
+    },
+    {
+      "name": "South–North Water Diversion",
+      "facet": "Water diversion and canals",
+      "known_at": 8
+    },
+    {
+      "name": "Danjiangkou Reservoir",
+      "facet": "Water diversion and canals",
+      "known_at": 11
+    },
+    {
+      "name": "Pinglu Canal",
+      "facet": "Water diversion and canals",
+      "known_at": 13
+    },
+    {
+      "name": "Hetao irrigation area",
+      "facet": "Water diversion and canals",
+      "known_at": 13
+    },
+    {
+      "name": "Miyun Reservoir",
+      "facet": "Water diversion and canals",
+      "known_at": 12
+    },
+    {
+      "name": "Huai River harnessing",
+      "facet": "Water diversion and canals",
+      "known_at": 13
+    },
+    {
+      "name": "Aqueduct",
+      "facet": "Water diversion and canals",
+      "known_at": 7
+    },
+    {
+      "name": "Irrigation",
+      "facet": "Water diversion and canals",
+      "known_at": 6
+    },
+    {
+      "name": "Panama Canal",
+      "facet": "Water diversion and canals",
+      "known_at": 6
+    },
+    {
+      "name": "Suez Canal",
+      "facet": "Water diversion and canals",
+      "known_at": 6
+    },
+    {
+      "name": "Kiel Canal",
+      "facet": "Water diversion and canals",
+      "known_at": 14
+    },
+    {
+      "name": "Great Man-Made River",
+      "facet": "Water diversion and canals",
+      "known_at": 13
+    },
+    {
+      "name": "FAST telescope",
+      "facet": "Telescopes and observatories",
+      "known_at": 5
+    },
+    {
+      "name": "LAMOST telescope",
+      "facet": "Telescopes and observatories",
+      "known_at": 12
+    },
+    {
+      "name": "Armillary sphere",
+      "facet": "Telescopes and observatories",
+      "known_at": 8
+    },
+    {
+      "name": "Xuntian space telescope",
+      "facet": "Telescopes and observatories",
+      "known_at": 12
+    },
+    {
+      "name": "LHAASO",
+      "facet": "Telescopes and observatories",
+      "known_at": 13
+    },
+    {
+      "name": "Insight-HXMT",
+      "facet": "Telescopes and observatories",
+      "known_at": 14
+    },
+    {
+      "name": "Radio telescope",
+      "facet": "Telescopes and observatories",
+      "known_at": 7
+    },
+    {
+      "name": "Hubble Space Telescope",
+      "facet": "Telescopes and observatories",
+      "known_at": 6
+    },
+    {
+      "name": "James Webb Space Telescope",
+      "facet": "Telescopes and observatories",
+      "known_at": 8
+    },
+    {
+      "name": "Event Horizon Telescope",
+      "facet": "Telescopes and observatories",
+      "known_at": 11
+    },
+    {
+      "name": "Arecibo Telescope",
+      "facet": "Telescopes and observatories",
+      "known_at": 10
+    },
+    {
+      "name": "Square Kilometre Array",
+      "facet": "Telescopes and observatories",
+      "known_at": 13
+    },
+    {
+      "name": "Mauna Kea Observatories",
+      "facet": "Telescopes and observatories",
+      "known_at": 12
+    },
+    {
+      "name": "Supercomputer",
+      "facet": "Supercomputers",
+      "known_at": 6
+    },
+    {
+      "name": "Tianhe-1A",
+      "facet": "Supercomputers",
+      "known_at": 11
+    },
+    {
+      "name": "Yinhe-1",
+      "facet": "Supercomputers",
+      "known_at": 12
+    },
+    {
+      "name": "Dawning supercomputer",
+      "facet": "Supercomputers",
+      "known_at": 13
+    },
+    {
+      "name": "National Supercomputing Center in Wuxi",
+      "facet": "Supercomputers",
+      "known_at": 13
+    },
+    {
+      "name": "Loongson CPU",
+      "facet": "Supercomputers",
+      "known_at": 11
+    },
+    {
+      "name": "Zuchongzhi quantum computer",
+      "facet": "Supercomputers",
+      "known_at": 12
+    },
+    {
+      "name": "TOP500",
+      "facet": "Supercomputers",
+      "known_at": 13
+    },
+    {
+      "name": "FLOPS",
+      "facet": "Supercomputers",
+      "known_at": 13
+    },
+    {
+      "name": "Moore's law",
+      "facet": "Supercomputers",
+      "known_at": 12
+    },
+    {
+      "name": "Fugaku",
+      "facet": "Supercomputers",
+      "known_at": 13
+    },
+    {
+      "name": "ENIAC",
+      "facet": "Supercomputers",
+      "known_at": 10
+    },
+    {
+      "name": "Quantum key distribution",
+      "facet": "Quantum and satellite networks",
+      "known_at": 13
+    },
+    {
+      "name": "Beijing–Shanghai quantum backbone",
+      "facet": "Quantum and satellite networks",
+      "known_at": 13
+    },
+    {
+      "name": "Quantum teleportation",
+      "facet": "Quantum and satellite networks",
+      "known_at": 12
+    },
+    {
+      "name": "GPS",
+      "facet": "Quantum and satellite networks",
+      "known_at": 5
+    },
+    {
+      "name": "Gaofen satellites",
+      "facet": "Quantum and satellite networks",
+      "known_at": 13
+    },
+    {
+      "name": "Tiantong satellite phone",
+      "facet": "Quantum and satellite networks",
+      "known_at": 13
+    },
+    {
+      "name": "Dong Fang Hong 1",
+      "facet": "Quantum and satellite networks",
+      "known_at": 8
+    },
+    {
+      "name": "Undersea cable",
+      "facet": "Quantum and satellite networks",
+      "known_at": 10
+    },
+    {
+      "name": "Starlink",
+      "facet": "Quantum and satellite networks",
+      "known_at": 9
+    },
+    {
+      "name": "West–East Power Transmission",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 10
+    },
+    {
+      "name": "Ultra-high-voltage transmission",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 12
+    },
+    {
+      "name": "Qinghai–Tibet power grid link",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 13
+    },
+    {
+      "name": "Power of Siberia pipeline",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 12
+    },
+    {
+      "name": "Smart grid",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 13
+    },
+    {
+      "name": "Hualong One",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 11
+    },
+    {
+      "name": "Qinshan Nuclear Power Plant",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 10
+    },
+    {
+      "name": "Daya Bay Nuclear Power Plant",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 10
+    },
+    {
+      "name": "Taishan Nuclear Power Plant",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 13
+    },
+    {
+      "name": "Shidaowan high-temperature gas-cooled reactor",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 14
+    },
+    {
+      "name": "EAST tokamak",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 9
+    },
+    {
+      "name": "ITER",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 12
+    },
+    {
+      "name": "Wind farm",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 6
+    },
+    {
+      "name": "Gansu Wind Farm",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 12
+    },
+    {
+      "name": "Photovoltaic power station",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 6
+    },
+    {
+      "name": "Talatan Solar Park",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 13
+    },
+    {
+      "name": "Thermal power plant",
+      "facet": "Power grids, pipelines and nuclear energy",
+      "known_at": 7
+    },
+    {
+      "name": "Qinling Zhongnanshan Tunnel",
+      "facet": "Tunnels and underground labs",
+      "known_at": 11
+    },
+    {
+      "name": "Tianshan Shengli Tunnel",
+      "facet": "Tunnels and underground labs",
+      "known_at": 13
+    },
+    {
+      "name": "Guoliang Tunnel",
+      "facet": "Tunnels and underground labs",
+      "known_at": 10
+    },
+    {
+      "name": "Cross-Harbour Tunnel",
+      "facet": "Tunnels and underground labs",
+      "known_at": 11
+    },
+    {
+      "name": "Immersed tube tunnel",
+      "facet": "Tunnels and underground labs",
+      "known_at": 13
+    },
+    {
+      "name": "Tunnel boring machine",
+      "facet": "Tunnels and underground labs",
+      "known_at": 9
+    },
+    {
+      "name": "Beijing Underground City",
+      "facet": "Tunnels and underground labs",
+      "known_at": 13
+    },
+    {
+      "name": "Large Hadron Collider",
+      "facet": "Tunnels and underground labs",
+      "known_at": 10
+    },
+    {
+      "name": "Channel Tunnel",
+      "facet": "Tunnels and underground labs",
+      "known_at": 9
+    },
+    {
+      "name": "Gotthard Base Tunnel",
+      "facet": "Tunnels and underground labs",
+      "known_at": 12
+    },
+    {
+      "name": "Seikan Tunnel",
+      "facet": "Tunnels and underground labs",
+      "known_at": 13
+    },
+    {
+      "name": "Hong Kong International Airport",
+      "facet": "Airports, ports and landmark buildings",
+      "known_at": 9
+    },
+    {
+      "name": "Shanghai Yangshan Deep-Water Port",
+      "facet": "Airports, ports and landmark buildings",
+      "known_at": 11
+    },
+    {
+      "name": "Automated container terminal",
+      "facet": "Airports, ports and landmark buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Shanghai World Financial Center",
+      "facet": "Airports, ports and landmark buildings",
+      "known_at": 10
+    },
+    {
+      "name": "Ping An Finance Centre",
+      "facet": "Airports, ports and landmark buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Beijing National Stadium",
+      "facet": "Airports, ports and landmark buildings",
+      "known_at": 4
+    },
+    {
+      "name": "National Aquatics Center",
+      "facet": "Airports, ports and landmark buildings",
+      "known_at": 5
+    },
+    {
+      "name": "National Centre for the Performing Arts",
+      "facet": "Airports, ports and landmark buildings",
+      "known_at": 9
+    },
+    {
+      "name": "CCTV Headquarters",
+      "facet": "Airports, ports and landmark buildings",
+      "known_at": 9
+    },
+    {
+      "name": "Huoshenshan Hospital",
+      "facet": "Airports, ports and landmark buildings",
+      "known_at": 8
+    },
+    {
+      "name": "Petronas Towers",
+      "facet": "Airports, ports and landmark buildings",
+      "known_at": 8
+    },
+    {
+      "name": "Singapore Changi Airport",
+      "facet": "Airports, ports and landmark buildings",
+      "known_at": 8
+    },
+    {
+      "name": "Sydney Opera House",
+      "facet": "Airports, ports and landmark buildings",
+      "known_at": 4
+    },
+    {
+      "name": "Three-North Shelter Forest Program",
+      "facet": "Green Great Wall and desert projects",
+      "known_at": 8
+    },
+    {
+      "name": "Taklamakan green belt",
+      "facet": "Green Great Wall and desert projects",
+      "known_at": 12
+    },
+    {
+      "name": "Straw checkerboard",
+      "facet": "Green Great Wall and desert projects",
+      "known_at": 11
+    },
+    {
+      "name": "Poplar tree",
+      "facet": "Green Great Wall and desert projects",
+      "known_at": 6
+    },
+    {
+      "name": "Great Green Wall of Africa",
+      "facet": "Green Great Wall and desert projects",
+      "known_at": 12
+    },
+    {
+      "name": "Shenhai Yongshi submersible",
+      "facet": "Deep-sea and polar engineering",
+      "known_at": 13
+    },
+    {
+      "name": "Mariana Trench",
+      "facet": "Deep-sea and polar engineering",
+      "known_at": 5
+    },
+    {
+      "name": "Bathyscaphe Trieste",
+      "facet": "Deep-sea and polar engineering",
+      "known_at": 13
+    },
+    {
+      "name": "Shenhai-1 gas platform",
+      "facet": "Deep-sea and polar engineering",
+      "known_at": 13
+    },
+    {
+      "name": "Oil rig",
+      "facet": "Deep-sea and polar engineering",
+      "known_at": 8
+    },
+    {
+      "name": "Icebreaker",
+      "facet": "Deep-sea and polar engineering",
+      "known_at": 6
+    },
+    {
+      "name": "Xuelong 2",
+      "facet": "Deep-sea and polar engineering",
+      "known_at": 11
+    },
+    {
+      "name": "Antarctica",
+      "facet": "Deep-sea and polar engineering",
+      "known_at": 2
+    },
+    {
+      "name": "Great Wall Station",
+      "facet": "Deep-sea and polar engineering",
+      "known_at": 10
+    },
+    {
+      "name": "Zhongshan Station",
+      "facet": "Deep-sea and polar engineering",
+      "known_at": 11
+    },
+    {
+      "name": "Kunlun Station",
+      "facet": "Deep-sea and polar engineering",
+      "known_at": 12
+    },
+    {
+      "name": "Taishan Station",
+      "facet": "Deep-sea and polar engineering",
+      "known_at": 13
+    },
+    {
+      "name": "Qinling Station",
+      "facet": "Deep-sea and polar engineering",
+      "known_at": 13
+    },
+    {
+      "name": "Dome A",
+      "facet": "Deep-sea and polar engineering",
+      "known_at": 13
+    },
+    {
+      "name": "Yellow River Station",
+      "facet": "Deep-sea and polar engineering",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Guangdou",
+      "facet": "Engineers behind the projects",
+      "known_at": 14
+    },
+    {
+      "name": "Pan Jiazheng",
+      "facet": "Engineers behind the projects",
+      "known_at": 14
+    },
+    {
+      "name": "Qian Zhengying",
+      "facet": "Engineers behind the projects",
+      "known_at": 14,
+      "retired": "unaskable: No option gives a fair difficulty-15 question: any clue that rules out the wrong options also gives away her field."
+    },
+    {
+      "name": "I. M. Pei",
+      "facet": "Engineers behind the projects",
+      "known_at": 10
+    }
+  ]
+}

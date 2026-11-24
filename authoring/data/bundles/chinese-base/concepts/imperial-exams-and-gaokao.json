@@ -1,0 +1,897 @@
+{
+  "subcategory": "imperial-exams-and-gaokao",
+  "facets": [
+    "Keju origins and dynasties",
+    "Exam levels and degrees",
+    "Top ranks and famous zhuangyuan",
+    "Exam halls and procedures",
+    "Eight-legged essay and classics",
+    "Exam stories in literature",
+    "Idioms and sayings from exams",
+    "End of the keju in 1905",
+    "Gaokao history since 1977",
+    "Gaokao dates, subjects and scores",
+    "Gaokao customs and family life",
+    "University admission and gaokao news"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 5,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Keju (科举)",
+      "facet": "Keju origins and dynasties",
+      "known_at": 6
+    },
+    {
+      "name": "Emperor Taizong of Tang (Li Shimin)",
+      "facet": "Keju origins and dynasties",
+      "known_at": 8
+    },
+    {
+      "name": "Song dynasty",
+      "facet": "Keju origins and dynasties",
+      "known_at": 7
+    },
+    {
+      "name": "Emperor Taizu of Song (Zhao Kuangyin)",
+      "facet": "Keju origins and dynasties",
+      "known_at": 10
+    },
+    {
+      "name": "Yuan dynasty",
+      "facet": "Keju origins and dynasties",
+      "known_at": 7
+    },
+    {
+      "name": "Ming dynasty",
+      "facet": "Keju origins and dynasties",
+      "known_at": 6
+    },
+    {
+      "name": "Hongwu Emperor (Zhu Yuanzhang)",
+      "facet": "Keju origins and dynasties",
+      "known_at": 8
+    },
+    {
+      "name": "Qing dynasty",
+      "facet": "Keju origins and dynasties",
+      "known_at": 5
+    },
+    {
+      "name": "Nine-rank system (九品中正制)",
+      "facet": "Keju origins and dynasties",
+      "known_at": 12
+    },
+    {
+      "name": "Han recommendation system (察举制)",
+      "facet": "Keju origins and dynasties",
+      "known_at": 12
+    },
+    {
+      "name": "Scholar-officials (士大夫)",
+      "facet": "Keju origins and dynasties",
+      "known_at": 10
+    },
+    {
+      "name": "Imperial Academy (国子监)",
+      "facet": "Keju origins and dynasties",
+      "known_at": 11
+    },
+    {
+      "name": "Tongsheng (童生)",
+      "facet": "Exam levels and degrees",
+      "known_at": 11
+    },
+    {
+      "name": "Child examination (童试)",
+      "facet": "Exam levels and degrees",
+      "known_at": 12
+    },
+    {
+      "name": "County examination (县试)",
+      "facet": "Exam levels and degrees",
+      "known_at": 12
+    },
+    {
+      "name": "Xiucai (秀才)",
+      "facet": "Exam levels and degrees",
+      "known_at": 6
+    },
+    {
+      "name": "Shengyuan (生员)",
+      "facet": "Exam levels and degrees",
+      "known_at": 13
+    },
+    {
+      "name": "Provincial examination (乡试)",
+      "facet": "Exam levels and degrees",
+      "known_at": 10
+    },
+    {
+      "name": "Juren (举人)",
+      "facet": "Exam levels and degrees",
+      "known_at": 8
+    },
+    {
+      "name": "Jieyuan (解元)",
+      "facet": "Exam levels and degrees",
+      "known_at": 12
+    },
+    {
+      "name": "Metropolitan examination (会试)",
+      "facet": "Exam levels and degrees",
+      "known_at": 11
+    },
+    {
+      "name": "Huiyuan (会元)",
+      "facet": "Exam levels and degrees",
+      "known_at": 13
+    },
+    {
+      "name": "Gongshi (贡士)",
+      "facet": "Exam levels and degrees",
+      "known_at": 13
+    },
+    {
+      "name": "Gongsheng (贡生)",
+      "facet": "Exam levels and degrees",
+      "known_at": 14
+    },
+    {
+      "name": "Three grades of jinshi (三甲)",
+      "facet": "Exam levels and degrees",
+      "known_at": 13
+    },
+    {
+      "name": "Zhuangyuan (状元)",
+      "facet": "Top ranks and famous zhuangyuan",
+      "known_at": 3
+    },
+    {
+      "name": "Bangyan (榜眼)",
+      "facet": "Top ranks and famous zhuangyuan",
+      "known_at": 8
+    },
+    {
+      "name": "Tanhua (探花)",
+      "facet": "Top ranks and famous zhuangyuan",
+      "known_at": 8
+    },
+    {
+      "name": "Chuanlu (传胪)",
+      "facet": "Top ranks and famous zhuangyuan",
+      "known_at": 14
+    },
+    {
+      "name": "Military zhuangyuan (武状元)",
+      "facet": "Top ranks and famous zhuangyuan",
+      "known_at": 9
+    },
+    {
+      "name": "Sun Fuqie",
+      "facet": "Top ranks and famous zhuangyuan",
+      "known_at": 15
+    },
+    {
+      "name": "Lü Mengzheng",
+      "facet": "Top ranks and famous zhuangyuan",
+      "known_at": 13
+    },
+    {
+      "name": "Yang Shen",
+      "facet": "Top ranks and famous zhuangyuan",
+      "known_at": 13
+    },
+    {
+      "name": "Shang Lu",
+      "facet": "Top ranks and famous zhuangyuan",
+      "known_at": 15
+    },
+    {
+      "name": "Weng Tonghe",
+      "facet": "Top ranks and famous zhuangyuan",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Jian",
+      "facet": "Top ranks and famous zhuangyuan",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Chunlin",
+      "facet": "Top ranks and famous zhuangyuan",
+      "known_at": 14
+    },
+    {
+      "name": "Tang Yin (Tang Bohu)",
+      "facet": "Top ranks and famous zhuangyuan",
+      "known_at": 7
+    },
+    {
+      "name": "Fu Shanxiang",
+      "facet": "Top ranks and famous zhuangyuan",
+      "known_at": 15
+    },
+    {
+      "name": "Qionglin Banquet (琼林宴)",
+      "facet": "Top ranks and famous zhuangyuan",
+      "known_at": 13
+    },
+    {
+      "name": "Zhuangyuan parade on horseback (跨马游街)",
+      "facet": "Top ranks and famous zhuangyuan",
+      "known_at": 9
+    },
+    {
+      "name": "Examination hall (贡院)",
+      "facet": "Exam halls and procedures",
+      "known_at": 10
+    },
+    {
+      "name": "Jiangnan Examination Hall (江南贡院)",
+      "facet": "Exam halls and procedures",
+      "known_at": 11
+    },
+    {
+      "name": "Beijing Examination Hall (北京贡院)",
+      "facet": "Exam halls and procedures",
+      "known_at": 13
+    },
+    {
+      "name": "Exam cells (号舍)",
+      "facet": "Exam halls and procedures",
+      "known_at": 11
+    },
+    {
+      "name": "Mingyuan Tower (明远楼)",
+      "facet": "Exam halls and procedures",
+      "known_at": 14
+    },
+    {
+      "name": "China Imperial Examination Museum",
+      "facet": "Exam halls and procedures",
+      "known_at": 13
+    },
+    {
+      "name": "Sealing the names (糊名)",
+      "facet": "Exam halls and procedures",
+      "known_at": 12
+    },
+    {
+      "name": "Recopying the papers (誊录)",
+      "facet": "Exam halls and procedures",
+      "known_at": 13
+    },
+    {
+      "name": "Body search at the gate (搜检)",
+      "facet": "Exam halls and procedures",
+      "known_at": 12
+    },
+    {
+      "name": "Cheat shirt (夹带)",
+      "facet": "Exam halls and procedures",
+      "known_at": 11
+    },
+    {
+      "name": "Chief examiner (主考官)",
+      "facet": "Exam halls and procedures",
+      "known_at": 10
+    },
+    {
+      "name": "Posting the results (放榜)",
+      "facet": "Exam halls and procedures",
+      "known_at": 8
+    },
+    {
+      "name": "Three-year exam cycle",
+      "facet": "Exam halls and procedures",
+      "known_at": 12
+    },
+    {
+      "name": "Spring exam (春闱)",
+      "facet": "Exam halls and procedures",
+      "known_at": 12
+    },
+    {
+      "name": "Autumn exam (秋闱)",
+      "facet": "Exam halls and procedures",
+      "known_at": 12
+    },
+    {
+      "name": "Four Books (四书)",
+      "facet": "Eight-legged essay and classics",
+      "known_at": 8
+    },
+    {
+      "name": "Five Classics (五经)",
+      "facet": "Eight-legged essay and classics",
+      "known_at": 8
+    },
+    {
+      "name": "Book of Changes (周易)",
+      "facet": "Eight-legged essay and classics",
+      "known_at": 9
+    },
+    {
+      "name": "Poetry and rhapsody in Tang exams (诗赋)",
+      "facet": "Eight-legged essay and classics",
+      "known_at": 12
+    },
+    {
+      "name": "Policy essay (策论)",
+      "facet": "Eight-legged essay and classics",
+      "known_at": 12
+    },
+    {
+      "name": "Opening the topic (破题)",
+      "facet": "Eight-legged essay and classics",
+      "known_at": 12
+    },
+    {
+      "name": "Guange-style calligraphy (馆阁体)",
+      "facet": "Eight-legged essay and classics",
+      "known_at": 14
+    },
+    {
+      "name": "The Scholars (儒林外史)",
+      "facet": "Exam stories in literature",
+      "known_at": 9
+    },
+    {
+      "name": "Fan Jin (范进)",
+      "facet": "Exam stories in literature",
+      "known_at": 9
+    },
+    {
+      "name": "Butcher Hu (胡屠户)",
+      "facet": "Exam stories in literature",
+      "known_at": 9
+    },
+    {
+      "name": "Zhou Jin (周进)",
+      "facet": "Exam stories in literature",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Mian",
+      "facet": "Exam stories in literature",
+      "known_at": 10
+    },
+    {
+      "name": "Strange Tales from a Chinese Studio (聊斋志异)",
+      "facet": "Exam stories in literature",
+      "known_at": 8
+    },
+    {
+      "name": "Dream of the Red Chamber (红楼梦)",
+      "facet": "Exam stories in literature",
+      "known_at": 5
+    },
+    {
+      "name": "Romance of the Western Chamber (西厢记)",
+      "facet": "Exam stories in literature",
+      "known_at": 10
+    },
+    {
+      "name": "Female Consort Prince (女驸马)",
+      "facet": "Exam stories in literature",
+      "known_at": 12
+    },
+    {
+      "name": "After Passing the Exam (登科后) by Meng Jiao",
+      "facet": "Exam stories in literature",
+      "known_at": 11
+    },
+    {
+      "name": "Huang Chao's chrysanthemum poem (不第后赋菊)",
+      "facet": "Exam stories in literature",
+      "known_at": 13
+    },
+    {
+      "name": "Mooring by Maple Bridge at Night (枫桥夜泊)",
+      "facet": "Exam stories in literature",
+      "known_at": 7
+    },
+    {
+      "name": "金榜题名 (jīn bǎng tí míng)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 6
+    },
+    {
+      "name": "名落孙山 (míng luò sūn shān)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 8
+    },
+    {
+      "name": "十年寒窗 (shí nián hán chuāng)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 7
+    },
+    {
+      "name": "鲤鱼跳龙门 (lǐ yú tiào lóng mén)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 4
+    },
+    {
+      "name": "独占鳌头 (dú zhàn áo tóu)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 9
+    },
+    {
+      "name": "春风得意 (chūn fēng dé yì)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 8
+    },
+    {
+      "name": "连中三元 (lián zhòng sān yuán)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 11
+    },
+    {
+      "name": "蟾宫折桂 (chán gōng zhé guì)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 12
+    },
+    {
+      "name": "一举成名 (yī jǔ chéng míng)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 7
+    },
+    {
+      "name": "头悬梁，锥刺股 (tóu xuán liáng, zhuī cì gǔ)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 6
+    },
+    {
+      "name": "凿壁偷光 (záo bì tōu guāng)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 5
+    },
+    {
+      "name": "囊萤映雪 (náng yíng yìng xuě)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 8
+    },
+    {
+      "name": "万般皆下品，唯有读书高 (wàn bān jiē xià pǐn, wéi yǒu dú shū gāo)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 10
+    },
+    {
+      "name": "书中自有黄金屋 (shū zhōng zì yǒu huáng jīn wū)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 8
+    },
+    {
+      "name": "朝为田舍郎，暮登天子堂 (zhāo wéi tián shè láng, mù dēng tiān zǐ táng)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 11
+    },
+    {
+      "name": "学而优则仕 (xué ér yōu zé shì)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 11
+    },
+    {
+      "name": "千军万马过独木桥 (qiān jūn wàn mǎ guò dú mù qiáo)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 7
+    },
+    {
+      "name": "天下英雄入吾彀中 (tiān xià yīng xióng rù wú gòu zhōng)",
+      "facet": "Idioms and sayings from exams",
+      "known_at": 14
+    },
+    {
+      "name": "Abolition of the keju (废除科举)",
+      "facet": "End of the keju in 1905",
+      "known_at": 10
+    },
+    {
+      "name": "Last palace examination of 1904",
+      "facet": "End of the keju in 1905",
+      "known_at": 13
+    },
+    {
+      "name": "Hundred Days' Reform (戊戌变法)",
+      "facet": "End of the keju in 1905",
+      "known_at": 9
+    },
+    {
+      "name": "Gongche Shangshu (公车上书)",
+      "facet": "End of the keju in 1905",
+      "known_at": 10
+    },
+    {
+      "name": "Tongwen Guan (京师同文馆)",
+      "facet": "End of the keju in 1905",
+      "known_at": 13
+    },
+    {
+      "name": "New-style schools (新式学堂)",
+      "facet": "End of the keju in 1905",
+      "known_at": 11
+    },
+    {
+      "name": "Studying abroad in Japan (留日)",
+      "facet": "End of the keju in 1905",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese Educational Mission (留美幼童)",
+      "facet": "End of the keju in 1905",
+      "known_at": 13
+    },
+    {
+      "name": "First national unified entrance exam of 1952",
+      "facet": "Gaokao history since 1977",
+      "known_at": 13
+    },
+    {
+      "name": "Cultural Revolution",
+      "facet": "Gaokao history since 1977",
+      "known_at": 8
+    },
+    {
+      "name": "Resumption of the gaokao in 1977",
+      "facet": "Gaokao history since 1977",
+      "known_at": 8
+    },
+    {
+      "name": "Winter gaokao of 1977",
+      "facet": "Gaokao history since 1977",
+      "known_at": 11
+    },
+    {
+      "name": "Class of 77 (七七级)",
+      "facet": "Gaokao history since 1977",
+      "known_at": 12
+    },
+    {
+      "name": "Educated youth sent to the countryside (知青)",
+      "facet": "Gaokao history since 1977",
+      "known_at": 9
+    },
+    {
+      "name": "Worker-peasant-soldier students (工农兵学员)",
+      "facet": "Gaokao history since 1977",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Tiesheng (白卷英雄)",
+      "facet": "Gaokao history since 1977",
+      "known_at": 14
+    },
+    {
+      "name": "Gaokao moved from July to June in 2003",
+      "facet": "Gaokao history since 1977",
+      "known_at": 10
+    },
+    {
+      "name": "University enrolment expansion of 1999 (扩招)",
+      "facet": "Gaokao history since 1977",
+      "known_at": 12
+    },
+    {
+      "name": "3+X reform",
+      "facet": "Gaokao history since 1977",
+      "known_at": 11
+    },
+    {
+      "name": "New gaokao reform of 2014",
+      "facet": "Gaokao history since 1977",
+      "known_at": 11
+    },
+    {
+      "name": "Provincial exam papers (分省命题)",
+      "facet": "Gaokao history since 1977",
+      "known_at": 11
+    },
+    {
+      "name": "Gaokao 1977 (film)",
+      "facet": "Gaokao history since 1977",
+      "known_at": 12
+    },
+    {
+      "name": "Ministry of Education of China",
+      "facet": "Gaokao history since 1977",
+      "known_at": 7
+    },
+    {
+      "name": "7 June",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 4
+    },
+    {
+      "name": "Chinese paper (语文)",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 3
+    },
+    {
+      "name": "Mathematics paper (数学)",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 3
+    },
+    {
+      "name": "Foreign language paper (外语)",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 4
+    },
+    {
+      "name": "Gaokao essay (高考作文)",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 5
+    },
+    {
+      "name": "Liberal arts and science streams (文科与理科)",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 6
+    },
+    {
+      "name": "Comprehensive science paper (理综)",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 8
+    },
+    {
+      "name": "Comprehensive humanities paper (文综)",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 8
+    },
+    {
+      "name": "3+1+2 model",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 9
+    },
+    {
+      "name": "Total score of 750",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 6
+    },
+    {
+      "name": "150 points per main subject",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 6
+    },
+    {
+      "name": "Score line (分数线)",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 7
+    },
+    {
+      "name": "First-tier line (一本线)",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 8
+    },
+    {
+      "name": "Gaokao top scorer (高考状元)",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 4
+    },
+    {
+      "name": "National Paper (全国卷)",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 8
+    },
+    {
+      "name": "Bonus points (加分)",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 9
+    },
+    {
+      "name": "Answer sheet (答题卡)",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 5
+    },
+    {
+      "name": "Score release in late June",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 8
+    },
+    {
+      "name": "Mock exam (模拟考)",
+      "facet": "Gaokao dates, subjects and scores",
+      "known_at": 6
+    },
+    {
+      "name": "Senior three (高三)",
+      "facet": "Gaokao customs and family life",
+      "known_at": 3
+    },
+    {
+      "name": "Countdown board (高考倒计时)",
+      "facet": "Gaokao customs and family life",
+      "known_at": 4
+    },
+    {
+      "name": "Hundred-day pledge rally (百日誓师)",
+      "facet": "Gaokao customs and family life",
+      "known_at": 8
+    },
+    {
+      "name": "Mothers in qipao (旗开得胜)",
+      "facet": "Gaokao customs and family life",
+      "known_at": 7
+    },
+    {
+      "name": "Sunflower bouquet (一举夺魁)",
+      "facet": "Gaokao customs and family life",
+      "known_at": 9
+    },
+    {
+      "name": "Zongzi for luck (高中)",
+      "facet": "Gaokao customs and family life",
+      "known_at": 8
+    },
+    {
+      "name": "Parents waiting at the school gate",
+      "facet": "Gaokao customs and family life",
+      "known_at": 3
+    },
+    {
+      "name": "Police escorts for candidates",
+      "facet": "Gaokao customs and family life",
+      "known_at": 6
+    },
+    {
+      "name": "Quiet zones near exam sites",
+      "facet": "Gaokao customs and family life",
+      "known_at": 6
+    },
+    {
+      "name": "Hotel rooms near exam sites",
+      "facet": "Gaokao customs and family life",
+      "known_at": 9
+    },
+    {
+      "name": "Praying at the Confucius Temple (孔庙祈福)",
+      "facet": "Gaokao customs and family life",
+      "known_at": 9
+    },
+    {
+      "name": "Five Years Gaokao, Three Years Mock Exams (五年高考三年模拟)",
+      "facet": "Gaokao customs and family life",
+      "known_at": 6
+    },
+    {
+      "name": "Hengshui High School (衡水中学)",
+      "facet": "Gaokao customs and family life",
+      "known_at": 10
+    },
+    {
+      "name": "Throwing textbooks after the exam (撕书)",
+      "facet": "Gaokao customs and family life",
+      "known_at": 7
+    },
+    {
+      "name": "Signal jammers and metal detectors",
+      "facet": "Gaokao customs and family life",
+      "known_at": 8
+    },
+    {
+      "name": "Graduation trip after the gaokao",
+      "facet": "Gaokao customs and family life",
+      "known_at": 7
+    },
+    {
+      "name": "Gaokao migrants (高考移民)",
+      "facet": "Gaokao customs and family life",
+      "known_at": 12
+    },
+    {
+      "name": "Tsinghua University",
+      "facet": "University admission and gaokao news",
+      "known_at": 3
+    },
+    {
+      "name": "Fudan University",
+      "facet": "University admission and gaokao news",
+      "known_at": 7
+    },
+    {
+      "name": "Zhejiang University",
+      "facet": "University admission and gaokao news",
+      "known_at": 7
+    },
+    {
+      "name": "Filling in university choices (填报志愿)",
+      "facet": "University admission and gaokao news",
+      "known_at": 7
+    },
+    {
+      "name": "Admission letter (录取通知书)",
+      "facet": "University admission and gaokao news",
+      "known_at": 4
+    },
+    {
+      "name": "Admission batches (录取批次)",
+      "facet": "University admission and gaokao news",
+      "known_at": 10
+    },
+    {
+      "name": "Project 211",
+      "facet": "University admission and gaokao news",
+      "known_at": 9
+    },
+    {
+      "name": "Project 985",
+      "facet": "University admission and gaokao news",
+      "known_at": 9
+    },
+    {
+      "name": "Double First-Class (双一流)",
+      "facet": "University admission and gaokao news",
+      "known_at": 10
+    },
+    {
+      "name": "Strong Foundation Plan (强基计划)",
+      "facet": "University admission and gaokao news",
+      "known_at": 12
+    },
+    {
+      "name": "Independent recruitment (自主招生)",
+      "facet": "University admission and gaokao news",
+      "known_at": 11
+    },
+    {
+      "name": "Gaokao essay topic in the news",
+      "facet": "University admission and gaokao news",
+      "known_at": 8
+    },
+    {
+      "name": "Exam cheating as a crime (2015)",
+      "facet": "University admission and gaokao news",
+      "known_at": 11
+    },
+    {
+      "name": "Civil service exam (国考)",
+      "facet": "University admission and gaokao news",
+      "known_at": 9
+    },
+    {
+      "name": "University major (专业)",
+      "facet": "University admission and gaokao news",
+      "known_at": 6
+    }
+  ]
+}

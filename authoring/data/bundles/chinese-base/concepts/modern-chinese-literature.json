@@ -1,0 +1,934 @@
+{
+  "subcategory": "modern-chinese-literature",
+  "facets": [
+    "Lu Xun's stories and characters",
+    "Lu Xun's essays and life",
+    "Zhu Ziqing's prose essays",
+    "Lao She and Beijing works",
+    "Bing Xin's poems and children's writing",
+    "Ba Jin and the Torrent trilogy",
+    "Shen Congwen and Xiangxi",
+    "Modern poets: Xu Zhimo, Ai Qing",
+    "Pen names and real names",
+    "May Fourth and New Culture Movement",
+    "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+    "Famous lines and textbook passages"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 1,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Runtu",
+      "facet": "Lu Xun's stories and characters",
+      "known_at": 5
+    },
+    {
+      "name": "Ah Q",
+      "facet": "Lu Xun's stories and characters",
+      "known_at": 8
+    },
+    {
+      "name": "My Old Home (故乡)",
+      "facet": "Lu Xun's stories and characters",
+      "known_at": 8
+    },
+    {
+      "name": "Wandering (彷徨)",
+      "facet": "Lu Xun's stories and characters",
+      "known_at": 11
+    },
+    {
+      "name": "Old Tales Retold (故事新编)",
+      "facet": "Lu Xun's stories and characters",
+      "known_at": 13
+    },
+    {
+      "name": "Village Opera (社戏)",
+      "facet": "Lu Xun's stories and characters",
+      "known_at": 7
+    },
+    {
+      "name": "Medicine (药)",
+      "facet": "Lu Xun's stories and characters",
+      "known_at": 11
+    },
+    {
+      "name": "New Year's Sacrifice (祝福)",
+      "facet": "Lu Xun's stories and characters",
+      "known_at": 11
+    },
+    {
+      "name": "Xianglin's Wife",
+      "facet": "Lu Xun's stories and characters",
+      "known_at": 11
+    },
+    {
+      "name": "Xianheng Tavern (咸亨酒店)",
+      "facet": "Lu Xun's stories and characters",
+      "known_at": 10
+    },
+    {
+      "name": "Yang Ersao",
+      "facet": "Lu Xun's stories and characters",
+      "known_at": 10
+    },
+    {
+      "name": "Lu Town (鲁镇)",
+      "facet": "Lu Xun's stories and characters",
+      "known_at": 12
+    },
+    {
+      "name": "Hua Laoshuan",
+      "facet": "Lu Xun's stories and characters",
+      "known_at": 13
+    },
+    {
+      "name": "Storm in a Teacup (风波)",
+      "facet": "Lu Xun's stories and characters",
+      "known_at": 13
+    },
+    {
+      "name": "Ah Q's spiritual victory method (精神胜利法)",
+      "facet": "Lu Xun's stories and characters",
+      "known_at": 11
+    },
+    {
+      "name": "Morning Blossoms Plucked at Dusk (朝花夕拾)",
+      "facet": "Lu Xun's essays and life",
+      "known_at": 7
+    },
+    {
+      "name": "Mr Fujino (藤野先生)",
+      "facet": "Lu Xun's essays and life",
+      "known_at": 8
+    },
+    {
+      "name": "Ah Chang and the Classic of Mountains and Seas (阿长与《山海经》)",
+      "facet": "Lu Xun's essays and life",
+      "known_at": 8
+    },
+    {
+      "name": "Shou Jingwu",
+      "facet": "Lu Xun's essays and life",
+      "known_at": 9
+    },
+    {
+      "name": "The character 早 carved on Lu Xun's desk",
+      "facet": "Lu Xun's essays and life",
+      "known_at": 6
+    },
+    {
+      "name": "Sendai Medical School",
+      "facet": "Lu Xun's essays and life",
+      "known_at": 10
+    },
+    {
+      "name": "Slide show incident (幻灯片事件)",
+      "facet": "Lu Xun's essays and life",
+      "known_at": 11
+    },
+    {
+      "name": "Wild Grass (野草)",
+      "facet": "Lu Xun's essays and life",
+      "known_at": 11
+    },
+    {
+      "name": "Zawen (杂文)",
+      "facet": "Lu Xun's essays and life",
+      "known_at": 11
+    },
+    {
+      "name": "In Memory of Miss Liu Hezhen (纪念刘和珍君)",
+      "facet": "Lu Xun's essays and life",
+      "known_at": 11
+    },
+    {
+      "name": "Xu Guangping",
+      "facet": "Lu Xun's essays and life",
+      "known_at": 12
+    },
+    {
+      "name": "Zhou Zuoren",
+      "facet": "Lu Xun's essays and life",
+      "known_at": 12
+    },
+    {
+      "name": "A Brief History of Chinese Fiction (中国小说史略)",
+      "facet": "Lu Xun's essays and life",
+      "known_at": 13
+    },
+    {
+      "name": "Lu Xun Literature Prize",
+      "facet": "Lu Xun's essays and life",
+      "known_at": 12
+    },
+    {
+      "name": "Lu Xun Park (Shanghai)",
+      "facet": "Lu Xun's essays and life",
+      "known_at": 12
+    },
+    {
+      "name": "Fan Ainong",
+      "facet": "Lu Xun's essays and life",
+      "known_at": 13
+    },
+    {
+      "name": "Back View (背影)",
+      "facet": "Zhu Ziqing's prose essays",
+      "known_at": 7
+    },
+    {
+      "name": "Spring (春)",
+      "facet": "Zhu Ziqing's prose essays",
+      "known_at": 6
+    },
+    {
+      "name": "Hurry (匆匆)",
+      "facet": "Zhu Ziqing's prose essays",
+      "known_at": 5
+    },
+    {
+      "name": "Green (绿)",
+      "facet": "Zhu Ziqing's prose essays",
+      "known_at": 11
+    },
+    {
+      "name": "Meiyu Pond (梅雨潭)",
+      "facet": "Zhu Ziqing's prose essays",
+      "known_at": 12
+    },
+    {
+      "name": "Oars and Lantern Light on the Qinhuai River (桨声灯影里的秦淮河)",
+      "facet": "Zhu Ziqing's prose essays",
+      "known_at": 12
+    },
+    {
+      "name": "Winter (冬天)",
+      "facet": "Zhu Ziqing's prose essays",
+      "known_at": 12
+    },
+    {
+      "name": "Pukou Railway Station",
+      "facet": "Zhu Ziqing's prose essays",
+      "known_at": 10
+    },
+    {
+      "name": "Tangerines in Back View",
+      "facet": "Zhu Ziqing's prose essays",
+      "known_at": 7
+    },
+    {
+      "name": "Zhu Ziqing's refusal of American relief flour",
+      "facet": "Zhu Ziqing's prose essays",
+      "known_at": 11
+    },
+    {
+      "name": "Prose essay (散文)",
+      "facet": "Zhu Ziqing's prose essays",
+      "known_at": 6
+    },
+    {
+      "name": "Camel Xiangzi (骆驼祥子)",
+      "facet": "Lao She and Beijing works",
+      "known_at": 7
+    },
+    {
+      "name": "Four Generations Under One Roof (四世同堂)",
+      "facet": "Lao She and Beijing works",
+      "known_at": 10
+    },
+    {
+      "name": "Hu Niu",
+      "facet": "Lao She and Beijing works",
+      "known_at": 10
+    },
+    {
+      "name": "Yutai Teahouse",
+      "facet": "Lao She and Beijing works",
+      "known_at": 12
+    },
+    {
+      "name": "Wang Lifa",
+      "facet": "Lao She and Beijing works",
+      "known_at": 12
+    },
+    {
+      "name": "Dragon Beard Ditch (龙须沟)",
+      "facet": "Lao She and Beijing works",
+      "known_at": 12
+    },
+    {
+      "name": "Winter in Jinan (济南的冬天)",
+      "facet": "Lao She and Beijing works",
+      "known_at": 6
+    },
+    {
+      "name": "Cats (猫)",
+      "facet": "Lao She and Beijing works",
+      "known_at": 6
+    },
+    {
+      "name": "Beijing's Spring Festival (北京的春节)",
+      "facet": "Lao She and Beijing works",
+      "known_at": 6
+    },
+    {
+      "name": "Beijing dialect (京味儿)",
+      "facet": "Lao She and Beijing works",
+      "known_at": 9
+    },
+    {
+      "name": "Beijing People's Art Theatre",
+      "facet": "Lao She and Beijing works",
+      "known_at": 11
+    },
+    {
+      "name": "People's Artist (人民艺术家)",
+      "facet": "Lao She and Beijing works",
+      "known_at": 13
+    },
+    {
+      "name": "Taiping Lake (太平湖)",
+      "facet": "Lao She and Beijing works",
+      "known_at": 14,
+      "retired": "unaskable: Taiping Lake is only known as the place where Lao She took his own life, so the topic doesn't fit a family game."
+    },
+    {
+      "name": "Lao She Teahouse (Qianmen)",
+      "facet": "Lao She and Beijing works",
+      "known_at": 11
+    },
+    {
+      "name": "A Myriad of Stars (繁星)",
+      "facet": "Bing Xin's poems and children's writing",
+      "known_at": 6
+    },
+    {
+      "name": "Spring Water (春水)",
+      "facet": "Bing Xin's poems and children's writing",
+      "known_at": 9
+    },
+    {
+      "name": "Letters to Young Readers (寄小读者)",
+      "facet": "Bing Xin's poems and children's writing",
+      "known_at": 9
+    },
+    {
+      "name": "Little Orange Lamp (小橘灯)",
+      "facet": "Bing Xin's poems and children's writing",
+      "known_at": 7
+    },
+    {
+      "name": "Paper Boats (纸船)",
+      "facet": "Bing Xin's poems and children's writing",
+      "known_at": 8
+    },
+    {
+      "name": "Lotus Leaf, Mother (荷叶·母亲)",
+      "facet": "Bing Xin's poems and children's writing",
+      "known_at": 9
+    },
+    {
+      "name": "Mother's love",
+      "facet": "Bing Xin's poems and children's writing",
+      "known_at": 5
+    },
+    {
+      "name": "Rabindranath Tagore",
+      "facet": "Bing Xin's poems and children's writing",
+      "known_at": 10
+    },
+    {
+      "name": "Gitanjali (吉檀迦利)",
+      "facet": "Bing Xin's poems and children's writing",
+      "known_at": 12
+    },
+    {
+      "name": "Bing Xin Children's Literature Award",
+      "facet": "Bing Xin's poems and children's writing",
+      "known_at": 12
+    },
+    {
+      "name": "Wellesley College",
+      "facet": "Bing Xin's poems and children's writing",
+      "known_at": 14
+    },
+    {
+      "name": "Wu Wenzao",
+      "facet": "Bing Xin's poems and children's writing",
+      "known_at": 14
+    },
+    {
+      "name": "Problem fiction (问题小说)",
+      "facet": "Bing Xin's poems and children's writing",
+      "known_at": 13
+    },
+    {
+      "name": "Short poem (小诗)",
+      "facet": "Bing Xin's poems and children's writing",
+      "known_at": 9
+    },
+    {
+      "name": "Family (家)",
+      "facet": "Ba Jin and the Torrent trilogy",
+      "known_at": 8
+    },
+    {
+      "name": "Spring (春, Ba Jin)",
+      "facet": "Ba Jin and the Torrent trilogy",
+      "known_at": 11
+    },
+    {
+      "name": "Autumn (秋)",
+      "facet": "Ba Jin and the Torrent trilogy",
+      "known_at": 11
+    },
+    {
+      "name": "Torrent trilogy (激流三部曲)",
+      "facet": "Ba Jin and the Torrent trilogy",
+      "known_at": 10
+    },
+    {
+      "name": "Love trilogy (爱情三部曲)",
+      "facet": "Ba Jin and the Torrent trilogy",
+      "known_at": 13
+    },
+    {
+      "name": "Gao Juehui",
+      "facet": "Ba Jin and the Torrent trilogy",
+      "known_at": 11
+    },
+    {
+      "name": "Gao Juexin",
+      "facet": "Ba Jin and the Torrent trilogy",
+      "known_at": 11
+    },
+    {
+      "name": "Mingfeng",
+      "facet": "Ba Jin and the Torrent trilogy",
+      "known_at": 11,
+      "retired": "unaskable: Mingfeng's central story fact is her suicide, which is off-limits, and the other options (trilogy number, name meaning) are forced or give the answer away."
+    },
+    {
+      "name": "Ruijue",
+      "facet": "Ba Jin and the Torrent trilogy",
+      "known_at": 12
+    },
+    {
+      "name": "Grandfather Gao (高老太爷)",
+      "facet": "Ba Jin and the Torrent trilogy",
+      "known_at": 12
+    },
+    {
+      "name": "Gao family mansion",
+      "facet": "Ba Jin and the Torrent trilogy",
+      "known_at": 12
+    },
+    {
+      "name": "Random Thoughts (随想录)",
+      "facet": "Ba Jin and the Torrent trilogy",
+      "known_at": 12
+    },
+    {
+      "name": "Cold Nights (寒夜)",
+      "facet": "Ba Jin and the Torrent trilogy",
+      "known_at": 13
+    },
+    {
+      "name": "Sunrise at Sea (海上日出)",
+      "facet": "Ba Jin and the Torrent trilogy",
+      "known_at": 7
+    },
+    {
+      "name": "Xiao Shan",
+      "facet": "Ba Jin and the Torrent trilogy",
+      "known_at": 14
+    },
+    {
+      "name": "Cuicui",
+      "facet": "Shen Congwen and Xiangxi",
+      "known_at": 9
+    },
+    {
+      "name": "Ferryman grandfather",
+      "facet": "Shen Congwen and Xiangxi",
+      "known_at": 10
+    },
+    {
+      "name": "Nuosong",
+      "facet": "Shen Congwen and Xiangxi",
+      "known_at": 12
+    },
+    {
+      "name": "Tianbao",
+      "facet": "Shen Congwen and Xiangxi",
+      "known_at": 12
+    },
+    {
+      "name": "Chadong",
+      "facet": "Shen Congwen and Xiangxi",
+      "known_at": 11
+    },
+    {
+      "name": "Tuojiang River",
+      "facet": "Shen Congwen and Xiangxi",
+      "known_at": 9
+    },
+    {
+      "name": "Miao people",
+      "facet": "Shen Congwen and Xiangxi",
+      "known_at": 7
+    },
+    {
+      "name": "Tujia people",
+      "facet": "Shen Congwen and Xiangxi",
+      "known_at": 10
+    },
+    {
+      "name": "Stilt houses (吊脚楼)",
+      "facet": "Shen Congwen and Xiangxi",
+      "known_at": 8
+    },
+    {
+      "name": "Random Sketches on a Trip to West Hunan (湘行散记)",
+      "facet": "Shen Congwen and Xiangxi",
+      "known_at": 13
+    },
+    {
+      "name": "Study of Ancient Chinese Costumes (中国古代服饰研究)",
+      "facet": "Shen Congwen and Xiangxi",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Zhaohe",
+      "facet": "Shen Congwen and Xiangxi",
+      "known_at": 13
+    },
+    {
+      "name": "National Southwest Associated University",
+      "facet": "Shen Congwen and Xiangxi",
+      "known_at": 11
+    },
+    {
+      "name": "River Cam",
+      "facet": "Modern poets: Xu Zhimo, Ai Qing",
+      "known_at": 9
+    },
+    {
+      "name": "Crescent Moon Society (新月社)",
+      "facet": "Modern poets: Xu Zhimo, Ai Qing",
+      "known_at": 11
+    },
+    {
+      "name": "I Love This Land (我爱这土地)",
+      "facet": "Modern poets: Xu Zhimo, Ai Qing",
+      "known_at": 8
+    },
+    {
+      "name": "Dayanhe, My Wet Nurse (大堰河——我的保姆)",
+      "facet": "Modern poets: Xu Zhimo, Ai Qing",
+      "known_at": 11
+    },
+    {
+      "name": "Dead Water (死水)",
+      "facet": "Modern poets: Xu Zhimo, Ai Qing",
+      "known_at": 12
+    },
+    {
+      "name": "The Goddesses (女神)",
+      "facet": "Modern poets: Xu Zhimo, Ai Qing",
+      "known_at": 11
+    },
+    {
+      "name": "You Are the April of the World (你是人间的四月天)",
+      "facet": "Modern poets: Xu Zhimo, Ai Qing",
+      "known_at": 9
+    },
+    {
+      "name": "Facing the Sea, with Spring Flowers Blossoming (面朝大海，春暖花开)",
+      "facet": "Modern poets: Xu Zhimo, Ai Qing",
+      "known_at": 8
+    },
+    {
+      "name": "A Generation (一代人)",
+      "facet": "Modern poets: Xu Zhimo, Ai Qing",
+      "known_at": 9
+    },
+    {
+      "name": "To the Oak Tree (致橡树)",
+      "facet": "Modern poets: Xu Zhimo, Ai Qing",
+      "known_at": 10
+    },
+    {
+      "name": "Misty Poets (朦胧诗派)",
+      "facet": "Modern poets: Xu Zhimo, Ai Qing",
+      "known_at": 11
+    },
+    {
+      "name": "Zhou Shuren",
+      "facet": "Pen names and real names",
+      "known_at": 7
+    },
+    {
+      "name": "Shu Qingchun",
+      "facet": "Pen names and real names",
+      "known_at": 11
+    },
+    {
+      "name": "Xie Wanying",
+      "facet": "Pen names and real names",
+      "known_at": 11
+    },
+    {
+      "name": "Li Yaotang",
+      "facet": "Pen names and real names",
+      "known_at": 12
+    },
+    {
+      "name": "Shen Yanbing",
+      "facet": "Pen names and real names",
+      "known_at": 13
+    },
+    {
+      "name": "Wan Jiabao",
+      "facet": "Pen names and real names",
+      "known_at": 12
+    },
+    {
+      "name": "Jiang Haicheng",
+      "facet": "Pen names and real names",
+      "known_at": 13
+    },
+    {
+      "name": "Guo Kaizhen",
+      "facet": "Pen names and real names",
+      "known_at": 14
+    },
+    {
+      "name": "Xu Zhangxu",
+      "facet": "Pen names and real names",
+      "known_at": 14
+    },
+    {
+      "name": "Zha Haisheng",
+      "facet": "Pen names and real names",
+      "known_at": 12
+    },
+    {
+      "name": "Zha Liangyong",
+      "facet": "Pen names and real names",
+      "known_at": 11
+    },
+    {
+      "name": "Guan Moye",
+      "facet": "Pen names and real names",
+      "known_at": 10
+    },
+    {
+      "name": "Chen Zhe",
+      "facet": "Pen names and real names",
+      "known_at": 13
+    },
+    {
+      "name": "Chen Mao",
+      "facet": "Pen names and real names",
+      "known_at": 13
+    },
+    {
+      "name": "Zhu Zihua",
+      "facet": "Pen names and real names",
+      "known_at": 14
+    },
+    {
+      "name": "Lu Rui",
+      "facet": "Pen names and real names",
+      "known_at": 14
+    },
+    {
+      "name": "Pen name (笔名)",
+      "facet": "Pen names and real names",
+      "known_at": 6
+    },
+    {
+      "name": "New Culture Movement",
+      "facet": "May Fourth and New Culture Movement",
+      "known_at": 9
+    },
+    {
+      "name": "Qian Xuantong",
+      "facet": "May Fourth and New Culture Movement",
+      "known_at": 13
+    },
+    {
+      "name": "Paris Peace Conference",
+      "facet": "May Fourth and New Culture Movement",
+      "known_at": 10
+    },
+    {
+      "name": "Some Modest Proposals for the Reform of Literature (文学改良刍议)",
+      "facet": "May Fourth and New Culture Movement",
+      "known_at": 13
+    },
+    {
+      "name": "Experiments (尝试集)",
+      "facet": "May Fourth and New Culture Movement",
+      "known_at": 13
+    },
+    {
+      "name": "Literary Research Association (文学研究会)",
+      "facet": "May Fourth and New Culture Movement",
+      "known_at": 12
+    },
+    {
+      "name": "Creation Society (创造社)",
+      "facet": "May Fourth and New Culture Movement",
+      "known_at": 12
+    },
+    {
+      "name": "League of Left-Wing Writers (左联)",
+      "facet": "May Fourth and New Culture Movement",
+      "known_at": 12
+    },
+    {
+      "name": "The Lin Family Shop (林家铺子)",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 12
+    },
+    {
+      "name": "Mao Dun Literature Prize",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 10
+    },
+    {
+      "name": "Cao Yu",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 9
+    },
+    {
+      "name": "Thunderstorm (雷雨)",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 9
+    },
+    {
+      "name": "Sunrise (日出)",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 11
+    },
+    {
+      "name": "Peking Man (北京人)",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 13
+    },
+    {
+      "name": "Zhou Puyuan",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 11
+    },
+    {
+      "name": "Fanyi",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 12
+    },
+    {
+      "name": "Sifeng",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 12
+    },
+    {
+      "name": "Qian Zhongshu",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 10
+    },
+    {
+      "name": "Fortress Besieged (围城)",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 9
+    },
+    {
+      "name": "Fang Hongjian",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 11
+    },
+    {
+      "name": "Limited Views (管锥编)",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 14
+    },
+    {
+      "name": "Yang Jiang",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 10
+    },
+    {
+      "name": "We Three (我们仨)",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Ailing",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 10
+    },
+    {
+      "name": "Love in a Fallen City (倾城之恋)",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 11
+    },
+    {
+      "name": "The Scarecrow (稻草人)",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 7
+    },
+    {
+      "name": "Zhao Shuli",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 12
+    },
+    {
+      "name": "Ding Ling",
+      "facet": "Later classics: Mao Dun, Cao Yu, Qian Zhongshu",
+      "known_at": 12
+    },
+    {
+      "name": "Self-Mockery (自嘲)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 9
+    },
+    {
+      "name": "Ode to Young China (少年中国说)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 8
+    },
+    {
+      "name": "Tribute to the White Poplar (白杨礼赞)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 10
+    },
+    {
+      "name": "Peanuts (落花生)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 6
+    },
+    {
+      "name": "Xu Dishan",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 9
+    },
+    {
+      "name": "Some People (有的人)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 9
+    },
+    {
+      "name": "Answer (回答)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 11
+    },
+    {
+      "name": "Letter to My Wife (与妻书)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 12
+    },
+    {
+      "name": "The Last Lecture (最后一次讲演)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 12
+    },
+    {
+      "name": "Wisteria Waterfall (紫藤萝瀑布)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 9
+    },
+    {
+      "name": "Remembering Autumn (秋天的怀念)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 9
+    },
+    {
+      "name": "The Temple of Earth and I (我与地坛)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 11
+    },
+    {
+      "name": "Shi Tiesheng",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 10
+    },
+    {
+      "name": "A Walk (散步)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 8
+    },
+    {
+      "name": "Ode to the Yellow River (黄河颂)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 9
+    },
+    {
+      "name": "Ansai Waist Drums (安塞腰鼓)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 11
+    },
+    {
+      "name": "Who Are the Most Beloved People (谁是最可爱的人)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 10
+    },
+    {
+      "name": "Deng Jiaxian (邓稼先)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 11
+    },
+    {
+      "name": "Old Wang (老王)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 11
+    },
+    {
+      "name": "Lychee Honey (荔枝蜜)",
+      "facet": "Famous lines and textbook passages",
+      "known_at": 12
+    }
+  ]
+}

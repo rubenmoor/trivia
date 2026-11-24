@@ -1,0 +1,1157 @@
+{
+  "subcategory": "c-pop",
+  "facets": [
+    "Classic Mandarin pop stars",
+    "Mandopop superstars of today",
+    "Cantopop legends",
+    "Bands and groups",
+    "Evergreen hit songs",
+    "Talent shows and singing contests",
+    "Square-dance and viral hits",
+    "Film and TV theme songs",
+    "Songwriters and lyricists",
+    "Spring Festival Gala songs",
+    "Song lyrics and famous lines",
+    "Pop music history and eras"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Teresa Teng",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 3
+    },
+    {
+      "name": "Faye Wong",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 5
+    },
+    {
+      "name": "Fei Yuqing (Fei Yu-ching)",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 8
+    },
+    {
+      "name": "Liu Wenzheng",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 11
+    },
+    {
+      "name": "Qi Yu (Chyi Yu)",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 10
+    },
+    {
+      "name": "Cai Qin (Tsai Chin)",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Jie (Dave Wang)",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 10
+    },
+    {
+      "name": "Zhang Yusheng",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 12
+    },
+    {
+      "name": "Su Rui",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 12
+    },
+    {
+      "name": "Zhou Huajian (Emil Chau)",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 7
+    },
+    {
+      "name": "Zhang Xinzhe (Jeff Chang)",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 8
+    },
+    {
+      "name": "Yu Chengqing (Harlem Yu)",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 9
+    },
+    {
+      "name": "Na Ying",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 6
+    },
+    {
+      "name": "Mao Amin",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 8
+    },
+    {
+      "name": "Cui Jian",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 8
+    },
+    {
+      "name": "Wei Wei",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 9
+    },
+    {
+      "name": "Tian Zhen",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 10
+    },
+    {
+      "name": "Sun Nan",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 9
+    },
+    {
+      "name": "Liu Ruoying (Rene Liu)",
+      "facet": "Classic Mandarin pop stars",
+      "known_at": 7
+    },
+    {
+      "name": "Jay Chou",
+      "facet": "Mandopop superstars of today",
+      "known_at": 3
+    },
+    {
+      "name": "JJ Lin (Lin Junjie)",
+      "facet": "Mandopop superstars of today",
+      "known_at": 5
+    },
+    {
+      "name": "Jolin Tsai (Cai Yilin)",
+      "facet": "Mandopop superstars of today",
+      "known_at": 5
+    },
+    {
+      "name": "G.E.M. (Deng Ziqi)",
+      "facet": "Mandopop superstars of today",
+      "known_at": 4
+    },
+    {
+      "name": "Hua Chenyu",
+      "facet": "Mandopop superstars of today",
+      "known_at": 6
+    },
+    {
+      "name": "Xue Zhiqian (Joker Xue)",
+      "facet": "Mandopop superstars of today",
+      "known_at": 5
+    },
+    {
+      "name": "Zhou Shen",
+      "facet": "Mandopop superstars of today",
+      "known_at": 5
+    },
+    {
+      "name": "Mao Buyi",
+      "facet": "Mandopop superstars of today",
+      "known_at": 7
+    },
+    {
+      "name": "Li Ronghao",
+      "facet": "Mandopop superstars of today",
+      "known_at": 6
+    },
+    {
+      "name": "Sun Yanzi (Stefanie Sun)",
+      "facet": "Mandopop superstars of today",
+      "known_at": 6
+    },
+    {
+      "name": "Zhang Liangying (Jane Zhang)",
+      "facet": "Mandopop superstars of today",
+      "known_at": 6
+    },
+    {
+      "name": "Tan Weiwei",
+      "facet": "Mandopop superstars of today",
+      "known_at": 7
+    },
+    {
+      "name": "Cai Xukun",
+      "facet": "Mandopop superstars of today",
+      "known_at": 5
+    },
+    {
+      "name": "Lu Han",
+      "facet": "Mandopop superstars of today",
+      "known_at": 5
+    },
+    {
+      "name": "Zhang Jie (Jason Zhang)",
+      "facet": "Mandopop superstars of today",
+      "known_at": 5
+    },
+    {
+      "name": "Wang Feng",
+      "facet": "Mandopop superstars of today",
+      "known_at": 6
+    },
+    {
+      "name": "Yuan Yawei (Tia Ray)",
+      "facet": "Mandopop superstars of today",
+      "known_at": 9
+    },
+    {
+      "name": "Tao Zhe (David Tao)",
+      "facet": "Mandopop superstars of today",
+      "known_at": 8
+    },
+    {
+      "name": "Wang Jiaer (Jackson Wang)",
+      "facet": "Mandopop superstars of today",
+      "known_at": 6
+    },
+    {
+      "name": "Wang Lihong (Wang Leehom)",
+      "facet": "Mandopop superstars of today",
+      "known_at": 6
+    },
+    {
+      "name": "Lin Youjia (Yoga Lin)",
+      "facet": "Mandopop superstars of today",
+      "known_at": 8
+    },
+    {
+      "name": "Xiao Jingteng (Jam Hsiao)",
+      "facet": "Mandopop superstars of today",
+      "known_at": 8
+    },
+    {
+      "name": "Yi Yangqianxi (Jackson Yee)",
+      "facet": "Mandopop superstars of today",
+      "known_at": 4
+    },
+    {
+      "name": "Zhang Guorong (Leslie Cheung)",
+      "facet": "Cantopop legends",
+      "known_at": 7
+    },
+    {
+      "name": "Mei Yanfang (Anita Mui)",
+      "facet": "Cantopop legends",
+      "known_at": 7
+    },
+    {
+      "name": "Liu Dehua (Andy Lau)",
+      "facet": "Cantopop legends",
+      "known_at": 4
+    },
+    {
+      "name": "Zhang Xueyou (Jacky Cheung)",
+      "facet": "Cantopop legends",
+      "known_at": 5
+    },
+    {
+      "name": "Guo Fucheng (Aaron Kwok)",
+      "facet": "Cantopop legends",
+      "known_at": 6
+    },
+    {
+      "name": "Li Ming (Leon Lai)",
+      "facet": "Cantopop legends",
+      "known_at": 7
+    },
+    {
+      "name": "Chen Yixun (Eason Chan)",
+      "facet": "Cantopop legends",
+      "known_at": 5
+    },
+    {
+      "name": "Huang Jiaju (Wong Ka Kui)",
+      "facet": "Cantopop legends",
+      "known_at": 8
+    },
+    {
+      "name": "Xu Guanjie (Sam Hui)",
+      "facet": "Cantopop legends",
+      "known_at": 11
+    },
+    {
+      "name": "Tan Yonglin (Alan Tam)",
+      "facet": "Cantopop legends",
+      "known_at": 10
+    },
+    {
+      "name": "Chen Baiqiang (Danny Chan)",
+      "facet": "Cantopop legends",
+      "known_at": 12
+    },
+    {
+      "name": "Luo Wen (Roman Tam)",
+      "facet": "Cantopop legends",
+      "known_at": 12
+    },
+    {
+      "name": "Lin Yilian (Sandy Lam)",
+      "facet": "Cantopop legends",
+      "known_at": 10
+    },
+    {
+      "name": "Chen Huixian (Priscilla Chan)",
+      "facet": "Cantopop legends",
+      "known_at": 11
+    },
+    {
+      "name": "Rong Zuer (Joey Yung)",
+      "facet": "Cantopop legends",
+      "known_at": 8
+    },
+    {
+      "name": "Li Keqin (Hacken Lee)",
+      "facet": "Cantopop legends",
+      "known_at": 10
+    },
+    {
+      "name": "Xu Xiaofeng (Paula Tsui)",
+      "facet": "Cantopop legends",
+      "known_at": 12
+    },
+    {
+      "name": "Ye Liyi (Frances Yip)",
+      "facet": "Cantopop legends",
+      "known_at": 12
+    },
+    {
+      "name": "Zheng Xiuwen (Sammi Cheng)",
+      "facet": "Cantopop legends",
+      "known_at": 8
+    },
+    {
+      "name": "Chen Huilin (Kelly Chen)",
+      "facet": "Cantopop legends",
+      "known_at": 9
+    },
+    {
+      "name": "Xie Tingfeng (Nicholas Tse)",
+      "facet": "Cantopop legends",
+      "known_at": 7
+    },
+    {
+      "name": "Mayday",
+      "facet": "Bands and groups",
+      "known_at": 4
+    },
+    {
+      "name": "Beyond",
+      "facet": "Bands and groups",
+      "known_at": 6
+    },
+    {
+      "name": "TFBoys",
+      "facet": "Bands and groups",
+      "known_at": 3
+    },
+    {
+      "name": "S.H.E",
+      "facet": "Bands and groups",
+      "known_at": 6
+    },
+    {
+      "name": "F4",
+      "facet": "Bands and groups",
+      "known_at": 5
+    },
+    {
+      "name": "Twins",
+      "facet": "Bands and groups",
+      "known_at": 8
+    },
+    {
+      "name": "Sodagreen",
+      "facet": "Bands and groups",
+      "known_at": 9
+    },
+    {
+      "name": "Tang Dynasty (band)",
+      "facet": "Bands and groups",
+      "known_at": 11
+    },
+    {
+      "name": "Black Panther (band)",
+      "facet": "Bands and groups",
+      "known_at": 11
+    },
+    {
+      "name": "Phoenix Legend",
+      "facet": "Bands and groups",
+      "known_at": 5
+    },
+    {
+      "name": "Chopstick Brothers",
+      "facet": "Bands and groups",
+      "known_at": 5
+    },
+    {
+      "name": "Little Tigers (Xiaohu Dui)",
+      "facet": "Bands and groups",
+      "known_at": 10
+    },
+    {
+      "name": "SNH48",
+      "facet": "Bands and groups",
+      "known_at": 8
+    },
+    {
+      "name": "Rocket Girls 101",
+      "facet": "Bands and groups",
+      "known_at": 8
+    },
+    {
+      "name": "Shuimu Nianhua",
+      "facet": "Bands and groups",
+      "known_at": 11
+    },
+    {
+      "name": "Yu Quan",
+      "facet": "Bands and groups",
+      "known_at": 8
+    },
+    {
+      "name": "Fahrenheit (Fei Lun Hai)",
+      "facet": "Bands and groups",
+      "known_at": 9
+    },
+    {
+      "name": "Escape Plan (Taopao Jihua)",
+      "facet": "Bands and groups",
+      "known_at": 9
+    },
+    {
+      "name": "Omnipotent Youth Society",
+      "facet": "Bands and groups",
+      "known_at": 11
+    },
+    {
+      "name": "Teens in Times (TNT)",
+      "facet": "Bands and groups",
+      "known_at": 6
+    },
+    {
+      "name": "The Moon Represents My Heart",
+      "facet": "Evergreen hit songs",
+      "known_at": 2
+    },
+    {
+      "name": "Boundless Sky (Hai Kuo Tian Kong)",
+      "facet": "Evergreen hit songs",
+      "known_at": 6
+    },
+    {
+      "name": "Blue and White Porcelain (Qinghuaci)",
+      "facet": "Evergreen hit songs",
+      "known_at": 5
+    },
+    {
+      "name": "Nunchucks (Shuangjiegun)",
+      "facet": "Evergreen hit songs",
+      "known_at": 5
+    },
+    {
+      "name": "Sweet as Honey (Tian Mimi)",
+      "facet": "Evergreen hit songs",
+      "known_at": 4
+    },
+    {
+      "name": "Friends (Pengyou)",
+      "facet": "Evergreen hit songs",
+      "known_at": 6
+    },
+    {
+      "name": "Childhood (Tongnian)",
+      "facet": "Evergreen hit songs",
+      "known_at": 7
+    },
+    {
+      "name": "Descendants of the Dragon (Long de Chuanren)",
+      "facet": "Evergreen hit songs",
+      "known_at": 8
+    },
+    {
+      "name": "Stubborn (Juejiang)",
+      "facet": "Evergreen hit songs",
+      "known_at": 6
+    },
+    {
+      "name": "Rice Fragrance (Daoxiang)",
+      "facet": "Evergreen hit songs",
+      "known_at": 4
+    },
+    {
+      "name": "Legend (Chuanqi)",
+      "facet": "Evergreen hit songs",
+      "known_at": 8
+    },
+    {
+      "name": "Mouse Loves Rice (Laoshu Ai Dami)",
+      "facet": "Evergreen hit songs",
+      "known_at": 4
+    },
+    {
+      "name": "Tomorrow Will Be Better (Mingtian Hui Geng Hao)",
+      "facet": "Evergreen hit songs",
+      "known_at": 9
+    },
+    {
+      "name": "Nothing to My Name (Yiwu Suoyou)",
+      "facet": "Evergreen hit songs",
+      "known_at": 9
+    },
+    {
+      "name": "Listen to Mom (Ting Mama de Hua)",
+      "facet": "Evergreen hit songs",
+      "known_at": 6
+    },
+    {
+      "name": "Kiss Goodbye (Wen Bie)",
+      "facet": "Evergreen hit songs",
+      "known_at": 8
+    },
+    {
+      "name": "The Ordinary Road (Pingfan zhi Lu)",
+      "facet": "Evergreen hit songs",
+      "known_at": 7
+    },
+    {
+      "name": "Light Years Away (Guangnian zhi Wai)",
+      "facet": "Evergreen hit songs",
+      "known_at": 5
+    },
+    {
+      "name": "Common Jasmine Orange (Qilixiang)",
+      "facet": "Evergreen hit songs",
+      "known_at": 6
+    },
+    {
+      "name": "Small Town Story (Xiaocheng Gushi)",
+      "facet": "Evergreen hit songs",
+      "known_at": 8
+    },
+    {
+      "name": "Wishing We Last Forever (Dan Yuan Ren Changjiu)",
+      "facet": "Evergreen hit songs",
+      "known_at": 7
+    },
+    {
+      "name": "Later (Houlai)",
+      "facet": "Evergreen hit songs",
+      "known_at": 6
+    },
+    {
+      "name": "Pearl of the Orient (Dongfang zhi Zhu)",
+      "facet": "Evergreen hit songs",
+      "known_at": 8
+    },
+    {
+      "name": "Super Girl (Chaoji Nüsheng)",
+      "facet": "Talent shows and singing contests",
+      "known_at": 8
+    },
+    {
+      "name": "Li Yuchun",
+      "facet": "Talent shows and singing contests",
+      "known_at": 7
+    },
+    {
+      "name": "Zhou Bichang",
+      "facet": "Talent shows and singing contests",
+      "known_at": 10
+    },
+    {
+      "name": "Happy Boys (Kuaile Nansheng)",
+      "facet": "Talent shows and singing contests",
+      "known_at": 11
+    },
+    {
+      "name": "The Voice of China",
+      "facet": "Talent shows and singing contests",
+      "known_at": 5
+    },
+    {
+      "name": "I Am a Singer (Wo Shi Geshou)",
+      "facet": "Talent shows and singing contests",
+      "known_at": 7
+    },
+    {
+      "name": "Produce 101 China",
+      "facet": "Talent shows and singing contests",
+      "known_at": 9
+    },
+    {
+      "name": "Idol Producer (Ouxiang Lianxisheng)",
+      "facet": "Talent shows and singing contests",
+      "known_at": 9
+    },
+    {
+      "name": "CCTV Young Singers Competition (Qingge Sai)",
+      "facet": "Talent shows and singing contests",
+      "known_at": 11
+    },
+    {
+      "name": "Sisters Who Make Waves",
+      "facet": "Talent shows and singing contests",
+      "known_at": 8
+    },
+    {
+      "name": "Masked Singer China",
+      "facet": "Talent shows and singing contests",
+      "known_at": 9
+    },
+    {
+      "name": "The Rap of China",
+      "facet": "Talent shows and singing contests",
+      "known_at": 8
+    },
+    {
+      "name": "Hunan Satellite TV",
+      "facet": "Talent shows and singing contests",
+      "known_at": 7
+    },
+    {
+      "name": "Starlight Avenue (Xingguang Dadao)",
+      "facet": "Talent shows and singing contests",
+      "known_at": 10
+    },
+    {
+      "name": "Sing My Song (Zhongguo Hao Gequ)",
+      "facet": "Talent shows and singing contests",
+      "known_at": 11
+    },
+    {
+      "name": "Blind audition",
+      "facet": "Talent shows and singing contests",
+      "known_at": 7
+    },
+    {
+      "name": "TVB New Talent Singing Awards",
+      "facet": "Talent shows and singing contests",
+      "known_at": 13
+    },
+    {
+      "name": "Little Apple",
+      "facet": "Square-dance and viral hits",
+      "known_at": 2
+    },
+    {
+      "name": "Square dancing (Guangchang Wu)",
+      "facet": "Square-dance and viral hits",
+      "known_at": 3
+    },
+    {
+      "name": "The Most Dazzling Ethnic Style (Zui Xuan Minzu Feng)",
+      "facet": "Square-dance and viral hits",
+      "known_at": 5
+    },
+    {
+      "name": "Moonlight over the Lotus Pond (Hetang Yuese)",
+      "facet": "Square-dance and viral hits",
+      "known_at": 7
+    },
+    {
+      "name": "Learn to Meow (Xue Mao Jiao)",
+      "facet": "Square-dance and viral hits",
+      "known_at": 4
+    },
+    {
+      "name": "Wild Wolf Disco (Yelang Disco)",
+      "facet": "Square-dance and viral hits",
+      "known_at": 8
+    },
+    {
+      "name": "Seaweed Dance (Haicao Wu)",
+      "facet": "Square-dance and viral hits",
+      "known_at": 7
+    },
+    {
+      "name": "Chick Chick (Xiaoji Xiaoji)",
+      "facet": "Square-dance and viral hits",
+      "known_at": 8
+    },
+    {
+      "name": "Two Butterflies (Liang Zhi Hudie)",
+      "facet": "Square-dance and viral hits",
+      "known_at": 6
+    },
+    {
+      "name": "Pure Land of Bliss (Jile Jingtu)",
+      "facet": "Square-dance and viral hits",
+      "known_at": 9
+    },
+    {
+      "name": "Old Boy (Lao Nanhai)",
+      "facet": "Square-dance and viral hits",
+      "known_at": 6
+    },
+    {
+      "name": "Apple Fragrance (Pingguo Xiang)",
+      "facet": "Square-dance and viral hits",
+      "known_at": 9
+    },
+    {
+      "name": "The First Snow of 2002",
+      "facet": "Square-dance and viral hits",
+      "known_at": 7
+    },
+    {
+      "name": "Mojito",
+      "facet": "Square-dance and viral hits",
+      "known_at": 6
+    },
+    {
+      "name": "Luocha Haishi",
+      "facet": "Square-dance and viral hits",
+      "known_at": 9
+    },
+    {
+      "name": "Chengdu (song)",
+      "facet": "Square-dance and viral hits",
+      "known_at": 7
+    },
+    {
+      "name": "Big Fish (Da Yu)",
+      "facet": "Film and TV theme songs",
+      "known_at": 6
+    },
+    {
+      "name": "Lonely Brave (Gu Yongzhe)",
+      "facet": "Film and TV theme songs",
+      "known_at": 4
+    },
+    {
+      "name": "Dare to Ask Where the Road Is (Gan Wen Lu Zai He Fang)",
+      "facet": "Film and TV theme songs",
+      "known_at": 5
+    },
+    {
+      "name": "Song of Heroes (Haohan Ge)",
+      "facet": "Film and TV theme songs",
+      "known_at": 6
+    },
+    {
+      "name": "The Rolling Yangtze Flows East (Gungun Changjiang Dong Shi Shui)",
+      "facet": "Film and TV theme songs",
+      "known_at": 8
+    },
+    {
+      "name": "When (Dang)",
+      "facet": "Film and TV theme songs",
+      "known_at": 6
+    },
+    {
+      "name": "Shanghai Beach (Shanghai Tan)",
+      "facet": "Film and TV theme songs",
+      "known_at": 9
+    },
+    {
+      "name": "Dream of the Red Chamber theme (Wang Ning Mei)",
+      "facet": "Film and TV theme songs",
+      "known_at": 10
+    },
+    {
+      "name": "A Love Before Time (Yueguang Airen)",
+      "facet": "Film and TV theme songs",
+      "known_at": 12
+    },
+    {
+      "name": "Little Luck (Xiao Xingyun)",
+      "facet": "Film and TV theme songs",
+      "known_at": 6
+    },
+    {
+      "name": "Those Years (Naxie Nian)",
+      "facet": "Film and TV theme songs",
+      "known_at": 6
+    },
+    {
+      "name": "Fleeting Love (Qing Fei De Yi)",
+      "facet": "Film and TV theme songs",
+      "known_at": 8
+    },
+    {
+      "name": "Painted Heart (Hua Xin)",
+      "facet": "Film and TV theme songs",
+      "known_at": 8
+    },
+    {
+      "name": "Daughter's Love (Nü'er Qing)",
+      "facet": "Film and TV theme songs",
+      "known_at": 9
+    },
+    {
+      "name": "Pleasant Goat and Big Big Wolf theme song",
+      "facet": "Film and TV theme songs",
+      "known_at": 2
+    },
+    {
+      "name": "Fang Wenshan (Vincent Fang)",
+      "facet": "Songwriters and lyricists",
+      "known_at": 8
+    },
+    {
+      "name": "Lin Xi (Albert Leung)",
+      "facet": "Songwriters and lyricists",
+      "known_at": 11
+    },
+    {
+      "name": "Huang Zhan (James Wong)",
+      "facet": "Songwriters and lyricists",
+      "known_at": 12
+    },
+    {
+      "name": "Luo Dayou",
+      "facet": "Songwriters and lyricists",
+      "known_at": 9
+    },
+    {
+      "name": "Li Zongsheng (Jonathan Lee)",
+      "facet": "Songwriters and lyricists",
+      "known_at": 10
+    },
+    {
+      "name": "Li Jian",
+      "facet": "Songwriters and lyricists",
+      "known_at": 8
+    },
+    {
+      "name": "Gao Xiaosong",
+      "facet": "Songwriters and lyricists",
+      "known_at": 9
+    },
+    {
+      "name": "Chen Xiaoxia",
+      "facet": "Songwriters and lyricists",
+      "known_at": 12
+    },
+    {
+      "name": "Gu Jiahui (Joseph Koo)",
+      "facet": "Songwriters and lyricists",
+      "known_at": 13
+    },
+    {
+      "name": "Liu Jiachang",
+      "facet": "Songwriters and lyricists",
+      "known_at": 12
+    },
+    {
+      "name": "Qiao Yu",
+      "facet": "Songwriters and lyricists",
+      "known_at": 11
+    },
+    {
+      "name": "Ashin (A Xin)",
+      "facet": "Songwriters and lyricists",
+      "known_at": 7
+    },
+    {
+      "name": "Zhang Yadong",
+      "facet": "Songwriters and lyricists",
+      "known_at": 12
+    },
+    {
+      "name": "Yao Qian",
+      "facet": "Songwriters and lyricists",
+      "known_at": 12
+    },
+    {
+      "name": "Zhuang Nu",
+      "facet": "Songwriters and lyricists",
+      "known_at": 13
+    },
+    {
+      "name": "Wu Qingfeng",
+      "facet": "Songwriters and lyricists",
+      "known_at": 10
+    },
+    {
+      "name": "Pu Shu",
+      "facet": "Songwriters and lyricists",
+      "known_at": 9
+    },
+    {
+      "name": "Lao Lang",
+      "facet": "Songwriters and lyricists",
+      "known_at": 11
+    },
+    {
+      "name": "CCTV Spring Festival Gala",
+      "facet": "Spring Festival Gala songs",
+      "known_at": 2
+    },
+    {
+      "name": "Unforgettable Tonight (Nanwang Jinxiao)",
+      "facet": "Spring Festival Gala songs",
+      "known_at": 4
+    },
+    {
+      "name": "Li Guyi",
+      "facet": "Spring Festival Gala songs",
+      "known_at": 8
+    },
+    {
+      "name": "Gong Xi Fa Cai (Andy Lau song)",
+      "facet": "Spring Festival Gala songs",
+      "known_at": 5
+    },
+    {
+      "name": "Go Home Often (Chang Huijia Kankan)",
+      "facet": "Spring Festival Gala songs",
+      "known_at": 6
+    },
+    {
+      "name": "My Chinese Heart (Wo de Zhongguo Xin)",
+      "facet": "Spring Festival Gala songs",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Mingmin",
+      "facet": "Spring Festival Gala songs",
+      "known_at": 11
+    },
+    {
+      "name": "Good Days (Hao Rizi)",
+      "facet": "Spring Festival Gala songs",
+      "known_at": 6
+    },
+    {
+      "name": "Song Zuying",
+      "facet": "Spring Festival Gala songs",
+      "known_at": 7
+    },
+    {
+      "name": "A Fire in Winter (Dongtian li de Yi Ba Huo)",
+      "facet": "Spring Festival Gala songs",
+      "known_at": 10
+    },
+    {
+      "name": "Fei Xiang",
+      "facet": "Spring Festival Gala songs",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese Kung Fu (Zhongguo Gongfu)",
+      "facet": "Spring Festival Gala songs",
+      "known_at": 9
+    },
+    {
+      "name": "Chinese People (Zhongguo Ren)",
+      "facet": "Spring Festival Gala songs",
+      "known_at": 9
+    },
+    {
+      "name": "Me and My Motherland (Wo he Wo de Zuguo)",
+      "facet": "Spring Festival Gala songs",
+      "known_at": 6
+    },
+    {
+      "name": "Shui Diao Ge Tou (水调歌头) in pop",
+      "facet": "Song lyrics and famous lines",
+      "known_at": 6
+    },
+    {
+      "name": "Li Yu's Yu Meiren (虞美人) in pop",
+      "facet": "Song lyrics and famous lines",
+      "known_at": 10
+    },
+    {
+      "name": "天青色等烟雨 (Blue and White Porcelain)",
+      "facet": "Song lyrics and famous lines",
+      "known_at": 6
+    },
+    {
+      "name": "你问我爱你有多深 (The Moon Represents My Heart)",
+      "facet": "Song lyrics and famous lines",
+      "known_at": 3
+    },
+    {
+      "name": "只因在人群中多看了你一眼 (Legend)",
+      "facet": "Song lyrics and famous lines",
+      "known_at": 8
+    },
+    {
+      "name": "原谅我这一生不羁放纵爱自由 (Boundless Sky)",
+      "facet": "Song lyrics and famous lines",
+      "known_at": 7
+    },
+    {
+      "name": "池塘边的榕树上 (Childhood)",
+      "facet": "Song lyrics and famous lines",
+      "known_at": 7
+    },
+    {
+      "name": "朋友一生一起走 (Friends)",
+      "facet": "Song lyrics and famous lines",
+      "known_at": 5
+    },
+    {
+      "name": "黑眼睛黑头发黄皮肤 (Descendants of the Dragon)",
+      "facet": "Song lyrics and famous lines",
+      "known_at": 8
+    },
+    {
+      "name": "我曾经问个不休 (Nothing to My Name)",
+      "facet": "Song lyrics and famous lines",
+      "known_at": 10
+    },
+    {
+      "name": "还记得你说家是唯一的城堡 (Rice Fragrance)",
+      "facet": "Song lyrics and famous lines",
+      "known_at": 6
+    },
+    {
+      "name": "快使用双截棍 (Nunchucks)",
+      "facet": "Song lyrics and famous lines",
+      "known_at": 4
+    },
+    {
+      "name": "窗外的麻雀 (Common Jasmine Orange)",
+      "facet": "Song lyrics and famous lines",
+      "known_at": 6
+    },
+    {
+      "name": "我爱你爱着你 (Mouse Loves Rice)",
+      "facet": "Song lyrics and famous lines",
+      "known_at": 4
+    },
+    {
+      "name": "你笑得甜蜜蜜 (Sweet as Honey)",
+      "facet": "Song lyrics and famous lines",
+      "known_at": 3
+    },
+    {
+      "name": "你是我的小呀小苹果 (Little Apple)",
+      "facet": "Song lyrics and famous lines",
+      "known_at": 3
+    },
+    {
+      "name": "Shanghai shidaiqu (时代曲)",
+      "facet": "Pop music history and eras",
+      "known_at": 12
+    },
+    {
+      "name": "Campus folk song (校园民歌)",
+      "facet": "Pop music history and eras",
+      "known_at": 11
+    },
+    {
+      "name": "Let the World Be Filled with Love (1986 concert)",
+      "facet": "Pop music history and eras",
+      "known_at": 12
+    },
+    {
+      "name": "China wind (中国风) style",
+      "facet": "Pop music history and eras",
+      "known_at": 8
+    },
+    {
+      "name": "KTV",
+      "facet": "Pop music history and eras",
+      "known_at": 3
+    },
+    {
+      "name": "Rock Records (滚石唱片)",
+      "facet": "Pop music history and eras",
+      "known_at": 13
+    },
+    {
+      "name": "Golden Melody Awards",
+      "facet": "Pop music history and eras",
+      "known_at": 10
+    },
+    {
+      "name": "Jade Solid Gold",
+      "facet": "Pop music history and eras",
+      "known_at": 13
+    },
+    {
+      "name": "Internet songs (网络歌曲)",
+      "facet": "Pop music history and eras",
+      "known_at": 9
+    },
+    {
+      "name": "Beijing Welcomes You",
+      "facet": "Pop music history and eras",
+      "known_at": 5
+    },
+    {
+      "name": "You and Me (2008 Olympic theme song)",
+      "facet": "Pop music history and eras",
+      "known_at": 6
+    },
+    {
+      "name": "Chinese hip hop",
+      "facet": "Pop music history and eras",
+      "known_at": 9
+    },
+    {
+      "name": "Mandopop",
+      "facet": "Pop music history and eras",
+      "known_at": 10
+    },
+    {
+      "name": "Hong Kong Coliseum",
+      "facet": "Pop music history and eras",
+      "known_at": 11
+    },
+    {
+      "name": "Strawberry Music Festival",
+      "facet": "Pop music history and eras",
+      "known_at": 10
+    },
+    {
+      "name": "Midi Music Festival",
+      "facet": "Pop music history and eras",
+      "known_at": 11
+    },
+    {
+      "name": "Qiong Yao film songs",
+      "facet": "Pop music history and eras",
+      "known_at": 11
+    }
+  ]
+}

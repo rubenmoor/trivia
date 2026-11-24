@@ -1,0 +1,792 @@
+{
+  "subcategory": "folk-crafts",
+  "facets": [
+    "Paper-cutting and window flowers",
+    "New Year pictures",
+    "Shadow puppetry",
+    "Embroidery traditions",
+    "Kites and kite-flying",
+    "Lanterns and lantern festivals",
+    "Dough and clay figures",
+    "Cloisonné and metal crafts",
+    "Chinese knots and weaving",
+    "Folk toys and street crafts",
+    "Masks, opera props and fans",
+    "Craft symbols and lucky motifs"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Scissors",
+      "facet": "Paper-cutting and window flowers",
+      "known_at": 1
+    },
+    {
+      "name": "Folded paper-cutting",
+      "facet": "Paper-cutting and window flowers",
+      "known_at": 5
+    },
+    {
+      "name": "Zodiac animal paper-cuts",
+      "facet": "Paper-cutting and window flowers",
+      "known_at": 4
+    },
+    {
+      "name": "Double happiness paper-cut (囍)",
+      "facet": "Paper-cutting and window flowers",
+      "known_at": 4
+    },
+    {
+      "name": "Carved paper-cutting (刻纸)",
+      "facet": "Paper-cutting and window flowers",
+      "known_at": 9
+    },
+    {
+      "name": "Yuxian paper-cutting (蔚县剪纸)",
+      "facet": "Paper-cutting and window flowers",
+      "known_at": 12
+    },
+    {
+      "name": "Foshan paper-cutting",
+      "facet": "Paper-cutting and window flowers",
+      "known_at": 12
+    },
+    {
+      "name": "Yangzhou paper-cutting",
+      "facet": "Paper-cutting and window flowers",
+      "known_at": 11
+    },
+    {
+      "name": "Ansai paper-cutting",
+      "facet": "Paper-cutting and window flowers",
+      "known_at": 13
+    },
+    {
+      "name": "Gate notes (门笺)",
+      "facet": "Paper-cutting and window flowers",
+      "known_at": 11
+    },
+    {
+      "name": "Ceiling flowers (顶棚花)",
+      "facet": "Paper-cutting and window flowers",
+      "known_at": 13
+    },
+    {
+      "name": "Shoe-pattern paper-cuts (鞋样)",
+      "facet": "Paper-cutting and window flowers",
+      "known_at": 13
+    },
+    {
+      "name": "Hair-bun doll paper-cut (抓髻娃娃)",
+      "facet": "Paper-cutting and window flowers",
+      "known_at": 14
+    },
+    {
+      "name": "Ku Shulan",
+      "facet": "Paper-cutting and window flowers",
+      "known_at": 14
+    },
+    {
+      "name": "Pigsy Eats Watermelon (猪八戒吃西瓜)",
+      "facet": "Paper-cutting and window flowers",
+      "known_at": 10
+    },
+    {
+      "name": "Yangliuqing New Year pictures",
+      "facet": "New Year pictures",
+      "known_at": 9
+    },
+    {
+      "name": "Taohuawu New Year pictures",
+      "facet": "New Year pictures",
+      "known_at": 10
+    },
+    {
+      "name": "Yangjiabu New Year pictures",
+      "facet": "New Year pictures",
+      "known_at": 11
+    },
+    {
+      "name": "Mianzhu New Year pictures",
+      "facet": "New Year pictures",
+      "known_at": 11
+    },
+    {
+      "name": "Zhuxianzhen New Year pictures",
+      "facet": "New Year pictures",
+      "known_at": 12
+    },
+    {
+      "name": "Wuqiang New Year pictures",
+      "facet": "New Year pictures",
+      "known_at": 13
+    },
+    {
+      "name": "Qin Qiong and Yuchi Gong",
+      "facet": "New Year pictures",
+      "known_at": 10
+    },
+    {
+      "name": "Shen Tu and Yu Lei",
+      "facet": "New Year pictures",
+      "known_at": 13
+    },
+    {
+      "name": "God of Wealth picture",
+      "facet": "New Year pictures",
+      "known_at": 4
+    },
+    {
+      "name": "Chubby baby holding a carp",
+      "facet": "New Year pictures",
+      "known_at": 5
+    },
+    {
+      "name": "The Mouse's Wedding (老鼠娶亲)",
+      "facet": "New Year pictures",
+      "known_at": 7
+    },
+    {
+      "name": "Shadow puppets (皮影戏)",
+      "facet": "Shadow puppetry",
+      "known_at": 3
+    },
+    {
+      "name": "Donkey-hide shadow puppets",
+      "facet": "Shadow puppetry",
+      "known_at": 10
+    },
+    {
+      "name": "Cowhide",
+      "facet": "Shadow puppetry",
+      "known_at": 8
+    },
+    {
+      "name": "Tangshan shadow puppets",
+      "facet": "Shadow puppetry",
+      "known_at": 12
+    },
+    {
+      "name": "Huaxian shadow puppets",
+      "facet": "Shadow puppetry",
+      "known_at": 12
+    },
+    {
+      "name": "Emperor Wu of Han and Lady Li",
+      "facet": "Shadow puppetry",
+      "known_at": 13
+    },
+    {
+      "name": "Shadow screen",
+      "facet": "Shadow puppetry",
+      "known_at": 7
+    },
+    {
+      "name": "Oil lamp",
+      "facet": "Shadow puppetry",
+      "known_at": 6
+    },
+    {
+      "name": "Puppet control rods",
+      "facet": "Shadow puppetry",
+      "known_at": 7
+    },
+    {
+      "name": "Shadow puppet carving",
+      "facet": "Shadow puppetry",
+      "known_at": 10
+    },
+    {
+      "name": "Wayang kulit",
+      "facet": "Shadow puppetry",
+      "known_at": 13
+    },
+    {
+      "name": "Marionettes (提线木偶)",
+      "facet": "Shadow puppetry",
+      "known_at": 6
+    },
+    {
+      "name": "Quanzhou marionettes",
+      "facet": "Shadow puppetry",
+      "known_at": 12
+    },
+    {
+      "name": "Glove puppetry (布袋戏)",
+      "facet": "Shadow puppetry",
+      "known_at": 10
+    },
+    {
+      "name": "Journey to the West shadow play",
+      "facet": "Shadow puppetry",
+      "known_at": 5
+    },
+    {
+      "name": "Four great embroideries",
+      "facet": "Embroidery traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Su embroidery",
+      "facet": "Embroidery traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Xiang embroidery",
+      "facet": "Embroidery traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Shu embroidery",
+      "facet": "Embroidery traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Yue embroidery",
+      "facet": "Embroidery traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Bian embroidery",
+      "facet": "Embroidery traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Double-sided embroidery",
+      "facet": "Embroidery traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Double-sided cat embroidery",
+      "facet": "Embroidery traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Silk thread",
+      "facet": "Embroidery traditions",
+      "known_at": 4
+    },
+    {
+      "name": "Needle",
+      "facet": "Embroidery traditions",
+      "known_at": 1
+    },
+    {
+      "name": "Embroidery hoop",
+      "facet": "Embroidery traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Mandarin square (补子)",
+      "facet": "Embroidery traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Embroidered ball (绣球)",
+      "facet": "Embroidery traditions",
+      "known_at": 4
+    },
+    {
+      "name": "Embroidered shoes",
+      "facet": "Embroidery traditions",
+      "known_at": 5
+    },
+    {
+      "name": "Shen Shou",
+      "facet": "Embroidery traditions",
+      "known_at": 14
+    },
+    {
+      "name": "Kites (风筝)",
+      "facet": "Kites and kite-flying",
+      "known_at": 1
+    },
+    {
+      "name": "Kites of Weifang",
+      "facet": "Kites and kite-flying",
+      "known_at": 7
+    },
+    {
+      "name": "Centipede kite",
+      "facet": "Kites and kite-flying",
+      "known_at": 7
+    },
+    {
+      "name": "Butterfly kite",
+      "facet": "Kites and kite-flying",
+      "known_at": 3
+    },
+    {
+      "name": "Eagle kite",
+      "facet": "Kites and kite-flying",
+      "known_at": 3
+    },
+    {
+      "name": "Paper hawk (纸鸢)",
+      "facet": "Kites and kite-flying",
+      "known_at": 8
+    },
+    {
+      "name": "Village Dwelling (村居) by Gao Ding",
+      "facet": "Kites and kite-flying",
+      "known_at": 7
+    },
+    {
+      "name": "Mozi's wooden bird",
+      "facet": "Kites and kite-flying",
+      "known_at": 12
+    },
+    {
+      "name": "Kite Wei of Tianjin (风筝魏)",
+      "facet": "Kites and kite-flying",
+      "known_at": 13
+    },
+    {
+      "name": "Kite string reel",
+      "facet": "Kites and kite-flying",
+      "known_at": 5
+    },
+    {
+      "name": "Bamboo frame",
+      "facet": "Kites and kite-flying",
+      "known_at": 4
+    },
+    {
+      "name": "Qingming Festival kite-flying",
+      "facet": "Kites and kite-flying",
+      "known_at": 6
+    },
+    {
+      "name": "Wind",
+      "facet": "Kites and kite-flying",
+      "known_at": 1
+    },
+    {
+      "name": "Lanterns",
+      "facet": "Lanterns and lantern festivals",
+      "known_at": 1
+    },
+    {
+      "name": "Red lantern",
+      "facet": "Lanterns and lantern festivals",
+      "known_at": 1
+    },
+    {
+      "name": "Rabbit lantern",
+      "facet": "Lanterns and lantern festivals",
+      "known_at": 3
+    },
+    {
+      "name": "Fish lantern",
+      "facet": "Lanterns and lantern festivals",
+      "known_at": 6
+    },
+    {
+      "name": "Mid-Autumn lanterns",
+      "facet": "Lanterns and lantern festivals",
+      "known_at": 4
+    },
+    {
+      "name": "Zigong Lantern Festival",
+      "facet": "Lanterns and lantern festivals",
+      "known_at": 10
+    },
+    {
+      "name": "Harbin Ice Lantern Festival",
+      "facet": "Lanterns and lantern festivals",
+      "known_at": 6
+    },
+    {
+      "name": "Dragon dance",
+      "facet": "Lanterns and lantern festivals",
+      "known_at": 2
+    },
+    {
+      "name": "Raise the Red Lantern (大红灯笼高高挂)",
+      "facet": "Lanterns and lantern festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Dough figures (面人)",
+      "facet": "Dough and clay figures",
+      "known_at": 5
+    },
+    {
+      "name": "Clay Figure Zhang",
+      "facet": "Dough and clay figures",
+      "known_at": 9
+    },
+    {
+      "name": "Huishan clay figures",
+      "facet": "Dough and clay figures",
+      "known_at": 10
+    },
+    {
+      "name": "Da A Fu (大阿福)",
+      "facet": "Dough and clay figures",
+      "known_at": 10
+    },
+    {
+      "name": "Rabbit God (兔儿爷)",
+      "facet": "Dough and clay figures",
+      "known_at": 9
+    },
+    {
+      "name": "Sugar figures (吹糖人)",
+      "facet": "Dough and clay figures",
+      "known_at": 4
+    },
+    {
+      "name": "Flower buns (花馍)",
+      "facet": "Dough and clay figures",
+      "known_at": 10
+    },
+    {
+      "name": "Clay whistle (泥哨)",
+      "facet": "Dough and clay figures",
+      "known_at": 9
+    },
+    {
+      "name": "Fengxiang clay figures",
+      "facet": "Dough and clay figures",
+      "known_at": 12
+    },
+    {
+      "name": "Ninigou clay dogs (泥泥狗)",
+      "facet": "Dough and clay figures",
+      "known_at": 13
+    },
+    {
+      "name": "Dough Figure Lang (面人郎)",
+      "facet": "Dough and clay figures",
+      "known_at": 13
+    },
+    {
+      "name": "Glutinous rice dough",
+      "facet": "Dough and clay figures",
+      "known_at": 7
+    },
+    {
+      "name": "Clay",
+      "facet": "Dough and clay figures",
+      "known_at": 1
+    },
+    {
+      "name": "Jingtai Emperor",
+      "facet": "Cloisonné and metal crafts",
+      "known_at": 12
+    },
+    {
+      "name": "Copper wire",
+      "facet": "Cloisonné and metal crafts",
+      "known_at": 8
+    },
+    {
+      "name": "Enamel",
+      "facet": "Cloisonné and metal crafts",
+      "known_at": 9
+    },
+    {
+      "name": "Filigree inlay (花丝镶嵌)",
+      "facet": "Cloisonné and metal crafts",
+      "known_at": 12
+    },
+    {
+      "name": "Miao silver jewelry",
+      "facet": "Cloisonné and metal crafts",
+      "known_at": 9
+    },
+    {
+      "name": "Silver crown of the Miao",
+      "facet": "Cloisonné and metal crafts",
+      "known_at": 10
+    },
+    {
+      "name": "Longquan swords",
+      "facet": "Cloisonné and metal crafts",
+      "known_at": 10
+    },
+    {
+      "name": "Zhang Xiaoquan scissors",
+      "facet": "Cloisonné and metal crafts",
+      "known_at": 11
+    },
+    {
+      "name": "Wangmazi scissors",
+      "facet": "Cloisonné and metal crafts",
+      "known_at": 13
+    },
+    {
+      "name": "Copper hot pot",
+      "facet": "Cloisonné and metal crafts",
+      "known_at": 6
+    },
+    {
+      "name": "Gold leaf",
+      "facet": "Cloisonné and metal crafts",
+      "known_at": 8
+    },
+    {
+      "name": "Nanjing gold foil",
+      "facet": "Cloisonné and metal crafts",
+      "known_at": 12
+    },
+    {
+      "name": "Chased metalwork (錾刻)",
+      "facet": "Cloisonné and metal crafts",
+      "known_at": 13
+    },
+    {
+      "name": "Chinese knots",
+      "facet": "Chinese knots and weaving",
+      "known_at": 3
+    },
+    {
+      "name": "Pan Chang knot (盘长结)",
+      "facet": "Chinese knots and weaving",
+      "known_at": 12
+    },
+    {
+      "name": "Tassel",
+      "facet": "Chinese knots and weaving",
+      "known_at": 7
+    },
+    {
+      "name": "Red string bracelet",
+      "facet": "Chinese knots and weaving",
+      "known_at": 4
+    },
+    {
+      "name": "Lei Zu",
+      "facet": "Chinese knots and weaving",
+      "known_at": 8
+    },
+    {
+      "name": "Song brocade",
+      "facet": "Chinese knots and weaving",
+      "known_at": 13
+    },
+    {
+      "name": "Kesi (缂丝)",
+      "facet": "Chinese knots and weaving",
+      "known_at": 13
+    },
+    {
+      "name": "Blue calico (蓝印花布)",
+      "facet": "Chinese knots and weaving",
+      "known_at": 11
+    },
+    {
+      "name": "Bai tie-dye (扎染)",
+      "facet": "Chinese knots and weaving",
+      "known_at": 9
+    },
+    {
+      "name": "Bamboo weaving",
+      "facet": "Chinese knots and weaving",
+      "known_at": 7
+    },
+    {
+      "name": "Straw sandals",
+      "facet": "Chinese knots and weaving",
+      "known_at": 5
+    },
+    {
+      "name": "Bamboo mat (凉席)",
+      "facet": "Chinese knots and weaving",
+      "known_at": 4
+    },
+    {
+      "name": "Shuttlecock (毽子)",
+      "facet": "Folk toys and street crafts",
+      "known_at": 3
+    },
+    {
+      "name": "Rattle drum (拨浪鼓)",
+      "facet": "Folk toys and street crafts",
+      "known_at": 2
+    },
+    {
+      "name": "Tumbler doll (不倒翁)",
+      "facet": "Folk toys and street crafts",
+      "known_at": 3
+    },
+    {
+      "name": "Pinwheel",
+      "facet": "Folk toys and street crafts",
+      "known_at": 1
+    },
+    {
+      "name": "Bamboo dragonfly (竹蜻蜓)",
+      "facet": "Folk toys and street crafts",
+      "known_at": 3
+    },
+    {
+      "name": "Woven grass grasshopper",
+      "facet": "Folk toys and street crafts",
+      "known_at": 6
+    },
+    {
+      "name": "Bamboo hobby horse (竹马)",
+      "facet": "Folk toys and street crafts",
+      "known_at": 8
+    },
+    {
+      "name": "Stilts (高跷)",
+      "facet": "Folk toys and street crafts",
+      "known_at": 6
+    },
+    {
+      "name": "Popcorn cannon (爆米花机)",
+      "facet": "Folk toys and street crafts",
+      "known_at": 7
+    },
+    {
+      "name": "Firecrackers",
+      "facet": "Folk toys and street crafts",
+      "known_at": 2
+    },
+    {
+      "name": "Peking Opera facial makeup (脸谱)",
+      "facet": "Masks, opera props and fans",
+      "known_at": 4
+    },
+    {
+      "name": "Monkey King mask",
+      "facet": "Masks, opera props and fans",
+      "known_at": 3
+    },
+    {
+      "name": "Nuo masks (傩面具)",
+      "facet": "Masks, opera props and fans",
+      "known_at": 12
+    },
+    {
+      "name": "Tibetan opera masks",
+      "facet": "Masks, opera props and fans",
+      "known_at": 12
+    },
+    {
+      "name": "Round silk fan (团扇)",
+      "facet": "Masks, opera props and fans",
+      "known_at": 7
+    },
+    {
+      "name": "Palm-leaf fan (蒲扇)",
+      "facet": "Masks, opera props and fans",
+      "known_at": 6
+    },
+    {
+      "name": "Sandalwood fan",
+      "facet": "Masks, opera props and fans",
+      "known_at": 10
+    },
+    {
+      "name": "Opera horsewhip (马鞭)",
+      "facet": "Masks, opera props and fans",
+      "known_at": 9
+    },
+    {
+      "name": "Pheasant tail feathers (翎子)",
+      "facet": "Masks, opera props and fans",
+      "known_at": 11
+    },
+    {
+      "name": "Fish",
+      "facet": "Craft symbols and lucky motifs",
+      "known_at": 3
+    },
+    {
+      "name": "Pine and crane",
+      "facet": "Craft symbols and lucky motifs",
+      "known_at": 8
+    },
+    {
+      "name": "Peach of longevity",
+      "facet": "Craft symbols and lucky motifs",
+      "known_at": 4
+    },
+    {
+      "name": "Mandarin ducks",
+      "facet": "Craft symbols and lucky motifs",
+      "known_at": 6
+    },
+    {
+      "name": "Gourd",
+      "facet": "Craft symbols and lucky motifs",
+      "known_at": 5
+    },
+    {
+      "name": "Dragon and phoenix",
+      "facet": "Craft symbols and lucky motifs",
+      "known_at": 4
+    },
+    {
+      "name": "Magpie on a plum branch (喜上眉梢)",
+      "facet": "Craft symbols and lucky motifs",
+      "known_at": 10
+    },
+    {
+      "name": "Persimmon",
+      "facet": "Craft symbols and lucky motifs",
+      "known_at": 10
+    },
+    {
+      "name": "Auspicious clouds (祥云)",
+      "facet": "Craft symbols and lucky motifs",
+      "known_at": 6
+    },
+    {
+      "name": "Four Gentlemen (梅兰竹菊)",
+      "facet": "Craft symbols and lucky motifs",
+      "known_at": 9
+    },
+    {
+      "name": "Red color",
+      "facet": "Craft symbols and lucky motifs",
+      "known_at": 1
+    }
+  ]
+}

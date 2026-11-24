@@ -1,0 +1,1022 @@
+{
+  "subcategory": "hong-kong-cinema",
+  "facets": [
+    "Bruce Lee and his legacy",
+    "Jackie Chan's action comedies",
+    "Stephen Chow's comedies",
+    "Wuxia and martial arts epics",
+    "Ip Man and Wing Chun films",
+    "Crime and triad thrillers",
+    "Wong Kar-wai and art-house cinema",
+    "Studios and film industry history",
+    "Cantopop stars on screen",
+    "Hong Kong Film Awards and festivals",
+    "Stunts, fight choreography and filming"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 1,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 3,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Bruce Lee",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 2
+    },
+    {
+      "name": "Enter the Dragon",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 9
+    },
+    {
+      "name": "Fist of Fury",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 8
+    },
+    {
+      "name": "The Big Boss",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 11
+    },
+    {
+      "name": "The Way of the Dragon",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 10
+    },
+    {
+      "name": "Game of Death",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 10
+    },
+    {
+      "name": "Jeet Kune Do",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 9
+    },
+    {
+      "name": "Nunchaku",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 3
+    },
+    {
+      "name": "Yellow jumpsuit",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 6
+    },
+    {
+      "name": "One-inch punch",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 11
+    },
+    {
+      "name": "The Green Hornet",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 13
+    },
+    {
+      "name": "Chuck Norris",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 11
+    },
+    {
+      "name": "Kareem Abdul-Jabbar",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 13
+    },
+    {
+      "name": "Brandon Lee",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 13
+    },
+    {
+      "name": "Be water, my friend",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 10
+    },
+    {
+      "name": "Bruce Lee's ancestral home in Shunde",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 13
+    },
+    {
+      "name": "Bruceploitation",
+      "facet": "Bruce Lee and his legacy",
+      "known_at": 15
+    },
+    {
+      "name": "Jackie Chan",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 1
+    },
+    {
+      "name": "Drunken Master",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 7
+    },
+    {
+      "name": "Police Story",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 8
+    },
+    {
+      "name": "Project A",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 11
+    },
+    {
+      "name": "Armour of God",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 11
+    },
+    {
+      "name": "Rumble in the Bronx",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 12
+    },
+    {
+      "name": "Rush Hour",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 9
+    },
+    {
+      "name": "Shanghai Noon",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 12
+    },
+    {
+      "name": "The Karate Kid (2010 film)",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 7
+    },
+    {
+      "name": "Jackie Chan Adventures",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 4
+    },
+    {
+      "name": "Snake in the Eagle's Shadow",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 13
+    },
+    {
+      "name": "Who Am I?",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 12
+    },
+    {
+      "name": "The Myth",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese Zodiac (CZ12)",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 10
+    },
+    {
+      "name": "Kung Fu Yoga",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 9
+    },
+    {
+      "name": "Chris Tucker",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 12
+    },
+    {
+      "name": "Sammo Hung",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 11
+    },
+    {
+      "name": "Yuen Biao",
+      "facet": "Jackie Chan's action comedies",
+      "known_at": 13
+    },
+    {
+      "name": "Kung Fu Hustle",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 5
+    },
+    {
+      "name": "Shaolin Soccer",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 5
+    },
+    {
+      "name": "A Chinese Odyssey",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 7
+    },
+    {
+      "name": "God of Cookery",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 8
+    },
+    {
+      "name": "Flirting Scholar",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 8
+    },
+    {
+      "name": "King of Comedy",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 10
+    },
+    {
+      "name": "CJ7",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 5
+    },
+    {
+      "name": "The Mermaid",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 6
+    },
+    {
+      "name": "Journey to the West: Conquering the Demons",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 8
+    },
+    {
+      "name": "Fight Back to School",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 10
+    },
+    {
+      "name": "From Beijing with Love",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 11
+    },
+    {
+      "name": "All for the Winner",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 11
+    },
+    {
+      "name": "Mo lei tau (无厘头)",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 10
+    },
+    {
+      "name": "Ng Man-tat",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 11
+    },
+    {
+      "name": "Zhizunbao",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 8
+    },
+    {
+      "name": "Zixia Fairy",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 8
+    },
+    {
+      "name": "Lion's Roar",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 7
+    },
+    {
+      "name": "Buddhist Palm",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 7
+    },
+    {
+      "name": "The Landlady",
+      "facet": "Stephen Chow's comedies",
+      "known_at": 6
+    },
+    {
+      "name": "Once Upon a Time in China",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 8
+    },
+    {
+      "name": "Wong Fei-hung",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 7
+    },
+    {
+      "name": "The Shaolin Temple",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 8
+    },
+    {
+      "name": "Fist of Legend",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 11
+    },
+    {
+      "name": "Fearless",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 9
+    },
+    {
+      "name": "New Dragon Gate Inn",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 11
+    },
+    {
+      "name": "Swordsman II",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 12
+    },
+    {
+      "name": "The 36th Chamber of Shaolin",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 13
+    },
+    {
+      "name": "Gordon Liu",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 13
+    },
+    {
+      "name": "Come Drink with Me",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 14
+    },
+    {
+      "name": "Michelle Yeoh",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 10
+    },
+    {
+      "name": "Chang Cheh",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 14
+    },
+    {
+      "name": "The One-Armed Swordsman",
+      "facet": "Wuxia and martial arts epics",
+      "known_at": 13
+    },
+    {
+      "name": "Ip Man",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 5
+    },
+    {
+      "name": "Donnie Yen",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 5
+    },
+    {
+      "name": "Wing Chun",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 6
+    },
+    {
+      "name": "Wooden dummy",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 7
+    },
+    {
+      "name": "Chain punch",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 10
+    },
+    {
+      "name": "Chi sau",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 12
+    },
+    {
+      "name": "Butterfly swords",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 12
+    },
+    {
+      "name": "Yim Wing-chun",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 12
+    },
+    {
+      "name": "Ng Mui",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 13
+    },
+    {
+      "name": "Ip Man 2",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 8
+    },
+    {
+      "name": "Ip Man 3",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 8
+    },
+    {
+      "name": "Ip Man 4: The Finale",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 8
+    },
+    {
+      "name": "Mike Tyson",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 8
+    },
+    {
+      "name": "Master Z: The Ip Man Legacy",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 12
+    },
+    {
+      "name": "The Grandmaster",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 10
+    },
+    {
+      "name": "Gong Er",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 12
+    },
+    {
+      "name": "General Miura",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 11
+    },
+    {
+      "name": "“I want to fight ten”",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 6
+    },
+    {
+      "name": "Ip Man: The Final Fight",
+      "facet": "Ip Man and Wing Chun films",
+      "known_at": 13
+    },
+    {
+      "name": "Infernal Affairs",
+      "facet": "Crime and triad thrillers",
+      "known_at": 7
+    },
+    {
+      "name": "The Departed",
+      "facet": "Crime and triad thrillers",
+      "known_at": 11
+    },
+    {
+      "name": "A Better Tomorrow",
+      "facet": "Crime and triad thrillers",
+      "known_at": 9
+    },
+    {
+      "name": "John Woo",
+      "facet": "Crime and triad thrillers",
+      "known_at": 9
+    },
+    {
+      "name": "Chow Yun-fat",
+      "facet": "Crime and triad thrillers",
+      "known_at": 6
+    },
+    {
+      "name": "The Killer",
+      "facet": "Crime and triad thrillers",
+      "known_at": 12
+    },
+    {
+      "name": "Hard Boiled",
+      "facet": "Crime and triad thrillers",
+      "known_at": 13
+    },
+    {
+      "name": "Heroic bloodshed",
+      "facet": "Crime and triad thrillers",
+      "known_at": 14
+    },
+    {
+      "name": "Mark Gor",
+      "facet": "Crime and triad thrillers",
+      "known_at": 9
+    },
+    {
+      "name": "Young and Dangerous",
+      "facet": "Crime and triad thrillers",
+      "known_at": 10
+    },
+    {
+      "name": "Election",
+      "facet": "Crime and triad thrillers",
+      "known_at": 12
+    },
+    {
+      "name": "Johnnie To",
+      "facet": "Crime and triad thrillers",
+      "known_at": 11
+    },
+    {
+      "name": "Milkyway Image",
+      "facet": "Crime and triad thrillers",
+      "known_at": 14
+    },
+    {
+      "name": "Ringo Lam",
+      "facet": "Crime and triad thrillers",
+      "known_at": 13
+    },
+    {
+      "name": "City on Fire",
+      "facet": "Crime and triad thrillers",
+      "known_at": 14
+    },
+    {
+      "name": "Cold War",
+      "facet": "Crime and triad thrillers",
+      "known_at": 11
+    },
+    {
+      "name": "Anthony Wong",
+      "facet": "Crime and triad thrillers",
+      "known_at": 10
+    },
+    {
+      "name": "Eric Tsang",
+      "facet": "Crime and triad thrillers",
+      "known_at": 10
+    },
+    {
+      "name": "Chan Wing-yan",
+      "facet": "Crime and triad thrillers",
+      "known_at": 10
+    },
+    {
+      "name": "Lau Kin-ming",
+      "facet": "Crime and triad thrillers",
+      "known_at": 10
+    },
+    {
+      "name": "Andrew Lau",
+      "facet": "Crime and triad thrillers",
+      "known_at": 13
+    },
+    {
+      "name": "In the Mood for Love",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 9
+    },
+    {
+      "name": "Chungking Express",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 10
+    },
+    {
+      "name": "Happy Together",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 12
+    },
+    {
+      "name": "2046",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 12
+    },
+    {
+      "name": "Days of Being Wild",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 12
+    },
+    {
+      "name": "Ashes of Time",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 11
+    },
+    {
+      "name": "Fallen Angels",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 13
+    },
+    {
+      "name": "Christopher Doyle",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 14
+    },
+    {
+      "name": "Tony Leung Chiu-wai",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 6
+    },
+    {
+      "name": "Maggie Cheung",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 9
+    },
+    {
+      "name": "Cheongsam",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 4
+    },
+    {
+      "name": "Yumeji's Theme",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 14
+    },
+    {
+      "name": "Ann Hui",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 12
+    },
+    {
+      "name": "A Simple Life",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 12
+    },
+    {
+      "name": "Fruit Chan",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 14
+    },
+    {
+      "name": "Made in Hong Kong",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 14
+    },
+    {
+      "name": "Stanley Kwan",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 14
+    },
+    {
+      "name": "Rouge",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 13
+    },
+    {
+      "name": "Center Stage",
+      "facet": "Wong Kar-wai and art-house cinema",
+      "known_at": 14
+    },
+    {
+      "name": "Shaw Brothers",
+      "facet": "Studios and film industry history",
+      "known_at": 8
+    },
+    {
+      "name": "Run Run Shaw",
+      "facet": "Studios and film industry history",
+      "known_at": 8
+    },
+    {
+      "name": "Golden Harvest",
+      "facet": "Studios and film industry history",
+      "known_at": 11
+    },
+    {
+      "name": "Raymond Chow",
+      "facet": "Studios and film industry history",
+      "known_at": 13
+    },
+    {
+      "name": "Movie Town",
+      "facet": "Studios and film industry history",
+      "known_at": 14
+    },
+    {
+      "name": "Cathay Organisation",
+      "facet": "Studios and film industry history",
+      "known_at": 15
+    },
+    {
+      "name": "Cinema City",
+      "facet": "Studios and film industry history",
+      "known_at": 14
+    },
+    {
+      "name": "Aces Go Places",
+      "facet": "Studios and film industry history",
+      "known_at": 12
+    },
+    {
+      "name": "Media Asia",
+      "facet": "Studios and film industry history",
+      "known_at": 14,
+      "retired": "unaskable: Media Asia is a production company that only specialists know; no fair question at this level."
+    },
+    {
+      "name": "Hong Kong New Wave",
+      "facet": "Studios and film industry history",
+      "known_at": 13
+    },
+    {
+      "name": "Lunar New Year film",
+      "facet": "Studios and film industry history",
+      "known_at": 7
+    },
+    {
+      "name": "All's Well, Ends Well",
+      "facet": "Studios and film industry history",
+      "known_at": 11
+    },
+    {
+      "name": "Hong Kong Film Archive",
+      "facet": "Studios and film industry history",
+      "known_at": 14
+    },
+    {
+      "name": "Cantonese opera film",
+      "facet": "Studios and film industry history",
+      "known_at": 13
+    },
+    {
+      "name": "CEPA",
+      "facet": "Studios and film industry history",
+      "known_at": 14
+    },
+    {
+      "name": "Mr. Vampire",
+      "facet": "Studios and film industry history",
+      "known_at": 9
+    },
+    {
+      "name": "Jiangshi",
+      "facet": "Studios and film industry history",
+      "known_at": 5
+    },
+    {
+      "name": "Lam Ching-ying",
+      "facet": "Studios and film industry history",
+      "known_at": 10
+    },
+    {
+      "name": "Lucky Stars",
+      "facet": "Studios and film industry history",
+      "known_at": 13
+    },
+    {
+      "name": "Andy Lau",
+      "facet": "Cantopop stars on screen",
+      "known_at": 4
+    },
+    {
+      "name": "Jacky Cheung",
+      "facet": "Cantopop stars on screen",
+      "known_at": 6
+    },
+    {
+      "name": "Leon Lai",
+      "facet": "Cantopop stars on screen",
+      "known_at": 10
+    },
+    {
+      "name": "Aaron Kwok",
+      "facet": "Cantopop stars on screen",
+      "known_at": 9
+    },
+    {
+      "name": "Anita Mui",
+      "facet": "Cantopop stars on screen",
+      "known_at": 10
+    },
+    {
+      "name": "Eason Chan",
+      "facet": "Cantopop stars on screen",
+      "known_at": 6
+    },
+    {
+      "name": "Nicholas Tse",
+      "facet": "Cantopop stars on screen",
+      "known_at": 8
+    },
+    {
+      "name": "Cecilia Cheung",
+      "facet": "Cantopop stars on screen",
+      "known_at": 10
+    },
+    {
+      "name": "Karen Mok",
+      "facet": "Cantopop stars on screen",
+      "known_at": 10
+    },
+    {
+      "name": "Sammi Cheng",
+      "facet": "Cantopop stars on screen",
+      "known_at": 11
+    },
+    {
+      "name": "Kelly Chen",
+      "facet": "Cantopop stars on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Sally Yeh",
+      "facet": "Cantopop stars on screen",
+      "known_at": 13
+    },
+    {
+      "name": "Alan Tam",
+      "facet": "Cantopop stars on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Joey Yung",
+      "facet": "Cantopop stars on screen",
+      "known_at": 11
+    },
+    {
+      "name": "Hong Kong Film Awards",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 9
+    },
+    {
+      "name": "Hong Kong Film Award statuette",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Golden Horse Awards",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 9
+    },
+    {
+      "name": "Golden Rooster Awards",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 10
+    },
+    {
+      "name": "Hong Kong International Film Festival",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Asian Film Awards",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Cannes Film Festival",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 9
+    },
+    {
+      "name": "Venice Film Festival",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Berlin International Film Festival",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Academy Awards",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 7
+    },
+    {
+      "name": "Honorary Oscar",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Best Foreign Language Film",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Golden Bauhinia Awards",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 14
+    },
+    {
+      "name": "Hong Kong Film Critics Society Award",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 15
+    },
+    {
+      "name": "Best Actor (Hong Kong Film Awards)",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Best Film (Hong Kong Film Awards)",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Busan International Film Festival",
+      "facet": "Hong Kong Film Awards and festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Wire-fu",
+      "facet": "Stunts, fight choreography and filming",
+      "known_at": 8
+    },
+    {
+      "name": "Ching Siu-tung",
+      "facet": "Stunts, fight choreography and filming",
+      "known_at": 14
+    },
+    {
+      "name": "Lau Kar-leung",
+      "facet": "Stunts, fight choreography and filming",
+      "known_at": 14
+    },
+    {
+      "name": "Jackie Chan Stunt Team",
+      "facet": "Stunts, fight choreography and filming",
+      "known_at": 10
+    },
+    {
+      "name": "Stunt double",
+      "facet": "Stunts, fight choreography and filming",
+      "known_at": 5
+    },
+    {
+      "name": "Blooper reel",
+      "facet": "Stunts, fight choreography and filming",
+      "known_at": 6
+    },
+    {
+      "name": "Sugar glass",
+      "facet": "Stunts, fight choreography and filming",
+      "known_at": 10
+    },
+    {
+      "name": "Hong Kong Stuntmen Association",
+      "facet": "Stunts, fight choreography and filming",
+      "known_at": 14
+    },
+    {
+      "name": "Seven Little Fortunes",
+      "facet": "Stunts, fight choreography and filming",
+      "known_at": 13
+    },
+    {
+      "name": "The Matrix",
+      "facet": "Stunts, fight choreography and filming",
+      "known_at": 9
+    },
+    {
+      "name": "Kill Bill",
+      "facet": "Stunts, fight choreography and filming",
+      "known_at": 12
+    },
+    {
+      "name": "Kowloon Walled City",
+      "facet": "Stunts, fight choreography and filming",
+      "known_at": 11
+    },
+    {
+      "name": "Clock tower fall",
+      "facet": "Stunts, fight choreography and filming",
+      "known_at": 12
+    },
+    {
+      "name": "Ladder fight",
+      "facet": "Stunts, fight choreography and filming",
+      "known_at": 11
+    },
+    {
+      "name": "Undercranking",
+      "facet": "Stunts, fight choreography and filming",
+      "known_at": 14
+    },
+    {
+      "name": "Green screen",
+      "facet": "Stunts, fight choreography and filming",
+      "known_at": 6
+    }
+  ]
+}

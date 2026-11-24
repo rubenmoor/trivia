@@ -1,0 +1,907 @@
+{
+  "subcategory": "dialects",
+  "facets": [
+    "Putonghua and the standard language",
+    "Cantonese and the Yue varieties",
+    "Wu: Shanghainese and its neighbours",
+    "Min: Hokkien, Teochew and Taiwanese",
+    "Hakka and Hakka communities",
+    "Northern and southwestern Mandarin dialects",
+    "Xiang, Gan, Jin and other groups",
+    "Chinese words in English and the world",
+    "Foreign loanwords in Chinese",
+    "Chinese words in Japanese, Korean and Vietnamese",
+    "Dialects in opera, songs and films",
+    "Minority languages of China"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Putonghua (普通话)",
+      "facet": "Putonghua and the standard language",
+      "known_at": 1
+    },
+    {
+      "name": "Four tones",
+      "facet": "Putonghua and the standard language",
+      "known_at": 2
+    },
+    {
+      "name": "Beijing pronunciation as the standard",
+      "facet": "Putonghua and the standard language",
+      "known_at": 6
+    },
+    {
+      "name": "Putonghua standard of 1955",
+      "facet": "Putonghua and the standard language",
+      "known_at": 12
+    },
+    {
+      "name": "Putonghua Proficiency Test (普通话水平测试)",
+      "facet": "Putonghua and the standard language",
+      "known_at": 9
+    },
+    {
+      "name": "National Putonghua Promotion Week",
+      "facet": "Putonghua and the standard language",
+      "known_at": 10
+    },
+    {
+      "name": "Guoyu (国语)",
+      "facet": "Putonghua and the standard language",
+      "known_at": 8
+    },
+    {
+      "name": "Huayu (华语)",
+      "facet": "Putonghua and the standard language",
+      "known_at": 9
+    },
+    {
+      "name": "Speak Mandarin Campaign",
+      "facet": "Putonghua and the standard language",
+      "known_at": 12
+    },
+    {
+      "name": "Guanhua (官话)",
+      "facet": "Putonghua and the standard language",
+      "known_at": 10
+    },
+    {
+      "name": "Yayan (雅言)",
+      "facet": "Putonghua and the standard language",
+      "known_at": 14
+    },
+    {
+      "name": "Zhuyin (注音符号)",
+      "facet": "Putonghua and the standard language",
+      "known_at": 8
+    },
+    {
+      "name": "Vernacular Chinese (白话文)",
+      "facet": "Putonghua and the standard language",
+      "known_at": 8
+    },
+    {
+      "name": "Law on the Standard Spoken and Written Chinese Language",
+      "facet": "Putonghua and the standard language",
+      "known_at": 13
+    },
+    {
+      "name": "Cantonese (粤语)",
+      "facet": "Cantonese and the Yue varieties",
+      "known_at": 3
+    },
+    {
+      "name": "Taishanese (台山话)",
+      "facet": "Cantonese and the Yue varieties",
+      "known_at": 12
+    },
+    {
+      "name": "Jyutping",
+      "facet": "Cantonese and the Yue varieties",
+      "known_at": 12
+    },
+    {
+      "name": "Written Cantonese",
+      "facet": "Cantonese and the Yue varieties",
+      "known_at": 10
+    },
+    {
+      "name": "Xiguan (西关)",
+      "facet": "Cantonese and the Yue varieties",
+      "known_at": 12
+    },
+    {
+      "name": "Kuala Lumpur",
+      "facet": "Cantonese and the Yue varieties",
+      "known_at": 9
+    },
+    {
+      "name": "TVB",
+      "facet": "Cantonese and the Yue varieties",
+      "known_at": 8
+    },
+    {
+      "name": "Guangxi Pinghua (平话)",
+      "facet": "Cantonese and the Yue varieties",
+      "known_at": 14
+    },
+    {
+      "name": "Wuzhou",
+      "facet": "Cantonese and the Yue varieties",
+      "known_at": 12
+    },
+    {
+      "name": "Lo Wu (罗湖) border",
+      "facet": "Cantonese and the Yue varieties",
+      "known_at": 11
+    },
+    {
+      "name": "Wu Chinese (吴语)",
+      "facet": "Wu: Shanghainese and its neighbours",
+      "known_at": 8
+    },
+    {
+      "name": "Shanghainese",
+      "facet": "Wu: Shanghainese and its neighbours",
+      "known_at": 4
+    },
+    {
+      "name": "Suzhou dialect",
+      "facet": "Wu: Shanghainese and its neighbours",
+      "known_at": 7
+    },
+    {
+      "name": "Wenzhou dialect",
+      "facet": "Wu: Shanghainese and its neighbours",
+      "known_at": 8
+    },
+    {
+      "name": "Ningbo dialect",
+      "facet": "Wu: Shanghainese and its neighbours",
+      "known_at": 9
+    },
+    {
+      "name": "Hangzhou dialect",
+      "facet": "Wu: Shanghainese and its neighbours",
+      "known_at": 9
+    },
+    {
+      "name": "Shaoxing dialect",
+      "facet": "Wu: Shanghainese and its neighbours",
+      "known_at": 10
+    },
+    {
+      "name": "Changzhou dialect",
+      "facet": "Wu: Shanghainese and its neighbours",
+      "known_at": 12
+    },
+    {
+      "name": "Wu nong ruan yu (吴侬软语)",
+      "facet": "Wu: Shanghainese and its neighbours",
+      "known_at": 9
+    },
+    {
+      "name": "Jiangnan",
+      "facet": "Wu: Shanghainese and its neighbours",
+      "known_at": 6
+    },
+    {
+      "name": "Southern Jiangsu",
+      "facet": "Wu: Shanghainese and its neighbours",
+      "known_at": 7
+    },
+    {
+      "name": "Wu songs (吴歌)",
+      "facet": "Wu: Shanghainese and its neighbours",
+      "known_at": 12
+    },
+    {
+      "name": "Wu kingdom (吴国)",
+      "facet": "Wu: Shanghainese and its neighbours",
+      "known_at": 8
+    },
+    {
+      "name": "Jinhua dialect",
+      "facet": "Wu: Shanghainese and its neighbours",
+      "known_at": 13
+    },
+    {
+      "name": "Min Chinese (闽语)",
+      "facet": "Min: Hokkien, Teochew and Taiwanese",
+      "known_at": 8
+    },
+    {
+      "name": "Hokkien (闽南话)",
+      "facet": "Min: Hokkien, Teochew and Taiwanese",
+      "known_at": 5
+    },
+    {
+      "name": "Taiwanese Hokkien",
+      "facet": "Min: Hokkien, Teochew and Taiwanese",
+      "known_at": 6
+    },
+    {
+      "name": "Teochew (潮州话)",
+      "facet": "Min: Hokkien, Teochew and Taiwanese",
+      "known_at": 8
+    },
+    {
+      "name": "Zhangzhou",
+      "facet": "Min: Hokkien, Teochew and Taiwanese",
+      "known_at": 9
+    },
+    {
+      "name": "Fuzhou dialect (福州话)",
+      "facet": "Min: Hokkien, Teochew and Taiwanese",
+      "known_at": 9
+    },
+    {
+      "name": "Hainanese",
+      "facet": "Min: Hokkien, Teochew and Taiwanese",
+      "known_at": 9
+    },
+    {
+      "name": "Chaoshan (潮汕)",
+      "facet": "Min: Hokkien, Teochew and Taiwanese",
+      "known_at": 7
+    },
+    {
+      "name": "Puxian Min (莆仙话)",
+      "facet": "Min: Hokkien, Teochew and Taiwanese",
+      "known_at": 13
+    },
+    {
+      "name": "Leizhou Min",
+      "facet": "Min: Hokkien, Teochew and Taiwanese",
+      "known_at": 14
+    },
+    {
+      "name": "Pe̍h-ōe-jī",
+      "facet": "Min: Hokkien, Teochew and Taiwanese",
+      "known_at": 14
+    },
+    {
+      "name": "Penang Hokkien",
+      "facet": "Min: Hokkien, Teochew and Taiwanese",
+      "known_at": 12
+    },
+    {
+      "name": "Singapore Hokkien",
+      "facet": "Min: Hokkien, Teochew and Taiwanese",
+      "known_at": 11
+    },
+    {
+      "name": "Lan-nang (Philippine Hokkien)",
+      "facet": "Min: Hokkien, Teochew and Taiwanese",
+      "known_at": 14
+    },
+    {
+      "name": "Hakka (客家话)",
+      "facet": "Hakka and Hakka communities",
+      "known_at": 6
+    },
+    {
+      "name": "Meizhou",
+      "facet": "Hakka and Hakka communities",
+      "known_at": 9
+    },
+    {
+      "name": "Weilongwu (围龙屋)",
+      "facet": "Hakka and Hakka communities",
+      "known_at": 12
+    },
+    {
+      "name": "Ganzhou",
+      "facet": "Hakka and Hakka communities",
+      "known_at": 11
+    },
+    {
+      "name": "Western Fujian (闽西)",
+      "facet": "Hakka and Hakka communities",
+      "known_at": 10
+    },
+    {
+      "name": "Hakka in Taiwan",
+      "facet": "Hakka and Hakka communities",
+      "known_at": 10
+    },
+    {
+      "name": "Yong tau foo (酿豆腐)",
+      "facet": "Hakka and Hakka communities",
+      "known_at": 9
+    },
+    {
+      "name": "Hakka walled villages of Hong Kong",
+      "facet": "Hakka and Hakka communities",
+      "known_at": 12
+    },
+    {
+      "name": "Sabah",
+      "facet": "Hakka and Hakka communities",
+      "known_at": 13
+    },
+    {
+      "name": "Hakka migrations from the north",
+      "facet": "Hakka and Hakka communities",
+      "known_at": 10
+    },
+    {
+      "name": "Lee Kuan Yew",
+      "facet": "Hakka and Hakka communities",
+      "known_at": 11
+    },
+    {
+      "name": "Hakka TV (客家电视台)",
+      "facet": "Hakka and Hakka communities",
+      "known_at": 13
+    },
+    {
+      "name": "Beijing dialect",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 4
+    },
+    {
+      "name": "Northeastern Mandarin (东北话)",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 3
+    },
+    {
+      "name": "Tianjin dialect",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 6
+    },
+    {
+      "name": "Sichuanese (四川话)",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 4
+    },
+    {
+      "name": "Chongqing dialect",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 6
+    },
+    {
+      "name": "Southwestern Mandarin (西南官话)",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 10
+    },
+    {
+      "name": "Kunming dialect",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 10
+    },
+    {
+      "name": "Guizhou dialect",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 10
+    },
+    {
+      "name": "Wuhan dialect",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 8
+    },
+    {
+      "name": "Xi'an dialect (陕西话)",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 7
+    },
+    {
+      "name": "Lanzhou dialect",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 11
+    },
+    {
+      "name": "Henan dialect (河南话)",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 6
+    },
+    {
+      "name": "Shandong dialect",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 6
+    },
+    {
+      "name": "Nanjing dialect",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 9
+    },
+    {
+      "name": "Jianghuai Mandarin (江淮官话)",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 12
+    },
+    {
+      "name": "Zhongyuan Mandarin (中原官话)",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 11
+    },
+    {
+      "name": "Jilu Mandarin (冀鲁官话)",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 13
+    },
+    {
+      "name": "Dungan language",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 14
+    },
+    {
+      "name": "Xinjiang Mandarin",
+      "facet": "Northern and southwestern Mandarin dialects",
+      "known_at": 12
+    },
+    {
+      "name": "Xiang Chinese (湘语)",
+      "facet": "Xiang, Gan, Jin and other groups",
+      "known_at": 9
+    },
+    {
+      "name": "Changsha dialect",
+      "facet": "Xiang, Gan, Jin and other groups",
+      "known_at": 8
+    },
+    {
+      "name": "Mao Zedong's Hunan accent",
+      "facet": "Xiang, Gan, Jin and other groups",
+      "known_at": 9
+    },
+    {
+      "name": "Gan Chinese (赣语)",
+      "facet": "Xiang, Gan, Jin and other groups",
+      "known_at": 10
+    },
+    {
+      "name": "Jin Chinese (晋语)",
+      "facet": "Xiang, Gan, Jin and other groups",
+      "known_at": 11
+    },
+    {
+      "name": "Huizhou Chinese (徽语)",
+      "facet": "Xiang, Gan, Jin and other groups",
+      "known_at": 12
+    },
+    {
+      "name": "Seven major dialect groups",
+      "facet": "Xiang, Gan, Jin and other groups",
+      "known_at": 9
+    },
+    {
+      "name": "Language Atlas of China (中国语言地图集)",
+      "facet": "Xiang, Gan, Jin and other groups",
+      "known_at": 14
+    },
+    {
+      "name": "Waxiang Chinese (瓦乡话)",
+      "facet": "Xiang, Gan, Jin and other groups",
+      "known_at": 15
+    },
+    {
+      "name": "Danzhou dialect",
+      "facet": "Xiang, Gan, Jin and other groups",
+      "known_at": 15
+    },
+    {
+      "name": "Fangyan (方言) by Yang Xiong",
+      "facet": "Xiang, Gan, Jin and other groups",
+      "known_at": 14
+    },
+    {
+      "name": "Mutual intelligibility",
+      "facet": "Xiang, Gan, Jin and other groups",
+      "known_at": 10
+    },
+    {
+      "name": "Ketchup",
+      "facet": "Chinese words in English and the world",
+      "known_at": 7
+    },
+    {
+      "name": "Chai",
+      "facet": "Chinese words in English and the world",
+      "known_at": 9
+    },
+    {
+      "name": "Kung fu",
+      "facet": "Chinese words in English and the world",
+      "known_at": 3
+    },
+    {
+      "name": "Wok",
+      "facet": "Chinese words in English and the world",
+      "known_at": 5
+    },
+    {
+      "name": "Chop suey",
+      "facet": "Chinese words in English and the world",
+      "known_at": 11
+    },
+    {
+      "name": "Chow mein",
+      "facet": "Chinese words in English and the world",
+      "known_at": 8
+    },
+    {
+      "name": "Kumquat",
+      "facet": "Chinese words in English and the world",
+      "known_at": 9
+    },
+    {
+      "name": "Bok choy",
+      "facet": "Chinese words in English and the world",
+      "known_at": 8
+    },
+    {
+      "name": "Gung-ho",
+      "facet": "Chinese words in English and the world",
+      "known_at": 13
+    },
+    {
+      "name": "Tai chi",
+      "facet": "Chinese words in English and the world",
+      "known_at": 3
+    },
+    {
+      "name": "Long time no see",
+      "facet": "Chinese words in English and the world",
+      "known_at": 8
+    },
+    {
+      "name": "Lose face",
+      "facet": "Chinese words in English and the world",
+      "known_at": 10
+    },
+    {
+      "name": "Taikonaut",
+      "facet": "Chinese words in English and the world",
+      "known_at": 9
+    },
+    {
+      "name": "Shih tzu",
+      "facet": "Chinese words in English and the world",
+      "known_at": 10
+    },
+    {
+      "name": "Ginseng",
+      "facet": "Chinese words in English and the world",
+      "known_at": 8
+    },
+    {
+      "name": "Wonton",
+      "facet": "Chinese words in English and the world",
+      "known_at": 6
+    },
+    {
+      "name": "沙发 (shāfā, sofa)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 3
+    },
+    {
+      "name": "咖啡 (kāfēi, coffee)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 3
+    },
+    {
+      "name": "巧克力 (qiǎokèlì, chocolate)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 2
+    },
+    {
+      "name": "汉堡 (hànbǎo, hamburger)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 3
+    },
+    {
+      "name": "可乐 (kělè, cola)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 3
+    },
+    {
+      "name": "坦克 (tǎnkè, tank)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 6
+    },
+    {
+      "name": "幽默 (yōumò, humour)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 8
+    },
+    {
+      "name": "Lin Yutang",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 11
+    },
+    {
+      "name": "逻辑 (luójí, logic)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 9
+    },
+    {
+      "name": "雷达 (léidá, radar)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 7
+    },
+    {
+      "name": "吉他 (jítā, guitar)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 4
+    },
+    {
+      "name": "德律风 (délǜfēng, telephone)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 12
+    },
+    {
+      "name": "粉丝 (fěnsī, fans)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 6
+    },
+    {
+      "name": "葡萄 (pútao, grape)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 12
+    },
+    {
+      "name": "狮子 (shīzi, lion)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 13
+    },
+    {
+      "name": "佛 (fó, Buddha)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 8
+    },
+    {
+      "name": "塔 (tǎ, pagoda)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 12
+    },
+    {
+      "name": "刹那 (chànà, an instant)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 12
+    },
+    {
+      "name": "经济 (jīngjì, economy)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 12
+    },
+    {
+      "name": "站 (zhàn, station)",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 14
+    },
+    {
+      "name": "Xuanzang's Buddhist translations",
+      "facet": "Foreign loanwords in Chinese",
+      "known_at": 10
+    },
+    {
+      "name": "Sejong the Great",
+      "facet": "Chinese words in Japanese, Korean and Vietnamese",
+      "known_at": 10
+    },
+    {
+      "name": "Katakana",
+      "facet": "Chinese words in Japanese, Korean and Vietnamese",
+      "known_at": 8
+    },
+    {
+      "name": "Man'yōgana",
+      "facet": "Chinese words in Japanese, Korean and Vietnamese",
+      "known_at": 14
+    },
+    {
+      "name": "On'yomi",
+      "facet": "Chinese words in Japanese, Korean and Vietnamese",
+      "known_at": 12
+    },
+    {
+      "name": "Kun'yomi",
+      "facet": "Chinese words in Japanese, Korean and Vietnamese",
+      "known_at": 12
+    },
+    {
+      "name": "Wasei-kango (和制汉语)",
+      "facet": "Chinese words in Japanese, Korean and Vietnamese",
+      "known_at": 13
+    },
+    {
+      "name": "Kokuji",
+      "facet": "Chinese words in Japanese, Korean and Vietnamese",
+      "known_at": 14
+    },
+    {
+      "name": "Jōyō kanji",
+      "facet": "Chinese words in Japanese, Korean and Vietnamese",
+      "known_at": 13
+    },
+    {
+      "name": "Sino-Japanese vocabulary",
+      "facet": "Chinese words in Japanese, Korean and Vietnamese",
+      "known_at": 11
+    },
+    {
+      "name": "Sino-Korean vocabulary",
+      "facet": "Chinese words in Japanese, Korean and Vietnamese",
+      "known_at": 12
+    },
+    {
+      "name": "Sino-Vietnamese vocabulary",
+      "facet": "Chinese words in Japanese, Korean and Vietnamese",
+      "known_at": 12
+    },
+    {
+      "name": "Chữ Quốc ngữ",
+      "facet": "Chinese words in Japanese, Korean and Vietnamese",
+      "known_at": 12
+    },
+    {
+      "name": "Tết",
+      "facet": "Chinese words in Japanese, Korean and Vietnamese",
+      "known_at": 8
+    },
+    {
+      "name": "Kentōshi (遣唐使)",
+      "facet": "Chinese words in Japanese, Korean and Vietnamese",
+      "known_at": 9
+    },
+    {
+      "name": "Kanbun (汉文)",
+      "facet": "Chinese words in Japanese, Korean and Vietnamese",
+      "known_at": 14
+    },
+    {
+      "name": "Kunqu (昆曲)",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 9
+    },
+    {
+      "name": "Yue opera (越剧)",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 8
+    },
+    {
+      "name": "Huangmei opera (黄梅戏)",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 7
+    },
+    {
+      "name": "Sichuan opera (川剧)",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 5
+    },
+    {
+      "name": "Qinqiang (秦腔)",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 10
+    },
+    {
+      "name": "Taiwanese opera (歌仔戏)",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 11
+    },
+    {
+      "name": "Teochew opera (潮剧)",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 12
+    },
+    {
+      "name": "Huju (沪剧)",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 12
+    },
+    {
+      "name": "Suzhou pingtan (苏州评弹)",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 9
+    },
+    {
+      "name": "Xiangsheng (相声)",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 4
+    },
+    {
+      "name": "Cantopop",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 8
+    },
+    {
+      "name": "爱拼才会赢 (ài pīn cái huì yíng, “Only Hard Work Wins”)",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 9
+    },
+    {
+      "name": "Stephen Chow",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 6
+    },
+    {
+      "name": "Blossoms Shanghai (繁花)",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 10
+    },
+    {
+      "name": "Crazy Stone (疯狂的石头)",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 11
+    },
+    {
+      "name": "Let the Bullets Fly (让子弹飞)",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 10
+    },
+    {
+      "name": "Wong Kar-wai",
+      "facet": "Dialects in opera, songs and films",
+      "known_at": 11
+    },
+    {
+      "name": "Xibe (锡伯族)",
+      "facet": "Minority languages of China",
+      "known_at": 13
+    },
+    {
+      "name": "Korean in Yanbian",
+      "facet": "Minority languages of China",
+      "known_at": 10
+    },
+    {
+      "name": "Naxi Dongba script (东巴文)",
+      "facet": "Minority languages of China",
+      "known_at": 10
+    },
+    {
+      "name": "Sawndip (古壮字)",
+      "facet": "Minority languages of China",
+      "known_at": 14
+    },
+    {
+      "name": "Five-language banknotes",
+      "facet": "Minority languages of China",
+      "known_at": 8
+    }
+  ]
+}

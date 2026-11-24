@@ -1,0 +1,957 @@
+{
+  "subcategory": "chinese-birds-and-water-life",
+  "facets": [
+    "Cranes and symbolic birds",
+    "Rare and protected birds",
+    "Everyday and city birds",
+    "Migratory birds and wetlands",
+    "Yangtze river mammals",
+    "Sturgeons and big river fish",
+    "Goldfish and koi breeding",
+    "Carp in legend and festivals",
+    "Birds in poems and idioms",
+    "Ocean and coastal animals",
+    "Fishing and fish farming traditions",
+    "Conservation stories and reserves"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 4,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Black-necked crane",
+      "facet": "Cranes and symbolic birds",
+      "known_at": 9
+    },
+    {
+      "name": "Fenghuang (凤凰)",
+      "facet": "Cranes and symbolic birds",
+      "known_at": 2
+    },
+    {
+      "name": "Mandarin duck",
+      "facet": "Cranes and symbolic birds",
+      "known_at": 4
+    },
+    {
+      "name": "Golden pheasant",
+      "facet": "Cranes and symbolic birds",
+      "known_at": 7
+    },
+    {
+      "name": "Lady Amherst's pheasant",
+      "facet": "Cranes and symbolic birds",
+      "known_at": 12
+    },
+    {
+      "name": "Three-legged golden crow (三足乌)",
+      "facet": "Cranes and symbolic birds",
+      "known_at": 10
+    },
+    {
+      "name": "Pine and crane (松鹤延年)",
+      "facet": "Cranes and symbolic birds",
+      "known_at": 7
+    },
+    {
+      "name": "Rooster (zodiac)",
+      "facet": "Cranes and symbolic birds",
+      "known_at": 1
+    },
+    {
+      "name": "Crane rank badge (仙鹤补子)",
+      "facet": "Cranes and symbolic birds",
+      "known_at": 13
+    },
+    {
+      "name": "Bird-and-flower painting (花鸟画)",
+      "facet": "Cranes and symbolic birds",
+      "known_at": 9
+    },
+    {
+      "name": "Crested ibis",
+      "facet": "Rare and protected birds",
+      "known_at": 5
+    },
+    {
+      "name": "Brown eared pheasant",
+      "facet": "Rare and protected birds",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese monal",
+      "facet": "Rare and protected birds",
+      "known_at": 12
+    },
+    {
+      "name": "Reeves's pheasant",
+      "facet": "Rare and protected birds",
+      "known_at": 10
+    },
+    {
+      "name": "Cabot's tragopan",
+      "facet": "Rare and protected birds",
+      "known_at": 13
+    },
+    {
+      "name": "Temminck's tragopan",
+      "facet": "Rare and protected birds",
+      "known_at": 12
+    },
+    {
+      "name": "Oriental stork",
+      "facet": "Rare and protected birds",
+      "known_at": 9
+    },
+    {
+      "name": "Black stork",
+      "facet": "Rare and protected birds",
+      "known_at": 9
+    },
+    {
+      "name": "Scaly-sided merganser",
+      "facet": "Rare and protected birds",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese crested tern",
+      "facet": "Rare and protected birds",
+      "known_at": 13
+    },
+    {
+      "name": "Spoon-billed sandpiper",
+      "facet": "Rare and protected birds",
+      "known_at": 12
+    },
+    {
+      "name": "Baer's pochard",
+      "facet": "Rare and protected birds",
+      "known_at": 13
+    },
+    {
+      "name": "Golden eagle",
+      "facet": "Rare and protected birds",
+      "known_at": 6
+    },
+    {
+      "name": "Bearded vulture",
+      "facet": "Rare and protected birds",
+      "known_at": 11
+    },
+    {
+      "name": "Himalayan vulture",
+      "facet": "Rare and protected birds",
+      "known_at": 11
+    },
+    {
+      "name": "Silver pheasant",
+      "facet": "Rare and protected birds",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese egret",
+      "facet": "Rare and protected birds",
+      "known_at": 11
+    },
+    {
+      "name": "Hainan peacock-pheasant",
+      "facet": "Rare and protected birds",
+      "known_at": 13
+    },
+    {
+      "name": "Eurasian tree sparrow",
+      "facet": "Everyday and city birds",
+      "known_at": 1
+    },
+    {
+      "name": "Light-vented bulbul (白头鹎)",
+      "facet": "Everyday and city birds",
+      "known_at": 8
+    },
+    {
+      "name": "Spotted dove",
+      "facet": "Everyday and city birds",
+      "known_at": 5
+    },
+    {
+      "name": "Oriental magpie-robin",
+      "facet": "Everyday and city birds",
+      "known_at": 9
+    },
+    {
+      "name": "Chinese blackbird",
+      "facet": "Everyday and city birds",
+      "known_at": 8
+    },
+    {
+      "name": "Eurasian hoopoe",
+      "facet": "Everyday and city birds",
+      "known_at": 6
+    },
+    {
+      "name": "Azure-winged magpie",
+      "facet": "Everyday and city birds",
+      "known_at": 9
+    },
+    {
+      "name": "Crested myna",
+      "facet": "Everyday and city birds",
+      "known_at": 9
+    },
+    {
+      "name": "Feral pigeon",
+      "facet": "Everyday and city birds",
+      "known_at": 1
+    },
+    {
+      "name": "Swinhoe's white-eye",
+      "facet": "Everyday and city birds",
+      "known_at": 9
+    },
+    {
+      "name": "Long-tailed shrike",
+      "facet": "Everyday and city birds",
+      "known_at": 11
+    },
+    {
+      "name": "Black drongo",
+      "facet": "Everyday and city birds",
+      "known_at": 11
+    },
+    {
+      "name": "Common kingfisher",
+      "facet": "Everyday and city birds",
+      "known_at": 4
+    },
+    {
+      "name": "Pekin duck",
+      "facet": "Everyday and city birds",
+      "known_at": 3
+    },
+    {
+      "name": "Hwamei (画眉)",
+      "facet": "Everyday and city birds",
+      "known_at": 8
+    },
+    {
+      "name": "Chinese pond heron",
+      "facet": "Everyday and city birds",
+      "known_at": 9
+    },
+    {
+      "name": "Little egret",
+      "facet": "Everyday and city birds",
+      "known_at": 5
+    },
+    {
+      "name": "Common cuckoo (布谷鸟)",
+      "facet": "Everyday and city birds",
+      "known_at": 4
+    },
+    {
+      "name": "Beijing swift",
+      "facet": "Everyday and city birds",
+      "known_at": 7
+    },
+    {
+      "name": "Bird walking (遛鸟)",
+      "facet": "Everyday and city birds",
+      "known_at": 7
+    },
+    {
+      "name": "Pigeon whistle (鸽哨)",
+      "facet": "Everyday and city birds",
+      "known_at": 9
+    },
+    {
+      "name": "Siberian crane",
+      "facet": "Migratory birds and wetlands",
+      "known_at": 9
+    },
+    {
+      "name": "Hooded crane",
+      "facet": "Migratory birds and wetlands",
+      "known_at": 11
+    },
+    {
+      "name": "White-naped crane",
+      "facet": "Migratory birds and wetlands",
+      "known_at": 11
+    },
+    {
+      "name": "Swan goose",
+      "facet": "Migratory birds and wetlands",
+      "known_at": 10
+    },
+    {
+      "name": "Whooper swan",
+      "facet": "Migratory birds and wetlands",
+      "known_at": 7
+    },
+    {
+      "name": "Bar-headed goose",
+      "facet": "Migratory birds and wetlands",
+      "known_at": 9
+    },
+    {
+      "name": "Bird Island (Qinghai Lake)",
+      "facet": "Migratory birds and wetlands",
+      "known_at": 10
+    },
+    {
+      "name": "Black-faced spoonbill",
+      "facet": "Migratory birds and wetlands",
+      "known_at": 11
+    },
+    {
+      "name": "Bar-tailed godwit",
+      "facet": "Migratory birds and wetlands",
+      "known_at": 12
+    },
+    {
+      "name": "Great crested grebe",
+      "facet": "Migratory birds and wetlands",
+      "known_at": 10
+    },
+    {
+      "name": "East Asian–Australasian Flyway",
+      "facet": "Migratory birds and wetlands",
+      "known_at": 13
+    },
+    {
+      "name": "Ruddy shelduck",
+      "facet": "Migratory birds and wetlands",
+      "known_at": 10
+    },
+    {
+      "name": "Mai Po Marshes",
+      "facet": "Migratory birds and wetlands",
+      "known_at": 12
+    },
+    {
+      "name": "Relict gull",
+      "facet": "Migratory birds and wetlands",
+      "known_at": 13
+    },
+    {
+      "name": "Baiji",
+      "facet": "Yangtze river mammals",
+      "known_at": 6
+    },
+    {
+      "name": "Yangtze finless porpoise",
+      "facet": "Yangtze river mammals",
+      "known_at": 6
+    },
+    {
+      "name": "Qiqi (淇淇)",
+      "facet": "Yangtze river mammals",
+      "known_at": 11
+    },
+    {
+      "name": "Chinese water deer",
+      "facet": "Yangtze river mammals",
+      "known_at": 9
+    },
+    {
+      "name": "Chinese alligator",
+      "facet": "Yangtze river mammals",
+      "known_at": 7
+    },
+    {
+      "name": "Water buffalo",
+      "facet": "Yangtze river mammals",
+      "known_at": 2
+    },
+    {
+      "name": "Echolocation",
+      "facet": "Yangtze river mammals",
+      "known_at": 8
+    },
+    {
+      "name": "2006 Yangtze freshwater dolphin expedition",
+      "facet": "Yangtze river mammals",
+      "known_at": 13
+    },
+    {
+      "name": "Chinese sturgeon",
+      "facet": "Sturgeons and big river fish",
+      "known_at": 5
+    },
+    {
+      "name": "Chinese paddlefish",
+      "facet": "Sturgeons and big river fish",
+      "known_at": 9
+    },
+    {
+      "name": "Yangtze sturgeon",
+      "facet": "Sturgeons and big river fish",
+      "known_at": 11
+    },
+    {
+      "name": "Kaluga",
+      "facet": "Sturgeons and big river fish",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese sucker (胭脂鱼)",
+      "facet": "Sturgeons and big river fish",
+      "known_at": 10
+    },
+    {
+      "name": "Reeves shad (鲥鱼)",
+      "facet": "Sturgeons and big river fish",
+      "known_at": 11
+    },
+    {
+      "name": "Mandarin fish (鳜鱼)",
+      "facet": "Sturgeons and big river fish",
+      "known_at": 7
+    },
+    {
+      "name": "Pufferfish (河豚)",
+      "facet": "Sturgeons and big river fish",
+      "known_at": 5
+    },
+    {
+      "name": "Northern snakehead",
+      "facet": "Sturgeons and big river fish",
+      "known_at": 8
+    },
+    {
+      "name": "Sichuan taimen",
+      "facet": "Sturgeons and big river fish",
+      "known_at": 13
+    },
+    {
+      "name": "Tapertail anchovy (刀鱼)",
+      "facet": "Sturgeons and big river fish",
+      "known_at": 11
+    },
+    {
+      "name": "Przewalski's naked carp (湟鱼)",
+      "facet": "Sturgeons and big river fish",
+      "known_at": 10
+    },
+    {
+      "name": "Japanese eel",
+      "facet": "Sturgeons and big river fish",
+      "known_at": 7
+    },
+    {
+      "name": "Caviar",
+      "facet": "Sturgeons and big river fish",
+      "known_at": 9
+    },
+    {
+      "name": "Yellow River carp",
+      "facet": "Sturgeons and big river fish",
+      "known_at": 8
+    },
+    {
+      "name": "Goldfish",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 1
+    },
+    {
+      "name": "Crucian carp",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 6
+    },
+    {
+      "name": "Lionhead goldfish",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 8
+    },
+    {
+      "name": "Bubble-eye goldfish",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 7
+    },
+    {
+      "name": "Telescope eye goldfish",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 7
+    },
+    {
+      "name": "Oranda goldfish",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 10
+    },
+    {
+      "name": "Celestial eye goldfish",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 9
+    },
+    {
+      "name": "Pearlscale goldfish",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 10
+    },
+    {
+      "name": "Fantail goldfish",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 8
+    },
+    {
+      "name": "Comet goldfish",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 10
+    },
+    {
+      "name": "Pompom goldfish",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 11
+    },
+    {
+      "name": "Butterfly tail goldfish",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 11
+    },
+    {
+      "name": "Goldfish bowl",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 2
+    },
+    {
+      "name": "Song dynasty goldfish ponds",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 12
+    },
+    {
+      "name": "Viewing Fish at Flower Harbour (花港观鱼)",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 9
+    },
+    {
+      "name": "Selective breeding",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 9
+    },
+    {
+      "name": "Water fleas",
+      "facet": "Goldfish and koi breeding",
+      "known_at": 9
+    },
+    {
+      "name": "Carp leaping over the Dragon Gate (鲤鱼跃龙门)",
+      "facet": "Carp in legend and festivals",
+      "known_at": 4
+    },
+    {
+      "name": "Longmen on the Yellow River",
+      "facet": "Carp in legend and festivals",
+      "known_at": 12
+    },
+    {
+      "name": "年年有余 (nián nián yǒu yú)",
+      "facet": "Carp in legend and festivals",
+      "known_at": 3
+    },
+    {
+      "name": "Fish dish at New Year's Eve dinner",
+      "facet": "Carp in legend and festivals",
+      "known_at": 3
+    },
+    {
+      "name": "Carp lantern",
+      "facet": "Carp in legend and festivals",
+      "known_at": 6
+    },
+    {
+      "name": "Paper-cut fish",
+      "facet": "Carp in legend and festivals",
+      "known_at": 5
+    },
+    {
+      "name": "Double carp letter (双鲤鱼)",
+      "facet": "Carp in legend and festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Happy fish debate (濠梁之辩)",
+      "facet": "Carp in legend and festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Fish Basket Guanyin (鱼篮观音)",
+      "facet": "Carp in legend and festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Little Carp's Adventures (小鲤鱼历险记)",
+      "facet": "Carp in legend and festivals",
+      "known_at": 6
+    },
+    {
+      "name": "Yangliuqing New Year painting",
+      "facet": "Carp in legend and festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Fish release pond (放生池)",
+      "facet": "Carp in legend and festivals",
+      "known_at": 9
+    },
+    {
+      "name": "Du Fu's quatrain “Two orioles” (两个黄鹂鸣翠柳)",
+      "facet": "Birds in poems and idioms",
+      "known_at": 4
+    },
+    {
+      "name": "鹤立鸡群 (hè lì jī qún)",
+      "facet": "Birds in poems and idioms",
+      "known_at": 6
+    },
+    {
+      "name": "一箭双雕 (yí jiàn shuāng diāo)",
+      "facet": "Birds in poems and idioms",
+      "known_at": 5
+    },
+    {
+      "name": "惊弓之鸟 (jīng gōng zhī niǎo)",
+      "facet": "Birds in poems and idioms",
+      "known_at": 6
+    },
+    {
+      "name": "螳螂捕蝉，黄雀在后 (táng láng bǔ chán, huáng què zài hòu)",
+      "facet": "Birds in poems and idioms",
+      "known_at": 8
+    },
+    {
+      "name": "鹬蚌相争 (yù bàng xiāng zhēng)",
+      "facet": "Birds in poems and idioms",
+      "known_at": 6
+    },
+    {
+      "name": "门可罗雀 (mén kě luó què)",
+      "facet": "Birds in poems and idioms",
+      "known_at": 10
+    },
+    {
+      "name": "鸦雀无声 (yā què wú shēng)",
+      "facet": "Birds in poems and idioms",
+      "known_at": 5
+    },
+    {
+      "name": "鸿鹄之志 (hóng hú zhī zhì)",
+      "facet": "Birds in poems and idioms",
+      "known_at": 8
+    },
+    {
+      "name": "笨鸟先飞 (bèn niǎo xiān fēi)",
+      "facet": "Birds in poems and idioms",
+      "known_at": 4
+    },
+    {
+      "name": "鸟语花香 (niǎo yǔ huā xiāng)",
+      "facet": "Birds in poems and idioms",
+      "known_at": 3
+    },
+    {
+      "name": "沉鱼落雁 (chén yú luò yàn)",
+      "facet": "Birds in poems and idioms",
+      "known_at": 9
+    },
+    {
+      "name": "如鱼得水 (rú yú dé shuǐ)",
+      "facet": "Birds in poems and idioms",
+      "known_at": 6
+    },
+    {
+      "name": "缘木求鱼 (yuán mù qiú yú)",
+      "facet": "Birds in poems and idioms",
+      "known_at": 9
+    },
+    {
+      "name": "鱼目混珠 (yú mù hùn zhū)",
+      "facet": "Birds in poems and idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Chinese white dolphin",
+      "facet": "Ocean and coastal animals",
+      "known_at": 6
+    },
+    {
+      "name": "Chinese horseshoe crab",
+      "facet": "Ocean and coastal animals",
+      "known_at": 8
+    },
+    {
+      "name": "Green sea turtle",
+      "facet": "Ocean and coastal animals",
+      "known_at": 5
+    },
+    {
+      "name": "Hawksbill sea turtle",
+      "facet": "Ocean and coastal animals",
+      "known_at": 9
+    },
+    {
+      "name": "Spotted seal",
+      "facet": "Ocean and coastal animals",
+      "known_at": 9
+    },
+    {
+      "name": "Large yellow croaker",
+      "facet": "Ocean and coastal animals",
+      "known_at": 7
+    },
+    {
+      "name": "Hairtail (带鱼)",
+      "facet": "Ocean and coastal animals",
+      "known_at": 4
+    },
+    {
+      "name": "Silver pomfret",
+      "facet": "Ocean and coastal animals",
+      "known_at": 8
+    },
+    {
+      "name": "Mudskipper",
+      "facet": "Ocean and coastal animals",
+      "known_at": 6
+    },
+    {
+      "name": "Swimming crab (梭子蟹)",
+      "facet": "Ocean and coastal animals",
+      "known_at": 7
+    },
+    {
+      "name": "Sea cucumber",
+      "facet": "Ocean and coastal animals",
+      "known_at": 5
+    },
+    {
+      "name": "Abalone",
+      "facet": "Ocean and coastal animals",
+      "known_at": 6
+    },
+    {
+      "name": "Jellyfish",
+      "facet": "Ocean and coastal animals",
+      "known_at": 2
+    },
+    {
+      "name": "Mantis shrimp",
+      "facet": "Ocean and coastal animals",
+      "known_at": 6
+    },
+    {
+      "name": "Seahorse",
+      "facet": "Ocean and coastal animals",
+      "known_at": 2
+    },
+    {
+      "name": "Dugong",
+      "facet": "Ocean and coastal animals",
+      "known_at": 10
+    },
+    {
+      "name": "Lancelet (文昌鱼)",
+      "facet": "Ocean and coastal animals",
+      "known_at": 13
+    },
+    {
+      "name": "Xisha coral reefs",
+      "facet": "Ocean and coastal animals",
+      "known_at": 10
+    },
+    {
+      "name": "Cormorant fishing",
+      "facet": "Fishing and fish farming traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Four famous domestic fish (四大家鱼)",
+      "facet": "Fishing and fish farming traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Grass carp",
+      "facet": "Fishing and fish farming traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Silver carp",
+      "facet": "Fishing and fish farming traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Bighead carp",
+      "facet": "Fishing and fish farming traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Black carp",
+      "facet": "Fishing and fish farming traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Mulberry-dyke fish pond (桑基鱼塘)",
+      "facet": "Fishing and fish farming traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Rice-fish farming (稻田养鱼)",
+      "facet": "Fishing and fish farming traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Chinese mitten crab (大闸蟹)",
+      "facet": "Fishing and fish farming traditions",
+      "known_at": 3
+    },
+    {
+      "name": "Yangcheng Lake",
+      "facet": "Fishing and fish farming traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Chagan Lake winter fishing",
+      "facet": "Fishing and fish farming traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Hezhe fish-skin clothing",
+      "facet": "Fishing and fish farming traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Zhoushan Fishing Ground",
+      "facet": "Fishing and fish farming traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Summer fishing moratorium (伏季休渔)",
+      "facet": "Fishing and fish farming traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Tanka boat people (疍家人)",
+      "facet": "Fishing and fish farming traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Yangxian Crested Ibis Nature Reserve",
+      "facet": "Conservation stories and reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Yinzeng",
+      "facet": "Conservation stories and reserves",
+      "known_at": 14
+    },
+    {
+      "name": "Zhalong Nature Reserve",
+      "facet": "Conservation stories and reserves",
+      "known_at": 9
+    },
+    {
+      "name": "Yancheng Nature Reserve",
+      "facet": "Conservation stories and reserves",
+      "known_at": 11
+    },
+    {
+      "name": "Xu Xiujuan",
+      "facet": "Conservation stories and reserves",
+      "known_at": 9
+    },
+    {
+      "name": "Yangtze ten-year fishing ban",
+      "facet": "Conservation stories and reserves",
+      "known_at": 8
+    },
+    {
+      "name": "Tian'e-Zhou Oxbow Reserve",
+      "facet": "Conservation stories and reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese sturgeon release in Yichang",
+      "facet": "Conservation stories and reserves",
+      "known_at": 11
+    },
+    {
+      "name": "Bird-Loving Week (爱鸟周)",
+      "facet": "Conservation stories and reserves",
+      "known_at": 7
+    },
+    {
+      "name": "First-class state protected animal",
+      "facet": "Conservation stories and reserves",
+      "known_at": 7
+    },
+    {
+      "name": "Ramsar Convention",
+      "facet": "Conservation stories and reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Xianghai Nature Reserve",
+      "facet": "Conservation stories and reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Dongzhaigang mangroves",
+      "facet": "Conservation stories and reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Bird ringing",
+      "facet": "Conservation stories and reserves",
+      "known_at": 10
+    },
+    {
+      "name": "Wuhan Baiji Dolphinarium",
+      "facet": "Conservation stories and reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Chongming Dongtan",
+      "facet": "Conservation stories and reserves",
+      "known_at": 12
+    }
+  ]
+}

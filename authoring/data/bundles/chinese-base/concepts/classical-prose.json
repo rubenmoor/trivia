@@ -1,0 +1,927 @@
+{
+  "subcategory": "classical-prose",
+  "facets": [
+    "Pre-Qin philosophers' prose",
+    "Pre-Qin histories and anecdotes",
+    "Sima Qian and Han historical prose",
+    "Fu rhapsodies through the dynasties",
+    "Memorials and letters to rulers",
+    "Records of towers and pavilions",
+    "Landscape and travel notes",
+    "Essays on objects and ideals",
+    "Eight Masters of Tang and Song",
+    "Ming and Qing essays and tales",
+    "Classical prose genres and terms",
+    "Idioms born from classical prose"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 1,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Zhuangzi (庄子)",
+      "facet": "Pre-Qin philosophers' prose",
+      "known_at": 6
+    },
+    {
+      "name": "Zhuang Zhou Dreams of a Butterfly (庄周梦蝶)",
+      "facet": "Pre-Qin philosophers' prose",
+      "known_at": 8
+    },
+    {
+      "name": "Debate on the Hao River Bridge (濠梁之辩)",
+      "facet": "Pre-Qin philosophers' prose",
+      "known_at": 11
+    },
+    {
+      "name": "Exhortation to Learning (劝学)",
+      "facet": "Pre-Qin philosophers' prose",
+      "known_at": 8
+    },
+    {
+      "name": "Fish Is What I Want (鱼我所欲也)",
+      "facet": "Pre-Qin philosophers' prose",
+      "known_at": 8
+    },
+    {
+      "name": "Born in Adversity, Dying in Ease (生于忧患，死于安乐)",
+      "facet": "Pre-Qin philosophers' prose",
+      "known_at": 8
+    },
+    {
+      "name": "Hundred Schools of Thought (诸子百家)",
+      "facet": "Pre-Qin philosophers' prose",
+      "known_at": 7
+    },
+    {
+      "name": "Liezi (列子)",
+      "facet": "Pre-Qin philosophers' prose",
+      "known_at": 11
+    },
+    {
+      "name": "Zuo Qiuming (左丘明)",
+      "facet": "Pre-Qin histories and anecdotes",
+      "known_at": 10
+    },
+    {
+      "name": "Cao Gui's Debate on War (曹刿论战)",
+      "facet": "Pre-Qin histories and anecdotes",
+      "known_at": 8
+    },
+    {
+      "name": "Zhan Guo Ce (战国策)",
+      "facet": "Pre-Qin histories and anecdotes",
+      "known_at": 9
+    },
+    {
+      "name": "Zou Ji Advises the King of Qi (邹忌讽齐王纳谏)",
+      "facet": "Pre-Qin histories and anecdotes",
+      "known_at": 8
+    },
+    {
+      "name": "Tang Ju Fulfils His Mission (唐雎不辱使命)",
+      "facet": "Pre-Qin histories and anecdotes",
+      "known_at": 9
+    },
+    {
+      "name": "Chu Long Persuades the Empress Dowager of Zhao (触龙说赵太后)",
+      "facet": "Pre-Qin histories and anecdotes",
+      "known_at": 10
+    },
+    {
+      "name": "Zhu Zhiwu Persuades the Qin Army to Withdraw (烛之武退秦师)",
+      "facet": "Pre-Qin histories and anecdotes",
+      "known_at": 10
+    },
+    {
+      "name": "The Earl of Zheng Defeats Duan at Yan (郑伯克段于鄢)",
+      "facet": "Pre-Qin histories and anecdotes",
+      "known_at": 11
+    },
+    {
+      "name": "Feng Xuan, Retainer of Lord Mengchang (冯谖客孟尝君)",
+      "facet": "Pre-Qin histories and anecdotes",
+      "known_at": 11
+    },
+    {
+      "name": "Jing Ke Attempts to Assassinate the King of Qin (荆轲刺秦王)",
+      "facet": "Pre-Qin histories and anecdotes",
+      "known_at": 6
+    },
+    {
+      "name": "Gongyang Commentary (公羊传)",
+      "facet": "Pre-Qin histories and anecdotes",
+      "known_at": 13
+    },
+    {
+      "name": "Sima Qian (司马迁)",
+      "facet": "Sima Qian and Han historical prose",
+      "known_at": 4
+    },
+    {
+      "name": "Han Xin (韩信)",
+      "facet": "Sima Qian and Han historical prose",
+      "known_at": 7
+    },
+    {
+      "name": "Biographies of Lian Po and Lin Xiangru (廉颇蔺相如列传)",
+      "facet": "Sima Qian and Han historical prose",
+      "known_at": 8
+    },
+    {
+      "name": "House of Chen She (陈涉世家)",
+      "facet": "Sima Qian and Han historical prose",
+      "known_at": 8
+    },
+    {
+      "name": "Biography of Qu Yuan (屈原列传)",
+      "facet": "Sima Qian and Han historical prose",
+      "known_at": 9
+    },
+    {
+      "name": "Biographies of the Assassins (刺客列传)",
+      "facet": "Sima Qian and Han historical prose",
+      "known_at": 10
+    },
+    {
+      "name": "Letter to Ren An (报任安书)",
+      "facet": "Sima Qian and Han historical prose",
+      "known_at": 12
+    },
+    {
+      "name": "Ban Gu (班固)",
+      "facet": "Sima Qian and Han historical prose",
+      "known_at": 10
+    },
+    {
+      "name": "Biography of Su Wu (苏武传)",
+      "facet": "Sima Qian and Han historical prose",
+      "known_at": 10
+    },
+    {
+      "name": "Book of the Later Han (后汉书)",
+      "facet": "Sima Qian and Han historical prose",
+      "known_at": 12
+    },
+    {
+      "name": "Records of the Three Kingdoms (三国志)",
+      "facet": "Sima Qian and Han historical prose",
+      "known_at": 9
+    },
+    {
+      "name": "Chen Shou (陈寿)",
+      "facet": "Sima Qian and Han historical prose",
+      "known_at": 11
+    },
+    {
+      "name": "Jia Yi (贾谊)",
+      "facet": "Sima Qian and Han historical prose",
+      "known_at": 10
+    },
+    {
+      "name": "The Faults of Qin (过秦论)",
+      "facet": "Sima Qian and Han historical prose",
+      "known_at": 10
+    },
+    {
+      "name": "Red Cliff Fu (赤壁赋)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 7
+    },
+    {
+      "name": "Later Red Cliff Fu (后赤壁赋)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 10
+    },
+    {
+      "name": "Epang Palace Fu (阿房宫赋)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 8
+    },
+    {
+      "name": "Sima Xiangru (司马相如)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 9
+    },
+    {
+      "name": "Shanglin Park Fu (上林赋)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 12
+    },
+    {
+      "name": "Nymph of the Luo River (洛神赋)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 8
+    },
+    {
+      "name": "Cao Zhi (曹植)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 6
+    },
+    {
+      "name": "Autumn Sound Fu (秋声赋)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 11
+    },
+    {
+      "name": "The Return (归去来兮辞)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 9
+    },
+    {
+      "name": "Song Yu (宋玉)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 11
+    },
+    {
+      "name": "Fu on the Owl (鵩鸟赋)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 13
+    },
+    {
+      "name": "Seven Stimuli (七发)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 13
+    },
+    {
+      "name": "Fu on the Two Capitals (两都赋)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 13
+    },
+    {
+      "name": "Fu on the Three Capitals (三都赋)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 12
+    },
+    {
+      "name": "Fu on Climbing the Tower (登楼赋)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 13
+    },
+    {
+      "name": "Lament for the South (哀江南赋)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 13
+    },
+    {
+      "name": "Fu on Parting (别赋)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 13
+    },
+    {
+      "name": "Fu on Literature (文赋)",
+      "facet": "Fu rhapsodies through the dynasties",
+      "known_at": 13
+    },
+    {
+      "name": "Memorial on Sending Out the Troops (出师表)",
+      "facet": "Memorials and letters to rulers",
+      "known_at": 6
+    },
+    {
+      "name": "Later Memorial on Sending Out the Troops (后出师表)",
+      "facet": "Memorials and letters to rulers",
+      "known_at": 11
+    },
+    {
+      "name": "Liu Shan (刘禅)",
+      "facet": "Memorials and letters to rulers",
+      "known_at": 7
+    },
+    {
+      "name": "Memorial Stating My Situation (陈情表)",
+      "facet": "Memorials and letters to rulers",
+      "known_at": 10
+    },
+    {
+      "name": "Li Mi (李密)",
+      "facet": "Memorials and letters to rulers",
+      "known_at": 12
+    },
+    {
+      "name": "Remonstrance Against Expelling Guest Officials (谏逐客书)",
+      "facet": "Memorials and letters to rulers",
+      "known_at": 11
+    },
+    {
+      "name": "Ten Thoughts Memorial to Emperor Taizong (谏太宗十思疏)",
+      "facet": "Memorials and letters to rulers",
+      "known_at": 10
+    },
+    {
+      "name": "Wei Zheng (魏征)",
+      "facet": "Memorials and letters to rulers",
+      "known_at": 7
+    },
+    {
+      "name": "Memorial on the Buddha's Bone (谏迎佛骨表)",
+      "facet": "Memorials and letters to rulers",
+      "known_at": 12
+    },
+    {
+      "name": "Hai Rui (海瑞)",
+      "facet": "Memorials and letters to rulers",
+      "known_at": 8
+    },
+    {
+      "name": "Memorial on Public Order (治安疏)",
+      "facet": "Memorials and letters to rulers",
+      "known_at": 12
+    },
+    {
+      "name": "Petition of the Examination Candidates (公车上书)",
+      "facet": "Memorials and letters to rulers",
+      "known_at": 9
+    },
+    {
+      "name": "On Valuing Grain (论贵粟疏)",
+      "facet": "Memorials and letters to rulers",
+      "known_at": 13
+    },
+    {
+      "name": "Yueyang Tower (岳阳楼记)",
+      "facet": "Records of towers and pavilions",
+      "known_at": 6
+    },
+    {
+      "name": "Teng Zijing (滕子京)",
+      "facet": "Records of towers and pavilions",
+      "known_at": 11
+    },
+    {
+      "name": "Preface to the Prince Teng Pavilion (滕王阁序)",
+      "facet": "Records of towers and pavilions",
+      "known_at": 7
+    },
+    {
+      "name": "Nanchang (南昌)",
+      "facet": "Records of towers and pavilions",
+      "known_at": 7
+    },
+    {
+      "name": "Old Drunkard's Pavilion (醉翁亭记)",
+      "facet": "Records of towers and pavilions",
+      "known_at": 7
+    },
+    {
+      "name": "Chuzhou (滁州)",
+      "facet": "Records of towers and pavilions",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Xizhi (王羲之)",
+      "facet": "Records of towers and pavilions",
+      "known_at": 4
+    },
+    {
+      "name": "Shaoxing (绍兴)",
+      "facet": "Records of towers and pavilions",
+      "known_at": 8
+    },
+    {
+      "name": "Three Great Towers of Jiangnan (江南三大名楼)",
+      "facet": "Records of towers and pavilions",
+      "known_at": 8
+    },
+    {
+      "name": "Xiangji Studio (项脊轩志)",
+      "facet": "Records of towers and pavilions",
+      "known_at": 10
+    },
+    {
+      "name": "Pavilion of Joy at Rain (喜雨亭记)",
+      "facet": "Records of towers and pavilions",
+      "known_at": 12
+    },
+    {
+      "name": "Terrace of Transcendence (超然台记)",
+      "facet": "Records of towers and pavilions",
+      "known_at": 13
+    },
+    {
+      "name": "Canglang Pavilion (沧浪亭记)",
+      "facet": "Records of towers and pavilions",
+      "known_at": 12
+    },
+    {
+      "name": "Fengle Pavilion (丰乐亭记)",
+      "facet": "Records of towers and pavilions",
+      "known_at": 13
+    },
+    {
+      "name": "Bamboo Tower of Huanggang (黄冈竹楼记)",
+      "facet": "Records of towers and pavilions",
+      "known_at": 13
+    },
+    {
+      "name": "Little Rock Pond (小石潭记)",
+      "facet": "Landscape and travel notes",
+      "known_at": 8
+    },
+    {
+      "name": "Eight Records of Yongzhou (永州八记)",
+      "facet": "Landscape and travel notes",
+      "known_at": 10
+    },
+    {
+      "name": "Yongzhou (永州)",
+      "facet": "Landscape and travel notes",
+      "known_at": 11
+    },
+    {
+      "name": "The Three Gorges (三峡)",
+      "facet": "Landscape and travel notes",
+      "known_at": 6
+    },
+    {
+      "name": "Li Daoyuan (郦道元)",
+      "facet": "Landscape and travel notes",
+      "known_at": 10
+    },
+    {
+      "name": "Travels of Xu Xiake (徐霞客游记)",
+      "facet": "Landscape and travel notes",
+      "known_at": 9
+    },
+    {
+      "name": "Night Visit to Chengtian Temple (记承天寺夜游)",
+      "facet": "Landscape and travel notes",
+      "known_at": 8
+    },
+    {
+      "name": "Huangzhou (黄州)",
+      "facet": "Landscape and travel notes",
+      "known_at": 11
+    },
+    {
+      "name": "Trip to Baochan Mountain (游褒禅山记)",
+      "facet": "Landscape and travel notes",
+      "known_at": 11
+    },
+    {
+      "name": "Stone Bell Mountain (石钟山记)",
+      "facet": "Landscape and travel notes",
+      "known_at": 11
+    },
+    {
+      "name": "Climbing Mount Tai (登泰山记)",
+      "facet": "Landscape and travel notes",
+      "known_at": 12
+    },
+    {
+      "name": "Viewing Snow from the Lake Pavilion (湖心亭看雪)",
+      "facet": "Landscape and travel notes",
+      "known_at": 9
+    },
+    {
+      "name": "Zhang Dai (张岱)",
+      "facet": "Landscape and travel notes",
+      "known_at": 11
+    },
+    {
+      "name": "Letter to Zhu Yuansi (与朱元思书)",
+      "facet": "Landscape and travel notes",
+      "known_at": 10
+    },
+    {
+      "name": "Reply to Xie Zhongshu (答谢中书书)",
+      "facet": "Landscape and travel notes",
+      "known_at": 10
+    },
+    {
+      "name": "Fuchun River (富春江)",
+      "facet": "Landscape and travel notes",
+      "known_at": 10
+    },
+    {
+      "name": "Ode to the Lotus (爱莲说)",
+      "facet": "Essays on objects and ideals",
+      "known_at": 6
+    },
+    {
+      "name": "Humble Room (陋室铭)",
+      "facet": "Essays on objects and ideals",
+      "known_at": 6
+    },
+    {
+      "name": "On Horses (马说)",
+      "facet": "Essays on objects and ideals",
+      "known_at": 7
+    },
+    {
+      "name": "Bole (伯乐)",
+      "facet": "Essays on objects and ideals",
+      "known_at": 8
+    },
+    {
+      "name": "The Snake Catcher (捕蛇者说)",
+      "facet": "Essays on objects and ideals",
+      "known_at": 9
+    },
+    {
+      "name": "The Donkey of Guizhou (黔之驴)",
+      "facet": "Essays on objects and ideals",
+      "known_at": 7
+    },
+    {
+      "name": "Biography of Camel Guo the Tree Planter (种树郭橐驼传)",
+      "facet": "Essays on objects and ideals",
+      "known_at": 13
+    },
+    {
+      "name": "Biography of Mr Five Willows (五柳先生传)",
+      "facet": "Essays on objects and ideals",
+      "known_at": 9
+    },
+    {
+      "name": "Four Gentlemen of Flowers (梅兰竹菊)",
+      "facet": "Essays on objects and ideals",
+      "known_at": 6
+    },
+    {
+      "name": "Sun Quan Urges Lü Meng to Study (孙权劝学)",
+      "facet": "Essays on objects and ideals",
+      "known_at": 7
+    },
+    {
+      "name": "The Oil Seller (卖油翁)",
+      "facet": "Essays on objects and ideals",
+      "known_at": 8
+    },
+    {
+      "name": "Eight Masters of Tang and Song (唐宋八大家)",
+      "facet": "Eight Masters of Tang and Song",
+      "known_at": 7
+    },
+    {
+      "name": "Su Xun (苏洵)",
+      "facet": "Eight Masters of Tang and Song",
+      "known_at": 9
+    },
+    {
+      "name": "Meishan (眉山)",
+      "facet": "Eight Masters of Tang and Song",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Anshi (王安石)",
+      "facet": "Eight Masters of Tang and Song",
+      "known_at": 6
+    },
+    {
+      "name": "Zeng Gong (曾巩)",
+      "facet": "Eight Masters of Tang and Song",
+      "known_at": 11
+    },
+    {
+      "name": "On Teachers (师说)",
+      "facet": "Eight Masters of Tang and Song",
+      "known_at": 7
+    },
+    {
+      "name": "Han and Liu (韩柳)",
+      "facet": "Eight Masters of Tang and Song",
+      "known_at": 11
+    },
+    {
+      "name": "On the Six States (六国论)",
+      "facet": "Eight Masters of Tang and Song",
+      "known_at": 11
+    },
+    {
+      "name": "Elegy for My Twelfth Nephew (祭十二郎文)",
+      "facet": "Eight Masters of Tang and Song",
+      "known_at": 12
+    },
+    {
+      "name": "Record of the Ink Pond (墨池记)",
+      "facet": "Eight Masters of Tang and Song",
+      "known_at": 13
+    },
+    {
+      "name": "The Wolves (狼)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 8
+    },
+    {
+      "name": "Farewell to Ma of Dongyang (送东阳马生序)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 9
+    },
+    {
+      "name": "Song Lian (宋濂)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 11
+    },
+    {
+      "name": "The Carved Nutshell Boat (核舟记)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 8
+    },
+    {
+      "name": "The Ventriloquist (口技)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 9
+    },
+    {
+      "name": "Gui Youguang (归有光)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 11
+    },
+    {
+      "name": "Yuan Hongdao (袁宏道)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 12
+    },
+    {
+      "name": "Gong'an School (公安派)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 13
+    },
+    {
+      "name": "Tongcheng School (桐城派)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 12
+    },
+    {
+      "name": "Yao Nai (姚鼐)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 13
+    },
+    {
+      "name": "Fang Bao (方苞)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 13
+    },
+    {
+      "name": "The Orange Seller (卖柑者言)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Ji (刘基)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 9
+    },
+    {
+      "name": "Sick Plum Studio (病梅馆记)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 12
+    },
+    {
+      "name": "Gong Zizhen (龚自珍)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 10
+    },
+    {
+      "name": "Young China (少年中国说)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 8
+    },
+    {
+      "name": "Liang Qichao (梁启超)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 8
+    },
+    {
+      "name": "Six Records of a Floating Life (浮生六记)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 11
+    },
+    {
+      "name": "Notes of the Yuewei Hermitage (阅微草堂笔记)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 12
+    },
+    {
+      "name": "Inscription for the Tomb of Five Men (五人墓碑记)",
+      "facet": "Ming and Qing essays and tales",
+      "known_at": 13
+    },
+    {
+      "name": "Classical Chinese (文言文)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 4
+    },
+    {
+      "name": "Zhi hu zhe ye (之乎者也)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 6
+    },
+    {
+      "name": "Guwen Guanzhi (古文观止)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 9
+    },
+    {
+      "name": "Parallel prose (骈文)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 11
+    },
+    {
+      "name": "Biao (表)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 10
+    },
+    {
+      "name": "Ji (记)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 10
+    },
+    {
+      "name": "Shuo (说)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 10
+    },
+    {
+      "name": "Ming (铭)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 10
+    },
+    {
+      "name": "Xu (序)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 11
+    },
+    {
+      "name": "Tongjia characters (通假字)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 9
+    },
+    {
+      "name": "Judou (句读)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 11
+    },
+    {
+      "name": "Twenty-Four Histories (二十四史)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 9
+    },
+    {
+      "name": "Biographical-style history (纪传体)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 10
+    },
+    {
+      "name": "Chronological-style history (编年体)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 11
+    },
+    {
+      "name": "Zizhi Tongjian (资治通鉴)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 8
+    },
+    {
+      "name": "Shishuo Xinyu (世说新语)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 10
+    },
+    {
+      "name": "Wenxin Diaolong (文心雕龙)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 12
+    },
+    {
+      "name": "Writing conveys the Way (文以载道)",
+      "facet": "Classical prose genres and terms",
+      "known_at": 12
+    },
+    {
+      "name": "Spear and Shield (自相矛盾)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 3
+    },
+    {
+      "name": "Pulling Up Seedlings to Help Them Grow (拔苗助长)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 3
+    },
+    {
+      "name": "Frog at the Bottom of a Well (井底之蛙)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 3
+    },
+    {
+      "name": "The Fox Borrows the Tiger's Might (狐假虎威)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 3
+    },
+    {
+      "name": "Drawing Legs on a Snake (画蛇添足)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 4
+    },
+    {
+      "name": "The Snipe and the Clam (鹬蚌相争)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 5
+    },
+    {
+      "name": "Returning the Jade Intact to Zhao (完璧归赵)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 5
+    },
+    {
+      "name": "Carrying Thorns to Ask Forgiveness (负荆请罪)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 6
+    },
+    {
+      "name": "Sleeping on Brushwood and Tasting Gall (卧薪尝胆)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 6
+    },
+    {
+      "name": "Breaking the Pots and Sinking the Boats (破釜沉舟)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 6
+    },
+    {
+      "name": "Mao Sui Recommends Himself (毛遂自荐)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 7
+    },
+    {
+      "name": "Cook Ding Carves the Ox (庖丁解牛)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 7
+    },
+    {
+      "name": "Without Lips the Teeth Feel Cold (唇亡齿寒)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 8
+    },
+    {
+      "name": "Rousing Courage with the First Drumbeat (一鼓作气)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 7
+    },
+    {
+      "name": "Xiang Zhuang's Sword Dance (项庄舞剑)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 9
+    },
+    {
+      "name": "Seeing Someone with New Eyes (刮目相看)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 7
+    },
+    {
+      "name": "A Land Beyond the World (世外桃源)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 6
+    },
+    {
+      "name": "Bamboo Already in the Mind (胸有成竹)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 6
+    },
+    {
+      "name": "Paper Grows Dear in Luoyang (洛阳纸贵)",
+      "facet": "Idioms born from classical prose",
+      "known_at": 11
+    }
+  ]
+}

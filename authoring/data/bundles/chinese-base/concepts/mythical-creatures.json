@@ -1,0 +1,913 @@
+{
+  "subcategory": "mythical-creatures",
+  "facets": [
+    "Chinese dragons and Dragon Kings",
+    "Nine sons of the dragon",
+    "Phoenix and sacred birds",
+    "Qilin and auspicious beasts",
+    "Pixiu and lucky charms",
+    "Four Symbols of the sky",
+    "Shan Hai Jing beasts",
+    "Fox spirits and shape-shifters",
+    "Monsters in Journey to the West",
+    "Guardian lions and temple beasts",
+    "Creatures in sayings and idioms",
+    "Mythical creatures of other lands"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 1,
+      "record": 1,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Chinese dragon (龙)",
+      "facet": "Chinese dragons and Dragon Kings",
+      "known_at": 1
+    },
+    {
+      "name": "Year of the Dragon (龙年)",
+      "facet": "Chinese dragons and Dragon Kings",
+      "known_at": 3
+    },
+    {
+      "name": "Dragon Palace (龙宫)",
+      "facet": "Chinese dragons and Dragon Kings",
+      "known_at": 6
+    },
+    {
+      "name": "Dragon pearl (龙珠)",
+      "facet": "Chinese dragons and Dragon Kings",
+      "known_at": 6
+    },
+    {
+      "name": "Descendants of the Dragon (龙的传人)",
+      "facet": "Chinese dragons and Dragon Kings",
+      "known_at": 6
+    },
+    {
+      "name": "Dragon robe (龙袍)",
+      "facet": "Chinese dragons and Dragon Kings",
+      "known_at": 7
+    },
+    {
+      "name": "Dragon throne (龙椅)",
+      "facet": "Chinese dragons and Dragon Kings",
+      "known_at": 7
+    },
+    {
+      "name": "Ao Guang (敖广)",
+      "facet": "Chinese dragons and Dragon Kings",
+      "known_at": 8
+    },
+    {
+      "name": "Five-clawed dragon (五爪龙)",
+      "facet": "Chinese dragons and Dragon Kings",
+      "known_at": 9
+    },
+    {
+      "name": "Jiaolong (蛟龙)",
+      "facet": "Chinese dragons and Dragon Kings",
+      "known_at": 10
+    },
+    {
+      "name": "Yinglong (应龙)",
+      "facet": "Chinese dragons and Dragon Kings",
+      "known_at": 12
+    },
+    {
+      "name": "Zhulong (烛龙)",
+      "facet": "Chinese dragons and Dragon Kings",
+      "known_at": 13
+    },
+    {
+      "name": "Chilong (螭龙)",
+      "facet": "Chinese dragons and Dragon Kings",
+      "known_at": 13
+    },
+    {
+      "name": "Nine resemblances of the dragon (龙有九似)",
+      "facet": "Chinese dragons and Dragon Kings",
+      "known_at": 13
+    },
+    {
+      "name": "Hongshan jade dragon (红山玉龙)",
+      "facet": "Chinese dragons and Dragon Kings",
+      "known_at": 13
+    },
+    {
+      "name": "Qiulong (虬龙)",
+      "facet": "Chinese dragons and Dragon Kings",
+      "known_at": 14
+    },
+    {
+      "name": "Nine sons of the dragon (龙生九子)",
+      "facet": "Nine sons of the dragon",
+      "known_at": 8
+    },
+    {
+      "name": "Bixi (赑屃)",
+      "facet": "Nine sons of the dragon",
+      "known_at": 11
+    },
+    {
+      "name": "Chiwen (螭吻)",
+      "facet": "Nine sons of the dragon",
+      "known_at": 11
+    },
+    {
+      "name": "Yazi (睚眦)",
+      "facet": "Nine sons of the dragon",
+      "known_at": 11
+    },
+    {
+      "name": "Taotie (饕餮)",
+      "facet": "Nine sons of the dragon",
+      "known_at": 11
+    },
+    {
+      "name": "Qiuniu (囚牛)",
+      "facet": "Nine sons of the dragon",
+      "known_at": 12
+    },
+    {
+      "name": "Suanni (狻猊)",
+      "facet": "Nine sons of the dragon",
+      "known_at": 12
+    },
+    {
+      "name": "Chishou dragon-head spouts (螭首)",
+      "facet": "Nine sons of the dragon",
+      "known_at": 12
+    },
+    {
+      "name": "Pushou door knocker (铺首)",
+      "facet": "Nine sons of the dragon",
+      "known_at": 12
+    },
+    {
+      "name": "Pulao (蒲牢)",
+      "facet": "Nine sons of the dragon",
+      "known_at": 13
+    },
+    {
+      "name": "Bi'an (狴犴)",
+      "facet": "Nine sons of the dragon",
+      "known_at": 13
+    },
+    {
+      "name": "Jiaotu (椒图)",
+      "facet": "Nine sons of the dragon",
+      "known_at": 13
+    },
+    {
+      "name": "Chaofeng (嘲风)",
+      "facet": "Nine sons of the dragon",
+      "known_at": 13
+    },
+    {
+      "name": "Fuxi (负屃)",
+      "facet": "Nine sons of the dragon",
+      "known_at": 14
+    },
+    {
+      "name": "Li Dongyang (李东阳)",
+      "facet": "Nine sons of the dragon",
+      "known_at": 15
+    },
+    {
+      "name": "Phoenix (凤凰)",
+      "facet": "Phoenix and sacred birds",
+      "known_at": 1
+    },
+    {
+      "name": "Immortal crane (仙鹤)",
+      "facet": "Phoenix and sacred birds",
+      "known_at": 5
+    },
+    {
+      "name": "Jingwei (精卫)",
+      "facet": "Phoenix and sacred birds",
+      "known_at": 7
+    },
+    {
+      "name": "Three-legged crow (三足乌)",
+      "facet": "Phoenix and sacred birds",
+      "known_at": 9
+    },
+    {
+      "name": "Kunpeng (鲲鹏)",
+      "facet": "Phoenix and sacred birds",
+      "known_at": 9
+    },
+    {
+      "name": "Phoenix crown (凤冠)",
+      "facet": "Phoenix and sacred birds",
+      "known_at": 9
+    },
+    {
+      "name": "Nine-headed bird (九头鸟)",
+      "facet": "Phoenix and sacred birds",
+      "known_at": 10
+    },
+    {
+      "name": "Golden Sun Bird of Jinsha (太阳神鸟)",
+      "facet": "Phoenix and sacred birds",
+      "known_at": 10
+    },
+    {
+      "name": "Qingniao (青鸟)",
+      "facet": "Phoenix and sacred birds",
+      "known_at": 11
+    },
+    {
+      "name": "Biyiniao (比翼鸟)",
+      "facet": "Phoenix and sacred birds",
+      "known_at": 11
+    },
+    {
+      "name": "Sanxingdui bronze sacred tree (三星堆青铜神树)",
+      "facet": "Phoenix and sacred birds",
+      "known_at": 11
+    },
+    {
+      "name": "Bifang (毕方)",
+      "facet": "Phoenix and sacred birds",
+      "known_at": 12
+    },
+    {
+      "name": "Luan (鸾)",
+      "facet": "Phoenix and sacred birds",
+      "known_at": 12
+    },
+    {
+      "name": "Chongming bird (重明鸟)",
+      "facet": "Phoenix and sacred birds",
+      "known_at": 13
+    },
+    {
+      "name": "Yuanchu (鹓鶵)",
+      "facet": "Phoenix and sacred birds",
+      "known_at": 14
+    },
+    {
+      "name": "Qilin (麒麟)",
+      "facet": "Qilin and auspicious beasts",
+      "known_at": 4
+    },
+    {
+      "name": "Qilin bringing a son (麒麟送子)",
+      "facet": "Qilin and auspicious beasts",
+      "known_at": 8
+    },
+    {
+      "name": "Sibuxiang (四不像)",
+      "facet": "Qilin and auspicious beasts",
+      "known_at": 8
+    },
+    {
+      "name": "Heavenly horse (天马)",
+      "facet": "Qilin and auspicious beasts",
+      "known_at": 10
+    },
+    {
+      "name": "Bai Ze (白泽)",
+      "facet": "Qilin and auspicious beasts",
+      "known_at": 11
+    },
+    {
+      "name": "Luo Shu turtle (洛书神龟)",
+      "facet": "Qilin and auspicious beasts",
+      "known_at": 11
+    },
+    {
+      "name": "Xiezhi (獬豸)",
+      "facet": "Qilin and auspicious beasts",
+      "known_at": 12
+    },
+    {
+      "name": "Zheng He's giraffe",
+      "facet": "Qilin and auspicious beasts",
+      "known_at": 12
+    },
+    {
+      "name": "Four Spirits (四灵)",
+      "facet": "Qilin and auspicious beasts",
+      "known_at": 12
+    },
+    {
+      "name": "Tianlu (天禄)",
+      "facet": "Qilin and auspicious beasts",
+      "known_at": 13
+    },
+    {
+      "name": "Luduan (甪端)",
+      "facet": "Qilin and auspicious beasts",
+      "known_at": 13
+    },
+    {
+      "name": "Gourd charm (葫芦)",
+      "facet": "Pixiu and lucky charms",
+      "known_at": 6
+    },
+    {
+      "name": "Money toad (金蟾)",
+      "facet": "Pixiu and lucky charms",
+      "known_at": 7
+    },
+    {
+      "name": "Bat as a sign of luck (蝙蝠)",
+      "facet": "Pixiu and lucky charms",
+      "known_at": 8
+    },
+    {
+      "name": "Peach-wood sword (桃木剑)",
+      "facet": "Pixiu and lucky charms",
+      "known_at": 8
+    },
+    {
+      "name": "Bagua mirror (八卦镜)",
+      "facet": "Pixiu and lucky charms",
+      "known_at": 9
+    },
+    {
+      "name": "Dragon turtle (龙龟)",
+      "facet": "Pixiu and lucky charms",
+      "known_at": 11
+    },
+    {
+      "name": "Three rams (三羊开泰)",
+      "facet": "Pixiu and lucky charms",
+      "known_at": 12
+    },
+    {
+      "name": "Peaceful elephant (太平有象)",
+      "facet": "Pixiu and lucky charms",
+      "known_at": 12
+    },
+    {
+      "name": "Azure Dragon (青龙)",
+      "facet": "Four Symbols of the sky",
+      "known_at": 6
+    },
+    {
+      "name": "White Tiger (白虎)",
+      "facet": "Four Symbols of the sky",
+      "known_at": 6
+    },
+    {
+      "name": "Vermilion Bird (朱雀)",
+      "facet": "Four Symbols of the sky",
+      "known_at": 7
+    },
+    {
+      "name": "Black Tortoise (玄武)",
+      "facet": "Four Symbols of the sky",
+      "known_at": 7
+    },
+    {
+      "name": "Xuanwu Gate (玄武门)",
+      "facet": "Four Symbols of the sky",
+      "known_at": 11
+    },
+    {
+      "name": "Zhuque Avenue (朱雀大街)",
+      "facet": "Four Symbols of the sky",
+      "known_at": 12
+    },
+    {
+      "name": "Yellow Dragon of the centre (黄龙)",
+      "facet": "Four Symbols of the sky",
+      "known_at": 13
+    },
+    {
+      "name": "Four Gods eaves tiles (四神瓦当)",
+      "facet": "Four Symbols of the sky",
+      "known_at": 14
+    },
+    {
+      "name": "Qinglong Temple (青龙寺)",
+      "facet": "Four Symbols of the sky",
+      "known_at": 14
+    },
+    {
+      "name": "Heart Mansion (心宿)",
+      "facet": "Four Symbols of the sky",
+      "known_at": 14
+    },
+    {
+      "name": "Kua Fu (夸父)",
+      "facet": "Shan Hai Jing beasts",
+      "known_at": 6
+    },
+    {
+      "name": "Tiangou (天狗)",
+      "facet": "Shan Hai Jing beasts",
+      "known_at": 9
+    },
+    {
+      "name": "Chi You (蚩尤)",
+      "facet": "Shan Hai Jing beasts",
+      "known_at": 10
+    },
+    {
+      "name": "Xingtian (刑天)",
+      "facet": "Shan Hai Jing beasts",
+      "known_at": 11
+    },
+    {
+      "name": "Fusang tree (扶桑)",
+      "facet": "Shan Hai Jing beasts",
+      "known_at": 11
+    },
+    {
+      "name": "Kui (夔)",
+      "facet": "Shan Hai Jing beasts",
+      "known_at": 12
+    },
+    {
+      "name": "Qiongqi (穷奇)",
+      "facet": "Shan Hai Jing beasts",
+      "known_at": 12
+    },
+    {
+      "name": "Bashe (巴蛇)",
+      "facet": "Shan Hai Jing beasts",
+      "known_at": 12
+    },
+    {
+      "name": "Four Perils (四凶)",
+      "facet": "Shan Hai Jing beasts",
+      "known_at": 13
+    },
+    {
+      "name": "Dijiang (帝江)",
+      "facet": "Shan Hai Jing beasts",
+      "known_at": 13
+    },
+    {
+      "name": "Xiangliu (相柳)",
+      "facet": "Shan Hai Jing beasts",
+      "known_at": 13
+    },
+    {
+      "name": "Taowu (梼杌)",
+      "facet": "Shan Hai Jing beasts",
+      "known_at": 14
+    },
+    {
+      "name": "Wenyao fish (文鳐鱼)",
+      "facet": "Shan Hai Jing beasts",
+      "known_at": 14
+    },
+    {
+      "name": "Kaiming beast (开明兽)",
+      "facet": "Shan Hai Jing beasts",
+      "known_at": 15
+    },
+    {
+      "name": "Nine-tailed fox (九尾狐)",
+      "facet": "Fox spirits and shape-shifters",
+      "known_at": 5
+    },
+    {
+      "name": "Bai Suzhen (白素贞)",
+      "facet": "Fox spirits and shape-shifters",
+      "known_at": 5
+    },
+    {
+      "name": "Seventy-two transformations (七十二变)",
+      "facet": "Fox spirits and shape-shifters",
+      "known_at": 5
+    },
+    {
+      "name": "Butterfly transformation (化蝶)",
+      "facet": "Fox spirits and shape-shifters",
+      "known_at": 7
+    },
+    {
+      "name": "Daji (妲己)",
+      "facet": "Fox spirits and shape-shifters",
+      "known_at": 8
+    },
+    {
+      "name": "Xiaoqing (小青)",
+      "facet": "Fox spirits and shape-shifters",
+      "known_at": 8
+    },
+    {
+      "name": "Fahai (法海)",
+      "facet": "Fox spirits and shape-shifters",
+      "known_at": 8
+    },
+    {
+      "name": "Pu Songling (蒲松龄)",
+      "facet": "Fox spirits and shape-shifters",
+      "known_at": 10
+    },
+    {
+      "name": "Fox Spirit Matchmaker (狐妖小红娘)",
+      "facet": "Fox spirits and shape-shifters",
+      "known_at": 10
+    },
+    {
+      "name": "Nie Xiaoqian (聂小倩)",
+      "facet": "Fox spirits and shape-shifters",
+      "known_at": 11
+    },
+    {
+      "name": "Painted Skin (画皮)",
+      "facet": "Fox spirits and shape-shifters",
+      "known_at": 11
+    },
+    {
+      "name": "Weasel spirit (黄鼠狼精)",
+      "facet": "Fox spirits and shape-shifters",
+      "known_at": 12
+    },
+    {
+      "name": "Nüjiao of Tushan (涂山氏)",
+      "facet": "Fox spirits and shape-shifters",
+      "known_at": 13
+    },
+    {
+      "name": "Jade Pipa spirit (玉石琵琶精)",
+      "facet": "Fox spirits and shape-shifters",
+      "known_at": 13
+    },
+    {
+      "name": "Sha Wujing (沙悟净)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 3
+    },
+    {
+      "name": "White Bone Demon (白骨精)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 4
+    },
+    {
+      "name": "Bull Demon King (牛魔王)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 4
+    },
+    {
+      "name": "Princess Iron Fan (铁扇公主)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 5
+    },
+    {
+      "name": "Red Boy (红孩儿)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 5
+    },
+    {
+      "name": "White Dragon Horse (白龙马)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 5
+    },
+    {
+      "name": "Spider demons (蜘蛛精)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 6
+    },
+    {
+      "name": "Ginseng fruit (人参果)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 6
+    },
+    {
+      "name": "Golden Horn and Silver Horn (金角大王和银角大王)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 7
+    },
+    {
+      "name": "Six-eared Macaque (六耳猕猴)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 7
+    },
+    {
+      "name": "Black Bear Demon (黑熊精)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 8
+    },
+    {
+      "name": "Yellow Wind Demon (黄风怪)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 9
+    },
+    {
+      "name": "Golden-winged Great Peng (大鹏金翅雕)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 9
+    },
+    {
+      "name": "Jade Rabbit demon (玉兔精)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 9
+    },
+    {
+      "name": "Scorpion demon (蝎子精)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 10
+    },
+    {
+      "name": "Mouse demon of the Bottomless Pit (老鼠精)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 10
+    },
+    {
+      "name": "Nine-headed Insect (九头虫)",
+      "facet": "Monsters in Journey to the West",
+      "known_at": 12
+    },
+    {
+      "name": "Stone guardian lions (石狮子)",
+      "facet": "Guardian lions and temple beasts",
+      "known_at": 3
+    },
+    {
+      "name": "Four Heavenly Kings (四大天王)",
+      "facet": "Guardian lions and temple beasts",
+      "known_at": 7
+    },
+    {
+      "name": "Lugou Bridge lions (卢沟桥狮子)",
+      "facet": "Guardian lions and temple beasts",
+      "known_at": 8
+    },
+    {
+      "name": "Southern lion (南狮)",
+      "facet": "Guardian lions and temple beasts",
+      "known_at": 10
+    },
+    {
+      "name": "Spirit Way (神道)",
+      "facet": "Guardian lions and temple beasts",
+      "known_at": 11
+    },
+    {
+      "name": "Bronze crane and tortoise (铜龟铜鹤)",
+      "facet": "Guardian lions and temple beasts",
+      "known_at": 11
+    },
+    {
+      "name": "Tomb guardian beast (镇墓兽)",
+      "facet": "Guardian lions and temple beasts",
+      "known_at": 12
+    },
+    {
+      "name": "Iron Lion of Cangzhou (沧州铁狮子)",
+      "facet": "Guardian lions and temple beasts",
+      "known_at": 12
+    },
+    {
+      "name": "Immortal riding a phoenix (骑凤仙人)",
+      "facet": "Guardian lions and temple beasts",
+      "known_at": 13
+    },
+    {
+      "name": "Wind Lion God (风狮爷)",
+      "facet": "Guardian lions and temple beasts",
+      "known_at": 13
+    },
+    {
+      "name": "Hangshi (行什)",
+      "facet": "Guardian lions and temple beasts",
+      "known_at": 14
+    },
+    {
+      "name": "鲤鱼跃龙门 (lǐ yú yuè lóng mén)",
+      "facet": "Creatures in sayings and idioms",
+      "known_at": 5
+    },
+    {
+      "name": "望子成龙 (wàng zǐ chéng lóng)",
+      "facet": "Creatures in sayings and idioms",
+      "known_at": 6
+    },
+    {
+      "name": "龙飞凤舞 (lóng fēi fèng wǔ)",
+      "facet": "Creatures in sayings and idioms",
+      "known_at": 6
+    },
+    {
+      "name": "龙凤呈祥 (lóng fèng chéng xiáng)",
+      "facet": "Creatures in sayings and idioms",
+      "known_at": 6
+    },
+    {
+      "name": "龙争虎斗 (lóng zhēng hǔ dòu)",
+      "facet": "Creatures in sayings and idioms",
+      "known_at": 8
+    },
+    {
+      "name": "卧虎藏龙 (wò hǔ cáng lóng)",
+      "facet": "Creatures in sayings and idioms",
+      "known_at": 8
+    },
+    {
+      "name": "车水马龙 (chē shuǐ mǎ lóng)",
+      "facet": "Creatures in sayings and idioms",
+      "known_at": 8
+    },
+    {
+      "name": "百鸟朝凤 (bǎi niǎo cháo fèng)",
+      "facet": "Creatures in sayings and idioms",
+      "known_at": 9
+    },
+    {
+      "name": "凤毛麟角 (fèng máo lín jiǎo)",
+      "facet": "Creatures in sayings and idioms",
+      "known_at": 9,
+      "retired": "unaskable: Every option asks what the idiom's own characters say (phoenix feather, qilin horn), and the characters or the English gloss would give that away."
+    },
+    {
+      "name": "群龙无首 (qún lóng wú shǒu)",
+      "facet": "Creatures in sayings and idioms",
+      "known_at": 9
+    },
+    {
+      "name": "鱼龙混杂 (yú lóng hùn zá)",
+      "facet": "Creatures in sayings and idioms",
+      "known_at": 9
+    },
+    {
+      "name": "龙潭虎穴 (lóng tán hǔ xué)",
+      "facet": "Creatures in sayings and idioms",
+      "known_at": 9
+    },
+    {
+      "name": "狼狈为奸 (láng bèi wéi jiān)",
+      "facet": "Creatures in sayings and idioms",
+      "known_at": 11
+    },
+    {
+      "name": "攀龙附凤 (pān lóng fù fèng)",
+      "facet": "Creatures in sayings and idioms",
+      "known_at": 12
+    },
+    {
+      "name": "魑魅魍魉 (chī mèi wǎng liǎng)",
+      "facet": "Creatures in sayings and idioms",
+      "known_at": 13
+    },
+    {
+      "name": "逆鳞 (nì lín)",
+      "facet": "Creatures in sayings and idioms",
+      "known_at": 13
+    },
+    {
+      "name": "Unicorn",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 2
+    },
+    {
+      "name": "Mermaid",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 2
+    },
+    {
+      "name": "Western dragon",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 3
+    },
+    {
+      "name": "Sphinx",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 5
+    },
+    {
+      "name": "Pegasus",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 6
+    },
+    {
+      "name": "Medusa",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 6
+    },
+    {
+      "name": "Yeti",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 7
+    },
+    {
+      "name": "Griffin",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 8
+    },
+    {
+      "name": "Minotaur",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 8
+    },
+    {
+      "name": "Cerberus",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 8
+    },
+    {
+      "name": "Kraken",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 9
+    },
+    {
+      "name": "Hydra",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 9
+    },
+    {
+      "name": "Kitsune",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 10
+    },
+    {
+      "name": "Kappa",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 11
+    },
+    {
+      "name": "Garuda",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 11
+    },
+    {
+      "name": "Naga",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 12
+    },
+    {
+      "name": "Tanuki",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 12
+    },
+    {
+      "name": "Quetzalcoatl",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 12
+    },
+    {
+      "name": "Thunderbird",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 13
+    },
+    {
+      "name": "Shisa",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 13
+    },
+    {
+      "name": "Haechi",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 14
+    },
+    {
+      "name": "Makara",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 14
+    },
+    {
+      "name": "Bunyip",
+      "facet": "Mythical creatures of other lands",
+      "known_at": 14
+    }
+  ]
+}

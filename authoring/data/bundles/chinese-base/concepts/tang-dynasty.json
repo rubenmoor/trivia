@@ -1,0 +1,1077 @@
+{
+  "subcategory": "tang-dynasty",
+  "facets": [
+    "Founding and fall of the Tang",
+    "Tang emperors and their reigns",
+    "Wu Zetian and her Zhou dynasty",
+    "Yang Guifei and Emperor Xuanzong",
+    "An Lushan rebellion",
+    "Ministers, generals and court life",
+    "Chang'an and Luoyang cities",
+    "Tang government and civil exams",
+    "Tang and its neighbours",
+    "Tang art, music and dance",
+    "Tang crafts, sancai and inventions",
+    "Daily life, food and festivals"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Jinyang uprising",
+      "facet": "Founding and fall of the Tang",
+      "known_at": 12
+    },
+    {
+      "name": "Founding of the Tang in 618",
+      "facet": "Founding and fall of the Tang",
+      "known_at": 8
+    },
+    {
+      "name": "End of the Tang in 907",
+      "facet": "Founding and fall of the Tang",
+      "known_at": 11
+    },
+    {
+      "name": "Huang Chao rebellion",
+      "facet": "Founding and fall of the Tang",
+      "known_at": 10
+    },
+    {
+      "name": "Zhu Wen",
+      "facet": "Founding and fall of the Tang",
+      "known_at": 12
+    },
+    {
+      "name": "Later Liang",
+      "facet": "Founding and fall of the Tang",
+      "known_at": 11
+    },
+    {
+      "name": "Five Dynasties and Ten Kingdoms",
+      "facet": "Founding and fall of the Tang",
+      "known_at": 9
+    },
+    {
+      "name": "Li Mi",
+      "facet": "Founding and fall of the Tang",
+      "known_at": 13
+    },
+    {
+      "name": "Dou Jiande",
+      "facet": "Founding and fall of the Tang",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Shichong",
+      "facet": "Founding and fall of the Tang",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Hulao",
+      "facet": "Founding and fall of the Tang",
+      "known_at": 13
+    },
+    {
+      "name": "Ganlu Incident",
+      "facet": "Founding and fall of the Tang",
+      "known_at": 14
+    },
+    {
+      "name": "Niu-Li factional struggle",
+      "facet": "Founding and fall of the Tang",
+      "known_at": 13
+    },
+    {
+      "name": "Fanzhen separatism (藩镇割据)",
+      "facet": "Founding and fall of the Tang",
+      "known_at": 11
+    },
+    {
+      "name": "Li Keyong",
+      "facet": "Founding and fall of the Tang",
+      "known_at": 14
+    },
+    {
+      "name": "Emperor Ai of Tang",
+      "facet": "Founding and fall of the Tang",
+      "known_at": 14
+    },
+    {
+      "name": "Li Shimin, Emperor Taizong",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 4
+    },
+    {
+      "name": "Xuanwu Gate Incident",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 8
+    },
+    {
+      "name": "Zhenguan era",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 7
+    },
+    {
+      "name": "Li Zhi, Emperor Gaozong",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 10
+    },
+    {
+      "name": "Li Jiancheng",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 10
+    },
+    {
+      "name": "Li Yuanji",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 12
+    },
+    {
+      "name": "Empress Zhangsun",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 9
+    },
+    {
+      "name": "Li Chengqian",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 13
+    },
+    {
+      "name": "Heavenly Khan (天可汗)",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 10
+    },
+    {
+      "name": "Emperor Zhongzong of Tang",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 13
+    },
+    {
+      "name": "Emperor Ruizong of Tang",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 13
+    },
+    {
+      "name": "Emperor Suzong of Tang",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 12
+    },
+    {
+      "name": "Emperor Dezong of Tang",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 13
+    },
+    {
+      "name": "Emperor Xianzong of Tang",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 13
+    },
+    {
+      "name": "Yuanhe Restoration",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 13
+    },
+    {
+      "name": "Emperor Wuzong of Tang",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 13
+    },
+    {
+      "name": "Huichang persecution of Buddhism",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 13
+    },
+    {
+      "name": "Emperor Xuanzong (Li Chen) and the Dazhong era",
+      "facet": "Tang emperors and their reigns",
+      "known_at": 14
+    },
+    {
+      "name": "Wu Zhou dynasty",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 9
+    },
+    {
+      "name": "Character 曌 (zhào)",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 10
+    },
+    {
+      "name": "Ganye Temple",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 11
+    },
+    {
+      "name": "Cairen (才人) rank",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 11
+    },
+    {
+      "name": "Empress Wang of Gaozong",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 13
+    },
+    {
+      "name": "Di Renjie",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 5
+    },
+    {
+      "name": "Shangguan Wan'er",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 9
+    },
+    {
+      "name": "Princess Taiping",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 8
+    },
+    {
+      "name": "Lai Junchen",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 12
+    },
+    {
+      "name": "Bronze petition box (铜匦)",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 14
+    },
+    {
+      "name": "Founding of Wu Zhou in 690",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 12
+    },
+    {
+      "name": "Shenlong Coup",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Yizhi and Zhang Changzong",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 13
+    },
+    {
+      "name": "Shendu (神都), Divine Capital",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 12
+    },
+    {
+      "name": "Empress Wei",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 12
+    },
+    {
+      "name": "Lion Stallion (狮子骢)",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 12
+    },
+    {
+      "name": "Peony banished to Luoyang legend",
+      "facet": "Wu Zetian and her Zhou dynasty",
+      "known_at": 8
+    },
+    {
+      "name": "Yang Guifei",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 3
+    },
+    {
+      "name": "Li Longji, Emperor Xuanzong",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 6
+    },
+    {
+      "name": "Kaiyuan era",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 8
+    },
+    {
+      "name": "Tianbao era",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 11
+    },
+    {
+      "name": "Mawei Incident",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 9
+    },
+    {
+      "name": "Huaqing Pool",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 7
+    },
+    {
+      "name": "Four Beauties of ancient China",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 4
+    },
+    {
+      "name": "Shame the flowers (羞花)",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 6
+    },
+    {
+      "name": "Yang Guozhong",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 10
+    },
+    {
+      "name": "Gao Lishi",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 8
+    },
+    {
+      "name": "Li Linfu",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 11
+    },
+    {
+      "name": "Yao Chong",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 13
+    },
+    {
+      "name": "Song Jing",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Jiuling",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 12
+    },
+    {
+      "name": "Li Mao, Prince Shou",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 13
+    },
+    {
+      "name": "The Drunken Concubine (贵妃醉酒)",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 8
+    },
+    {
+      "name": "Taizhen (太真)",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 12
+    },
+    {
+      "name": "Yang Yuhuan",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 9
+    },
+    {
+      "name": "Xuanzong's flight to Shu",
+      "facet": "Yang Guifei and Emperor Xuanzong",
+      "known_at": 11
+    },
+    {
+      "name": "An Lushan",
+      "facet": "An Lushan rebellion",
+      "known_at": 6
+    },
+    {
+      "name": "Shi Siming",
+      "facet": "An Lushan rebellion",
+      "known_at": 10
+    },
+    {
+      "name": "An-Shi Rebellion",
+      "facet": "An Lushan rebellion",
+      "known_at": 8
+    },
+    {
+      "name": "Outbreak of the rebellion in 755",
+      "facet": "An Lushan rebellion",
+      "known_at": 11
+    },
+    {
+      "name": "End of the rebellion in 763",
+      "facet": "An Lushan rebellion",
+      "known_at": 13
+    },
+    {
+      "name": "Fanyang",
+      "facet": "An Lushan rebellion",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Suiyang",
+      "facet": "An Lushan rebellion",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Xun",
+      "facet": "An Lushan rebellion",
+      "known_at": 12
+    },
+    {
+      "name": "Guo Ziyi",
+      "facet": "An Lushan rebellion",
+      "known_at": 8
+    },
+    {
+      "name": "Li Guangbi",
+      "facet": "An Lushan rebellion",
+      "known_at": 12
+    },
+    {
+      "name": "Geshu Han",
+      "facet": "An Lushan rebellion",
+      "known_at": 12
+    },
+    {
+      "name": "Tong Pass",
+      "facet": "An Lushan rebellion",
+      "known_at": 11
+    },
+    {
+      "name": "Yan Gaoqing",
+      "facet": "An Lushan rebellion",
+      "known_at": 13
+    },
+    {
+      "name": "An Qingxu",
+      "facet": "An Lushan rebellion",
+      "known_at": 13
+    },
+    {
+      "name": "Shi Chaoyi",
+      "facet": "An Lushan rebellion",
+      "known_at": 14
+    },
+    {
+      "name": "Feng Changqing",
+      "facet": "An Lushan rebellion",
+      "known_at": 13
+    },
+    {
+      "name": "Lingwu",
+      "facet": "An Lushan rebellion",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Xiangzhou",
+      "facet": "An Lushan rebellion",
+      "known_at": 14
+    },
+    {
+      "name": "Washing the baby (洗儿) ceremony",
+      "facet": "An Lushan rebellion",
+      "known_at": 12
+    },
+    {
+      "name": "Wei Zheng",
+      "facet": "Ministers, generals and court life",
+      "known_at": 7
+    },
+    {
+      "name": "Fang Xuanling",
+      "facet": "Ministers, generals and court life",
+      "known_at": 10
+    },
+    {
+      "name": "Du Ruhui",
+      "facet": "Ministers, generals and court life",
+      "known_at": 11
+    },
+    {
+      "name": "Fang plans, Du decides (房谋杜断)",
+      "facet": "Ministers, generals and court life",
+      "known_at": 12
+    },
+    {
+      "name": "Qin Shubao",
+      "facet": "Ministers, generals and court life",
+      "known_at": 6
+    },
+    {
+      "name": "Yuchi Gong",
+      "facet": "Ministers, generals and court life",
+      "known_at": 6
+    },
+    {
+      "name": "Cheng Yaojin",
+      "facet": "Ministers, generals and court life",
+      "known_at": 6
+    },
+    {
+      "name": "Luo Cheng",
+      "facet": "Ministers, generals and court life",
+      "known_at": 9
+    },
+    {
+      "name": "Shan Xiongxin",
+      "facet": "Ministers, generals and court life",
+      "known_at": 11
+    },
+    {
+      "name": "Li Jing, Duke of Wei",
+      "facet": "Ministers, generals and court life",
+      "known_at": 11
+    },
+    {
+      "name": "Xue Rengui",
+      "facet": "Ministers, generals and court life",
+      "known_at": 9
+    },
+    {
+      "name": "Lingyan Pavilion",
+      "facet": "Ministers, generals and court life",
+      "known_at": 11
+    },
+    {
+      "name": "Zhangsun Wuji",
+      "facet": "Ministers, generals and court life",
+      "known_at": 10
+    },
+    {
+      "name": "Li Ji (Xu Maogong)",
+      "facet": "Ministers, generals and court life",
+      "known_at": 12
+    },
+    {
+      "name": "Hou Junji",
+      "facet": "Ministers, generals and court life",
+      "known_at": 13
+    },
+    {
+      "name": "Li Fuguo",
+      "facet": "Ministers, generals and court life",
+      "known_at": 13
+    },
+    {
+      "name": "Qiu Shiliang",
+      "facet": "Ministers, generals and court life",
+      "known_at": 14
+    },
+    {
+      "name": "Pei Du",
+      "facet": "Ministers, generals and court life",
+      "known_at": 13
+    },
+    {
+      "name": "Li Deyu",
+      "facet": "Ministers, generals and court life",
+      "known_at": 14
+    },
+    {
+      "name": "Li Bi",
+      "facet": "Ministers, generals and court life",
+      "known_at": 13
+    },
+    {
+      "name": "Essentials of Government of the Zhenguan Era (贞观政要)",
+      "facet": "Ministers, generals and court life",
+      "known_at": 12
+    },
+    {
+      "name": "Taiji Palace",
+      "facet": "Chang'an and Luoyang cities",
+      "known_at": 13
+    },
+    {
+      "name": "Xingqing Palace",
+      "facet": "Chang'an and Luoyang cities",
+      "known_at": 13
+    },
+    {
+      "name": "Hanyuan Hall",
+      "facet": "Chang'an and Luoyang cities",
+      "known_at": 12
+    },
+    {
+      "name": "Zhuque Avenue",
+      "facet": "Chang'an and Luoyang cities",
+      "known_at": 11
+    },
+    {
+      "name": "East and West Markets",
+      "facet": "Chang'an and Luoyang cities",
+      "known_at": 10
+    },
+    {
+      "name": "Ward system (坊)",
+      "facet": "Chang'an and Luoyang cities",
+      "known_at": 12
+    },
+    {
+      "name": "Street drums (街鼓)",
+      "facet": "Chang'an and Luoyang cities",
+      "known_at": 13
+    },
+    {
+      "name": "Pingkang Ward",
+      "facet": "Chang'an and Luoyang cities",
+      "known_at": 14
+    },
+    {
+      "name": "Qujiang Pool",
+      "facet": "Chang'an and Luoyang cities",
+      "known_at": 10
+    },
+    {
+      "name": "Daxingcheng",
+      "facet": "Chang'an and Luoyang cities",
+      "known_at": 13
+    },
+    {
+      "name": "Mingtang of Luoyang",
+      "facet": "Chang'an and Luoyang cities",
+      "known_at": 13
+    },
+    {
+      "name": "Tianjin Bridge",
+      "facet": "Chang'an and Luoyang cities",
+      "known_at": 14
+    },
+    {
+      "name": "Datang Everbright City (大唐不夜城)",
+      "facet": "Chang'an and Luoyang cities",
+      "known_at": 7
+    },
+    {
+      "name": "Jinshi (进士)",
+      "facet": "Tang government and civil exams",
+      "known_at": 9
+    },
+    {
+      "name": "Mingjing (明经)",
+      "facet": "Tang government and civil exams",
+      "known_at": 13
+    },
+    {
+      "name": "Palace examination (殿试)",
+      "facet": "Tang government and civil exams",
+      "known_at": 10
+    },
+    {
+      "name": "Military examination (武举)",
+      "facet": "Tang government and civil exams",
+      "known_at": 12
+    },
+    {
+      "name": "Golden list (金榜)",
+      "facet": "Tang government and civil exams",
+      "known_at": 7
+    },
+    {
+      "name": "Inscribing names at the Wild Goose Pagoda (雁塔题名)",
+      "facet": "Tang government and civil exams",
+      "known_at": 11
+    },
+    {
+      "name": "Zu-yong-diao (租庸调)",
+      "facet": "Tang government and civil exams",
+      "known_at": 11
+    },
+    {
+      "name": "Two-tax system (两税法)",
+      "facet": "Tang government and civil exams",
+      "known_at": 12
+    },
+    {
+      "name": "Yang Yan",
+      "facet": "Tang government and civil exams",
+      "known_at": 13
+    },
+    {
+      "name": "Fubing system (府兵制)",
+      "facet": "Tang government and civil exams",
+      "known_at": 11
+    },
+    {
+      "name": "Jiedushi (节度使)",
+      "facet": "Tang government and civil exams",
+      "known_at": 11
+    },
+    {
+      "name": "Tang Code (唐律疏议)",
+      "facet": "Tang government and civil exams",
+      "known_at": 12
+    },
+    {
+      "name": "Censorate (御史台)",
+      "facet": "Tang government and civil exams",
+      "known_at": 12
+    },
+    {
+      "name": "Hanlin Academy",
+      "facet": "Tang government and civil exams",
+      "known_at": 10
+    },
+    {
+      "name": "Ten Circuits (十道)",
+      "facet": "Tang government and civil exams",
+      "known_at": 12
+    },
+    {
+      "name": "Fish tally (鱼符)",
+      "facet": "Tang government and civil exams",
+      "known_at": 12
+    },
+    {
+      "name": "Colours of official robes",
+      "facet": "Tang government and civil exams",
+      "known_at": 11
+    },
+    {
+      "name": "Tubo (吐蕃)",
+      "facet": "Tang and its neighbours",
+      "known_at": 9
+    },
+    {
+      "name": "Princess Jincheng",
+      "facet": "Tang and its neighbours",
+      "known_at": 12
+    },
+    {
+      "name": "Tang-Tubo Alliance Tablet",
+      "facet": "Tang and its neighbours",
+      "known_at": 13
+    },
+    {
+      "name": "Japanese envoys to Tang (遣唐使)",
+      "facet": "Tang and its neighbours",
+      "known_at": 8
+    },
+    {
+      "name": "Abe no Nakamaro (Chao Heng)",
+      "facet": "Tang and its neighbours",
+      "known_at": 11
+    },
+    {
+      "name": "Kibi no Makibi",
+      "facet": "Tang and its neighbours",
+      "known_at": 14
+    },
+    {
+      "name": "Heijō-kyō",
+      "facet": "Tang and its neighbours",
+      "known_at": 12
+    },
+    {
+      "name": "Silla",
+      "facet": "Tang and its neighbours",
+      "known_at": 9
+    },
+    {
+      "name": "Goguryeo",
+      "facet": "Tang and its neighbours",
+      "known_at": 10
+    },
+    {
+      "name": "Battle of Baijiang (白江口之战)",
+      "facet": "Tang and its neighbours",
+      "known_at": 12
+    },
+    {
+      "name": "Bohai (渤海国)",
+      "facet": "Tang and its neighbours",
+      "known_at": 12
+    },
+    {
+      "name": "Eastern Turkic Khaganate",
+      "facet": "Tang and its neighbours",
+      "known_at": 11
+    },
+    {
+      "name": "Illig Qaghan",
+      "facet": "Tang and its neighbours",
+      "known_at": 13
+    },
+    {
+      "name": "Uyghur Khaganate",
+      "facet": "Tang and its neighbours",
+      "known_at": 11
+    },
+    {
+      "name": "Anxi Protectorate",
+      "facet": "Tang and its neighbours",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of Talas",
+      "facet": "Tang and its neighbours",
+      "known_at": 11
+    },
+    {
+      "name": "Gao Xianzhi",
+      "facet": "Tang and its neighbours",
+      "known_at": 12
+    },
+    {
+      "name": "Nanzhao",
+      "facet": "Tang and its neighbours",
+      "known_at": 12
+    },
+    {
+      "name": "Sogdians",
+      "facet": "Tang and its neighbours",
+      "known_at": 12
+    },
+    {
+      "name": "Peroz III",
+      "facet": "Tang and its neighbours",
+      "known_at": 14
+    },
+    {
+      "name": "Rainbow Skirt and Feather Garment Dance (霓裳羽衣舞)",
+      "facet": "Tang art, music and dance",
+      "known_at": 9
+    },
+    {
+      "name": "Huxuan whirling dance (胡旋舞)",
+      "facet": "Tang art, music and dance",
+      "known_at": 11
+    },
+    {
+      "name": "Prince of Qin Breaks the Enemy Ranks (秦王破阵乐)",
+      "facet": "Tang art, music and dance",
+      "known_at": 12
+    },
+    {
+      "name": "Gongsun Daniang sword dance",
+      "facet": "Tang art, music and dance",
+      "known_at": 12
+    },
+    {
+      "name": "Li Guinian",
+      "facet": "Tang art, music and dance",
+      "known_at": 12
+    },
+    {
+      "name": "Pipa",
+      "facet": "Tang art, music and dance",
+      "known_at": 4
+    },
+    {
+      "name": "Preface to the Orchid Pavilion (兰亭序)",
+      "facet": "Tang art, music and dance",
+      "known_at": 9
+    },
+    {
+      "name": "Wu Daozi",
+      "facet": "Tang art, music and dance",
+      "known_at": 9
+    },
+    {
+      "name": "Yan Liben",
+      "facet": "Tang art, music and dance",
+      "known_at": 11
+    },
+    {
+      "name": "Emperor Taizong Receiving the Tibetan Envoy (步辇图)",
+      "facet": "Tang art, music and dance",
+      "known_at": 10
+    },
+    {
+      "name": "Court Ladies Wearing Flowered Headdresses (簪花仕女图)",
+      "facet": "Tang art, music and dance",
+      "known_at": 13
+    },
+    {
+      "name": "Han Gan",
+      "facet": "Tang art, music and dance",
+      "known_at": 13
+    },
+    {
+      "name": "Flying Apsaras (飞天)",
+      "facet": "Tang art, music and dance",
+      "known_at": 6
+    },
+    {
+      "name": "Vairocana Buddha of Fengxian Temple",
+      "facet": "Tang art, music and dance",
+      "known_at": 11
+    },
+    {
+      "name": "Tang sancai (唐三彩)",
+      "facet": "Tang crafts, sancai and inventions",
+      "known_at": 6
+    },
+    {
+      "name": "Diamond Sutra of 868",
+      "facet": "Tang crafts, sancai and inventions",
+      "known_at": 9
+    },
+    {
+      "name": "Essential Formulas Worth a Thousand Gold (千金方)",
+      "facet": "Tang crafts, sancai and inventions",
+      "known_at": 11
+    },
+    {
+      "name": "Xinxiu Bencao (新修本草)",
+      "facet": "Tang crafts, sancai and inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Yixing (monk astronomer)",
+      "facet": "Tang crafts, sancai and inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Dayan calendar",
+      "facet": "Tang crafts, sancai and inventions",
+      "known_at": 14
+    },
+    {
+      "name": "Yue ware celadon",
+      "facet": "Tang crafts, sancai and inventions",
+      "known_at": 11
+    },
+    {
+      "name": "Xing ware",
+      "facet": "Tang crafts, sancai and inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Changsha ware",
+      "facet": "Tang crafts, sancai and inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Secret-colour porcelain (秘色瓷)",
+      "facet": "Tang crafts, sancai and inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Hejiacun hoard",
+      "facet": "Tang crafts, sancai and inventions",
+      "known_at": 14
+    },
+    {
+      "name": "Gilt silver flask with dancing horse (舞马衔杯纹银壶)",
+      "facet": "Tang crafts, sancai and inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Curved-shaft plough (曲辕犁)",
+      "facet": "Tang crafts, sancai and inventions",
+      "known_at": 10
+    },
+    {
+      "name": "Tongche waterwheel (筒车)",
+      "facet": "Tang crafts, sancai and inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Shōsōin",
+      "facet": "Tang crafts, sancai and inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Hu cake (胡饼)",
+      "facet": "Daily life, food and festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Grape wine",
+      "facet": "Daily life, food and festivals",
+      "known_at": 9
+    },
+    {
+      "name": "Polo (马球)",
+      "facet": "Daily life, food and festivals",
+      "known_at": 9
+    },
+    {
+      "name": "Lantern Festival",
+      "facet": "Daily life, food and festivals",
+      "known_at": 3
+    },
+    {
+      "name": "Double Ninth Festival",
+      "facet": "Daily life, food and festivals",
+      "known_at": 5
+    },
+    {
+      "name": "Dragon Boat Festival",
+      "facet": "Daily life, food and festivals",
+      "known_at": 2
+    },
+    {
+      "name": "Futou (幞头)",
+      "facet": "Daily life, food and festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Qixiong ruqun (齐胸襦裙)",
+      "facet": "Daily life, food and festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Huadian (花钿)",
+      "facet": "Daily life, food and festivals",
+      "known_at": 9
+    },
+    {
+      "name": "Weimao veiled hat (帷帽)",
+      "facet": "Daily life, food and festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Peony",
+      "facet": "Daily life, food and festivals",
+      "known_at": 6
+    },
+    {
+      "name": "Tangrenjie (唐人街)",
+      "facet": "Daily life, food and festivals",
+      "known_at": 6
+    },
+    {
+      "name": "Flying cash (飞钱)",
+      "facet": "Daily life, food and festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Wang Jixin",
+      "facet": "Daily life, food and festivals",
+      "known_at": 14
+    }
+  ]
+}

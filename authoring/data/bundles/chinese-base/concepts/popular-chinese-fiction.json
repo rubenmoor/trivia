@@ -1,0 +1,1347 @@
+{
+  "subcategory": "popular-chinese-fiction",
+  "facets": [
+    "Jin Yong's wuxia novels",
+    "Jin Yong heroes and heroines",
+    "Martial arts skills and sects",
+    "Gu Long and other wuxia writers",
+    "Liu Cixin and Chinese sci-fi",
+    "Three-Body Problem universe",
+    "Mo Yan and Nobel-era literary fiction",
+    "Yu Hua and modern realist novels",
+    "Qiong Yao romance and TV dramas",
+    "Sanmao and Taiwan-Hong Kong bestsellers",
+    "Web novels and online genres",
+    "Screen adaptations and fan culture"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "The Return of the Condor Heroes (神雕侠侣)",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 4
+    },
+    {
+      "name": "The Heaven Sword and Dragon Saber (倚天屠龙记)",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 5
+    },
+    {
+      "name": "Demi-Gods and Semi-Devils (天龙八部)",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 6
+    },
+    {
+      "name": "The Smiling, Proud Wanderer (笑傲江湖)",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 6
+    },
+    {
+      "name": "The Deer and the Cauldron (鹿鼎记)",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 6
+    },
+    {
+      "name": "Condor Trilogy (射雕三部曲)",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 7
+    },
+    {
+      "name": "Fox Volant of the Snowy Mountain (雪山飞狐)",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 9
+    },
+    {
+      "name": "The Young Flying Fox (飞狐外传)",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 10
+    },
+    {
+      "name": "Sword Stained with Royal Blood (碧血剑)",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 10
+    },
+    {
+      "name": "The Book and the Sword (书剑恩仇录)",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 10
+    },
+    {
+      "name": "A Deadly Secret (连城诀)",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 11
+    },
+    {
+      "name": "Ode to Gallantry (侠客行)",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 11
+    },
+    {
+      "name": "Sword of the Yue Maiden (越女剑)",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 13
+    },
+    {
+      "name": "Blade-Dancing Couple (鸳鸯刀)",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 13
+    },
+    {
+      "name": "White Horse Neighs in the Western Wind (白马啸西风)",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 13
+    },
+    {
+      "name": "飞雪连天射白鹿，笑书神侠倚碧鸳 couplet",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 9
+    },
+    {
+      "name": "Ming Pao (明报)",
+      "facet": "Jin Yong's wuxia novels",
+      "known_at": 11
+    },
+    {
+      "name": "Guo Jing",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 4
+    },
+    {
+      "name": "Huang Rong",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 4
+    },
+    {
+      "name": "Yang Guo",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 4
+    },
+    {
+      "name": "Xiaolongnü (小龙女)",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 4
+    },
+    {
+      "name": "Zhao Min",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 7
+    },
+    {
+      "name": "Zhou Zhiruo",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 8
+    },
+    {
+      "name": "Linghu Chong",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 6
+    },
+    {
+      "name": "Ren Yingying",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 8
+    },
+    {
+      "name": "Wei Xiaobao",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 5
+    },
+    {
+      "name": "Qiao Feng",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 6
+    },
+    {
+      "name": "Duan Yu",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 7
+    },
+    {
+      "name": "Xuzhu",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 7
+    },
+    {
+      "name": "Wang Yuyan",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 9
+    },
+    {
+      "name": "Huang Yaoshi",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 7
+    },
+    {
+      "name": "Ouyang Feng",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 7
+    },
+    {
+      "name": "Hong Qigong",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 7
+    },
+    {
+      "name": "Dongfang Bubai",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 6
+    },
+    {
+      "name": "Yue Buqun",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 9
+    },
+    {
+      "name": "Feng Qingyang",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 9
+    },
+    {
+      "name": "Li Mochou",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 9
+    },
+    {
+      "name": "Hu Fei",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 10
+    },
+    {
+      "name": "Chen Jialuo",
+      "facet": "Jin Yong heroes and heroines",
+      "known_at": 11
+    },
+    {
+      "name": "Emei Sect",
+      "facet": "Martial arts skills and sects",
+      "known_at": 6
+    },
+    {
+      "name": "Beggars' Sect (丐帮)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 6
+    },
+    {
+      "name": "Huashan Sect",
+      "facet": "Martial arts skills and sects",
+      "known_at": 7
+    },
+    {
+      "name": "Ming Cult (明教)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 8
+    },
+    {
+      "name": "Ancient Tomb Sect (古墓派)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 9
+    },
+    {
+      "name": "Peach Blossom Island (桃花岛)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 7
+    },
+    {
+      "name": "Eighteen Dragon-Subduing Palms (降龙十八掌)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 5
+    },
+    {
+      "name": "Nine Yin Manual (九阴真经)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 7
+    },
+    {
+      "name": "Nine Suns Divine Skill (九阳神功)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 9
+    },
+    {
+      "name": "Sunflower Manual (葵花宝典)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 7
+    },
+    {
+      "name": "Nine Swords of Dugu (独孤九剑)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 8
+    },
+    {
+      "name": "Six Meridians Divine Sword (六脉神剑)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 9
+    },
+    {
+      "name": "Qiankun Great Shift (乾坤大挪移)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 9
+    },
+    {
+      "name": "Dog-Beating Staff Technique (打狗棒法)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 8
+    },
+    {
+      "name": "Lingbo Weibu (凌波微步)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 10
+    },
+    {
+      "name": "Tai chi (太极拳)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 3
+    },
+    {
+      "name": "Dragon Saber (屠龙刀)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 6
+    },
+    {
+      "name": "Heaven Sword (倚天剑)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 7
+    },
+    {
+      "name": "Contest of Swords on Mount Hua (华山论剑)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 8
+    },
+    {
+      "name": "Five Greats (东邪西毒南帝北丐)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 8
+    },
+    {
+      "name": "Jianghu (江湖)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 5
+    },
+    {
+      "name": "Wulin (武林)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 6
+    },
+    {
+      "name": "Pressure-point strike (点穴)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 6
+    },
+    {
+      "name": "Qinggong (轻功)",
+      "facet": "Martial arts skills and sects",
+      "known_at": 5
+    },
+    {
+      "name": "Gu Long",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 6
+    },
+    {
+      "name": "Chu Liuxiang",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 7
+    },
+    {
+      "name": "Lu Xiaofeng",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 9
+    },
+    {
+      "name": "Ximen Chuixue",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 9
+    },
+    {
+      "name": "Lingxi Finger (灵犀一指)",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 10
+    },
+    {
+      "name": "Li Xunhuan",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 9
+    },
+    {
+      "name": "Little Li's Flying Dagger (小李飞刀)",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 7
+    },
+    {
+      "name": "Handsome Siblings (绝代双骄)",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 8
+    },
+    {
+      "name": "Fu Hongxue",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 11
+    },
+    {
+      "name": "The Magic Blade (天涯明月刀)",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 10
+    },
+    {
+      "name": "Liang Yusheng",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 11
+    },
+    {
+      "name": "The Bride with White Hair (白发魔女传)",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 10
+    },
+    {
+      "name": "Seven Swords from Mount Heaven (七剑下天山)",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 11
+    },
+    {
+      "name": "Wen Rui'an",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 13
+    },
+    {
+      "name": "The Four Great Constables (四大名捕)",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 10
+    },
+    {
+      "name": "Huang Yi",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 12
+    },
+    {
+      "name": "A Step into the Past (寻秦记)",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Dulu",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 13
+    },
+    {
+      "name": "Huanzhu Louzhu (还珠楼主)",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 14
+    },
+    {
+      "name": "Legend of the Swordsmen of the Mountains of Shu (蜀山剑侠传)",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 12
+    },
+    {
+      "name": "Five great wuxia writers (金古梁温黄)",
+      "facet": "Gu Long and other wuxia writers",
+      "known_at": 12
+    },
+    {
+      "name": "The Wandering Earth (流浪地球)",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 3
+    },
+    {
+      "name": "Ball Lightning (球状闪电)",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 10
+    },
+    {
+      "name": "Supernova Era (超新星纪元)",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 12
+    },
+    {
+      "name": "The Village Teacher (乡村教师)",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 12
+    },
+    {
+      "name": "The Poetry Cloud (诗云)",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 13
+    },
+    {
+      "name": "Niangziguan Power Plant",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 13
+    },
+    {
+      "name": "Hugo Award",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 10
+    },
+    {
+      "name": "Hao Jingfang",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 11
+    },
+    {
+      "name": "Folding Beijing (北京折叠)",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 11
+    },
+    {
+      "name": "Chen Qiufan",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 13
+    },
+    {
+      "name": "Waste Tide (荒潮)",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 14
+    },
+    {
+      "name": "Han Song",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 14
+    },
+    {
+      "name": "Wang Jinkang",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 14
+    },
+    {
+      "name": "Ken Liu",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 12
+    },
+    {
+      "name": "Science Fiction World (科幻世界)",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 10
+    },
+    {
+      "name": "Galaxy Award (银河奖)",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 12
+    },
+    {
+      "name": "Chengdu Worldcon 2023",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 11
+    },
+    {
+      "name": "Ye Yonglie",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 13
+    },
+    {
+      "name": "Little Smart Roams the Future (小灵通漫游未来)",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 11
+    },
+    {
+      "name": "Cat Country (猫城记)",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 13
+    },
+    {
+      "name": "Zheng Wenguang",
+      "facet": "Liu Cixin and Chinese sci-fi",
+      "known_at": 14
+    },
+    {
+      "name": "The Three-Body Problem (三体)",
+      "facet": "Three-Body Problem universe",
+      "known_at": 5
+    },
+    {
+      "name": "The Dark Forest (黑暗森林)",
+      "facet": "Three-Body Problem universe",
+      "known_at": 9
+    },
+    {
+      "name": "Death's End (死神永生)",
+      "facet": "Three-Body Problem universe",
+      "known_at": 10
+    },
+    {
+      "name": "Ye Wenjie",
+      "facet": "Three-Body Problem universe",
+      "known_at": 8
+    },
+    {
+      "name": "Wang Miao",
+      "facet": "Three-Body Problem universe",
+      "known_at": 9
+    },
+    {
+      "name": "Shi Qiang (大史)",
+      "facet": "Three-Body Problem universe",
+      "known_at": 8
+    },
+    {
+      "name": "Luo Ji",
+      "facet": "Three-Body Problem universe",
+      "known_at": 8
+    },
+    {
+      "name": "Cheng Xin",
+      "facet": "Three-Body Problem universe",
+      "known_at": 10
+    },
+    {
+      "name": "Zhang Beihai",
+      "facet": "Three-Body Problem universe",
+      "known_at": 10
+    },
+    {
+      "name": "Thomas Wade",
+      "facet": "Three-Body Problem universe",
+      "known_at": 11
+    },
+    {
+      "name": "Yun Tianming",
+      "facet": "Three-Body Problem universe",
+      "known_at": 11
+    },
+    {
+      "name": "Trisolarans (三体人)",
+      "facet": "Three-Body Problem universe",
+      "known_at": 6
+    },
+    {
+      "name": "Alpha Centauri",
+      "facet": "Three-Body Problem universe",
+      "known_at": 9
+    },
+    {
+      "name": "Sophon (智子)",
+      "facet": "Three-Body Problem universe",
+      "known_at": 8
+    },
+    {
+      "name": "Wallfacer (面壁者)",
+      "facet": "Three-Body Problem universe",
+      "known_at": 9
+    },
+    {
+      "name": "Swordholder (执剑人)",
+      "facet": "Three-Body Problem universe",
+      "known_at": 11
+    },
+    {
+      "name": "Dark forest theory",
+      "facet": "Three-Body Problem universe",
+      "known_at": 9
+    },
+    {
+      "name": "Red Coast Base (红岸基地)",
+      "facet": "Three-Body Problem universe",
+      "known_at": 10
+    },
+    {
+      "name": "Droplet (水滴)",
+      "facet": "Three-Body Problem universe",
+      "known_at": 9
+    },
+    {
+      "name": "Dual-vector foil (二向箔)",
+      "facet": "Three-Body Problem universe",
+      "known_at": 10
+    },
+    {
+      "name": "Three Body game (三体游戏)",
+      "facet": "Three-Body Problem universe",
+      "known_at": 10
+    },
+    {
+      "name": "Operation Guzheng (古筝计划)",
+      "facet": "Three-Body Problem universe",
+      "known_at": 11
+    },
+    {
+      "name": "毁灭你，与你何干",
+      "facet": "Three-Body Problem universe",
+      "known_at": 9
+    },
+    {
+      "name": "Mo Yan",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 6
+    },
+    {
+      "name": "Nobel Prize in Literature",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 7
+    },
+    {
+      "name": "Red Sorghum (红高粱家族)",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 8
+    },
+    {
+      "name": "Life and Death Are Wearing Me Out (生死疲劳)",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 12
+    },
+    {
+      "name": "Frog (蛙)",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 12
+    },
+    {
+      "name": "The Garlic Ballads (天堂蒜薹之歌)",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 13
+    },
+    {
+      "name": "Northeast Gaomi Township (高密东北乡)",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 10
+    },
+    {
+      "name": "Gao Xingjian",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 13
+    },
+    {
+      "name": "Soul Mountain (灵山)",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 14
+    },
+    {
+      "name": "Mao Dun Literature Prize (茅盾文学奖)",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 10
+    },
+    {
+      "name": "Su Tong",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 12
+    },
+    {
+      "name": "Jiang Rong",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 12
+    },
+    {
+      "name": "Wolf Totem (狼图腾)",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Xiaobo",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 11
+    },
+    {
+      "name": "The Golden Age (黄金时代)",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Zhenyun",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 12
+    },
+    {
+      "name": "Jia Pingwa",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 11
+    },
+    {
+      "name": "Bi Feiyu",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 13
+    },
+    {
+      "name": "Can Xue",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 13
+    },
+    {
+      "name": "A Cheng",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 13
+    },
+    {
+      "name": "The King of Chess (棋王)",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 12
+    },
+    {
+      "name": "Mai Jia",
+      "facet": "Mo Yan and Nobel-era literary fiction",
+      "known_at": 12
+    },
+    {
+      "name": "Yu Hua",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 6
+    },
+    {
+      "name": "To Live (活着)",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 5
+    },
+    {
+      "name": "Fugui",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 7
+    },
+    {
+      "name": "Chronicle of a Blood Merchant (许三观卖血记)",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 9
+    },
+    {
+      "name": "Brothers (兄弟)",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 10
+    },
+    {
+      "name": "Cries in the Drizzle (在细雨中呼喊)",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 12
+    },
+    {
+      "name": "Leaving Home at Eighteen (十八岁出门远行)",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 9
+    },
+    {
+      "name": "The Seventh Day (第七天)",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 12
+    },
+    {
+      "name": "Wen Cheng (文城)",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 12
+    },
+    {
+      "name": "Haiyan County",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 13
+    },
+    {
+      "name": "Lu Yao",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 7
+    },
+    {
+      "name": "Ordinary World (平凡的世界)",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 6
+    },
+    {
+      "name": "Sun Shaoping",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 9
+    },
+    {
+      "name": "Life (人生)",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 10
+    },
+    {
+      "name": "Chen Zhongshi",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 10
+    },
+    {
+      "name": "White Deer Plain (白鹿原)",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 9
+    },
+    {
+      "name": "Liang Xiaosheng",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 11
+    },
+    {
+      "name": "A Lifelong Journey (人世间)",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Anyi",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 12
+    },
+    {
+      "name": "The Song of Everlasting Sorrow (长恨歌)",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 12
+    },
+    {
+      "name": "Yan Lianke",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 13
+    },
+    {
+      "name": "Chi Li",
+      "facet": "Yu Hua and modern realist novels",
+      "known_at": 13
+    },
+    {
+      "name": "Qiong Yao",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 5
+    },
+    {
+      "name": "My Fair Princess (还珠格格)",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 2
+    },
+    {
+      "name": "Xiaoyanzi (小燕子)",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 3
+    },
+    {
+      "name": "Xia Ziwei (夏紫薇)",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 4
+    },
+    {
+      "name": "Yongqi (五阿哥)",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 6
+    },
+    {
+      "name": "Emperor Qianlong",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 6
+    },
+    {
+      "name": "Zhao Wei",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 4
+    },
+    {
+      "name": "Ruby Lin (林心如)",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 5
+    },
+    {
+      "name": "Fan Bingbing",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 5
+    },
+    {
+      "name": "Dang (当)",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 5
+    },
+    {
+      "name": "Romance in the Rain (情深深雨濛濛)",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 6
+    },
+    {
+      "name": "Lu Yiping (陆依萍)",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Plum Blossom Scar (梅花烙)",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Outside the Window (窗外)",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 11
+    },
+    {
+      "name": "Fire and Rain (烟雨濛濛)",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 11
+    },
+    {
+      "name": "Six Dreams (六个梦)",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Qiong Yao-style dialogue (琼瑶式台词)",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 6
+    },
+    {
+      "name": "Ma Jingtao",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Brigitte Lin (林青霞)",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Ping Xin-tao (平鑫涛)",
+      "facet": "Qiong Yao romance and TV dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Sanmao",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 6
+    },
+    {
+      "name": "The Stories of the Sahara (撒哈拉的故事)",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 8
+    },
+    {
+      "name": "José (荷西)",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 9
+    },
+    {
+      "name": "Canary Islands",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 11
+    },
+    {
+      "name": "The Olive Tree (橄榄树)",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 9
+    },
+    {
+      "name": "Eileen Chang (张爱玲)",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 8
+    },
+    {
+      "name": "Lin Haiyin",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 8
+    },
+    {
+      "name": "My Memories of Old Beijing (城南旧事)",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 6
+    },
+    {
+      "name": "A Blossoming Tree (一棵开花的树)",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 9
+    },
+    {
+      "name": "Lung Ying-tai (龙应台)",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 11
+    },
+    {
+      "name": "Watching You Go (目送)",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 11
+    },
+    {
+      "name": "Bo Yang",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 12
+    },
+    {
+      "name": "The Ugly Chinaman (丑陋的中国人)",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 12
+    },
+    {
+      "name": "Li Ao",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 12
+    },
+    {
+      "name": "Yi Shu (亦舒)",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 11
+    },
+    {
+      "name": "Ni Kuang (倪匡)",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 11
+    },
+    {
+      "name": "Wisely series (卫斯理)",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 11
+    },
+    {
+      "name": "Giddens Ko (九把刀)",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 10
+    },
+    {
+      "name": "You Are the Apple of My Eye (那些年，我们一起追的女孩)",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 6
+    },
+    {
+      "name": "Jimmy Liao (几米)",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 8
+    },
+    {
+      "name": "Turn Left, Turn Right (向左走，向右走)",
+      "facet": "Sanmao and Taiwan-Hong Kong bestsellers",
+      "known_at": 9
+    },
+    {
+      "name": "Web novel (网络小说)",
+      "facet": "Web novels and online genres",
+      "known_at": 6
+    },
+    {
+      "name": "Qidian (起点中文网)",
+      "facet": "Web novels and online genres",
+      "known_at": 9
+    },
+    {
+      "name": "Jinjiang Literature City (晋江文学城)",
+      "facet": "Web novels and online genres",
+      "known_at": 10
+    },
+    {
+      "name": "Xuanhuan (玄幻)",
+      "facet": "Web novels and online genres",
+      "known_at": 8
+    },
+    {
+      "name": "Time-travel novel (穿越)",
+      "facet": "Web novels and online genres",
+      "known_at": 6
+    },
+    {
+      "name": "Palace intrigue (宫斗)",
+      "facet": "Web novels and online genres",
+      "known_at": 7
+    },
+    {
+      "name": "Golden finger (金手指)",
+      "facet": "Web novels and online genres",
+      "known_at": 9
+    },
+    {
+      "name": "Empresses in the Palace (甄嬛传)",
+      "facet": "Web novels and online genres",
+      "known_at": 5
+    },
+    {
+      "name": "Battle Through the Heavens (斗破苍穹)",
+      "facet": "Web novels and online genres",
+      "known_at": 8
+    },
+    {
+      "name": "Soul Land (斗罗大陆)",
+      "facet": "Web novels and online genres",
+      "known_at": 7
+    },
+    {
+      "name": "Tang Jia San Shao (唐家三少)",
+      "facet": "Web novels and online genres",
+      "known_at": 10
+    },
+    {
+      "name": "Tiancan Tudou (天蚕土豆)",
+      "facet": "Web novels and online genres",
+      "known_at": 11
+    },
+    {
+      "name": "Er Gen (耳根)",
+      "facet": "Web novels and online genres",
+      "known_at": 12
+    },
+    {
+      "name": "Ghost Blows Out the Light (鬼吹灯)",
+      "facet": "Web novels and online genres",
+      "known_at": 8
+    },
+    {
+      "name": "The Grave Robbers' Chronicles (盗墓笔记)",
+      "facet": "Web novels and online genres",
+      "known_at": 7
+    },
+    {
+      "name": "Nanpai Sanshu (南派三叔)",
+      "facet": "Web novels and online genres",
+      "known_at": 10
+    },
+    {
+      "name": "Grandmaster of Demonic Cultivation (魔道祖师)",
+      "facet": "Web novels and online genres",
+      "known_at": 7
+    },
+    {
+      "name": "Mo Xiang Tong Xiu (墨香铜臭)",
+      "facet": "Web novels and online genres",
+      "known_at": 10
+    },
+    {
+      "name": "Eternal Love (三生三世十里桃花)",
+      "facet": "Web novels and online genres",
+      "known_at": 6
+    },
+    {
+      "name": "Tangqi Gongzi (唐七公子)",
+      "facet": "Web novels and online genres",
+      "known_at": 12
+    },
+    {
+      "name": "Nirvana in Fire (琅琊榜)",
+      "facet": "Web novels and online genres",
+      "known_at": 6
+    },
+    {
+      "name": "Hai Yan (海宴)",
+      "facet": "Web novels and online genres",
+      "known_at": 12
+    },
+    {
+      "name": "Joy of Life (庆余年)",
+      "facet": "Web novels and online genres",
+      "known_at": 7
+    },
+    {
+      "name": "Lord of the Mysteries (诡秘之主)",
+      "facet": "Web novels and online genres",
+      "known_at": 10
+    },
+    {
+      "name": "Three-Body TV series (2023)",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 6
+    },
+    {
+      "name": "Wu Jing",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 4
+    },
+    {
+      "name": "Frant Gwo (郭帆)",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 9
+    },
+    {
+      "name": "Ge You",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 8
+    },
+    {
+      "name": "Gong Li",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 8
+    },
+    {
+      "name": "The Legend of the Condor Heroes (1983 TVB series)",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 9
+    },
+    {
+      "name": "Barbara Yung (翁美玲)",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 11
+    },
+    {
+      "name": "Huang Xiaoming",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 6
+    },
+    {
+      "name": "Jet Li",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 4
+    },
+    {
+      "name": "Swordsman II (笑傲江湖之东方不败)",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 10
+    },
+    {
+      "name": "Tsui Hark",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 9
+    },
+    {
+      "name": "Ashes of Time (东邪西毒)",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 11
+    },
+    {
+      "name": "Kung Fu Hustle (功夫)",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 4
+    },
+    {
+      "name": "Crouching Tiger, Hidden Dragon (卧虎藏龙)",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 6
+    },
+    {
+      "name": "Ang Lee",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 7
+    },
+    {
+      "name": "The Untamed (陈情令)",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 6
+    },
+    {
+      "name": "Xiao Zhan",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 5
+    },
+    {
+      "name": "Zhang Jizhong",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 10
+    },
+    {
+      "name": "Bullet comments (弹幕)",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 7
+    },
+    {
+      "name": "Fan fiction (同人)",
+      "facet": "Screen adaptations and fan culture",
+      "known_at": 8
+    }
+  ]
+}

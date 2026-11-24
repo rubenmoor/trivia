@@ -1,0 +1,879 @@
+{
+  "subcategory": "farming-and-silk",
+  "facets": [
+    "Rice paddies and rice growing",
+    "Wheat, millet and northern crops",
+    "Famous rice terraces",
+    "Silkworms and their life cycle",
+    "Silk making and the Silk Road",
+    "Silk legends and history",
+    "Water buffalo and farm animals",
+    "Cormorant fishing and river fishing",
+    "Traditional farm tools and irrigation",
+    "Farming seasons and solar terms",
+    "Tea, mulberry and cash crops",
+    "Farming in poems and sayings"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 5,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "body_senses": 1,
+      "colombia": 1,
+      "educational_media": 4,
+      "everyday": 4,
+      "history": 5,
+      "language": 3,
+      "nature": 5,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "school": 5,
+      "science_news": 2,
+      "university": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Rice paddies",
+      "facet": "Rice paddies and rice growing",
+      "known_at": 2
+    },
+    {
+      "name": "Transplanting rice seedlings (插秧)",
+      "facet": "Rice paddies and rice growing",
+      "known_at": 4
+    },
+    {
+      "name": "Rice husk",
+      "facet": "Rice paddies and rice growing",
+      "known_at": 5
+    },
+    {
+      "name": "Glutinous rice",
+      "facet": "Rice paddies and rice growing",
+      "known_at": 4
+    },
+    {
+      "name": "Japonica rice",
+      "facet": "Rice paddies and rice growing",
+      "known_at": 12
+    },
+    {
+      "name": "Indica rice",
+      "facet": "Rice paddies and rice growing",
+      "known_at": 12
+    },
+    {
+      "name": "Brown rice",
+      "facet": "Rice paddies and rice growing",
+      "known_at": 6
+    },
+    {
+      "name": "Rice-fish farming",
+      "facet": "Rice paddies and rice growing",
+      "known_at": 9
+    },
+    {
+      "name": "Rice-duck farming",
+      "facet": "Rice paddies and rice growing",
+      "known_at": 10
+    },
+    {
+      "name": "Threshing rice",
+      "facet": "Rice paddies and rice growing",
+      "known_at": 7
+    },
+    {
+      "name": "Scarecrow",
+      "facet": "Rice paddies and rice growing",
+      "known_at": 2,
+      "retired": "used_up: Birds and old clothes are already asked. The straw answer is in the Chinese name 稻草人, so it gives itself away in zh."
+    },
+    {
+      "name": "Double-cropping rice",
+      "facet": "Rice paddies and rice growing",
+      "known_at": 11
+    },
+    {
+      "name": "Frogs in rice paddies",
+      "facet": "Rice paddies and rice growing",
+      "known_at": 4
+    },
+    {
+      "name": "Rice harvest",
+      "facet": "Rice paddies and rice growing",
+      "known_at": 3
+    },
+    {
+      "name": "Wheat",
+      "facet": "Wheat, millet and northern crops",
+      "known_at": 1
+    },
+    {
+      "name": "Foxtail millet",
+      "facet": "Wheat, millet and northern crops",
+      "known_at": 10
+    },
+    {
+      "name": "Broomcorn millet",
+      "facet": "Wheat, millet and northern crops",
+      "known_at": 12
+    },
+    {
+      "name": "Soybean",
+      "facet": "Wheat, millet and northern crops",
+      "known_at": 3
+    },
+    {
+      "name": "Buckwheat",
+      "facet": "Wheat, millet and northern crops",
+      "known_at": 7
+    },
+    {
+      "name": "Oats",
+      "facet": "Wheat, millet and northern crops",
+      "known_at": 6
+    },
+    {
+      "name": "Potato",
+      "facet": "Wheat, millet and northern crops",
+      "known_at": 1
+    },
+    {
+      "name": "Peanut",
+      "facet": "Wheat, millet and northern crops",
+      "known_at": 2
+    },
+    {
+      "name": "Highland barley (青稞)",
+      "facet": "Wheat, millet and northern crops",
+      "known_at": 9
+    },
+    {
+      "name": "Northeast black soil",
+      "facet": "Wheat, millet and northern crops",
+      "known_at": 10
+    },
+    {
+      "name": "Five Grains (五谷)",
+      "facet": "Wheat, millet and northern crops",
+      "known_at": 7
+    },
+    {
+      "name": "Combine harvester",
+      "facet": "Wheat, millet and northern crops",
+      "known_at": 6
+    },
+    {
+      "name": "Terrace farming (梯田)",
+      "facet": "Famous rice terraces",
+      "known_at": 5
+    },
+    {
+      "name": "Longji terraces",
+      "facet": "Famous rice terraces",
+      "known_at": 9
+    },
+    {
+      "name": "Hani people",
+      "facet": "Famous rice terraces",
+      "known_at": 10
+    },
+    {
+      "name": "Yao people",
+      "facet": "Famous rice terraces",
+      "known_at": 11
+    },
+    {
+      "name": "Zhuang people",
+      "facet": "Famous rice terraces",
+      "known_at": 9
+    },
+    {
+      "name": "Ziquejie terraces",
+      "facet": "Famous rice terraces",
+      "known_at": 13
+    },
+    {
+      "name": "Jiabang terraces",
+      "facet": "Famous rice terraces",
+      "known_at": 13
+    },
+    {
+      "name": "Youxi Lianhe terraces",
+      "facet": "Famous rice terraces",
+      "known_at": 14
+    },
+    {
+      "name": "Chongyi Hakka terraces",
+      "facet": "Famous rice terraces",
+      "known_at": 14
+    },
+    {
+      "name": "Dazhai",
+      "facet": "Famous rice terraces",
+      "known_at": 12
+    },
+    {
+      "name": "Hani long-street banquet (长街宴)",
+      "facet": "Famous rice terraces",
+      "known_at": 13
+    },
+    {
+      "name": "Banaue Rice Terraces",
+      "facet": "Famous rice terraces",
+      "known_at": 12
+    },
+    {
+      "name": "Ifugao people",
+      "facet": "Famous rice terraces",
+      "known_at": 14
+    },
+    {
+      "name": "Tegallalang rice terraces",
+      "facet": "Famous rice terraces",
+      "known_at": 12
+    },
+    {
+      "name": "Sapa rice terraces",
+      "facet": "Famous rice terraces",
+      "known_at": 12
+    },
+    {
+      "name": "Silkworm eggs",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 4
+    },
+    {
+      "name": "Silk moth",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 5
+    },
+    {
+      "name": "Silkworm pupa",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 6
+    },
+    {
+      "name": "Spinning silk (吐丝)",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 3
+    },
+    {
+      "name": "Molting",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 6
+    },
+    {
+      "name": "Silkworm sleep (蚕眠)",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 9
+    },
+    {
+      "name": "Complete metamorphosis",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 8
+    },
+    {
+      "name": "Bombyx mori",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 12
+    },
+    {
+      "name": "Tussah silkworm (柞蚕)",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 12
+    },
+    {
+      "name": "Silk gland",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 11
+    },
+    {
+      "name": "Silkworm droppings (蚕沙)",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 13
+    },
+    {
+      "name": "Instar",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 13
+    },
+    {
+      "name": "Raising silkworms at school",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 3
+    },
+    {
+      "name": "Spring silkworms (春蚕)",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 7
+    },
+    {
+      "name": "Fibroin",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 14
+    },
+    {
+      "name": "Sericin",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 14
+    },
+    {
+      "name": "Fried silkworm pupae (蚕蛹)",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 8
+    },
+    {
+      "name": "Silkworm rearing tray (蚕匾)",
+      "facet": "Silkworms and their life cycle",
+      "known_at": 12,
+      "retired": "unaskable: The only fair fact (made of bamboo) is far too easy for a 13. The other options don't fit a rearing tray."
+    },
+    {
+      "name": "Silk reeling (缫丝)",
+      "facet": "Silk making and the Silk Road",
+      "known_at": 10
+    },
+    {
+      "name": "Loom",
+      "facet": "Silk making and the Silk Road",
+      "known_at": 6
+    },
+    {
+      "name": "Shu brocade",
+      "facet": "Silk making and the Silk Road",
+      "known_at": 11
+    },
+    {
+      "name": "Yun brocade",
+      "facet": "Silk making and the Silk Road",
+      "known_at": 12
+    },
+    {
+      "name": "Hangzhou silk",
+      "facet": "Silk making and the Silk Road",
+      "known_at": 8
+    },
+    {
+      "name": "Silk Princess of Khotan",
+      "facet": "Silk legends and history",
+      "known_at": 13
+    },
+    {
+      "name": "Horse-head Silkworm Goddess (马头娘)",
+      "facet": "Silk legends and history",
+      "known_at": 13
+    },
+    {
+      "name": "Cancong (蚕丛)",
+      "facet": "Silk legends and history",
+      "known_at": 14
+    },
+    {
+      "name": "Silkworm god (蚕神)",
+      "facet": "Silk legends and history",
+      "known_at": 10
+    },
+    {
+      "name": "Mawangdui silk",
+      "facet": "Silk legends and history",
+      "known_at": 11
+    },
+    {
+      "name": "Plain gauze gown of Mawangdui (素纱襌衣)",
+      "facet": "Silk legends and history",
+      "known_at": 13
+    },
+    {
+      "name": "Qianshanyang site",
+      "facet": "Silk legends and history",
+      "known_at": 15
+    },
+    {
+      "name": "Byzantine monks smuggling silkworm eggs",
+      "facet": "Silk legends and history",
+      "known_at": 14
+    },
+    {
+      "name": "Silk as currency",
+      "facet": "Silk legends and history",
+      "known_at": 12
+    },
+    {
+      "name": "Jiangning Imperial Silk Manufactory (江宁织造)",
+      "facet": "Silk legends and history",
+      "known_at": 13
+    },
+    {
+      "name": "Empress's sericulture rite (亲蚕礼)",
+      "facet": "Silk legends and history",
+      "known_at": 13
+    },
+    {
+      "name": "Altar of the First Silkworm (先蚕坛)",
+      "facet": "Silk legends and history",
+      "known_at": 14
+    },
+    {
+      "name": "Seres",
+      "facet": "Silk legends and history",
+      "known_at": 13
+    },
+    {
+      "name": "Character 蚕 (cán)",
+      "facet": "Silk legends and history",
+      "known_at": 11
+    },
+    {
+      "name": "Character 丝 (sī)",
+      "facet": "Silk legends and history",
+      "known_at": 12
+    },
+    {
+      "name": "Yellow cattle (黄牛)",
+      "facet": "Water buffalo and farm animals",
+      "known_at": 3
+    },
+    {
+      "name": "Goose",
+      "facet": "Water buffalo and farm animals",
+      "known_at": 2
+    },
+    {
+      "name": "Duck",
+      "facet": "Water buffalo and farm animals",
+      "known_at": 1
+    },
+    {
+      "name": "Mule",
+      "facet": "Water buffalo and farm animals",
+      "known_at": 6
+    },
+    {
+      "name": "Ox-drawn plough",
+      "facet": "Water buffalo and farm animals",
+      "known_at": 5
+    },
+    {
+      "name": "Year of the Ox",
+      "facet": "Water buffalo and farm animals",
+      "known_at": 2
+    },
+    {
+      "name": "Herdboy (牧童)",
+      "facet": "Water buffalo and farm animals",
+      "known_at": 6
+    },
+    {
+      "name": "The Cowherd and the Weaver Girl",
+      "facet": "Water buffalo and farm animals",
+      "known_at": 4
+    },
+    {
+      "name": "Silkie chicken (乌鸡)",
+      "facet": "Water buffalo and farm animals",
+      "known_at": 7
+    },
+    {
+      "name": "Meishan pig",
+      "facet": "Water buffalo and farm animals",
+      "known_at": 13
+    },
+    {
+      "name": "Jinhua pig",
+      "facet": "Water buffalo and farm animals",
+      "known_at": 13
+    },
+    {
+      "name": "Tan sheep",
+      "facet": "Water buffalo and farm animals",
+      "known_at": 12
+    },
+    {
+      "name": "Fat-tailed sheep",
+      "facet": "Water buffalo and farm animals",
+      "known_at": 10
+    },
+    {
+      "name": "Cattle egret",
+      "facet": "Water buffalo and farm animals",
+      "known_at": 8
+    },
+    {
+      "name": "Nose ring of an ox",
+      "facet": "Water buffalo and farm animals",
+      "known_at": 6
+    },
+    {
+      "name": "Cormorant",
+      "facet": "Cormorant fishing and river fishing",
+      "known_at": 5
+    },
+    {
+      "name": "Bamboo raft",
+      "facet": "Cormorant fishing and river fishing",
+      "known_at": 5
+    },
+    {
+      "name": "Bamboo fish trap",
+      "facet": "Cormorant fishing and river fishing",
+      "known_at": 6
+    },
+    {
+      "name": "Four major domestic carps (四大家鱼)",
+      "facet": "Cormorant fishing and river fishing",
+      "known_at": 11
+    },
+    {
+      "name": "Qinghai Lake naked carp",
+      "facet": "Cormorant fishing and river fishing",
+      "known_at": 12
+    },
+    {
+      "name": "Hezhen fish-skin clothing",
+      "facet": "Cormorant fishing and river fishing",
+      "known_at": 12
+    },
+    {
+      "name": "Water town (水乡)",
+      "facet": "Cormorant fishing and river fishing",
+      "known_at": 6
+    },
+    {
+      "name": "Tanka boat people",
+      "facet": "Cormorant fishing and river fishing",
+      "known_at": 13
+    },
+    {
+      "name": "Waterwheel",
+      "facet": "Traditional farm tools and irrigation",
+      "known_at": 5
+    },
+    {
+      "name": "Dragon-backbone water pump (龙骨水车)",
+      "facet": "Traditional farm tools and irrigation",
+      "known_at": 11
+    },
+    {
+      "name": "Lanzhou waterwheels",
+      "facet": "Traditional farm tools and irrigation",
+      "known_at": 11
+    },
+    {
+      "name": "Plough",
+      "facet": "Traditional farm tools and irrigation",
+      "known_at": 4
+    },
+    {
+      "name": "Hoe",
+      "facet": "Traditional farm tools and irrigation",
+      "known_at": 3
+    },
+    {
+      "name": "Sickle",
+      "facet": "Traditional farm tools and irrigation",
+      "known_at": 3
+    },
+    {
+      "name": "Winnowing basket",
+      "facet": "Traditional farm tools and irrigation",
+      "known_at": 6
+    },
+    {
+      "name": "Winnowing machine (风车)",
+      "facet": "Traditional farm tools and irrigation",
+      "known_at": 10
+    },
+    {
+      "name": "Stone mill",
+      "facet": "Traditional farm tools and irrigation",
+      "known_at": 5
+    },
+    {
+      "name": "Foot-operated pestle (碓)",
+      "facet": "Traditional farm tools and irrigation",
+      "known_at": 7
+    },
+    {
+      "name": "Flail",
+      "facet": "Traditional farm tools and irrigation",
+      "known_at": 9
+    },
+    {
+      "name": "Carrying pole (扁担)",
+      "facet": "Traditional farm tools and irrigation",
+      "known_at": 3
+    },
+    {
+      "name": "Bamboo hat (斗笠)",
+      "facet": "Traditional farm tools and irrigation",
+      "known_at": 3
+    },
+    {
+      "name": "Straw rain cape (蓑衣)",
+      "facet": "Traditional farm tools and irrigation",
+      "known_at": 7
+    },
+    {
+      "name": "Qimin Yaoshu",
+      "facet": "Traditional farm tools and irrigation",
+      "known_at": 12
+    },
+    {
+      "name": "Jia Sixie",
+      "facet": "Traditional farm tools and irrigation",
+      "known_at": 13
+    },
+    {
+      "name": "24 solar terms",
+      "facet": "Farming seasons and solar terms",
+      "known_at": 6
+    },
+    {
+      "name": "Chinese lunisolar calendar (农历)",
+      "facet": "Farming seasons and solar terms",
+      "known_at": 3
+    },
+    {
+      "name": "Jingzhe (惊蛰)",
+      "facet": "Farming seasons and solar terms",
+      "known_at": 7
+    },
+    {
+      "name": "Guyu (谷雨)",
+      "facet": "Farming seasons and solar terms",
+      "known_at": 9
+    },
+    {
+      "name": "Xiaoman (小满)",
+      "facet": "Farming seasons and solar terms",
+      "known_at": 10
+    },
+    {
+      "name": "Mangzhong (芒种)",
+      "facet": "Farming seasons and solar terms",
+      "known_at": 9
+    },
+    {
+      "name": "Xiazhi (夏至)",
+      "facet": "Farming seasons and solar terms",
+      "known_at": 5
+    },
+    {
+      "name": "Liqiu (立秋)",
+      "facet": "Farming seasons and solar terms",
+      "known_at": 7
+    },
+    {
+      "name": "Bailu (白露)",
+      "facet": "Farming seasons and solar terms",
+      "known_at": 9
+    },
+    {
+      "name": "Shuangjiang (霜降)",
+      "facet": "Farming seasons and solar terms",
+      "known_at": 9
+    },
+    {
+      "name": "Dongzhi (冬至)",
+      "facet": "Farming seasons and solar terms",
+      "known_at": 4
+    },
+    {
+      "name": "Dahan (大寒)",
+      "facet": "Farming seasons and solar terms",
+      "known_at": 8
+    },
+    {
+      "name": "Three Dog Days (三伏天)",
+      "facet": "Farming seasons and solar terms",
+      "known_at": 6
+    },
+    {
+      "name": "Spring ploughing",
+      "facet": "Farming seasons and solar terms",
+      "known_at": 4
+    },
+    {
+      "name": "Autumn harvest",
+      "facet": "Farming seasons and solar terms",
+      "known_at": 2
+    },
+    {
+      "name": "Mulberry tree",
+      "facet": "Tea, mulberry and cash crops",
+      "known_at": 4
+    },
+    {
+      "name": "Mulberry fruit",
+      "facet": "Tea, mulberry and cash crops",
+      "known_at": 4
+    },
+    {
+      "name": "Mulberry-dike fish pond (桑基鱼塘)",
+      "facet": "Tea, mulberry and cash crops",
+      "known_at": 10
+    },
+    {
+      "name": "Tea plant",
+      "facet": "Tea, mulberry and cash crops",
+      "known_at": 3
+    },
+    {
+      "name": "Cotton",
+      "facet": "Tea, mulberry and cash crops",
+      "known_at": 3
+    },
+    {
+      "name": "Xinjiang long-staple cotton",
+      "facet": "Tea, mulberry and cash crops",
+      "known_at": 10
+    },
+    {
+      "name": "Huang Daopo",
+      "facet": "Tea, mulberry and cash crops",
+      "known_at": 12
+    },
+    {
+      "name": "Sugarcane",
+      "facet": "Tea, mulberry and cash crops",
+      "known_at": 2
+    },
+    {
+      "name": "Bamboo",
+      "facet": "Tea, mulberry and cash crops",
+      "known_at": 1
+    },
+    {
+      "name": "Ramie",
+      "facet": "Tea, mulberry and cash crops",
+      "known_at": 13
+    },
+    {
+      "name": "Tung oil tree",
+      "facet": "Tea, mulberry and cash crops",
+      "known_at": 13
+    },
+    {
+      "name": "Lacquer tree",
+      "facet": "Tea, mulberry and cash crops",
+      "known_at": 12
+    },
+    {
+      "name": "Ningxia wolfberry",
+      "facet": "Tea, mulberry and cash crops",
+      "known_at": 7
+    },
+    {
+      "name": "悯农 (mǐn nóng, \"Pity the Peasants\")",
+      "facet": "Farming in poems and sayings",
+      "known_at": 3
+    },
+    {
+      "name": "Li Shen",
+      "facet": "Farming in poems and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "桃花源记 (táo huā yuán jì, \"The Peach Blossom Spring\")",
+      "facet": "Farming in poems and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "归园田居 (guī yuán tián jū, \"Returning to the Fields\")",
+      "facet": "Farming in poems and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Fan Chengda",
+      "facet": "Farming in poems and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "四时田园杂兴 (sì shí tián yuán zá xìng, \"Rural Life in Four Seasons\")",
+      "facet": "Farming in poems and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "乡村四月 (xiāng cūn sì yuè, \"The Village in April\")",
+      "facet": "Farming in poems and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "过故人庄 (guò gù rén zhuāng, \"Visiting an Old Friend's Farm\")",
+      "facet": "Farming in poems and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "西江月·夜行黄沙道中 (xī jiāng yuè, \"Night Walk on the Yellow Sand Road\")",
+      "facet": "Farming in poems and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "硕鼠 (shuò shǔ, \"Big Rat\")",
+      "facet": "Farming in poems and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "蚕妇 (cán fù, \"The Silkworm Woman\")",
+      "facet": "Farming in poems and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "春蚕到死丝方尽 (chūn cán dào sǐ sī fāng jìn, \"the spring silkworm spins until it dies\")",
+      "facet": "Farming in poems and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "揠苗助长 (yà miáo zhù zhǎng, \"pulling up seedlings to help them grow\")",
+      "facet": "Farming in poems and sayings",
+      "known_at": 5
+    },
+    {
+      "name": "守株待兔 (shǒu zhū dài tù, \"waiting by a tree stump for a rabbit\")",
+      "facet": "Farming in poems and sayings",
+      "known_at": 3
+    },
+    {
+      "name": "一年之计在于春 (yī nián zhī jì zài yú chūn, \"the year's plan is made in spring\")",
+      "facet": "Farming in poems and sayings",
+      "known_at": 4
+    },
+    {
+      "name": "五谷丰登 (wǔ gǔ fēng dēng, \"a bumper harvest of all grains\")",
+      "facet": "Farming in poems and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "渭川田家 (wèi chuān tián jiā, \"Farmhouse on the Wei River\")",
+      "facet": "Farming in poems and sayings",
+      "known_at": 13
+    }
+  ]
+}

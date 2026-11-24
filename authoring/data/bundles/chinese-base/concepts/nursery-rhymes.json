@@ -1,0 +1,954 @@
+{
+  "subcategory": "nursery-rhymes",
+  "facets": [
+    "Animal songs and rhymes",
+    "Family and home songs",
+    "Clapping and counting rhymes",
+    "Playground game songs",
+    "Story songs and fables",
+    "Nature, seasons and weather songs",
+    "Festival and occasion songs",
+    "Lullabies and bedtime rhymes",
+    "Good habits and helping songs",
+    "Cartoon and film theme songs",
+    "Classic songs and their composers",
+    "Folk rhymes and tongue twisters"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 4,
+      "estimate": 1,
+      "record": 1,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 3,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Two Tigers (两只老虎)",
+      "facet": "Animal songs and rhymes",
+      "known_at": 1
+    },
+    {
+      "name": "Little Rabbit, Be Good (小兔子乖乖)",
+      "facet": "Animal songs and rhymes",
+      "known_at": 1
+    },
+    {
+      "name": "Counting Ducks (数鸭子)",
+      "facet": "Animal songs and rhymes",
+      "known_at": 2
+    },
+    {
+      "name": "Little Swallow (小燕子)",
+      "facet": "Animal songs and rhymes",
+      "known_at": 2
+    },
+    {
+      "name": "I Have a Little Donkey (小毛驴)",
+      "facet": "Animal songs and rhymes",
+      "known_at": 2
+    },
+    {
+      "name": "Little Mouse Climbs the Lamp Stand (小老鼠上灯台)",
+      "facet": "Animal songs and rhymes",
+      "known_at": 2
+    },
+    {
+      "name": "Little White Rabbit (小白兔白又白)",
+      "facet": "Animal songs and rhymes",
+      "known_at": 1
+    },
+    {
+      "name": "The Snail and the Oriole (蜗牛与黄鹂鸟)",
+      "facet": "Animal songs and rhymes",
+      "known_at": 4
+    },
+    {
+      "name": "Catching Loaches (捉泥鳅)",
+      "facet": "Animal songs and rhymes",
+      "known_at": 5
+    },
+    {
+      "name": "Little Bee (小蜜蜂)",
+      "facet": "Animal songs and rhymes",
+      "known_at": 2
+    },
+    {
+      "name": "Big Rooster (大公鸡)",
+      "facet": "Animal songs and rhymes",
+      "known_at": 3
+    },
+    {
+      "name": "I Am a Little Duck (小鸭子)",
+      "facet": "Animal songs and rhymes",
+      "known_at": 2
+    },
+    {
+      "name": "A Little Pug at the Door (一只哈巴狗)",
+      "facet": "Animal songs and rhymes",
+      "known_at": 3
+    },
+    {
+      "name": "I Love My Little Animals (我爱我的小动物)",
+      "facet": "Animal songs and rhymes",
+      "known_at": 3
+    },
+    {
+      "name": "Two Little Elephants (两只小象)",
+      "facet": "Animal songs and rhymes",
+      "known_at": 4
+    },
+    {
+      "name": "Little Frog (小青蛙)",
+      "facet": "Animal songs and rhymes",
+      "known_at": 3
+    },
+    {
+      "name": "Only Mum Is Good in the World (世上只有妈妈好)",
+      "facet": "Family and home songs",
+      "known_at": 2
+    },
+    {
+      "name": "My Good Mum (我的好妈妈)",
+      "facet": "Family and home songs",
+      "known_at": 3
+    },
+    {
+      "name": "No More Trouble for Mum (不再麻烦好妈妈)",
+      "facet": "Family and home songs",
+      "known_at": 5
+    },
+    {
+      "name": "Little Crow Loves Mum (小乌鸦爱妈妈)",
+      "facet": "Family and home songs",
+      "known_at": 4
+    },
+    {
+      "name": "Grandma's Penghu Bay (外婆的澎湖湾)",
+      "facet": "Family and home songs",
+      "known_at": 8
+    },
+    {
+      "name": "Three Treasures (吉祥三宝)",
+      "facet": "Family and home songs",
+      "known_at": 7
+    },
+    {
+      "name": "Lupin Flower (鲁冰花)",
+      "facet": "Family and home songs",
+      "known_at": 8
+    },
+    {
+      "name": "Mum in the Candlelight (烛光里的妈妈)",
+      "facet": "Family and home songs",
+      "known_at": 9
+    },
+    {
+      "name": "Mother's Kiss (妈妈的吻)",
+      "facet": "Family and home songs",
+      "known_at": 10
+    },
+    {
+      "name": "Good Dad, Bad Dad (好爸爸坏爸爸)",
+      "facet": "Family and home songs",
+      "known_at": 7,
+      "retired": "unaskable: I'm not sure enough about this song's lyrics or details to write a fair question."
+    },
+    {
+      "name": "Let Love Live in My Home (让爱住我家)",
+      "facet": "Family and home songs",
+      "known_at": 8,
+      "retired": "unaskable: I'm not sure enough about who wrote or sang this song or about its lyrics to write a question."
+    },
+    {
+      "name": "Come Home Often (常回家看看)",
+      "facet": "Family and home songs",
+      "known_at": 9
+    },
+    {
+      "name": "Kiss My Baby (亲亲我的宝贝)",
+      "facet": "Family and home songs",
+      "known_at": 8
+    },
+    {
+      "name": "Listening to Mum Tell of the Past (听妈妈讲那过去的事情)",
+      "facet": "Family and home songs",
+      "known_at": 11
+    },
+    {
+      "name": "Where Are We Going, Dad? (爸爸去哪儿)",
+      "facet": "Family and home songs",
+      "known_at": 6
+    },
+    {
+      "name": "You Clap One, I Clap One (你拍一我拍一)",
+      "facet": "Clapping and counting rhymes",
+      "known_at": 2
+    },
+    {
+      "name": "One, Two, Three, Four, Five, Up the Hill to Hunt a Tiger (上山打老虎)",
+      "facet": "Clapping and counting rhymes",
+      "known_at": 1
+    },
+    {
+      "name": "One Frog, One Mouth (一只青蛙一张嘴)",
+      "facet": "Clapping and counting rhymes",
+      "known_at": 4
+    },
+    {
+      "name": "Point at Soldiers, Point at Generals (点兵点将)",
+      "facet": "Clapping and counting rhymes",
+      "known_at": 3
+    },
+    {
+      "name": "Little Ball, Banana, Pear (小皮球香蕉梨)",
+      "facet": "Clapping and counting rhymes",
+      "known_at": 4
+    },
+    {
+      "name": "Multiplication Rhyme (九九乘法口诀)",
+      "facet": "Clapping and counting rhymes",
+      "known_at": 3
+    },
+    {
+      "name": "One Go, Two or Three Li (一去二三里)",
+      "facet": "Clapping and counting rhymes",
+      "known_at": 4
+    },
+    {
+      "name": "Twelve Zodiac Animals Song (十二生肖歌)",
+      "facet": "Clapping and counting rhymes",
+      "known_at": 3
+    },
+    {
+      "name": "Number Song (数字歌)",
+      "facet": "Clapping and counting rhymes",
+      "known_at": 3
+    },
+    {
+      "name": "One Finger Changes (一根手指头变变变)",
+      "facet": "Clapping and counting rhymes",
+      "known_at": 3
+    },
+    {
+      "name": "Rock, Paper, Scissors (石头剪刀布)",
+      "facet": "Clapping and counting rhymes",
+      "known_at": 1
+    },
+    {
+      "name": "Clap Your Hands (拍拍手)",
+      "facet": "Clapping and counting rhymes",
+      "known_at": 2
+    },
+    {
+      "name": "Counting Stars (数星星)",
+      "facet": "Clapping and counting rhymes",
+      "known_at": 4
+    },
+    {
+      "name": "Ten Little Fingers (十个手指头)",
+      "facet": "Clapping and counting rhymes",
+      "known_at": 3
+    },
+    {
+      "name": "Dropping the Handkerchief (丢手绢)",
+      "facet": "Playground game songs",
+      "known_at": 2
+    },
+    {
+      "name": "Finding Friends (找朋友)",
+      "facet": "Playground game songs",
+      "known_at": 2
+    },
+    {
+      "name": "Eagle Catches Chicks (老鹰捉小鸡)",
+      "facet": "Playground game songs",
+      "known_at": 2
+    },
+    {
+      "name": "One, Two, Three, Wooden Man (一二三木头人)",
+      "facet": "Playground game songs",
+      "known_at": 3
+    },
+    {
+      "name": "Weaving a Flower Basket (编花篮)",
+      "facet": "Playground game songs",
+      "known_at": 6
+    },
+    {
+      "name": "How High Is the City Gate (城门城门几丈高)",
+      "facet": "Playground game songs",
+      "known_at": 7
+    },
+    {
+      "name": "Pull the Big Saw (拉大锯扯大锯)",
+      "facet": "Playground game songs",
+      "known_at": 6
+    },
+    {
+      "name": "Frying Beans (炒豆豆)",
+      "facet": "Playground game songs",
+      "known_at": 6
+    },
+    {
+      "name": "Hopscotch (跳房子)",
+      "facet": "Playground game songs",
+      "known_at": 3
+    },
+    {
+      "name": "Elastic Rope Skipping (跳皮筋)",
+      "facet": "Playground game songs",
+      "known_at": 4
+    },
+    {
+      "name": "Sandbag Toss (丢沙包)",
+      "facet": "Playground game songs",
+      "known_at": 4
+    },
+    {
+      "name": "Old Wolf, What Time Is It? (老狼老狼几点了)",
+      "facet": "Playground game songs",
+      "known_at": 4
+    },
+    {
+      "name": "Hide-and-seek (捉迷藏)",
+      "facet": "Playground game songs",
+      "known_at": 1
+    },
+    {
+      "name": "Cat's Cradle (翻花绳)",
+      "facet": "Playground game songs",
+      "known_at": 5
+    },
+    {
+      "name": "Driving the Train (开火车)",
+      "facet": "Playground game songs",
+      "known_at": 4
+    },
+    {
+      "name": "Pulling the Radish (拔萝卜)",
+      "facet": "Story songs and fables",
+      "known_at": 1
+    },
+    {
+      "name": "Three Monks (三个和尚)",
+      "facet": "Story songs and fables",
+      "known_at": 4
+    },
+    {
+      "name": "Little Bear Crosses the Bridge (小熊过桥)",
+      "facet": "Story songs and fables",
+      "known_at": 5
+    },
+    {
+      "name": "Kitten Goes Fishing (小猫钓鱼)",
+      "facet": "Story songs and fables",
+      "known_at": 2
+    },
+    {
+      "name": "Little Red Riding Hood (小红帽)",
+      "facet": "Story songs and fables",
+      "known_at": 2
+    },
+    {
+      "name": "Little Horse Crosses the River (小马过河)",
+      "facet": "Story songs and fables",
+      "known_at": 3
+    },
+    {
+      "name": "The Tortoise and the Hare (龟兔赛跑)",
+      "facet": "Story songs and fables",
+      "known_at": 1
+    },
+    {
+      "name": "The Crow Drinks Water (乌鸦喝水)",
+      "facet": "Story songs and fables",
+      "known_at": 2
+    },
+    {
+      "name": "Little Tadpoles Look for Mum (小蝌蚪找妈妈)",
+      "facet": "Story songs and fables",
+      "known_at": 2
+    },
+    {
+      "name": "Little Monkey Comes Down the Mountain (小猴子下山)",
+      "facet": "Story songs and fables",
+      "known_at": 3
+    },
+    {
+      "name": "Kong Rong Gives Away the Pears (孔融让梨)",
+      "facet": "Story songs and fables",
+      "known_at": 4
+    },
+    {
+      "name": "Sima Guang Breaks the Vat (司马光砸缸)",
+      "facet": "Story songs and fables",
+      "known_at": 4
+    },
+    {
+      "name": "Waiting for a Hare by the Stump (守株待兔)",
+      "facet": "Story songs and fables",
+      "known_at": 5
+    },
+    {
+      "name": "The Boy Who Cried Wolf (狼来了)",
+      "facet": "Story songs and fables",
+      "known_at": 3
+    },
+    {
+      "name": "The Ugly Duckling (丑小鸭)",
+      "facet": "Story songs and fables",
+      "known_at": 2
+    },
+    {
+      "name": "Zhu Bajie Eats Watermelon (猪八戒吃西瓜)",
+      "facet": "Story songs and fables",
+      "known_at": 4
+    },
+    {
+      "name": "Where Is Spring? (春天在哪里)",
+      "facet": "Nature, seasons and weather songs",
+      "known_at": 2
+    },
+    {
+      "name": "Planting Suns (种太阳)",
+      "facet": "Nature, seasons and weather songs",
+      "known_at": 4
+    },
+    {
+      "name": "The Little Mushroom-Picking Girl (采蘑菇的小姑娘)",
+      "facet": "Nature, seasons and weather songs",
+      "known_at": 5
+    },
+    {
+      "name": "Counting the Nines (数九歌)",
+      "facet": "Nature, seasons and weather songs",
+      "known_at": 9
+    },
+    {
+      "name": "Little Conch Horn (小螺号)",
+      "facet": "Nature, seasons and weather songs",
+      "known_at": 6
+    },
+    {
+      "name": "The Sea, My Hometown (大海啊故乡)",
+      "facet": "Nature, seasons and weather songs",
+      "known_at": 7
+    },
+    {
+      "name": "Little Grass (小草)",
+      "facet": "Nature, seasons and weather songs",
+      "known_at": 8
+    },
+    {
+      "name": "Little Pine Tree (小松树)",
+      "facet": "Nature, seasons and weather songs",
+      "known_at": 5
+    },
+    {
+      "name": "Little Rain Pitter-Patter (小雨沙沙)",
+      "facet": "Nature, seasons and weather songs",
+      "known_at": 4
+    },
+    {
+      "name": "Our Fields (我们的田野)",
+      "facet": "Nature, seasons and weather songs",
+      "known_at": 9
+    },
+    {
+      "name": "Where the Wind Blows Wheat (麦浪)",
+      "facet": "Nature, seasons and weather songs",
+      "known_at": 12
+    },
+    {
+      "name": "Snowflakes (雪花)",
+      "facet": "Nature, seasons and weather songs",
+      "known_at": 5
+    },
+    {
+      "name": "Rainbow (彩虹)",
+      "facet": "Nature, seasons and weather songs",
+      "known_at": 3
+    },
+    {
+      "name": "Spring Breeze (春风)",
+      "facet": "Nature, seasons and weather songs",
+      "known_at": 5
+    },
+    {
+      "name": "Happy New Year (新年好)",
+      "facet": "Festival and occasion songs",
+      "known_at": 1
+    },
+    {
+      "name": "Gong Xi Gong Xi (恭喜恭喜)",
+      "facet": "Festival and occasion songs",
+      "known_at": 4
+    },
+    {
+      "name": "Grandpa Makes Mooncakes for Me (爷爷为我打月饼)",
+      "facet": "Festival and occasion songs",
+      "known_at": 7
+    },
+    {
+      "name": "Happy Birthday to You (祝你生日快乐)",
+      "facet": "Festival and occasion songs",
+      "known_at": 1
+    },
+    {
+      "name": "Little Child, Don't Be Greedy, After Laba Comes the New Year (小孩小孩你别馋)",
+      "facet": "Festival and occasion songs",
+      "known_at": 6
+    },
+    {
+      "name": "On the 23rd, Sticky Malt Sugar (二十三，糖瓜粘)",
+      "facet": "Festival and occasion songs",
+      "known_at": 8
+    },
+    {
+      "name": "Good Days (好日子)",
+      "facet": "Festival and occasion songs",
+      "known_at": 9
+    },
+    {
+      "name": "Songs and Smiles (歌声与微笑)",
+      "facet": "Festival and occasion songs",
+      "known_at": 5
+    },
+    {
+      "name": "My Motherland and Me (我和我的祖国)",
+      "facet": "Festival and occasion songs",
+      "known_at": 5
+    },
+    {
+      "name": "I Love Beijing Tiananmen (我爱北京天安门)",
+      "facet": "Festival and occasion songs",
+      "known_at": 3
+    },
+    {
+      "name": "Young Pioneers Anthem (少先队队歌)",
+      "facet": "Festival and occasion songs",
+      "known_at": 5
+    },
+    {
+      "name": "The Gardener's Song (园丁之歌)",
+      "facet": "Festival and occasion songs",
+      "known_at": 8
+    },
+    {
+      "name": "When I Grow Up I Become You (长大后我就成了你)",
+      "facet": "Festival and occasion songs",
+      "known_at": 8
+    },
+    {
+      "name": "Selling Tangyuan (卖汤圆)",
+      "facet": "Festival and occasion songs",
+      "known_at": 7
+    },
+    {
+      "name": "Children's Day (六一儿童节)",
+      "facet": "Festival and occasion songs",
+      "known_at": 1
+    },
+    {
+      "name": "Northeast Lullaby (东北摇篮曲)",
+      "facet": "Lullabies and bedtime rhymes",
+      "known_at": 7
+    },
+    {
+      "name": "Brahms' Lullaby (勃拉姆斯摇篮曲)",
+      "facet": "Lullabies and bedtime rhymes",
+      "known_at": 11
+    },
+    {
+      "name": "Schubert's Lullaby (舒伯特摇篮曲)",
+      "facet": "Lullabies and bedtime rhymes",
+      "known_at": 10
+    },
+    {
+      "name": "Mozart's Lullaby (莫扎特摇篮曲)",
+      "facet": "Lullabies and bedtime rhymes",
+      "known_at": 12
+    },
+    {
+      "name": "Rock, Rock, to Grandma's Bridge (摇啊摇，摇到外婆桥)",
+      "facet": "Lullabies and bedtime rhymes",
+      "known_at": 3
+    },
+    {
+      "name": "Moonlight Bright (月光光)",
+      "facet": "Lullabies and bedtime rhymes",
+      "known_at": 8
+    },
+    {
+      "name": "The Sky Is Dark, Rain Is Coming (天黑黑)",
+      "facet": "Lullabies and bedtime rhymes",
+      "known_at": 10
+    },
+    {
+      "name": "The Moon Walks, I Walk Too (月亮走我也走)",
+      "facet": "Lullabies and bedtime rhymes",
+      "known_at": 9
+    },
+    {
+      "name": "Baby (宝贝)",
+      "facet": "Lullabies and bedtime rhymes",
+      "known_at": 11
+    },
+    {
+      "name": "Little White Boat (小白船)",
+      "facet": "Lullabies and bedtime rhymes",
+      "known_at": 5
+    },
+    {
+      "name": "Twinkle, Twinkle, Little Star (小星星)",
+      "facet": "Lullabies and bedtime rhymes",
+      "known_at": 1
+    },
+    {
+      "name": "Counting Sheep (数绵羊)",
+      "facet": "Lullabies and bedtime rhymes",
+      "known_at": 2
+    },
+    {
+      "name": "Cradle (摇篮)",
+      "facet": "Lullabies and bedtime rhymes",
+      "known_at": 2
+    },
+    {
+      "name": "Rocking the Baby (摇婴仔歌)",
+      "facet": "Lullabies and bedtime rhymes",
+      "known_at": 13
+    },
+    {
+      "name": "Bedtime Story (睡前故事)",
+      "facet": "Lullabies and bedtime rhymes",
+      "known_at": 1
+    },
+    {
+      "name": "One Fen Coin (一分钱)",
+      "facet": "Good habits and helping songs",
+      "known_at": 2
+    },
+    {
+      "name": "I Am a Painter (粉刷匠)",
+      "facet": "Good habits and helping songs",
+      "known_at": 2
+    },
+    {
+      "name": "Going to School Song (上学歌)",
+      "facet": "Good habits and helping songs",
+      "known_at": 2
+    },
+    {
+      "name": "Labour Is Most Glorious (劳动最光荣)",
+      "facet": "Good habits and helping songs",
+      "known_at": 5
+    },
+    {
+      "name": "Hand-washing Song (洗手歌)",
+      "facet": "Good habits and helping songs",
+      "known_at": 2
+    },
+    {
+      "name": "Tooth-brushing Song (刷牙歌)",
+      "facet": "Good habits and helping songs",
+      "known_at": 2
+    },
+    {
+      "name": "Learn from Lei Feng (学习雷锋好榜样)",
+      "facet": "Good habits and helping songs",
+      "known_at": 5
+    },
+    {
+      "name": "Lei Feng (雷锋)",
+      "facet": "Good habits and helping songs",
+      "known_at": 4
+    },
+    {
+      "name": "Sit in a Row, Eat Fruit (排排坐，吃果果)",
+      "facet": "Good habits and helping songs",
+      "known_at": 4
+    },
+    {
+      "name": "Traffic Light Song (红绿灯)",
+      "facet": "Good habits and helping songs",
+      "known_at": 1
+    },
+    {
+      "name": "I Love Bathing (我爱洗澡)",
+      "facet": "Good habits and helping songs",
+      "known_at": 4
+    },
+    {
+      "name": "Manners Song (礼貌歌)",
+      "facet": "Good habits and helping songs",
+      "known_at": 4
+    },
+    {
+      "name": "Seven-Step Hand Washing (七步洗手法)",
+      "facet": "Good habits and helping songs",
+      "known_at": 4
+    },
+    {
+      "name": "Calabash Brothers (葫芦娃)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 1
+    },
+    {
+      "name": "Black Cat Detective (黑猫警长)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 4
+    },
+    {
+      "name": "The Smurfs (蓝精灵)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 3
+    },
+    {
+      "name": "Big Head Son and Small Head Dad (大头儿子和小头爸爸)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 2
+    },
+    {
+      "name": "Boonie Bears (熊出没)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 1
+    },
+    {
+      "name": "Shuke and Beita (舒克和贝塔)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 6
+    },
+    {
+      "name": "Fireflies (虫儿飞)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 3
+    },
+    {
+      "name": "Little Bamboo Raft on the River (小小竹排江中游)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 9
+    },
+    {
+      "name": "Sparkling Red Star (闪闪的红星)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 10
+    },
+    {
+      "name": "Where Is the Road? (敢问路在何方)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 7
+    },
+    {
+      "name": "GG Bond (猪猪侠)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 2
+    },
+    {
+      "name": "Haier Brothers (海尔兄弟)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 7
+    },
+    {
+      "name": "Doraemon (哆啦A梦)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 1
+    },
+    {
+      "name": "Big Windmill (大风车)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 6
+    },
+    {
+      "name": "Seven-Coloured Light (七色光)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 9
+    },
+    {
+      "name": "Peppa Pig (小猪佩奇)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 1
+    },
+    {
+      "name": "Balala the Fairies (巴啦啦小魔仙)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 4
+    },
+    {
+      "name": "Lotus Lantern (宝莲灯)",
+      "facet": "Cartoon and film theme songs",
+      "known_at": 8
+    },
+    {
+      "name": "The Newspaper Seller's Song (卖报歌)",
+      "facet": "Classic songs and their composers",
+      "known_at": 3
+    },
+    {
+      "name": "Let Us Row the Oars (让我们荡起双桨)",
+      "facet": "Classic songs and their composers",
+      "known_at": 3
+    },
+    {
+      "name": "Childhood (童年)",
+      "facet": "Classic songs and their composers",
+      "known_at": 7
+    },
+    {
+      "name": "Farewell (送别)",
+      "facet": "Classic songs and their composers",
+      "known_at": 8
+    },
+    {
+      "name": "Flowers of the Motherland (祖国的花朵)",
+      "facet": "Classic songs and their composers",
+      "known_at": 11
+    },
+    {
+      "name": "Liu Chi (刘炽)",
+      "facet": "Classic songs and their composers",
+      "known_at": 14
+    },
+    {
+      "name": "Qiao Yu (乔羽)",
+      "facet": "Classic songs and their composers",
+      "known_at": 13
+    },
+    {
+      "name": "Gu Jianfen (谷建芬)",
+      "facet": "Classic songs and their composers",
+      "known_at": 13
+    },
+    {
+      "name": "Pan Zhensheng (潘振声)",
+      "facet": "Classic songs and their composers",
+      "known_at": 14
+    },
+    {
+      "name": "Li Shutong (李叔同)",
+      "facet": "Classic songs and their composers",
+      "known_at": 11
+    },
+    {
+      "name": "Luo Dayou (罗大佑)",
+      "facet": "Classic songs and their composers",
+      "known_at": 11
+    },
+    {
+      "name": "Li Jinhui (黎锦晖)",
+      "facet": "Classic songs and their composers",
+      "known_at": 15
+    },
+    {
+      "name": "Wang Shen (王莘)",
+      "facet": "Classic songs and their composers",
+      "known_at": 14
+    },
+    {
+      "name": "The Sparrow and the Child (麻雀与小孩)",
+      "facet": "Classic songs and their composers",
+      "known_at": 14
+    },
+    {
+      "name": "Beihai Park (北海公园)",
+      "facet": "Classic songs and their composers",
+      "known_at": 7
+    },
+    {
+      "name": "Eat Grapes Without Spitting Out the Skins (吃葡萄不吐葡萄皮)",
+      "facet": "Folk rhymes and tongue twisters",
+      "known_at": 3
+    },
+    {
+      "name": "Four Is Four, Ten Is Ten (四是四，十是十)",
+      "facet": "Folk rhymes and tongue twisters",
+      "known_at": 5
+    },
+    {
+      "name": "Eight Hundred Soldiers Run to the North Slope (八百标兵奔北坡)",
+      "facet": "Folk rhymes and tongue twisters",
+      "known_at": 6
+    },
+    {
+      "name": "Red Carp, Green Carp and Donkey (红鲤鱼与绿鲤鱼与驴)",
+      "facet": "Folk rhymes and tongue twisters",
+      "known_at": 5
+    },
+    {
+      "name": "The Carrying Pole and the Bench (扁担长，板凳宽)",
+      "facet": "Folk rhymes and tongue twisters",
+      "known_at": 7
+    },
+    {
+      "name": "Mum Rides a Horse (妈妈骑马)",
+      "facet": "Folk rhymes and tongue twisters",
+      "known_at": 4
+    },
+    {
+      "name": "Black Fertiliser (黑化肥)",
+      "facet": "Folk rhymes and tongue twisters",
+      "known_at": 8
+    },
+    {
+      "name": "Tongue Twister (绕口令)",
+      "facet": "Folk rhymes and tongue twisters",
+      "known_at": 4
+    },
+    {
+      "name": "Little Cabbage (小白菜)",
+      "facet": "Folk rhymes and tongue twisters",
+      "known_at": 9
+    },
+    {
+      "name": "Diu Diu Dang (丢丢铜仔)",
+      "facet": "Folk rhymes and tongue twisters",
+      "known_at": 12
+    },
+    {
+      "name": "Big Head, Big Head, Not Afraid of Rain (大头大头，下雨不愁)",
+      "facet": "Folk rhymes and tongue twisters",
+      "known_at": 5
+    },
+    {
+      "name": "Little Cowherd (小放牛)",
+      "facet": "Folk rhymes and tongue twisters",
+      "known_at": 12
+    }
+  ]
+}

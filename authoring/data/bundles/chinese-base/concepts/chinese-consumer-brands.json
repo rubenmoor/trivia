@@ -1,0 +1,1017 @@
+{
+  "subcategory": "chinese-consumer-brands",
+  "facets": [
+    "Sweets and candy brands",
+    "Spicy snacks and latiao",
+    "Instant noodles and packaged foods",
+    "Sauces and condiments brands",
+    "Baijiu and liquor brands",
+    "Beer brands",
+    "Tea drinks and milk tea chains",
+    "Soft drinks and herbal teas",
+    "Dairy and ice cream brands",
+    "Sportswear and sneaker brands",
+    "Clothing and fashion brands",
+    "Time-honoured brands (老字号)"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "White Rabbit (大白兔) candy",
+      "facet": "Sweets and candy brands",
+      "known_at": 2
+    },
+    {
+      "name": "Want Want rice crackers (旺旺雪饼)",
+      "facet": "Sweets and candy brands",
+      "known_at": 3
+    },
+    {
+      "name": "Wangzai QQ gummies (旺仔QQ糖)",
+      "facet": "Sweets and candy brands",
+      "known_at": 3
+    },
+    {
+      "name": "Hsu Fu Chi (徐福记)",
+      "facet": "Sweets and candy brands",
+      "known_at": 5
+    },
+    {
+      "name": "Golden Monkey (金丝猴) candy",
+      "facet": "Sweets and candy brands",
+      "known_at": 8
+    },
+    {
+      "name": "Guanshengyuan (冠生园)",
+      "facet": "Sweets and candy brands",
+      "known_at": 10
+    },
+    {
+      "name": "Yake (雅客) candy",
+      "facet": "Sweets and candy brands",
+      "known_at": 9
+    },
+    {
+      "name": "Wowo (喔喔) candy",
+      "facet": "Sweets and candy brands",
+      "known_at": 10
+    },
+    {
+      "name": "Dada (大大) bubble gum",
+      "facet": "Sweets and candy brands",
+      "known_at": 6
+    },
+    {
+      "name": "Bestore (良品铺子)",
+      "facet": "Sweets and candy brands",
+      "known_at": 7
+    },
+    {
+      "name": "Qiaqia (洽洽) sunflower seeds",
+      "facet": "Sweets and candy brands",
+      "known_at": 5
+    },
+    {
+      "name": "Daliyuan (达利园)",
+      "facet": "Sweets and candy brands",
+      "known_at": 6
+    },
+    {
+      "name": "Panpan (盼盼)",
+      "facet": "Sweets and candy brands",
+      "known_at": 7
+    },
+    {
+      "name": "Laiyifen (来伊份)",
+      "facet": "Sweets and candy brands",
+      "known_at": 9
+    },
+    {
+      "name": "Weilong konjac snack (魔芋爽)",
+      "facet": "Spicy snacks and latiao",
+      "known_at": 6
+    },
+    {
+      "name": "Luohe (漯河)",
+      "facet": "Spicy snacks and latiao",
+      "known_at": 12
+    },
+    {
+      "name": "Pingjiang (平江)",
+      "facet": "Spicy snacks and latiao",
+      "known_at": 12
+    },
+    {
+      "name": "Spicy tofu skin strips (辣片)",
+      "facet": "Spicy snacks and latiao",
+      "known_at": 5
+    },
+    {
+      "name": "Juewei duck neck (绝味鸭脖)",
+      "facet": "Spicy snacks and latiao",
+      "known_at": 7
+    },
+    {
+      "name": "Huang Shang Huang (煌上煌)",
+      "facet": "Spicy snacks and latiao",
+      "known_at": 11
+    },
+    {
+      "name": "Youyou pickled-pepper chicken feet (有友泡椒凤爪)",
+      "facet": "Spicy snacks and latiao",
+      "known_at": 7
+    },
+    {
+      "name": "Mala Wangzi (麻辣王子)",
+      "facet": "Spicy snacks and latiao",
+      "known_at": 9
+    },
+    {
+      "name": "Jinzai small fish (劲仔小鱼)",
+      "facet": "Spicy snacks and latiao",
+      "known_at": 9
+    },
+    {
+      "name": "Yanjin Shop (盐津铺子)",
+      "facet": "Spicy snacks and latiao",
+      "known_at": 10
+    },
+    {
+      "name": "Ganyuan (甘源)",
+      "facet": "Spicy snacks and latiao",
+      "known_at": 10
+    },
+    {
+      "name": "Wuhan duck neck (武汉鸭脖)",
+      "facet": "Spicy snacks and latiao",
+      "known_at": 7
+    },
+    {
+      "name": "Master Kong (康师傅)",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 2
+    },
+    {
+      "name": "Uni-President (统一)",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 5
+    },
+    {
+      "name": "Lao Tan Suan Cai beef noodles (老坛酸菜牛肉面)",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 5
+    },
+    {
+      "name": "Little Raccoon (小浣熊) crispy noodles",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 3
+    },
+    {
+      "name": "Water Margin hero cards (水浒卡)",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 8
+    },
+    {
+      "name": "Baixiang (白象)",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 7
+    },
+    {
+      "name": "Jinmailang (今麦郎)",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 8
+    },
+    {
+      "name": "Self-heating hotpot (自热火锅)",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 5
+    },
+    {
+      "name": "Haohuanluo luosifen (好欢螺)",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 8
+    },
+    {
+      "name": "Shuanghui ham sausage (双汇火腿肠)",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 4
+    },
+    {
+      "name": "Jinluo (金锣)",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 8
+    },
+    {
+      "name": "Sanquan (三全) dumplings",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 6
+    },
+    {
+      "name": "Synear (思念)",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 7
+    },
+    {
+      "name": "Wanchai Ferry (湾仔码头)",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 8
+    },
+    {
+      "name": "Meilin luncheon meat (梅林午餐肉)",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 10
+    },
+    {
+      "name": "Jinlongyu (金龙鱼) cooking oil",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 6
+    },
+    {
+      "name": "Fulinmen (福临门)",
+      "facet": "Instant noodles and packaged foods",
+      "known_at": 9
+    },
+    {
+      "name": "Tao Huabi (陶华碧)",
+      "facet": "Sauces and condiments brands",
+      "known_at": 10
+    },
+    {
+      "name": "Lee Kum Kee (李锦记)",
+      "facet": "Sauces and condiments brands",
+      "known_at": 6
+    },
+    {
+      "name": "Haitian (海天) soy sauce",
+      "facet": "Sauces and condiments brands",
+      "known_at": 5
+    },
+    {
+      "name": "Pixian doubanjiang (郫县豆瓣)",
+      "facet": "Sauces and condiments brands",
+      "known_at": 9
+    },
+    {
+      "name": "Hengshun (恒顺) Zhenjiang vinegar",
+      "facet": "Sauces and condiments brands",
+      "known_at": 9
+    },
+    {
+      "name": "Donghu (东湖) Shanxi aged vinegar",
+      "facet": "Sauces and condiments brands",
+      "known_at": 12
+    },
+    {
+      "name": "Wujiang (乌江) Fuling zhacai",
+      "facet": "Sauces and condiments brands",
+      "known_at": 7
+    },
+    {
+      "name": "Totole (太太乐) chicken essence",
+      "facet": "Sauces and condiments brands",
+      "known_at": 7
+    },
+    {
+      "name": "Wang Shouyi Thirteen Spices (王守义十三香)",
+      "facet": "Sauces and condiments brands",
+      "known_at": 8
+    },
+    {
+      "name": "Haidilao hotpot base (海底捞火锅底料)",
+      "facet": "Sauces and condiments brands",
+      "known_at": 5
+    },
+    {
+      "name": "Qiaotou (桥头) hotpot base",
+      "facet": "Sauces and condiments brands",
+      "known_at": 11
+    },
+    {
+      "name": "Pearl River Bridge (珠江桥)",
+      "facet": "Sauces and condiments brands",
+      "known_at": 12
+    },
+    {
+      "name": "Chubang (厨邦)",
+      "facet": "Sauces and condiments brands",
+      "known_at": 10
+    },
+    {
+      "name": "Qianhe (千禾)",
+      "facet": "Sauces and condiments brands",
+      "known_at": 11
+    },
+    {
+      "name": "Fanzhuang (饭扫光)",
+      "facet": "Sauces and condiments brands",
+      "known_at": 11
+    },
+    {
+      "name": "Moutai (茅台)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 4
+    },
+    {
+      "name": "Maotai Town (茅台镇)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 10
+    },
+    {
+      "name": "Chishui River (赤水河)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 10
+    },
+    {
+      "name": "Sauce-aroma latte (酱香拿铁)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 7
+    },
+    {
+      "name": "Wuliangye (五粮液)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 7
+    },
+    {
+      "name": "Fenjiu (汾酒)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 9
+    },
+    {
+      "name": "Xinghuacun (杏花村)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 8
+    },
+    {
+      "name": "Luzhou Laojiao (泸州老窖)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 9
+    },
+    {
+      "name": "Yanghe (洋河)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 9
+    },
+    {
+      "name": "Gujing Gongjiu (古井贡酒)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 11
+    },
+    {
+      "name": "Jiannanchun (剑南春)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 11
+    },
+    {
+      "name": "Langjiu (郎酒)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 11
+    },
+    {
+      "name": "Xifeng (西凤酒)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 12
+    },
+    {
+      "name": "Red Star Erguotou (红星二锅头)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 9
+    },
+    {
+      "name": "Niulanshan (牛栏山)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 10
+    },
+    {
+      "name": "Jiang Xiao Bai (江小白)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 9
+    },
+    {
+      "name": "Jiugui (酒鬼酒)",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 12
+    },
+    {
+      "name": "Guyuelongshan (古越龙山) Shaoxing wine",
+      "facet": "Baijiu and liquor brands",
+      "known_at": 12
+    },
+    {
+      "name": "Tsingtao (青岛啤酒)",
+      "facet": "Beer brands",
+      "known_at": 5
+    },
+    {
+      "name": "Tsingtao Beer Museum (青岛啤酒博物馆)",
+      "facet": "Beer brands",
+      "known_at": 10
+    },
+    {
+      "name": "Qingdao International Beer Festival (青岛国际啤酒节)",
+      "facet": "Beer brands",
+      "known_at": 8
+    },
+    {
+      "name": "Snow Beer (雪花啤酒)",
+      "facet": "Beer brands",
+      "known_at": 7
+    },
+    {
+      "name": "Yanjing Beer (燕京啤酒)",
+      "facet": "Beer brands",
+      "known_at": 8
+    },
+    {
+      "name": "Harbin Beer (哈尔滨啤酒)",
+      "facet": "Beer brands",
+      "known_at": 8
+    },
+    {
+      "name": "Zhujiang Beer (珠江啤酒)",
+      "facet": "Beer brands",
+      "known_at": 10
+    },
+    {
+      "name": "Chongqing Beer (重庆啤酒)",
+      "facet": "Beer brands",
+      "known_at": 10
+    },
+    {
+      "name": "Wusu Beer (乌苏啤酒)",
+      "facet": "Beer brands",
+      "known_at": 10
+    },
+    {
+      "name": "Sedrin (雪津)",
+      "facet": "Beer brands",
+      "known_at": 12
+    },
+    {
+      "name": "Kingway (金威)",
+      "facet": "Beer brands",
+      "known_at": 12
+    },
+    {
+      "name": "Lhasa Beer (拉萨啤酒)",
+      "facet": "Beer brands",
+      "known_at": 12
+    },
+    {
+      "name": "Dali Beer (大理啤酒)",
+      "facet": "Beer brands",
+      "known_at": 12
+    },
+    {
+      "name": "Taiwan Beer (台湾啤酒)",
+      "facet": "Beer brands",
+      "known_at": 10
+    },
+    {
+      "name": "Snow King (雪王)",
+      "facet": "Tea drinks and milk tea chains",
+      "known_at": 3
+    },
+    {
+      "name": "Nayuki (奈雪的茶)",
+      "facet": "Tea drinks and milk tea chains",
+      "known_at": 7
+    },
+    {
+      "name": "CoCo (都可)",
+      "facet": "Tea drinks and milk tea chains",
+      "known_at": 7
+    },
+    {
+      "name": "ChaPanda (茶百道)",
+      "facet": "Tea drinks and milk tea chains",
+      "known_at": 8
+    },
+    {
+      "name": "Guming (古茗)",
+      "facet": "Tea drinks and milk tea chains",
+      "known_at": 8
+    },
+    {
+      "name": "Chagee (霸王茶姬)",
+      "facet": "Tea drinks and milk tea chains",
+      "known_at": 7
+    },
+    {
+      "name": "Shuyi grass jelly tea (书亦烧仙草)",
+      "facet": "Tea drinks and milk tea chains",
+      "known_at": 8
+    },
+    {
+      "name": "Auntea Jenny (沪上阿姨)",
+      "facet": "Tea drinks and milk tea chains",
+      "known_at": 8
+    },
+    {
+      "name": "Yi Dian Dian (一点点)",
+      "facet": "Tea drinks and milk tea chains",
+      "known_at": 9
+    },
+    {
+      "name": "Gong Cha (贡茶)",
+      "facet": "Tea drinks and milk tea chains",
+      "known_at": 10
+    },
+    {
+      "name": "Chun Shui Tang (春水堂)",
+      "facet": "Tea drinks and milk tea chains",
+      "known_at": 12
+    },
+    {
+      "name": "Xiangpiaopiao (香飘飘)",
+      "facet": "Tea drinks and milk tea chains",
+      "known_at": 6
+    },
+    {
+      "name": "Luckin Coffee (瑞幸咖啡)",
+      "facet": "Tea drinks and milk tea chains",
+      "known_at": 6
+    },
+    {
+      "name": "Cotti Coffee (库迪咖啡)",
+      "facet": "Tea drinks and milk tea chains",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Laoji (王老吉)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 3
+    },
+    {
+      "name": "JDB (加多宝)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 6
+    },
+    {
+      "name": "Wahaha (娃哈哈)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 2
+    },
+    {
+      "name": "Wahaha AD calcium milk (AD钙奶)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 2
+    },
+    {
+      "name": "Zong Qinghou (宗庆后)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 10
+    },
+    {
+      "name": "Wangzai Milk (旺仔牛奶)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 2
+    },
+    {
+      "name": "Nongfu Spring (农夫山泉)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 4
+    },
+    {
+      "name": "Oriental Leaf (东方树叶)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 8
+    },
+    {
+      "name": "C'estbon (怡宝)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 6
+    },
+    {
+      "name": "Jianlibao (健力宝)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 9
+    },
+    {
+      "name": "Arctic Ocean soda (北冰洋)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 8
+    },
+    {
+      "name": "Iceberg soda (冰峰)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 10
+    },
+    {
+      "name": "Genki Forest (元气森林)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 6
+    },
+    {
+      "name": "Vitasoy (维他奶)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 7
+    },
+    {
+      "name": "Yeshu coconut milk (椰树椰汁)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 6
+    },
+    {
+      "name": "Lulu almond milk (露露)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 8
+    },
+    {
+      "name": "Six Walnuts (六个核桃)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 7
+    },
+    {
+      "name": "Dongpeng Special Drink (东鹏特饮)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 8
+    },
+    {
+      "name": "Master Kong Iced Tea (康师傅冰红茶)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 4
+    },
+    {
+      "name": "Tianfu Cola (天府可乐)",
+      "facet": "Soft drinks and herbal teas",
+      "known_at": 11
+    },
+    {
+      "name": "Yili (伊利)",
+      "facet": "Dairy and ice cream brands",
+      "known_at": 4
+    },
+    {
+      "name": "Mengniu (蒙牛)",
+      "facet": "Dairy and ice cream brands",
+      "known_at": 4
+    },
+    {
+      "name": "Telunsu (特仑苏)",
+      "facet": "Dairy and ice cream brands",
+      "known_at": 6
+    },
+    {
+      "name": "Ambrosial yogurt (安慕希)",
+      "facet": "Dairy and ice cream brands",
+      "known_at": 6
+    },
+    {
+      "name": "Bright Dairy (光明乳业)",
+      "facet": "Dairy and ice cream brands",
+      "known_at": 7
+    },
+    {
+      "name": "Bright ice brick (光明冰砖)",
+      "facet": "Dairy and ice cream brands",
+      "known_at": 9
+    },
+    {
+      "name": "Sanyuan (三元)",
+      "facet": "Dairy and ice cream brands",
+      "known_at": 9
+    },
+    {
+      "name": "Junlebao (君乐宝)",
+      "facet": "Dairy and ice cream brands",
+      "known_at": 8
+    },
+    {
+      "name": "Feihe (飞鹤)",
+      "facet": "Dairy and ice cream brands",
+      "known_at": 8
+    },
+    {
+      "name": "Qiaolezi (巧乐兹)",
+      "facet": "Dairy and ice cream brands",
+      "known_at": 4
+    },
+    {
+      "name": "Suibian (随变)",
+      "facet": "Dairy and ice cream brands",
+      "known_at": 6
+    },
+    {
+      "name": "Dongbei Daban (东北大板)",
+      "facet": "Dairy and ice cream brands",
+      "known_at": 6
+    },
+    {
+      "name": "Modern ice pop (马迭尔冰棍)",
+      "facet": "Dairy and ice cream brands",
+      "known_at": 9
+    },
+    {
+      "name": "Baxi (八喜)",
+      "facet": "Dairy and ice cream brands",
+      "known_at": 7
+    },
+    {
+      "name": "Zhongjie 1946 (中街1946)",
+      "facet": "Dairy and ice cream brands",
+      "known_at": 10
+    },
+    {
+      "name": "Chicecream (钟薛高)",
+      "facet": "Dairy and ice cream brands",
+      "known_at": 8
+    },
+    {
+      "name": "Li-Ning (李宁)",
+      "facet": "Sportswear and sneaker brands",
+      "known_at": 4
+    },
+    {
+      "name": "Li Ning (gymnast)",
+      "facet": "Sportswear and sneaker brands",
+      "known_at": 8
+    },
+    {
+      "name": "China Li-Ning (中国李宁)",
+      "facet": "Sportswear and sneaker brands",
+      "known_at": 9
+    },
+    {
+      "name": "Way of Wade (韦德之道)",
+      "facet": "Sportswear and sneaker brands",
+      "known_at": 10
+    },
+    {
+      "name": "Anta (安踏)",
+      "facet": "Sportswear and sneaker brands",
+      "known_at": 4
+    },
+    {
+      "name": "Xtep (特步)",
+      "facet": "Sportswear and sneaker brands",
+      "known_at": 6
+    },
+    {
+      "name": "361°",
+      "facet": "Sportswear and sneaker brands",
+      "known_at": 6
+    },
+    {
+      "name": "Peak (匹克)",
+      "facet": "Sportswear and sneaker brands",
+      "known_at": 8
+    },
+    {
+      "name": "Erke (鸿星尔克)",
+      "facet": "Sportswear and sneaker brands",
+      "known_at": 6
+    },
+    {
+      "name": "Warrior (回力) shoes",
+      "facet": "Sportswear and sneaker brands",
+      "known_at": 5
+    },
+    {
+      "name": "Feiyue (飞跃) shoes",
+      "facet": "Sportswear and sneaker brands",
+      "known_at": 9
+    },
+    {
+      "name": "Double Star (双星)",
+      "facet": "Sportswear and sneaker brands",
+      "known_at": 11
+    },
+    {
+      "name": "Qiaodan (乔丹体育)",
+      "facet": "Sportswear and sneaker brands",
+      "known_at": 8
+    },
+    {
+      "name": "Jinjiang (晋江)",
+      "facet": "Sportswear and sneaker brands",
+      "known_at": 11
+    },
+    {
+      "name": "Kailas (凯乐石)",
+      "facet": "Sportswear and sneaker brands",
+      "known_at": 12
+    },
+    {
+      "name": "Toread (探路者)",
+      "facet": "Sportswear and sneaker brands",
+      "known_at": 11
+    },
+    {
+      "name": "Bosideng (波司登)",
+      "facet": "Clothing and fashion brands",
+      "known_at": 6
+    },
+    {
+      "name": "Shein (希音)",
+      "facet": "Clothing and fashion brands",
+      "known_at": 8
+    },
+    {
+      "name": "Semir (森马)",
+      "facet": "Clothing and fashion brands",
+      "known_at": 7
+    },
+    {
+      "name": "Metersbonwe (美特斯邦威)",
+      "facet": "Clothing and fashion brands",
+      "known_at": 8
+    },
+    {
+      "name": "Balabala (巴拉巴拉)",
+      "facet": "Clothing and fashion brands",
+      "known_at": 5
+    },
+    {
+      "name": "Heilan Home (海澜之家)",
+      "facet": "Clothing and fashion brands",
+      "known_at": 7
+    },
+    {
+      "name": "Youngor (雅戈尔)",
+      "facet": "Clothing and fashion brands",
+      "known_at": 11
+    },
+    {
+      "name": "Septwolves (七匹狼)",
+      "facet": "Clothing and fashion brands",
+      "known_at": 10
+    },
+    {
+      "name": "Hongdou (红豆)",
+      "facet": "Clothing and fashion brands",
+      "known_at": 11
+    },
+    {
+      "name": "Jeanswest (真维斯)",
+      "facet": "Clothing and fashion brands",
+      "known_at": 10
+    },
+    {
+      "name": "Peacebird (太平鸟)",
+      "facet": "Clothing and fashion brands",
+      "known_at": 10
+    },
+    {
+      "name": "Urban Revivo",
+      "facet": "Clothing and fashion brands",
+      "known_at": 10
+    },
+    {
+      "name": "JNBY (江南布衣)",
+      "facet": "Clothing and fashion brands",
+      "known_at": 12
+    },
+    {
+      "name": "Giordano (佐丹奴)",
+      "facet": "Clothing and fashion brands",
+      "known_at": 10
+    },
+    {
+      "name": "Shanghai Tang (上海滩)",
+      "facet": "Clothing and fashion brands",
+      "known_at": 13
+    },
+    {
+      "name": "Erdos cashmere (鄂尔多斯)",
+      "facet": "Clothing and fashion brands",
+      "known_at": 10
+    },
+    {
+      "name": "Laozihao (老字号)",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 7
+    },
+    {
+      "name": "Bianyifang (便宜坊)",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 11
+    },
+    {
+      "name": "Goubuli (狗不理) baozi",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 6
+    },
+    {
+      "name": "Tongrentang (同仁堂)",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 8
+    },
+    {
+      "name": "Hu Qing Yu Tang (胡庆余堂)",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 12
+    },
+    {
+      "name": "Wufangzhai (五芳斋) zongzi",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 9
+    },
+    {
+      "name": "Liubiju (六必居)",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 11
+    },
+    {
+      "name": "Wangzhihe (王致和)",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 10
+    },
+    {
+      "name": "Donglaishun (东来顺)",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 10
+    },
+    {
+      "name": "Lou Wai Lou (楼外楼)",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Xiaoquan (张小泉) scissors",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 9
+    },
+    {
+      "name": "Wangmazi (王麻子) scissors",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 10
+    },
+    {
+      "name": "Ruifuxiang (瑞蚨祥)",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 12
+    },
+    {
+      "name": "Neiliansheng (内联升) cloth shoes",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 11
+    },
+    {
+      "name": "Shengxifu (盛锡福) hats",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 13
+    },
+    {
+      "name": "Zhang Yiyuan (张一元) tea",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 11
+    },
+    {
+      "name": "Wuyutai (吴裕泰)",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 12
+    },
+    {
+      "name": "Lao Feng Xiang (老凤祥)",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 9
+    },
+    {
+      "name": "Pien Tze Huang (片仔癀)",
+      "facet": "Time-honoured brands (老字号)",
+      "known_at": 12
+    }
+  ]
+}

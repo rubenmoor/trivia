@@ -1,0 +1,878 @@
+{
+  "subcategory": "chinese-medicine-history",
+  "facets": [
+    "Legendary founders of medicine",
+    "Bian Que and early physicians",
+    "Hua Tuo and surgery legends",
+    "Zhang Zhongjing and his classics",
+    "Sun Simiao, King of Medicine",
+    "Li Shizhen and materia medica",
+    "Classic medical books",
+    "History of acupuncture and moxibustion",
+    "Herbs and pharmacy history",
+    "Medical idioms and stories",
+    "Imperial medicine and institutions",
+    "Health exercises and traditions"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Qi Bo",
+      "facet": "Legendary founders of medicine",
+      "known_at": 11
+    },
+    {
+      "name": "Qihuang (岐黄)",
+      "facet": "Legendary founders of medicine",
+      "known_at": 12
+    },
+    {
+      "name": "Lei Gong",
+      "facet": "Legendary founders of medicine",
+      "known_at": 13
+    },
+    {
+      "name": "Yu Fu (俞跗)",
+      "facet": "Legendary founders of medicine",
+      "known_at": 14
+    },
+    {
+      "name": "Tong Jun (桐君)",
+      "facet": "Legendary founders of medicine",
+      "known_at": 14
+    },
+    {
+      "name": "Wu Xian (巫咸)",
+      "facet": "Legendary founders of medicine",
+      "known_at": 14
+    },
+    {
+      "name": "Pengzu",
+      "facet": "Legendary founders of medicine",
+      "known_at": 10
+    },
+    {
+      "name": "Gui Yu Qu (鬼臾区)",
+      "facet": "Legendary founders of medicine",
+      "known_at": 15
+    },
+    {
+      "name": "Bo Gao (伯高)",
+      "facet": "Legendary founders of medicine",
+      "known_at": 15
+    },
+    {
+      "name": "Bian Que and Duke Huan",
+      "facet": "Bian Que and early physicians",
+      "known_at": 7
+    },
+    {
+      "name": "Chang Sangjun",
+      "facet": "Bian Que and early physicians",
+      "known_at": 13
+    },
+    {
+      "name": "Prince of Guo",
+      "facet": "Bian Que and early physicians",
+      "known_at": 12
+    },
+    {
+      "name": "Pulse diagnosis",
+      "facet": "Bian Que and early physicians",
+      "known_at": 5
+    },
+    {
+      "name": "Six incurables (六不治)",
+      "facet": "Bian Que and early physicians",
+      "known_at": 14
+    },
+    {
+      "name": "Yi He (医和)",
+      "facet": "Bian Que and early physicians",
+      "known_at": 14
+    },
+    {
+      "name": "Yi Huan (医缓)",
+      "facet": "Bian Que and early physicians",
+      "known_at": 13
+    },
+    {
+      "name": "Chunyu Yi",
+      "facet": "Bian Que and early physicians",
+      "known_at": 12
+    },
+    {
+      "name": "Tiying",
+      "facet": "Bian Que and early physicians",
+      "known_at": 10
+    },
+    {
+      "name": "Medical case records (诊籍)",
+      "facet": "Bian Que and early physicians",
+      "known_at": 13
+    },
+    {
+      "name": "Wen Zhi (文挚)",
+      "facet": "Bian Que and early physicians",
+      "known_at": 15
+    },
+    {
+      "name": "Guo Yu (郭玉)",
+      "facet": "Bian Que and early physicians",
+      "known_at": 15
+    },
+    {
+      "name": "Fu Weng (涪翁)",
+      "facet": "Bian Que and early physicians",
+      "known_at": 15
+    },
+    {
+      "name": "Han stone reliefs of Bian Que",
+      "facet": "Bian Que and early physicians",
+      "known_at": 14
+    },
+    {
+      "name": "Bian Que Temple",
+      "facet": "Bian Que and early physicians",
+      "known_at": 12
+    },
+    {
+      "name": "Mafeisan anaesthetic",
+      "facet": "Hua Tuo and surgery legends",
+      "known_at": 8
+    },
+    {
+      "name": "Five Animal Exercises",
+      "facet": "Hua Tuo and surgery legends",
+      "known_at": 7
+    },
+    {
+      "name": "Scraping the bone to remove poison (刮骨疗毒)",
+      "facet": "Hua Tuo and surgery legends",
+      "known_at": 7
+    },
+    {
+      "name": "Qingnang Shu (青囊书)",
+      "facet": "Hua Tuo and surgery legends",
+      "known_at": 11
+    },
+    {
+      "name": "Huatuo Jiaji points",
+      "facet": "Hua Tuo and surgery legends",
+      "known_at": 14
+    },
+    {
+      "name": "Wu Pu (吴普)",
+      "facet": "Hua Tuo and surgery legends",
+      "known_at": 14,
+      "retired": "unaskable: Wu Pu is known mainly as Hua Tuo's student who did the Five Animal Exercises, which overlaps slot 12. The made_of options don't give a fair question."
+    },
+    {
+      "name": "Fan E (樊阿)",
+      "facet": "Hua Tuo and surgery legends",
+      "known_at": 15
+    },
+    {
+      "name": "Bozhou",
+      "facet": "Hua Tuo and surgery legends",
+      "known_at": 11
+    },
+    {
+      "name": "Chen Deng",
+      "facet": "Hua Tuo and surgery legends",
+      "known_at": 13
+    },
+    {
+      "name": "Ji Ping (吉平)",
+      "facet": "Hua Tuo and surgery legends",
+      "known_at": 13
+    },
+    {
+      "name": "Divine Doctor (神医)",
+      "facet": "Hua Tuo and surgery legends",
+      "known_at": 6
+    },
+    {
+      "name": "Treatise on Cold Damage and Miscellaneous Diseases (伤寒杂病论)",
+      "facet": "Zhang Zhongjing and his classics",
+      "known_at": 10
+    },
+    {
+      "name": "Shanghan Lun (伤寒论)",
+      "facet": "Zhang Zhongjing and his classics",
+      "known_at": 11
+    },
+    {
+      "name": "Jingui Yaolüe (金匮要略)",
+      "facet": "Zhang Zhongjing and his classics",
+      "known_at": 13
+    },
+    {
+      "name": "Jiao'er soup (祛寒娇耳汤)",
+      "facet": "Zhang Zhongjing and his classics",
+      "known_at": 7
+    },
+    {
+      "name": "Winter Solstice dumplings",
+      "facet": "Zhang Zhongjing and his classics",
+      "known_at": 4
+    },
+    {
+      "name": "Medical Sage (医圣)",
+      "facet": "Zhang Zhongjing and his classics",
+      "known_at": 9
+    },
+    {
+      "name": "Sitting-hall doctor (坐堂医)",
+      "facet": "Zhang Zhongjing and his classics",
+      "known_at": 11
+    },
+    {
+      "name": "Nanyang",
+      "facet": "Zhang Zhongjing and his classics",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Shuhe",
+      "facet": "Zhang Zhongjing and his classics",
+      "known_at": 13
+    },
+    {
+      "name": "Six channels pattern differentiation (六经辨证)",
+      "facet": "Zhang Zhongjing and his classics",
+      "known_at": 14
+    },
+    {
+      "name": "Pattern differentiation and treatment (辨证论治)",
+      "facet": "Zhang Zhongjing and his classics",
+      "known_at": 12
+    },
+    {
+      "name": "Guizhi Decoction (桂枝汤)",
+      "facet": "Zhang Zhongjing and his classics",
+      "known_at": 13
+    },
+    {
+      "name": "Mahuang Decoction (麻黄汤)",
+      "facet": "Zhang Zhongjing and his classics",
+      "known_at": 14
+    },
+    {
+      "name": "Xiao Chaihu Decoction (小柴胡汤)",
+      "facet": "Zhang Zhongjing and his classics",
+      "known_at": 12
+    },
+    {
+      "name": "Wang Can's eyebrows",
+      "facet": "Zhang Zhongjing and his classics",
+      "known_at": 14
+    },
+    {
+      "name": "Medical Sage Temple (医圣祠)",
+      "facet": "Zhang Zhongjing and his classics",
+      "known_at": 13
+    },
+    {
+      "name": "King of Medicine (药王)",
+      "facet": "Sun Simiao, King of Medicine",
+      "known_at": 7
+    },
+    {
+      "name": "Qianjin Yaofang (千金要方)",
+      "facet": "Sun Simiao, King of Medicine",
+      "known_at": 10
+    },
+    {
+      "name": "Qianjin Yifang (千金翼方)",
+      "facet": "Sun Simiao, King of Medicine",
+      "known_at": 13
+    },
+    {
+      "name": "On the Absolute Sincerity of Great Physicians (大医精诚)",
+      "facet": "Sun Simiao, King of Medicine",
+      "known_at": 11
+    },
+    {
+      "name": "Yaowang Mountain",
+      "facet": "Sun Simiao, King of Medicine",
+      "known_at": 12
+    },
+    {
+      "name": "Sitting on a tiger and needling a dragon (坐虎针龙)",
+      "facet": "Sun Simiao, King of Medicine",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese alchemy (炼丹)",
+      "facet": "Sun Simiao, King of Medicine",
+      "known_at": 8
+    },
+    {
+      "name": "Scallion-stem catheter",
+      "facet": "Sun Simiao, King of Medicine",
+      "known_at": 12
+    },
+    {
+      "name": "Animal liver for night blindness",
+      "facet": "Sun Simiao, King of Medicine",
+      "known_at": 12
+    },
+    {
+      "name": "Seaweed for goitre",
+      "facet": "Sun Simiao, King of Medicine",
+      "known_at": 12
+    },
+    {
+      "name": "Ashi points (阿是穴)",
+      "facet": "Sun Simiao, King of Medicine",
+      "known_at": 13
+    },
+    {
+      "name": "Medicine King Temple (药王庙)",
+      "facet": "Sun Simiao, King of Medicine",
+      "known_at": 11
+    },
+    {
+      "name": "Tongchuan",
+      "facet": "Sun Simiao, King of Medicine",
+      "known_at": 13
+    },
+    {
+      "name": "Qizhou",
+      "facet": "Li Shizhen and materia medica",
+      "known_at": 11
+    },
+    {
+      "name": "Datura (曼陀罗)",
+      "facet": "Li Shizhen and materia medica",
+      "known_at": 11
+    },
+    {
+      "name": "Qizhou pit viper (蕲蛇)",
+      "facet": "Li Shizhen and materia medica",
+      "known_at": 12
+    },
+    {
+      "name": "Li Yanwen",
+      "facet": "Li Shizhen and materia medica",
+      "known_at": 14
+    },
+    {
+      "name": "Binhu Maixue (濒湖脉学)",
+      "facet": "Li Shizhen and materia medica",
+      "known_at": 14
+    },
+    {
+      "name": "Wang Shizhen (王世贞)",
+      "facet": "Li Shizhen and materia medica",
+      "known_at": 14
+    },
+    {
+      "name": "Charles Darwin",
+      "facet": "Li Shizhen and materia medica",
+      "known_at": 7
+    },
+    {
+      "name": "Jinling edition (金陵本)",
+      "facet": "Li Shizhen and materia medica",
+      "known_at": 14
+    },
+    {
+      "name": "Memory of the World Register",
+      "facet": "Li Shizhen and materia medica",
+      "known_at": 12
+    },
+    {
+      "name": "Materia medica (本草)",
+      "facet": "Li Shizhen and materia medica",
+      "known_at": 8
+    },
+    {
+      "name": "Huangdi Neijing",
+      "facet": "Classic medical books",
+      "known_at": 8
+    },
+    {
+      "name": "Suwen (素问)",
+      "facet": "Classic medical books",
+      "known_at": 12
+    },
+    {
+      "name": "Lingshu (灵枢)",
+      "facet": "Classic medical books",
+      "known_at": 13
+    },
+    {
+      "name": "Nan Jing (难经)",
+      "facet": "Classic medical books",
+      "known_at": 13
+    },
+    {
+      "name": "Mawangdui medical manuscripts",
+      "facet": "Classic medical books",
+      "known_at": 12
+    },
+    {
+      "name": "Fifty-two Prescriptions (五十二病方)",
+      "facet": "Classic medical books",
+      "known_at": 14
+    },
+    {
+      "name": "Maijing (脉经)",
+      "facet": "Classic medical books",
+      "known_at": 13
+    },
+    {
+      "name": "Zhouhou Beiji Fang (肘后备急方)",
+      "facet": "Classic medical books",
+      "known_at": 11
+    },
+    {
+      "name": "Xiyuan Jilu (洗冤集录)",
+      "facet": "Classic medical books",
+      "known_at": 11
+    },
+    {
+      "name": "Song Ci",
+      "facet": "Classic medical books",
+      "known_at": 10
+    },
+    {
+      "name": "Wenyi Lun (温疫论)",
+      "facet": "Classic medical books",
+      "known_at": 14
+    },
+    {
+      "name": "Yinshan Zhengyao (饮膳正要)",
+      "facet": "Classic medical books",
+      "known_at": 14
+    },
+    {
+      "name": "Bencao Jing Jizhu (本草经集注)",
+      "facet": "Classic medical books",
+      "known_at": 14
+    },
+    {
+      "name": "Four great classics of Chinese medicine",
+      "facet": "Classic medical books",
+      "known_at": 12
+    },
+    {
+      "name": "Yizong Jinjian (医宗金鉴)",
+      "facet": "Classic medical books",
+      "known_at": 14
+    },
+    {
+      "name": "Acupuncture UNESCO 2010",
+      "facet": "History of acupuncture and moxibustion",
+      "known_at": 10
+    },
+    {
+      "name": "Bian stone (砭石)",
+      "facet": "History of acupuncture and moxibustion",
+      "known_at": 12
+    },
+    {
+      "name": "Nine needles (九针)",
+      "facet": "History of acupuncture and moxibustion",
+      "known_at": 13
+    },
+    {
+      "name": "Bronze acupuncture figure",
+      "facet": "History of acupuncture and moxibustion",
+      "known_at": 9
+    },
+    {
+      "name": "Wang Weiyi",
+      "facet": "History of acupuncture and moxibustion",
+      "known_at": 13
+    },
+    {
+      "name": "Huangfu Mi",
+      "facet": "History of acupuncture and moxibustion",
+      "known_at": 12
+    },
+    {
+      "name": "Zhenjiu Jiayi Jing (针灸甲乙经)",
+      "facet": "History of acupuncture and moxibustion",
+      "known_at": 13
+    },
+    {
+      "name": "Zhenjiu Dacheng (针灸大成)",
+      "facet": "History of acupuncture and moxibustion",
+      "known_at": 14
+    },
+    {
+      "name": "Yang Jizhou",
+      "facet": "History of acupuncture and moxibustion",
+      "known_at": 15
+    },
+    {
+      "name": "Mugwort",
+      "facet": "History of acupuncture and moxibustion",
+      "known_at": 5
+    },
+    {
+      "name": "Meridians (经络)",
+      "facet": "History of acupuncture and moxibustion",
+      "known_at": 8
+    },
+    {
+      "name": "Acupoints",
+      "facet": "History of acupuncture and moxibustion",
+      "known_at": 6
+    },
+    {
+      "name": "Zusanli",
+      "facet": "History of acupuncture and moxibustion",
+      "known_at": 10
+    },
+    {
+      "name": "Acupuncture anaesthesia",
+      "facet": "History of acupuncture and moxibustion",
+      "known_at": 12
+    },
+    {
+      "name": "Bao Gu (鲍姑)",
+      "facet": "History of acupuncture and moxibustion",
+      "known_at": 14
+    },
+    {
+      "name": "Silver acupuncture needles",
+      "facet": "History of acupuncture and moxibustion",
+      "known_at": 10
+    },
+    {
+      "name": "Goji berry",
+      "facet": "Herbs and pharmacy history",
+      "known_at": 3
+    },
+    {
+      "name": "Ephedra",
+      "facet": "Herbs and pharmacy history",
+      "known_at": 11
+    },
+    {
+      "name": "Cordyceps",
+      "facet": "Herbs and pharmacy history",
+      "known_at": 8
+    },
+    {
+      "name": "Lingzhi mushroom",
+      "facet": "Herbs and pharmacy history",
+      "known_at": 5
+    },
+    {
+      "name": "Tongrentang",
+      "facet": "Herbs and pharmacy history",
+      "known_at": 8
+    },
+    {
+      "name": "Hu Qing Yu Tang",
+      "facet": "Herbs and pharmacy history",
+      "known_at": 12
+    },
+    {
+      "name": "Hu Xueyan",
+      "facet": "Herbs and pharmacy history",
+      "known_at": 12
+    },
+    {
+      "name": "Herbal medicine cabinet (百子柜)",
+      "facet": "Herbs and pharmacy history",
+      "known_at": 6
+    },
+    {
+      "name": "Medicine grinder (药碾)",
+      "facet": "Herbs and pharmacy history",
+      "known_at": 9
+    },
+    {
+      "name": "Decoction pot",
+      "facet": "Herbs and pharmacy history",
+      "known_at": 6
+    },
+    {
+      "name": "Yunnan Baiyao",
+      "facet": "Herbs and pharmacy history",
+      "known_at": 8
+    },
+    {
+      "name": "Angong Niuhuang Wan",
+      "facet": "Herbs and pharmacy history",
+      "known_at": 11
+    },
+    {
+      "name": "Dragon bones (oracle bones)",
+      "facet": "Herbs and pharmacy history",
+      "known_at": 11
+    },
+    {
+      "name": "Herbal tea (凉茶)",
+      "facet": "Herbs and pharmacy history",
+      "known_at": 5
+    },
+    {
+      "name": "病入膏肓 (bìng rù gāo huāng)",
+      "facet": "Medical idioms and stories",
+      "known_at": 8
+    },
+    {
+      "name": "讳疾忌医 (huì jí jì yī)",
+      "facet": "Medical idioms and stories",
+      "known_at": 8
+    },
+    {
+      "name": "杏林春暖 (xìng lín chūn nuǎn)",
+      "facet": "Medical idioms and stories",
+      "known_at": 11
+    },
+    {
+      "name": "Dong Feng (董奉)",
+      "facet": "Medical idioms and stories",
+      "known_at": 13
+    },
+    {
+      "name": "悬壶济世 (xuán hú jì shì)",
+      "facet": "Medical idioms and stories",
+      "known_at": 10
+    },
+    {
+      "name": "Fei Changfang",
+      "facet": "Medical idioms and stories",
+      "known_at": 14
+    },
+    {
+      "name": "妙手回春 (miào shǒu huí chūn)",
+      "facet": "Medical idioms and stories",
+      "known_at": 6
+    },
+    {
+      "name": "对症下药 (duì zhèng xià yào)",
+      "facet": "Medical idioms and stories",
+      "known_at": 6
+    },
+    {
+      "name": "华佗再世 (Huà Tuó zài shì)",
+      "facet": "Medical idioms and stories",
+      "known_at": 6
+    },
+    {
+      "name": "良药苦口 (liáng yào kǔ kǒu)",
+      "facet": "Medical idioms and stories",
+      "known_at": 4
+    },
+    {
+      "name": "起死回生 (qǐ sǐ huí shēng)",
+      "facet": "Medical idioms and stories",
+      "known_at": 7
+    },
+    {
+      "name": "杯弓蛇影 (bēi gōng shé yǐng)",
+      "facet": "Medical idioms and stories",
+      "known_at": 7
+    },
+    {
+      "name": "三折肱为良医 (sān zhé gōng wéi liáng yī)",
+      "facet": "Medical idioms and stories",
+      "known_at": 14
+    },
+    {
+      "name": "不为良相，便为良医 (bù wéi liáng xiàng, biàn wéi liáng yī)",
+      "facet": "Medical idioms and stories",
+      "known_at": 13
+    },
+    {
+      "name": "Fan Zhongyan",
+      "facet": "Medical idioms and stories",
+      "known_at": 9
+    },
+    {
+      "name": "上工治未病 (shàng gōng zhì wèi bìng)",
+      "facet": "Medical idioms and stories",
+      "known_at": 12
+    },
+    {
+      "name": "久病成医 (jiǔ bìng chéng yī)",
+      "facet": "Medical idioms and stories",
+      "known_at": 9
+    },
+    {
+      "name": "心病还须心药医 (xīn bìng hái xū xīn yào yī)",
+      "facet": "Medical idioms and stories",
+      "known_at": 8
+    },
+    {
+      "name": "Imperial Medical Academy (太医院)",
+      "facet": "Imperial medicine and institutions",
+      "known_at": 9
+    },
+    {
+      "name": "Imperial physician (太医)",
+      "facet": "Imperial medicine and institutions",
+      "known_at": 5
+    },
+    {
+      "name": "Imperial Medical Office of Tang (太医署)",
+      "facet": "Imperial medicine and institutions",
+      "known_at": 13
+    },
+    {
+      "name": "Medical officers of the Rites of Zhou",
+      "facet": "Imperial medicine and institutions",
+      "known_at": 14
+    },
+    {
+      "name": "Imperial Pharmacy of the Song (太平惠民和剂局)",
+      "facet": "Imperial medicine and institutions",
+      "known_at": 13
+    },
+    {
+      "name": "Anji Fang (安济坊)",
+      "facet": "Imperial medicine and institutions",
+      "known_at": 14
+    },
+    {
+      "name": "Smallpox variolation (人痘接种)",
+      "facet": "Imperial medicine and institutions",
+      "known_at": 11
+    },
+    {
+      "name": "Wu Lien-teh",
+      "facet": "Imperial medicine and institutions",
+      "known_at": 12
+    },
+    {
+      "name": "Barefoot doctors",
+      "facet": "Imperial medicine and institutions",
+      "known_at": 10
+    },
+    {
+      "name": "Pulse-taking by silk thread (悬丝诊脉)",
+      "facet": "Imperial medicine and institutions",
+      "known_at": 9
+    },
+    {
+      "name": "Hu Sihui",
+      "facet": "Imperial medicine and institutions",
+      "known_at": 15
+    },
+    {
+      "name": "Tan Yunxian",
+      "facet": "Imperial medicine and institutions",
+      "known_at": 12
+    },
+    {
+      "name": "Yi Xu (义妁)",
+      "facet": "Imperial medicine and institutions",
+      "known_at": 12
+    },
+    {
+      "name": "Xi Laile (喜来乐)",
+      "facet": "Imperial medicine and institutions",
+      "known_at": 10
+    },
+    {
+      "name": "Shengji Zonglu (圣济总录)",
+      "facet": "Imperial medicine and institutions",
+      "known_at": 15
+    },
+    {
+      "name": "Yijinjing",
+      "facet": "Health exercises and traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Daoyin (导引)",
+      "facet": "Health exercises and traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Daoyin Tu (导引图)",
+      "facet": "Health exercises and traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Liuzijue (六字诀)",
+      "facet": "Health exercises and traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Cupping",
+      "facet": "Health exercises and traditions",
+      "known_at": 5
+    },
+    {
+      "name": "Gua sha",
+      "facet": "Health exercises and traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Tuina",
+      "facet": "Health exercises and traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Foot soaking",
+      "facet": "Health exercises and traditions",
+      "known_at": 3
+    },
+    {
+      "name": "Sanfu patches (冬病夏治)",
+      "facet": "Health exercises and traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Medicinal diet (药膳)",
+      "facet": "Health exercises and traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Dogwood (茱萸) at Double Ninth",
+      "facet": "Health exercises and traditions",
+      "known_at": 7
+    }
+  ]
+}

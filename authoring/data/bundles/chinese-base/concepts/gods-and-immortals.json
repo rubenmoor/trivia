@@ -1,0 +1,722 @@
+{
+  "subcategory": "gods-and-immortals",
+  "facets": [
+    "Jade Emperor and heavenly court",
+    "Queen Mother of the West",
+    "The Eight Immortals",
+    "Kitchen God and door gods",
+    "Gods of wealth and luck",
+    "Earth gods and City Gods",
+    "Love and matchmaking deities",
+    "Warrior and protector gods",
+    "Sea, weather and nature gods",
+    "Moon and star deities",
+    "Taoist immortality and elixirs",
+    "Gods in novels and films"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 1,
+      "record": 1,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Heavenly Court (天庭)",
+      "facet": "Jade Emperor and heavenly court",
+      "known_at": 3
+    },
+    {
+      "name": "Lingxiao Hall (凌霄宝殿)",
+      "facet": "Jade Emperor and heavenly court",
+      "known_at": 7
+    },
+    {
+      "name": "Taibai Jinxing (太白金星)",
+      "facet": "Jade Emperor and heavenly court",
+      "known_at": 5
+    },
+    {
+      "name": "Li Jing, the Pagoda-Bearing Heavenly King (托塔天王)",
+      "facet": "Jade Emperor and heavenly court",
+      "known_at": 6
+    },
+    {
+      "name": "Thousand-Li Eye and Wind-Following Ear (千里眼顺风耳)",
+      "facet": "Jade Emperor and heavenly court",
+      "known_at": 6
+    },
+    {
+      "name": "Heavenly soldiers and generals (天兵天将)",
+      "facet": "Jade Emperor and heavenly court",
+      "known_at": 4
+    },
+    {
+      "name": "Juling Shen (巨灵神)",
+      "facet": "Jade Emperor and heavenly court",
+      "known_at": 8
+    },
+    {
+      "name": "Taishang Laojun (太上老君)",
+      "facet": "Jade Emperor and heavenly court",
+      "known_at": 4
+    },
+    {
+      "name": "Jade Emperor's birthday (天公生)",
+      "facet": "Jade Emperor and heavenly court",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Bairen (张百忍)",
+      "facet": "Jade Emperor and heavenly court",
+      "known_at": 13
+    },
+    {
+      "name": "Demon-revealing mirror (照妖镜)",
+      "facet": "Jade Emperor and heavenly court",
+      "known_at": 6
+    },
+    {
+      "name": "Peach banquet (蟠桃会)",
+      "facet": "Queen Mother of the West",
+      "known_at": 4
+    },
+    {
+      "name": "Peaches of immortality (蟠桃)",
+      "facet": "Queen Mother of the West",
+      "known_at": 3
+    },
+    {
+      "name": "Heavenly Peach Garden (蟠桃园)",
+      "facet": "Queen Mother of the West",
+      "known_at": 5
+    },
+    {
+      "name": "Mount Kunlun",
+      "facet": "Queen Mother of the West",
+      "known_at": 6
+    },
+    {
+      "name": "Jade Pool (瑶池)",
+      "facet": "Queen Mother of the West",
+      "known_at": 8
+    },
+    {
+      "name": "Blue bird messengers (青鸟)",
+      "facet": "Queen Mother of the West",
+      "known_at": 11
+    },
+    {
+      "name": "King Father of the East (东王公)",
+      "facet": "Queen Mother of the West",
+      "known_at": 13
+    },
+    {
+      "name": "Sheng headdress (胜)",
+      "facet": "Queen Mother of the West",
+      "known_at": 14
+    },
+    {
+      "name": "Dongfang Shuo steals the peaches (东方朔偷桃)",
+      "facet": "Queen Mother of the West",
+      "known_at": 12
+    },
+    {
+      "name": "Third day of the third lunar month (三月三)",
+      "facet": "Queen Mother of the West",
+      "known_at": 11
+    },
+    {
+      "name": "Eight Immortals (八仙)",
+      "facet": "The Eight Immortals",
+      "known_at": 3
+    },
+    {
+      "name": "Eight Immortals Cross the Sea (八仙过海)",
+      "facet": "The Eight Immortals",
+      "known_at": 4
+    },
+    {
+      "name": "Iron-Crutch Li (铁拐李)",
+      "facet": "The Eight Immortals",
+      "known_at": 5
+    },
+    {
+      "name": "Han Zhongli (汉钟离)",
+      "facet": "The Eight Immortals",
+      "known_at": 8
+    },
+    {
+      "name": "Lü Dongbin (吕洞宾)",
+      "facet": "The Eight Immortals",
+      "known_at": 6
+    },
+    {
+      "name": "Zhang Guolao (张果老)",
+      "facet": "The Eight Immortals",
+      "known_at": 7
+    },
+    {
+      "name": "He Xiangu (何仙姑)",
+      "facet": "The Eight Immortals",
+      "known_at": 7
+    },
+    {
+      "name": "Lan Caihe (蓝采和)",
+      "facet": "The Eight Immortals",
+      "known_at": 9
+    },
+    {
+      "name": "Cao Guojiu (曹国舅)",
+      "facet": "The Eight Immortals",
+      "known_at": 9
+    },
+    {
+      "name": "Hidden Eight Immortals emblems (暗八仙)",
+      "facet": "The Eight Immortals",
+      "known_at": 13
+    },
+    {
+      "name": "Yellow Millet Dream (黄粱一梦)",
+      "facet": "The Eight Immortals",
+      "known_at": 11
+    },
+    {
+      "name": "A dog bites Lü Dongbin (狗咬吕洞宾)",
+      "facet": "The Eight Immortals",
+      "known_at": 7
+    },
+    {
+      "name": "Each shows their own magic (各显神通)",
+      "facet": "The Eight Immortals",
+      "known_at": 6
+    },
+    {
+      "name": "Eight Immortals Palace, Xi'an (八仙宫)",
+      "facet": "The Eight Immortals",
+      "known_at": 13
+    },
+    {
+      "name": "Malt sugar offering (糖瓜)",
+      "facet": "Kitchen God and door gods",
+      "known_at": 6
+    },
+    {
+      "name": "Sending off the Kitchen God (送灶)",
+      "facet": "Kitchen God and door gods",
+      "known_at": 7
+    },
+    {
+      "name": "Qin Qiong (秦琼)",
+      "facet": "Kitchen God and door gods",
+      "known_at": 8
+    },
+    {
+      "name": "Yuchi Gong (尉迟恭)",
+      "facet": "Kitchen God and door gods",
+      "known_at": 8
+    },
+    {
+      "name": "Shentu and Yulei (神荼郁垒)",
+      "facet": "Kitchen God and door gods",
+      "known_at": 12
+    },
+    {
+      "name": "Upside-down Fu character (倒福)",
+      "facet": "Kitchen God and door gods",
+      "known_at": 2
+    },
+    {
+      "name": "New Year's Day poem by Wang Anshi (元日)",
+      "facet": "Kitchen God and door gods",
+      "known_at": 7
+    },
+    {
+      "name": "Zhuxianzhen New Year woodblock prints (朱仙镇木版年画)",
+      "facet": "Kitchen God and door gods",
+      "known_at": 13
+    },
+    {
+      "name": "Zigu, the Lady of the Latrine (紫姑)",
+      "facet": "Kitchen God and door gods",
+      "known_at": 13
+    },
+    {
+      "name": "Fan Li (范蠡)",
+      "facet": "Gods of wealth and luck",
+      "known_at": 11
+    },
+    {
+      "name": "Bi Gan (比干)",
+      "facet": "Gods of wealth and luck",
+      "known_at": 12
+    },
+    {
+      "name": "Fu Lu Shou (福禄寿)",
+      "facet": "Gods of wealth and luck",
+      "known_at": 5
+    },
+    {
+      "name": "Three-legged golden toad (金蟾)",
+      "facet": "Gods of wealth and luck",
+      "known_at": 6
+    },
+    {
+      "name": "Welcoming the God of Wealth on the fifth day (破五)",
+      "facet": "Gods of wealth and luck",
+      "known_at": 6
+    },
+    {
+      "name": "Five Gods of Wealth (五路财神)",
+      "facet": "Gods of wealth and luck",
+      "known_at": 10
+    },
+    {
+      "name": "Gong xi fa cai (恭喜发财)",
+      "facet": "Gods of wealth and luck",
+      "known_at": 2
+    },
+    {
+      "name": "Zhao Gongming's black tiger (黑虎)",
+      "facet": "Gods of wealth and luck",
+      "known_at": 11
+    },
+    {
+      "name": "God of Joy (喜神)",
+      "facet": "Gods of wealth and luck",
+      "known_at": 12
+    },
+    {
+      "name": "Earth God Tudi Gong (土地公)",
+      "facet": "Earth gods and City Gods",
+      "known_at": 3
+    },
+    {
+      "name": "Earth God's wife Tudi Po (土地婆)",
+      "facet": "Earth gods and City Gods",
+      "known_at": 8
+    },
+    {
+      "name": "Earth God shrine (土地庙)",
+      "facet": "Earth gods and City Gods",
+      "known_at": 6
+    },
+    {
+      "name": "City God (城隍)",
+      "facet": "Earth gods and City Gods",
+      "known_at": 9
+    },
+    {
+      "name": "Shanghai City God Temple (城隍庙)",
+      "facet": "Earth gods and City Gods",
+      "known_at": 7
+    },
+    {
+      "name": "Houtu (后土)",
+      "facet": "Earth gods and City Gods",
+      "known_at": 11
+    },
+    {
+      "name": "Altar of Land and Grain (社稷坛)",
+      "facet": "Earth gods and City Gods",
+      "known_at": 10
+    },
+    {
+      "name": "Mountain god (山神)",
+      "facet": "Earth gods and City Gods",
+      "known_at": 5
+    },
+    {
+      "name": "Great Emperor of the Eastern Peak (东岳大帝)",
+      "facet": "Earth gods and City Gods",
+      "known_at": 12
+    },
+    {
+      "name": "Five Sacred Mountains (五岳)",
+      "facet": "Earth gods and City Gods",
+      "known_at": 9
+    },
+    {
+      "name": "Shi Gandang stone (石敢当)",
+      "facet": "Earth gods and City Gods",
+      "known_at": 10
+    },
+    {
+      "name": "Second day of the second lunar month (二月二)",
+      "facet": "Earth gods and City Gods",
+      "known_at": 8
+    },
+    {
+      "name": "Weiya year-end banquet (尾牙)",
+      "facet": "Earth gods and City Gods",
+      "known_at": 11
+    },
+    {
+      "name": "Cowherd and Weaver Girl (牛郎织女)",
+      "facet": "Love and matchmaking deities",
+      "known_at": 2
+    },
+    {
+      "name": "Seventh Fairy (七仙女)",
+      "facet": "Love and matchmaking deities",
+      "known_at": 5
+    },
+    {
+      "name": "Dong Yong (董永)",
+      "facet": "Love and matchmaking deities",
+      "known_at": 11
+    },
+    {
+      "name": "The Heavenly Match (天仙配)",
+      "facet": "Love and matchmaking deities",
+      "known_at": 11
+    },
+    {
+      "name": "Hehe Twins (和合二仙)",
+      "facet": "Love and matchmaking deities",
+      "known_at": 12
+    },
+    {
+      "name": "Xu Xian (许仙)",
+      "facet": "Love and matchmaking deities",
+      "known_at": 8
+    },
+    {
+      "name": "Little Green (小青)",
+      "facet": "Love and matchmaking deities",
+      "known_at": 6
+    },
+    {
+      "name": "Liu Yi delivers the letter (柳毅传书)",
+      "facet": "Love and matchmaking deities",
+      "known_at": 13
+    },
+    {
+      "name": "Chenxiang splits the mountain (沉香劈山救母)",
+      "facet": "Love and matchmaking deities",
+      "known_at": 6
+    },
+    {
+      "name": "Third Holy Mother (三圣母)",
+      "facet": "Love and matchmaking deities",
+      "known_at": 10
+    },
+    {
+      "name": "Guan Yu (关羽)",
+      "facet": "Warrior and protector gods",
+      "known_at": 4
+    },
+    {
+      "name": "Green Dragon Crescent Blade (青龙偃月刀)",
+      "facet": "Warrior and protector gods",
+      "known_at": 6
+    },
+    {
+      "name": "Erlang Shen (二郎神)",
+      "facet": "Warrior and protector gods",
+      "known_at": 5
+    },
+    {
+      "name": "Howling Celestial Dog (哮天犬)",
+      "facet": "Warrior and protector gods",
+      "known_at": 5
+    },
+    {
+      "name": "Zhenwu, the Perfected Warrior (真武大帝)",
+      "facet": "Warrior and protector gods",
+      "known_at": 11
+    },
+    {
+      "name": "Nine Heavens Mysterious Lady (九天玄女)",
+      "facet": "Warrior and protector gods",
+      "known_at": 10
+    },
+    {
+      "name": "Wang Lingguan (王灵官)",
+      "facet": "Warrior and protector gods",
+      "known_at": 12
+    },
+    {
+      "name": "Chiyou (蚩尤)",
+      "facet": "Warrior and protector gods",
+      "known_at": 9
+    },
+    {
+      "name": "Yellow Emperor (黄帝)",
+      "facet": "Warrior and protector gods",
+      "known_at": 5
+    },
+    {
+      "name": "Battle of Zhuolu (涿鹿之战)",
+      "facet": "Warrior and protector gods",
+      "known_at": 11
+    },
+    {
+      "name": "Stone lions (石狮)",
+      "facet": "Warrior and protector gods",
+      "known_at": 3
+    },
+    {
+      "name": "Heng and Ha generals (哼哈二将)",
+      "facet": "Warrior and protector gods",
+      "known_at": 9
+    },
+    {
+      "name": "Ba Jia Jiang (八家将)",
+      "facet": "Warrior and protector gods",
+      "known_at": 13
+    },
+    {
+      "name": "Mazu (妈祖)",
+      "facet": "Sea, weather and nature gods",
+      "known_at": 5
+    },
+    {
+      "name": "Meizhou Island (湄洲岛)",
+      "facet": "Sea, weather and nature gods",
+      "known_at": 11
+    },
+    {
+      "name": "Dragon King (龙王)",
+      "facet": "Sea, weather and nature gods",
+      "known_at": 3
+    },
+    {
+      "name": "Ao Guang, Dragon King of the East Sea (敖广)",
+      "facet": "Sea, weather and nature gods",
+      "known_at": 6
+    },
+    {
+      "name": "Crystal Palace (水晶宫)",
+      "facet": "Sea, weather and nature gods",
+      "known_at": 5
+    },
+    {
+      "name": "Lei Gong, Lord of Thunder (雷公)",
+      "facet": "Sea, weather and nature gods",
+      "known_at": 4
+    },
+    {
+      "name": "Dianmu, Mother of Lightning (电母)",
+      "facet": "Sea, weather and nature gods",
+      "known_at": 6
+    },
+    {
+      "name": "Feng Bo, Wind God (风伯)",
+      "facet": "Sea, weather and nature gods",
+      "known_at": 7
+    },
+    {
+      "name": "Yu Shi, Rain Master (雨师)",
+      "facet": "Sea, weather and nature gods",
+      "known_at": 9
+    },
+    {
+      "name": "He Bo, River Lord (河伯)",
+      "facet": "Sea, weather and nature gods",
+      "known_at": 10
+    },
+    {
+      "name": "Gong Gong (共工)",
+      "facet": "Sea, weather and nature gods",
+      "known_at": 8
+    },
+    {
+      "name": "Zhurong (祝融)",
+      "facet": "Sea, weather and nature gods",
+      "known_at": 8
+    },
+    {
+      "name": "Nüwa (女娲)",
+      "facet": "Sea, weather and nature gods",
+      "known_at": 3
+    },
+    {
+      "name": "Jingwei fills the sea (精卫填海)",
+      "facet": "Sea, weather and nature gods",
+      "known_at": 4
+    },
+    {
+      "name": "Mooncake (月饼)",
+      "facet": "Moon and star deities",
+      "known_at": 1
+    },
+    {
+      "name": "Milky Way (天河)",
+      "facet": "Moon and star deities",
+      "known_at": 4
+    },
+    {
+      "name": "Altair and Vega (牛郎星和织女星)",
+      "facet": "Moon and star deities",
+      "known_at": 8
+    },
+    {
+      "name": "Big Dipper (北斗七星)",
+      "facet": "Moon and star deities",
+      "known_at": 4
+    },
+    {
+      "name": "Wenqu Star (文曲星)",
+      "facet": "Moon and star deities",
+      "known_at": 8
+    },
+    {
+      "name": "Kui Xing (魁星)",
+      "facet": "Moon and star deities",
+      "known_at": 11
+    },
+    {
+      "name": "Wenchang Wang (文昌帝君)",
+      "facet": "Moon and star deities",
+      "known_at": 11
+    },
+    {
+      "name": "Twenty-eight Mansions (二十八宿)",
+      "facet": "Moon and star deities",
+      "known_at": 11
+    },
+    {
+      "name": "Doumu, Mother of the Dipper (斗姆)",
+      "facet": "Moon and star deities",
+      "known_at": 13
+    },
+    {
+      "name": "Elixir of immortality (长生不老药)",
+      "facet": "Taoist immortality and elixirs",
+      "known_at": 4
+    },
+    {
+      "name": "Eight-Trigram Furnace (八卦炉)",
+      "facet": "Taoist immortality and elixirs",
+      "known_at": 5
+    },
+    {
+      "name": "Penglai (蓬莱)",
+      "facet": "Taoist immortality and elixirs",
+      "known_at": 7
+    },
+    {
+      "name": "Xu Fu (徐福)",
+      "facet": "Taoist immortality and elixirs",
+      "known_at": 10
+    },
+    {
+      "name": "Yin-yang symbol (太极图)",
+      "facet": "Taoist immortality and elixirs",
+      "known_at": 3
+    },
+    {
+      "name": "Ge Hong (葛洪)",
+      "facet": "Taoist immortality and elixirs",
+      "known_at": 12
+    },
+    {
+      "name": "Cinnabar (丹砂)",
+      "facet": "Taoist immortality and elixirs",
+      "known_at": 11
+    },
+    {
+      "name": "Lingzhi mushroom (灵芝)",
+      "facet": "Taoist immortality and elixirs",
+      "known_at": 6
+    },
+    {
+      "name": "Red-crowned crane (仙鹤)",
+      "facet": "Taoist immortality and elixirs",
+      "known_at": 4
+    },
+    {
+      "name": "Peng Zu (彭祖)",
+      "facet": "Taoist immortality and elixirs",
+      "known_at": 9
+    },
+    {
+      "name": "Taoist talisman (符)",
+      "facet": "Taoist immortality and elixirs",
+      "known_at": 8
+    },
+    {
+      "name": "White Cloud Temple, Beijing (白云观)",
+      "facet": "Taoist immortality and elixirs",
+      "known_at": 13
+    },
+    {
+      "name": "Journey to the West (西游记)",
+      "facet": "Gods in novels and films",
+      "known_at": 2
+    },
+    {
+      "name": "Bimawen (弼马温)",
+      "facet": "Gods in novels and films",
+      "known_at": 6
+    },
+    {
+      "name": "Ruyi Jingu Bang (如意金箍棒)",
+      "facet": "Gods in novels and films",
+      "known_at": 2
+    },
+    {
+      "name": "Nezha (哪吒)",
+      "facet": "Gods in novels and films",
+      "known_at": 2
+    },
+    {
+      "name": "Ao Bing (敖丙)",
+      "facet": "Gods in novels and films",
+      "known_at": 4
+    },
+    {
+      "name": "Taiyi Zhenren (太乙真人)",
+      "facet": "Gods in novels and films",
+      "known_at": 5
+    },
+    {
+      "name": "A Chinese Odyssey (大话西游)",
+      "facet": "Gods in novels and films",
+      "known_at": 8
+    },
+    {
+      "name": "Big Fish & Begonia (大鱼海棠)",
+      "facet": "Gods in novels and films",
+      "known_at": 8
+    }
+  ]
+}

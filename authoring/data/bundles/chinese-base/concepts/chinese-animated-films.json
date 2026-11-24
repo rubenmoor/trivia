@@ -1,0 +1,792 @@
+{
+  "subcategory": "chinese-animated-films",
+  "facets": [
+    "Shanghai Animation Film Studio classics",
+    "Monkey King on screen",
+    "Nezha films old and new",
+    "Heroes and main characters",
+    "Villains, dragons and demons",
+    "Myths and legends behind the films",
+    "Directors and studios",
+    "Box office and awards",
+    "Art styles and animation techniques",
+    "Ink-wash and paper-cut animation",
+    "Famous scenes, songs and lines",
+    "Modern animated features beyond Nezha"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Where Is Mama (小蝌蚪找妈妈)",
+      "facet": "Shanghai Animation Film Studio classics",
+      "known_at": 4
+    },
+    {
+      "name": "The Cowherd's Flute (牧笛)",
+      "facet": "Shanghai Animation Film Studio classics",
+      "known_at": 12
+    },
+    {
+      "name": "Feelings of Mountains and Waters (山水情)",
+      "facet": "Shanghai Animation Film Studio classics",
+      "known_at": 13
+    },
+    {
+      "name": "Calabash Brothers (葫芦兄弟)",
+      "facet": "Shanghai Animation Film Studio classics",
+      "known_at": 3
+    },
+    {
+      "name": "Princess Peacock (孔雀公主)",
+      "facet": "Shanghai Animation Film Studio classics",
+      "known_at": 13
+    },
+    {
+      "name": "The Proud General (骄傲的将军)",
+      "facet": "Shanghai Animation Film Studio classics",
+      "known_at": 9
+    },
+    {
+      "name": "Snow Kid (雪孩子)",
+      "facet": "Shanghai Animation Film Studio classics",
+      "known_at": 6
+    },
+    {
+      "name": "Little Carp Jumps over the Dragon Gate (小鲤鱼跳龙门)",
+      "facet": "Shanghai Animation Film Studio classics",
+      "known_at": 6
+    },
+    {
+      "name": "The Nine-Colored Deer (九色鹿)",
+      "facet": "Shanghai Animation Film Studio classics",
+      "known_at": 7
+    },
+    {
+      "name": "Monkeys Fishing for the Moon (猴子捞月)",
+      "facet": "Shanghai Animation Film Studio classics",
+      "known_at": 5
+    },
+    {
+      "name": "The Story of Afanti (阿凡提的故事)",
+      "facet": "Shanghai Animation Film Studio classics",
+      "known_at": 9
+    },
+    {
+      "name": "Why Is the Crow Black (乌鸦为什么是黑的)",
+      "facet": "Shanghai Animation Film Studio classics",
+      "known_at": 14
+    },
+    {
+      "name": "Princess Iron Fan (铁扇公主, 1941)",
+      "facet": "Monkey King on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Golden Monkey Defeats a Demon (金猴降妖)",
+      "facet": "Monkey King on screen",
+      "known_at": 10
+    },
+    {
+      "name": "Monkey King Reborn (西游记之再世妖王)",
+      "facet": "Monkey King on screen",
+      "known_at": 13
+    },
+    {
+      "name": "The Monkey King (2023)",
+      "facet": "Monkey King on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Somersault cloud (筋斗云)",
+      "facet": "Monkey King on screen",
+      "known_at": 3
+    },
+    {
+      "name": "Fiery eyes and golden pupils (火眼金睛)",
+      "facet": "Monkey King on screen",
+      "known_at": 6
+    },
+    {
+      "name": "Nezha Conquers the Dragon King 1979",
+      "facet": "Nezha films old and new",
+      "known_at": 8
+    },
+    {
+      "name": "Ne Zha (2019)",
+      "facet": "Nezha films old and new",
+      "known_at": 3
+    },
+    {
+      "name": "Fire-tipped spear (火尖枪)",
+      "facet": "Nezha films old and new",
+      "known_at": 7
+    },
+    {
+      "name": "Universe Ring (乾坤圈)",
+      "facet": "Nezha films old and new",
+      "known_at": 5
+    },
+    {
+      "name": "Red Armillary Sash (混天绫)",
+      "facet": "Nezha films old and new",
+      "known_at": 7
+    },
+    {
+      "name": "Lotus root body (莲藕身)",
+      "facet": "Nezha films old and new",
+      "known_at": 6
+    },
+    {
+      "name": "Spirit Pearl (灵珠)",
+      "facet": "Nezha films old and new",
+      "known_at": 5
+    },
+    {
+      "name": "Demon Pill (魔丸)",
+      "facet": "Nezha films old and new",
+      "known_at": 5
+    },
+    {
+      "name": "Heavenly Tribulation (天劫)",
+      "facet": "Nezha films old and new",
+      "known_at": 8
+    },
+    {
+      "name": "Mountain-River Society Map (山河社稷图)",
+      "facet": "Nezha films old and new",
+      "known_at": 9
+    },
+    {
+      "name": "New Gods: Nezha Reborn (新神榜：哪吒重生)",
+      "facet": "Nezha films old and new",
+      "known_at": 11
+    },
+    {
+      "name": "The Legend of Nezha (哪吒传奇, 2003)",
+      "facet": "Nezha films old and new",
+      "known_at": 8
+    },
+    {
+      "name": "Seven-colored lotus (七色宝莲)",
+      "facet": "Nezha films old and new",
+      "known_at": 10
+    },
+    {
+      "name": "Three heads and six arms (三头六臂)",
+      "facet": "Nezha films old and new",
+      "known_at": 6
+    },
+    {
+      "name": "Tianyuan Cauldron (天元鼎)",
+      "facet": "Nezha films old and new",
+      "known_at": 9
+    },
+    {
+      "name": "Li Jing (李靖)",
+      "facet": "Heroes and main characters",
+      "known_at": 7
+    },
+    {
+      "name": "Lady Yin (殷夫人)",
+      "facet": "Heroes and main characters",
+      "known_at": 7
+    },
+    {
+      "name": "Jiang Liu'er (江流儿)",
+      "facet": "Heroes and main characters",
+      "known_at": 9
+    },
+    {
+      "name": "Chun (椿)",
+      "facet": "Heroes and main characters",
+      "known_at": 11
+    },
+    {
+      "name": "Qiu (湫)",
+      "facet": "Heroes and main characters",
+      "known_at": 12
+    },
+    {
+      "name": "Xiao Bai (小白)",
+      "facet": "Heroes and main characters",
+      "known_at": 11
+    },
+    {
+      "name": "Shen Xiaobao (申小豹)",
+      "facet": "Heroes and main characters",
+      "known_at": 9
+    },
+    {
+      "name": "Shen Gongbao (申公豹)",
+      "facet": "Villains, dragons and demons",
+      "known_at": 5
+    },
+    {
+      "name": "Ao Guang (敖光)",
+      "facet": "Villains, dragons and demons",
+      "known_at": 6
+    },
+    {
+      "name": "Ao Run (敖闰)",
+      "facet": "Villains, dragons and demons",
+      "known_at": 9
+    },
+    {
+      "name": "Wuliang Xianweng (无量仙翁)",
+      "facet": "Villains, dragons and demons",
+      "known_at": 8
+    },
+    {
+      "name": "Shiji Niangniang (石矶娘娘)",
+      "facet": "Villains, dragons and demons",
+      "known_at": 9
+    },
+    {
+      "name": "Snake Spirit (蛇精)",
+      "facet": "Villains, dragons and demons",
+      "known_at": 4
+    },
+    {
+      "name": "Scorpion Spirit (蝎子精)",
+      "facet": "Villains, dragons and demons",
+      "known_at": 6
+    },
+    {
+      "name": "Golden Horn King (金角大王)",
+      "facet": "Villains, dragons and demons",
+      "known_at": 7
+    },
+    {
+      "name": "Spider Spirits (蜘蛛精)",
+      "facet": "Villains, dragons and demons",
+      "known_at": 6
+    },
+    {
+      "name": "One Ear (一只耳)",
+      "facet": "Villains, dragons and demons",
+      "known_at": 6
+    },
+    {
+      "name": "Xu Zhonglin (许仲琳)",
+      "facet": "Myths and legends behind the films",
+      "known_at": 14
+    },
+    {
+      "name": "Chenxiang (沉香)",
+      "facet": "Myths and legends behind the films",
+      "known_at": 7
+    },
+    {
+      "name": "King Zhou of Shang (纣王)",
+      "facet": "Myths and legends behind the films",
+      "known_at": 8
+    },
+    {
+      "name": "Mount Kunlun (昆仑山)",
+      "facet": "Myths and legends behind the films",
+      "known_at": 9
+    },
+    {
+      "name": "Yuanshi Tianzun (元始天尊)",
+      "facet": "Myths and legends behind the films",
+      "known_at": 10
+    },
+    {
+      "name": "Jiaozi, director of Ne Zha",
+      "facet": "Directors and studios",
+      "known_at": 6
+    },
+    {
+      "name": "Wan Laiming (万籁鸣)",
+      "facet": "Directors and studios",
+      "known_at": 11
+    },
+    {
+      "name": "Te Wei (特伟)",
+      "facet": "Directors and studios",
+      "known_at": 13
+    },
+    {
+      "name": "Wang Shuchen (王树忱)",
+      "facet": "Directors and studios",
+      "known_at": 14
+    },
+    {
+      "name": "Yan Dingxian (严定宪)",
+      "facet": "Directors and studios",
+      "known_at": 14
+    },
+    {
+      "name": "Tian Xiaopeng (田晓鹏)",
+      "facet": "Directors and studios",
+      "known_at": 12
+    },
+    {
+      "name": "Liang Xuan and Zhang Chun (梁旋、张春)",
+      "facet": "Directors and studios",
+      "known_at": 13
+    },
+    {
+      "name": "Huang Jiakang (黄家康)",
+      "facet": "Directors and studios",
+      "known_at": 14
+    },
+    {
+      "name": "Zhao Ji (赵霁)",
+      "facet": "Directors and studios",
+      "known_at": 14
+    },
+    {
+      "name": "Shanghai Animation Film Studio (上海美术电影制片厂)",
+      "facet": "Directors and studios",
+      "known_at": 7
+    },
+    {
+      "name": "Light Chaser Animation (追光动画)",
+      "facet": "Directors and studios",
+      "known_at": 11
+    },
+    {
+      "name": "Coco Cartoon (可可豆动画)",
+      "facet": "Directors and studios",
+      "known_at": 12
+    },
+    {
+      "name": "Enlight Pictures (光线影业)",
+      "facet": "Directors and studios",
+      "known_at": 11
+    },
+    {
+      "name": "Zhang Guangyu (张光宇)",
+      "facet": "Directors and studios",
+      "known_at": 14
+    },
+    {
+      "name": "A Da (阿达)",
+      "facet": "Directors and studios",
+      "known_at": 14
+    },
+    {
+      "name": "Fantawild (华强方特)",
+      "facet": "Directors and studios",
+      "known_at": 8
+    },
+    {
+      "name": "Ne Zha 2 highest-grossing animation",
+      "facet": "Box office and awards",
+      "known_at": 5
+    },
+    {
+      "name": "Inside Out 2",
+      "facet": "Box office and awards",
+      "known_at": 6
+    },
+    {
+      "name": "The Battle at Lake Changjin (长津湖)",
+      "facet": "Box office and awards",
+      "known_at": 9
+    },
+    {
+      "name": "Wolf Warrior 2 (战狼2)",
+      "facet": "Box office and awards",
+      "known_at": 9
+    },
+    {
+      "name": "Detective Chinatown 1900 (唐探1900)",
+      "facet": "Box office and awards",
+      "known_at": 11
+    },
+    {
+      "name": "Spring Festival film season (春节档)",
+      "facet": "Box office and awards",
+      "known_at": 7
+    },
+    {
+      "name": "Maoyan (猫眼)",
+      "facet": "Box office and awards",
+      "known_at": 10
+    },
+    {
+      "name": "Douban rating (豆瓣评分)",
+      "facet": "Box office and awards",
+      "known_at": 9
+    },
+    {
+      "name": "IMAX",
+      "facet": "Box office and awards",
+      "known_at": 8
+    },
+    {
+      "name": "Golden Rooster Award (金鸡奖)",
+      "facet": "Box office and awards",
+      "known_at": 11
+    },
+    {
+      "name": "Hundred Flowers Award (百花奖)",
+      "facet": "Box office and awards",
+      "known_at": 12
+    },
+    {
+      "name": "Huabiao Award (华表奖)",
+      "facet": "Box office and awards",
+      "known_at": 13
+    },
+    {
+      "name": "Golden Horse Award (金马奖)",
+      "facet": "Box office and awards",
+      "known_at": 13
+    },
+    {
+      "name": "Shanghai International Film Festival",
+      "facet": "Box office and awards",
+      "known_at": 11
+    },
+    {
+      "name": "Annecy International Animation Film Festival",
+      "facet": "Box office and awards",
+      "known_at": 14
+    },
+    {
+      "name": "Silver Bear (Berlin International Film Festival)",
+      "facet": "Box office and awards",
+      "known_at": 13
+    },
+    {
+      "name": "London Film Festival",
+      "facet": "Box office and awards",
+      "known_at": 14
+    },
+    {
+      "name": "Academy Award for Best Animated Feature",
+      "facet": "Box office and awards",
+      "known_at": 9
+    },
+    {
+      "name": "3D computer animation (三维动画)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 5
+    },
+    {
+      "name": "Hand-drawn animation (手绘动画)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 5
+    },
+    {
+      "name": "Puppet animation (木偶动画)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 7
+    },
+    {
+      "name": "Clay animation (黏土动画)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 8
+    },
+    {
+      "name": "Motion capture (动作捕捉)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 10
+    },
+    {
+      "name": "Cel animation (赛璐珞动画)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 12
+    },
+    {
+      "name": "Keyframe (关键帧)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 13
+    },
+    {
+      "name": "Frame rate (帧率)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 10
+    },
+    {
+      "name": "Storyboard (分镜)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 10
+    },
+    {
+      "name": "Peking opera facial makeup (京剧脸谱)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 6
+    },
+    {
+      "name": "Peking opera gongs and drums (京剧锣鼓)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 9
+    },
+    {
+      "name": "Dunhuang murals (敦煌壁画)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 8
+    },
+    {
+      "name": "Tulou (土楼)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 9
+    },
+    {
+      "name": "New Year prints (年画)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 9
+    },
+    {
+      "name": "Visual effects (特效)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 7
+    },
+    {
+      "name": "Render farm (渲染农场)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 13
+    },
+    {
+      "name": "Rotoscoping (转描)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 14
+    },
+    {
+      "name": "Gongbi painting (工笔画)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 12
+    },
+    {
+      "name": "Dubbing (配音)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 6
+    },
+    {
+      "name": "Character design (角色设计)",
+      "facet": "Art styles and animation techniques",
+      "known_at": 9
+    },
+    {
+      "name": "Ink-wash animation (水墨动画)",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 9
+    },
+    {
+      "name": "Paper-cut animation (剪纸动画)",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 9
+    },
+    {
+      "name": "Folded-paper animation (折纸动画)",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 13
+    },
+    {
+      "name": "Shadow play (皮影戏)",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 6
+    },
+    {
+      "name": "Chinese paper cutting (剪纸)",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 4
+    },
+    {
+      "name": "Wan Guchan (万古蟾)",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 14
+    },
+    {
+      "name": "Snipe-Clam Grapple (鹬蚌相争)",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 10
+    },
+    {
+      "name": "Fishing Child (渔童)",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 13
+    },
+    {
+      "name": "The Deer's Bell (鹿铃)",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 13
+    },
+    {
+      "name": "Bamboo flute (笛子)",
+      "facet": "Ink-wash and paper-cut animation",
+      "known_at": 4
+    },
+    {
+      "name": "“My fate is decided by me, not by heaven” (我命由我不由天)",
+      "facet": "Famous scenes, songs and lines",
+      "known_at": 6
+    },
+    {
+      "name": "“Prejudice in people's hearts is a mountain” (人心中的成见是一座大山)",
+      "facet": "Famous scenes, songs and lines",
+      "known_at": 9
+    },
+    {
+      "name": "“If fate is unfair, fight it to the end” (若命运不公，就和它斗到底)",
+      "facet": "Famous scenes, songs and lines",
+      "known_at": 10
+    },
+    {
+      "name": "“I am a demon, so what?” (小爷是魔，那又如何)",
+      "facet": "Famous scenes, songs and lines",
+      "known_at": 9
+    },
+    {
+      "name": "Jiji rulü ling (急急如律令)",
+      "facet": "Famous scenes, songs and lines",
+      "known_at": 8
+    },
+    {
+      "name": "Taiyi Zhenren's Sichuan dialect (四川话)",
+      "facet": "Famous scenes, songs and lines",
+      "known_at": 7
+    },
+    {
+      "name": "Nezha's shuttlecock game (踢毽子)",
+      "facet": "Famous scenes, songs and lines",
+      "known_at": 8
+    },
+    {
+      "name": "Shen Gongbao's stutter (结巴)",
+      "facet": "Famous scenes, songs and lines",
+      "known_at": 7
+    },
+    {
+      "name": "Transformation duel with Erlang Shen",
+      "facet": "Famous scenes, songs and lines",
+      "known_at": 10
+    },
+    {
+      "name": "Calabash Brothers theme song (葫芦娃)",
+      "facet": "Famous scenes, songs and lines",
+      "known_at": 4
+    },
+    {
+      "name": "365 Days of Missing You (想你的365天)",
+      "facet": "Famous scenes, songs and lines",
+      "known_at": 11
+    },
+    {
+      "name": "“One monk carries water, two monks share it, three monks have none” (一个和尚挑水吃)",
+      "facet": "Famous scenes, songs and lines",
+      "known_at": 5
+    },
+    {
+      "name": "Nezha's smoky eye makeup (烟熏妆)",
+      "facet": "Famous scenes, songs and lines",
+      "known_at": 8
+    },
+    {
+      "name": "Big Fish and Begonia",
+      "facet": "Modern animated features beyond Nezha",
+      "known_at": 8
+    },
+    {
+      "name": "White Snake (白蛇：缘起)",
+      "facet": "Modern animated features beyond Nezha",
+      "known_at": 9
+    },
+    {
+      "name": "Green Snake (白蛇2：青蛇劫起)",
+      "facet": "Modern animated features beyond Nezha",
+      "known_at": 11
+    },
+    {
+      "name": "Jiang Ziya (姜子牙, 2020)",
+      "facet": "Modern animated features beyond Nezha",
+      "known_at": 9
+    },
+    {
+      "name": "New Gods: Yang Jian (新神榜：杨戬)",
+      "facet": "Modern animated features beyond Nezha",
+      "known_at": 12
+    },
+    {
+      "name": "Lotus Lantern (宝莲灯, 1999)",
+      "facet": "Modern animated features beyond Nezha",
+      "known_at": 7
+    },
+    {
+      "name": "Deep Sea (深海)",
+      "facet": "Modern animated features beyond Nezha",
+      "known_at": 11
+    },
+    {
+      "name": "Nobody (浪浪山小妖怪)",
+      "facet": "Modern animated features beyond Nezha",
+      "known_at": 8
+    },
+    {
+      "name": "I Am What I Am (雄狮少年)",
+      "facet": "Modern animated features beyond Nezha",
+      "known_at": 10
+    },
+    {
+      "name": "Little Door Gods (小门神)",
+      "facet": "Modern animated features beyond Nezha",
+      "known_at": 12
+    },
+    {
+      "name": "The Legend of Hei (罗小黑战记)",
+      "facet": "Modern animated features beyond Nezha",
+      "known_at": 9
+    },
+    {
+      "name": "Kuiba (魁拔)",
+      "facet": "Modern animated features beyond Nezha",
+      "known_at": 12
+    },
+    {
+      "name": "Dahufa (大护法)",
+      "facet": "Modern animated features beyond Nezha",
+      "known_at": 13
+    },
+    {
+      "name": "Yao-Chinese Folktales (中国奇谭)",
+      "facet": "Modern animated features beyond Nezha",
+      "known_at": 10
+    }
+  ]
+}

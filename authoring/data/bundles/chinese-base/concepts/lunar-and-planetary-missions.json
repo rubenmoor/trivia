@@ -1,0 +1,927 @@
+{
+  "subcategory": "lunar-and-planetary-missions",
+  "facets": [
+    "Chang'e orbiters and landers",
+    "Yutu lunar rovers",
+    "Lunar sample return missions",
+    "Far side and Queqiao relay",
+    "Tianwen-1 and Zhurong on Mars",
+    "Beidou navigation system",
+    "Long March rockets and launch sites",
+    "Mission names and their legends",
+    "Moon and Mars discoveries",
+    "Other countries' uncrewed missions",
+    "Scientists and mission control",
+    "Future missions and lunar station"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 5,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Chang'e lunar exploration program",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 5
+    },
+    {
+      "name": "Chang'e 1",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 7
+    },
+    {
+      "name": "Chang'e 2",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 9
+    },
+    {
+      "name": "Chang'e 3",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 8
+    },
+    {
+      "name": "Chang'e 5-T1",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 14
+    },
+    {
+      "name": "Orbit, land, return (绕、落、回)",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 9
+    },
+    {
+      "name": "Soft landing",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 8
+    },
+    {
+      "name": "Lunar orbit",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 6
+    },
+    {
+      "name": "Hazard avoidance hovering",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 12
+    },
+    {
+      "name": "Mare Imbrium",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 13
+    },
+    {
+      "name": "Full map of the Moon",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 9
+    },
+    {
+      "name": "Asteroid Toutatis",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 13
+    },
+    {
+      "name": "Lunar-based ultraviolet telescope",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 13
+    },
+    {
+      "name": "Landing camera",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 8
+    },
+    {
+      "name": "Radioisotope heater",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 12
+    },
+    {
+      "name": "Lunar dust",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 8
+    },
+    {
+      "name": "Xichang launch of Chang'e 1 (2007)",
+      "facet": "Chang'e orbiters and landers",
+      "known_at": 11
+    },
+    {
+      "name": "Yutu",
+      "facet": "Yutu lunar rovers",
+      "known_at": 4
+    },
+    {
+      "name": "Yutu-2",
+      "facet": "Yutu lunar rovers",
+      "known_at": 6
+    },
+    {
+      "name": "Rover wheels",
+      "facet": "Yutu lunar rovers",
+      "known_at": 3
+    },
+    {
+      "name": "Solar panels",
+      "facet": "Yutu lunar rovers",
+      "known_at": 3
+    },
+    {
+      "name": "Lunar night",
+      "facet": "Yutu lunar rovers",
+      "known_at": 7
+    },
+    {
+      "name": "Lunar day",
+      "facet": "Yutu lunar rovers",
+      "known_at": 7
+    },
+    {
+      "name": "Rover hibernation",
+      "facet": "Yutu lunar rovers",
+      "known_at": 7
+    },
+    {
+      "name": "Mystery hut (神秘小屋)",
+      "facet": "Yutu lunar rovers",
+      "known_at": 9
+    },
+    {
+      "name": "Lunar penetrating radar",
+      "facet": "Yutu lunar rovers",
+      "known_at": 11
+    },
+    {
+      "name": "Panoramic camera",
+      "facet": "Yutu lunar rovers",
+      "known_at": 8
+    },
+    {
+      "name": "Rover tracks",
+      "facet": "Yutu lunar rovers",
+      "known_at": 4
+    },
+    {
+      "name": "Yutu's “Goodnight, Earth” posts",
+      "facet": "Yutu lunar rovers",
+      "known_at": 9
+    },
+    {
+      "name": "Rover robotic arm",
+      "facet": "Yutu lunar rovers",
+      "known_at": 7
+    },
+    {
+      "name": "Infrared imaging spectrometer",
+      "facet": "Yutu lunar rovers",
+      "known_at": 13
+    },
+    {
+      "name": "Rover name public vote",
+      "facet": "Yutu lunar rovers",
+      "known_at": 10
+    },
+    {
+      "name": "Rover mast",
+      "facet": "Yutu lunar rovers",
+      "known_at": 8
+    },
+    {
+      "name": "Lunar soil",
+      "facet": "Lunar sample return missions",
+      "known_at": 4
+    },
+    {
+      "name": "Moon rock",
+      "facet": "Lunar sample return missions",
+      "known_at": 3
+    },
+    {
+      "name": "Changesite-(Y)",
+      "facet": "Lunar sample return missions",
+      "known_at": 12
+    },
+    {
+      "name": "Oceanus Procellarum",
+      "facet": "Lunar sample return missions",
+      "known_at": 12
+    },
+    {
+      "name": "Mons Rümker",
+      "facet": "Lunar sample return missions",
+      "known_at": 15
+    },
+    {
+      "name": "Apollo crater",
+      "facet": "Lunar sample return missions",
+      "known_at": 14
+    },
+    {
+      "name": "Ascent vehicle",
+      "facet": "Lunar sample return missions",
+      "known_at": 9
+    },
+    {
+      "name": "Return capsule",
+      "facet": "Lunar sample return missions",
+      "known_at": 7
+    },
+    {
+      "name": "Lunar orbit docking",
+      "facet": "Lunar sample return missions",
+      "known_at": 10
+    },
+    {
+      "name": "Skip reentry",
+      "facet": "Lunar sample return missions",
+      "known_at": 12
+    },
+    {
+      "name": "Fabric Chinese flag on the Moon",
+      "facet": "Lunar sample return missions",
+      "known_at": 7
+    },
+    {
+      "name": "Helium-3",
+      "facet": "Lunar sample return missions",
+      "known_at": 11
+    },
+    {
+      "name": "Lunar drill",
+      "facet": "Lunar sample return missions",
+      "known_at": 7
+    },
+    {
+      "name": "Lunar glass beads",
+      "facet": "Lunar sample return missions",
+      "known_at": 12
+    },
+    {
+      "name": "Lunar sample loans to foreign scientists",
+      "facet": "Lunar sample return missions",
+      "known_at": 12
+    },
+    {
+      "name": "Queqiao",
+      "facet": "Far side and Queqiao relay",
+      "known_at": 8
+    },
+    {
+      "name": "Queqiao-2",
+      "facet": "Far side and Queqiao relay",
+      "known_at": 10
+    },
+    {
+      "name": "Earth–Moon L2 point",
+      "facet": "Far side and Queqiao relay",
+      "known_at": 12
+    },
+    {
+      "name": "Halo orbit",
+      "facet": "Far side and Queqiao relay",
+      "known_at": 13
+    },
+    {
+      "name": "Von Kármán crater",
+      "facet": "Far side and Queqiao relay",
+      "known_at": 12
+    },
+    {
+      "name": "South Pole–Aitken basin",
+      "facet": "Far side and Queqiao relay",
+      "known_at": 12
+    },
+    {
+      "name": "Statio Tianhe",
+      "facet": "Far side and Queqiao relay",
+      "known_at": 13
+    },
+    {
+      "name": "Cotton seeds on the Moon",
+      "facet": "Far side and Queqiao relay",
+      "known_at": 8
+    },
+    {
+      "name": "Lunar mini biosphere",
+      "facet": "Far side and Queqiao relay",
+      "known_at": 10
+    },
+    {
+      "name": "Radio shadow of the far side",
+      "facet": "Far side and Queqiao relay",
+      "known_at": 9
+    },
+    {
+      "name": "Longjiang microsatellites",
+      "facet": "Far side and Queqiao relay",
+      "known_at": 14
+    },
+    {
+      "name": "Low-frequency radio astronomy",
+      "facet": "Far side and Queqiao relay",
+      "known_at": 13
+    },
+    {
+      "name": "“Dark side of the Moon”",
+      "facet": "Far side and Queqiao relay",
+      "known_at": 7
+    },
+    {
+      "name": "Relay satellite",
+      "facet": "Far side and Queqiao relay",
+      "known_at": 7
+    },
+    {
+      "name": "Tianwen-1 orbiter",
+      "facet": "Tianwen-1 and Zhurong on Mars",
+      "known_at": 9
+    },
+    {
+      "name": "Utopia Planitia",
+      "facet": "Tianwen-1 and Zhurong on Mars",
+      "known_at": 12
+    },
+    {
+      "name": "Seven minutes of terror",
+      "facet": "Tianwen-1 and Zhurong on Mars",
+      "known_at": 10
+    },
+    {
+      "name": "Supersonic parachute",
+      "facet": "Tianwen-1 and Zhurong on Mars",
+      "known_at": 9
+    },
+    {
+      "name": "Heat shield",
+      "facet": "Tianwen-1 and Zhurong on Mars",
+      "known_at": 8
+    },
+    {
+      "name": "Zhurong group selfie",
+      "facet": "Tianwen-1 and Zhurong on Mars",
+      "known_at": 9
+    },
+    {
+      "name": "Butterfly-wing solar panels",
+      "facet": "Tianwen-1 and Zhurong on Mars",
+      "known_at": 9
+    },
+    {
+      "name": "Martian dust storm",
+      "facet": "Tianwen-1 and Zhurong on Mars",
+      "known_at": 7
+    },
+    {
+      "name": "Sol (Martian day)",
+      "facet": "Tianwen-1 and Zhurong on Mars",
+      "known_at": 11
+    },
+    {
+      "name": "Mars launch window",
+      "facet": "Tianwen-1 and Zhurong on Mars",
+      "known_at": 11
+    },
+    {
+      "name": "Earth–Mars signal delay",
+      "facet": "Tianwen-1 and Zhurong on Mars",
+      "known_at": 10
+    },
+    {
+      "name": "Mars subsurface radar",
+      "facet": "Tianwen-1 and Zhurong on Mars",
+      "known_at": 12
+    },
+    {
+      "name": "Yinghuo-1",
+      "facet": "Tianwen-1 and Zhurong on Mars",
+      "known_at": 13
+    },
+    {
+      "name": "Orbit, land and rove in one mission",
+      "facet": "Tianwen-1 and Zhurong on Mars",
+      "known_at": 10
+    },
+    {
+      "name": "Mars Day of China",
+      "facet": "Tianwen-1 and Zhurong on Mars",
+      "known_at": 13
+    },
+    {
+      "name": "BeiDou",
+      "facet": "Beidou navigation system",
+      "known_at": 5
+    },
+    {
+      "name": "BeiDou-1",
+      "facet": "Beidou navigation system",
+      "known_at": 11
+    },
+    {
+      "name": "BeiDou-3",
+      "facet": "Beidou navigation system",
+      "known_at": 9
+    },
+    {
+      "name": "BeiDou short message service",
+      "facet": "Beidou navigation system",
+      "known_at": 10
+    },
+    {
+      "name": "GLONASS",
+      "facet": "Beidou navigation system",
+      "known_at": 11
+    },
+    {
+      "name": "Galileo navigation system",
+      "facet": "Beidou navigation system",
+      "known_at": 11
+    },
+    {
+      "name": "Big Dipper",
+      "facet": "Beidou navigation system",
+      "known_at": 3
+    },
+    {
+      "name": "Atomic clock",
+      "facet": "Beidou navigation system",
+      "known_at": 9
+    },
+    {
+      "name": "Hydrogen maser clock",
+      "facet": "Beidou navigation system",
+      "known_at": 14
+    },
+    {
+      "name": "Geostationary orbit",
+      "facet": "Beidou navigation system",
+      "known_at": 10
+    },
+    {
+      "name": "Inclined geosynchronous orbit",
+      "facet": "Beidou navigation system",
+      "known_at": 14
+    },
+    {
+      "name": "Medium Earth orbit",
+      "facet": "Beidou navigation system",
+      "known_at": 12
+    },
+    {
+      "name": "Satellite constellation",
+      "facet": "Beidou navigation system",
+      "known_at": 9
+    },
+    {
+      "name": "Trilateration",
+      "facet": "Beidou navigation system",
+      "known_at": 12
+    },
+    {
+      "name": "Phone map navigation",
+      "facet": "Beidou navigation system",
+      "known_at": 3
+    },
+    {
+      "name": "Precision farming",
+      "facet": "Beidou navigation system",
+      "known_at": 10
+    },
+    {
+      "name": "Long March rocket family",
+      "facet": "Long March rockets and launch sites",
+      "known_at": 5
+    },
+    {
+      "name": "“The East Is Red” (东方红)",
+      "facet": "Long March rockets and launch sites",
+      "known_at": 7
+    },
+    {
+      "name": "Taiyuan Satellite Launch Center",
+      "facet": "Long March rockets and launch sites",
+      "known_at": 10
+    },
+    {
+      "name": "Liquid hydrogen fuel",
+      "facet": "Long March rockets and launch sites",
+      "known_at": 10
+    },
+    {
+      "name": "Rocket booster",
+      "facet": "Long March rockets and launch sites",
+      "known_at": 7
+    },
+    {
+      "name": "Launching near the equator",
+      "facet": "Long March rockets and launch sites",
+      "known_at": 10
+    },
+    {
+      "name": "Sea launch",
+      "facet": "Long March rockets and launch sites",
+      "known_at": 11
+    },
+    {
+      "name": "Chang'e (goddess)",
+      "facet": "Mission names and their legends",
+      "known_at": 2
+    },
+    {
+      "name": "Mooncake",
+      "facet": "Mission names and their legends",
+      "known_at": 1
+    },
+    {
+      "name": "Niulang and Zhinü",
+      "facet": "Mission names and their legends",
+      "known_at": 3
+    },
+    {
+      "name": "Heavenly Questions (天问)",
+      "facet": "Mission names and their legends",
+      "known_at": 11
+    },
+    {
+      "name": "Yinghuo (荧惑)",
+      "facet": "Mission names and their legends",
+      "known_at": 11
+    },
+    {
+      "name": "Wangshu",
+      "facet": "Mission names and their legends",
+      "known_at": 13
+    },
+    {
+      "name": "Shenzhou",
+      "facet": "Mission names and their legends",
+      "known_at": 5
+    },
+    {
+      "name": "Tiangong",
+      "facet": "Mission names and their legends",
+      "known_at": 5
+    },
+    {
+      "name": "Water on the Moon",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 7
+    },
+    {
+      "name": "Young lunar volcanism",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Lunar dichotomy",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Giant-impact hypothesis",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Lunar maria",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 9
+    },
+    {
+      "name": "Lunar highlands",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 10
+    },
+    {
+      "name": "Moonquake",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 9
+    },
+    {
+      "name": "Lunar mantle",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "Ancient lunar magnetic field",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Ancient Martian ocean",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 10
+    },
+    {
+      "name": "Martian water ice",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 8
+    },
+    {
+      "name": "Methane on Mars",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "Olympus Mons",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 9
+    },
+    {
+      "name": "Martian dust devil",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 9
+    },
+    {
+      "name": "Martian meteorite",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Clay minerals on Mars",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "Martian sand dunes",
+      "facet": "Moon and Mars discoveries",
+      "known_at": 8
+    },
+    {
+      "name": "Luna 2",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 12
+    },
+    {
+      "name": "Luna 9",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 12
+    },
+    {
+      "name": "Luna 16",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 13
+    },
+    {
+      "name": "Lunokhod 1",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 12
+    },
+    {
+      "name": "Chandrayaan-3",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 10
+    },
+    {
+      "name": "Chandrayaan-1",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 12
+    },
+    {
+      "name": "Mangalyaan",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 12
+    },
+    {
+      "name": "SLIM",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 13
+    },
+    {
+      "name": "Beresheet",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 14
+    },
+    {
+      "name": "Hope Mars probe",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 12
+    },
+    {
+      "name": "Viking 1",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 11
+    },
+    {
+      "name": "Sojourner",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 11
+    },
+    {
+      "name": "Opportunity",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 9
+    },
+    {
+      "name": "Curiosity",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 7
+    },
+    {
+      "name": "Perseverance",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 8
+    },
+    {
+      "name": "Ingenuity",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 9
+    },
+    {
+      "name": "Mars Express",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 12
+    },
+    {
+      "name": "Lunar Reconnaissance Orbiter",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 13
+    },
+    {
+      "name": "Danuri",
+      "facet": "Other countries' uncrewed missions",
+      "known_at": 14
+    },
+    {
+      "name": "Ouyang Ziyuan",
+      "facet": "Scientists and mission control",
+      "known_at": 11
+    },
+    {
+      "name": "Ye Peijian",
+      "facet": "Scientists and mission control",
+      "known_at": 12
+    },
+    {
+      "name": "Wu Weiren",
+      "facet": "Scientists and mission control",
+      "known_at": 12
+    },
+    {
+      "name": "Zhang Rongqiao",
+      "facet": "Scientists and mission control",
+      "known_at": 13
+    },
+    {
+      "name": "Chen Fangyun",
+      "facet": "Scientists and mission control",
+      "known_at": 13
+    },
+    {
+      "name": "Zhao Jiuzhang",
+      "facet": "Scientists and mission control",
+      "known_at": 13
+    },
+    {
+      "name": "Xi'an Satellite Control Center",
+      "facet": "Scientists and mission control",
+      "known_at": 12
+    },
+    {
+      "name": "Kashi Deep Space Station",
+      "facet": "Scientists and mission control",
+      "known_at": 13
+    },
+    {
+      "name": "Jiamusi Deep Space Station",
+      "facet": "Scientists and mission control",
+      "known_at": 13
+    },
+    {
+      "name": "China National Space Administration",
+      "facet": "Scientists and mission control",
+      "known_at": 8
+    },
+    {
+      "name": "Space Day of China",
+      "facet": "Scientists and mission control",
+      "known_at": 9
+    },
+    {
+      "name": "Neuquén deep space station",
+      "facet": "Scientists and mission control",
+      "known_at": 15
+    },
+    {
+      "name": "Chang'e 7",
+      "facet": "Future missions and lunar station",
+      "known_at": 10
+    },
+    {
+      "name": "Chang'e 8",
+      "facet": "Future missions and lunar station",
+      "known_at": 11
+    },
+    {
+      "name": "International Lunar Research Station",
+      "facet": "Future missions and lunar station",
+      "known_at": 10
+    },
+    {
+      "name": "Tianwen-2",
+      "facet": "Future missions and lunar station",
+      "known_at": 10
+    },
+    {
+      "name": "Tianwen-3",
+      "facet": "Future missions and lunar station",
+      "known_at": 12
+    },
+    {
+      "name": "Tianwen-4",
+      "facet": "Future missions and lunar station",
+      "known_at": 13
+    },
+    {
+      "name": "Kamo'oalewa",
+      "facet": "Future missions and lunar station",
+      "known_at": 14
+    },
+    {
+      "name": "Mengzhou",
+      "facet": "Future missions and lunar station",
+      "known_at": 11
+    },
+    {
+      "name": "Lanyue",
+      "facet": "Future missions and lunar station",
+      "known_at": 11
+    },
+    {
+      "name": "Wangyu spacesuit",
+      "facet": "Future missions and lunar station",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese crewed Moon landing",
+      "facet": "Future missions and lunar station",
+      "known_at": 7
+    },
+    {
+      "name": "Lunar south pole",
+      "facet": "Future missions and lunar station",
+      "known_at": 9
+    },
+    {
+      "name": "Shackleton crater",
+      "facet": "Future missions and lunar station",
+      "known_at": 14
+    },
+    {
+      "name": "Artemis program",
+      "facet": "Future missions and lunar station",
+      "known_at": 10
+    },
+    {
+      "name": "Lunar Gateway",
+      "facet": "Future missions and lunar station",
+      "known_at": 13
+    },
+    {
+      "name": "Lunar soil bricks",
+      "facet": "Future missions and lunar station",
+      "known_at": 10
+    },
+    {
+      "name": "Mars sample return",
+      "facet": "Future missions and lunar station",
+      "known_at": 11
+    }
+  ]
+}

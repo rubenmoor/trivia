@@ -1,0 +1,1107 @@
+{
+  "subcategory": "apps-and-online-life",
+  "facets": [
+    "WeChat and its features",
+    "QQ and early Chinese internet",
+    "Mobile payment and QR codes",
+    "Online shopping and Double Eleven",
+    "Food delivery and ride-hailing",
+    "Short video and livestreaming",
+    "Bilibili and fan culture",
+    "Chinese internet slang",
+    "Red packets and online festivals",
+    "Search, maps and everyday apps",
+    "Online gaming and esports habits",
+    "Online learning and news apps"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 5,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "WeChat",
+      "facet": "WeChat and its features",
+      "known_at": 2
+    },
+    {
+      "name": "WeChat Moments (朋友圈)",
+      "facet": "WeChat and its features",
+      "known_at": 5
+    },
+    {
+      "name": "WeChat Mini Programs (小程序)",
+      "facet": "WeChat and its features",
+      "known_at": 7
+    },
+    {
+      "name": "WeChat Official Accounts (公众号)",
+      "facet": "WeChat and its features",
+      "known_at": 8
+    },
+    {
+      "name": "WeChat voice messages",
+      "facet": "WeChat and its features",
+      "known_at": 4
+    },
+    {
+      "name": "Shake (摇一摇)",
+      "facet": "WeChat and its features",
+      "known_at": 9
+    },
+    {
+      "name": "WeChat stickers (表情包)",
+      "facet": "WeChat and its features",
+      "known_at": 4
+    },
+    {
+      "name": "WeChat Channels (视频号)",
+      "facet": "WeChat and its features",
+      "known_at": 9
+    },
+    {
+      "name": "Pat-pat (拍一拍)",
+      "facet": "WeChat and its features",
+      "known_at": 8
+    },
+    {
+      "name": "WeChat group chat",
+      "facet": "WeChat and its features",
+      "known_at": 4
+    },
+    {
+      "name": "WeChat video call",
+      "facet": "WeChat and its features",
+      "known_at": 4
+    },
+    {
+      "name": "Zhang Xiaolong",
+      "facet": "WeChat and its features",
+      "known_at": 12
+    },
+    {
+      "name": "WeChat launch 2011",
+      "facet": "WeChat and its features",
+      "known_at": 11
+    },
+    {
+      "name": "People Nearby (附近的人)",
+      "facet": "WeChat and its features",
+      "known_at": 10
+    },
+    {
+      "name": "Drift Bottle (漂流瓶)",
+      "facet": "WeChat and its features",
+      "known_at": 11
+    },
+    {
+      "name": "WeRun step ranking (微信运动)",
+      "facet": "WeChat and its features",
+      "known_at": 8
+    },
+    {
+      "name": "File Transfer (文件传输助手)",
+      "facet": "WeChat and its features",
+      "known_at": 7
+    },
+    {
+      "name": "Message recall (撤回)",
+      "facet": "WeChat and its features",
+      "known_at": 6
+    },
+    {
+      "name": "WeChat Reading (微信读书)",
+      "facet": "WeChat and its features",
+      "known_at": 10
+    },
+    {
+      "name": "Weixin (微信) name",
+      "facet": "WeChat and its features",
+      "known_at": 9
+    },
+    {
+      "name": "QQ",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 3
+    },
+    {
+      "name": "QQ launched 1999",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 11
+    },
+    {
+      "name": "OICQ",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 13
+    },
+    {
+      "name": "QQ Zone (QQ空间)",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 8
+    },
+    {
+      "name": "QQ Show (QQ秀)",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 10
+    },
+    {
+      "name": "QQ levels: stars, moons and suns",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 9
+    },
+    {
+      "name": "QQ message sound (嘀嘀)",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 7
+    },
+    {
+      "name": "Dial-up internet",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 10
+    },
+    {
+      "name": "China's first email 1987",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 13
+    },
+    {
+      "name": "China joins the internet 1994",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 13
+    },
+    {
+      "name": "BBS forums",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 11
+    },
+    {
+      "name": "Tianya forum (天涯)",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 13
+    },
+    {
+      "name": "Renren (人人网)",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 13
+    },
+    {
+      "name": "Fetion (飞信)",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 13
+    },
+    {
+      "name": "Mars script (火星文)",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 12
+    },
+    {
+      "name": "Baidu Tieba (百度贴吧)",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 10
+    },
+    {
+      "name": "MSN Messenger",
+      "facet": "QQ and early Chinese internet",
+      "known_at": 13
+    },
+    {
+      "name": "QR code",
+      "facet": "Mobile payment and QR codes",
+      "known_at": 2
+    },
+    {
+      "name": "QR code payment",
+      "facet": "Mobile payment and QR codes",
+      "known_at": 3
+    },
+    {
+      "name": "Alipay 2004",
+      "facet": "Mobile payment and QR codes",
+      "known_at": 11
+    },
+    {
+      "name": "Payment code (付款码)",
+      "facet": "Mobile payment and QR codes",
+      "known_at": 6
+    },
+    {
+      "name": "Collection code (收款码)",
+      "facet": "Mobile payment and QR codes",
+      "known_at": 6
+    },
+    {
+      "name": "Huabei (花呗)",
+      "facet": "Mobile payment and QR codes",
+      "known_at": 10
+    },
+    {
+      "name": "Yu'e Bao (余额宝)",
+      "facet": "Mobile payment and QR codes",
+      "known_at": 11
+    },
+    {
+      "name": "Digital RMB (e-CNY)",
+      "facet": "Mobile payment and QR codes",
+      "known_at": 9
+    },
+    {
+      "name": "Face payment (刷脸支付)",
+      "facet": "Mobile payment and QR codes",
+      "known_at": 6
+    },
+    {
+      "name": "Sesame Credit (芝麻信用)",
+      "facet": "Mobile payment and QR codes",
+      "known_at": 11
+    },
+    {
+      "name": "UnionPay QuickPass (云闪付)",
+      "facet": "Mobile payment and QR codes",
+      "known_at": 11
+    },
+    {
+      "name": "Transit QR code (乘车码)",
+      "facet": "Mobile payment and QR codes",
+      "known_at": 6
+    },
+    {
+      "name": "Masahiro Hara",
+      "facet": "Mobile payment and QR codes",
+      "known_at": 14
+    },
+    {
+      "name": "Fingerprint payment",
+      "facet": "Mobile payment and QR codes",
+      "known_at": 7
+    },
+    {
+      "name": "Cashless society",
+      "facet": "Mobile payment and QR codes",
+      "known_at": 9
+    },
+    {
+      "name": "Taobao",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 3
+    },
+    {
+      "name": "Double Eleven (双十一)",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 4
+    },
+    {
+      "name": "Singles' Day origin at Nanjing University",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 12
+    },
+    {
+      "name": "Tmall (天猫)",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 6
+    },
+    {
+      "name": "JD.com (京东)",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 6
+    },
+    {
+      "name": "Double Twelve (双十二)",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 9
+    },
+    {
+      "name": "Pinduoduo (拼多多)",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 6
+    },
+    {
+      "name": "Group buying (拼团)",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 7
+    },
+    {
+      "name": "Cainiao Station (菜鸟驿站)",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 7
+    },
+    {
+      "name": "Courier (快递小哥)",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 3
+    },
+    {
+      "name": "Qin (亲) customer service greeting",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 8
+    },
+    {
+      "name": "Shopping cart",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 3
+    },
+    {
+      "name": "Seven-day no-reason return (七天无理由退货)",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 8
+    },
+    {
+      "name": "Buyer's show and seller's show (买家秀与卖家秀)",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 10
+    },
+    {
+      "name": "Xianyu (闲鱼)",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 9
+    },
+    {
+      "name": "Taobao Villages (淘宝村)",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 14
+    },
+    {
+      "name": "Jack Ma",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 6
+    },
+    {
+      "name": "Five-star review (好评)",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 5
+    },
+    {
+      "name": "Tmall Double Eleven Gala",
+      "facet": "Online shopping and Double Eleven",
+      "known_at": 12
+    },
+    {
+      "name": "Meituan delivery",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 4
+    },
+    {
+      "name": "Ele.me (饿了么)",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 5
+    },
+    {
+      "name": "Delivery rider (外卖小哥)",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 3
+    },
+    {
+      "name": "Delivery box (外卖箱)",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 3
+    },
+    {
+      "name": "No cutlery option (无需餐具)",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 8
+    },
+    {
+      "name": "Contactless delivery",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 9
+    },
+    {
+      "name": "Didi (滴滴)",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 5
+    },
+    {
+      "name": "Ride-hailing (网约车)",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 5
+    },
+    {
+      "name": "Hitch carpool (顺风车)",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 9
+    },
+    {
+      "name": "Bike sharing",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 3
+    },
+    {
+      "name": "Mobike (摩拜)",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 7
+    },
+    {
+      "name": "ofo little yellow bike",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 8
+    },
+    {
+      "name": "Hellobike (哈啰)",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 8
+    },
+    {
+      "name": "Electric scooter (电动车)",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 3
+    },
+    {
+      "name": "Apollo Go robotaxi (萝卜快跑)",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 11
+    },
+    {
+      "name": "Dianping (大众点评)",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 8
+    },
+    {
+      "name": "Group-buy coupon (团购券)",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 7
+    },
+    {
+      "name": "Freshippo (盒马)",
+      "facet": "Food delivery and ride-hailing",
+      "known_at": 11
+    },
+    {
+      "name": "Douyin",
+      "facet": "Short video and livestreaming",
+      "known_at": 3
+    },
+    {
+      "name": "Kuaishou (快手)",
+      "facet": "Short video and livestreaming",
+      "known_at": 6
+    },
+    {
+      "name": "Livestream selling (直播带货)",
+      "facet": "Short video and livestreaming",
+      "known_at": 6
+    },
+    {
+      "name": "Li Jiaqi",
+      "facet": "Short video and livestreaming",
+      "known_at": 9
+    },
+    {
+      "name": "Dong Yuhui",
+      "facet": "Short video and livestreaming",
+      "known_at": 11
+    },
+    {
+      "name": "Virtual gifts (打赏)",
+      "facet": "Short video and livestreaming",
+      "known_at": 8
+    },
+    {
+      "name": "Beauty filter (美颜)",
+      "facet": "Short video and livestreaming",
+      "known_at": 4
+    },
+    {
+      "name": "Vertical video",
+      "facet": "Short video and livestreaming",
+      "known_at": 6
+    },
+    {
+      "name": "Recommendation algorithm",
+      "facet": "Short video and livestreaming",
+      "known_at": 9
+    },
+    {
+      "name": "Streamer (主播)",
+      "facet": "Short video and livestreaming",
+      "known_at": 5
+    },
+    {
+      "name": "Double-tap to like",
+      "facet": "Short video and livestreaming",
+      "known_at": 6
+    },
+    {
+      "name": "Ding Zhen",
+      "facet": "Short video and livestreaming",
+      "known_at": 10
+    },
+    {
+      "name": "Li Ziqi",
+      "facet": "Short video and livestreaming",
+      "known_at": 7
+    },
+    {
+      "name": "Xiaohongshu (小红书)",
+      "facet": "Short video and livestreaming",
+      "known_at": 8
+    },
+    {
+      "name": "Teen mode (青少年模式)",
+      "facet": "Short video and livestreaming",
+      "known_at": 7
+    },
+    {
+      "name": "Co-streaming (连麦)",
+      "facet": "Short video and livestreaming",
+      "known_at": 10
+    },
+    {
+      "name": "Little yellow cart (小黄车)",
+      "facet": "Short video and livestreaming",
+      "known_at": 10
+    },
+    {
+      "name": "Xigua Video (西瓜视频)",
+      "facet": "Short video and livestreaming",
+      "known_at": 11
+    },
+    {
+      "name": "Bilibili bullet comments",
+      "facet": "Bilibili and fan culture",
+      "known_at": 6
+    },
+    {
+      "name": "22 and 33 (2233娘)",
+      "facet": "Bilibili and fan culture",
+      "known_at": 10
+    },
+    {
+      "name": "Uploader (UP主)",
+      "facet": "Bilibili and fan culture",
+      "known_at": 6
+    },
+    {
+      "name": "Triple combo (一键三连)",
+      "facet": "Bilibili and fan culture",
+      "known_at": 8
+    },
+    {
+      "name": "Bilibili coins (投币)",
+      "facet": "Bilibili and fan culture",
+      "known_at": 8
+    },
+    {
+      "name": "Bilibili New Year's Eve Gala",
+      "facet": "Bilibili and fan culture",
+      "known_at": 11
+    },
+    {
+      "name": "Bilibili membership quiz (答题转正)",
+      "facet": "Bilibili and fan culture",
+      "known_at": 11
+    },
+    {
+      "name": "High energy ahead (前方高能)",
+      "facet": "Bilibili and fan culture",
+      "known_at": 10
+    },
+    {
+      "name": "Hatsune Miku",
+      "facet": "Bilibili and fan culture",
+      "known_at": 7
+    },
+    {
+      "name": "Luo Tianyi (洛天依)",
+      "facet": "Bilibili and fan culture",
+      "known_at": 8
+    },
+    {
+      "name": "Vocaloid",
+      "facet": "Bilibili and fan culture",
+      "known_at": 11
+    },
+    {
+      "name": "VTuber",
+      "facet": "Bilibili and fan culture",
+      "known_at": 9
+    },
+    {
+      "name": "Anime convention (漫展)",
+      "facet": "Bilibili and fan culture",
+      "known_at": 7
+    },
+    {
+      "name": "Fandom (饭圈)",
+      "facet": "Bilibili and fan culture",
+      "known_at": 10
+    },
+    {
+      "name": "ACG (二次元)",
+      "facet": "Bilibili and fan culture",
+      "known_at": 6
+    },
+    {
+      "name": "Guichu remix videos (鬼畜)",
+      "facet": "Bilibili and fan culture",
+      "known_at": 10
+    },
+    {
+      "name": "Niconico",
+      "facet": "Bilibili and fan culture",
+      "known_at": 13
+    },
+    {
+      "name": "Misaka Mikoto",
+      "facet": "Bilibili and fan culture",
+      "known_at": 12
+    },
+    {
+      "name": "Bilibili World",
+      "facet": "Bilibili and fan culture",
+      "known_at": 11
+    },
+    {
+      "name": "Chen Rui",
+      "facet": "Bilibili and fan culture",
+      "known_at": 14
+    },
+    {
+      "name": "YYDS (永远的神)",
+      "facet": "Chinese internet slang",
+      "known_at": 6
+    },
+    {
+      "name": "Lying flat (躺平)",
+      "facet": "Chinese internet slang",
+      "known_at": 9
+    },
+    {
+      "name": "Involution (内卷)",
+      "facet": "Chinese internet slang",
+      "known_at": 9
+    },
+    {
+      "name": "Worker (打工人)",
+      "facet": "Chinese internet slang",
+      "known_at": 8
+    },
+    {
+      "name": "Versailles literature (凡尔赛文学)",
+      "facet": "Chinese internet slang",
+      "known_at": 11
+    },
+    {
+      "name": "Melon eaters (吃瓜群众)",
+      "facet": "Chinese internet slang",
+      "known_at": 7
+    },
+    {
+      "name": "Like (点赞)",
+      "facet": "Chinese internet slang",
+      "known_at": 5
+    },
+    {
+      "name": "88",
+      "facet": "Chinese internet slang",
+      "known_at": 5
+    },
+    {
+      "name": "Buddha-style (佛系)",
+      "facet": "Chinese internet slang",
+      "known_at": 9
+    },
+    {
+      "name": "Chop hands (剁手)",
+      "facet": "Chinese internet slang",
+      "known_at": 9
+    },
+    {
+      "name": "Social anxiety (社恐)",
+      "facet": "Chinese internet slang",
+      "known_at": 7
+    },
+    {
+      "name": "Juejuezi (绝绝子)",
+      "facet": "Chinese internet slang",
+      "known_at": 8
+    },
+    {
+      "name": "Defenses broken (破防)",
+      "facet": "Chinese internet slang",
+      "known_at": 8
+    },
+    {
+      "name": "Da call (打call)",
+      "facet": "Chinese internet slang",
+      "known_at": 7
+    },
+    {
+      "name": "Geili (给力)",
+      "facet": "Chinese internet slang",
+      "known_at": 11
+    },
+    {
+      "name": "Everything is floating clouds (神马都是浮云)",
+      "facet": "Chinese internet slang",
+      "known_at": 13
+    },
+    {
+      "name": "Jiong (囧)",
+      "facet": "Chinese internet slang",
+      "known_at": 10
+    },
+    {
+      "name": "Internet celebrity (网红)",
+      "facet": "Chinese internet slang",
+      "known_at": 5
+    },
+    {
+      "name": "Planting grass (种草)",
+      "facet": "Chinese internet slang",
+      "known_at": 8
+    },
+    {
+      "name": "Old iron (老铁)",
+      "facet": "Chinese internet slang",
+      "known_at": 8
+    },
+    {
+      "name": "Dog head emoji (狗头)",
+      "facet": "Chinese internet slang",
+      "known_at": 7
+    },
+    {
+      "name": "Touching fish (摸鱼)",
+      "facet": "Chinese internet slang",
+      "known_at": 7
+    },
+    {
+      "name": "Gangjing (杠精)",
+      "facet": "Chinese internet slang",
+      "known_at": 10
+    },
+    {
+      "name": "Red packet (红包)",
+      "facet": "Red packets and online festivals",
+      "known_at": 1
+    },
+    {
+      "name": "WeChat red packets 2014",
+      "facet": "Red packets and online festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Lucky draw red packet (拼手气红包)",
+      "facet": "Red packets and online festivals",
+      "known_at": 6
+    },
+    {
+      "name": "Luckiest draw (手气最佳)",
+      "facet": "Red packets and online festivals",
+      "known_at": 7
+    },
+    {
+      "name": "Alipay Five Blessings (集五福)",
+      "facet": "Red packets and online festivals",
+      "known_at": 6
+    },
+    {
+      "name": "Dedication Blessing card (敬业福)",
+      "facet": "Red packets and online festivals",
+      "known_at": 10
+    },
+    {
+      "name": "Red packet cover (红包封面)",
+      "facet": "Red packets and online festivals",
+      "known_at": 8
+    },
+    {
+      "name": "Spring Festival Gala shake (春晚摇一摇)",
+      "facet": "Red packets and online festivals",
+      "known_at": 10
+    },
+    {
+      "name": "8.88 red packet",
+      "facet": "Red packets and online festivals",
+      "known_at": 6
+    },
+    {
+      "name": "1314 red packet",
+      "facet": "Red packets and online festivals",
+      "known_at": 9
+    },
+    {
+      "name": "200-yuan red packet limit",
+      "facet": "Red packets and online festivals",
+      "known_at": 9
+    },
+    {
+      "name": "24-hour red packet refund",
+      "facet": "Red packets and online festivals",
+      "known_at": 10
+    },
+    {
+      "name": "WeChat fireworks effect",
+      "facet": "Red packets and online festivals",
+      "known_at": 8
+    },
+    {
+      "name": "Video New Year greeting (视频拜年)",
+      "facet": "Red packets and online festivals",
+      "known_at": 5
+    },
+    {
+      "name": "Online tomb sweeping (云祭扫)",
+      "facet": "Red packets and online festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Exclusive red packet (专属红包)",
+      "facet": "Red packets and online festivals",
+      "known_at": 10
+    },
+    {
+      "name": "Celebrity navigation voice",
+      "facet": "Search, maps and everyday apps",
+      "known_at": 10
+    },
+    {
+      "name": "Health code (健康码)",
+      "facet": "Search, maps and everyday apps",
+      "known_at": 6
+    },
+    {
+      "name": "12306 railway app",
+      "facet": "Search, maps and everyday apps",
+      "known_at": 7
+    },
+    {
+      "name": "Ctrip (携程)",
+      "facet": "Search, maps and everyday apps",
+      "known_at": 8
+    },
+    {
+      "name": "Meitu XiuXiu (美图秀秀)",
+      "facet": "Search, maps and everyday apps",
+      "known_at": 8
+    },
+    {
+      "name": "NetEase Cloud Music (网易云音乐)",
+      "facet": "Search, maps and everyday apps",
+      "known_at": 7
+    },
+    {
+      "name": "QQ Music",
+      "facet": "Search, maps and everyday apps",
+      "known_at": 7
+    },
+    {
+      "name": "Ximalaya (喜马拉雅)",
+      "facet": "Search, maps and everyday apps",
+      "known_at": 10
+    },
+    {
+      "name": "Baidu Netdisk (百度网盘)",
+      "facet": "Search, maps and everyday apps",
+      "known_at": 8
+    },
+    {
+      "name": "Traffic Management 12123 app",
+      "facet": "Search, maps and everyday apps",
+      "known_at": 11
+    },
+    {
+      "name": "Individual Income Tax app (个人所得税)",
+      "facet": "Search, maps and everyday apps",
+      "known_at": 12
+    },
+    {
+      "name": "Douban (豆瓣)",
+      "facet": "Search, maps and everyday apps",
+      "known_at": 10
+    },
+    {
+      "name": "Tencent Meeting (腾讯会议)",
+      "facet": "Search, maps and everyday apps",
+      "known_at": 7
+    },
+    {
+      "name": "Kids' smartwatch (电话手表)",
+      "facet": "Search, maps and everyday apps",
+      "known_at": 4
+    },
+    {
+      "name": "Youdao Dictionary (有道词典)",
+      "facet": "Search, maps and everyday apps",
+      "known_at": 8
+    },
+    {
+      "name": "Minors' gaming time limit 2021",
+      "facet": "Online gaming and esports habits",
+      "known_at": 9
+    },
+    {
+      "name": "LPL",
+      "facet": "Online gaming and esports habits",
+      "known_at": 10
+    },
+    {
+      "name": "Uzi",
+      "facet": "Online gaming and esports habits",
+      "known_at": 11
+    },
+    {
+      "name": "EDG World Championship 2021",
+      "facet": "Online gaming and esports habits",
+      "known_at": 11
+    },
+    {
+      "name": "Esports at the 2022 Hangzhou Asian Games",
+      "facet": "Online gaming and esports habits",
+      "known_at": 10
+    },
+    {
+      "name": "King rank (王者段位)",
+      "facet": "Online gaming and esports habits",
+      "known_at": 7
+    },
+    {
+      "name": "Minecraft",
+      "facet": "Online gaming and esports habits",
+      "known_at": 4
+    },
+    {
+      "name": "Game skin (皮肤)",
+      "facet": "Online gaming and esports habits",
+      "known_at": 5
+    },
+    {
+      "name": "Xuexi Qiangguo (学习强国)",
+      "facet": "Online learning and news apps",
+      "known_at": 9
+    },
+    {
+      "name": "Zuoyebang (作业帮)",
+      "facet": "Online learning and news apps",
+      "known_at": 8
+    },
+    {
+      "name": "Yuanfudao (猿辅导)",
+      "facet": "Online learning and news apps",
+      "known_at": 10
+    },
+    {
+      "name": "Photo homework search (拍照搜题)",
+      "facet": "Online learning and news apps",
+      "known_at": 7
+    },
+    {
+      "name": "China University MOOC",
+      "facet": "Online learning and news apps",
+      "known_at": 12
+    },
+    {
+      "name": "NetEase Open Courses",
+      "facet": "Online learning and news apps",
+      "known_at": 12
+    },
+    {
+      "name": "Tencent Classroom (腾讯课堂)",
+      "facet": "Online learning and news apps",
+      "known_at": 9
+    },
+    {
+      "name": "DingTalk (钉钉)",
+      "facet": "Online learning and news apps",
+      "known_at": 7
+    },
+    {
+      "name": "Classes suspended, learning continues (停课不停学)",
+      "facet": "Online learning and news apps",
+      "known_at": 8
+    },
+    {
+      "name": "National Smart Education Platform",
+      "facet": "Online learning and news apps",
+      "known_at": 11
+    },
+    {
+      "name": "Learning tablet (学习机)",
+      "facet": "Online learning and news apps",
+      "known_at": 6
+    },
+    {
+      "name": "Baicizhan (百词斩)",
+      "facet": "Online learning and news apps",
+      "known_at": 10
+    },
+    {
+      "name": "Duolingo",
+      "facet": "Online learning and news apps",
+      "known_at": 10
+    },
+    {
+      "name": "Toutiao (今日头条)",
+      "facet": "Online learning and news apps",
+      "known_at": 8
+    },
+    {
+      "name": "Weibo (微博)",
+      "facet": "Online learning and news apps",
+      "known_at": 6
+    },
+    {
+      "name": "Weibo hot search (热搜)",
+      "facet": "Online learning and news apps",
+      "known_at": 8
+    },
+    {
+      "name": "Zhihu (知乎)",
+      "facet": "Online learning and news apps",
+      "known_at": 9
+    },
+    {
+      "name": "Baidu Baike (百度百科)",
+      "facet": "Online learning and news apps",
+      "known_at": 9
+    },
+    {
+      "name": "CCTV News app",
+      "facet": "Online learning and news apps",
+      "known_at": 9
+    },
+    {
+      "name": "People's Daily app",
+      "facet": "Online learning and news apps",
+      "known_at": 11
+    }
+  ]
+}
