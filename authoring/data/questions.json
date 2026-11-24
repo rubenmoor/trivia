@@ -1758529,7 +1758529,7 @@
     },
     {
       "id": "q-22497",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 3,
       "description": "A plant that got one leaf more than its brothers and now thinks it's special.",
       "question": "Finding this little plant is said to bring good luck. What is it?",
@@ -1758570,19 +1758570,27 @@
       "needs_media": true,
       "batch": "fit-3",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-20",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "fit": "fit-3",
-        "source_review": {
+        "decision": "needs_work",
+        "feedback": "Giveaway in the source: the description (zh «比兄弟们多长了一片叶子», one more leaf than its siblings) states the four-leaf clover outright, and the essential photo shows it too. Rewrite the description without the leaf count (audit tr-zh-Hans-3).",
+        "reviewed_on": "2026-11-23",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-20",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
-          "reviewed_on": "2026-10-17",
-          "id": "q-3499"
-        }
+          "fit": "fit-3",
+          "source_review": {
+            "reviewer": "llm",
+            "model": "claude-opus-5-5",
+            "reviewed_on": "2026-10-17",
+            "id": "q-3499"
+          }
+        },
+        "reviewed_at": "2026-11-23T17:28:12"
       },
       "bundle": "chinese-base",
       "locale": "en",

@@ -66,5 +66,9 @@
   "tr-zh-Hans-8": {
     "date": "2026-11-23",
     "note": "Agreement 88 %: the 7 major findings on approved translations are the audit's media title-null false positive (task 2430); the giveaway/difficulty major is on a translation already needs_work; nothing to change"
+  },
+  "tr-zh-Hans-9": {
+    "date": "2026-11-23",
+    "note": "Agreement 87 %: the 5 media-only majors are the audit's title-null false positive (task 2430); q-21420 overlap with q-21916 is source-level, q-21214 hint 2 minor; nothing to change"
   }
 }

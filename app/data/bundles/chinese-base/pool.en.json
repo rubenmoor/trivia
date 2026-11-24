@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "8991e182",
+  "hash": "ef807253",
   "questions": [
     {
       "id": "q-21210",
@@ -42705,41 +42705,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Nhartmannphotos",
         "author_url": "https://commons.wikimedia.org/wiki/User:Nhartmannphotos",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-22497",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "legends-and-superstitions",
-      "bundle": "chinese-base",
-      "description": "A plant that got one leaf more than its brothers and now thinks it's special.",
-      "question": "Finding this little plant is said to bring good luck. What is it?",
-      "answer": "A four-leaf clover",
-      "wrong_answers": [
-        "A lotus flower",
-        "A bamboo shoot",
-        "A mint sprig"
-      ],
-      "hints": [
-        "It grows in grassy fields and lawns.",
-        "Most of its kind have only three leaves.",
-        "Count the leaves in the photo."
-      ],
-      "fun_fact": "Only about 1 in 10,000 clovers has four leaves, which is why finding one feels so lucky.",
-      "media": {
-        "type": "image",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Four-leaf_clover.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AFour-leaf_clover.jpg",
-        "credit": "Phyzome under the GFDL. · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
-        "author": "Phyzome under the GFDL.",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Phyzome",
         "excerpt": null
       },
       "background": null

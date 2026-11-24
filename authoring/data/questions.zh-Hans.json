@@ -11590,16 +11590,24 @@
       "description": "一个混进寿司店的冒牌货。",
       "fun_fact": "真正的山葵又贵又稀少，就连在日本，很多餐厅端上来的也是仿制品。",
       "difficulty": 10,
-      "status": "approved",
+      "status": "needs_work",
       "batch": "tr-zh-Hans-2",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
+        "decision": "needs_work",
+        "feedback": "Giveaway: the question says «另一种染成绿色的辣味根», which nearly spells the answer «辣根»; no wrong option has 辣 or 根. Reword without both characters, e.g. «其实是另一种植物的根磨成、再染成绿色的。是哪一种？» (audit tr-zh-Hans-2).",
         "reviewed_on": "2026-11-23",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-23T17:28:05"
       },
       "source_hash": "cea89f860d51"
     },
@@ -11920,16 +11928,24 @@
       "description": "一座能搭起来、拆下来、再装上骆驼的房子：躲开不速之客的完美选择。",
       "fun_fact": "一户蒙古族人家一两个小时就能拆好蒙古包，几头牲口就能把它驮走。",
       "difficulty": 3,
-      "status": "approved",
+      "status": "needs_work",
       "batch": "tr-zh-Hans-6",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
+        "decision": "needs_work",
+        "feedback": "Hint 3 «名字里有一个“包”字» names a character of the answer 蒙古包, the only option with it (zh hint rule). Use a pinyin initial or character count instead (audit tr-zh-Hans-6).",
         "reviewed_on": "2026-11-23",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-23T17:28:10"
       },
       "source_hash": "f5623f607235"
     },
@@ -20101,16 +20117,24 @@
       "description": "拿自家门牌号给家族起名：一个非常史前的习惯。",
       "fun_fact": "丹尼索瓦人的骨头少得可怜：我们对他们的了解几乎全部来自一节指骨里的DNA。",
       "difficulty": 7,
-      "status": "approved",
+      "status": "needs_work",
       "batch": "tr-zh-Hans-4",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
+        "decision": "needs_work",
+        "feedback": "zh-only giveaway: 能人 is a meaning translation (\"able person\") among sound transliterations (丹尼索瓦人, 尼安德特人, 弗洛勒斯人) and names the trait asked about; hint 1 本领 confirms it. Make the options parallel or reword; difficulty 7 is far too high as is (audit tr-zh-Hans-4).",
         "reviewed_on": "2026-11-23",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-23T17:28:09"
       },
       "source_hash": "922483e62f9a"
     },
@@ -75806,16 +75830,24 @@
       "description": "一块怎么也不肯老实待着的棋盘，还有该为它背锅的艺术家。",
       "fun_fact": "科学家至今仍在争论大内圆盘为什么看起来会晃动，不过眼睛的微小运动似乎起了很大作用。",
       "difficulty": 15,
-      "status": "approved",
+      "status": "needs_work",
       "batch": "tr-zh-Hans-2",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
+        "decision": "needs_work",
+        "feedback": "Fact: the audit says Hajime Ouchi is written 大内朔 (Kitaoka Akiyoshi's Ouchi-illusion page), not «大内元». Check the source and fix the answer (audit tr-zh-Hans-2).",
         "reviewed_on": "2026-11-23",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-11-23T17:28:07"
       },
       "source_hash": "28c3cb4b8df8"
     },

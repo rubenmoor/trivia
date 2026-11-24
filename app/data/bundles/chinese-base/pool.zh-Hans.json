@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "7ae666da",
+  "hash": "03909d9f",
   "questions": [
     {
       "id": "q-21210",
@@ -13506,41 +13506,6 @@
       "background": null
     },
     {
-      "id": "q-21607",
-      "status": "approved",
-      "difficulty": 10,
-      "subcategory": "vegetables",
-      "bundle": "chinese-base",
-      "description": "一个混进寿司店的冒牌货。",
-      "question": "很多寿司店里的“芥末”（山葵），其实是另一种染成绿色的辣味根。是哪一种？",
-      "answer": "辣根",
-      "wrong_answers": [
-        "生姜",
-        "姜黄",
-        "芜菁"
-      ],
-      "hints": [
-        "它长在地下，磨碎后特别冲。",
-        "在欧洲，人们用它做配肉吃的酱汁。",
-        "染色之前，它的根是白色的，不是绿色。"
-      ],
-      "fun_fact": "真正的山葵又贵又稀少，就连在日本，很多餐厅端上来的也是仿制品。",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Sushi_Restaurant_in_Shinjuku_%2853415763257%29.jpg/3840px-Sushi_Restaurant_in_Shinjuku_%2853415763257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASushi_Restaurant_in_Shinjuku_%2853415763257%29.jpg",
-        "credit": "Stephen Kelly from San Francisco, CA, USA · CC BY 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "Stephen Kelly from San Francisco, CA, USA",
-        "author_url": "https://www.flickr.com/people/67056263@N04",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
       "id": "q-21608",
       "status": "approved",
       "difficulty": 5,
@@ -13886,41 +13851,6 @@
         "license_url": null,
         "author": "NASA",
         "author_url": null,
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-21619",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "deserts",
-      "bundle": "chinese-base",
-      "description": "一座能搭起来、拆下来、再装上骆驼的房子：躲开不速之客的完美选择。",
-      "question": "看照片：戈壁沙漠里的游牧民住在这种可以拆开带走的圆形房子里。它叫什么？",
-      "answer": "蒙古包",
-      "wrong_answers": [
-        "圆锥帐篷",
-        "树皮棚屋",
-        "冰屋"
-      ],
-      "hints": [
-        "它有木头做的骨架，外面盖着羊毛毡。",
-        "它不是北美平原印第安人住的那种圆锥形帐篷。",
-        "它的名字里有一个“包”字。"
-      ],
-      "fun_fact": "一户蒙古族人家一两个小时就能拆好蒙古包，几头牲口就能把它驮走。",
-      "media": {
-        "type": "image",
-        "role": "essential",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Mongolian_yurt_%28ger%29_display_-_Toronto_Zoo.jpg/3840px-Mongolian_yurt_%28ger%29_display_-_Toronto_Zoo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMongolian_yurt_%28ger%29_display_-_Toronto_Zoo.jpg",
-        "credit": "Silver Dovelet · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Silver Dovelet",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Silver_Dovelet&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null
@@ -23428,41 +23358,6 @@
         "license_url": null,
         "author": "Jean-Pierre Houël",
         "author_url": "https://en.wikipedia.org/wiki/en:Jean-Pierre_Hou%C3%ABl",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-21907",
-      "status": "approved",
-      "difficulty": 7,
-      "subcategory": "prehistory",
-      "bundle": "chinese-base",
-      "description": "拿自家门牌号给家族起名：一个非常史前的习惯。",
-      "question": "下面有三种古人类是以发现化石的地点命名的。哪一种不是？",
-      "answer": "能人",
-      "wrong_answers": [
-        "丹尼索瓦人",
-        "尼安德特人",
-        "弗洛勒斯人"
-      ],
-      "hints": [
-        "找一找哪个名字说的是一种本领，而不是地图上的某个地方。",
-        "其他三个分别来自西伯利亚的一个山洞、德国的一个山谷和印度尼西亚的一个岛屿。",
-        "它的拉丁学名大意是“手很灵巧的人”。"
-      ],
-      "fun_fact": "丹尼索瓦人的骨头少得可怜：我们对他们的了解几乎全部来自一节指骨里的DNA。",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/%D0%A1%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0%2C%D0%9C%D0%B5%D1%87%D1%82%D0%B0%2C%D0%9A%D1%80%D0%B0%D1%81%D0%B0%D0%B2%D0%B8%D1%86%D0%B0.jpg/3840px-%D0%A1%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0%2C%D0%9C%D0%B5%D1%87%D1%82%D0%B0%2C%D0%9A%D1%80%D0%B0%D1%81%D0%B0%D0%B2%D0%B8%D1%86%D0%B0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A%D0%A1%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0%2C%D0%9C%D0%B5%D1%87%D1%82%D0%B0%2C%D0%9A%D1%80%D0%B0%D1%81%D0%B0%D0%B2%D0%B8%D1%86%D0%B0.jpg",
-        "credit": "Александр Лещёнок · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Александр Лещёнок",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%9B%D0%B5%D1%89%D1%91%D0%BD%D0%BE%D0%BA&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null
@@ -42670,41 +42565,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Nhartmannphotos",
         "author_url": "https://commons.wikimedia.org/wiki/User:Nhartmannphotos",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-22497",
-      "status": "approved",
-      "difficulty": 2,
-      "subcategory": "legends-and-superstitions",
-      "bundle": "chinese-base",
-      "description": "一株比兄弟们多长了一片叶子、从此觉得自己与众不同的植物。",
-      "question": "据说找到这种小植物会带来好运。它是什么？",
-      "answer": "四叶草",
-      "wrong_answers": [
-        "莲花",
-        "竹笋",
-        "薄荷枝"
-      ],
-      "hints": [
-        "它长在草地和草坪上。",
-        "它的同类大多只有三片叶子。",
-        "数一数照片里的叶子。"
-      ],
-      "fun_fact": "大约每1万株三叶草里才有1株长出四片叶子，所以找到一株才显得格外幸运。",
-      "media": {
-        "type": "image",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Four-leaf_clover.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AFour-leaf_clover.jpg",
-        "credit": "Phyzome under the GFDL. · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
-        "author": "Phyzome under the GFDL.",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Phyzome",
         "excerpt": null
       },
       "background": null
@@ -88183,41 +88043,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Denis kasozi",
         "author_url": "https://commons.wikimedia.org/wiki/User:Denis_kasozi",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-23878",
-      "status": "approved",
-      "difficulty": 15,
-      "subcategory": "magic",
-      "bundle": "chinese-base",
-      "description": "一块怎么也不肯老实待着的棋盘，还有该为它背锅的艺术家。",
-      "question": "我是一位日本艺术家。我1977年出的书里，有一个由细长矩形组成的圆盘，放在矩形棋盘格上，看起来会漂浮、滑动。我是谁？",
-      "answer": "大内元",
-      "wrong_answers": [
-        "北冈明佳",
-        "草间弥生",
-        "布里奇特·赖利"
-      ],
-      "hints": [
-        "这个著名的错觉图案以我的姓氏命名。",
-        "我的书是一本黑白图案集，是为设计师和艺术家准备的。",
-        "这个错觉通常以我的姓氏命名，叫“某某圆盘”。我的姓氏在日语里读作 Ōuchi。"
-      ],
-      "fun_fact": "科学家至今仍在争论大内圆盘为什么看起来会晃动，不过眼睛的微小运动似乎起了很大作用。",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Theo_van_Doesburg_Composition_VI.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ATheo_van_Doesburg_Composition_VI.jpg",
-        "credit": "Theo van Doesburg · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Theo van Doesburg",
-        "author_url": "https://en.wikipedia.org/wiki/en:Theo_van_Doesburg",
         "excerpt": null
       },
       "background": null
