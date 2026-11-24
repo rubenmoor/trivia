@@ -64,8 +64,8 @@ def acceptable(c, role):
         min_w = MIN_ESSENTIAL_WIDTH if role == "essential" else MIN_DECORATIVE_WIDTH
         landscape = role == "essential" or (c["width"] or 0) > (c["height"] or 0)
         return (c["width"] or 0) >= min_w and landscape
-    if c["type"] == "audio":
-        return c["duration"] is None or c["duration"] <= MAX_AUDIO_SECONDS
+    if c["type"] in {"audio", "video"}:
+        return c["duration"] is None or c["duration"] <= max_seconds(c["type"])
     return True
 
 
@@ -207,19 +207,44 @@ def pick_fields(candidate, slot="media"):
     credit = credit_of(candidate)
     fields = {"source_url": candidate["page_url"], "file_url": url, "credit": credit,
               **providers.licence_fields(candidate)}
-    return {"type": candidate["type"], **fields} if slot == "media" else fields
+    if slot != "media":
+        return fields
+    d = candidate.get("duration")
+    timed = {"duration": d} if candidate["type"] in {"audio", "video"} and isinstance(d, (int, float)) and d > 0 else {}
+    return {"type": candidate["type"], **fields, **timed}
 
 
 def unpicked(slot):
     """The slot with its pick cleared: no file, no credit, no licence fields (plans/26)."""
-    out = {k: v for k, v in slot.items() if k not in (*providers.LICENCE_FIELDS, "file_problem")}
+    out = {k: v for k, v in slot.items() if k not in (*providers.LICENCE_FIELDS, "file_problem", "duration")}
     return {**out, "source_url": None, "file_url": None, "credit": None}
 
 
 def checked(fields):
-    """Download a pick's file; the fields plus `file_problem` when it is broken at the source (task 1181)."""
-    problem = file_problem(cached(fields["file_url"]))
-    return {**fields, "file_problem": problem} if problem else fields
+    """Download a pick's file; the fields plus `file_problem` when it is broken at the source (task 1181),
+    plus `duration` probed from the file for audio/video without one (task 2432)."""
+    path = cached(fields["file_url"])
+    if problem := file_problem(path):
+        return {**fields, "file_problem": problem}
+    if fields.get("type") in {"audio", "video"} and not fields.get("duration"):
+        from media_probe import streams  # media_probe imports media
+        try:
+            d = streams(path)[0]
+        except (RuntimeError, OSError, ValueError, KeyError):
+            d = 0
+        if d > 0:
+            return {**fields, "duration": round(d, 2)}
+    return fields
+
+
+def play_problem(fields):
+    """Why a picked audio/video file without excerpt can't be played as is (too long, video length unknown), else None."""
+    kind, d = fields.get("type"), fields.get("duration")
+    if kind not in {"audio", "video"} or fields.get("excerpt") is not None:
+        return None
+    if d is None:
+        return "length unknown" if kind == "video" else None
+    return f"{d:g} s, over {max_seconds(kind)} s" if d > max_seconds(kind) else None
 
 
 @contextlib.contextmanager
@@ -233,6 +258,8 @@ def downloading(step, qid, slot, url):
 def apply_pick(target, fields):
     """Store a pick's fields in a pool slot; an earlier pick's file_problem goes."""
     target.pop("file_problem", None)
+    if "type" in fields and "duration" not in fields:
+        target.pop("duration", None)  # the old file's length
     target.update(fields)
 
 

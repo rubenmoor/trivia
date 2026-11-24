@@ -233,7 +233,7 @@ def media_first_problems(q):
             out.append(f"media.excerpt longer than {max_seconds(m['type'])} s")
         elif targets.number(d) and x["end"] > d:
             out.append("media.excerpt ends after media.duration")
-    if m.get("type") == "video" and m.get("excerpt") is None and not (targets.number(d) and 0 < d <= max_seconds("video")):
+    if m.get("type") == "video" and m.get("file_url") and m.get("excerpt") is None and not (targets.number(d) and 0 < d <= max_seconds("video")):
         out.append(f"video without media.excerpt needs a media.duration of at most {max_seconds('video')} s")
     cls = mf.get("class") if isinstance(mf, dict) else None
     if mf is not None:
