@@ -498,7 +498,7 @@ def cmd_record(args):
         reviewed.append((q, full, r))
         kept = kept_slots(args.run, q)
         if q.get("media_first") and "media" in kept:
-            picks[q["id"], "media"] = {k: q["media"][k] for k in ("type", "source_url", "file_url", "credit", *providers.LICENCE_FIELDS)
+            picks[q["id"], "media"] = {k: q["media"][k] for k in ("type", "source_url", "file_url", "credit", "duration", *providers.LICENCE_FIELDS)
                                        if k in q["media"]}
         for slot, key in [("media", "pick"), ("background", "background_pick")]:
             if slot not in slots_of(q) or slot in kept:

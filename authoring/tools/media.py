@@ -64,8 +64,8 @@ def acceptable(c, role):
         min_w = MIN_ESSENTIAL_WIDTH if role == "essential" else MIN_DECORATIVE_WIDTH
         landscape = role == "essential" or (c["width"] or 0) > (c["height"] or 0)
         return (c["width"] or 0) >= min_w and landscape
-    if c["type"] == "audio":
-        return c["duration"] is None or c["duration"] <= MAX_AUDIO_SECONDS
+    if c["type"] in {"audio", "video"}:
+        return c["duration"] is None or c["duration"] <= max_seconds(c["type"])
     return True
 
 
@@ -207,7 +207,11 @@ def pick_fields(candidate, slot="media"):
     credit = credit_of(candidate)
     fields = {"source_url": candidate["page_url"], "file_url": url, "credit": credit,
               **providers.licence_fields(candidate)}
-    return {"type": candidate["type"], **fields} if slot == "media" else fields
+    if slot != "media":
+        return fields
+    d = candidate.get("duration")
+    timed = {"duration": d} if candidate["type"] in {"audio", "video"} and isinstance(d, (int, float)) and d > 0 else {}
+    return {"type": candidate["type"], **fields, **timed}
 
 
 def unpicked(slot):
@@ -233,6 +237,8 @@ def downloading(step, qid, slot, url):
 def apply_pick(target, fields):
     """Store a pick's fields in a pool slot; an earlier pick's file_problem goes."""
     target.pop("file_problem", None)
+    if "type" in fields and "duration" not in fields:
+        target.pop("duration", None)  # the old file's length
     target.update(fields)
 
 
