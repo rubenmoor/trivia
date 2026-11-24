@@ -17,7 +17,7 @@ const DATA = path.join(REPO, "app", "data");
 
 // script: which character set the file must cover; `hant` = Traditional locales, `hans` = Simplified ones.
 const FONTS = [
-  { out: "zh-ma-shan-zheng.woff2", src: "MaShanZheng-Regular.ttf", script: "hans" }, // no Traditional glyphs: zh-Hant falls back to WenKai
+  { out: "zh-ma-shan-zheng.woff2", src: "MaShanZheng-Regular.ttf", script: "hans", fallback: "zh-lxgw-wenkai.woff2" }, // no Traditional glyphs: zh-Hant falls back to WenKai
   { out: "zh-lxgw-wenkai.woff2", src: "LXGWWenKai-Medium.ttf", script: "both" },
   { out: "zh-rhr-sc-regular.woff2", src: "ResourceHanRoundedCN-Regular.ttf", script: "hans" },
   { out: "zh-rhr-sc-bold.woff2", src: "ResourceHanRoundedCN-Bold.ttf", script: "hans" },
@@ -69,13 +69,15 @@ if (!process.argv.includes("--check")) {
 
 // Check: the committed files' cmaps against the wanted characters (the font families' real coverage is what ships).
 const probe = "import sys,json\nfrom fontTools.ttLib import TTFont\nprint(json.dumps(''.join(map(chr,TTFont(sys.argv[1]).getBestCmap()))))";
+const cmap = (file) => new Set(JSON.parse(execFileSync("python3", ["-c", probe, file], { encoding: "utf8" })));
 let bad = 0;
 for (const f of FONTS) {
   const file = path.join(OUT, f.out);
   if (!existsSync(file)) { console.error(`✗ missing ${f.out}`); bad++; continue; }
-  const have = new Set(JSON.parse(execFileSync("python3", ["-c", probe, file], { encoding: "utf8" })));
-  // Characters only the catalog needs (not the common set) must be in the font; Ma Shan Zheng lacks some Traditional ones by design.
-  const need = [...(f.script === "both" ? [...used.hans, ...used.hant] : used[f.script])].filter((c) => !have.has(c));
+  const have = cmap(file);
+  // Characters only the catalog needs (not the common set) must be in the font; a `fallback` font may lack ones its fallback font (theme.css chain) has: Ma Shan Zheng has no kana or Traditional/Japanese forms.
+  const alt = f.fallback ? cmap(path.join(OUT, f.fallback)) : have;
+  const need = [...(f.script === "both" ? [...used.hans, ...used.hant] : used[f.script])].filter((c) => !have.has(c) && !alt.has(c));
   const size = (readFileSync(file).length / 1e6).toFixed(2);
   console.log(`${need.length ? "✗" : "✓"} ${f.out}: ${have.size} glyphs, ${size} MB${need.length ? `, missing ${need.join("")}` : ""}`);
   bad += need.length ? 1 : 0;
