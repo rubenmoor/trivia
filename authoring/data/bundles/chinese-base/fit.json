@@ -28364,6 +28364,35 @@
       "model": "claude-opus-5-5",
       "copy": "q-24912"
     },
+    "q-3796": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "World religion landmark, stated neutrally, but less familiar to Chinese families than in the West.",
+      "issue": "difficulty 13 → 14",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25050"
+    },
+    "q-3797": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Pakistan is a well-known neighbour of China; fine at 14.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25113"
+    },
+    "q-3798": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Neutral fact about Jerusalem's quarters, but less familiar to Chinese families.",
+      "issue": "difficulty 12 → 13",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25171"
+    },
     "q-3799": {
       "verdict": "adapt",
       "reason": null,
@@ -29392,6 +29421,54 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24217"
+    },
+    "q-3914": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Neutral geology fact about a world landmark; hint 3 uses the White Cliffs of Dover, a British reference.",
+      "issue": "hint 3: remove the White Cliffs of Dover and keep the Egyptian pyramids (or another limestone example known worldwide, e.g. Guilin's karst hills)",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25220"
+    },
+    "q-3915": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Sumeru (须弥山) is a familiar idea in Chinese Buddhism, so it is easier here; the letter-count hint only works in English.",
+      "issue": "hint 3: replace the four-letter clue with “In Chinese Buddhism it is called Sumeru (须弥山).”; difficulty 15 → 13",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25262"
+    },
+    "q-3916": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Saint Francis and Catholic orders are not familiar to Chinese families at difficulty 9.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-3917": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Japanese torii are familiar to Chinese families.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25338"
+    },
+    "q-3918": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Christian pilgrimage knowledge is much less common among Chinese families.",
+      "issue": "difficulty 10 → 13",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25377"
     },
     "q-3919": {
       "verdict": "drop",
@@ -31407,6 +31484,24 @@
       "model": "claude-opus-5-5",
       "copy": "q-24914"
     },
+    "q-4150": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Scientific method logic is universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25051"
+    },
+    "q-4151": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Specialist philosophy at 15, equally niche everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25115"
+    },
     "q-4152": {
       "verdict": "keep",
       "reason": null,
@@ -32233,6 +32328,33 @@
       "model": "claude-opus-5-5",
       "copy": "q-24955"
     },
+    "q-4248": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Castro is well known in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25019"
+    },
+    "q-4249": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Mushroom cloud is a universal image; pizza is common in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25081"
+    },
+    "q-4250": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Space history, world famous.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25145"
+    },
     "q-4251": {
       "verdict": "keep",
       "reason": null,
@@ -32803,6 +32925,79 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24913"
+    },
+    "q-4318": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Paris cemeteries and Abelard are Western-only knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-4319": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Socrates is taught as world history.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25114"
+    },
+    "q-4320": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Central Asian Silk Road philosopher and Aristotle; fine at 15.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25172"
+    },
+    "q-4321": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Raphael is one of the Renaissance masters taught in Chinese history classes; Ninja Turtles (忍者神龟) is known here.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25221"
+    },
+    "q-4322": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Marx and Engels are core school knowledge in China; the Manchester football clubs are famous worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25263"
+    },
+    "q-4323": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Pyrrho, Hume, Montaigne, Aquinas as skeptics is Western philosophy school knowledge, far above 12 here.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-4324": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Heidegger and Husserl are taught in Chinese philosophy departments; fits 14.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25339"
+    },
+    "q-4325": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Wollstonecraft is little taught in China; Frankenstein helps.",
+      "issue": "difficulty 12 → 13",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25378"
     },
     "q-4326": {
       "verdict": "drop",
@@ -34273,6 +34468,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24977"
     },
+    "q-4493": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Science fact found everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25041"
+    },
     "q-4495": {
       "verdict": "drop",
       "reason": "latam_centric",
@@ -35066,6 +35270,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24982"
     },
+    "q-4586": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The Lion King is well known in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25045"
+    },
     "q-4587": {
       "verdict": "drop",
       "reason": "wordplay",
@@ -35092,6 +35305,54 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": null
+    },
+    "q-4590": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Plato's cave is less common in Chinese schooling than in Europe.",
+      "issue": "difficulty 10 → 12; everything else stays.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25405"
+    },
+    "q-4591": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Chomsky and MIT are both well known in China; fair at 12.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25432"
+    },
+    "q-4592": {
+      "verdict": "drop",
+      "reason": "wordplay",
+      "note": "The fill-in-the-blank depends on the English word order of the phrase, and hint 3 is a clue about the English word; in Chinese (最大多数人的最大幸福) the blank does not work.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-4593": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Marx and Das Kapital (资本论) are taught in Chinese schools, so it is easier here.",
+      "issue": "difficulty 9 → 7",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25470"
+    },
+    "q-4594": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Boethius is less known here, and hint 3 points to the US game show Wheel of Fortune.",
+      "issue": "hint 3: replace the TV game show with a hint that works anywhere (e.g. a fairground ride shaped like it); difficulty 8 → 10",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25485"
     },
     "q-4595": {
       "verdict": "drop",
@@ -35607,6 +35868,24 @@
       "model": "claude-opus-5-5",
       "copy": null
     },
+    "q-4652": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The hypnotist cartoon trope is global.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25103"
+    },
+    "q-4653": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Nature science.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25163"
+    },
     "q-4654": {
       "verdict": "keep",
       "reason": null,
@@ -35688,6 +35967,16 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24939"
+    },
+    "q-4664": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "A universal science fact. Only the date format clashes with the voice.",
+      "issue": "hint 3: write the date as “20 May” instead of “May 20”",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25003"
     },
     "q-4665": {
       "verdict": "keep",
@@ -36352,6 +36641,24 @@
       "model": "claude-opus-5-5",
       "copy": "q-24715"
     },
+    "q-4740": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal logic analogy.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25173"
+    },
+    "q-4741": {
+      "verdict": "drop",
+      "reason": "wordplay",
+      "note": "Depends on the Greek root of the English word \"idea\"; the Chinese word (理念/观念) has no such link.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
     "q-4742": {
       "verdict": "keep",
       "reason": null,
@@ -36613,6 +36920,24 @@
       "model": "claude-opus-5-5",
       "copy": "q-24219"
     },
+    "q-4774": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Asian religious idea, Gandhi known worldwide; the voice pass will convert the date format.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25264"
+    },
+    "q-4775": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Kung Fu Panda is very popular in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25306"
+    },
     "q-4776": {
       "verdict": "drop",
       "reason": "euro_centric",
@@ -36666,6 +36991,24 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24396"
+    },
+    "q-4782": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Bulgari (宝格丽) is well known in China, and the hints point to Greece.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25054"
+    },
+    "q-4783": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "P&G (宝洁) is a household name in China, and the answer can be reasoned to.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25118"
     },
     "q-4784": {
       "verdict": "adapt",
@@ -36784,6 +37127,24 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24224"
+    },
+    "q-4798": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Thatcher (铁娘子) is well known in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25202"
+    },
+    "q-4799": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Cold War leaders are taught in Chinese world history classes.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25246"
     },
     "q-4800": {
       "verdict": "adapt",
@@ -37206,6 +37567,24 @@
       "model": "claude-opus-5-5",
       "copy": null
     },
+    "q-4847": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Not a famous film in China, but kids can work out red versus blue without having seen it.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25037"
+    },
+    "q-4848": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Quotes from Shakespeare's English history plays are Anglo school knowledge, far beyond 14 for a Chinese audience.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
     "q-4849": {
       "verdict": "keep",
       "reason": null,
@@ -37334,6 +37713,70 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24946"
+    },
+    "q-4864": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal astronomy.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25010"
+    },
+    "q-4865": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Nobel physics; world science.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25072"
+    },
+    "q-4866": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Space science, world knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25140"
+    },
+    "q-4867": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal navigation tool.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25195"
+    },
+    "q-4868": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Astrophysics; the kilo hint works in Chinese too (千新星/千克).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25241"
+    },
+    "q-4869": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Pinocchio is known in China, but this Disney song is less familiar.",
+      "issue": "difficulty 10 → 12",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25282"
+    },
+    "q-4870": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Astronomy.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25318"
     },
     "q-4872": {
       "verdict": "keep",
@@ -37899,6 +38342,24 @@
       "model": "claude-opus-5-5",
       "copy": "q-24979"
     },
+    "q-4937": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Needs a Scottish town and Prince's Paisley Park; in Chinese the pattern goes by another name (腰果花), so the link to the name is lost.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-4938": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The answer can be reasoned to from the hints at 10, and the options are fine.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25105"
+    },
     "q-4939": {
       "verdict": "keep",
       "reason": null,
@@ -38446,6 +38907,60 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24954"
+    },
+    "q-5002": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Weimar hyperinflation is part of the world history taught in Chinese schools.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25018"
+    },
+    "q-5003": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "World War I is taught in Chinese schools.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25080"
+    },
+    "q-5004": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "World War II pigeons, universal and easy.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25144"
+    },
+    "q-5005": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Churchill and WWII are taught in Chinese world history.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25201"
+    },
+    "q-5006": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "British war film and a detail about the engines of Spanish-built aircraft; Western aviation buff knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-5007": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "WWII is world history taught in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25287"
     },
     "q-5261": {
       "verdict": "keep",
@@ -39019,6 +39534,24 @@
       "model": "claude-opus-5-5",
       "copy": "q-24619"
     },
+    "q-5327": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Checking banknotes is universal; the euro in the picture doesn't matter.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25047"
+    },
+    "q-5328": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A general fact; the US Fed fun fact is harmless trivia.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25110"
+    },
     "q-5329": {
       "verdict": "keep",
       "reason": null,
@@ -39157,6 +39690,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24942"
     },
+    "q-5344": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Everyday life everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25006"
+    },
     "q-5345": {
       "verdict": "keep",
       "reason": null,
@@ -39201,6 +39743,72 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24915"
+    },
+    "q-5350": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Cheetos are sold in China, but cheese snacks are less part of daily life there.",
+      "issue": "difficulty 3 → 5",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25175"
+    },
+    "q-5351": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Post-it notes (便利贴) and the distractor brands are known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25223"
+    },
+    "q-5352": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Airbus planes are everywhere in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25266"
+    },
+    "q-5353": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Dior and Paris are known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25307"
+    },
+    "q-5354": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Perrier is a world brand and the answer can be worked out. The image title is a Thai burger chain's branded glass in Thailand.",
+      "issue": "media: check the picked image (title: branded Prime Burger Thailand glass, Thai setting) shows no visible text or setting that rules options in or out, else re-pick a plain sparkling-water image; text fields and difficulty stay",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25342"
+    },
+    "q-5355": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Formica is a Western 1950s kitchen brand, and its name story is an English pun (“for mica”). Flip to drop if the topic is too Western.",
+      "issue": "hint 2: replace the mica-name hint with a non-word clue (e.g. it is made from layers of paper soaked in resin and pressed hot); fun_fact: replace the “for mica” name story with a fact that isn't wordplay (e.g. it was invented in 1912 in the US to insulate electrical parts); difficulty 6 → 8",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25381"
+    },
+    "q-5356": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Michelin is known worldwide, including in China; easy to reason out.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25407"
     },
     "q-5357": {
       "verdict": "drop",
@@ -39817,6 +40425,80 @@
       "model": "claude-opus-5-5",
       "copy": "q-24253"
     },
+    "q-5429": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "GDP is everyday news talk in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25049"
+    },
+    "q-5430": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Pensions are universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25112"
+    },
+    "q-5431": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Hanseatic League and Lübeck are German/Baltic history, rarely met in Chinese schooling.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-5432": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Malthus's population theory (马尔萨斯人口论) is well known in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25219"
+    },
+    "q-5433": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Global economics, fine.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25261"
+    },
+    "q-5434": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Exact founding year of an Italian bank; only European history buffs would know it.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-5435": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Hint 3 uses the Western nursery rhyme Old MacDonald.",
+      "issue": "hint 3: replace the Old MacDonald reference with a universal clue (e.g. they plant seeds and harvest crops)",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25337"
+    },
+    "q-5436": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "The fun fact is a Spanish saying.",
+      "issue": "fun_fact: replace the “vale un Potosí” saying with a fact like: much of Potosí's silver ended up in Ming China, traded via Manila for silk and porcelain",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25376"
+    },
     "q-5437": {
       "verdict": "drop",
       "reason": "euro_centric",
@@ -39851,6 +40533,43 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24984"
+    },
+    "q-5441": {
+      "verdict": "drop",
+      "reason": "latam_centric",
+      "note": "Hangs on a Buenos Aires bridge and a tango image; Calatrava is little known to Chinese families at 12.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-5443": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "World geography that travels; only the imperial unit needs removing.",
+      "issue": "question: drop “(16 miles)”.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25109"
+    },
+    "q-5444": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The Brooklyn Bridge is world famous; fair at 13.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25169"
+    },
+    "q-5445": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Carrick-a-Rede is a local Northern Irish bridge; the hint about the American Revolution is a Western reference.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
     },
     "q-5446": {
       "verdict": "adapt",
@@ -39929,6 +40648,16 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24743"
+    },
+    "q-5455": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Hints 2 and 3 rest on English (“epicure”, the letters “Epi”).",
+      "issue": "hint 2: replace the epicure word hint with a fact that works in any language; hint 3: replace “starts with Epi” with a non-letter hint (e.g. Lucretius wrote a long poem spreading his ideas); difficulty 11 → 12",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25501"
     },
     "q-5464": {
       "verdict": "drop",
@@ -40383,6 +41112,46 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": null
+    },
+    "q-5516": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Greek myth at specialist level is fine. Only the units need a fix.",
+      "issue": "fun_fact: remove “(380 ft)”, keep 116 m",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25020"
+    },
+    "q-5517": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Olympic history travels; only the imperial unit needs removing.",
+      "issue": "fun_fact: drop “(a few inches)”, keep metric only.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25082"
+    },
+    "q-5518": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Greek myth details (Phineus, Argonauts) are less familiar to Chinese families.",
+      "issue": "difficulty 9 → 11",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25146"
+    },
+    "q-5519": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Greek wind-god details are even less known to Chinese families.",
+      "issue": "difficulty 14 → 15",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25203"
     },
     "q-5520": {
       "verdict": "adapt",
@@ -41320,6 +42089,79 @@
       "model": "claude-opus-5-5",
       "copy": "q-24941"
     },
+    "q-5628": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Shaw and the Oscars are world-famous. The US award distractors are acceptable.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25005"
+    },
+    "q-5629": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Biology.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25068"
+    },
+    "q-5630": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Asian topic, world-known Nobel Prize; the dollar amount is the original figure.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25136"
+    },
+    "q-5631": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Hint 3's 'Mother = mom' clue fails in Chinese (特蕾莎修女); she is also less familiar to Chinese kids.",
+      "issue": "hint 3: replace the 'Mother' wordplay with a non-language clue (e.g. she founded the Missionaries of Charity); difficulty 6 → 9",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25191"
+    },
+    "q-5632": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Nobel laureate; specialist level for every audience.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25237"
+    },
+    "q-5633": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Global chemistry trivia.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25278"
+    },
+    "q-5634": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Gandhi and the Nobel Prize are world history.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25314"
+    },
+    "q-5635": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "School physics.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25352"
+    },
     "q-5636": {
       "verdict": "drop",
       "reason": "euro_centric",
@@ -41823,6 +42665,24 @@
       "model": "claude-opus-5-5",
       "copy": "q-24524"
     },
+    "q-5696": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A universal economics concept.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25403"
+    },
+    "q-5697": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "World economics and geography; Mexico can be reasoned out.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25430"
+    },
     "q-5698": {
       "verdict": "drop",
       "reason": "euro_centric",
@@ -41838,6 +42698,15 @@
       "note": "base subcategory eurovision has no chinese-base subcategory (from-base.json)",
       "run": "fit-1",
       "copy": null
+    },
+    "q-5700": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Nintendo and the bullet train are known in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25055"
     },
     "q-5701": {
       "verdict": "drop",
@@ -41880,6 +42749,16 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24940"
+    },
+    "q-5711": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "The Powerpuff Girls (飞天小女警) aired in China but are not widely known by children today. Raise the difficulty.",
+      "issue": "difficulty 4 → 7",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25004"
     },
     "q-5712": {
       "verdict": "adapt",
@@ -41979,6 +42858,24 @@
       "run": "fit-1",
       "copy": null
     },
+    "q-5723": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Greek mythology and astronomy are known worldwide; difficulty 10 is fine.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25247"
+    },
+    "q-5724": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Midas is widely known, and kids can reason out gold.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25289"
+    },
     "q-5725": {
       "verdict": "drop",
       "reason": "euro_centric",
@@ -41994,6 +42891,24 @@
       "note": "base subcategory hip-hop-and-rap has no chinese-base subcategory (from-base.json)",
       "run": "fit-1",
       "copy": null
+    },
+    "q-5727": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Card terminals (POS机) are still common in China next to QR codes.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25048"
+    },
+    "q-5728": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Tap cards and transit cards are familiar in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25111"
     },
     "q-5729": {
       "verdict": "drop",
@@ -42155,6 +43070,24 @@
       "model": "claude-opus-5-5",
       "copy": "q-24973"
     },
+    "q-5749": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Shakespeare is taught in Chinese schools and widely known.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25036"
+    },
+    "q-5750": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Everyday object.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25100"
+    },
     "q-5751": {
       "verdict": "keep",
       "reason": null,
@@ -42241,6 +43174,15 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24952"
+    },
+    "q-5761": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal science and history.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25016"
     },
     "q-5762": {
       "verdict": "keep",
@@ -42383,6 +43325,33 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24930"
+    },
+    "q-5779": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Nobel Prize ceremonies are world knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25389"
+    },
+    "q-5780": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Science Nobel Prize, Asian scientist; equally fair everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25414"
+    },
+    "q-5781": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "IVF and test-tube babies are universal science knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25438"
     },
     "q-5782": {
       "verdict": "drop",
@@ -42635,6 +43604,24 @@
       "model": "claude-opus-5-5",
       "copy": "q-23842"
     },
+    "q-5810": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The Dead Sea Scrolls are world history; the bamboo-strips distractor even suits this audience.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25404"
+    },
+    "q-5811": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Prambanan and the Hindu trimurti are Asian world knowledge; fair at 12.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25431"
+    },
     "q-5812": {
       "verdict": "keep",
       "reason": null,
@@ -42783,6 +43770,70 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24944"
+    },
+    "q-5828": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Astronomy, equally hard for everyone.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25008"
+    },
+    "q-5829": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Universal space fact. Imperial units are not part of this voice.",
+      "issue": "question: remove “(1.5 in)”, keep 3.8 cm",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25009"
+    },
+    "q-5830": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Space history, and players can reason towards it.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25071"
+    },
+    "q-5831": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Space technology; car seat comparison is universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25139"
+    },
+    "q-5832": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Engineering history at 14; fair.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25194"
+    },
+    "q-5833": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Physics.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25356"
+    },
+    "q-5834": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Chinese topic (Dunhuang, Tang dynasty); fits the bundle well.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25393"
     },
     "q-5835": {
       "verdict": "drop",
@@ -43066,6 +44117,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-22518"
     },
+    "q-5868": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "China contributes many UN peacekeepers (蓝盔); familiar term.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25324"
+    },
     "q-5869": {
       "verdict": "keep",
       "reason": null,
@@ -43084,6 +44144,52 @@
       "model": "claude-opus-5-5",
       "copy": "q-24892"
     },
+    "q-5871": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal everyday concept; works in Chinese too.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25170"
+    },
+    "q-5872": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Toy money from board games (大富翁) is familiar to children here.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25218"
+    },
+    "q-5873": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Chinese players use ¥ every day for the yuan; the yen link to Japan is very easy for them, but the sign could confuse them.",
+      "issue": "question: add a short note that the sign is shared with China's yuan, e.g. “Besides China's yuan, the ¥ sign also stands for the yen.”; difficulty 7 → 4",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25260"
+    },
+    "q-5874": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The US dollar is known worldwide, including by Chinese kids.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25305"
+    },
+    "q-5875": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Swedish banker; hint 3 is English wordplay (Palm).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
     "q-5876": {
       "verdict": "adapt",
       "reason": null,
@@ -43093,6 +44199,62 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24851"
+    },
+    "q-5877": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The World Cup is followed widely in China, and the hints lead to the answer.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25053"
+    },
+    "q-5878": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Starbucks is everywhere in Chinese cities.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25117"
+    },
+    "q-5879": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "M&M's are sold in China, but young Chinese children know less about their US origin.",
+      "issue": "difficulty 4 → 6",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25174"
+    },
+    "q-5880": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Where an American airline has its headquarters is US business trivia that Chinese families don't meet.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-5881": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Qantas is less well known in China; the decade can still be worked out from the hints.",
+      "issue": "difficulty 9 → 11",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25454"
+    },
+    "q-5882": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "L'Oréal is well known in China; players can work out the answer.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25471"
     },
     "q-5883": {
       "verdict": "drop",
@@ -43293,6 +44455,25 @@
       "model": "claude-opus-5-5",
       "copy": "q-24967"
     },
+    "q-5906": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Sony and PlayStation are known everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25030"
+    },
+    "q-5907": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Pokémon GO was never released in mainland China, so it is less familiar there; Pokémon itself is known.",
+      "issue": "difficulty 2 → 5.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25094"
+    },
     "q-5908": {
       "verdict": "keep",
       "reason": null,
@@ -43403,6 +44584,70 @@
       "model": "claude-opus-5-5",
       "copy": "q-24960"
     },
+    "q-5920": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Radiohead is niche in China, and every option is a British or Irish rock singer that only Western adults know.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-5921": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Punk hair is known, but Western punk culture and bands are less familiar to Chinese children.",
+      "issue": "difficulty 5 → 7.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25087"
+    },
+    "q-5922": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Drum kits are universal; the Beatles are famous worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25149"
+    },
+    "q-5924": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Rolling Stones album year and the Woodstock hint are Western rock culture.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-5925": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Music genres known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25249"
+    },
+    "q-5926": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Visual joke, works anywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25291"
+    },
+    "q-5927": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Everyday knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25327"
+    },
     "q-5928": {
       "verdict": "keep",
       "reason": null,
@@ -43448,6 +44693,33 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24953"
+    },
+    "q-5933": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The Spartacus uprising (斯巴达克起义) is taught in Chinese world history.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25017"
+    },
+    "q-5934": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Hard world-history question. Hint 3 still works in Chinese (罗马尼亚 / 罗马).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25079"
+    },
+    "q-5935": {
+      "verdict": "drop",
+      "reason": "wordplay",
+      "note": "About the Latin/English abbreviation 'etc.' and the & sign; it only works in Latin-alphabet writing and the fun fact is about the English alphabet.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
     },
     "q-5936": {
       "verdict": "adapt",
@@ -43545,6 +44817,44 @@
       "run": "fit-1",
       "copy": null
     },
+    "q-5948": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "The Last Supper and the Cenacle are less familiar to Chinese children than to Western ones.",
+      "issue": "difficulty 6 → 9",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25452"
+    },
+    "q-5949": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Ottoman architecture is world history; fair at 14.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25469"
+    },
+    "q-5950": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Fits; the voice uses metric units only.",
+      "issue": "question: remove “(620 mi)”",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25484"
+    },
+    "q-5951": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Bangkok temples are popular with Chinese tourists.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25500"
+    },
     "q-5954": {
       "verdict": "keep",
       "reason": null,
@@ -43610,6 +44920,62 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24963"
+    },
+    "q-5961": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The flying saucer is universal, and hint 3 also works in Chinese (飞碟/碟子).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25026"
+    },
+    "q-5962": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Star Wars is less of a childhood staple in China, and hint 3 relies on English spelling.",
+      "issue": "hint 3: replace “Their name starts with J” with a non-letter clue (e.g. they wear brown robes and are a knightly order); difficulty 2 → 4.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25090"
+    },
+    "q-5963": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Ghostbusters character names are little known in China; far above 9, and no difficulty change helps.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-5964": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Harry Potter is very popular in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25206"
+    },
+    "q-5965": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Dinosaurs and Jurassic Park are known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25250"
+    },
+    "q-5966": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Netflix isn't officially available in China, so Stranger Things is less familiar to kids and young teens.",
+      "issue": "difficulty 7 → 10",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25292"
     },
     "q-5967": {
       "verdict": "keep",
@@ -43711,6 +45077,24 @@
       "model": "claude-opus-5-5",
       "copy": "q-24980"
     },
+    "q-5978": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Everyday object.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25043"
+    },
+    "q-5979": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Everyday object.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25106"
+    },
     "q-5980": {
       "verdict": "keep",
       "reason": null,
@@ -43738,6 +45122,233 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24983"
+    },
+    "q-5983": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A world landmark with a reasoning answer.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25046"
+    },
+    "q-5984": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "North American Indigenous peoples and New York construction history are Western-only knowledge, far beyond 14 here.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-5985": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Astronomy; the twelve star signs are known in China too.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25070"
+    },
+    "q-5986": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Solar system science.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25138"
+    },
+    "q-5987": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal science.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25193"
+    },
+    "q-5988": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Astronomy specialist question; neutral.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25239"
+    },
+    "q-5989": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Space plus Star Wars, both known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25280"
+    },
+    "q-5990": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Armageddon is known in China, but Deep Impact much less so.",
+      "issue": "difficulty 12 → 13",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25316"
+    },
+    "q-5991": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "The fun fact compares the canyon to the US distance from New York to Los Angeles.",
+      "issue": "fun_fact: replace the New York–Los Angeles comparison with a Chinese distance of about 4,000 km (e.g. roughly Shanghai to the far west of Xinjiang); drop the imperial units (voice is metric)",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25354"
+    },
+    "q-5992": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Basic science, shared everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25391"
+    },
+    "q-5993": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "History of astronomy at specialist level; fair for specialists anywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25416"
+    },
+    "q-5994": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal space fact.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25440"
+    },
+    "q-5995": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal space fact.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25459"
+    },
+    "q-5996": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Solar system science.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25475"
+    },
+    "q-5997": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Space science.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25490"
+    },
+    "q-5998": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Space-race history known worldwide; China works fine as a distractor.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25240"
+    },
+    "q-5999": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Specialist space trivia, fair at 15; the English initials work in the English version.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25281"
+    },
+    "q-6000": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Space science known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25317"
+    },
+    "q-6001": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "ISS history is global.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25355"
+    },
+    "q-6002": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Astronomy specialist level, universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25418"
+    },
+    "q-6003": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal astrophysics.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25442"
+    },
+    "q-6004": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Herschel and Uranus are world science history.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25461"
+    },
+    "q-6005": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Astronomy.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25477"
+    },
+    "q-6006": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Astronomy trivia for specialists.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25492"
+    },
+    "q-6007": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Physics Nobel, specialist level.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25508"
     },
     "q-6011": {
       "verdict": "drop",
@@ -43925,6 +45536,43 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24965"
+    },
+    "q-6032": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The Lord of the Rings films are known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25028"
+    },
+    "q-6033": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Lord of the Rings place names are much less familiar to Chinese teens.",
+      "issue": "difficulty 8 → 11.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25092"
+    },
+    "q-6034": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Tolkien is known worldwide; a 15 for specialists either way.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25151"
+    },
+    "q-6035": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "The Silmarillion is niche even in the West and far more obscure in China; a judgement call (doubt rule).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
     },
     "q-6037": {
       "verdict": "adapt",
@@ -44198,6 +45846,53 @@
       "model": "claude-opus-5-5",
       "copy": "q-24981"
     },
+    "q-6069": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "World history; a fair specialist 15.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25044"
+    },
+    "q-6070": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A Chinese landmark; the exact twist angle stays specialist.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25107"
+    },
+    "q-6071": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Greek myth is met later by Chinese children.",
+      "issue": "difficulty 5 → 7",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25166"
+    },
+    "q-6072": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Leshan Giant Buddha is a famous Chinese landmark that is well known here; only the unit needs fixing.",
+      "issue": "fun_fact: drop the imperial conversion \"(233 ft)\" and keep metric only; difficulty 15 → 14",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25216"
+    },
+    "q-6073": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Lenin and Red Square are well known in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25258"
+    },
     "q-6074": {
       "verdict": "adapt",
       "reason": null,
@@ -44368,6 +46063,80 @@
       "model": "claude-opus-5-5",
       "copy": "q-24269"
     },
+    "q-6093": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Lenin, Trotsky, Tito and Churchill are taught in Chinese world history.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25361"
+    },
+    "q-6094": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "WWII Nagasaki is taught in Chinese schools; it's a neutral fact. Only the date format needs the bundle voice.",
+      "issue": "question: date “August 9, 1945” → “9 August 1945”; difficulty stays.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25397"
+    },
+    "q-6095": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "US/UK wartime medical figure, known mainly in the US.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6096": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The Munich Agreement and appeasement are taught in Chinese world history classes.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25444"
+    },
+    "q-6097": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "A French poet, BBC coded messages and a Western war film: needs a Western background.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6098": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Pearl Harbor is part of the Second World War history taught in Chinese schools.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25478"
+    },
+    "q-6099": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "A Second World War naval episode in South America, outside Chinese history teaching.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6100": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "The Anschluss (德奥合并) is taught in Chinese schools, but the hints rest on the German word and its letters.",
+      "issue": "hint 1: replace “It's a German word” (all options are German); hint 3: replace “starts with An” with a hint that works in any language (e.g. Hitler himself was born in Austria)",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25509"
+    },
     "q-6106": {
       "verdict": "keep",
       "reason": null,
@@ -44376,6 +46145,42 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24935"
+    },
+    "q-6107": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal nature question.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-24999"
+    },
+    "q-6108": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Counting legs with Lion King characters known in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25063"
+    },
+    "q-6109": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Nature science, universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25131"
+    },
+    "q-6110": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Nature fact, not culture-bound.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25186"
     },
     "q-6111": {
       "verdict": "keep",
@@ -44524,6 +46329,63 @@
       "model": "claude-opus-5-5",
       "copy": "q-24971"
     },
+    "q-6128": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Cool colours are universal art knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25034"
+    },
+    "q-6129": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Frida Kahlo is far less familiar to Chinese children than to Latin American ones, though the hints let players reason to the answer.",
+      "issue": "difficulty 4 → 7.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25098"
+    },
+    "q-6130": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Caricatures are universal; the media is a neutral caricature of a US politician.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25157"
+    },
+    "q-6131": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "The Grinch is little known in China; Shrek and the Hulk are known worldwide.",
+      "issue": "question: drop the Grinch or replace him with a green character known worldwide; fun fact stays",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25210"
+    },
+    "q-6132": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A painter's palette is known everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25254"
+    },
+    "q-6133": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "The fun fact is about English word history.",
+      "issue": "fun_fact: replace the English “yellow-red” fact with a language-neutral fact about oranges or color mixing (e.g. oranges first came from southern China)",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25297"
+    },
     "q-6134": {
       "verdict": "adapt",
       "reason": null,
@@ -44533,6 +46395,78 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24948"
+    },
+    "q-6135": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "AlphaGo vs Lee Sedol was huge news in China, so the question fits well.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25012"
+    },
+    "q-6136": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "An AI philosophy question at specialist level.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25074"
+    },
+    "q-6137": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Computer science history, universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25141"
+    },
+    "q-6138": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "AI history at 15; global field.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25196"
+    },
+    "q-6140": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Everyday technology.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25242"
+    },
+    "q-6141": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Global tech.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25283"
+    },
+    "q-6142": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Computing history known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25319"
+    },
+    "q-6143": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "GPS navigators are everyday life in China too, and the letters GPS are used there.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25357"
     },
     "q-6144": {
       "verdict": "keep",
@@ -44561,6 +46495,117 @@
       "model": "claude-opus-5-5",
       "copy": "q-24969"
     },
+    "q-6147": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Basketball is very popular in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25032"
+    },
+    "q-6148": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Basketball is huge in China; only the imperial unit needs removing.",
+      "issue": "question: drop “(10 ft)”; fun_fact: drop “(18 in)”.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25096"
+    },
+    "q-6149": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal sports logic for kids.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25155"
+    },
+    "q-6150": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Basketball is hugely popular in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25209"
+    },
+    "q-6151": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25340"
+    },
+    "q-6152": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Philosophy, hard everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25379"
+    },
+    "q-6153": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Psychology specialist level; equally fair for graduates anywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25406"
+    },
+    "q-6154": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A universal philosophy-of-mind topic; fair at 14.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25433"
+    },
+    "q-6155": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Fits, but hint 3 relies on an English word root.",
+      "issue": "hint 3: replace the 'determine' word-root clue with a clue that works in every language (e.g. the mind is known as Laplace's demon); difficulty stays 14",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25453"
+    },
+    "q-6156": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Nozick and Western analytic philosophy are not part of what Chinese families meet; the hints lean on Western films too.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6157": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Chan Buddhism and 公案 are Chinese culture, so the answer is easy for this audience.",
+      "issue": "difficulty 14 → 7",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25486"
+    },
+    "q-6158": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Pinocchio is known in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25502"
+    },
     "q-6161": {
       "verdict": "keep",
       "reason": null,
@@ -44587,6 +46632,70 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24975"
+    },
+    "q-6164": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Chinese children know bingo from games and English classes; the answer is easy to reason out.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25039"
+    },
+    "q-6165": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Pokémon is known to Chinese children.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25101"
+    },
+    "q-6166": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Card games are universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25161"
+    },
+    "q-6167": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Google is restricted in China, so young children meet the Chrome dino less often, though it can still be worked out.",
+      "issue": "difficulty 2 → 4",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25222"
+    },
+    "q-6168": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Global tech trivia.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25265"
+    },
+    "q-6169": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Needs a German city, Audi's German slogan and Frankenstein's setting; Western-only trivia.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6170": {
+      "verdict": "drop",
+      "reason": "wordplay",
+      "note": "The question rests on the English brand name “Duracell”; translated, it gives the answer away.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
     },
     "q-6171": {
       "verdict": "drop",
@@ -44646,6 +46755,24 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24923"
+    },
+    "q-6178": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "World geography fact, just as obscure for everyone.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-24990"
+    },
+    "q-6179": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "A Danish-Norwegian king is a national figure known mainly in Europe.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
     },
     "q-6180": {
       "verdict": "drop",
@@ -44751,6 +46878,133 @@
       "model": "claude-opus-5-5",
       "copy": "q-24372"
     },
+    "q-6192": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "McCarthyism (麦卡锡主义) appears in world history, fine at 14; stated as neutral fact.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25288"
+    },
+    "q-6193": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Icelandic president and Nordic/Irish distractors; Western-only trivia.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6194": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "China's own Five Principles of Peaceful Coexistence (和平共处五项原则) make this a school term. The hint about Mao's China is judgemental.",
+      "issue": "hint 2: replace the line about Mao's China attacking the idea with a neutral clue (e.g. the same words appear in China's Five Principles of 1954, or that it is a two-word idea about living side by side); difficulty 14 → 11",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25362"
+    },
+    "q-6195": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal everyday knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25398"
+    },
+    "q-6196": {
+      "verdict": "drop",
+      "reason": "latam_centric",
+      "note": "Central American and US Cold War politics; the options are Latin American groups.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6197": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "An East German building and its local nickname are only known in Germany.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6198": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The INF Treaty is Cold War world history; fair at 13.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25463"
+    },
+    "q-6199": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Everyday computer knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25153"
+    },
+    "q-6200": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Kids can reason it out from touch screens.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25208"
+    },
+    "q-6201": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Japanese console history; equally fair here.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25252"
+    },
+    "q-6202": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Global gaming trivia.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25295"
+    },
+    "q-6203": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Nintendo is known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25329"
+    },
+    "q-6204": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Computing history is neutral.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25367"
+    },
+    "q-6205": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "The Atari Lynx was barely present in China; the hardware detail is fair only for Western retro gamers.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
     "q-6206": {
       "verdict": "keep",
       "reason": null,
@@ -44795,6 +47049,24 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24921"
+    },
+    "q-6211": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Basic world geography. Brazil, Argentina and Peru are well known.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-24989"
+    },
+    "q-6212": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Llamas and alpacas are popular in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25057"
     },
     "q-6213": {
       "verdict": "keep",
@@ -45132,6 +47404,44 @@
       "model": "claude-opus-5-5",
       "copy": "q-24250"
     },
+    "q-6251": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "A world landmark; only the imperial units need removing.",
+      "issue": "hint 1: drop “(151 ft)”; fun_fact: drop “(8 ft)”.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25108"
+    },
+    "q-6252": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Frozen is hugely popular in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25167"
+    },
+    "q-6253": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Disney castles and Cinderella are well known in China; the fun fact uses an imperial unit.",
+      "issue": "fun_fact: drop \"(189 ft)\" and keep metric only",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25217"
+    },
+    "q-6254": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "World landmark that anyone can reason about; the voice pass can drop the ft unit.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25259"
+    },
     "q-6255": {
       "verdict": "keep",
       "reason": null,
@@ -45149,6 +47459,25 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": null
+    },
+    "q-6257": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Lay's (乐事) is common in China, but hash browns are a Western dish.",
+      "issue": "wrong answers: replace “Hash browns” with a potato dish known in China, e.g. “Potato wedges” or “Shredded potato stir-fry”",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25052"
+    },
+    "q-6258": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The Olympic rings are global, and Beijing hosted the Games.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25116"
     },
     "q-6259": {
       "verdict": "drop",
@@ -45181,6 +47510,107 @@
       "note": "base subcategory famous-quotes has no chinese-base subcategory (from-base.json)",
       "run": "fit-1",
       "copy": null
+    },
+    "q-6263": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A history-of-science specialist question.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25067"
+    },
+    "q-6264": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Biology and Nobel science, universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25135"
+    },
+    "q-6265": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Science history at 15.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25190"
+    },
+    "q-6266": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "History of science from the Islamic world; neutral.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25236"
+    },
+    "q-6267": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "History of science, fine at 14.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25277"
+    },
+    "q-6268": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Relies on US cartoons (Dexter, Jimmy Neutron, Phineas, Timmy) less known in China; hint 3 is letter wordplay.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6269": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Gödel is world science history and hard everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25351"
+    },
+    "q-6270": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Tu Youyou is famous in China, so this is far easier here. The Wu name needs the Chinese order.",
+      "issue": "difficulty 14 → 7; wrong answer “Chien-Shiung Wu” → “Wu Jianxiong” (family name first, pinyin)",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25388"
+    },
+    "q-6271": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Fabre's Souvenirs entomologiques (昆虫记) is required middle-school reading in China, so it's much easier here.",
+      "issue": "difficulty 15 → 8; hint 3: replace the Japan reference with one fitting China (e.g. his insect books are school reading for many children in East Asia) without naming him; fun fact stays.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25413"
+    },
+    "q-6272": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A world medical history landmark; Cape Town and Table Mountain are known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25437"
+    },
+    "q-6273": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Physics history, global; specialist level fits 15.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25457"
     },
     "q-6274": {
       "verdict": "keep",
@@ -45416,6 +47846,72 @@
       "run": "fit-1",
       "copy": null
     },
+    "q-6300": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Greek myth fine for adults, but hint 3 is English spelling.",
+      "issue": "hint 3: replace the “Dry…” letter hint with a non-letter clue (e.g. hamadryads are a kind of them, bound to one tree); difficulty 13 → 14",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25325"
+    },
+    "q-6301": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The Olympics are global.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25363"
+    },
+    "q-6302": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Depends on Greek etymology (Hesperus) and a Western classical education; far harder here.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6303": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Greek myth is less familiar to Chinese young teens; per the calibration, Greek god symbols sit around 9.",
+      "issue": "difficulty 7 → 9; everything else stays.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25421"
+    },
+    "q-6304": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Disney's Hercules is known in China, but less than the newer Disney hits, and the English voice actor means little there.",
+      "issue": "difficulty 5 → 8; hint 3: remove the reference to Danny DeVito voicing the character and keep only the list of rules for heroes",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25445"
+    },
+    "q-6305": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Greek myth specialist fact, equally hard everywhere; fair at 15.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25464"
+    },
+    "q-6306": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Medea, Colchis and Euripides are far outside what Chinese families meet; a difficulty change would not fix it.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
     "q-6307": {
       "verdict": "drop",
       "reason": "too_hard_here",
@@ -45507,6 +48003,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24978"
     },
+    "q-6317": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Watermelon is a familiar everyday fruit in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25042"
+    },
     "q-6318": {
       "verdict": "drop",
       "reason": "too_hard_here",
@@ -45597,6 +48102,24 @@
       "model": "claude-opus-5-5",
       "copy": "q-24968"
     },
+    "q-6328": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "AC Milan and Maldini were hugely popular in China in the 2000s. Still a specialist question.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25031"
+    },
+    "q-6329": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Global football award at specialist level; Mbappé is known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25095"
+    },
     "q-6330": {
       "verdict": "keep",
       "reason": null,
@@ -45667,6 +48190,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24974"
     },
+    "q-6339": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Linguistics fact with no Western focus; still a fair 15.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25038"
+    },
     "q-6340": {
       "verdict": "keep",
       "reason": null,
@@ -45723,6 +48255,70 @@
       "model": "claude-opus-5-5",
       "copy": "q-24957"
     },
+    "q-6346": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Harry Potter books and films are very popular in China (Dumbledore is 邓布利多), and the question, options, hints and fun fact all work worldwide, so difficulty 5 stays.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25022"
+    },
+    "q-6347": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Both films are well known in China, and Mulan is Chinese-themed.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25084"
+    },
+    "q-6348": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Hint 3 relies on the English word 'library'; fun fact uses the Western Dewey system.",
+      "issue": "hint 3: replace the 'sounds like library' clue with a non-language one (e.g. 'I put returned books back on the right shelf'); fun fact: replace the Dewey fact with a universal library fact",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25158"
+    },
+    "q-6349": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal book knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25211"
+    },
+    "q-6350": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "\"Muggle\" (麻瓜) is even common slang in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25255"
+    },
+    "q-6351": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The e-mail clue also works in Chinese (电子书/电子邮件).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25298"
+    },
+    "q-6352": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Book genres are universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25331"
+    },
     "q-6353": {
       "verdict": "keep",
       "reason": null,
@@ -45751,6 +48347,62 @@
       "model": "claude-opus-5-5",
       "copy": "q-24925"
     },
+    "q-6356": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Foehn-type winds (焚风) are in Chinese geography lessons. Only the units need a fix.",
+      "issue": "fun_fact: drop the °F bracket, keep metric only",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-24992"
+    },
+    "q-6357": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Who climbed Erebus with Shackleton is Western polar lore, beyond even a 14 for Chinese adults.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6358": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Ancient Egypt and animals are world knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25078"
+    },
+    "q-6359": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Egyptology at 15; neutral fact about an ancient text, fair for specialists.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25143"
+    },
+    "q-6360": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Fine at 15; the voice is metric-only.",
+      "issue": "fun fact: remove '(21 °F)'",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25199"
+    },
+    "q-6361": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Asks for a Danish regional museum and has Danish museum distractors; local European knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
     "q-6362": {
       "verdict": "keep",
       "reason": null,
@@ -45768,6 +48420,42 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24894"
+    },
+    "q-6364": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A Nobel medicine story, global; fair at 15.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25458"
+    },
+    "q-6365": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "US finance figure; the hints (Yale, a US home price index) need US knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6366": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Vietnam and Zhou Enlai make this familiar.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25489"
+    },
+    "q-6367": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Nobel and science history.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25505"
     },
     "q-6369": {
       "verdict": "drop",
@@ -45824,6 +48512,51 @@
       "note": "base subcategory norse-mythology has no chinese-base subcategory (from-base.json)",
       "run": "fit-1",
       "copy": null
+    },
+    "q-6376": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Perception science; Mach is known from physics classes.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25214"
+    },
+    "q-6377": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Everyday object, works anywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25256"
+    },
+    "q-6378": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Psychology trivia, fair at 15.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25301"
+    },
+    "q-6379": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Science history, Aristotle is known.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25333"
+    },
+    "q-6380": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Zebras and Africa are universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25372"
     },
     "q-6381": {
       "verdict": "keep",
@@ -45974,6 +48707,34 @@
       "model": "claude-opus-5-5",
       "copy": "q-24961"
     },
+    "q-6398": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Chinese families use Douyin rather than TikTok. The concept is the same.",
+      "issue": "question: “On TikTok (Douyin, 抖音), what is a “challenge”?”",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25024"
+    },
+    "q-6399": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Frozen is hugely popular in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25088"
+    },
+    "q-6400": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Karaoke is hugely popular in China; lyrics (歌词) translates cleanly.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25150"
+    },
     "q-6402": {
       "verdict": "keep",
       "reason": null,
@@ -46007,6 +48768,61 @@
       "note": "base subcategory proverbs-of-the-world has no chinese-base subcategory (from-base.json)",
       "run": "fit-1",
       "copy": null
+    },
+    "q-6406": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Ancient Nubia, equally specialist everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25015"
+    },
+    "q-6407": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Asian history (Khmer), fair at 15 for any audience; only the imperial unit needs removing.",
+      "issue": "fun_fact: drop “(118 ft)”, keep metric only.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25077"
+    },
+    "q-6408": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Albanian national figure and Tirana landmark; known mainly in Europe.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6409": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "African ancient history at 15; no Western bias.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25198"
+    },
+    "q-6410": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Ancient Egypt and Kush history; specialist level for every audience.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25244"
+    },
+    "q-6411": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "African archaeology, no Western angle.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25285"
     },
     "q-6412": {
       "verdict": "keep",
@@ -46134,6 +48950,78 @@
       "model": "claude-opus-5-5",
       "copy": "q-24966"
     },
+    "q-6426": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Video game history, equally hard everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25029"
+    },
+    "q-6427": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Specialist retro-game trivia at 15, equally niche everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25093"
+    },
+    "q-6428": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "African wildlife; neutral.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25233"
+    },
+    "q-6429": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Nature, works anywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25274"
+    },
+    "q-6430": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Nature riddle that works anywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25312"
+    },
+    "q-6431": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "African wildlife is neutral.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25349"
+    },
+    "q-6432": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Animal biology, can be worked out.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25386"
+    },
+    "q-6433": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The film is less known here, but Kenya can be worked out from the hints at 13.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25411"
+    },
     "q-6434": {
       "verdict": "keep",
       "reason": null,
@@ -46196,6 +49084,26 @@
       "run": "fit-1",
       "copy": null
     },
+    "q-6441": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Greek myth is harder for Chinese teens; the link between the English word “python” and Pythia is lost in translation.",
+      "issue": "difficulty 7 → 12",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25494"
+    },
+    "q-6443": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Greek myth is harder here.",
+      "issue": "difficulty 9 → 11",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25511"
+    },
     "q-6445": {
       "verdict": "drop",
       "reason": "euro_centric",
@@ -46233,6 +49141,87 @@
       "model": "claude-opus-5-5",
       "copy": "q-24792"
     },
+    "q-6449": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Jump rope is a staple of Chinese school PE.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25104"
+    },
+    "q-6450": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Asian answer, world record; fits.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25164"
+    },
+    "q-6451": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "US aerospace engineering history (Lockheed, Skunk Works); the distractors are American figures known mainly in the US.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6452": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Harry Potter is hugely popular in China, and the name completion survives translation (查德利火炮队).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25027"
+    },
+    "q-6453": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Harry Potter is widely read in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25091"
+    },
+    "q-6454": {
+      "verdict": "drop",
+      "reason": "wordplay",
+      "note": "Spelling out an English acronym; it means nothing once translated into Chinese.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6455": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Harry Potter is popular in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25207"
+    },
+    "q-6456": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Harry Potter is very popular in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25251"
+    },
+    "q-6457": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Harry Potter is very popular in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25293"
+    },
     "q-6458": {
       "verdict": "drop",
       "reason": "euro_centric",
@@ -46240,6 +49229,16 @@
       "note": "base subcategory horror-films has no chinese-base subcategory (from-base.json)",
       "run": "fit-1",
       "copy": null
+    },
+    "q-6459": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Canadian women's football record holder is less known in China.",
+      "issue": "difficulty 13 → 14",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25154"
     },
     "q-6460": {
       "verdict": "keep",
@@ -46331,6 +49330,162 @@
       "run": "fit-1",
       "copy": null
     },
+    "q-6470": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Eastern Orthodox and Armenian church languages are far outside what this audience meets; much harder than 12.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6471": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Asian languages, world geography.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25160"
+    },
+    "q-6472": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Language-family fact; Hungary is familiar enough at 13.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25212"
+    },
+    "q-6473": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Knorozov and the Maya scholars in the options belong to Western/Latin American Mayanist knowledge; almost unknown to Chinese families, even trivia specialists.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6474": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Ancient history, fine at 14.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25300"
+    },
+    "q-6475": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Biblical translation history is unfamiliar; the Chinese name 七十士译本 also gives away hints 2 and 3.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6476": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A universal concept; Moby-Dick is world literature.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25369"
+    },
+    "q-6477": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Fact is world geography; hint 3 relies on a Western pop reference.",
+      "issue": "hint 3: replace 'in the decade the Beatles were famous' with a neutral time clue (e.g. 'about 13 years after Everest was first climbed'); fact and answer stay",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25125"
+    },
+    "q-6478": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Earthquake drills are common in Chinese schools.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25181"
+    },
+    "q-6479": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "The föhn (焚风) is taught in Chinese geography; Heidi in hint 3 is a Western reference.",
+      "issue": "hint 3: remove Heidi and keep Switzerland, Austria and Mont Blanc",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25230"
+    },
+    "q-6480": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Qin Shi Huang and Mount Tai are core Chinese school knowledge, so it is much easier here.",
+      "issue": "question: name Mount Tai (泰山) and Qin Shi Huang in pinyin; difficulty 12 → 8",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25271"
+    },
+    "q-6481": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Ueli Steck and the Eiger north face are Alpine climbing lore known mainly in Europe.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6482": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Everyday health.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25286"
+    },
+    "q-6483": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Egypt mummies are world history.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25322"
+    },
+    "q-6484": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Iran's Saltmen are neutral world history.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25359"
+    },
+    "q-6485": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Physics and the Great Pyramid are world knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25396"
+    },
+    "q-6486": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Ancient Egypt is world history.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25420"
+    },
     "q-6487": {
       "verdict": "keep",
       "reason": null,
@@ -46339,6 +49494,24 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24972"
+    },
+    "q-6488": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Museum etiquette applies everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25035"
+    },
+    "q-6489": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Tour-guide flags are a very familiar sight in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25099"
     },
     "q-6494": {
       "verdict": "drop",
@@ -46363,6 +49536,44 @@
       "note": "base subcategory norse-mythology has no chinese-base subcategory (from-base.json)",
       "run": "fit-1",
       "copy": null
+    },
+    "q-6497": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A universal perception topic; the train example is everyday life.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25400"
+    },
+    "q-6498": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Hint 3 depends on the English word “chronometer”, which doesn't carry over to Chinese.",
+      "issue": "hint 3: replace the “chronometer” word hint with a strong hint not based on English words (e.g. the name comes from the Greek words for “time” and “standing still”).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25426"
+    },
+    "q-6499": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "History of psychology, global; fair at 14.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25448"
+    },
+    "q-6500": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Green screens are universal, but YouTube is not everyday life in mainland China.",
+      "issue": "hint 1: replace 'YouTubers' with 'online video creators'",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25467"
     },
     "q-6501": {
       "verdict": "adapt",
@@ -46530,6 +49741,16 @@
       "run": "fit-1",
       "copy": null
     },
+    "q-6519": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Hint 3 leans on the Bible's Babel story, which is less familiar here.",
+      "issue": "hint 3: replace the Bible reference with a strong hint that the material was man-made blocks fired in a kiln, stuck with black natural asphalt; difficulty 12 → 13",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25321"
+    },
     "q-6520": {
       "verdict": "adapt",
       "reason": null,
@@ -46549,6 +49770,15 @@
       "model": "claude-opus-5-5",
       "copy": null
     },
+    "q-6522": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Windows Solitaire and playing cards are everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25152"
+    },
     "q-6523": {
       "verdict": "drop",
       "reason": "wordplay",
@@ -46566,6 +49796,24 @@
       "model": "claude-opus-5-5",
       "copy": "q-24962"
     },
+    "q-6525": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Cosplay is very popular in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25025"
+    },
+    "q-6526": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Naruto is very popular in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25089"
+    },
     "q-6528": {
       "verdict": "drop",
       "reason": "euro_centric",
@@ -46580,6 +49828,15 @@
       "by": "map",
       "note": "base subcategory architectural-styles has no chinese-base subcategory (from-base.json)",
       "run": "fit-1",
+      "copy": null
+    },
+    "q-6530": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "ColecoVision is US-only retro gaming; the hints rely on New England.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
       "copy": null
     },
     "q-6531": {
@@ -46608,6 +49865,44 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24332"
+    },
+    "q-6534": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Jack Black is known in China mainly as the voice of Po in Kung Fu Panda; Tenacious D and Seth Rogen are less known.",
+      "issue": "hint 3: replace the School of Rock hint with “He voices Po in “Kung Fu Panda”.”; hint 2: replace Tenacious D with “He also starred in School of Rock”; wrong answers: replace Seth Rogen with an actor known in China (e.g. Ben Stiller); difficulty 11 → 12",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25365"
+    },
+    "q-6535": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Gospel and early US rock figure, famous mainly in the US.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6536": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Led Zeppelin is much less familiar in China, but the answer can be reasoned out.",
+      "issue": "difficulty 10 → 12; everything else stays.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25423"
+    },
+    "q-6537": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "World geography and Roman history; fair at 13.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25200"
     },
     "q-6538": {
       "verdict": "keep",
@@ -46788,6 +50083,61 @@
       "model": "claude-opus-5-5",
       "copy": "q-24618"
     },
+    "q-6560": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "A detail found only in the book (Tom Bombadil and Old Man Willow are not in the films); far fewer people here have read Tolkien's books.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6561": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Father Christmas (圣诞老人) is known, and the answer can be reasoned out.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25294"
+    },
+    "q-6562": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "LOTR is a global film series; the answer can be reasoned towards.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25328"
+    },
+    "q-6563": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Tolkien trivia, hard for everyone.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25366"
+    },
+    "q-6564": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "The Sámi people and their clothing are less familiar in China, though the igloo reasoning still works.",
+      "issue": "difficulty 10 → 12",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25165"
+    },
+    "q-6565": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The beret is a hat known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25215"
+    },
     "q-6566": {
       "verdict": "adapt",
       "reason": null,
@@ -46897,6 +50247,16 @@
       "model": "claude-opus-5-5",
       "copy": "q-23980"
     },
+    "q-6578": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Wright and Fallingwater are less familiar in China; organic/有机 hint still works.",
+      "issue": "difficulty 13 → 14",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25303"
+    },
     "q-6579": {
       "verdict": "adapt",
       "reason": null,
@@ -46976,6 +50336,115 @@
       "run": "fit-1",
       "copy": null
     },
+    "q-6589": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Brushes are universal, including Chinese brushes.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25330"
+    },
+    "q-6590": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "The question uses a Mexican reference; Dunhuang murals are the familiar example for this audience.",
+      "issue": "question: replace “Mexican artists like Diego Rivera made giant ones” with “the Mogao Caves (莫高窟) at Dunhuang are full of them”",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25368"
+    },
+    "q-6591": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "AI history at specialist level; the US college is the fact itself, not a bias.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25394"
+    },
+    "q-6592": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Everyday technology.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25419"
+    },
+    "q-6593": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "AI history is global tech knowledge; fair at 13.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25443"
+    },
+    "q-6594": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Space history, global.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25462"
+    },
+    "q-6595": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Basketball is very popular in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25253"
+    },
+    "q-6596": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Basketball is huge in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25296"
+    },
+    "q-6600": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal game, and the fun fact about its Chinese origin suits this audience.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25213"
+    },
+    "q-6601": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Answerable from nature knowledge; Woody is just a framing.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25341"
+    },
+    "q-6602": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "RCA is little known, but the answer can be worked out from the hints.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25380"
+    },
+    "q-6603": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Casio is well known in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25503"
+    },
     "q-6604": {
       "verdict": "drop",
       "reason": "euro_centric",
@@ -47024,6 +50493,34 @@
       "run": "fit-1",
       "copy": null
     },
+    "q-6611": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Miracle on the Han River (汉江奇迹) is well known in China; neutral economic history.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25124"
+    },
+    "q-6612": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "London buses are known worldwide, but young Chinese kids meet them less often.",
+      "issue": "difficulty 2 → 4",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25180"
+    },
+    "q-6613": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Disney film; the answer can be worked out from the cheese-name hint.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25229"
+    },
     "q-6614": {
       "verdict": "drop",
       "reason": "euro_centric",
@@ -47031,6 +50528,15 @@
       "note": "base subcategory cheese has no chinese-base subcategory (from-base.json)",
       "run": "fit-1",
       "copy": null
+    },
+    "q-6615": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal chemistry.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25002"
     },
     "q-6616": {
       "verdict": "keep",
@@ -47040,6 +50546,70 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24523"
+    },
+    "q-6617": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "The CIS is taught in Chinese schools, but hint 3 rests on the English word “Commonwealth”, which does not match in Chinese.",
+      "issue": "hint 3: replace the British Commonwealth wordplay with a hint that works in any language (e.g. it was set up in Minsk, and its headquarters are still there)",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25479"
+    },
+    "q-6618": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Panama and its canal are known; the map and hints help.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25493"
+    },
+    "q-6619": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Space history; “twins” works as 双子.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25510"
+    },
+    "q-6620": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "PlayStation is known worldwide; a counting question.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25425"
+    },
+    "q-6621": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Compass directions are universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25122"
+    },
+    "q-6622": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal animal knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25178"
+    },
+    "q-6623": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Giant panda and Kung Fu Panda are a perfect fit for this audience.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25227"
     },
     "q-6624": {
       "verdict": "keep",
@@ -47058,6 +50628,15 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24926"
+    },
+    "q-6626": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Nomads are known everywhere, Mongolian herders included.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-24993"
     },
     "q-6627": {
       "verdict": "keep",
@@ -47159,6 +50738,51 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24522"
+    },
+    "q-6638": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "7-Eleven is common in China and Taiwan.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25119"
+    },
+    "q-6639": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal visual question.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25176"
+    },
+    "q-6640": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Toy Story is known worldwide, and the answer can be worked out.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25224"
+    },
+    "q-6641": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal architecture concept.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25304"
+    },
+    "q-6642": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The Colosseum is world history.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25336"
     },
     "q-6643": {
       "verdict": "drop",
@@ -47286,6 +50910,87 @@
       "model": "claude-opus-5-5",
       "copy": "q-24947"
     },
+    "q-6657": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "The Rock Hall city and the Moondog Ball are US music trivia.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6658": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Sam Phillips and US record labels are American music-industry trivia.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6659": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "U2 album years are Western pop knowledge; the Live Aid and Berlin Wall hints too.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6660": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Pink Floyd and Pompeii are known worldwide; specialist level.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25496"
+    },
+    "q-6661": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Ancient Rome is world history; easy to reason out.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25245"
+    },
+    "q-6662": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Roman Britain's walls and the Forth–Clyde line are British school history; far too obscure for this audience.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6663": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal gesture.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25323"
+    },
+    "q-6664": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Nobel literature, hard everywhere; Sienkiewicz has Chinese translations.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25360"
+    },
+    "q-6665": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Built on a European idiom and Pyrrhus; Chinese world-history classes don't cover him, so it's unfair even for specialists here.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
     "q-6666": {
       "verdict": "drop",
       "reason": "euro_centric",
@@ -47313,6 +51018,25 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24956"
+    },
+    "q-6669": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Roman mythology is less familiar to Chinese children, though the owl → wisdom link can be reasoned out.",
+      "issue": "difficulty 4 → 6",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25021"
+    },
+    "q-6670": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Grapes and wine are universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25083"
     },
     "q-6671": {
       "verdict": "drop",
@@ -47393,6 +51117,71 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24855"
+    },
+    "q-6680": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Storm is universal, but hint 3 leans on the English word 'tempest'.",
+      "issue": "hint 3: replace 'another word for it' with a non-language clue (e.g. 'Weather reports warn you to stay indoors during one'); keep the Shakespeare mention neutral",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25159"
+    },
+    "q-6681": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Jacobean co-authorship is English literary scholarship.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6682": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "A detail about Elizabethan London theatres; hint 3 relies on the English word \"theatre\".",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6683": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Hint 3 points to the Bible's Book of Proverbs, a Western reference.",
+      "issue": "hint 3: replace the Bible clue with a neutral one (e.g. Chinese has many, such as 谚语 about the weather and farming)",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25299"
+    },
+    "q-6684": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "World Book Day (世界读书日) is known in China; Dickens vs 1616 writers can be worked out.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25332"
+    },
+    "q-6685": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Deep Shakespeare, a 15 everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25370"
+    },
+    "q-6686": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "How Shakespeare's sonnets are grouped is English-literature specialist knowledge, not met by Chinese families.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
     },
     "q-6687": {
       "verdict": "keep",
@@ -47635,6 +51424,172 @@
       "model": "claude-opus-5-5",
       "copy": "q-24970"
     },
+    "q-6715": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal sport.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25033"
+    },
+    "q-6716": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Tennis balls and Wimbledon are known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25097"
+    },
+    "q-6717": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Badminton is very popular in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25156"
+    },
+    "q-6718": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Deep Tolkien book detail that isn't in the films; only Western book fans would know it.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6719": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Can be worked out from the elephant picture and hints; the films are known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25424"
+    },
+    "q-6720": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Oxford is very well known in China, and hint 3's 'ox ford' meaning even works in 牛津.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25447"
+    },
+    "q-6721": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Lord of the Rings is global; deep lore suits 15.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25466"
+    },
+    "q-6722": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Lord of the Rings is a global franchise; this is a 15 for fans anywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25481"
+    },
+    "q-6723": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A question for Tolkien fans; the plurals are in Sindarin, not English.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25497"
+    },
+    "q-6724": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "African dress, no Western angle; adults can reason it out.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25257"
+    },
+    "q-6725": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Hint 3 is an English letter clue.",
+      "issue": "hint 3: replace the “Sahara” letters clue with a non-language clue (e.g. it is often bright red and embroidered, worn in Russian folk dances)",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25302"
+    },
+    "q-6726": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Japan topic fine, but hint 3 is a letter hint, and 舞妓 echoes the “dance child” gloss.",
+      "issue": "hint 3: replace the “starts with Mai” letter hint with a non-letter clue (e.g. their long dangling obi and colorful hair ornaments); hint 2: drop the “dance child” gloss for a hint that doesn't name the characters",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25334"
+    },
+    "q-6727": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The war bonnet is known worldwide from cartoons and films.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25373"
+    },
+    "q-6728": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Arctic North American footwear term, almost unknown here; hint 3 also leans on English letters.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-6729": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "An East Asian topic (the Ainu of Japan); fits well.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25427"
+    },
+    "q-6730": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Japanese culture fits, but the kanzashi characters (簪) mean 'hairpin' in Chinese and would give the answer away.",
+      "issue": "question and fun fact: write kanzashi only in romaji, never add the characters 簪/かんざし in any language; difficulty stays 13",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25449"
+    },
+    "q-6731": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "The poncho is known worldwide but less everyday for Chinese 6-year-olds; the distractors are fine.",
+      "issue": "difficulty 2 → 4",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25468"
+    },
+    "q-6732": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Asian textile craft; Chinese families know tie-dye (扎染).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25482"
+    },
     "q-6733": {
       "verdict": "keep",
       "reason": null,
@@ -47661,6 +51616,34 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24976"
+    },
+    "q-6736": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Pricing trick works everywhere, but “cent” is a Western coin.",
+      "issue": "hint 2: replace “Only 1 cent is missing.” with wording that names no currency, e.g. “Only the smallest coin is missing.”",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25040"
+    },
+    "q-6737": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Magicians are universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25102"
+    },
+    "q-6738": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal nature fact; in Chinese the squid is 墨鱼, which makes it even more familiar.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25162"
     },
     "q-6739": {
       "verdict": "drop",
@@ -47722,6 +51705,33 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24936"
+    },
+    "q-6746": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal animal fact.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25000"
+    },
+    "q-6747": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Pet care is universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25064"
+    },
+    "q-6748": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Ancient Egypt is world history in Chinese schools; including Ancient China as a wrong answer is fine.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25132"
     },
     "q-6749": {
       "verdict": "drop",
@@ -47854,6 +51864,51 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24886"
+    },
+    "q-6765": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25335"
+    },
+    "q-6766": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Engineering reasoning, neutral.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25374"
+    },
+    "q-6767": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Petra is a world landmark; Indiana Jones is known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25401"
+    },
+    "q-6768": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The Suez Canal is world history taught everywhere; a specialist-level person.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25428"
+    },
+    "q-6769": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Niemeyer, Le Corbusier and Chandigarh are world architecture knowledge; fair at 14.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25450"
     },
     "q-6770": {
       "verdict": "keep",
@@ -48060,6 +52115,52 @@
       "model": "claude-opus-5-5",
       "copy": "q-24959"
     },
+    "q-20641": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The minuet (小步舞曲) is part of standard music education in China too.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25023"
+    },
+    "q-20642": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Verdi is fine at 11, but hint 3 is an English name pun.",
+      "issue": "hint 3: replace the “Joe Green” translation with a non-wordplay clue (e.g. he also wrote “La Traviata” and the “Rigoletto” aria heard here).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25086"
+    },
+    "q-20643": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Voice types are universal music knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25148"
+    },
+    "q-20644": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Voice types are universal music knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25205"
+    },
+    "q-20645": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Beethoven is known worldwide; the music can be reasoned out.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25248"
+    },
     "q-20647": {
       "verdict": "keep",
       "reason": null,
@@ -48068,6 +52169,33 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24425"
+    },
+    "q-20649": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Soyuz is world space knowledge; the difficulty fits.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25392"
+    },
+    "q-20652": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Opera trivia at 14, global classical music.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25290"
+    },
+    "q-20654": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Western classical music is widely taught; the William Tell Overture is known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25326"
     },
     "q-20655": {
       "verdict": "adapt",
@@ -48089,6 +52217,16 @@
       "model": "claude-opus-5-5",
       "copy": "q-24661"
     },
+    "q-20657": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "The fun fact relies on a British custom (Remembrance Sunday at the Cenotaph).",
+      "issue": "fun_fact: replace the Remembrance Sunday/Cenotaph fact with a neutral one about Dido's Lament or Purcell (e.g. the opera is based on Virgil's Aeneid)",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25364"
+    },
     "q-20658": {
       "verdict": "keep",
       "reason": null,
@@ -48106,6 +52244,15 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-23632"
+    },
+    "q-20661": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Beethoven's symphonies are well known in China (the 5th is called 命运, “Fate”).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25399"
     },
     "q-20662": {
       "verdict": "keep",
@@ -48133,6 +52280,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24937"
     },
+    "q-20665": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "European capital, but the Nobel hint makes it fair for adults.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25270"
+    },
     "q-20666": {
       "verdict": "drop",
       "reason": "euro_centric",
@@ -48141,6 +52297,15 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": null
+    },
+    "q-20667": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Opera specialist level at 15; fair for specialists anywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25422"
     },
     "q-20668": {
       "verdict": "keep",
@@ -48198,6 +52363,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24762"
     },
+    "q-20676": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Mozart operas are global classical canon; fair at 12.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25446"
+    },
     "q-20678": {
       "verdict": "keep",
       "reason": null,
@@ -48226,6 +52400,24 @@
       "model": "claude-opus-5-5",
       "copy": "q-24751"
     },
+    "q-20682": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal; the ISS is well known (China also has its own station).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25417"
+    },
+    "q-20683": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The CN Tower is a world landmark.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25375"
+    },
     "q-20684": {
       "verdict": "keep",
       "reason": null,
@@ -48235,6 +52427,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-23941"
     },
+    "q-20685": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Classical ensembles are universal music knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25465"
+    },
     "q-20686": {
       "verdict": "keep",
       "reason": null,
@@ -48243,6 +52444,33 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24760"
+    },
+    "q-20687": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "European capitals are world geography; the Danube is taught.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25310"
+    },
+    "q-20690": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Mozart and the eras of classical music are known in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25480"
+    },
+    "q-20691": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Bach and the Baroque era are known.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25495"
     },
     "q-20692": {
       "verdict": "keep",
@@ -48271,6 +52499,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24758"
     },
+    "q-20695": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "This piece is well known in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25512"
+    },
     "q-20696": {
       "verdict": "keep",
       "reason": null,
@@ -48288,6 +52525,15 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24411"
+    },
+    "q-20698": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The Space Shuttle is iconic worldwide; the hints let players reason towards it.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25441"
     },
     "q-20700": {
       "verdict": "keep",
@@ -48317,6 +52563,25 @@
       "model": "claude-opus-5-5",
       "copy": "q-24075"
     },
+    "q-20704": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Hanfu is everyday knowledge for Chinese families.",
+      "issue": "difficulty 11 → 3",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25498"
+    },
+    "q-20705": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Recognising the Finnish/Estonian anthem tune is European trivia. Chinese adults would not know it at any difficulty.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
     "q-20706": {
       "verdict": "keep",
       "reason": null,
@@ -48335,6 +52600,33 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24465"
+    },
+    "q-20711": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal bird behaviour.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-24998"
+    },
+    "q-20714": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Cairo and the pyramids are world geography.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25345"
+    },
+    "q-20715": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal spaceflight tech; Chinese Shenzhou capsules use escape towers too.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25460"
     },
     "q-20716": {
       "verdict": "adapt",
@@ -48374,6 +52666,24 @@
       "model": "claude-opus-5-5",
       "copy": "q-24084"
     },
+    "q-20725": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Kazakhstan borders China; a fair 14.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25058"
+    },
+    "q-20727": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Anthem recognition at specialist level is equally hard everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25123"
+    },
     "q-20729": {
       "verdict": "keep",
       "reason": null,
@@ -48401,6 +52711,15 @@
       "model": "claude-opus-5-5",
       "copy": null
     },
+    "q-20732": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Caribbean geography, hard everywhere, with fair hints.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25384"
+    },
     "q-20734": {
       "verdict": "keep",
       "reason": null,
@@ -48409,6 +52728,33 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24085"
+    },
+    "q-20737": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Equally hard everywhere; the video supports it.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25402"
+    },
+    "q-20738": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "An American songbird with American and European look-alike options; Chinese birders would rarely know them.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-20740": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Dubai is known worldwide, including in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25429"
     },
     "q-20741": {
       "verdict": "keep",
@@ -48456,6 +52802,16 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24568"
+    },
+    "q-20746": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Recognising O Canada from audio is harder for Chinese families; distractors are all Anglo countries.",
+      "issue": "difficulty 10 → 12",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25179"
     },
     "q-20749": {
       "verdict": "keep",
@@ -48511,6 +52867,16 @@
       "model": "claude-opus-5-5",
       "copy": "q-24486"
     },
+    "q-20758": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Fine for kids, but hint 3 uses a Western storybook reference.",
+      "issue": "hint 3: replace Peter Rabbit with the Jade Rabbit (玉兔) that lives on the Moon with Chang'e in Chinese legend",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-24997"
+    },
     "q-20761": {
       "verdict": "adapt",
       "reason": null,
@@ -48530,6 +52896,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24689"
     },
+    "q-20764": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "World capital, with a video.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25408"
+    },
     "q-20766": {
       "verdict": "keep",
       "reason": null,
@@ -48547,6 +52922,35 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24466"
+    },
+    "q-20771": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Singapore and the Merlion are very familiar to Chinese families, so it is easier here.",
+      "issue": "difficulty 8 → 6",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25451"
+    },
+    "q-20772": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Australian state capitals are fairly familiar in China (study, travel); fair at 14.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25434"
+    },
+    "q-20777": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Chicago is known, but the wrong answers are all North American cities that this audience hardly tells apart.",
+      "issue": "wrong answers: replace Philadelphia and Pittsburgh with better-known skyscraper cities (e.g. New York, Toronto stays, Shanghai excluded to avoid confusion → use Dubai); difficulty 11 → 13",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25168"
     },
     "q-20778": {
       "verdict": "keep",
@@ -48576,6 +52980,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24558"
     },
+    "q-20783": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Specialist-level question about a national anthem; no Western bias beyond the topic itself.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25228"
+    },
     "q-20786": {
       "verdict": "keep",
       "reason": null,
@@ -48584,6 +52997,15 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24782"
+    },
+    "q-20789": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Nature and world geography; fair as is.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25130"
     },
     "q-20790": {
       "verdict": "keep",
@@ -48602,6 +53024,80 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24668"
+    },
+    "q-20793": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Chinese kids hear the US anthem less often than Western kids do; it is still recognisable from the Olympics.",
+      "issue": "difficulty 5 → 7",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25269"
+    },
+    "q-20794": {
+      "verdict": "drop",
+      "reason": "latam_centric",
+      "note": "Recognising the Palacio de Bellas Artes and Mexican history from a video is Latin America-centred.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-20796": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Mandela and South Africa are well known; neutral fact.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25309"
+    },
+    "q-20798": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Standard lab equipment from science class.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25001"
+    },
+    "q-20799": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Neighbouring country, fine to play, but China calls Mount Baekdu Changbai Mountain (长白山).",
+      "issue": "hint 2: write the mountain as “Mount Baekdu (Changbai Mountain, 长白山)” or drop the mountain name; difficulty 14 → 13",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25344"
+    },
+    "q-20800": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Alpacas are very popular in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25062"
+    },
+    "q-20801": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "African geography, a 15 everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25383"
+    },
+    "q-20802": {
+      "verdict": "drop",
+      "reason": "latam_centric",
+      "note": "Central American national anthem with only Central American options.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
     },
     "q-20803": {
       "verdict": "keep",
@@ -48640,6 +53136,34 @@
       "model": "claude-opus-5-5",
       "copy": "q-24086"
     },
+    "q-20814": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Telling the Slovak anthem apart from its Central European neighbours needs European familiarity.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-20815": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Wildlife fits; the Dalí anecdote hint is Western art trivia, weaker for this audience.",
+      "issue": "hint 3: replace the Dalí anecdote with a nature clue (e.g. 'It lives from the southern US down to Argentina, in the Americas'); fact and answer stay",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25129"
+    },
+    "q-20816": {
+      "verdict": "drop",
+      "reason": "latam_centric",
+      "note": "An Andean festival; needs knowledge of Latin America.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
     "q-20817": {
       "verdict": "drop",
       "reason": "latam_centric",
@@ -48647,6 +53171,15 @@
       "note": "base subcategory world-music has no chinese-base subcategory (from-base.json)",
       "run": "fit-1",
       "copy": null
+    },
+    "q-20819": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Bird sound; nature knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25185"
     },
     "q-20821": {
       "verdict": "keep",
@@ -48657,6 +53190,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24454"
     },
+    "q-20823": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Specialist bird-call question; just as hard for every audience.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25232"
+    },
     "q-20824": {
       "verdict": "keep",
       "reason": null,
@@ -48665,6 +53207,43 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24559"
+    },
+    "q-20827": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "The ISS is world-famous; the voice uses metric units only.",
+      "issue": "hint 2: remove “(250 miles)”; fun fact: remove “(6.2 million gallons)”",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25476"
+    },
+    "q-20828": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Nature video; the naming issue is explained in the fun fact.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25184"
+    },
+    "q-20829": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "The Yugoslav and Serbian anthem history is Balkan and European trivia.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-20830": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Common duck; the mandarin duck distractor is familiar in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25273"
     },
     "q-20832": {
       "verdict": "keep",
@@ -48702,6 +53281,34 @@
       "model": "claude-opus-5-5",
       "copy": null
     },
+    "q-20838": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A world national anthem at difficulty 14; the Dutch orange is known from football.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25472"
+    },
+    "q-20839": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Space science.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25506"
+    },
+    "q-20840": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "European deer species; Chinese families know the spotted sika deer rather than the fallow deer, so it is harder here.",
+      "issue": "difficulty 10 → 12",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25231"
+    },
     "q-20841": {
       "verdict": "keep",
       "reason": null,
@@ -48710,6 +53317,15 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24658"
+    },
+    "q-20845": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Japanese cities are well known to Chinese families.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25483"
     },
     "q-20846": {
       "verdict": "adapt",
@@ -48720,6 +53336,15 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24757"
+    },
+    "q-20847": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A world national anthem.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25487"
     },
     "q-20851": {
       "verdict": "keep",
@@ -48745,6 +53370,24 @@
       "by": "map",
       "note": "base subcategory world-music has no chinese-base subcategory (from-base.json)",
       "run": "fit-1",
+      "copy": null
+    },
+    "q-20859": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Bird sounds from European city parks; the parakeet invasion is a European topic.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-20862": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Early American jazz tune from a 1922 recording; Western-only knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
       "copy": null
     },
     "q-20865": {
@@ -48777,6 +53420,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24838"
     },
+    "q-20870": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A world national anthem.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25504"
+    },
     "q-20871": {
       "verdict": "adapt",
       "reason": null,
@@ -48796,6 +53448,24 @@
       "model": "claude-opus-5-5",
       "copy": "q-23887"
     },
+    "q-20874": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A plane-spotting question, equally hard everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25013"
+    },
+    "q-20875": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "New Zealand bird, obscure for everyone.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25348"
+    },
     "q-20876": {
       "verdict": "keep",
       "reason": null,
@@ -48804,6 +53474,15 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24667"
+    },
+    "q-20877": {
+      "verdict": "drop",
+      "reason": "latam_centric",
+      "note": "A South American bird song with Argentina-based hints; only Latin American players would know it.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
     },
     "q-20878": {
       "verdict": "keep",
@@ -48831,6 +53510,15 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24846"
+    },
+    "q-20885": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Aviation-spotting specialist question; the plane types are global.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25075"
     },
     "q-20888": {
       "verdict": "keep",
@@ -48885,6 +53573,24 @@
       "run": "fit-1",
       "copy": null
     },
+    "q-20894": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Aircraft recognition; the B-2 is world famous.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25142"
+    },
+    "q-20897": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Birds of the northern forests, including northern China; equally hard everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25410"
+    },
     "q-20899": {
       "verdict": "keep",
       "reason": null,
@@ -48893,6 +53599,15 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24592"
+    },
+    "q-20900": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Toucans are known worldwide; the sound is the hard part, and that applies to everyone.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25436"
     },
     "q-20901": {
       "verdict": "adapt",
@@ -48923,6 +53638,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24690"
     },
+    "q-20906": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Telling languages apart by ear, fair at 11.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25371"
+    },
     "q-20908": {
       "verdict": "keep",
       "reason": null,
@@ -48931,6 +53655,24 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24478"
+    },
+    "q-20909": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Military aviation; equally fair to Chinese enthusiasts.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25197"
+    },
+    "q-20911": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "An American marsh bird with all-American distractors (loon, great blue heron); only fair for players in the Americas.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
     },
     "q-20913": {
       "verdict": "keep",
@@ -48968,6 +53710,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24766"
     },
+    "q-20924": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The B-52 is known worldwide; the name hint works in Chinese translation too (同温层堡垒).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25243"
+    },
     "q-20925": {
       "verdict": "keep",
       "reason": null,
@@ -48985,6 +53736,15 @@
       "run": "fit-1",
       "copy": null
     },
+    "q-20928": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "This bird also lives in southern China; it is world nature knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25474"
+    },
     "q-20929": {
       "verdict": "keep",
       "reason": null,
@@ -48994,6 +53754,34 @@
       "model": "claude-opus-5-5",
       "copy": "q-24281"
     },
+    "q-20933": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Global aviation trivia; the Lightning nickname also works in Chinese (闪电II).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25284"
+    },
+    "q-20935": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Shovelers spend the winter in China; nature knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25488"
+    },
+    "q-20936": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Chinese families buy jianbing every day, so this is easy for them. Hard only for the West.",
+      "issue": "difficulty 12 → 4; answer and question: write it as jianbing (煎饼); hint 3: mentioning Tianjin/Shandong now nearly gives it away, which is fine for hint 3",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-24988"
+    },
     "q-20937": {
       "verdict": "keep",
       "reason": null,
@@ -49002,6 +53790,15 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24398"
+    },
+    "q-20938": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Physics of re-entry.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25491"
     },
     "q-20942": {
       "verdict": "adapt",
@@ -49041,6 +53838,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24547"
     },
+    "q-20947": {
+      "verdict": "drop",
+      "reason": "latam_centric",
+      "note": "A Central American bird; the hints need Guatemala, the Maya and the Aztecs.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
     "q-20948": {
       "verdict": "drop",
       "reason": "euro_centric",
@@ -49068,6 +53874,15 @@
       "model": "claude-opus-5-5",
       "copy": null
     },
+    "q-20952": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "World geography.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25268"
+    },
     "q-20955": {
       "verdict": "keep",
       "reason": null,
@@ -49086,6 +53901,16 @@
       "model": "claude-opus-5-5",
       "copy": "q-24837"
     },
+    "q-20963": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "The groundhog (土拨鼠) is known in China from memes, but Groundhog Day is a US custom.",
+      "issue": "hint 3: replace the Pennsylvania Groundhog Day clue with a neutral clue (e.g. the famous screaming marmot videos online, or its whistle call)",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25272"
+    },
     "q-20964": {
       "verdict": "keep",
       "reason": null,
@@ -49103,6 +53928,16 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-23945"
+    },
+    "q-20968": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "The question works, but hint 3 is an English sound-alike that fails in Chinese.",
+      "issue": "hint 3: replace the “dexterous” sound-alike with a clue that isn't language-based, e.g. its official name means a skilful, nimble manipulator robot",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25011"
     },
     "q-20969": {
       "verdict": "keep",
@@ -49140,6 +53975,33 @@
       "model": "claude-opus-5-5",
       "copy": "q-24931"
     },
+    "q-20978": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Building methods are world knowledge, equally hard for everyone.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-24996"
+    },
+    "q-20979": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Common animal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25311"
+    },
+    "q-20981": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Science about photosynthesis.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25061"
+    },
     "q-20982": {
       "verdict": "adapt",
       "reason": null,
@@ -49159,6 +54021,24 @@
       "model": "claude-opus-5-5",
       "copy": "q-24943"
     },
+    "q-20989": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Physics; Chinese families know space stations well.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25066"
+    },
+    "q-20991": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Chemistry experiment.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25065"
+    },
     "q-20995": {
       "verdict": "keep",
       "reason": null,
@@ -49167,6 +54047,15 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24331"
+    },
+    "q-20996": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Aviation science.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25320"
     },
     "q-20997": {
       "verdict": "keep",
@@ -49185,6 +54074,15 @@
       "run": "fit-1",
       "copy": null
     },
+    "q-21002": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Animal ID that is hard for everyone.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25347"
+    },
     "q-21003": {
       "verdict": "keep",
       "reason": null,
@@ -49193,6 +54091,15 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24928"
+    },
+    "q-21007": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Telling a Nordic overtone flute by ear needs European folk knowledge. Not fair here at any difficulty.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
     },
     "q-21008": {
       "verdict": "keep",
@@ -49203,6 +54110,26 @@
       "model": "claude-opus-5-5",
       "copy": "q-24482"
     },
+    "q-21010": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Chinese players will lean towards naan (馕), which they know from Xinjiang; lavash itself is less familiar.",
+      "issue": "difficulty 12 → 13",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25056"
+    },
+    "q-21013": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Congee is everyday breakfast for Chinese families, so 10 is far too high; hint 2 then gives it away.",
+      "issue": "difficulty 10 → 3; hint 2: drop “Across China and much of Asia”, keep a vaguer breakfast clue (e.g. often eaten with fried dough sticks).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25121"
+    },
     "q-21016": {
       "verdict": "keep",
       "reason": null,
@@ -49211,6 +54138,24 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24918"
+    },
+    "q-21017": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "The Easter custom of ratchet rattles replacing church bells is local to Central Europe. Chinese families don't meet it.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-21019": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Animal ID with good hints.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25385"
     },
     "q-21021": {
       "verdict": "keep",
@@ -49221,6 +54166,34 @@
       "model": "claude-opus-5-5",
       "copy": "q-24587"
     },
+    "q-21022": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "肠粉 is a well-known Chinese dish, much easier for this audience; hint 3's Cantonese name would give it away in zh.",
+      "issue": "difficulty 11 → 5; hint 3: remove the Chinese/Cantonese name and give a different strong clue (e.g. the rice-flour sheet rolled around a filling); fun fact: give the name as 肠粉 (chángfěn, Cantonese cheung fun)",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25177"
+    },
+    "q-21024": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Environmental science, global topic.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25128"
+    },
+    "q-21025": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Aquarium hobby fact; China is a fair distractor.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25187"
+    },
     "q-21027": {
       "verdict": "keep",
       "reason": null,
@@ -49230,6 +54203,34 @@
       "model": "claude-opus-5-5",
       "copy": "q-24078"
     },
+    "q-21029": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Falafel is less familiar to Chinese families than to Europeans.",
+      "issue": "difficulty 7 → 9",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25226"
+    },
+    "q-21030": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Animal sound; Moby-Dick is world-famous enough for a hint.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25409"
+    },
+    "q-21031": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Telling regional French folk dances apart is European-only knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
     "q-21034": {
       "verdict": "keep",
       "reason": null,
@@ -49238,6 +54239,15 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-23651"
+    },
+    "q-21035": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Space technology, universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25007"
     },
     "q-21038": {
       "verdict": "drop",
@@ -49256,6 +54266,33 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": null
+    },
+    "q-21042": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Lions are universal nature knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25435"
+    },
+    "q-21043": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Radio telescopes are known in China (FAST).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25069"
+    },
+    "q-21044": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Muntjacs (麂) are native to China; this fits well.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25456"
     },
     "q-21047": {
       "verdict": "keep",
@@ -49283,6 +54320,52 @@
       "note": "base subcategory world-music has no chinese-base subcategory (from-base.json)",
       "run": "fit-1",
       "copy": null
+    },
+    "q-21055": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Science and transport, neutral.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25358"
+    },
+    "q-21058": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "A universal science fact. Imperial units are not part of this voice.",
+      "issue": "question: remove “(4 in)”, keep 10 cm",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-24994"
+    },
+    "q-21061": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Space agencies, world knowledge at 13.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25137"
+    },
+    "q-21062": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Aboriginal Australian culture is world knowledge; fine at 9.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25120"
+    },
+    "q-21063": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Recognising a flute by its sound works everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25085"
     },
     "q-21064": {
       "verdict": "keep",
@@ -49340,6 +54423,54 @@
       "model": "claude-opus-5-5",
       "copy": "q-24847"
     },
+    "q-21078": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "SpaceX and Musk are well known in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25192"
+    },
+    "q-21080": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Physics and space, universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25134"
+    },
+    "q-21082": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Space topic known worldwide; the fun fact gives a pound conversion.",
+      "issue": "fun_fact: drop \"(2,100 lb)\" and keep metric only",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25238"
+    },
+    "q-21084": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Reindeer are known everywhere, but Rudolph is a mainly Western Christmas reference.",
+      "issue": "hint 3: replace Rudolph with a reference to Santa Claus's sleigh being pulled by these animals",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25473"
+    },
+    "q-21086": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "British pub food is less familiar in China, and hint 2 relies on the English words chips/fries.",
+      "issue": "hint 2: replace the chips/fries word clue with a non-language clue (e.g. the country famous for fish and chips and afternoon tea); difficulty 9 → 11",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25267"
+    },
     "q-21090": {
       "verdict": "adapt",
       "reason": null,
@@ -49359,6 +54490,25 @@
       "model": "claude-opus-5-5",
       "copy": "q-24929"
     },
+    "q-21093": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Hint 3 relies on the English double meaning of “coma”, which doesn't carry into Chinese (彗发 vs 昏迷).",
+      "issue": "hint 3: replace the medical-coma wordplay with a non-language clue (e.g. it can grow bigger than the Sun)",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25279"
+    },
+    "q-21097": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Science.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25315"
+    },
     "q-21100": {
       "verdict": "keep",
       "reason": null,
@@ -49367,6 +54517,52 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24174"
+    },
+    "q-21101": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Chemistry fits; hint 3 spells out letters, which doesn't work in Chinese.",
+      "issue": "hint 3: replace 'The name begins with “Lies…”' with a non-letter clue (e.g. 'It is named after that German chemist, Raphael Liesegang's surname is in the name' → better: 'They are named after the German chemist who described them')",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25133"
+    },
+    "q-21102": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A universal nature question.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-24995"
+    },
+    "q-21105": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Climate science.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25059"
+    },
+    "q-21106": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Telling Indian states apart from festival clothing is far beyond Chinese families' knowledge; a judgement call (doubt rule).",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-21107": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Mars is known everywhere, helped by China's Zhurong rover.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25073"
     },
     "q-21109": {
       "verdict": "keep",
@@ -49377,6 +54573,43 @@
       "model": "claude-opus-5-5",
       "copy": "q-24026"
     },
+    "q-21110": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Rocket science is neutral.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25353"
+    },
+    "q-21111": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "World music instrument; fair as is.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25147"
+    },
+    "q-21114": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Players can reason it out; space knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25507"
+    },
+    "q-21115": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Indian street sweets are less familiar in China.",
+      "issue": "difficulty 10 → 12",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25308"
+    },
     "q-21116": {
       "verdict": "keep",
       "reason": null,
@@ -49385,6 +54618,15 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24300"
+    },
+    "q-21118": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Space basics.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25390"
     },
     "q-21119": {
       "verdict": "keep",
@@ -49395,6 +54637,61 @@
       "model": "claude-opus-5-5",
       "copy": "q-24416"
     },
+    "q-21120": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal; the video carries it.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25395"
+    },
+    "q-21121": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Indian folk game watched in a video; not tied to the West.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25225"
+    },
+    "q-21122": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Coconut grating is everyday world food knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25343"
+    },
+    "q-21123": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Weather science is universal; fun fact names a US-only holiday.",
+      "issue": "fun fact: drop the 'Groundhog Day Blizzard' name, say 'a huge blizzard in February 2011' that dropped about 54 cm of snow on Chicago; use metric only",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25126"
+    },
+    "q-21124": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Visual reasoning, neutral.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25382"
+    },
+    "q-21125": {
+      "verdict": "drop",
+      "reason": "euro_centric",
+      "note": "Bulgarian folk custom, and the distractors are European folk customs; known almost only in Europe.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
     "q-21126": {
       "verdict": "keep",
       "reason": null,
@@ -49403,6 +54700,33 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24934"
+    },
+    "q-21128": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Volcano science you can see in the video.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25060"
+    },
+    "q-21135": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Staff notation is taught in Chinese schools too; universal.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25188"
+    },
+    "q-21137": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Greek islands and Knossos are world geography.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25499"
     },
     "q-21139": {
       "verdict": "drop",
@@ -49431,6 +54755,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24458"
     },
+    "q-21144": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Dust explosions (粉尘爆炸) are taught in Chinese chemistry classes.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25234"
+    },
     "q-21145": {
       "verdict": "keep",
       "reason": null,
@@ -49449,6 +54782,33 @@
       "by": "fit",
       "model": "claude-opus-5-5",
       "copy": "q-24845"
+    },
+    "q-21149": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Bridge types are universal. The Montana setting is just the clip.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25014"
+    },
+    "q-21152": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "School science.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25182"
+    },
+    "q-21154": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "School chemistry.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25275"
     },
     "q-21155": {
       "verdict": "keep",
@@ -49476,6 +54836,15 @@
       "run": "fit-1",
       "copy": null
     },
+    "q-21165": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal physics, with a video.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25415"
+    },
     "q-21166": {
       "verdict": "keep",
       "reason": null,
@@ -49494,6 +54863,15 @@
       "model": "claude-opus-5-5",
       "copy": "q-24336"
     },
+    "q-21174": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "The Alps are world geography and equally hard everywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25346"
+    },
     "q-21175": {
       "verdict": "keep",
       "reason": null,
@@ -49511,6 +54889,25 @@
       "run": "fit-1",
       "copy": null
     },
+    "q-21179": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Chemistry demo known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25313"
+    },
+    "q-21180": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Universal physics; the voice is metric-only.",
+      "issue": "fun fact: remove the pounds-per-square-inch conversion, keep metric",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25189"
+    },
     "q-21181": {
       "verdict": "keep",
       "reason": null,
@@ -49520,6 +54917,42 @@
       "model": "claude-opus-5-5",
       "copy": "q-24488"
     },
+    "q-21182": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "School chemistry.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25350"
+    },
+    "q-21183": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Phenolphthalein is part of Chinese school chemistry.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25387"
+    },
+    "q-21185": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "World geography; Brazil and the Amazon are known worldwide.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25183"
+    },
+    "q-21186": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Visual reasoning about how a train is powered works anywhere.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25076"
+    },
     "q-21188": {
       "verdict": "drop",
       "reason": "wordplay",
@@ -49527,6 +54960,88 @@
       "note": "base subcategory childrens-songs has no chinese-base subcategory (from-base.json)",
       "run": "fit-1",
       "copy": null
+    },
+    "q-21189": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Universal chemistry demonstration.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25412"
+    },
+    "q-21190": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "An Asian capital with geography hints; fair at 13.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25455"
+    },
+    "q-21194": {
+      "verdict": "adapt",
+      "reason": null,
+      "note": "Physics fits; the fun fact uses German Christmas pyramids, and the Chinese trotting-horse lantern works the same way.",
+      "issue": "fun_fact: replace the German Christmas pyramids with the Chinese trotting-horse lantern (走马灯), whose paper figures turn because warm air rises from a candle",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25235"
+    },
+    "q-21196": {
+      "verdict": "drop",
+      "reason": "too_hard_here",
+      "note": "Identifying Sattriya dance by Indian state is beyond fair for this audience.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": null
+    },
+    "q-21202": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Asian instrument; the distractors make sense to Chinese families.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25204"
+    },
+    "q-21203": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "A geography term from school. The Slovenian setting is just the clip.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-24991"
+    },
+    "q-21207": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Volcano science, Asian setting; fits.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25127"
+    },
+    "q-21208": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Science; the lotus is very familiar in China.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25276"
+    },
+    "q-21209": {
+      "verdict": "keep",
+      "reason": null,
+      "note": "Mars missions are global space knowledge.",
+      "run": "fit-8",
+      "by": "fit",
+      "model": "claude-opus-5-5",
+      "copy": "q-25439"
     }
   }
 }
