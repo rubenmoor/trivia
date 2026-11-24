@@ -466,11 +466,13 @@ RECORD_TEXT = {  # record's own feedback: Spanish for es-sourced questions, else
            "broken": " está dañada en la fuente ({}).", "licence": " tiene una licencia no adecuada ({}).",
            "fact": "Verificación de datos",
            "service": "Falló el servicio de imágenes ({}).",
+           "too long": "El archivo elegido no se puede reproducir entero ({}).",
            "giveaway": "El fragmento delata la respuesta: se oye o se ve «{}» (transcripción/OCR)."},
     "en": {"no media": "No suitable picture found for this question.", "no background": "No suitable background picture found.",
            "media pick": "The picked picture", "background pick": "The picked background picture",
            "broken": " is broken at the source ({}).", "licence": " has an unsuitable licence ({}).", "fact": "Fact check",
            "service": "Image service failed ({}).",
+           "too long": "The picked file can't be played whole ({}).",
            "giveaway": "The played window gives the answer away: “{}” is heard or seen (transcript/OCR)."},
 }
 
@@ -478,7 +480,7 @@ RECORD_TEXT = {  # record's own feedback: Spanish for es-sourced questions, else
 def cmd_record(args):
     """Write the reviews (D-33: reviewer llm + model) and the picks into the pool. Fixed rules on
     top of the model's decision: no adequate media, a pick whose licence verdict is replace or whose file is broken
-    (each pick is downloaded to check it, task 1181), or a fact check that isn't confirmed, means needs_work.
+    (each pick is downloaded to check it, task 1181), an audio/video pick that can't be played whole (task 2432), or a fact check that isn't confirmed, means needs_work.
     Kept slots (kept_slots) stay as they are: no pick, no download. A media-first question's fixed
     `media` is checked like a pick (download, licence); a giveaway found after `fix` means needs_work (plan 203)."""
     d = run_dir(args)
@@ -531,6 +533,11 @@ def cmd_record(args):
                 broken = fields[slot].get("file_problem")
                 problems.append(say[f"{slot} pick"] + (say["broken"].format(broken) if broken  # task 1181
                                                        else say["licence"].format("; ".join(reasons))))
+            if slot not in kept_slots(args.run, q) and (why := media_tool.play_problem(fields[slot])):  # task 2432
+                decision = "needs_work"
+                kinds.add("media")
+                problems.append(say["too long"].format(why))
+                fields[slot] = None
         check = fact_check(full, checks.get(tmp_of.get(q["id"])))
         if check and check["verdict"] != "confirmed":
             decision = "needs_work"
@@ -553,7 +560,10 @@ def cmd_record(args):
 
         def change(x, review=review, fields=fields, check=check if "factcheck" in (full.get("fix") or {}) else None):
             for slot, f in fields.items():
-                media_tool.apply_pick(x[slot], f)
+                if f is None:
+                    x[slot] = media_tool.unpicked(x[slot])
+                else:
+                    media_tool.apply_pick(x[slot], f)
             if check:
                 x["fact_checked"] = check["verdict"] == "confirmed"
             x.update(review={**review, "previous": review_before(x, snapshot)}, status=review["decision"])
@@ -563,24 +573,56 @@ def cmd_record(args):
     for q in batch_questions(args.run, ("approved",)):  # approved by an earlier record, before a hard check existed
         hard = [f for f in (media_first.media_findings(q) if q.get("media_first") else []) if f["hard"]]
         if q["id"] in snapshot and q["id"] not in changes and hard:
-            demote_approved(q, hard, today, changes, snapshot)
+            demote_approved(q, {f["kind"] for f in hard}, " ".join(f"{f['note'][0].upper()}{f['note'][1:]}." for f in hard),
+                            today, changes, snapshot)
+    timed_picks(args.run, snapshot, changes, today)
     update_pool(changes)
     save_json(d / "recorded.json", snapshot)  # record's decisions, for batch health (plan 15)
     return failed(f"{len(missing)} question(s) without a review: {', '.join(missing)}") if missing else []
 
 
-def demote_approved(q, hard, today, changes, snapshot):
-    """An already recorded, approved media-first question that fails a hard mechanical finding: needs_work,
-    the approved review becomes `previous`."""
-    kinds = {f["kind"] for f in hard}
+def demote_approved(q, kinds, feedback, today, changes, snapshot, then=None):
+    """An already recorded, approved question that fails a later rule: needs_work, the approved review becomes
+    `previous`; `then(x)` changes the pool question too."""
     old = {k: v for k, v in (q.get("review") or {}).items() if k != "previous"}
-    review = {"decision": "needs_work", "feedback": " ".join(f"{f['note'][0].upper()}{f['note'][1:]}." for f in hard),
+    review = {"decision": "needs_work", "feedback": feedback,
               "problems": [p for p in PROBLEMS if p in kinds], "reviewed_on": today, "reviewer": "llm",
               "model": old.get("model")}
-    changes[q["id"]] = lambda x, review=review, old=old: x.update(review={**review, "previous": old or None},
-                                                                  status="needs_work")
+
+    def change(x, review=review, old=old):
+        x.update(review={**review, "previous": old or None}, status="needs_work")
+        if then:
+            then(x)
+    changes[q["id"]] = change
     snapshot[q["id"]] = {"decision": "needs_work", "problems": review["problems"]}
     progress.detail(f"  record: {q['id']}: needs_work (approved earlier, now {', '.join(sorted(kinds))})")
+
+
+def timed_picks(run, snapshot, changes, today):
+    """Audio/video picks recorded earlier without a duration (before task 2432): the cached file's length goes in;
+    one that can't be played whole loses its pick, an approved question becomes needs_work."""
+    for q in batch_questions(run, ("approved", "needs_work")):
+        m = q.get("media") or {}
+        if (q["id"] not in snapshot or q["id"] in changes or "media" in kept_slots(run, q) or m.get("type") not in {"audio", "video"}
+                or not m.get("file_url") or "duration" in m or m.get("excerpt") is not None):
+            continue
+        try:
+            with media_tool.downloading("record", q["id"], "media", m["file_url"]):
+                m = media_tool.checked(m)
+        except Exception as e:  # noqa: BLE001 — unknown length: play_problem says so for a video
+            progress.say(f"  not checked: {q['id']} media: {e}", err=True)
+        why = media_tool.play_problem(m)
+        if not why:
+            if "duration" in m:
+                changes[q["id"]] = lambda x, d=m["duration"]: x["media"].update(duration=d)
+            continue
+        say = RECORD_TEXT["es" if translations.source_locale(q).startswith("es") else "en"]
+        clear = lambda x: x.update(media=media_tool.unpicked(x["media"]))  # noqa: E731
+        if q["status"] == "approved":
+            demote_approved(q, {"media"}, say["too long"].format(why), today, changes, snapshot, clear)
+        else:
+            changes[q["id"]] = clear
+            progress.detail(f"  record: {q['id']}: media pick cleared ({why})")
 
 
 def check_picks(picks, jobs):

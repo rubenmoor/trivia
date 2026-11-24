@@ -216,14 +216,35 @@ def pick_fields(candidate, slot="media"):
 
 def unpicked(slot):
     """The slot with its pick cleared: no file, no credit, no licence fields (plans/26)."""
-    out = {k: v for k, v in slot.items() if k not in (*providers.LICENCE_FIELDS, "file_problem")}
+    out = {k: v for k, v in slot.items() if k not in (*providers.LICENCE_FIELDS, "file_problem", "duration")}
     return {**out, "source_url": None, "file_url": None, "credit": None}
 
 
 def checked(fields):
-    """Download a pick's file; the fields plus `file_problem` when it is broken at the source (task 1181)."""
-    problem = file_problem(cached(fields["file_url"]))
-    return {**fields, "file_problem": problem} if problem else fields
+    """Download a pick's file; the fields plus `file_problem` when it is broken at the source (task 1181),
+    plus `duration` probed from the file for audio/video without one (task 2432)."""
+    path = cached(fields["file_url"])
+    if problem := file_problem(path):
+        return {**fields, "file_problem": problem}
+    if fields.get("type") in {"audio", "video"} and not fields.get("duration"):
+        from media_probe import streams  # media_probe imports media
+        try:
+            d = streams(path)[0]
+        except (RuntimeError, OSError, ValueError, KeyError):
+            d = 0
+        if d > 0:
+            return {**fields, "duration": round(d, 2)}
+    return fields
+
+
+def play_problem(fields):
+    """Why a picked audio/video file without excerpt can't be played as is (too long, video length unknown), else None."""
+    kind, d = fields.get("type"), fields.get("duration")
+    if kind not in {"audio", "video"} or fields.get("excerpt") is not None:
+        return None
+    if d is None:
+        return "length unknown" if kind == "video" else None
+    return f"{d:g} s, over {max_seconds(kind)} s" if d > max_seconds(kind) else None
 
 
 @contextlib.contextmanager
