@@ -1883637,7 +1883637,8 @@
       "bundle": "chinese-base",
       "locale": "en",
       "background": null,
-      "copied_from": "q-3341"
+      "copied_from": "q-3341",
+      "translatable": false
     },
     {
       "id": "q-24269",
@@ -1969691,7 +1969692,8 @@
       "bundle": "chinese-base",
       "locale": "en",
       "background": null,
-      "copied_from": "q-6730"
+      "copied_from": "q-6730",
+      "translatable": false
     },
     {
       "id": "q-25450",
