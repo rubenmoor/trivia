@@ -102,3 +102,10 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per questi
 - No total line for the content depot (decision 653): the only budget that bit is the per-video line, now 34 MB (decision 805).
 - After decision 805 (2026-11-21): `stage-media.mjs --check` ✓, 0 failures; largest video 32.2 MB of 34 MB.
 - Recheck on a fresh staging once part 7's new questions land.
+
+## chinese-base drafting close-out (2026-11-26, task 2388)
+- `qgen report --bundle chinese-base --locale en`: 6338 approved in en (copies + new) of 6000, 106 %; every difficulty 98–140 % of target except level 15 (124 / 150, missing 26).
+  - 36 short at levels 1 (6), 3 (4) and 15 (26): closed as is (`decision 826`); ahead of target elsewhere.
+  - Subcategory mix: new China subcategories mostly 56–88 % of their derived share (nature-of-china, chinese-sport, geography-of-china, chinese-science); reused `base` categories 100–176 %. Guide only, no stop.
+- `qgen report --simulate --locale en --bundles chinese-base`: the full run (all age groups × both players, 40 seeds) hits the 1800 s per-cell timeout; narrowed `--age-group young_teens --seeds 10`: 412 s, strong median 61 games, bound 36; typical median 43, p10 15; k 193.
+  - Its D-75 target check reads the locale's first base bundle (`base`), not `--bundles` → ✗ on `base` (6214/6000, short at 3–9, 11); follow-up task. `chinese-base` itself ends short by the 36 above, so ✗ there too until reworked.
