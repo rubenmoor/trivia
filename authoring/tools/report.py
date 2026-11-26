@@ -437,6 +437,12 @@ def first_base(locales):
     return {l: [b["id"] for b in bundles if b.get("kind") == "base" and l in b.get("languages", [])][:1] for l in locales}
 
 
+def target_bundles(bundles, default):
+    """Bundles whose targets the D-75 check reads: `--bundles` (comma-separated) else the locale's default; only those with targets."""
+    ids = bundles.split(",") if bundles else default
+    return [b for b in ids if targets.load_targets(b) is not None] or default
+
+
 def report_simulate(args):
     """Games per new player until the first repeat (plan 62, CT-2; plan 65), information only; exit code = D-75's target check."""
     locales = args.locale.split(",") if args.locale else translations.LOCALES
@@ -461,7 +467,7 @@ def report_simulate(args):
         done = dict(zip(map(id, have), ex.map(engine.simulate, have)))
     results = [done.get(id(c)) or {**c, "result": "no_pool"} for c in cells]
     pool = load_json(POOL)["questions"]
-    checks = [target_check(l, pool, default[l][0]) for l in locales]
+    checks = [target_check(l, pool, b) for l in locales for b in target_bundles(args.bundles, default[l])]
     ok = all(c["ok"] for c in checks)
     if args.json:
         print(json.dumps({"model": {"typical_p": engine_model(results)}, "seconds": round(time.monotonic() - t0, 1),
