@@ -171,7 +171,8 @@
     {
       "name": "Liu Yang",
       "facet": "Taikonauts and their firsts",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The good facts about Liu Yang are already asked; the remaining options would make a forced question"
     },
     {
       "name": "Zhang Xiaoguang",
@@ -332,7 +333,8 @@
     {
       "name": "Banxing-2 companion satellite",
       "facet": "Earlier labs Tiangong-1 and 2",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Too obscure, and the word-meaning option would ask for the gloss of 伴星, which the bundle rule forbids"
     },
     {
       "name": "Target spacecraft",

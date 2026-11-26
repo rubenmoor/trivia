@@ -251,7 +251,8 @@
     {
       "name": "Yuchi Gong (尉迟恭)",
       "facet": "Kitchen God and door gods",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The pool already has the door-god question with Qin Qiong and Yuchi Gong; the options left are forced."
     },
     {
       "name": "Shentu and Yulei (神荼郁垒)",
@@ -451,12 +452,14 @@
     {
       "name": "Erlang Shen (二郎神)",
       "facet": "Warrior and protector gods",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: His capture of Sun Wukong, his dog and his third eye are already asked; none of the options gives a fair new question at difficulty 4."
     },
     {
       "name": "Howling Celestial Dog (哮天犬)",
       "facet": "Warrior and protector gods",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The dog's role in catching Sun Wukong is already in already_asked and the pool; a purpose question would repeat it."
     },
     {
       "name": "Zhenwu, the Perfected Warrior (真武大帝)",

@@ -581,7 +581,8 @@
     {
       "name": "Mount Qiyun",
       "facet": "Daoist sacred mountains",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Players can't recognise Mount Qiyun from a detail photo, and every option depends on one."
     },
     {
       "name": "Mount Lao",
@@ -781,7 +782,8 @@
     {
       "name": "Xuanmiao Temple",
       "facet": "Daoist temples, priests and rituals",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Nothing to count, and the temple can't be recognised from a detail photo; the options don't fit the concept."
     },
     {
       "name": "Qingyang Palace",

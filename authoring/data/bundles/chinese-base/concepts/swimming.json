@@ -1,0 +1,966 @@
+{
+  "subcategory": "swimming",
+  "facets": [
+    "Swimming strokes and techniques",
+    "Pools, gear and equipment",
+    "Race rules and distances",
+    "World swimming legends",
+    "Olympic and world championship history",
+    "Open water and long-distance swims",
+    "Learning to swim and water safety",
+    "Swimming body and training",
+    "Swimming in Chinese culture and history",
+    "Diving and artistic swimming",
+    "Swimming animals and nature"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 4,
+      "record": 4,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 5,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Freestyle",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 2
+    },
+    {
+      "name": "Breaststroke",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 3
+    },
+    {
+      "name": "Backstroke",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 2
+    },
+    {
+      "name": "Butterfly",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 4
+    },
+    {
+      "name": "Dog paddle",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 2
+    },
+    {
+      "name": "Swimming stroke",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 3
+    },
+    {
+      "name": "Sidestroke",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 9
+    },
+    {
+      "name": "Elementary backstroke",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 11
+    },
+    {
+      "name": "Flip turn",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 7
+    },
+    {
+      "name": "Open turn",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 11
+    },
+    {
+      "name": "Dolphin kick",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 6
+    },
+    {
+      "name": "Flutter kick",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 8
+    },
+    {
+      "name": "Whip kick",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 11
+    },
+    {
+      "name": "Treading water",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 6
+    },
+    {
+      "name": "Streamline position",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 10
+    },
+    {
+      "name": "Bilateral breathing",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 12
+    },
+    {
+      "name": "Sculling",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 12
+    },
+    {
+      "name": "Glide",
+      "facet": "Swimming strokes and techniques",
+      "known_at": 5
+    },
+    {
+      "name": "Swimming goggles",
+      "facet": "Pools, gear and equipment",
+      "known_at": 1
+    },
+    {
+      "name": "Swim cap",
+      "facet": "Pools, gear and equipment",
+      "known_at": 2
+    },
+    {
+      "name": "Swimsuit",
+      "facet": "Pools, gear and equipment",
+      "known_at": 1
+    },
+    {
+      "name": "Earplugs",
+      "facet": "Pools, gear and equipment",
+      "known_at": 3
+    },
+    {
+      "name": "Nose clip",
+      "facet": "Pools, gear and equipment",
+      "known_at": 5
+    },
+    {
+      "name": "Kickboard",
+      "facet": "Pools, gear and equipment",
+      "known_at": 3
+    },
+    {
+      "name": "Pull buoy",
+      "facet": "Pools, gear and equipment",
+      "known_at": 10
+    },
+    {
+      "name": "Swim fins",
+      "facet": "Pools, gear and equipment",
+      "known_at": 3
+    },
+    {
+      "name": "Armbands",
+      "facet": "Pools, gear and equipment",
+      "known_at": 1
+    },
+    {
+      "name": "Snorkel",
+      "facet": "Pools, gear and equipment",
+      "known_at": 4
+    },
+    {
+      "name": "Wetsuit",
+      "facet": "Pools, gear and equipment",
+      "known_at": 6
+    },
+    {
+      "name": "Neoprene",
+      "facet": "Pools, gear and equipment",
+      "known_at": 11
+    },
+    {
+      "name": "Lane rope",
+      "facet": "Pools, gear and equipment",
+      "known_at": 4
+    },
+    {
+      "name": "Starting block",
+      "facet": "Pools, gear and equipment",
+      "known_at": 5
+    },
+    {
+      "name": "Touchpad",
+      "facet": "Pools, gear and equipment",
+      "known_at": 9
+    },
+    {
+      "name": "Backstroke flags",
+      "facet": "Pools, gear and equipment",
+      "known_at": 11
+    },
+    {
+      "name": "Chlorine",
+      "facet": "Pools, gear and equipment",
+      "known_at": 6
+    },
+    {
+      "name": "Olympic-size swimming pool",
+      "facet": "Pools, gear and equipment",
+      "known_at": 5
+    },
+    {
+      "name": "LZR Racer",
+      "facet": "Pools, gear and equipment",
+      "known_at": 13
+    },
+    {
+      "name": "Pace clock",
+      "facet": "Pools, gear and equipment",
+      "known_at": 11
+    },
+    {
+      "name": "50 m freestyle",
+      "facet": "Race rules and distances",
+      "known_at": 5
+    },
+    {
+      "name": "100 m freestyle",
+      "facet": "Race rules and distances",
+      "known_at": 5
+    },
+    {
+      "name": "1500 m freestyle",
+      "facet": "Race rules and distances",
+      "known_at": 8
+    },
+    {
+      "name": "Individual medley",
+      "facet": "Race rules and distances",
+      "known_at": 8
+    },
+    {
+      "name": "400 m individual medley",
+      "facet": "Race rules and distances",
+      "known_at": 10
+    },
+    {
+      "name": "Medley relay",
+      "facet": "Race rules and distances",
+      "known_at": 9
+    },
+    {
+      "name": "4×100 m freestyle relay",
+      "facet": "Race rules and distances",
+      "known_at": 7
+    },
+    {
+      "name": "Mixed relay",
+      "facet": "Race rules and distances",
+      "known_at": 10
+    },
+    {
+      "name": "False start",
+      "facet": "Race rules and distances",
+      "known_at": 6
+    },
+    {
+      "name": "Disqualification",
+      "facet": "Race rules and distances",
+      "known_at": 6
+    },
+    {
+      "name": "Relay exchange",
+      "facet": "Race rules and distances",
+      "known_at": 10
+    },
+    {
+      "name": "Short course",
+      "facet": "Race rules and distances",
+      "known_at": 12
+    },
+    {
+      "name": "Long course",
+      "facet": "Race rules and distances",
+      "known_at": 12
+    },
+    {
+      "name": "Heats",
+      "facet": "Race rules and distances",
+      "known_at": 7
+    },
+    {
+      "name": "Lane 4",
+      "facet": "Race rules and distances",
+      "known_at": 10
+    },
+    {
+      "name": "15 m underwater rule",
+      "facet": "Race rules and distances",
+      "known_at": 13
+    },
+    {
+      "name": "Backstroke start",
+      "facet": "Race rules and distances",
+      "known_at": 8
+    },
+    {
+      "name": "Swim-off",
+      "facet": "Race rules and distances",
+      "known_at": 12
+    },
+    {
+      "name": "Split time",
+      "facet": "Race rules and distances",
+      "known_at": 11
+    },
+    {
+      "name": "World record",
+      "facet": "Race rules and distances",
+      "known_at": 4
+    },
+    {
+      "name": "Michael Phelps",
+      "facet": "World swimming legends",
+      "known_at": 5
+    },
+    {
+      "name": "Mark Spitz",
+      "facet": "World swimming legends",
+      "known_at": 12
+    },
+    {
+      "name": "Katie Ledecky",
+      "facet": "World swimming legends",
+      "known_at": 10
+    },
+    {
+      "name": "Ian Thorpe",
+      "facet": "World swimming legends",
+      "known_at": 11
+    },
+    {
+      "name": "Johnny Weissmuller",
+      "facet": "World swimming legends",
+      "known_at": 13
+    },
+    {
+      "name": "Dawn Fraser",
+      "facet": "World swimming legends",
+      "known_at": 14
+    },
+    {
+      "name": "Eric Moussambani",
+      "facet": "World swimming legends",
+      "known_at": 13
+    },
+    {
+      "name": "Caeleb Dressel",
+      "facet": "World swimming legends",
+      "known_at": 11
+    },
+    {
+      "name": "Adam Peaty",
+      "facet": "World swimming legends",
+      "known_at": 11
+    },
+    {
+      "name": "Léon Marchand",
+      "facet": "World swimming legends",
+      "known_at": 11
+    },
+    {
+      "name": "Kosuke Kitajima",
+      "facet": "World swimming legends",
+      "known_at": 12
+    },
+    {
+      "name": "Krisztina Egerszegi",
+      "facet": "World swimming legends",
+      "known_at": 15
+    },
+    {
+      "name": "Dara Torres",
+      "facet": "World swimming legends",
+      "known_at": 14
+    },
+    {
+      "name": "Alexander Popov",
+      "facet": "World swimming legends",
+      "known_at": 14
+    },
+    {
+      "name": "Pieter van den Hoogenband",
+      "facet": "World swimming legends",
+      "known_at": 14
+    },
+    {
+      "name": "Emma McKeon",
+      "facet": "World swimming legends",
+      "known_at": 13
+    },
+    {
+      "name": "Ariarne Titmus",
+      "facet": "World swimming legends",
+      "known_at": 12
+    },
+    {
+      "name": "Sarah Sjöström",
+      "facet": "World swimming legends",
+      "known_at": 13
+    },
+    {
+      "name": "Duke Kahanamoku",
+      "facet": "World swimming legends",
+      "known_at": 14
+    },
+    {
+      "name": "Park Tae-hwan",
+      "facet": "World swimming legends",
+      "known_at": 12
+    },
+    {
+      "name": "Rikako Ikee",
+      "facet": "World swimming legends",
+      "known_at": 13
+    },
+    {
+      "name": "1896 Athens Olympics",
+      "facet": "Olympic and world championship history",
+      "known_at": 10
+    },
+    {
+      "name": "Sydney 2000 Olympics",
+      "facet": "Olympic and world championship history",
+      "known_at": 9
+    },
+    {
+      "name": "Melbourne 1956 Olympics",
+      "facet": "Olympic and world championship history",
+      "known_at": 14
+    },
+    {
+      "name": "Munich 1972 Olympics",
+      "facet": "Olympic and world championship history",
+      "known_at": 13
+    },
+    {
+      "name": "Stockholm 1912 Olympics",
+      "facet": "Olympic and world championship history",
+      "known_at": 14
+    },
+    {
+      "name": "World Aquatics Championships",
+      "facet": "Olympic and world championship history",
+      "known_at": 9
+    },
+    {
+      "name": "World Aquatics",
+      "facet": "Olympic and world championship history",
+      "known_at": 12
+    },
+    {
+      "name": "Shanghai 2011 World Aquatics Championships",
+      "facet": "Olympic and world championship history",
+      "known_at": 11
+    },
+    {
+      "name": "Gwangju 2019 World Aquatics Championships",
+      "facet": "Olympic and world championship history",
+      "known_at": 13
+    },
+    {
+      "name": "Doha 2024 World Aquatics Championships",
+      "facet": "Olympic and world championship history",
+      "known_at": 13
+    },
+    {
+      "name": "Supersuit ban",
+      "facet": "Olympic and world championship history",
+      "known_at": 13
+    },
+    {
+      "name": "Olympic podium",
+      "facet": "Olympic and world championship history",
+      "known_at": 3
+    },
+    {
+      "name": "Youth Olympic Games Nanjing 2014",
+      "facet": "Olympic and world championship history",
+      "known_at": 12
+    },
+    {
+      "name": "English Channel",
+      "facet": "Open water and long-distance swims",
+      "known_at": 9
+    },
+    {
+      "name": "Marathon swimming",
+      "facet": "Open water and long-distance swims",
+      "known_at": 10
+    },
+    {
+      "name": "10 km open water swim",
+      "facet": "Open water and long-distance swims",
+      "known_at": 11
+    },
+    {
+      "name": "Triathlon",
+      "facet": "Open water and long-distance swims",
+      "known_at": 7
+    },
+    {
+      "name": "Ironman Triathlon",
+      "facet": "Open water and long-distance swims",
+      "known_at": 10
+    },
+    {
+      "name": "Matthew Webb",
+      "facet": "Open water and long-distance swims",
+      "known_at": 14
+    },
+    {
+      "name": "Gertrude Ederle",
+      "facet": "Open water and long-distance swims",
+      "known_at": 15
+    },
+    {
+      "name": "Diana Nyad",
+      "facet": "Open water and long-distance swims",
+      "known_at": 14
+    },
+    {
+      "name": "Strait of Gibraltar",
+      "facet": "Open water and long-distance swims",
+      "known_at": 11
+    },
+    {
+      "name": "Seine River",
+      "facet": "Open water and long-distance swims",
+      "known_at": 8
+    },
+    {
+      "name": "Bosphorus Cross-Continental Swim",
+      "facet": "Open water and long-distance swims",
+      "known_at": 13
+    },
+    {
+      "name": "Ice swimming",
+      "facet": "Open water and long-distance swims",
+      "known_at": 8
+    },
+    {
+      "name": "Ocean's Seven",
+      "facet": "Open water and long-distance swims",
+      "known_at": 15
+    },
+    {
+      "name": "Lewis Pugh",
+      "facet": "Open water and long-distance swims",
+      "known_at": 15
+    },
+    {
+      "name": "Lynne Cox",
+      "facet": "Open water and long-distance swims",
+      "known_at": 15
+    },
+    {
+      "name": "Tsugaru Strait",
+      "facet": "Open water and long-distance swims",
+      "known_at": 14
+    },
+    {
+      "name": "Cook Strait",
+      "facet": "Open water and long-distance swims",
+      "known_at": 14
+    },
+    {
+      "name": "Lifeguard",
+      "facet": "Learning to swim and water safety",
+      "known_at": 2
+    },
+    {
+      "name": "Life jacket",
+      "facet": "Learning to swim and water safety",
+      "known_at": 2
+    },
+    {
+      "name": "Lifebuoy",
+      "facet": "Learning to swim and water safety",
+      "known_at": 2
+    },
+    {
+      "name": "Back float",
+      "facet": "Learning to swim and water safety",
+      "known_at": 4
+    },
+    {
+      "name": "Buddy system",
+      "facet": "Learning to swim and water safety",
+      "known_at": 6
+    },
+    {
+      "name": "Drowning",
+      "facet": "Learning to swim and water safety",
+      "known_at": 4
+    },
+    {
+      "name": "Rip current",
+      "facet": "Learning to swim and water safety",
+      "known_at": 10
+    },
+    {
+      "name": "Warm-up exercises",
+      "facet": "Learning to swim and water safety",
+      "known_at": 3
+    },
+    {
+      "name": "Muscle cramp",
+      "facet": "Learning to swim and water safety",
+      "known_at": 5
+    },
+    {
+      "name": "Swimming lessons",
+      "facet": "Learning to swim and water safety",
+      "known_at": 2
+    },
+    {
+      "name": "Deep end",
+      "facet": "Learning to swim and water safety",
+      "known_at": 3
+    },
+    {
+      "name": "No diving sign",
+      "facet": "Learning to swim and water safety",
+      "known_at": 4
+    },
+    {
+      "name": "CPR",
+      "facet": "Learning to swim and water safety",
+      "known_at": 9
+    },
+    {
+      "name": "Red beach flag",
+      "facet": "Learning to swim and water safety",
+      "known_at": 7
+    },
+    {
+      "name": "Rescue tube",
+      "facet": "Learning to swim and water safety",
+      "known_at": 9
+    },
+    {
+      "name": "Lifeguard whistle",
+      "facet": "Learning to swim and water safety",
+      "known_at": 4
+    },
+    {
+      "name": "Six “no”s of drowning prevention (防溺水“六不”)",
+      "facet": "Learning to swim and water safety",
+      "known_at": 5
+    },
+    {
+      "name": "Sunscreen",
+      "facet": "Learning to swim and water safety",
+      "known_at": 2
+    },
+    {
+      "name": "Cold water shock",
+      "facet": "Learning to swim and water safety",
+      "known_at": 12
+    },
+    {
+      "name": "Lungs",
+      "facet": "Swimming body and training",
+      "known_at": 3
+    },
+    {
+      "name": "Breath-holding",
+      "facet": "Swimming body and training",
+      "known_at": 3
+    },
+    {
+      "name": "Buoyancy",
+      "facet": "Swimming body and training",
+      "known_at": 7
+    },
+    {
+      "name": "Archimedes' principle",
+      "facet": "Swimming body and training",
+      "known_at": 9
+    },
+    {
+      "name": "Drag",
+      "facet": "Swimming body and training",
+      "known_at": 10
+    },
+    {
+      "name": "Swimmer's ear",
+      "facet": "Swimming body and training",
+      "known_at": 11
+    },
+    {
+      "name": "Swimmer's shoulder",
+      "facet": "Swimming body and training",
+      "known_at": 13
+    },
+    {
+      "name": "Shaving down",
+      "facet": "Swimming body and training",
+      "known_at": 11
+    },
+    {
+      "name": "Tapering",
+      "facet": "Swimming body and training",
+      "known_at": 14
+    },
+    {
+      "name": "Interval training",
+      "facet": "Swimming body and training",
+      "known_at": 11
+    },
+    {
+      "name": "Lactic acid",
+      "facet": "Swimming body and training",
+      "known_at": 11
+    },
+    {
+      "name": "Dryland training",
+      "facet": "Swimming body and training",
+      "known_at": 12
+    },
+    {
+      "name": "Wingspan",
+      "facet": "Swimming body and training",
+      "known_at": 9
+    },
+    {
+      "name": "Chloramine",
+      "facet": "Swimming body and training",
+      "known_at": 14
+    },
+    {
+      "name": "Wrinkled fingers",
+      "facet": "Swimming body and training",
+      "known_at": 3
+    },
+    {
+      "name": "Shivering",
+      "facet": "Swimming body and training",
+      "known_at": 3
+    },
+    {
+      "name": "Cupping therapy",
+      "facet": "Swimming body and training",
+      "known_at": 10
+    },
+    {
+      "name": "Heart rate",
+      "facet": "Swimming body and training",
+      "known_at": 7
+    },
+    {
+      "name": "Water Cube",
+      "facet": "Swimming in Chinese culture and history",
+      "known_at": 5
+    },
+    {
+      "name": "Mao Zedong's Yangtze swim",
+      "facet": "Swimming in Chinese culture and history",
+      "known_at": 10
+    },
+    {
+      "name": "水调歌头·游泳 (Shuidiao Getou: Swimming)",
+      "facet": "Swimming in Chinese culture and history",
+      "known_at": 12
+    },
+    {
+      "name": "Wuhan Yangtze River Crossing Festival",
+      "facet": "Swimming in Chinese culture and history",
+      "known_at": 12
+    },
+    {
+      "name": "Eight Immortals Crossing the Sea (八仙过海)",
+      "facet": "Swimming in Chinese culture and history",
+      "known_at": 7
+    },
+    {
+      "name": "Harbin winter swimming",
+      "facet": "Swimming in Chinese culture and history",
+      "known_at": 9
+    },
+    {
+      "name": "Victoria Harbour Cross Harbour Race",
+      "facet": "Swimming in Chinese culture and history",
+      "known_at": 13
+    },
+    {
+      "name": "Happiness of fish (濠梁之辩)",
+      "facet": "Swimming in Chinese culture and history",
+      "known_at": 12
+    },
+    {
+      "name": "Chinese Swimming Association",
+      "facet": "Swimming in Chinese culture and history",
+      "known_at": 13
+    },
+    {
+      "name": "10 m platform",
+      "facet": "Diving and artistic swimming",
+      "known_at": 5
+    },
+    {
+      "name": "3 m springboard",
+      "facet": "Diving and artistic swimming",
+      "known_at": 7
+    },
+    {
+      "name": "Synchronized diving",
+      "facet": "Diving and artistic swimming",
+      "known_at": 5
+    },
+    {
+      "name": "Rip entry",
+      "facet": "Diving and artistic swimming",
+      "known_at": 11
+    },
+    {
+      "name": "Splash",
+      "facet": "Diving and artistic swimming",
+      "known_at": 3
+    },
+    {
+      "name": "Artistic swimming",
+      "facet": "Diving and artistic swimming",
+      "known_at": 6
+    },
+    {
+      "name": "Eggbeater kick",
+      "facet": "Diving and artistic swimming",
+      "known_at": 13
+    },
+    {
+      "name": "High diving",
+      "facet": "Diving and artistic swimming",
+      "known_at": 10
+    },
+    {
+      "name": "La Quebrada cliff divers",
+      "facet": "Diving and artistic swimming",
+      "known_at": 14
+    },
+    {
+      "name": "Diving judges",
+      "facet": "Diving and artistic swimming",
+      "known_at": 7
+    },
+    {
+      "name": "Esther Williams",
+      "facet": "Diving and artistic swimming",
+      "known_at": 15
+    },
+    {
+      "name": "Dolphin",
+      "facet": "Swimming animals and nature",
+      "known_at": 1
+    },
+    {
+      "name": "Sailfish",
+      "facet": "Swimming animals and nature",
+      "known_at": 8
+    },
+    {
+      "name": "Penguin",
+      "facet": "Swimming animals and nature",
+      "known_at": 1
+    },
+    {
+      "name": "Gentoo penguin",
+      "facet": "Swimming animals and nature",
+      "known_at": 12
+    },
+    {
+      "name": "Frog",
+      "facet": "Swimming animals and nature",
+      "known_at": 1
+    },
+    {
+      "name": "Sea turtle",
+      "facet": "Swimming animals and nature",
+      "known_at": 2
+    },
+    {
+      "name": "Seal",
+      "facet": "Swimming animals and nature",
+      "known_at": 2
+    },
+    {
+      "name": "Otter",
+      "facet": "Swimming animals and nature",
+      "known_at": 3
+    },
+    {
+      "name": "Polar bear",
+      "facet": "Swimming animals and nature",
+      "known_at": 2
+    },
+    {
+      "name": "Shark",
+      "facet": "Swimming animals and nature",
+      "known_at": 1
+    },
+    {
+      "name": "Swim bladder",
+      "facet": "Swimming animals and nature",
+      "known_at": 8
+    },
+    {
+      "name": "Webbed feet",
+      "facet": "Swimming animals and nature",
+      "known_at": 3
+    },
+    {
+      "name": "Hippopotamus",
+      "facet": "Swimming animals and nature",
+      "known_at": 4
+    },
+    {
+      "name": "Tiger",
+      "facet": "Swimming animals and nature",
+      "known_at": 4
+    },
+    {
+      "name": "Platypus",
+      "facet": "Swimming animals and nature",
+      "known_at": 6
+    }
+  ]
+}

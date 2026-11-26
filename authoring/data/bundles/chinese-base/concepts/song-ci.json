@@ -91,7 +91,8 @@
     {
       "name": "Huai Sha (怀沙)",
       "facet": "Qu Yuan and the Chu Ci",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Huai Sha is known only as Qu Yuan's last poem before he drowned himself, so any question about where or why it was written is about a death."
     },
     {
       "name": "Zhao Hun (招魂)",
@@ -211,7 +212,8 @@
     {
       "name": "Gui Qu Lai Xi Ci (归去来兮辞)",
       "facet": "Tao Yuanming and pastoral poems",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The pool already has the Tao Yuanming question about quitting as magistrate of Pengze, which is the occasion of this poem, so who wrote it and the count of days are both already answered."
     },
     {
       "name": "Wuliu Xiansheng Zhuan (五柳先生传)",

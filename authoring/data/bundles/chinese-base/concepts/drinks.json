@@ -1,0 +1,931 @@
+{
+  "subcategory": "drinks",
+  "facets": [
+    "Soy milk and grain drinks",
+    "Bubble tea and drink shops",
+    "Herbal and cooling drinks",
+    "Coffee from bean to cup",
+    "Fruit juices and coconut water",
+    "Soda and fizzy drinks",
+    "Milk and yogurt drinks",
+    "Traditional drinks around the world",
+    "Water and hot-water habits",
+    "Science inside a drink",
+    "Drink brands and history"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 2,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "body_senses": 4,
+      "colombia": 1,
+      "educational_media": 2,
+      "everyday": 5,
+      "history": 4,
+      "language": 3,
+      "nature": 3,
+      "pop_culture": 2,
+      "popular_science": 3,
+      "school": 2,
+      "science_news": 1,
+      "university": 1
+    }
+  },
+  "concepts": [
+    {
+      "name": "Rice milk (米浆)",
+      "facet": "Soy milk and grain drinks",
+      "known_at": 8
+    },
+    {
+      "name": "Walnut milk (核桃露)",
+      "facet": "Soy milk and grain drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Almond milk (杏仁露)",
+      "facet": "Soy milk and grain drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Peanut milk (花生露)",
+      "facet": "Soy milk and grain drinks",
+      "known_at": 7
+    },
+    {
+      "name": "Oat milk",
+      "facet": "Soy milk and grain drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Fermented glutinous rice (醪糟)",
+      "facet": "Soy milk and grain drinks",
+      "known_at": 7
+    },
+    {
+      "name": "Barley tea (大麦茶)",
+      "facet": "Soy milk and grain drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Corn juice (玉米汁)",
+      "facet": "Soy milk and grain drinks",
+      "known_at": 5
+    },
+    {
+      "name": "Horchata",
+      "facet": "Soy milk and grain drinks",
+      "known_at": 13
+    },
+    {
+      "name": "Amazake",
+      "facet": "Soy milk and grain drinks",
+      "known_at": 13
+    },
+    {
+      "name": "Tapioca pearls (珍珠)",
+      "facet": "Bubble tea and drink shops",
+      "known_at": 3
+    },
+    {
+      "name": "Cheese foam (芝士奶盖)",
+      "facet": "Bubble tea and drink shops",
+      "known_at": 7
+    },
+    {
+      "name": "Fruit tea (水果茶)",
+      "facet": "Bubble tea and drink shops",
+      "known_at": 4
+    },
+    {
+      "name": "Brown sugar pearls (黑糖珍珠)",
+      "facet": "Bubble tea and drink shops",
+      "known_at": 6
+    },
+    {
+      "name": "Coconut jelly (椰果)",
+      "facet": "Bubble tea and drink shops",
+      "known_at": 5
+    },
+    {
+      "name": "Sugar level (甜度)",
+      "facet": "Bubble tea and drink shops",
+      "known_at": 5
+    },
+    {
+      "name": "Cup sealing machine (封口机)",
+      "facet": "Bubble tea and drink shops",
+      "known_at": 6
+    },
+    {
+      "name": "Wide straw (粗吸管)",
+      "facet": "Bubble tea and drink shops",
+      "known_at": 4
+    },
+    {
+      "name": "Wong Lo Kat (王老吉)",
+      "facet": "Herbal and cooling drinks",
+      "known_at": 5
+    },
+    {
+      "name": "Red jujube (红枣)",
+      "facet": "Herbal and cooling drinks",
+      "known_at": 3
+    },
+    {
+      "name": "Ginger tea (姜茶)",
+      "facet": "Herbal and cooling drinks",
+      "known_at": 4
+    },
+    {
+      "name": "Rock sugar pear soup (冰糖雪梨)",
+      "facet": "Herbal and cooling drinks",
+      "known_at": 4
+    },
+    {
+      "name": "Lotus leaf tea (荷叶茶)",
+      "facet": "Herbal and cooling drinks",
+      "known_at": 9
+    },
+    {
+      "name": "Cassia seed (决明子)",
+      "facet": "Herbal and cooling drinks",
+      "known_at": 12
+    },
+    {
+      "name": "Chamomile",
+      "facet": "Herbal and cooling drinks",
+      "known_at": 7
+    },
+    {
+      "name": "Mint",
+      "facet": "Herbal and cooling drinks",
+      "known_at": 3
+    },
+    {
+      "name": "Hibiscus",
+      "facet": "Herbal and cooling drinks",
+      "known_at": 8
+    },
+    {
+      "name": "Rooibos",
+      "facet": "Herbal and cooling drinks",
+      "known_at": 13
+    },
+    {
+      "name": "Camellia sinensis",
+      "facet": "Herbal and cooling drinks",
+      "known_at": 10
+    },
+    {
+      "name": "Tea leaves",
+      "facet": "Herbal and cooling drinks",
+      "known_at": 2
+    },
+    {
+      "name": "Cinchona",
+      "facet": "Herbal and cooling drinks",
+      "known_at": 13
+    },
+    {
+      "name": "Peter Rabbit",
+      "facet": "Herbal and cooling drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Coffee bean",
+      "facet": "Coffee from bean to cup",
+      "known_at": 2
+    },
+    {
+      "name": "Coffee cherry",
+      "facet": "Coffee from bean to cup",
+      "known_at": 10
+    },
+    {
+      "name": "Arabica",
+      "facet": "Coffee from bean to cup",
+      "known_at": 10
+    },
+    {
+      "name": "Robusta",
+      "facet": "Coffee from bean to cup",
+      "known_at": 11
+    },
+    {
+      "name": "Yunnan coffee (云南咖啡)",
+      "facet": "Coffee from bean to cup",
+      "known_at": 9
+    },
+    {
+      "name": "Kaldi",
+      "facet": "Coffee from bean to cup",
+      "known_at": 13
+    },
+    {
+      "name": "Coffee roasting",
+      "facet": "Coffee from bean to cup",
+      "known_at": 7
+    },
+    {
+      "name": "Coffee grinder",
+      "facet": "Coffee from bean to cup",
+      "known_at": 5
+    },
+    {
+      "name": "Espresso",
+      "facet": "Coffee from bean to cup",
+      "known_at": 6
+    },
+    {
+      "name": "Latte",
+      "facet": "Coffee from bean to cup",
+      "known_at": 4
+    },
+    {
+      "name": "Cappuccino",
+      "facet": "Coffee from bean to cup",
+      "known_at": 5
+    },
+    {
+      "name": "Americano",
+      "facet": "Coffee from bean to cup",
+      "known_at": 5
+    },
+    {
+      "name": "Mocha",
+      "facet": "Coffee from bean to cup",
+      "known_at": 7
+    },
+    {
+      "name": "Instant coffee (速溶咖啡)",
+      "facet": "Coffee from bean to cup",
+      "known_at": 3
+    },
+    {
+      "name": "Cold brew",
+      "facet": "Coffee from bean to cup",
+      "known_at": 7
+    },
+    {
+      "name": "Latte art (拉花)",
+      "facet": "Coffee from bean to cup",
+      "known_at": 6
+    },
+    {
+      "name": "Pour-over coffee (手冲)",
+      "facet": "Coffee from bean to cup",
+      "known_at": 9
+    },
+    {
+      "name": "Moka pot",
+      "facet": "Coffee from bean to cup",
+      "known_at": 10
+    },
+    {
+      "name": "French press",
+      "facet": "Coffee from bean to cup",
+      "known_at": 9
+    },
+    {
+      "name": "Kopi luwak",
+      "facet": "Coffee from bean to cup",
+      "known_at": 11
+    },
+    {
+      "name": "Vietnamese drip coffee",
+      "facet": "Coffee from bean to cup",
+      "known_at": 10
+    },
+    {
+      "name": "Frappé",
+      "facet": "Coffee from bean to cup",
+      "known_at": 11
+    },
+    {
+      "name": "Coconut",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 1
+    },
+    {
+      "name": "Orange juice",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 1
+    },
+    {
+      "name": "Apple juice",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 1
+    },
+    {
+      "name": "Watermelon juice",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 1
+    },
+    {
+      "name": "Grape juice",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 2
+    },
+    {
+      "name": "Mango juice",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 2
+    },
+    {
+      "name": "Lemonade",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 2
+    },
+    {
+      "name": "Sugarcane juice (甘蔗汁)",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 4
+    },
+    {
+      "name": "Tomato juice",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 4
+    },
+    {
+      "name": "Pomegranate juice",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 6
+    },
+    {
+      "name": "Sea buckthorn juice (沙棘汁)",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese bayberry (杨梅)",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 6
+    },
+    {
+      "name": "Passion fruit",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 5
+    },
+    {
+      "name": "Cranberry juice",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 9
+    },
+    {
+      "name": "Juicer (榨汁机)",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 3
+    },
+    {
+      "name": "Smoothie",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 4
+    },
+    {
+      "name": "Fruit pulp",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 5
+    },
+    {
+      "name": "Not-from-concentrate juice (NFC)",
+      "facet": "Fruit juices and coconut water",
+      "known_at": 12
+    },
+    {
+      "name": "Cola",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 1
+    },
+    {
+      "name": "Sprite",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 2
+    },
+    {
+      "name": "Fanta",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 3
+    },
+    {
+      "name": "Bingfeng (冰峰)",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 11
+    },
+    {
+      "name": "Salt soda (盐汽水)",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 9
+    },
+    {
+      "name": "Soda water (苏打水)",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 4
+    },
+    {
+      "name": "Sugar-free soda",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 5
+    },
+    {
+      "name": "Yuanqi Forest (元气森林)",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Ramune",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 10
+    },
+    {
+      "name": "Ginger ale",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 10
+    },
+    {
+      "name": "Root beer",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 11
+    },
+    {
+      "name": "Tonic water",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 11
+    },
+    {
+      "name": "Guaraná",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 13
+    },
+    {
+      "name": "Inca Kola",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 14
+    },
+    {
+      "name": "Aluminum can",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 2
+    },
+    {
+      "name": "Ring pull (拉环)",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 4
+    },
+    {
+      "name": "Crown cap",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 8
+    },
+    {
+      "name": "Soda fountain",
+      "facet": "Soda and fizzy drinks",
+      "known_at": 11
+    },
+    {
+      "name": "Milk",
+      "facet": "Milk and yogurt drinks",
+      "known_at": 1
+    },
+    {
+      "name": "Yogurt",
+      "facet": "Milk and yogurt drinks",
+      "known_at": 1
+    },
+    {
+      "name": "Yakult (养乐多)",
+      "facet": "Milk and yogurt drinks",
+      "known_at": 3
+    },
+    {
+      "name": "AD calcium milk (AD钙奶)",
+      "facet": "Milk and yogurt drinks",
+      "known_at": 4
+    },
+    {
+      "name": "Milkshake",
+      "facet": "Milk and yogurt drinks",
+      "known_at": 2
+    },
+    {
+      "name": "Hot chocolate",
+      "facet": "Milk and yogurt drinks",
+      "known_at": 2
+    },
+    {
+      "name": "Whipped cream",
+      "facet": "Milk and yogurt drinks",
+      "known_at": 3
+    },
+    {
+      "name": "Powdered milk",
+      "facet": "Milk and yogurt drinks",
+      "known_at": 4
+    },
+    {
+      "name": "Goat milk",
+      "facet": "Milk and yogurt drinks",
+      "known_at": 4
+    },
+    {
+      "name": "Probiotics",
+      "facet": "Milk and yogurt drinks",
+      "known_at": 8
+    },
+    {
+      "name": "Lactose intolerance",
+      "facet": "Milk and yogurt drinks",
+      "known_at": 9
+    },
+    {
+      "name": "Kefir",
+      "facet": "Milk and yogurt drinks",
+      "known_at": 12
+    },
+    {
+      "name": "Lassi",
+      "facet": "Milk and yogurt drinks",
+      "known_at": 10
+    },
+    {
+      "name": "Ayran",
+      "facet": "Milk and yogurt drinks",
+      "known_at": 13
+    },
+    {
+      "name": "Calpis",
+      "facet": "Milk and yogurt drinks",
+      "known_at": 9
+    },
+    {
+      "name": "Butter tea (酥油茶)",
+      "facet": "Traditional drinks around the world",
+      "known_at": 8
+    },
+    {
+      "name": "Kumis (马奶酒)",
+      "facet": "Traditional drinks around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Masala chai",
+      "facet": "Traditional drinks around the world",
+      "known_at": 9
+    },
+    {
+      "name": "Turkish coffee",
+      "facet": "Traditional drinks around the world",
+      "known_at": 10
+    },
+    {
+      "name": "Thai iced tea",
+      "facet": "Traditional drinks around the world",
+      "known_at": 8
+    },
+    {
+      "name": "Teh tarik",
+      "facet": "Traditional drinks around the world",
+      "known_at": 11
+    },
+    {
+      "name": "Yerba mate",
+      "facet": "Traditional drinks around the world",
+      "known_at": 11
+    },
+    {
+      "name": "Kvass",
+      "facet": "Traditional drinks around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Samovar",
+      "facet": "Traditional drinks around the world",
+      "known_at": 11
+    },
+    {
+      "name": "Sikhye",
+      "facet": "Traditional drinks around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Sujeonggwa",
+      "facet": "Traditional drinks around the world",
+      "known_at": 14
+    },
+    {
+      "name": "Kombucha",
+      "facet": "Traditional drinks around the world",
+      "known_at": 9
+    },
+    {
+      "name": "Xocolatl",
+      "facet": "Traditional drinks around the world",
+      "known_at": 11
+    },
+    {
+      "name": "Chicha morada",
+      "facet": "Traditional drinks around the world",
+      "known_at": 14
+    },
+    {
+      "name": "Salep",
+      "facet": "Traditional drinks around the world",
+      "known_at": 14
+    },
+    {
+      "name": "The Mad Hatter",
+      "facet": "Traditional drinks around the world",
+      "known_at": 6
+    },
+    {
+      "name": "Hot water (热水)",
+      "facet": "Water and hot-water habits",
+      "known_at": 1
+    },
+    {
+      "name": "Thermos cup (保温杯)",
+      "facet": "Water and hot-water habits",
+      "known_at": 3
+    },
+    {
+      "name": "Electric kettle",
+      "facet": "Water and hot-water habits",
+      "known_at": 2
+    },
+    {
+      "name": "Water dispenser (饮水机)",
+      "facet": "Water and hot-water habits",
+      "known_at": 3
+    },
+    {
+      "name": "Cooled boiled water (凉白开)",
+      "facet": "Water and hot-water habits",
+      "known_at": 4
+    },
+    {
+      "name": "Train hot water station (开水房)",
+      "facet": "Water and hot-water habits",
+      "known_at": 7
+    },
+    {
+      "name": "Tap water",
+      "facet": "Water and hot-water habits",
+      "known_at": 3
+    },
+    {
+      "name": "Mineral water",
+      "facet": "Water and hot-water habits",
+      "known_at": 4
+    },
+    {
+      "name": "Spring water",
+      "facet": "Water and hot-water habits",
+      "known_at": 5
+    },
+    {
+      "name": "Distilled water",
+      "facet": "Water and hot-water habits",
+      "known_at": 9
+    },
+    {
+      "name": "Hard water",
+      "facet": "Water and hot-water habits",
+      "known_at": 10
+    },
+    {
+      "name": "Limescale (水垢)",
+      "facet": "Water and hot-water habits",
+      "known_at": 7
+    },
+    {
+      "name": "Water purifier",
+      "facet": "Water and hot-water habits",
+      "known_at": 5
+    },
+    {
+      "name": "Ice water",
+      "facet": "Water and hot-water habits",
+      "known_at": 2
+    },
+    {
+      "name": "Thirst",
+      "facet": "Water and hot-water habits",
+      "known_at": 1
+    },
+    {
+      "name": "Dehydration",
+      "facet": "Water and hot-water habits",
+      "known_at": 6
+    },
+    {
+      "name": "Eight glasses a day",
+      "facet": "Water and hot-water habits",
+      "known_at": 6
+    },
+    {
+      "name": "Pitcher",
+      "facet": "Water and hot-water habits",
+      "known_at": 2
+    },
+    {
+      "name": "Drinking straw",
+      "facet": "Water and hot-water habits",
+      "known_at": 1
+    },
+    {
+      "name": "Paper cup",
+      "facet": "Water and hot-water habits",
+      "known_at": 2
+    },
+    {
+      "name": "Carbon dioxide",
+      "facet": "Science inside a drink",
+      "known_at": 6
+    },
+    {
+      "name": "Dissolving (溶解)",
+      "facet": "Science inside a drink",
+      "known_at": 5
+    },
+    {
+      "name": "Floating ice",
+      "facet": "Science inside a drink",
+      "known_at": 3
+    },
+    {
+      "name": "Boiling point",
+      "facet": "Science inside a drink",
+      "known_at": 7
+    },
+    {
+      "name": "Fermentation",
+      "facet": "Science inside a drink",
+      "known_at": 8
+    },
+    {
+      "name": "Lactic acid bacteria (乳酸菌)",
+      "facet": "Science inside a drink",
+      "known_at": 6
+    },
+    {
+      "name": "Citric acid",
+      "facet": "Science inside a drink",
+      "known_at": 9
+    },
+    {
+      "name": "Electrolytes",
+      "facet": "Science inside a drink",
+      "known_at": 8
+    },
+    {
+      "name": "Pasteurization",
+      "facet": "Science inside a drink",
+      "known_at": 10
+    },
+    {
+      "name": "Condensation",
+      "facet": "Science inside a drink",
+      "known_at": 7
+    },
+    {
+      "name": "Emulsion",
+      "facet": "Science inside a drink",
+      "known_at": 12
+    },
+    {
+      "name": "Density layering",
+      "facet": "Science inside a drink",
+      "known_at": 9
+    },
+    {
+      "name": "Mentos and cola eruption",
+      "facet": "Science inside a drink",
+      "known_at": 6
+    },
+    {
+      "name": "Vacuum insulation",
+      "facet": "Science inside a drink",
+      "known_at": 9
+    },
+    {
+      "name": "Freeze-drying",
+      "facet": "Science inside a drink",
+      "known_at": 11
+    },
+    {
+      "name": "Surface tension",
+      "facet": "Science inside a drink",
+      "known_at": 9
+    },
+    {
+      "name": "Diffusion",
+      "facet": "Science inside a drink",
+      "known_at": 8
+    },
+    {
+      "name": "Decaffeination",
+      "facet": "Science inside a drink",
+      "known_at": 11
+    },
+    {
+      "name": "Tannins",
+      "facet": "Science inside a drink",
+      "known_at": 12
+    },
+    {
+      "name": "Henry's law",
+      "facet": "Science inside a drink",
+      "known_at": 14
+    },
+    {
+      "name": "Coca-Cola",
+      "facet": "Drink brands and history",
+      "known_at": 1
+    },
+    {
+      "name": "Pepsi",
+      "facet": "Drink brands and history",
+      "known_at": 3
+    },
+    {
+      "name": "Coconut Palm (椰树)",
+      "facet": "Drink brands and history",
+      "known_at": 7
+    },
+    {
+      "name": "Red Bull",
+      "facet": "Drink brands and history",
+      "known_at": 5
+    },
+    {
+      "name": "Nestlé",
+      "facet": "Drink brands and history",
+      "known_at": 6
+    },
+    {
+      "name": "Lipton",
+      "facet": "Drink brands and history",
+      "known_at": 7
+    },
+    {
+      "name": "Milo",
+      "facet": "Drink brands and history",
+      "known_at": 8
+    },
+    {
+      "name": "Pocari Sweat",
+      "facet": "Drink brands and history",
+      "known_at": 8
+    },
+    {
+      "name": "Watsons Water (屈臣氏)",
+      "facet": "Drink brands and history",
+      "known_at": 9
+    },
+    {
+      "name": "Evian",
+      "facet": "Drink brands and history",
+      "known_at": 10
+    },
+    {
+      "name": "Gatorade",
+      "facet": "Drink brands and history",
+      "known_at": 11
+    },
+    {
+      "name": "Perrier",
+      "facet": "Drink brands and history",
+      "known_at": 11
+    },
+    {
+      "name": "John Pemberton",
+      "facet": "Drink brands and history",
+      "known_at": 13
+    }
+  ]
+}

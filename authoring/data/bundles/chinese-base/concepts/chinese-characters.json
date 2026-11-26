@@ -531,7 +531,8 @@
     {
       "name": "Liu Gongquan",
       "facet": "Calligraphy masters and tools",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The pool already has Liu Gongquan's dynasty (“An upright heart…” → Tang) and 颜筋柳骨; the remaining options (birthplace, a record) are too obscure."
     },
     {
       "name": "Zhao Mengfu",
@@ -1106,7 +1107,8 @@
     {
       "name": "Sawndip (Old Zhuang script)",
       "facet": "Rare scripts and Chinese characters abroad",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "used_up: An earlier question already names Sawndip, the Zhuang, folk songs and its Chinese-character origin, which gives away every option here."
     },
     {
       "name": "Kanji",

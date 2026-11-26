@@ -331,7 +331,8 @@
     {
       "name": "GAC Aion",
       "facet": "Electric cars and car makers",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: GAC Aion is too obscure for a fair question with these options."
     },
     {
       "name": "Lynk & Co",
@@ -956,7 +957,8 @@
     {
       "name": "Haier refrigerator smashing",
       "facet": "Company history and milestones",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The pool already covers the person, the year (1985) and the city (Qingdao) of the fridge smashing."
     },
     {
       "name": "Midea buys KUKA",
