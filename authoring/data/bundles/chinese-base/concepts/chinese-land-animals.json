@@ -200,7 +200,8 @@
     {
       "name": "Assam macaque",
       "facet": "Primates and gibbons",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Assam macaque has no well-known facts that fit these options."
     },
     {
       "name": "Slow loris",
@@ -255,7 +256,8 @@
     {
       "name": "Himalayan tahr",
       "facet": "Plateau hoofed animals",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Himalayan tahr is too obscure for Chinese families; any fair question would be forced."
     },
     {
       "name": "Chinese goral",
@@ -310,7 +312,8 @@
     {
       "name": "Reeves's muntjac",
       "facet": "Deer of China",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Its name origin (John Reeves) is obscure and not Chinese knowledge, the chromosome record belongs to the Indian muntjac, and tusks for fighting are already in the pool."
     },
     {
       "name": "Black muntjac",

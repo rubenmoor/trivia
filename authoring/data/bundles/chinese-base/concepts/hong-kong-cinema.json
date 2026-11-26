@@ -751,7 +751,8 @@
     {
       "name": "Hong Kong Film Archive",
       "facet": "Studios and film industry history",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Hong Kong Film Archive is too obscure, and the options (record place, group sequence) don't fit"
     },
     {
       "name": "Cantonese opera film",
@@ -916,7 +917,8 @@
     {
       "name": "Golden Bauhinia Awards",
       "facet": "Hong Kong Film Awards and festivals",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Golden Bauhinia Awards are too obscure for any fair multiple-choice question"
     },
     {
       "name": "Hong Kong Film Critics Society Award",

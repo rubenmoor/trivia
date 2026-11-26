@@ -111,7 +111,8 @@
     {
       "name": "Bao Wenkui",
       "facet": "Rice, wheat and farm science",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Bao Wenkui's triticale gives no clean when/purpose/odd-one-out question; the years and uses are too minor to be fair."
     },
     {
       "name": "Xie Hua'an",
@@ -776,7 +777,8 @@
     {
       "name": "Zou Chenglu",
       "facet": "Biology firsts: insulin to cloned monkeys",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Zou Chenglu is known mainly as one member of the insulin team; any question overlaps slot 4 or turns into a list of obscure names."
     },
     {
       "name": "Synthetic yeast alanine tRNA",

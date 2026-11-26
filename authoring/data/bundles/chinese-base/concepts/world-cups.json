@@ -1,0 +1,911 @@
+{
+  "subcategory": "world-cups",
+  "facets": [
+    "China at the FIFA World Cup",
+    "Chinese women's football team",
+    "Host countries and stadiums",
+    "Champions and famous finals",
+    "Football World Cup legends",
+    "Trophies, mascots and balls",
+    "Rules, awards and match terms",
+    "Volleyball World Cup and China",
+    "FIBA Basketball World Cup",
+    "Table tennis and other World Cups",
+    "Fans, songs and World Cup culture"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 2,
+      "count": 4,
+      "estimate": 3,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 4,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "2002 FIFA World Cup in Korea and Japan",
+      "facet": "China at the FIFA World Cup",
+      "known_at": 7
+    },
+    {
+      "name": "Li Weifeng",
+      "facet": "China at the FIFA World Cup",
+      "known_at": 13
+    },
+    {
+      "name": "Jiang Jin",
+      "facet": "China at the FIFA World Cup",
+      "known_at": 14
+    },
+    {
+      "name": "Qi Hong",
+      "facet": "China at the FIFA World Cup",
+      "known_at": 14
+    },
+    {
+      "name": "Shenyang Wulihe Stadium",
+      "facet": "China at the FIFA World Cup",
+      "known_at": 13
+    },
+    {
+      "name": "Costa Rica",
+      "facet": "China at the FIFA World Cup",
+      "known_at": 11
+    },
+    {
+      "name": "Wang Dalei",
+      "facet": "China at the FIFA World Cup",
+      "known_at": 12
+    },
+    {
+      "name": "Asian Football Confederation",
+      "facet": "China at the FIFA World Cup",
+      "known_at": 10
+    },
+    {
+      "name": "5·19 incident",
+      "facet": "China at the FIFA World Cup",
+      "known_at": 14
+    },
+    {
+      "name": "Steel Roses (铿锵玫瑰)",
+      "facet": "Chinese women's football team",
+      "known_at": 7
+    },
+    {
+      "name": "1999 FIFA Women's World Cup final",
+      "facet": "Chinese women's football team",
+      "known_at": 11
+    },
+    {
+      "name": "Pu Wei",
+      "facet": "Chinese women's football team",
+      "known_at": 14
+    },
+    {
+      "name": "Bai Jie",
+      "facet": "Chinese women's football team",
+      "known_at": 14
+    },
+    {
+      "name": "Zhang Rui",
+      "facet": "Chinese women's football team",
+      "known_at": 13
+    },
+    {
+      "name": "Zhu Yu",
+      "facet": "Chinese women's football team",
+      "known_at": 13
+    },
+    {
+      "name": "Ma Yuanan",
+      "facet": "Chinese women's football team",
+      "known_at": 14
+    },
+    {
+      "name": "Zhao Lina",
+      "facet": "Chinese women's football team",
+      "known_at": 12
+    },
+    {
+      "name": "2022 AFC Women's Asian Cup",
+      "facet": "Chinese women's football team",
+      "known_at": 10
+    },
+    {
+      "name": "1996 Atlanta Olympic football silver",
+      "facet": "Chinese women's football team",
+      "known_at": 13
+    },
+    {
+      "name": "1991 FIFA Women's World Cup",
+      "facet": "Chinese women's football team",
+      "known_at": 12
+    },
+    {
+      "name": "2007 FIFA Women's World Cup",
+      "facet": "Chinese women's football team",
+      "known_at": 12
+    },
+    {
+      "name": "2026 FIFA World Cup",
+      "facet": "Host countries and stadiums",
+      "known_at": 6
+    },
+    {
+      "name": "2027 FIFA Women's World Cup",
+      "facet": "Host countries and stadiums",
+      "known_at": 11
+    },
+    {
+      "name": "2019 FIFA Women's World Cup",
+      "facet": "Host countries and stadiums",
+      "known_at": 11
+    },
+    {
+      "name": "Qatar 2022",
+      "facet": "Host countries and stadiums",
+      "known_at": 5
+    },
+    {
+      "name": "Lusail Stadium",
+      "facet": "Host countries and stadiums",
+      "known_at": 11
+    },
+    {
+      "name": "Al Bayt Stadium",
+      "facet": "Host countries and stadiums",
+      "known_at": 13
+    },
+    {
+      "name": "Estadio Azteca",
+      "facet": "Host countries and stadiums",
+      "known_at": 12
+    },
+    {
+      "name": "Estadio Centenario",
+      "facet": "Host countries and stadiums",
+      "known_at": 14
+    },
+    {
+      "name": "Uruguay 1930",
+      "facet": "Host countries and stadiums",
+      "known_at": 10
+    },
+    {
+      "name": "Soccer City",
+      "facet": "Host countries and stadiums",
+      "known_at": 13
+    },
+    {
+      "name": "International Stadium Yokohama",
+      "facet": "Host countries and stadiums",
+      "known_at": 13
+    },
+    {
+      "name": "Seoul World Cup Stadium",
+      "facet": "Host countries and stadiums",
+      "known_at": 12
+    },
+    {
+      "name": "Luzhniki Stadium",
+      "facet": "Host countries and stadiums",
+      "known_at": 12
+    },
+    {
+      "name": "Russia 2018",
+      "facet": "Host countries and stadiums",
+      "known_at": 6
+    },
+    {
+      "name": "MetLife Stadium",
+      "facet": "Host countries and stadiums",
+      "known_at": 12
+    },
+    {
+      "name": "Stade de France",
+      "facet": "Host countries and stadiums",
+      "known_at": 11
+    },
+    {
+      "name": "Italy 1990",
+      "facet": "Host countries and stadiums",
+      "known_at": 12
+    },
+    {
+      "name": "2030 FIFA World Cup",
+      "facet": "Host countries and stadiums",
+      "known_at": 11
+    },
+    {
+      "name": "Saudi Arabia 2034",
+      "facet": "Host countries and stadiums",
+      "known_at": 11
+    },
+    {
+      "name": "Germany 2006",
+      "facet": "Host countries and stadiums",
+      "known_at": 9
+    },
+    {
+      "name": "Brazil national football team",
+      "facet": "Champions and famous finals",
+      "known_at": 3
+    },
+    {
+      "name": "Germany national football team",
+      "facet": "Champions and famous finals",
+      "known_at": 4
+    },
+    {
+      "name": "Italy national football team",
+      "facet": "Champions and famous finals",
+      "known_at": 5
+    },
+    {
+      "name": "France national football team",
+      "facet": "Champions and famous finals",
+      "known_at": 5
+    },
+    {
+      "name": "Uruguay national football team",
+      "facet": "Champions and famous finals",
+      "known_at": 10
+    },
+    {
+      "name": "Spain 2010 World Cup win",
+      "facet": "Champions and famous finals",
+      "known_at": 9
+    },
+    {
+      "name": "England 1966",
+      "facet": "Champions and famous finals",
+      "known_at": 11
+    },
+    {
+      "name": "Maracanazo",
+      "facet": "Champions and famous finals",
+      "known_at": 14
+    },
+    {
+      "name": "Miracle of Bern",
+      "facet": "Champions and famous finals",
+      "known_at": 14
+    },
+    {
+      "name": "2022 World Cup final",
+      "facet": "Champions and famous finals",
+      "known_at": 6
+    },
+    {
+      "name": "1998 World Cup final",
+      "facet": "Champions and famous finals",
+      "known_at": 10
+    },
+    {
+      "name": "2014 World Cup final",
+      "facet": "Champions and famous finals",
+      "known_at": 9
+    },
+    {
+      "name": "Brazil 1–7 Germany",
+      "facet": "Champions and famous finals",
+      "known_at": 9
+    },
+    {
+      "name": "1994 World Cup final",
+      "facet": "Champions and famous finals",
+      "known_at": 12
+    },
+    {
+      "name": "Netherlands national football team",
+      "facet": "Champions and famous finals",
+      "known_at": 9
+    },
+    {
+      "name": "Croatia national football team",
+      "facet": "Champions and famous finals",
+      "known_at": 9
+    },
+    {
+      "name": "Morocco national football team",
+      "facet": "Champions and famous finals",
+      "known_at": 9
+    },
+    {
+      "name": "Hand of God",
+      "facet": "Champions and famous finals",
+      "known_at": 10
+    },
+    {
+      "name": "Pelé",
+      "facet": "Football World Cup legends",
+      "known_at": 5
+    },
+    {
+      "name": "Diego Maradona",
+      "facet": "Football World Cup legends",
+      "known_at": 7
+    },
+    {
+      "name": "Lionel Messi",
+      "facet": "Football World Cup legends",
+      "known_at": 3
+    },
+    {
+      "name": "Cristiano Ronaldo",
+      "facet": "Football World Cup legends",
+      "known_at": 3
+    },
+    {
+      "name": "Kylian Mbappé",
+      "facet": "Football World Cup legends",
+      "known_at": 5
+    },
+    {
+      "name": "Miroslav Klose",
+      "facet": "Football World Cup legends",
+      "known_at": 11
+    },
+    {
+      "name": "Ronaldo Nazário",
+      "facet": "Football World Cup legends",
+      "known_at": 8
+    },
+    {
+      "name": "Zinedine Zidane",
+      "facet": "Football World Cup legends",
+      "known_at": 8
+    },
+    {
+      "name": "Franz Beckenbauer",
+      "facet": "Football World Cup legends",
+      "known_at": 12
+    },
+    {
+      "name": "Johan Cruyff",
+      "facet": "Football World Cup legends",
+      "known_at": 12
+    },
+    {
+      "name": "Just Fontaine",
+      "facet": "Football World Cup legends",
+      "known_at": 15
+    },
+    {
+      "name": "Roberto Baggio",
+      "facet": "Football World Cup legends",
+      "known_at": 11
+    },
+    {
+      "name": "Lothar Matthäus",
+      "facet": "Football World Cup legends",
+      "known_at": 13
+    },
+    {
+      "name": "Gianluigi Buffon",
+      "facet": "Football World Cup legends",
+      "known_at": 9
+    },
+    {
+      "name": "Hakan Şükür",
+      "facet": "Football World Cup legends",
+      "known_at": 14
+    },
+    {
+      "name": "Roger Milla",
+      "facet": "Football World Cup legends",
+      "known_at": 14
+    },
+    {
+      "name": "Lev Yashin",
+      "facet": "Football World Cup legends",
+      "known_at": 13
+    },
+    {
+      "name": "Garrincha",
+      "facet": "Football World Cup legends",
+      "known_at": 14
+    },
+    {
+      "name": "Gerd Müller",
+      "facet": "Football World Cup legends",
+      "known_at": 13
+    },
+    {
+      "name": "Park Ji-sung",
+      "facet": "Football World Cup legends",
+      "known_at": 11
+    },
+    {
+      "name": "Son Heung-min",
+      "facet": "Football World Cup legends",
+      "known_at": 8
+    },
+    {
+      "name": "Keisuke Honda",
+      "facet": "Football World Cup legends",
+      "known_at": 12
+    },
+    {
+      "name": "Andrés Iniesta",
+      "facet": "Football World Cup legends",
+      "known_at": 9
+    },
+    {
+      "name": "FIFA World Cup Trophy",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 3
+    },
+    {
+      "name": "Jules Rimet Trophy",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 12
+    },
+    {
+      "name": "Pickles the dog",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 14
+    },
+    {
+      "name": "FIFA Women's World Cup Trophy",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 10
+    },
+    {
+      "name": "Gold stars on jerseys",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 6
+    },
+    {
+      "name": "La'eeb",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 8
+    },
+    {
+      "name": "Zabivaka",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 9
+    },
+    {
+      "name": "Zakumi",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 10
+    },
+    {
+      "name": "Fuleco",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 10
+    },
+    {
+      "name": "Goleo VI",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 12
+    },
+    {
+      "name": "Footix",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 13
+    },
+    {
+      "name": "World Cup Willie",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 14
+    },
+    {
+      "name": "Naranjito",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 14
+    },
+    {
+      "name": "Spheriks",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 13
+    },
+    {
+      "name": "Adidas Telstar",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 12
+    },
+    {
+      "name": "Jabulani",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 10
+    },
+    {
+      "name": "Brazuca",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 10
+    },
+    {
+      "name": "Al Rihla",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 10
+    },
+    {
+      "name": "Fevernova",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 13
+    },
+    {
+      "name": "Adidas Tango",
+      "facet": "Trophies, mascots and balls",
+      "known_at": 13
+    },
+    {
+      "name": "FIFA",
+      "facet": "Rules, awards and match terms",
+      "known_at": 4
+    },
+    {
+      "name": "Golden Boot",
+      "facet": "Rules, awards and match terms",
+      "known_at": 7
+    },
+    {
+      "name": "Golden Ball",
+      "facet": "Rules, awards and match terms",
+      "known_at": 8
+    },
+    {
+      "name": "Golden Glove",
+      "facet": "Rules, awards and match terms",
+      "known_at": 9
+    },
+    {
+      "name": "Best Young Player Award",
+      "facet": "Rules, awards and match terms",
+      "known_at": 11
+    },
+    {
+      "name": "FIFA Fair Play Award",
+      "facet": "Rules, awards and match terms",
+      "known_at": 12
+    },
+    {
+      "name": "Referee",
+      "facet": "Rules, awards and match terms",
+      "known_at": 1
+    },
+    {
+      "name": "Extra time",
+      "facet": "Rules, awards and match terms",
+      "known_at": 5
+    },
+    {
+      "name": "Penalty shootout",
+      "facet": "Rules, awards and match terms",
+      "known_at": 3
+    },
+    {
+      "name": "Group of death",
+      "facet": "Rules, awards and match terms",
+      "known_at": 9
+    },
+    {
+      "name": "Group stage",
+      "facet": "Rules, awards and match terms",
+      "known_at": 5
+    },
+    {
+      "name": "Round of 16",
+      "facet": "Rules, awards and match terms",
+      "known_at": 6
+    },
+    {
+      "name": "Goal-line technology",
+      "facet": "Rules, awards and match terms",
+      "known_at": 8
+    },
+    {
+      "name": "Offside",
+      "facet": "Rules, awards and match terms",
+      "known_at": 6
+    },
+    {
+      "name": "Hat-trick",
+      "facet": "Rules, awards and match terms",
+      "known_at": 5
+    },
+    {
+      "name": "Own goal",
+      "facet": "Rules, awards and match terms",
+      "known_at": 4
+    },
+    {
+      "name": "Golden goal",
+      "facet": "Rules, awards and match terms",
+      "known_at": 12
+    },
+    {
+      "name": "Stoppage time",
+      "facet": "Rules, awards and match terms",
+      "known_at": 6
+    },
+    {
+      "name": "World Cup qualifiers",
+      "facet": "Rules, awards and match terms",
+      "known_at": 5
+    },
+    {
+      "name": "World Cup draw",
+      "facet": "Rules, awards and match terms",
+      "known_at": 8
+    },
+    {
+      "name": "Semi-automated offside technology",
+      "facet": "Rules, awards and match terms",
+      "known_at": 12
+    },
+    {
+      "name": "Clean sheet",
+      "facet": "Rules, awards and match terms",
+      "known_at": 10
+    },
+    {
+      "name": "China women's national volleyball team",
+      "facet": "Volleyball World Cup and China",
+      "known_at": 3
+    },
+    {
+      "name": "1981 FIVB Women's World Cup",
+      "facet": "Volleyball World Cup and China",
+      "known_at": 10
+    },
+    {
+      "name": "Five consecutive titles (五连冠)",
+      "facet": "Volleyball World Cup and China",
+      "known_at": 9
+    },
+    {
+      "name": "Yuan Xinyue",
+      "facet": "Volleyball World Cup and China",
+      "known_at": 10
+    },
+    {
+      "name": "2019 FIVB Women's World Cup",
+      "facet": "Volleyball World Cup and China",
+      "known_at": 10
+    },
+    {
+      "name": "2003 FIVB Women's World Cup",
+      "facet": "Volleyball World Cup and China",
+      "known_at": 12
+    },
+    {
+      "name": "2015 FIVB Women's World Cup",
+      "facet": "Volleyball World Cup and China",
+      "known_at": 12
+    },
+    {
+      "name": "Libero",
+      "facet": "Volleyball World Cup and China",
+      "known_at": 10
+    },
+    {
+      "name": "Spike",
+      "facet": "Volleyball World Cup and China",
+      "known_at": 4
+    },
+    {
+      "name": "Naismith Trophy",
+      "facet": "FIBA Basketball World Cup",
+      "known_at": 14
+    },
+    {
+      "name": "FIBA",
+      "facet": "FIBA Basketball World Cup",
+      "known_at": 9
+    },
+    {
+      "name": "United States men's national basketball team",
+      "facet": "FIBA Basketball World Cup",
+      "known_at": 5
+    },
+    {
+      "name": "Spain men's national basketball team",
+      "facet": "FIBA Basketball World Cup",
+      "known_at": 11
+    },
+    {
+      "name": "Germany men's national basketball team",
+      "facet": "FIBA Basketball World Cup",
+      "known_at": 12
+    },
+    {
+      "name": "Ricky Rubio",
+      "facet": "FIBA Basketball World Cup",
+      "known_at": 12
+    },
+    {
+      "name": "2023 FIBA Basketball World Cup",
+      "facet": "FIBA Basketball World Cup",
+      "known_at": 11
+    },
+    {
+      "name": "Qatar 2027 Basketball World Cup",
+      "facet": "FIBA Basketball World Cup",
+      "known_at": 13
+    },
+    {
+      "name": "FIBA Women's Basketball World Cup",
+      "facet": "FIBA Basketball World Cup",
+      "known_at": 10
+    },
+    {
+      "name": "Li Meng",
+      "facet": "FIBA Basketball World Cup",
+      "known_at": 10
+    },
+    {
+      "name": "Yugoslavia national basketball team",
+      "facet": "FIBA Basketball World Cup",
+      "known_at": 14
+    },
+    {
+      "name": "ITTF Table Tennis World Cup",
+      "facet": "Table tennis and other World Cups",
+      "known_at": 8
+    },
+    {
+      "name": "Ping-pong diplomacy",
+      "facet": "Table tennis and other World Cups",
+      "known_at": 10
+    },
+    {
+      "name": "FIVB? no",
+      "facet": "Table tennis and other World Cups",
+      "known_at": 15
+    },
+    {
+      "name": "FINA Diving World Cup",
+      "facet": "Table tennis and other World Cups",
+      "known_at": 11
+    },
+    {
+      "name": "FIS Freestyle Ski World Cup",
+      "facet": "Table tennis and other World Cups",
+      "known_at": 11
+    },
+    {
+      "name": "Rugby World Cup",
+      "facet": "Table tennis and other World Cups",
+      "known_at": 10
+    },
+    {
+      "name": "Cricket World Cup",
+      "facet": "Table tennis and other World Cups",
+      "known_at": 11
+    },
+    {
+      "name": "FIFA Club World Cup",
+      "facet": "Table tennis and other World Cups",
+      "known_at": 9
+    },
+    {
+      "name": "Shakira",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 6
+    },
+    {
+      "name": "Vuvuzela",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 9
+    },
+    {
+      "name": "Panini sticker album",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 6
+    },
+    {
+      "name": "The Cup of Life",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 12
+    },
+    {
+      "name": "Wavin' Flag",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 10
+    },
+    {
+      "name": "We Are One (Ole Ola)",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 12
+    },
+    {
+      "name": "Hayya Hayya",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 12
+    },
+    {
+      "name": "Dreamers (Jung Kook)",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 8
+    },
+    {
+      "name": "Paul the Octopus",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 9
+    },
+    {
+      "name": "Be the Reds",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 13
+    },
+    {
+      "name": "Japanese fans cleaning the stadium",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 8
+    },
+    {
+      "name": "National anthem",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 2
+    },
+    {
+      "name": "Huang Jianxiang",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 11
+    },
+    {
+      "name": "Han Qiaosheng",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 12
+    },
+    {
+      "name": "CCTV-5",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 6
+    },
+    {
+      "name": "Staying up late to watch matches (熬夜看球)",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 5
+    },
+    {
+      "name": "Jing Jing and Si Hai",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 11
+    },
+    {
+      "name": "Face paint",
+      "facet": "Fans, songs and World Cup culture",
+      "known_at": 3
+    }
+  ]
+}

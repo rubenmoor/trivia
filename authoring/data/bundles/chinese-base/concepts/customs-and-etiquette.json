@@ -66,7 +66,8 @@
     {
       "name": "Number 4 avoided",
       "facet": "Lucky and unlucky numbers",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The pool already asks why 4 is avoided (四 sounds like 死) and about lifts that skip floor 4; the options left give no new good fact."
     },
     {
       "name": "Number 6 for smooth luck (六六大顺)",

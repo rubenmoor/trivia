@@ -626,7 +626,8 @@
     {
       "name": "Limestone",
       "facet": "Karst landscapes",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: Limestone already has six questions; the options give only a word-meaning question whose characters would state the answer."
     },
     {
       "name": "Tiankeng (giant sinkhole)",

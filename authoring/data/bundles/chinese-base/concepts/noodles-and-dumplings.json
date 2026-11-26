@@ -366,7 +366,8 @@
     {
       "name": "Rice cooker (电饭煲)",
       "facet": "Rice dishes and fried rice",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: At difficulty 1 the only answer is 'rice', which the pool already asks about the rice cooker."
     },
     {
       "name": "Congee (粥)",

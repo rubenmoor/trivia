@@ -851,7 +851,8 @@
     {
       "name": "ID card ticket check",
       "facet": "Everyday transport apps and tickets",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The pool already asks what Chinese station gates scan (your ID card); every option would repeat that."
     },
     {
       "name": "Facial recognition gates",

@@ -525,7 +525,8 @@
     {
       "name": "40 mm ball",
       "facet": "Table tennis rules and scoring",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The pool already asks when the ball grew to 40 mm and that the ball is hollow; nothing new fits these options"
     },
     {
       "name": "21-point rally scoring",
@@ -830,7 +831,8 @@
     {
       "name": "Gossima",
       "facet": "Table tennis history and ping-pong diplomacy",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Too obscure, and no reliable free photo of a Gossima set exists for the detail options"
     },
     {
       "name": "Victorian parlour table tennis",

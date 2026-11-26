@@ -1,0 +1,1223 @@
+{
+  "subcategory": "cartoons",
+  "facets": [
+    "Doraemon and family anime",
+    "Detective and school anime",
+    "Action and sports anime",
+    "Pokémon and monster anime",
+    "Studio Ghibli films",
+    "Classic Disney animated films",
+    "Pixar and DreamWorks films",
+    "Classic American cartoons",
+    "Preschool cartoons and their families",
+    "European cartoon characters",
+    "Animation creators and studios",
+    "Animation history and techniques"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Nobita (大雄)",
+      "facet": "Doraemon and family anime",
+      "known_at": 2
+    },
+    {
+      "name": "Shizuka (静香)",
+      "facet": "Doraemon and family anime",
+      "known_at": 3
+    },
+    {
+      "name": "Gian (胖虎)",
+      "facet": "Doraemon and family anime",
+      "known_at": 3
+    },
+    {
+      "name": "Suneo (小夫)",
+      "facet": "Doraemon and family anime",
+      "known_at": 4
+    },
+    {
+      "name": "Dekisugi (出木杉)",
+      "facet": "Doraemon and family anime",
+      "known_at": 8
+    },
+    {
+      "name": "Anywhere Door (任意门)",
+      "facet": "Doraemon and family anime",
+      "known_at": 2,
+      "retired": "used_up: The door's purpose is already answered by the existing question on what “dokodemo” means"
+    },
+    {
+      "name": "4D Pocket (四次元口袋)",
+      "facet": "Doraemon and family anime",
+      "known_at": 3
+    },
+    {
+      "name": "Memory Bread (记忆面包)",
+      "facet": "Doraemon and family anime",
+      "known_at": 4
+    },
+    {
+      "name": "Dorayaki (铜锣烧)",
+      "facet": "Doraemon and family anime",
+      "known_at": 4
+    },
+    {
+      "name": "Crayon Shin-chan (蜡笔小新)",
+      "facet": "Doraemon and family anime",
+      "known_at": 3
+    },
+    {
+      "name": "Shiro (小白)",
+      "facet": "Doraemon and family anime",
+      "known_at": 5
+    },
+    {
+      "name": "Chibi Maruko-chan (樱桃小丸子)",
+      "facet": "Doraemon and family anime",
+      "known_at": 4
+    },
+    {
+      "name": "Astro Boy (铁臂阿童木)",
+      "facet": "Doraemon and family anime",
+      "known_at": 7
+    },
+    {
+      "name": "Hamtaro (哈姆太郎)",
+      "facet": "Doraemon and family anime",
+      "known_at": 7
+    },
+    {
+      "name": "Sailor Moon (美少女战士)",
+      "facet": "Doraemon and family anime",
+      "known_at": 8
+    },
+    {
+      "name": "Sazae-san (海螺小姐)",
+      "facet": "Doraemon and family anime",
+      "known_at": 13
+    },
+    {
+      "name": "Detective Conan (名侦探柯南)",
+      "facet": "Detective and school anime",
+      "known_at": 4
+    },
+    {
+      "name": "Shinichi Kudo (工藤新一)",
+      "facet": "Detective and school anime",
+      "known_at": 6
+    },
+    {
+      "name": "Ran Mouri (毛利兰)",
+      "facet": "Detective and school anime",
+      "known_at": 7
+    },
+    {
+      "name": "Kogoro Mouri (毛利小五郎)",
+      "facet": "Detective and school anime",
+      "known_at": 8
+    },
+    {
+      "name": "Kaito Kid (怪盗基德)",
+      "facet": "Detective and school anime",
+      "known_at": 7
+    },
+    {
+      "name": "Professor Agasa (阿笠博士)",
+      "facet": "Detective and school anime",
+      "known_at": 8
+    },
+    {
+      "name": "Ai Haibara (灰原哀)",
+      "facet": "Detective and school anime",
+      "known_at": 9
+    },
+    {
+      "name": "Black Organization (黑衣组织)",
+      "facet": "Detective and school anime",
+      "known_at": 9
+    },
+    {
+      "name": "APTX 4869",
+      "facet": "Detective and school anime",
+      "known_at": 10
+    },
+    {
+      "name": "Bow-tie voice changer (蝴蝶结变声器)",
+      "facet": "Detective and school anime",
+      "known_at": 6
+    },
+    {
+      "name": "The Kindaichi Case Files (金田一少年事件簿)",
+      "facet": "Detective and school anime",
+      "known_at": 10
+    },
+    {
+      "name": "Death Note (死亡笔记)",
+      "facet": "Detective and school anime",
+      "known_at": 11
+    },
+    {
+      "name": "Spy × Family (间谍过家家)",
+      "facet": "Detective and school anime",
+      "known_at": 8
+    },
+    {
+      "name": "Anya Forger (阿尼亚)",
+      "facet": "Detective and school anime",
+      "known_at": 8
+    },
+    {
+      "name": "Assassination Classroom (暗杀教室)",
+      "facet": "Detective and school anime",
+      "known_at": 11
+    },
+    {
+      "name": "Your Name (你的名字)",
+      "facet": "Detective and school anime",
+      "known_at": 8
+    },
+    {
+      "name": "Slam Dunk (灌篮高手)",
+      "facet": "Action and sports anime",
+      "known_at": 6
+    },
+    {
+      "name": "Hanamichi Sakuragi (樱木花道)",
+      "facet": "Action and sports anime",
+      "known_at": 7
+    },
+    {
+      "name": "Kaede Rukawa (流川枫)",
+      "facet": "Action and sports anime",
+      "known_at": 9
+    },
+    {
+      "name": "Captain Tsubasa (足球小将)",
+      "facet": "Action and sports anime",
+      "known_at": 8
+    },
+    {
+      "name": "The Prince of Tennis (网球王子)",
+      "facet": "Action and sports anime",
+      "known_at": 9
+    },
+    {
+      "name": "Haikyu!! (排球少年)",
+      "facet": "Action and sports anime",
+      "known_at": 9
+    },
+    {
+      "name": "Naruto (火影忍者)",
+      "facet": "Action and sports anime",
+      "known_at": 6
+    },
+    {
+      "name": "Sasuke Uchiha (宇智波佐助)",
+      "facet": "Action and sports anime",
+      "known_at": 8
+    },
+    {
+      "name": "One Piece (海贼王)",
+      "facet": "Action and sports anime",
+      "known_at": 5
+    },
+    {
+      "name": "Monkey D. Luffy (路飞)",
+      "facet": "Action and sports anime",
+      "known_at": 6
+    },
+    {
+      "name": "Dragon Ball (七龙珠)",
+      "facet": "Action and sports anime",
+      "known_at": 6
+    },
+    {
+      "name": "Son Goku (Dragon Ball)",
+      "facet": "Action and sports anime",
+      "known_at": 7
+    },
+    {
+      "name": "Kamehameha (龟派气功)",
+      "facet": "Action and sports anime",
+      "known_at": 8
+    },
+    {
+      "name": "Saint Seiya (圣斗士星矢)",
+      "facet": "Action and sports anime",
+      "known_at": 9
+    },
+    {
+      "name": "Attack on Titan (进击的巨人)",
+      "facet": "Action and sports anime",
+      "known_at": 10
+    },
+    {
+      "name": "Demon Slayer (鬼灭之刃)",
+      "facet": "Action and sports anime",
+      "known_at": 7
+    },
+    {
+      "name": "Tanjiro Kamado (灶门炭治郎)",
+      "facet": "Action and sports anime",
+      "known_at": 8
+    },
+    {
+      "name": "Nezuko Kamado (灶门祢豆子)",
+      "facet": "Action and sports anime",
+      "known_at": 8
+    },
+    {
+      "name": "Ultraman (奥特曼)",
+      "facet": "Action and sports anime",
+      "known_at": 2
+    },
+    {
+      "name": "One-Punch Man (一拳超人)",
+      "facet": "Action and sports anime",
+      "known_at": 9
+    },
+    {
+      "name": "Gundam (高达)",
+      "facet": "Action and sports anime",
+      "known_at": 10
+    },
+    {
+      "name": "Pokémon (宝可梦)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 2
+    },
+    {
+      "name": "Pikachu (皮卡丘)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 1
+    },
+    {
+      "name": "Ash Ketchum (小智)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 4
+    },
+    {
+      "name": "Poké Ball (精灵球)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 3
+    },
+    {
+      "name": "Pokédex (图鉴)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 7
+    },
+    {
+      "name": "Professor Oak (大木博士)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 8
+    },
+    {
+      "name": "Team Rocket (火箭队)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 6
+    },
+    {
+      "name": "Meowth (喵喵)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 6
+    },
+    {
+      "name": "Charizard (喷火龙)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 6
+    },
+    {
+      "name": "Bulbasaur (妙蛙种子)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 6
+    },
+    {
+      "name": "Squirtle (杰尼龟)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 6
+    },
+    {
+      "name": "Psyduck (可达鸭)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 4
+    },
+    {
+      "name": "Jigglypuff (胖丁)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 6
+    },
+    {
+      "name": "Eevee (伊布)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 6
+    },
+    {
+      "name": "Snorlax (卡比兽)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 7
+    },
+    {
+      "name": "Mewtwo (超梦)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 8
+    },
+    {
+      "name": "Pokémon GO",
+      "facet": "Pokémon and monster anime",
+      "known_at": 7
+    },
+    {
+      "name": "Digimon (数码宝贝)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 8
+    },
+    {
+      "name": "Yu-Gi-Oh! (游戏王)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 9
+    },
+    {
+      "name": "Yo-kai Watch (妖怪手表)",
+      "facet": "Pokémon and monster anime",
+      "known_at": 10
+    },
+    {
+      "name": "My Neighbor Totoro (龙猫)",
+      "facet": "Studio Ghibli films",
+      "known_at": 4
+    },
+    {
+      "name": "Catbus (猫巴士)",
+      "facet": "Studio Ghibli films",
+      "known_at": 6
+    },
+    {
+      "name": "Soot sprites (煤球精灵)",
+      "facet": "Studio Ghibli films",
+      "known_at": 7
+    },
+    {
+      "name": "Spirited Away (千与千寻)",
+      "facet": "Studio Ghibli films",
+      "known_at": 6
+    },
+    {
+      "name": "No-Face (无脸男)",
+      "facet": "Studio Ghibli films",
+      "known_at": 8
+    },
+    {
+      "name": "Chihiro (千寻)",
+      "facet": "Studio Ghibli films",
+      "known_at": 8
+    },
+    {
+      "name": "Kiki's Delivery Service (魔女宅急便)",
+      "facet": "Studio Ghibli films",
+      "known_at": 7
+    },
+    {
+      "name": "Jiji (吉吉)",
+      "facet": "Studio Ghibli films",
+      "known_at": 9
+    },
+    {
+      "name": "Castle in the Sky (天空之城)",
+      "facet": "Studio Ghibli films",
+      "known_at": 7
+    },
+    {
+      "name": "Howl's Moving Castle (哈尔的移动城堡)",
+      "facet": "Studio Ghibli films",
+      "known_at": 7
+    },
+    {
+      "name": "Calcifer (卡西法)",
+      "facet": "Studio Ghibli films",
+      "known_at": 9
+    },
+    {
+      "name": "Ponyo (悬崖上的金鱼姬)",
+      "facet": "Studio Ghibli films",
+      "known_at": 6
+    },
+    {
+      "name": "Princess Mononoke (幽灵公主)",
+      "facet": "Studio Ghibli films",
+      "known_at": 9
+    },
+    {
+      "name": "Porco Rosso (红猪)",
+      "facet": "Studio Ghibli films",
+      "known_at": 11
+    },
+    {
+      "name": "Nausicaä of the Valley of the Wind (风之谷)",
+      "facet": "Studio Ghibli films",
+      "known_at": 11
+    },
+    {
+      "name": "Arrietty (借东西的小人阿莉埃蒂)",
+      "facet": "Studio Ghibli films",
+      "known_at": 9
+    },
+    {
+      "name": "Whisper of the Heart (侧耳倾听)",
+      "facet": "Studio Ghibli films",
+      "known_at": 12
+    },
+    {
+      "name": "The Boy and the Heron (你想活出怎样的人生)",
+      "facet": "Studio Ghibli films",
+      "known_at": 11
+    },
+    {
+      "name": "Snow White and the Seven Dwarfs (白雪公主和七个小矮人)",
+      "facet": "Classic Disney animated films",
+      "known_at": 3
+    },
+    {
+      "name": "Cinderella (灰姑娘)",
+      "facet": "Classic Disney animated films",
+      "known_at": 2
+    },
+    {
+      "name": "Sleeping Beauty (睡美人)",
+      "facet": "Classic Disney animated films",
+      "known_at": 4
+    },
+    {
+      "name": "The Little Mermaid (小美人鱼)",
+      "facet": "Classic Disney animated films",
+      "known_at": 3
+    },
+    {
+      "name": "Beauty and the Beast (美女与野兽)",
+      "facet": "Classic Disney animated films",
+      "known_at": 4
+    },
+    {
+      "name": "Aladdin (阿拉丁)",
+      "facet": "Classic Disney animated films",
+      "known_at": 3
+    },
+    {
+      "name": "Genie (神灯精灵)",
+      "facet": "Classic Disney animated films",
+      "known_at": 4
+    },
+    {
+      "name": "The Lion King (狮子王)",
+      "facet": "Classic Disney animated films",
+      "known_at": 3
+    },
+    {
+      "name": "Simba (辛巴)",
+      "facet": "Classic Disney animated films",
+      "known_at": 3
+    },
+    {
+      "name": "Hakuna Matata",
+      "facet": "Classic Disney animated films",
+      "known_at": 6
+    },
+    {
+      "name": "Mulan (花木兰, Disney film)",
+      "facet": "Classic Disney animated films",
+      "known_at": 3
+    },
+    {
+      "name": "Mushu (木须龙)",
+      "facet": "Classic Disney animated films",
+      "known_at": 6
+    },
+    {
+      "name": "Frozen (冰雪奇缘)",
+      "facet": "Classic Disney animated films",
+      "known_at": 1
+    },
+    {
+      "name": "Elsa (艾莎)",
+      "facet": "Classic Disney animated films",
+      "known_at": 1
+    },
+    {
+      "name": "Olaf (雪宝)",
+      "facet": "Classic Disney animated films",
+      "known_at": 2
+    },
+    {
+      "name": "Moana (海洋奇缘)",
+      "facet": "Classic Disney animated films",
+      "known_at": 4
+    },
+    {
+      "name": "Maui (毛伊)",
+      "facet": "Classic Disney animated films",
+      "known_at": 5
+    },
+    {
+      "name": "Te Fiti (特菲提)",
+      "facet": "Classic Disney animated films",
+      "known_at": 8
+    },
+    {
+      "name": "Zootopia (疯狂动物城)",
+      "facet": "Classic Disney animated films",
+      "known_at": 3
+    },
+    {
+      "name": "Judy Hopps (朱迪)",
+      "facet": "Classic Disney animated films",
+      "known_at": 5
+    },
+    {
+      "name": "Pinocchio (木偶奇遇记)",
+      "facet": "Classic Disney animated films",
+      "known_at": 3
+    },
+    {
+      "name": "Dumbo (小飞象)",
+      "facet": "Classic Disney animated films",
+      "known_at": 4
+    },
+    {
+      "name": "Stitch (史迪奇)",
+      "facet": "Classic Disney animated films",
+      "known_at": 2
+    },
+    {
+      "name": "Ohana",
+      "facet": "Classic Disney animated films",
+      "known_at": 7
+    },
+    {
+      "name": "Fantasia (幻想曲)",
+      "facet": "Classic Disney animated films",
+      "known_at": 11
+    },
+    {
+      "name": "Toy Story (玩具总动员)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 2
+    },
+    {
+      "name": "Woody (胡迪)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 2
+    },
+    {
+      "name": "Buzz Lightyear (巴斯光年)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 2
+    },
+    {
+      "name": "Sid Phillips (阿薛)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 7
+    },
+    {
+      "name": "Finding Nemo (海底总动员)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 2
+    },
+    {
+      "name": "Dory (多莉)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 3
+    },
+    {
+      "name": "Cars (赛车总动员)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 2
+    },
+    {
+      "name": "Lightning McQueen (闪电麦昆)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 2
+    },
+    {
+      "name": "WALL·E (机器人总动员)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 1
+    },
+    {
+      "name": "Up (飞屋环游记)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 4
+    },
+    {
+      "name": "Inside Out (头脑特工队)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 4
+    },
+    {
+      "name": "Coco (寻梦环游记)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 5
+    },
+    {
+      "name": "Ratatouille (料理鼠王)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 4
+    },
+    {
+      "name": "Monsters, Inc. (怪兽电力公司)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 3
+    },
+    {
+      "name": "The Incredibles (超人总动员)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 4
+    },
+    {
+      "name": "Shrek (怪物史莱克)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 3
+    },
+    {
+      "name": "Kung Fu Panda (功夫熊猫)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 2
+    },
+    {
+      "name": "Po (阿宝)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 3
+    },
+    {
+      "name": "Madagascar (马达加斯加)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 4
+    },
+    {
+      "name": "How to Train Your Dragon (驯龙高手)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 5
+    },
+    {
+      "name": "Toothless (无牙仔)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 5
+    },
+    {
+      "name": "Minions (小黄人)",
+      "facet": "Pixar and DreamWorks films",
+      "known_at": 1
+    },
+    {
+      "name": "Mickey Mouse (米老鼠)",
+      "facet": "Classic American cartoons",
+      "known_at": 1
+    },
+    {
+      "name": "Donald Duck (唐老鸭)",
+      "facet": "Classic American cartoons",
+      "known_at": 2
+    },
+    {
+      "name": "Goofy (高飞)",
+      "facet": "Classic American cartoons",
+      "known_at": 3
+    },
+    {
+      "name": "Tom and Jerry (猫和老鼠)",
+      "facet": "Classic American cartoons",
+      "known_at": 1
+    },
+    {
+      "name": "Bugs Bunny (兔八哥)",
+      "facet": "Classic American cartoons",
+      "known_at": 4
+    },
+    {
+      "name": "Road Runner (哔哔鸟)",
+      "facet": "Classic American cartoons",
+      "known_at": 6
+    },
+    {
+      "name": "Wile E. Coyote (歪心狼)",
+      "facet": "Classic American cartoons",
+      "known_at": 6
+    },
+    {
+      "name": "Looney Tunes (乐一通)",
+      "facet": "Classic American cartoons",
+      "known_at": 8
+    },
+    {
+      "name": "Popeye (大力水手)",
+      "facet": "Classic American cartoons",
+      "known_at": 6
+    },
+    {
+      "name": "SpongeBob SquarePants (海绵宝宝)",
+      "facet": "Classic American cartoons",
+      "known_at": 2
+    },
+    {
+      "name": "Patrick Star (派大星)",
+      "facet": "Classic American cartoons",
+      "known_at": 3
+    },
+    {
+      "name": "Krabby Patty (蟹黄堡)",
+      "facet": "Classic American cartoons",
+      "known_at": 5
+    },
+    {
+      "name": "The Simpsons (辛普森一家)",
+      "facet": "Classic American cartoons",
+      "known_at": 7
+    },
+    {
+      "name": "Scooby-Doo (史酷比)",
+      "facet": "Classic American cartoons",
+      "known_at": 6
+    },
+    {
+      "name": "The Flintstones (摩登原始人)",
+      "facet": "Classic American cartoons",
+      "known_at": 9
+    },
+    {
+      "name": "The Pink Panther (粉红豹)",
+      "facet": "Classic American cartoons",
+      "known_at": 5
+    },
+    {
+      "name": "Woody Woodpecker (啄木鸟伍迪)",
+      "facet": "Classic American cartoons",
+      "known_at": 7
+    },
+    {
+      "name": "Transformers (变形金刚)",
+      "facet": "Classic American cartoons",
+      "known_at": 5
+    },
+    {
+      "name": "Teenage Mutant Ninja Turtles (忍者神龟)",
+      "facet": "Classic American cartoons",
+      "known_at": 6
+    },
+    {
+      "name": "Garfield (加菲猫)",
+      "facet": "Classic American cartoons",
+      "known_at": 4
+    },
+    {
+      "name": "Hot Wheels (风火轮)",
+      "facet": "Classic American cartoons",
+      "known_at": 5
+    },
+    {
+      "name": "George Pig (乔治)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 2
+    },
+    {
+      "name": "Daddy Pig (猪爸爸)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 3
+    },
+    {
+      "name": "Muddy puddles (泥坑)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 3
+    },
+    {
+      "name": "Teletubbies (天线宝宝)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 2
+    },
+    {
+      "name": "Thomas the Tank Engine (托马斯小火车)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 2
+    },
+    {
+      "name": "Paw Patrol (汪汪队立大功)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 1
+    },
+    {
+      "name": "Chase (阿奇)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 3
+    },
+    {
+      "name": "Bluey (布鲁伊)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 5
+    },
+    {
+      "name": "Masha and the Bear (玛莎和熊)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 3
+    },
+    {
+      "name": "Pocoyo (小P优优)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 6
+    },
+    {
+      "name": "Dora the Explorer (爱探险的朵拉)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 4
+    },
+    {
+      "name": "Baby Shark (鲨鱼宝宝)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 4
+    },
+    {
+      "name": "Pororo (啵乐乐)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 5
+    },
+    {
+      "name": "Tayo the Little Bus (小巴士太友)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 6
+    },
+    {
+      "name": "Octonauts (海底小纵队)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 3
+    },
+    {
+      "name": "Super Wings (超级飞侠)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 3
+    },
+    {
+      "name": "Robocar Poli (变形警车珀利)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 6
+    },
+    {
+      "name": "Sesame Street (芝麻街)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 7
+    },
+    {
+      "name": "Fireman Sam (消防员山姆)",
+      "facet": "Preschool cartoons and their families",
+      "known_at": 8
+    },
+    {
+      "name": "Gargamel (格格巫)",
+      "facet": "European cartoon characters",
+      "known_at": 5
+    },
+    {
+      "name": "Azrael (阿兹猫)",
+      "facet": "European cartoon characters",
+      "known_at": 8
+    },
+    {
+      "name": "Tintin (丁丁)",
+      "facet": "European cartoon characters",
+      "known_at": 7
+    },
+    {
+      "name": "Snowy (白雪)",
+      "facet": "European cartoon characters",
+      "known_at": 9
+    },
+    {
+      "name": "Asterix (阿斯特克斯)",
+      "facet": "European cartoon characters",
+      "known_at": 10
+    },
+    {
+      "name": "Obelix (奥贝利克斯)",
+      "facet": "European cartoon characters",
+      "known_at": 10
+    },
+    {
+      "name": "Shaun the Sheep (小羊肖恩)",
+      "facet": "European cartoon characters",
+      "known_at": 4
+    },
+    {
+      "name": "Wallace and Gromit (超级无敌掌门狗)",
+      "facet": "European cartoon characters",
+      "known_at": 8
+    },
+    {
+      "name": "Pingu (企鹅家族)",
+      "facet": "European cartoon characters",
+      "known_at": 6
+    },
+    {
+      "name": "Barbapapa (巴巴爸爸)",
+      "facet": "European cartoon characters",
+      "known_at": 9
+    },
+    {
+      "name": "The Moomins (姆明)",
+      "facet": "European cartoon characters",
+      "known_at": 10
+    },
+    {
+      "name": "The Little Mole (鼹鼠的故事)",
+      "facet": "European cartoon characters",
+      "known_at": 5
+    },
+    {
+      "name": "Pat & Mat (邻居帕特与迈特)",
+      "facet": "European cartoon characters",
+      "known_at": 10
+    },
+    {
+      "name": "Miraculous Ladybug (瓢虫雷迪)",
+      "facet": "European cartoon characters",
+      "known_at": 7
+    },
+    {
+      "name": "Lucky Luke (幸运星卢克)",
+      "facet": "European cartoon characters",
+      "known_at": 12
+    },
+    {
+      "name": "Cheburashka (切布拉什卡)",
+      "facet": "European cartoon characters",
+      "known_at": 11
+    },
+    {
+      "name": "Nu, pogodi! (兔子，等着瞧)",
+      "facet": "European cartoon characters",
+      "known_at": 13
+    },
+    {
+      "name": "The Snowman (雪人)",
+      "facet": "European cartoon characters",
+      "known_at": 11
+    },
+    {
+      "name": "Walt Disney (华特·迪士尼)",
+      "facet": "Animation creators and studios",
+      "known_at": 3
+    },
+    {
+      "name": "Hayao Miyazaki (宫崎骏)",
+      "facet": "Animation creators and studios",
+      "known_at": 6
+    },
+    {
+      "name": "Studio Ghibli (吉卜力工作室)",
+      "facet": "Animation creators and studios",
+      "known_at": 7
+    },
+    {
+      "name": "Isao Takahata (高畑勋)",
+      "facet": "Animation creators and studios",
+      "known_at": 13
+    },
+    {
+      "name": "Joe Hisaishi (久石让)",
+      "facet": "Animation creators and studios",
+      "known_at": 10
+    },
+    {
+      "name": "Fujiko F. Fujio (藤子·F·不二雄)",
+      "facet": "Animation creators and studios",
+      "known_at": 9
+    },
+    {
+      "name": "Osamu Tezuka (手冢治虫)",
+      "facet": "Animation creators and studios",
+      "known_at": 11
+    },
+    {
+      "name": "Akira Toriyama (鸟山明)",
+      "facet": "Animation creators and studios",
+      "known_at": 9
+    },
+    {
+      "name": "Eiichiro Oda (尾田荣一郎)",
+      "facet": "Animation creators and studios",
+      "known_at": 9
+    },
+    {
+      "name": "Gosho Aoyama (青山刚昌)",
+      "facet": "Animation creators and studios",
+      "known_at": 10
+    },
+    {
+      "name": "Takehiko Inoue (井上雄彦)",
+      "facet": "Animation creators and studios",
+      "known_at": 11
+    },
+    {
+      "name": "Makoto Shinkai (新海诚)",
+      "facet": "Animation creators and studios",
+      "known_at": 10
+    },
+    {
+      "name": "Pixar (皮克斯)",
+      "facet": "Animation creators and studios",
+      "known_at": 4
+    },
+    {
+      "name": "DreamWorks Animation (梦工厂)",
+      "facet": "Animation creators and studios",
+      "known_at": 6
+    },
+    {
+      "name": "Warner Bros. (华纳兄弟)",
+      "facet": "Animation creators and studios",
+      "known_at": 7
+    },
+    {
+      "name": "Steve Jobs (史蒂夫·乔布斯)",
+      "facet": "Animation creators and studios",
+      "known_at": 10
+    },
+    {
+      "name": "John Lasseter (约翰·拉塞特)",
+      "facet": "Animation creators and studios",
+      "known_at": 13
+    },
+    {
+      "name": "Hanna-Barbera (汉纳-巴伯拉)",
+      "facet": "Animation creators and studios",
+      "known_at": 12
+    },
+    {
+      "name": "Aardman Animations (阿德曼)",
+      "facet": "Animation creators and studios",
+      "known_at": 12
+    },
+    {
+      "name": "Toei Animation (东映动画)",
+      "facet": "Animation creators and studios",
+      "known_at": 12
+    },
+    {
+      "name": "Hergé (埃尔热)",
+      "facet": "Animation creators and studios",
+      "known_at": 11
+    },
+    {
+      "name": "Tex Avery (特克斯·艾弗里)",
+      "facet": "Animation creators and studios",
+      "known_at": 14
+    },
+    {
+      "name": "Anime (日本动画)",
+      "facet": "Animation history and techniques",
+      "known_at": 3
+    },
+    {
+      "name": "Manga (日本漫画)",
+      "facet": "Animation history and techniques",
+      "known_at": 4
+    },
+    {
+      "name": "Flip book (手翻书)",
+      "facet": "Animation history and techniques",
+      "known_at": 4
+    },
+    {
+      "name": "Voice acting (配音)",
+      "facet": "Animation history and techniques",
+      "known_at": 6
+    },
+    {
+      "name": "Stop motion (定格动画)",
+      "facet": "Animation history and techniques",
+      "known_at": 7
+    },
+    {
+      "name": "Claymation (黏土动画)",
+      "facet": "Animation history and techniques",
+      "known_at": 8
+    },
+    {
+      "name": "CGI (电脑动画)",
+      "facet": "Animation history and techniques",
+      "known_at": 9
+    },
+    {
+      "name": "Steamboat Willie (威利号汽船)",
+      "facet": "Animation history and techniques",
+      "known_at": 9
+    },
+    {
+      "name": "Academy Award for Best Animated Feature (奥斯卡最佳动画长片奖)",
+      "facet": "Animation history and techniques",
+      "known_at": 10
+    },
+    {
+      "name": "Rendering (渲染)",
+      "facet": "Animation history and techniques",
+      "known_at": 11
+    },
+    {
+      "name": "Persistence of vision (视觉暂留)",
+      "facet": "Animation history and techniques",
+      "known_at": 11
+    },
+    {
+      "name": "Zoetrope (走马盘)",
+      "facet": "Animation history and techniques",
+      "known_at": 12
+    },
+    {
+      "name": "Thaumatrope (幻盘)",
+      "facet": "Animation history and techniques",
+      "known_at": 13
+    },
+    {
+      "name": "Gertie the Dinosaur (恐龙格蒂)",
+      "facet": "Animation history and techniques",
+      "known_at": 15
+    }
+  ]
+}

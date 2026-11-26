@@ -326,7 +326,8 @@
     {
       "name": "Temple of Heaven",
       "facet": "Temples and sacred buildings",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The headline facts (what it looks like, praying for harvests) are already asked; the remaining options would repeat them."
     },
     {
       "name": "Hall of Prayer for Good Harvests",
@@ -726,7 +727,8 @@
     {
       "name": "Garden of Cultivation",
       "facet": "Classical gardens of Suzhou",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Too obscure for a fair question; the only fair options (which city) are far easier than the target."
     },
     {
       "name": "Retreat and Reflection Garden",
@@ -861,7 +863,8 @@
     {
       "name": "Old Dragon's Head (老龙头)",
       "facet": "Ancient engineering and canals",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: Its name and Great Wall–meets–sea fact are already in the pool; the dynasty (Ming) is a weak, guessable question."
     },
     {
       "name": "Zhan Tianyou",

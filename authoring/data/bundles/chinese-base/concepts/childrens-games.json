@@ -686,7 +686,8 @@
     {
       "name": "Tic-tac-toe (井字棋)",
       "facet": "Board and table games for kids",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The earlier riddle already gives X's, O's and three in a row, which answers every option here."
     },
     {
       "name": "Sudoku (数独)",

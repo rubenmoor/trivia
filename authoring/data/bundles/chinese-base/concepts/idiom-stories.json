@@ -611,7 +611,8 @@
     {
       "name": "Boring through the wall for light: Kuang Heng",
       "facet": "Hard-working scholars' stories",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The idiom's wording is the story itself, and the pool already asks why Kuang Heng bored through the wall (to read at night)."
     },
     {
       "name": "Reading by fireflies: Che Yin",
@@ -751,7 +752,8 @@
     {
       "name": "Dongpo pork: Su Shi",
       "facet": "Poets, painters and calligraphers",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The pool already asks which poet Dongpo pork is named after and says it's from Hangzhou. The remaining facts (Huangzhou exile, “Ode to Pork”) are far above difficulty 6."
     },
     {
       "name": "Eighteen vats of water: Wang Xianzhi",

@@ -166,7 +166,8 @@
     {
       "name": "Fu Weng (涪翁)",
       "facet": "Bian Que and early physicians",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Fu Weng and his Fu River are too obscure even for specialists to reason towards."
     },
     {
       "name": "Han stone reliefs of Bian Que",
@@ -201,7 +202,8 @@
     {
       "name": "Huatuo Jiaji points",
       "facet": "Hua Tuo and surgery legends",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: The Chinese name 夹脊 (\"beside the spine\") gives away the location in Chinese, and other facts are too specialist."
     },
     {
       "name": "Wu Pu (吴普)",
@@ -212,7 +214,8 @@
     {
       "name": "Fan E (樊阿)",
       "facet": "Hua Tuo and surgery legends",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Fan E is too obscure for a fair count or date question."
     },
     {
       "name": "Bozhou",
