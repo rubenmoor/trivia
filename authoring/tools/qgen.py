@@ -2039,7 +2039,7 @@ def main():
     rp.add_argument("--mode", help="with --simulate: solo|rr-coop|rr-competitive|timed|all (default solo); "
                     "with --played: one mode (default every mode)")
     rp.add_argument("--players", type=int, help="with --simulate: players in rr-coop, rr-competitive and timed (default 4); with --career: one count (default 1, 2 and 4)")
-    rp.add_argument("--seeds", type=int, help="with --simulate or --career: runs per cell (default 40; career 3)")
+    rp.add_argument("--seeds", type=int, help="with --simulate or --career: runs per cell (default 40; career 3); a large bundle is quicker narrowed: --age-group young_teens --seeds 10 (~7 min)")
     rp.add_argument("--career", action="store_true",
                     help="career supply figures per locale, age group, player model and player count, per category × difficulty band "
                     "(milestone 20, plan 193); --locale, --age-group, --player, --players (default 1, 2, 4), --seeds, --json")
