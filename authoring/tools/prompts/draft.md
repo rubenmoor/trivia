@@ -2,7 +2,7 @@
 
 Write questions for one subcategory of the trivia game described above. You get the subcategory, its broad category, the question axes, a list of slots, and the bundle every question is in. Each slot has:
 - a `concept` (and its facet): what the question is about;
-- a `target_difficulty`;
+- a `target_difficulty`; some slots also have a `difficulty_range` [lo, hi]: the question must land inside it, ±1 included;
 - up to three numbered `options`: combinations of the question axes (move, stimulus, clue, answer_kind, lens);
 - `already_asked`: every question the pool already has about this concept, also from other subcategories; an entry in brackets is a related concept another subcategory drafts in this batch.
 

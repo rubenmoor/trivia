@@ -178,6 +178,28 @@ def draft_gaps(pool_questions, bundle, supply=None):
     return out if any(out.values()) else None
 
 
+def load_minimums(bundle):
+    """{"per_subcategory": n, "bands": [(lo, hi), …]} of the bundle's "minimums" (decision 831), or None."""
+    m = (load_all().get(bundle) or {}).get("minimums")
+    return m and {"per_subcategory": m["per_subcategory"], "bands": [tuple(b) for b in m["bands"]]}
+
+
+def minimum_gaps(pool_questions, bundle, locale="en"):
+    """{subcategory: {(lo, hi): short}}: every subcategory of the bundle below "minimums" (decision 831), approved
+    in `locale` (approved_entries); {} when met or without minimums."""
+    m = load_minimums(bundle)
+    if not m:
+        return {}
+    have = Counter((q["subcategory"], b) for q in approved_entries(pool_questions, bundle, locale)
+                   for b in m["bands"] if b[0] <= q["difficulty"] <= b[1])
+    out = {}
+    for s in categories.subcategories(bundle):
+        short = {b: m["per_subcategory"] - have[(s, b)] for b in m["bands"] if have[(s, b)] < m["per_subcategory"]}
+        if short:
+            out[s] = short
+    return out
+
+
 def category_shares(bundle):
     """{broad category slug: derived share} = total × its subcategories / the bundle's (guide only)."""
     t = load_targets(bundle)
@@ -215,4 +237,11 @@ def problems(scale, bundles):
             out.append(f"{REL}: {b}: targets must be integers ≥ 0: {', '.join(bad)}")
         elif not isinstance(total, int) or isinstance(total, bool) or sum(diff.values()) != total:
             out.append(f"{REL}: {b}: difficulty targets sum to {sum(diff.values())}, total is {total}")
+        m = t.get("minimums")
+        if m is not None and not (isinstance(m, dict) and set(m) - {"about"} == {"per_subcategory", "bands"}
+                                  and isinstance(m["per_subcategory"], int) and m["per_subcategory"] >= 1
+                                  and isinstance(m["bands"], list) and m["bands"]
+                                  and all(isinstance(x, list) and len(x) == 2 and all(isinstance(v, int) for v in x)
+                                          and lo <= x[0] <= x[1] <= hi for x in m["bands"])):
+            out.append(f"{REL}: {b}: minimums must be {{\"per_subcategory\": n ≥ 1, \"bands\": [[lo, hi], …] within {lo}–{hi}}}")
     return out

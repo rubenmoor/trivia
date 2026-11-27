@@ -870,13 +870,14 @@ def assign_difficulties(free, fresh, weights, seed, rounds=50):
 TIE_REDRAWS = 5  # draw_slots: redraws of a concept tied to an earlier subcategory's in the run
 
 
-def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base", locale="es"):
+def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base", locale="es", specs=None):
     """{subcategory: slots} for a run (PE-10): a concept, a target difficulty, up to 3 axis
     combinations and the questions already asked about the concept, per slot. Seeded. `already_asked`:
     the subcategory's questions on the concept plus, from every subcategory and bundle, the non-rejected
     ones a concept probe finds (overlap_candidates rank ≤ 2, decision 350); all in `locale` (as_locale).
     A concept the probe ties to one an earlier subcategory of the run drew is redrawn (TIE_REDRAWS tries);
-    still tied, its slot's `already_asked` names the other concept (decision 350 c)."""
+    still tied, its slot's `already_asked` names the other concept (decision 350 c). `specs`: a top-up's
+    {subcategory: [{"target_difficulty", "difficulty_range"?}]} (batches.top_up, decision 831) instead of n levels."""
     shown = as_locale(pool_questions, locale)
     others = [q for q in shown if q.get("of", q)["status"] != "rejected"]
     cache, taken = {}, []  # taken: probes of earlier subcategories' concepts
@@ -888,9 +889,12 @@ def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base", locale="e
         return [p for p, _, rank in overlap_candidates(name_probe(c), taken, cache, locale) if rank <= 2]
     lists = {s: concepts.load(bundle, s) for s in subs}
     used = {s: concepts.uses(pool_questions, bundle, s) for s in subs}
-    levels = assign_difficulties({s: n for s in subs},
-                                 {s: [c["known_at"] for c in concepts.unused(lists[s], used[s])] for s in subs},
-                                 target_weights(pool_questions, bundle), seed)
+    if specs is None:
+        levels = assign_difficulties({s: n for s in subs},
+                                     {s: [c["known_at"] for c in concepts.unused(lists[s], used[s])] for s in subs},
+                                     target_weights(pool_questions, bundle), seed)
+        specs = {s: [{"target_difficulty": lvl} for lvl in levels[s]] for s in subs}
+    levels = {s: [sp["target_difficulty"] for sp in specs[s]] for s in subs}
     plan = {}
     for s in subs:
         rng = random.Random(f"{seed}:{s}")
@@ -909,7 +913,7 @@ def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base", locale="e
                 picked[i] = alt[0]
         tied = {c["name"]: [p["concept"] for p in ties(c)] for c in picked}
         taken += [name_probe(c) for c in picked]
-        pairs = list(zip(picked, levels[s]))
+        pairs = list(zip(picked, specs[s]))
         rng.shuffle(pairs)
         usage = concepts.axis_usage(pool_questions, bundle, s)
         offered = {a: set() for a in concepts.AXES}
@@ -917,7 +921,7 @@ def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base", locale="e
         if not possible:
             print(f"  {s}: no axis combination fits (see axis_fit in its concept list); no slots", file=sys.stderr)
         slots = []
-        for c, target in pairs:
+        for c, spec in pairs:
             combos = concepts.draw_combos(axes_def, lst.get("axis_fit", {}), usage, offered, rng,
                                           possible=possible)
             if not combos:
@@ -927,7 +931,7 @@ def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base", locale="e
             found = [p for p, _, rank in overlap_candidates(name_probe(c), others, cache, locale) if rank <= 2]
             asked = list(dict.fromkeys(f"{q['question']} → {q['answer']}" for q in own + found))
             asked += [f"(this run, another subcategory: a question about «{t}»)" for t in tied[c["name"]]]
-            slots.append({"slot": len(slots), "concept": c["name"], "facet": c["facet"], "target_difficulty": target,
+            slots.append({"slot": len(slots), "concept": c["name"], "facet": c["facet"], **spec,
                           "options": [{"option": i, **combo} for i, combo in enumerate(combos, 1)],
                           "already_asked": asked})
         plan[s] = slots
@@ -964,6 +968,11 @@ def draft_user(pool, bundle, sub, slots, axes_def, locale):
             + "\n\n## Bundle\n" + bundle_text(bundle, locale))
 
 
+def top_up_plan(pool_questions, bundle):
+    """batches.top_up in the bundle's drafting locale (decision 831)."""
+    return batches.top_up(pool_questions, bundle, translations.draft_locale(bundle_row(bundle)))
+
+
 def dry_run_batch(args):
     """`qgen batch [--bundle <id>] --dry-run`: the next run's subcategories and size, and the first concept call's and
     draft call's user messages as they'd be sent (a missing list: the concept call only); no calls, nothing written."""
@@ -971,20 +980,29 @@ def dry_run_batch(args):
         sys.exit("--dry-run: not for --media-first")
     check_bundle(args.bundle)
     pool = load_json(POOL)
-    subs = sub_keys(args.subcategories, args.bundle) if args.subcategories else batches.subcategories(pool["questions"], args.count, args.bundle)
     first = not (args.subcategories or args.count) and batches.pilot(pool["questions"], args.bundle)
+    top = not (args.subcategories or args.count or first) and top_up_plan(pool["questions"], args.bundle)
+    subs = (sub_keys(args.subcategories, args.bundle) if args.subcategories else list(top) if top
+            else batches.subcategories(pool["questions"], args.count, args.bundle))
     n = batches.PILOT_SLOTS if first else BATCH_SLOTS
     locale, axes_def = translations.draft_locale(bundle_row(args.bundle)), concepts.load_axes(args.bundle)
     have = Counter(q["subcategory"] for q in pool["questions"] if q.get("bundle") == args.bundle and q["status"] == "approved")
-    print(f"Next run for bundle {args.bundle} in {LANGUAGES[locale]}: {len(subs)} subcategories × {n} slots = {len(subs) * n}"
-          + (" (the bundle's first draft run, a pilot)" if first else ""))
+    if top:
+        print(f"Next run for bundle {args.bundle} in {LANGUAGES[locale]}: a top-up for the minimums and draft gaps "
+              f"(decision 831): {len(subs)} subcategories, {sum(map(len, top.values()))} slots")
+    else:
+        print(f"Next run for bundle {args.bundle} in {LANGUAGES[locale]}: {len(subs)} subcategories × {n} slots = {len(subs) * n}"
+              + (" (the bundle's first draft run, a pilot)" if first else ""))
     for s in subs:
-        print(f"  {s}: {have[s]} approved, concept list {'yes' if concepts.load(args.bundle, s) else 'to make'}")
+        picks = "; slots " + ", ".join(f"{sp['target_difficulty']}" + ("" if "difficulty_range" not in sp else
+                                       " ({}–{})".format(*sp["difficulty_range"])) for sp in top[s]) if top else ""
+        print(f"  {s}: {have[s]} approved, concept list {'yes' if concepts.load(args.bundle, s) else 'to make'}{picks}")
     sub = subs[0]
     print(f"\n== concept call ({sub}), user message start\n{concept_intro(args.bundle, sub, locale, axes_def)}{related_text(pool['questions'], args.bundle, sub)}")
     with_list = next((s for s in subs if concepts.load(args.bundle, s)), None)
     if with_list:
-        slots = draw_slots([with_list], pool["questions"], axes_def, n, 1, args.bundle, locale)[with_list]
+        slots = draw_slots([with_list], pool["questions"], axes_def, n, 1, args.bundle, locale,
+                           top and {with_list: top[with_list]})[with_list]
         print(f"\n== draft call ({with_list}), system prompt {len(prompt('house-style', 'draft', locale=locale, bundle=args.bundle))} "
               f"characters, user message\n{draft_user(pool, args.bundle, with_list, slots, axes_def, locale)}")
     else:
@@ -1005,7 +1023,8 @@ def cmd_draft(args):
     locale = text_locale(d)
     plan = load_json(d / "slots.json")
     if plan is None:  # drawn once, so a rerun drafts the same slots
-        plan = draw_slots(subs, pool["questions"], axes_def, cfg.get("slots", BATCH_SLOTS), 1, bundle, locale)
+        plan = draw_slots(subs, pool["questions"], axes_def, cfg.get("slots", BATCH_SLOTS), 1, bundle, locale,
+                          cfg.get("top_up"))
         save_json(d / "slots.json", plan)
     drawn = Counter(sl["target_difficulty"] for slots in plan.values() for sl in slots)
     print("target difficulty: " + "  ".join(f"{lvl}×{c}" for lvl, c in sorted(drawn.items())), flush=True)
@@ -1847,11 +1866,16 @@ def cmd_batch(args):
             unknown = not_in_bundle(subs, args.bundle)
             if unknown:
                 sys.exit(f"Not in {categories.path(args.bundle).relative_to(ROOT)}: {', '.join(unknown)}")
-        else:
+        aimed = not (args.media_first or args.subcategories or args.count)
+        first = aimed and batches.pilot(load_json(POOL)["questions"], args.bundle)
+        top = aimed and not first and top_up_plan(load_json(POOL)["questions"], args.bundle)  # decision 831
+        if top:
+            subs = list(top)
+        elif not (args.media_first or args.subcategories):
             subs = batches.subcategories(load_json(POOL)["questions"], args.count, args.bundle)  # D-46, D-54
-        first = not (args.media_first or args.subcategories or args.count) and batches.pilot(load_json(POOL)["questions"], args.bundle)
         save_json(d / "run.json", {"mode": mode, "bundle": args.bundle, "subcategories": subs,
                                    **({"pilot": True, "slots": batches.PILOT_SLOTS} if first else {}),
+                                   **({"top_up": top} if top else {}),
                                    "draft_locale": "en" if args.media_first else translations.draft_locale(bundle_row(args.bundle)),
                                    **({"files": args.files} if args.media_first else {}),
                                    "started": datetime.date.today().isoformat()})
@@ -1860,7 +1884,8 @@ def cmd_batch(args):
     progress.verbose = False  # one summary per step, no detail line per item (QG-20)
     what = (f"from surveyed Commons files ({cfg['files'] or 'up to ' + str(media_first.MF_DESIGNED) + ' designed'})"
             if args.media_first else f"for bundle {args.bundle} in {LANGUAGES[locale]}: {len(subs)} subcategories"
-            + (f" × {cfg['slots']} slots (the bundle's first draft run, a pilot)" if cfg.get("pilot") else ""))
+            + (f" × {cfg['slots']} slots (the bundle's first draft run, a pilot)" if cfg.get("pilot") else "")
+            + (f", a top-up of {sum(map(len, cfg['top_up'].values()))} slots for the minimums (decision 831)" if cfg.get("top_up") else ""))
     print(f"{'Resuming' if resuming else 'Starting'} {run} {what}. This takes from several minutes to an hour.", flush=True)
 
     def ns(**kw):
