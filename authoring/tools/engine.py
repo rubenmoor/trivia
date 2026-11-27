@@ -8,7 +8,7 @@ CAREER = AUTHORING / "tools" / "sim" / "career.ts"
 SUPPLY = AUTHORING / "tools" / "supply.ts"
 
 
-CELL_TIMEOUT = 3600  # seconds per node cell (chinese-base, 40 seeds: ~1700 s alone, more in parallel)
+CELL_TIMEOUT = 7200  # seconds per node cell (chinese-base en, default run: slowest cell ~5000 s)
 
 
 def lock():

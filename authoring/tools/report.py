@@ -437,10 +437,12 @@ def first_base(locales):
     return {l: [b["id"] for b in bundles if b.get("kind") == "base" and l in b.get("languages", [])][:1] for l in locales}
 
 
-def target_bundles(bundles, default):
-    """Bundles whose targets the D-75 check reads: `--bundles` (comma-separated) else the locale's default; only those with targets."""
-    ids = bundles.split(",") if bundles else default
-    return [b for b in ids if targets.load_targets(b) is not None] or default
+def target_bundles(bundles, locale, default, catalogue=None):
+    """Base bundles whose targets the D-75 check reads for `locale`: the `--bundles` (comma-separated) ones of kind base
+    that list it, else the locale's default."""
+    catalogue = catalogue if catalogue is not None else load_json(layout.BUNDLES)["bundles"]
+    base = {b["id"] for b in catalogue if b.get("kind") == "base" and locale in b.get("languages", [])}
+    return [b for b in (bundles.split(",") if bundles else []) if b in base] or default
 
 
 def report_simulate(args):
@@ -467,7 +469,7 @@ def report_simulate(args):
         done = dict(zip(map(id, have), ex.map(engine.simulate, have)))
     results = [done.get(id(c)) or {**c, "result": "no_pool"} for c in cells]
     pool = load_json(POOL)["questions"]
-    checks = [target_check(l, pool, b) for l in locales for b in target_bundles(args.bundles, default[l])]
+    checks = [target_check(l, pool, b) for l in locales for b in target_bundles(args.bundles, l, default[l])]
     ok = all(c["ok"] for c in checks)
     if args.json:
         print(json.dumps({"model": {"typical_p": engine_model(results)}, "seconds": round(time.monotonic() - t0, 1),
@@ -506,10 +508,10 @@ def report_simulate(args):
     widths = [max(len(row[i]) for row in rows) for i in range(len(rows[0]) - 1)]
     for row in rows:
         print("  " + "  ".join(c.ljust(w) for c, w in zip(row, widths)) + "  " + row[-1])
-    print("target check (D-75, decision 37: approved base questions per launch language vs. base's targets):")
+    print("target check (D-75, decision 37: approved questions per launch language vs. its base bundle's own targets):")
     for c in checks:
         short = ", ".join(f"{d}: −{n}" for d, n in c["short"].items())
-        print(f"  {'✓' if c['ok'] else '✗'} {c['locale']}{'' if c['bundle'] == 'base' else ' ' + c['bundle']}: "
+        print(f"  {'✓' if c['ok'] else '✗'} {c['locale']} {c['bundle']}: "
               f"{c['approved']}/{c['total']} approved"
               + (f"; short at difficulty {short}" if short else ""))
     sys.exit(0 if ok else 1)
