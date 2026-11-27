@@ -445,6 +445,14 @@ def target_bundles(bundles, locale, default, catalogue=None):
     return [b for b in (bundles.split(",") if bundles else []) if b in base] or default
 
 
+def unoffered(bundles, locales, catalogue=None):
+    """{locale: first `--bundles` id (comma-separated) whose `languages` lack it}, for the locales some bundle lacks."""
+    catalogue = catalogue if catalogue is not None else load_json(layout.BUNDLES)["bundles"]
+    langs = {b["id"]: b.get("languages", []) for b in catalogue}
+    ids = [b for b in (bundles.split(",") if bundles else []) if b in langs]
+    return {l: next(b for b in ids if l not in langs[b]) for l in locales if any(l not in langs[b] for b in ids)}
+
+
 def report_simulate(args):
     """Games per new player until the first repeat (plan 62, CT-2; plan 65), information only; exit code = D-75's target check."""
     locales = args.locale.split(",") if args.locale else translations.LOCALES
@@ -452,6 +460,10 @@ def report_simulate(args):
     for l in [l for l in locales if not default[l]]:
         print(f"simulate: {l} skipped, no base bundle lists it")
     locales = [l for l in locales if default[l]]
+    lacking = unoffered(args.bundles, locales)
+    for l, b in lacking.items():
+        print(f"simulate: {l} skipped, {b} doesn't offer it")
+    locales = [l for l in locales if l not in lacking]
     modes = SIM_MODES if args.mode == "all" else (args.mode or "solo").split(",")
     groups = args.age_group.split(",") if args.age_group else [g["id"] for g in load_age_groups()["groups"]]
     player = args.player or "both"

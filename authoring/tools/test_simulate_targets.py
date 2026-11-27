@@ -40,5 +40,18 @@ class TargetBundles(unittest.TestCase):
         self.assertEqual(report.target_bundles("base,colombia", "es", ["base"]), ["base"])
 
 
+class Unoffered(unittest.TestCase):
+    def test_skips_locales_a_bundle_lacks(self):
+        got = report.unoffered("chinese-base", ["es", "en", "zh-Hans", "de"], CATALOGUE)
+        self.assertEqual(got, {"es": "chinese-base", "de": "chinese-base"})
+
+    def test_every_bundle_must_offer(self):
+        got = report.unoffered("base,chinese-base", ["es", "en", "zh-Hans"], CATALOGUE)
+        self.assertEqual(got, {"es": "chinese-base", "zh-Hans": "base"})
+
+    def test_none_given(self):
+        self.assertEqual(report.unoffered(None, ["es"], CATALOGUE), {})
+
+
 if __name__ == "__main__":
     unittest.main()
