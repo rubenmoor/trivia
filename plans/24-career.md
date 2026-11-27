@@ -15,7 +15,7 @@ The career gives each player a long-term sense of progress: school-style subject
 - Career is per player (`PlayerRow`); Steam is per account: any player's badge unlocks for the account (`decision 285: Achievements from multiplayer sessions: every seat earns for the save; tower achievements need a win at the top level`).
 - Each seat earns from its own answers (`history[].seat`, `rr-competitive` seat states); shared `rr-coop` answers: part 3's plan settles it, the simulation counts solo play.
 - Enabled by default; a player can turn it off: still counted, hidden (`decision 515: Career turned off: what happens to a player's progress and badges?`); score and rank too.
-- DLC adds no badges and changes none: fixed subject list, DLC categories map onto it, every badge reachable with the base bundle alone.
+- DLC adds no badges and changes none: fixed subject list, DLC categories map onto it, every badge reachable with the base bundle alone (per base bundle: `chinese-base` checked, see "Career check against `chinese-base`").
 
 ## Subjects
 - 7 fixed subjects; every question counts for the subject of its category. Source: `decision 517`; machine form in the data (`plan 194: Subjects in the data`): the ordered list in `app/data/subjects.json`, `subject` per category in every `categories.json` (base and bundles), names under `subjects` in base `names.<locale>.json`.
@@ -174,6 +174,13 @@ The career gives each player a long-term sense of progress: school-style subject
 
 ## Supply figures
 - `qgen report --career [--subjects FILE] [--locale …] [--json]` (needs Node, dev shell): per category × band supply and games-to-N from the engine sessions (`authoring/tools/sim/career.ts`); output of 2026-11-04 in `work/career/supply-categories.md`.
+
+## Career check against `chinese-base` (`task 2325: Career check against chinese-base`)
+- Run 2026-11-26 on en, `chinese-base` 6338 approved vs `base` 6214: `qgen report --career --locale en --bundles chinese-base|base --players 1` (3 seeds × 100 games, all age groups, strong and typical); output in `work/career/supply-chinese-base-en.txt`, `supply-base-en.txt`. No code change: `--career` already takes `--bundles`.
+- Result: every badge reachable with `chinese-base` alone, in a comparable number of games. Static supply per subject × band within ≈ ±15 % of `base` (13+ band thinner: 628 vs 897 in all, 30 vs 49 in sport, 48 vs 79 in media); games to 25 right, typical 1 player, e.g. adults (all) 1–4+ 7 vs 8, 9–12+ 14 vs 16; adults strong 13+ 12 vs 12; young adults strong 13+ 31 vs 29; sport adults typical 61 vs 48 (slowest row, still reachable).
+- Same reach pattern as `base` (table above): kids: grade 1 only (grade 2 strong only), typical young adults never reach college; no badge in reach for `base` is out of reach for `chinese-base`, and the other way round (nature 9–12+ adults typical `chinese-base` –, `base` 80; science 9–12+ the reverse: `chinese-base` 78, `base` –).
+- `qgen report --simulate --bundles chinese-base --locale en` (young_teens, 10 seeds): games run, no ALL_CATEGORIES problem; median 61 games strong / 43 typical before a repeat. Target check short at difficulty 1 (−6), 3 (−4), 15 (−26) of 6000: information, not a career gap.
+- zh rerun: part of the zh go-live numbers (`plan 145: Release, career check and close-out of Chinese`).
 
 ## Engine and save (`plan 195: Career engine and save`)
 - Counters are stored, not derived (`decision 589: Career engine: counters per player in the save, kept up by one catch-up step after every game action`); save version 6, upgrade 5 → 6 a no-op (the bump keeps older builds off saves with careers). Code: `app/client/src/engine/career.ts` (pure), checks in `engine/save.ts` `parseSave`.
