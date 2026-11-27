@@ -328,6 +328,11 @@
       "13": 276,
       "14": 150,
       "15": 150
+    },
+    "minimums": {
+      "about": "Top-up criterion (decision 831): every subcategory has at least per_subcategory approved questions with a difficulty in each band (young teens' level 2 and 3 ranges); `qgen batch --bundle chinese-base` drafts a top-up for these and the draft gaps while any is open.",
+      "per_subcategory": 2,
+      "bands": [[2, 3], [3, 5]]
     }
   }
 }

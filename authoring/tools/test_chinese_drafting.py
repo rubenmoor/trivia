@@ -233,5 +233,77 @@ class Prompts(Fixture):
         self.assertEqual(list(self.work.iterdir()), [])
 
 
+class TopUp(unittest.TestCase):
+    """Top-up runs (decision 831): minimums per subcategory and band, then the draft gaps."""
+    SUBS = ["a", "b", "c"]
+    MIN = {"per_subcategory": 2, "bands": [(2, 3), (3, 5)]}
+
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp())
+        for obj, name, value in ((categories, "subcategories", lambda bundle=None: list(self.SUBS)),
+                                 (targets, "load_minimums", lambda bundle: self.MIN if bundle == B else None),
+                                 (targets, "draft_gaps", lambda pool, bundle, supply=None: dict(self.gaps)),
+                                 (translations, "load", lambda locale: {"questions": []}),
+                                 (concepts, "CONCEPTS", self.tmp), (concepts, "BUNDLE_SOURCES", self.tmp)):
+            p = mock.patch.object(obj, name, value)
+            p.start()
+            self.addCleanup(p.stop)
+        self.gaps = {3: 1, 15: 2}
+        self.pool = [q(f"q-{i}", bundle=B, sub=s, difficulty=d, batch="batch-500")
+                     for i, (s, d) in enumerate([("a", 2), ("a", 3), ("a", 3), ("b", 2), ("b", 4)])]
+        for s, known in (("a", [14, 15, 15]), ("b", [2, 3])):
+            concepts.save(B, s, {"subcategory": s, "facets": ["F"], "axis_fit": FIT,
+                                 "concepts": [{"name": f"{s}{i}", "facet": "F", "known_at": k} for i, k in enumerate(known)]})
+
+    def test_minimum_gaps(self):
+        self.assertEqual(targets.minimum_gaps(self.pool, B), {"b": {(2, 3): 1, (3, 5): 1}, "c": {(2, 3): 2, (3, 5): 2}})
+        self.assertEqual(targets.minimum_gaps(self.pool, "base"), {})
+
+    def test_band_slots_then_gap_slots(self):
+        self.assertEqual(batches.top_up(self.pool, B), {
+            "a": [{"target_difficulty": 15}, {"target_difficulty": 15}],  # the list with concepts near 15
+            "b": [{"target_difficulty": 3, "difficulty_range": [3, 3]}],  # one question fills both bands
+            "c": [{"target_difficulty": 3, "difficulty_range": [3, 3]}] * 2})  # level 3's gap used up by b's slot
+
+    def test_level_in_one_band_follows_the_gap(self):
+        self.MIN = {"per_subcategory": 1, "bands": [(2, 3)]}
+        self.pool = [x for x in self.pool if x["subcategory"] != "b"]
+        self.gaps = {2: 1, 3: 0}
+        self.assertEqual(batches.top_up(self.pool, B)["b"], [{"target_difficulty": 2, "difficulty_range": [2, 3]}])  # gap used
+        self.gaps = {}
+        self.assertEqual(batches.top_up(self.pool, B)["b"], [{"target_difficulty": 2, "difficulty_range": [2, 3]}])  # lowest
+
+    def test_met_or_without_minimums_no_top_up(self):
+        self.assertEqual(batches.top_up(self.pool, "base"), {})
+        self.MIN = {"per_subcategory": 1, "bands": [(2, 4)]}
+        self.pool.append(q("q-9", bundle=B, sub="c", difficulty=2))
+        self.gaps = {}
+        self.assertEqual(batches.top_up(self.pool, B), {})
+
+
+class TopUpRun(Fixture):
+    def test_slots_carry_the_range(self):
+        concepts.save(B, REUSED, {"subcategory": REUSED, "facets": ["Roots"], "axis_fit": FIT,
+                                  "concepts": [{"name": "Carrot", "facet": "Roots", "known_at": 4}]})
+        spec = {"target_difficulty": 2, "difficulty_range": [2, 3]}
+        plan = qgen.draw_slots([REUSED], self.data(), concepts.load_axes(B), 18, 1, B, "en", {REUSED: [spec]})
+        self.assertEqual(len(plan[REUSED]), 1)
+        self.assertEqual({k: plan[REUSED][0][k] for k in spec}, spec)
+
+    def test_batch_writes_the_top_up_after_the_pilot(self):
+        self.save(self.data() + [q("q-0007", bundle=B, sub=NEW, answer="Red packet", batch="batch-500")])
+        self.patch(qgen, "run_steps", lambda *a, **k: (_ for _ in ()).throw(SystemExit("stopped")))
+        self.patch(qgen, "lock_run", lambda d: d.mkdir(parents=True, exist_ok=True))
+        a = argparse.Namespace(from_bundle=None, translate=None, ids=None, dry_run=False, media_first=False, files=None,
+                               until=None, bundle=B, run=None, subcategories=None, count=None, jobs=1)
+        with self.assertRaises(SystemExit):
+            qgen.cmd_batch(a)
+        run = json.loads(next(self.work.glob("batch-*/run.json")).read_text())
+        want = batches.top_up(self.data(), B)
+        self.assertNotIn("pilot", run)
+        self.assertEqual((run["top_up"], run["subcategories"]), (want, list(want)))
+        self.assertTrue(all(sl["difficulty_range"] for sl in want[NEW]))  # one copy-free approved question at 4: short in 2–3
+
+
 if __name__ == "__main__":
     unittest.main()

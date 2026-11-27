@@ -195,6 +195,25 @@ def report_progress(pool, bundle, locale="es"):
         line(f"  {slug:{w}}", by_cat[slug], round(share))
     if targets.kind_of(bundle) in {"base", "theme"}:
         report_supply(pool, locale, bundle)
+    report_minimums(pool, bundle, locale)
+
+
+def report_minimums(pool, bundle, locale):
+    """The top-up criterion (decision 831): subcategories below "minimums" per band, the level deficits; quiet without."""
+    m = targets.load_minimums(bundle)
+    if not m:
+        return
+    gaps = targets.minimum_gaps(pool, bundle, locale)
+    n = m["per_subcategory"]
+    print(f"minimums ({bundle}, {locale}; decision 831): ≥ {n} approved per subcategory in each band")
+    for b in m["bands"]:
+        short = {s: g[b] for s, g in gaps.items() if b in g}
+        print(f"  difficulty {b[0]}–{b[1]}: {len(short)} subcategories short, {sum(short.values())} questions"
+              + "".join(f"\n    {s}: {n - k} of {n}" for s, k in short.items()))
+    d = targets.draft_gaps(pool, bundle) or {}
+    print("  level deficits (drafts, the draft gap over the bundle's locales): "
+          + (", ".join(f"{l}: {k}" for l, k in sorted(d.items()) if k) or "none")
+          + ("" if gaps or d else "  (met: the next `qgen batch` is a full run)"))
 
 
 def first_language(bundle):
