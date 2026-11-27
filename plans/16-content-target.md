@@ -109,3 +109,22 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per questi
   - Subcategory mix: new China subcategories mostly 56–88 % of their derived share (nature-of-china, chinese-sport, geography-of-china, chinese-science); reused `base` categories 100–176 %. Guide only, no stop.
 - `qgen report --simulate --locale en --bundles chinese-base`: the full run (all age groups × both players, 40 seeds) hits the 1800 s per-cell timeout; narrowed `--age-group young_teens --seeds 10`: 412 s, strong median 61 games, bound 36; typical median 43, p10 15; k 193.
   - Its D-75 target check reads the locale's first base bundle (`base`), not `--bundles` → ✗ on `base` (6214/6000, short at 3–9, 11); follow-up task. `chinese-base` itself ends short by the 36 above, so ✗ there too until reworked.
+
+### Why typical young teens repeat early (2026-11-27, task 2438)
+- Terms: "level" = game level of young teens (`app/data/age-groups.json`: level 1 = difficulty 1, level 2 = difficulty 2–3, level 3 = difficulty 3–5); "difficulty" = the pool's 1–15 field. Counts: approved en, `app/data/bundles/chinese-base/pool.en.json` vs `app/data/pool.en.json`.
+- `qgen report --simulate --locale en --age-group young_teens --seeds 10`, `--bundles chinese-base` / `base`: typical median 43 (p10 15) vs 101.5 (p10 71.2); strong 61 vs 60.5 (equal). Total supply equal (6338 vs 6214).
+- First repeat per seed (typical; seed list from a throw-away log in `sim/simulate.ts`, not kept):
+  - `chinese-base`: 9 of 10 a Doña Exigente (Cambiazo) card, games 6, 16, 22, 32, 54, 57, 96, 124, 170; at level 1 ×4, level 2 ×3, level 3 ×2; one plain draw (level 6, game 18).
+  - `base`: 4 Doña Exigente, all at level 1 (games 37, 75, 143, 170); 6 plain draws at levels 2–3 (games 88–118).
+- Mechanism: the sim plays the joker once per game at a random level and picks a random subcategory among those with a question in the level's range; the engine gives the least-seen one; a subcategory with one question in range repeats once that question was seen in any earlier game. 7 of the 9 `chinese-base` repeats hit a subcategory with exactly 1 question in its level's range (crewed-spaceflight, tang-dynasty, silk-road-and-voyages at level 2; confucianism at level 3; dinosaurs, space-race-and-astronauts, video-game-characters at level 1); the other 2 had 2.
+- Depth per subcategory in the level's range (subcategories with exactly 1 / ≤ 2 question(s)):
+
+  | level (difficulty) | `chinese-base` | `base` |
+  |---|---|---|
+  | 1 (1) | 294 in 102; 29 / 59 | 328 in 147; 50 / 103 |
+  | 2 (2–3) | 973 in 172, median 4; 34 / 57 | 1033 in 189, median 5; 14 / 36 |
+  | 3 (3–5) | 1661 in 200, median 7; 8 / 18 | 1521 in 196, median 8; 4 / 10 |
+
+- Cause: single-question subcategories at levels 2 and 3 (34 + 8 vs 14 + 4); 27 of the 34 and all 8 are new China subcategories (slug not in `base`); they make Doña Exigente repeat from game 6 on. Not total supply, not the 36 short at difficulties 1, 3, 15 (`decision 826`), not plain level draws (draw median 126 vs 112.5, `chinese-base` better). Level 1 is thin in both bundles (`base` more), so it isn't the difference.
+- Try 1's "level 2: 437 vs 526" was difficulty 2 alone (117 vs 167 subcategories; per subcategory `chinese-base` is deeper there, 3.7 vs 3.1); level 2 (difficulty 2–3) is 973 vs 1033, 60 fewer.
+- Fixes, sized: drafting to ≥ 2 in range = 34 questions at level 2 + 8 at level 3 (42); to ≥ 3 = 91 + 26 (117). Or a selection change: Doña Exigente offers only subcategories with an unseen question in range (engine, every bundle). `decision 831: chinese-base: typical young teens meet a repeat after about 43 games (base: about 100) because of single-question subcategories at levels 2–3: accept, draft about 40–120 questions, or let Doña Exigente skip used-up subcategories?` asked; it replaces `decision 830` (numbers mixed up level and difficulty; for the developer to close as irrelevant) and feeds the go-live (`decision 755`).
