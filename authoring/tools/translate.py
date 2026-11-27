@@ -488,7 +488,7 @@ def cmd_convert_batch(args):
           f"(took {progress.duration(time.monotonic() - t0)}).")
     if n:
         files = [translations.path(hant.LOCALE), layout.POOL_FILE(hant.LOCALE), layout.POOL_FILE(hant.LOCALE, bundle), layout.BUNDLE_DATA, layout.DEMO_DATA,
-                 hant.EXCEPTIONS, *([layout.REPORTS / f"{result['vocab'][0]}.md"] if result["vocab"] else [])]
+                 hant.EXCEPTIONS, *([layout.REPORTS / f"{result['vocab'][0]}.md"] if result["vocab"] else []), *zh_fonts()]
         print("Commit exactly this:\n  git add " + " ".join(f.relative_to(ROOT).as_posix() for f in files) + "\n"
               f"  git commit -m \"zh-Hant: {len(result['done'])} {'' if bundle == 'base' else bundle + ' '}questions converted from zh-Hans "
               f"(qgen batch --translate)\"")
@@ -503,7 +503,12 @@ def commit_files(locale, bundle, out, confirmed):
     if confirmed:
         others = [l for l in translations.LOCALES if l != locale]
         files[1:1] = [POOL] + [f for l in others for f in (translations.path(l), layout.POOL_FILE(l, bundle))]
-    return files
+    return files + (zh_fonts() if locale.startswith("zh") or confirmed else [])
+
+
+def zh_fonts():
+    """The zh subsets `qgen export` re-subsets: they change with the zh pools' text."""
+    return sorted(layout.FONTS.glob("zh-*.woff2"))
 
 
 def write_translate_report(run):

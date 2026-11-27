@@ -42,7 +42,7 @@ live in work/<run>/ and every step skips what is already done, so a run can be r
 goes to work/<run>/calls.jsonl; a command that called Claude ends with a `claude:` totals line (decision 208).
 
 """
-import argparse, atexit, concurrent.futures, datetime, difflib, fcntl, hashlib, json, os, random, re, subprocess, sys, threading, time, unicodedata
+import argparse, atexit, concurrent.futures, datetime, difflib, fcntl, hashlib, json, os, random, re, shutil, subprocess, sys, threading, time, unicodedata
 from pathlib import Path
 from collections import Counter
 
@@ -1982,6 +1982,20 @@ def cmd_export(args):
             print(f"  {l} translations: {c['stale']} stale, {c['left_out']} left out (source not approved or not translatable)")
     for path in pool_export.demo_exports(pool):
         print(f"exported {len(load_json(path)['questions'])} demo question(s) to {path.relative_to(ROOT)}")
+    resubset_zh_fonts(pool)
+
+
+def resubset_zh_fonts(pool):
+    """New zh text needs glyphs: re-subset the zh fonts (the zh runs' printed `git add` lists them); fails soft, `npm run check` still guards."""
+    script = ROOT / "app" / "desktop" / "subset-fonts.mjs"
+    if not any(translations.exported(l, pool) for l in translations.LOCALES if l.startswith("zh")):
+        return
+    if not shutil.which("node"):
+        print("re-subset the zh fonts: SKIPPED, no node on PATH (dev shell); `npm run check` may fail")
+        return
+    r = subprocess.run(["node", str(script)], capture_output=True, text=True)
+    print("re-subset the zh fonts (subset-fonts.mjs):" + ("" if r.returncode == 0 else " FAILED, missing glyphs"))
+    print("  " + (r.stdout + r.stderr).strip().replace("\n", "\n  "))
 
 
 

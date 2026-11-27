@@ -15,6 +15,7 @@ TARGETS = AUTHORING / "data" / "targets.json"  # pool targets per bundle (D-53)
 HEALTH_ACKS = AUTHORING / "data" / "health-acks.json"  # the developer's acks of failing batches (plan 15, D-55)
 AUDIO_CREDITS = REPO / "app" / "client" / "public" / "audio" / "CREDITS.md"  # rows read by app/client/credits.ts
 AUDIO = AUDIO_CREDITS.parent  # shipped audio files
+FONTS = REPO / "app" / "client" / "public" / "fonts"  # zh-*.woff2: subsets by app/desktop/subset-fonts.mjs (decision 767)
 SFX_RECORDS = AUTHORING / "data" / "sfx"  # one provenance record per sound effect file (plan 223)
 MUSIC_RECORDS = AUTHORING / "data" / "music"  # one provenance record per library track (plan 221)
 SPOT_CHECKS = AUTHORING / "data" / "spot-checks.json"  # human spot checks per batch (plan 16)
