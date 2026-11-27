@@ -34,6 +34,12 @@ class CommitFiles(unittest.TestCase):
             self.assertIn(translate.layout.POOL_FILE(l, "base"), files)
         self.assertEqual(len(files), len(set(files)))
 
+    def test_zh_run_stages_fonts(self):
+        fonts = translate.zh_fonts()
+        self.assertTrue(fonts)
+        self.assertTrue(set(fonts) <= set(translate.commit_files("zh-Hans", "chinese-base", Path("out.md"), 0)))
+        self.assertFalse(set(fonts) & set(translate.commit_files("de", "base", Path("out.md"), 0)))
+
 
 class StaleLines(unittest.TestCase):
     def test_printed_paths_are_real_pools(self):

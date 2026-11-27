@@ -1986,9 +1986,12 @@ def cmd_export(args):
 
 
 def resubset_zh_fonts(pool):
-    """New zh text needs glyphs: re-subset the zh fonts (stage the changed woff2 files); fails soft, `npm run check` still guards."""
+    """New zh text needs glyphs: re-subset the zh fonts (the zh runs' printed `git add` lists them); fails soft, `npm run check` still guards."""
     script = ROOT / "app" / "desktop" / "subset-fonts.mjs"
-    if not any(translations.exported(l, pool) for l in translations.LOCALES if l.startswith("zh")) or not shutil.which("node"):
+    if not any(translations.exported(l, pool) for l in translations.LOCALES if l.startswith("zh")):
+        return
+    if not shutil.which("node"):
+        print("re-subset the zh fonts: SKIPPED, no node on PATH (dev shell); `npm run check` may fail")
         return
     r = subprocess.run(["node", str(script)], capture_output=True, text=True)
     print("re-subset the zh fonts (subset-fonts.mjs):" + ("" if r.returncode == 0 else " FAILED, missing glyphs"))
