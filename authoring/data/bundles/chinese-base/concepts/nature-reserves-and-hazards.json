@@ -555,7 +555,8 @@
     {
       "name": "Hail",
       "facet": "Typhoons, droughts and extreme weather",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Hail has already been asked three ways (sound, warning phrase, thundercloud formation). The remaining options (odd-one-out place, origin person, photo with a place as the answer) don't fit hail at difficulty 2–3 without repeating those questions."
     },
     {
       "name": "Cloud seeding",

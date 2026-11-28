@@ -1,0 +1,991 @@
+{
+  "subcategory": "space-race-and-astronauts",
+  "facets": [
+    "Sputnik and Soviet firsts",
+    "Pioneering cosmonauts and astronauts",
+    "Apollo Moon landings",
+    "Animals in early spaceflight",
+    "Rockets and launch sites",
+    "Capsules, spacecraft and space suits",
+    "Space Shuttle era",
+    "Mir, Skylab and the ISS",
+    "Daily life and training in orbit",
+    "Cold War rivalry and milestones",
+    "Famous words, photos and moments"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 4,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 3,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sputnik 2",
+      "facet": "Sputnik and Soviet firsts",
+      "known_at": 10
+    },
+    {
+      "name": "Vostok 1",
+      "facet": "Sputnik and Soviet firsts",
+      "known_at": 8
+    },
+    {
+      "name": "Vostok 6",
+      "facet": "Sputnik and Soviet firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Voskhod 2",
+      "facet": "Sputnik and Soviet firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Luna 3",
+      "facet": "Sputnik and Soviet firsts",
+      "known_at": 13
+    },
+    {
+      "name": "Venera 7",
+      "facet": "Sputnik and Soviet firsts",
+      "known_at": 14
+    },
+    {
+      "name": "Venera 9",
+      "facet": "Sputnik and Soviet firsts",
+      "known_at": 14
+    },
+    {
+      "name": "Mars 3",
+      "facet": "Sputnik and Soviet firsts",
+      "known_at": 14
+    },
+    {
+      "name": "Salyut 1",
+      "facet": "Sputnik and Soviet firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Voskhod 1",
+      "facet": "Sputnik and Soviet firsts",
+      "known_at": 14
+    },
+    {
+      "name": "Buzz Aldrin",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 7
+    },
+    {
+      "name": "Michael Collins",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 11
+    },
+    {
+      "name": "Alexei Leonov",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 9
+    },
+    {
+      "name": "Alan Shepard",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 12
+    },
+    {
+      "name": "John Glenn",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 12
+    },
+    {
+      "name": "Gherman Titov",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 14
+    },
+    {
+      "name": "Sally Ride",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 12
+    },
+    {
+      "name": "Svetlana Savitskaya",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 14
+    },
+    {
+      "name": "Valeri Polyakov",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 13
+    },
+    {
+      "name": "Mae Jemison",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 13
+    },
+    {
+      "name": "Eugene Cernan",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 13
+    },
+    {
+      "name": "Jim Lovell",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 12
+    },
+    {
+      "name": "Christina Koch",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 13
+    },
+    {
+      "name": "Dennis Tito",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 12
+    },
+    {
+      "name": "Taylor Wang",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 12
+    },
+    {
+      "name": "Leroy Chiao",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 13
+    },
+    {
+      "name": "Pham Tuan",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 14
+    },
+    {
+      "name": "Chris Hadfield",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 12
+    },
+    {
+      "name": "Scott Kelly",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 12
+    },
+    {
+      "name": "Mercury Seven",
+      "facet": "Pioneering cosmonauts and astronauts",
+      "known_at": 14
+    },
+    {
+      "name": "Apollo program",
+      "facet": "Apollo Moon landings",
+      "known_at": 6
+    },
+    {
+      "name": "Apollo 8",
+      "facet": "Apollo Moon landings",
+      "known_at": 11
+    },
+    {
+      "name": "Apollo 12",
+      "facet": "Apollo Moon landings",
+      "known_at": 12
+    },
+    {
+      "name": "Apollo 13",
+      "facet": "Apollo Moon landings",
+      "known_at": 10
+    },
+    {
+      "name": "Apollo 14",
+      "facet": "Apollo Moon landings",
+      "known_at": 13
+    },
+    {
+      "name": "Apollo 15",
+      "facet": "Apollo Moon landings",
+      "known_at": 13
+    },
+    {
+      "name": "Apollo 17",
+      "facet": "Apollo Moon landings",
+      "known_at": 12
+    },
+    {
+      "name": "Lunar Module Eagle",
+      "facet": "Apollo Moon landings",
+      "known_at": 9
+    },
+    {
+      "name": "Command module Columbia",
+      "facet": "Apollo Moon landings",
+      "known_at": 12
+    },
+    {
+      "name": "Lunar Roving Vehicle",
+      "facet": "Apollo Moon landings",
+      "known_at": 8
+    },
+    {
+      "name": "Sea of Tranquility",
+      "facet": "Apollo Moon landings",
+      "known_at": 11
+    },
+    {
+      "name": "Moon rocks",
+      "facet": "Apollo Moon landings",
+      "known_at": 5
+    },
+    {
+      "name": "Lunar laser ranging retroreflector",
+      "facet": "Apollo Moon landings",
+      "known_at": 12
+    },
+    {
+      "name": "Apollo 11 mission patch",
+      "facet": "Apollo Moon landings",
+      "known_at": 11
+    },
+    {
+      "name": "Moon dust",
+      "facet": "Apollo Moon landings",
+      "known_at": 7
+    },
+    {
+      "name": "Splashdown",
+      "facet": "Apollo Moon landings",
+      "known_at": 8
+    },
+    {
+      "name": "Belka and Strelka",
+      "facet": "Animals in early spaceflight",
+      "known_at": 10
+    },
+    {
+      "name": "Pushinka",
+      "facet": "Animals in early spaceflight",
+      "known_at": 14
+    },
+    {
+      "name": "Ham the chimpanzee",
+      "facet": "Animals in early spaceflight",
+      "known_at": 10
+    },
+    {
+      "name": "Enos the chimpanzee",
+      "facet": "Animals in early spaceflight",
+      "known_at": 14
+    },
+    {
+      "name": "Albert II",
+      "facet": "Animals in early spaceflight",
+      "known_at": 13
+    },
+    {
+      "name": "Félicette",
+      "facet": "Animals in early spaceflight",
+      "known_at": 12
+    },
+    {
+      "name": "Zond 5 tortoises",
+      "facet": "Animals in early spaceflight",
+      "known_at": 12
+    },
+    {
+      "name": "Fruit flies in space",
+      "facet": "Animals in early spaceflight",
+      "known_at": 11
+    },
+    {
+      "name": "Able and Baker",
+      "facet": "Animals in early spaceflight",
+      "known_at": 14
+    },
+    {
+      "name": "Arabella the spider",
+      "facet": "Animals in early spaceflight",
+      "known_at": 13
+    },
+    {
+      "name": "Mice in space",
+      "facet": "Animals in early spaceflight",
+      "known_at": 8
+    },
+    {
+      "name": "Tardigrades in space",
+      "facet": "Animals in early spaceflight",
+      "known_at": 11
+    },
+    {
+      "name": "Medaka fish in space",
+      "facet": "Animals in early spaceflight",
+      "known_at": 13
+    },
+    {
+      "name": "Jellyfish in space",
+      "facet": "Animals in early spaceflight",
+      "known_at": 12
+    },
+    {
+      "name": "Space dogs",
+      "facet": "Animals in early spaceflight",
+      "known_at": 6
+    },
+    {
+      "name": "Saturn V",
+      "facet": "Rockets and launch sites",
+      "known_at": 9
+    },
+    {
+      "name": "R-7 Semyorka",
+      "facet": "Rockets and launch sites",
+      "known_at": 14
+    },
+    {
+      "name": "Soyuz rocket",
+      "facet": "Rockets and launch sites",
+      "known_at": 10
+    },
+    {
+      "name": "Proton rocket",
+      "facet": "Rockets and launch sites",
+      "known_at": 14
+    },
+    {
+      "name": "N1 rocket",
+      "facet": "Rockets and launch sites",
+      "known_at": 14
+    },
+    {
+      "name": "Energia",
+      "facet": "Rockets and launch sites",
+      "known_at": 14
+    },
+    {
+      "name": "Falcon 9",
+      "facet": "Rockets and launch sites",
+      "known_at": 8
+    },
+    {
+      "name": "Starship",
+      "facet": "Rockets and launch sites",
+      "known_at": 8
+    },
+    {
+      "name": "Ariane 5",
+      "facet": "Rockets and launch sites",
+      "known_at": 12
+    },
+    {
+      "name": "Baikonur Cosmodrome",
+      "facet": "Rockets and launch sites",
+      "known_at": 10
+    },
+    {
+      "name": "Kennedy Space Center",
+      "facet": "Rockets and launch sites",
+      "known_at": 8
+    },
+    {
+      "name": "Cape Canaveral",
+      "facet": "Rockets and launch sites",
+      "known_at": 10
+    },
+    {
+      "name": "Guiana Space Centre",
+      "facet": "Rockets and launch sites",
+      "known_at": 13
+    },
+    {
+      "name": "Plesetsk Cosmodrome",
+      "facet": "Rockets and launch sites",
+      "known_at": 15
+    },
+    {
+      "name": "Vostochny Cosmodrome",
+      "facet": "Rockets and launch sites",
+      "known_at": 14
+    },
+    {
+      "name": "Robert Goddard",
+      "facet": "Rockets and launch sites",
+      "known_at": 13
+    },
+    {
+      "name": "Rocket stages",
+      "facet": "Rockets and launch sites",
+      "known_at": 7
+    },
+    {
+      "name": "Launch abort system",
+      "facet": "Rockets and launch sites",
+      "known_at": 10
+    },
+    {
+      "name": "Kármán line",
+      "facet": "Rockets and launch sites",
+      "known_at": 11
+    },
+    {
+      "name": "Orbital velocity",
+      "facet": "Rockets and launch sites",
+      "known_at": 10
+    },
+    {
+      "name": "Countdown",
+      "facet": "Rockets and launch sites",
+      "known_at": 2
+    },
+    {
+      "name": "Vostok capsule",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 12
+    },
+    {
+      "name": "Mercury capsule",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 13
+    },
+    {
+      "name": "Gemini capsule",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 13
+    },
+    {
+      "name": "Apollo command module",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 10
+    },
+    {
+      "name": "Soyuz spacecraft",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 9
+    },
+    {
+      "name": "Crew Dragon",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 9
+    },
+    {
+      "name": "Orion spacecraft",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 11
+    },
+    {
+      "name": "Starliner",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 12
+    },
+    {
+      "name": "Rosetta",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 12
+    },
+    {
+      "name": "Space helmet",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 1
+    },
+    {
+      "name": "Spacesuit gloves",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 5
+    },
+    {
+      "name": "Sokol space suit",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 14
+    },
+    {
+      "name": "Orlan space suit",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 14
+    },
+    {
+      "name": "Extravehicular Mobility Unit",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 13
+    },
+    {
+      "name": "Launch and entry suit",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 9
+    },
+    {
+      "name": "Manned Maneuvering Unit",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 11
+    },
+    {
+      "name": "Spacewalk tether",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 5
+    },
+    {
+      "name": "Atmospheric re-entry",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 8
+    },
+    {
+      "name": "Space blanket",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 7
+    },
+    {
+      "name": "Capsule parachutes",
+      "facet": "Capsules, spacecraft and space suits",
+      "known_at": 5
+    },
+    {
+      "name": "Space Shuttle",
+      "facet": "Space Shuttle era",
+      "known_at": 5
+    },
+    {
+      "name": "Space Shuttle Columbia",
+      "facet": "Space Shuttle era",
+      "known_at": 12
+    },
+    {
+      "name": "Space Shuttle Discovery",
+      "facet": "Space Shuttle era",
+      "known_at": 12
+    },
+    {
+      "name": "Space Shuttle Atlantis",
+      "facet": "Space Shuttle era",
+      "known_at": 12
+    },
+    {
+      "name": "Space Shuttle Endeavour",
+      "facet": "Space Shuttle era",
+      "known_at": 12
+    },
+    {
+      "name": "Space Shuttle Enterprise",
+      "facet": "Space Shuttle era",
+      "known_at": 11
+    },
+    {
+      "name": "Buran",
+      "facet": "Space Shuttle era",
+      "known_at": 12
+    },
+    {
+      "name": "STS-1",
+      "facet": "Space Shuttle era",
+      "known_at": 14
+    },
+    {
+      "name": "Shuttle external tank",
+      "facet": "Space Shuttle era",
+      "known_at": 11
+    },
+    {
+      "name": "Solid rocket boosters",
+      "facet": "Space Shuttle era",
+      "known_at": 11
+    },
+    {
+      "name": "Shuttle heat tiles",
+      "facet": "Space Shuttle era",
+      "known_at": 11
+    },
+    {
+      "name": "Shuttle Carrier Aircraft",
+      "facet": "Space Shuttle era",
+      "known_at": 11
+    },
+    {
+      "name": "Canadarm",
+      "facet": "Space Shuttle era",
+      "known_at": 12
+    },
+    {
+      "name": "Spacelab",
+      "facet": "Space Shuttle era",
+      "known_at": 14
+    },
+    {
+      "name": "Hubble servicing missions",
+      "facet": "Space Shuttle era",
+      "known_at": 12
+    },
+    {
+      "name": "Last Space Shuttle flight",
+      "facet": "Space Shuttle era",
+      "known_at": 12
+    },
+    {
+      "name": "International Space Station",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 4
+    },
+    {
+      "name": "Mir",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 9
+    },
+    {
+      "name": "Skylab",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 12
+    },
+    {
+      "name": "Salyut 7",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 14
+    },
+    {
+      "name": "Zarya module",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 13
+    },
+    {
+      "name": "Zvezda module",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 13
+    },
+    {
+      "name": "Destiny laboratory",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 14
+    },
+    {
+      "name": "Kibo module",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 13
+    },
+    {
+      "name": "Columbus module",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 13
+    },
+    {
+      "name": "Cupola",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 12
+    },
+    {
+      "name": "Canadarm2",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 12
+    },
+    {
+      "name": "ISS solar arrays",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 8
+    },
+    {
+      "name": "Progress cargo ship",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 13
+    },
+    {
+      "name": "Expedition 1",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 14
+    },
+    {
+      "name": "Shuttle–Mir program",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 14
+    },
+    {
+      "name": "Point Nemo",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 12
+    },
+    {
+      "name": "Low Earth orbit",
+      "facet": "Mir, Skylab and the ISS",
+      "known_at": 9
+    },
+    {
+      "name": "Microgravity",
+      "facet": "Daily life and training in orbit",
+      "known_at": 5
+    },
+    {
+      "name": "Astronaut ice cream",
+      "facet": "Daily life and training in orbit",
+      "known_at": 5
+    },
+    {
+      "name": "Space toilet",
+      "facet": "Daily life and training in orbit",
+      "known_at": 4
+    },
+    {
+      "name": "Sleeping in space",
+      "facet": "Daily life and training in orbit",
+      "known_at": 3
+    },
+    {
+      "name": "Exercise in space",
+      "facet": "Daily life and training in orbit",
+      "known_at": 5
+    },
+    {
+      "name": "Water recycling in space",
+      "facet": "Daily life and training in orbit",
+      "known_at": 9
+    },
+    {
+      "name": "Space sickness",
+      "facet": "Daily life and training in orbit",
+      "known_at": 9
+    },
+    {
+      "name": "Sunrises in orbit",
+      "facet": "Daily life and training in orbit",
+      "known_at": 8
+    },
+    {
+      "name": "Spacewalk",
+      "facet": "Daily life and training in orbit",
+      "known_at": 4
+    },
+    {
+      "name": "Maximum Absorbency Garment",
+      "facet": "Daily life and training in orbit",
+      "known_at": 8
+    },
+    {
+      "name": "Human centrifuge",
+      "facet": "Daily life and training in orbit",
+      "known_at": 9
+    },
+    {
+      "name": "Neutral Buoyancy Laboratory",
+      "facet": "Daily life and training in orbit",
+      "known_at": 9
+    },
+    {
+      "name": "Parabolic flight",
+      "facet": "Daily life and training in orbit",
+      "known_at": 11
+    },
+    {
+      "name": "Star City",
+      "facet": "Daily life and training in orbit",
+      "known_at": 14
+    },
+    {
+      "name": "Mission control",
+      "facet": "Daily life and training in orbit",
+      "known_at": 5
+    },
+    {
+      "name": "Washing hair in space",
+      "facet": "Daily life and training in orbit",
+      "known_at": 6
+    },
+    {
+      "name": "Tortillas in space",
+      "facet": "Daily life and training in orbit",
+      "known_at": 11
+    },
+    {
+      "name": "Space Race",
+      "facet": "Cold War rivalry and milestones",
+      "known_at": 8
+    },
+    {
+      "name": "Sputnik crisis",
+      "facet": "Cold War rivalry and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Founding of NASA",
+      "facet": "Cold War rivalry and milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Explorer 1",
+      "facet": "Cold War rivalry and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Vanguard TV3",
+      "facet": "Cold War rivalry and milestones",
+      "known_at": 15
+    },
+    {
+      "name": "Project Mercury",
+      "facet": "Cold War rivalry and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Project Gemini",
+      "facet": "Cold War rivalry and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Kennedy's Moon speech",
+      "facet": "Cold War rivalry and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Soviet crewed Moon program",
+      "facet": "Cold War rivalry and milestones",
+      "known_at": 14
+    },
+    {
+      "name": "Apollo–Soyuz Test Project",
+      "facet": "Cold War rivalry and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Outer Space Treaty",
+      "facet": "Cold War rivalry and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Intercontinental ballistic missile",
+      "facet": "Cold War rivalry and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Interkosmos",
+      "facet": "Cold War rivalry and milestones",
+      "known_at": 14
+    },
+    {
+      "name": "Cosmonautics Day",
+      "facet": "Cold War rivalry and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "First docking in space",
+      "facet": "Cold War rivalry and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Roscosmos",
+      "facet": "Cold War rivalry and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "“One small step for man”",
+      "facet": "Famous words, photos and moments",
+      "known_at": 6
+    },
+    {
+      "name": "“Poyekhali!”",
+      "facet": "Famous words, photos and moments",
+      "known_at": 12
+    },
+    {
+      "name": "“Houston, we have a problem”",
+      "facet": "Famous words, photos and moments",
+      "known_at": 10
+    },
+    {
+      "name": "“The Eagle has landed”",
+      "facet": "Famous words, photos and moments",
+      "known_at": 12
+    },
+    {
+      "name": "Earthrise",
+      "facet": "Famous words, photos and moments",
+      "known_at": 11
+    },
+    {
+      "name": "The Blue Marble",
+      "facet": "Famous words, photos and moments",
+      "known_at": 10
+    },
+    {
+      "name": "Pale Blue Dot",
+      "facet": "Famous words, photos and moments",
+      "known_at": 12
+    },
+    {
+      "name": "Bootprint on the Moon",
+      "facet": "Famous words, photos and moments",
+      "known_at": 3
+    },
+    {
+      "name": "Flag on the Moon",
+      "facet": "Famous words, photos and moments",
+      "known_at": 4
+    },
+    {
+      "name": "Apollo 11 lunar plaque",
+      "facet": "Famous words, photos and moments",
+      "known_at": 13
+    },
+    {
+      "name": "Moon landing TV broadcast",
+      "facet": "Famous words, photos and moments",
+      "known_at": 8
+    },
+    {
+      "name": "Apollo 8 Genesis reading",
+      "facet": "Famous words, photos and moments",
+      "known_at": 14
+    },
+    {
+      "name": "Golf on the Moon",
+      "facet": "Famous words, photos and moments",
+      "known_at": 11
+    },
+    {
+      "name": "Hammer and feather drop",
+      "facet": "Famous words, photos and moments",
+      "known_at": 10
+    },
+    {
+      "name": "“Chaika” call sign",
+      "facet": "Famous words, photos and moments",
+      "known_at": 14
+    },
+    {
+      "name": "Overview effect",
+      "facet": "Famous words, photos and moments",
+      "known_at": 13
+    },
+    {
+      "name": "Space Oddity on the ISS",
+      "facet": "Famous words, photos and moments",
+      "known_at": 13
+    },
+    {
+      "name": "First spacewalk photo",
+      "facet": "Famous words, photos and moments",
+      "known_at": 11
+    }
+  ]
+}

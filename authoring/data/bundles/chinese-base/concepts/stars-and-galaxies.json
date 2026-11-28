@@ -1,0 +1,927 @@
+{
+  "subcategory": "stars-and-galaxies",
+  "facets": [
+    "The Sun as a star",
+    "Life and death of stars",
+    "Black holes and neutron stars",
+    "Famous bright stars",
+    "Constellations and the Big Dipper",
+    "Cowherd, Weaver Girl and star legends",
+    "Ancient Chinese astronomy",
+    "The Milky Way and other galaxies",
+    "Big Bang and cosmic distances",
+    "Telescopes and observatories",
+    "Stargazing and the night sky",
+    "Stars in poems and sayings"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 2,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 5,
+      "science_news": 4,
+      "educational_media": 5,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sunspot",
+      "facet": "The Sun as a star",
+      "known_at": 7
+    },
+    {
+      "name": "Corona",
+      "facet": "The Sun as a star",
+      "known_at": 9
+    },
+    {
+      "name": "Kuafu-1 solar satellite",
+      "facet": "The Sun as a star",
+      "known_at": 13
+    },
+    {
+      "name": "Cecilia Payne",
+      "facet": "The Sun as a star",
+      "known_at": 14
+    },
+    {
+      "name": "Tropic of Cancer",
+      "facet": "The Sun as a star",
+      "known_at": 8
+    },
+    {
+      "name": "Nebula",
+      "facet": "Life and death of stars",
+      "known_at": 7
+    },
+    {
+      "name": "Protostar",
+      "facet": "Life and death of stars",
+      "known_at": 12
+    },
+    {
+      "name": "Main sequence",
+      "facet": "Life and death of stars",
+      "known_at": 12
+    },
+    {
+      "name": "White dwarf",
+      "facet": "Life and death of stars",
+      "known_at": 9
+    },
+    {
+      "name": "Supernova",
+      "facet": "Life and death of stars",
+      "known_at": 7
+    },
+    {
+      "name": "Planetary nebula",
+      "facet": "Life and death of stars",
+      "known_at": 12
+    },
+    {
+      "name": "Red dwarf",
+      "facet": "Life and death of stars",
+      "known_at": 10
+    },
+    {
+      "name": "Brown dwarf",
+      "facet": "Life and death of stars",
+      "known_at": 12
+    },
+    {
+      "name": "Blue giant",
+      "facet": "Life and death of stars",
+      "known_at": 10
+    },
+    {
+      "name": "Wolf-Rayet star",
+      "facet": "Life and death of stars",
+      "known_at": 14
+    },
+    {
+      "name": "Hertzsprung–Russell diagram",
+      "facet": "Life and death of stars",
+      "known_at": 13
+    },
+    {
+      "name": "Subrahmanyan Chandrasekhar",
+      "facet": "Life and death of stars",
+      "known_at": 14
+    },
+    {
+      "name": "Stardust",
+      "facet": "Life and death of stars",
+      "known_at": 8
+    },
+    {
+      "name": "Crab Nebula",
+      "facet": "Life and death of stars",
+      "known_at": 11
+    },
+    {
+      "name": "Supernova 1987A",
+      "facet": "Life and death of stars",
+      "known_at": 14
+    },
+    {
+      "name": "Eta Carinae",
+      "facet": "Life and death of stars",
+      "known_at": 14
+    },
+    {
+      "name": "Carina Nebula",
+      "facet": "Life and death of stars",
+      "known_at": 13
+    },
+    {
+      "name": "Orion Nebula",
+      "facet": "Life and death of stars",
+      "known_at": 11
+    },
+    {
+      "name": "Coalsack Nebula",
+      "facet": "Life and death of stars",
+      "known_at": 14
+    },
+    {
+      "name": "Cepheid variable",
+      "facet": "Life and death of stars",
+      "known_at": 13
+    },
+    {
+      "name": "Henrietta Swan Leavitt",
+      "facet": "Life and death of stars",
+      "known_at": 14
+    },
+    {
+      "name": "Light echo",
+      "facet": "Life and death of stars",
+      "known_at": 14
+    },
+    {
+      "name": "Binary star",
+      "facet": "Life and death of stars",
+      "known_at": 10
+    },
+    {
+      "name": "Event horizon",
+      "facet": "Black holes and neutron stars",
+      "known_at": 11
+    },
+    {
+      "name": "Neutron star",
+      "facet": "Black holes and neutron stars",
+      "known_at": 10
+    },
+    {
+      "name": "Magnetar",
+      "facet": "Black holes and neutron stars",
+      "known_at": 13
+    },
+    {
+      "name": "Jocelyn Bell Burnell",
+      "facet": "Black holes and neutron stars",
+      "known_at": 14
+    },
+    {
+      "name": "Hawking radiation",
+      "facet": "Black holes and neutron stars",
+      "known_at": 13
+    },
+    {
+      "name": "M87 black hole image",
+      "facet": "Black holes and neutron stars",
+      "known_at": 11
+    },
+    {
+      "name": "Cygnus X-1",
+      "facet": "Black holes and neutron stars",
+      "known_at": 14
+    },
+    {
+      "name": "Gravitational wave",
+      "facet": "Black holes and neutron stars",
+      "known_at": 10
+    },
+    {
+      "name": "LIGO",
+      "facet": "Black holes and neutron stars",
+      "known_at": 13
+    },
+    {
+      "name": "Kilonova",
+      "facet": "Black holes and neutron stars",
+      "known_at": 14
+    },
+    {
+      "name": "Spaghettification",
+      "facet": "Black holes and neutron stars",
+      "known_at": 11
+    },
+    {
+      "name": "Roger Penrose",
+      "facet": "Black holes and neutron stars",
+      "known_at": 13
+    },
+    {
+      "name": "Kip Thorne",
+      "facet": "Black holes and neutron stars",
+      "known_at": 13
+    },
+    {
+      "name": "Rainer Weiss",
+      "facet": "Black holes and neutron stars",
+      "known_at": 15
+    },
+    {
+      "name": "Interstellar",
+      "facet": "Black holes and neutron stars",
+      "known_at": 8
+    },
+    {
+      "name": "Quasar",
+      "facet": "Black holes and neutron stars",
+      "known_at": 12
+    },
+    {
+      "name": "Orbital precession",
+      "facet": "Black holes and neutron stars",
+      "known_at": 14
+    },
+    {
+      "name": "Polaris",
+      "facet": "Famous bright stars",
+      "known_at": 4
+    },
+    {
+      "name": "Sirius",
+      "facet": "Famous bright stars",
+      "known_at": 8
+    },
+    {
+      "name": "Vega",
+      "facet": "Famous bright stars",
+      "known_at": 7
+    },
+    {
+      "name": "Altair",
+      "facet": "Famous bright stars",
+      "known_at": 7
+    },
+    {
+      "name": "Betelgeuse",
+      "facet": "Famous bright stars",
+      "known_at": 10
+    },
+    {
+      "name": "Rigel",
+      "facet": "Famous bright stars",
+      "known_at": 12
+    },
+    {
+      "name": "Antares",
+      "facet": "Famous bright stars",
+      "known_at": 11
+    },
+    {
+      "name": "Arcturus",
+      "facet": "Famous bright stars",
+      "known_at": 12
+    },
+    {
+      "name": "Canopus",
+      "facet": "Famous bright stars",
+      "known_at": 12
+    },
+    {
+      "name": "Aldebaran",
+      "facet": "Famous bright stars",
+      "known_at": 12
+    },
+    {
+      "name": "Spica",
+      "facet": "Famous bright stars",
+      "known_at": 13
+    },
+    {
+      "name": "Deneb",
+      "facet": "Famous bright stars",
+      "known_at": 11
+    },
+    {
+      "name": "Proxima Centauri",
+      "facet": "Famous bright stars",
+      "known_at": 8
+    },
+    {
+      "name": "Barnard's Star",
+      "facet": "Famous bright stars",
+      "known_at": 14
+    },
+    {
+      "name": "Sirius B",
+      "facet": "Famous bright stars",
+      "known_at": 13
+    },
+    {
+      "name": "Procyon",
+      "facet": "Famous bright stars",
+      "known_at": 13
+    },
+    {
+      "name": "Capella",
+      "facet": "Famous bright stars",
+      "known_at": 13
+    },
+    {
+      "name": "Pointer stars",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 7
+    },
+    {
+      "name": "Ursa Major",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 6
+    },
+    {
+      "name": "Ursa Minor",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 7
+    },
+    {
+      "name": "Orion",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 6
+    },
+    {
+      "name": "Cassiopeia",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 10
+    },
+    {
+      "name": "Southern Cross",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 9
+    },
+    {
+      "name": "Scorpius",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 6
+    },
+    {
+      "name": "Zodiac",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 5
+    },
+    {
+      "name": "Virgo",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 6
+    },
+    {
+      "name": "Capricorn",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 7
+    },
+    {
+      "name": "Taurus",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 6
+    },
+    {
+      "name": "Leo",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 5
+    },
+    {
+      "name": "Gemini",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 6
+    },
+    {
+      "name": "Cygnus",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 10
+    },
+    {
+      "name": "Lyra",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 11
+    },
+    {
+      "name": "Aquila",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 11
+    },
+    {
+      "name": "Pleiades",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 10
+    },
+    {
+      "name": "Summer Triangle",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 9
+    },
+    {
+      "name": "88 constellations",
+      "facet": "Constellations and the Big Dipper",
+      "known_at": 11
+    },
+    {
+      "name": "Cowherd (牛郎)",
+      "facet": "Cowherd, Weaver Girl and star legends",
+      "known_at": 3
+    },
+    {
+      "name": "Weaver Girl (织女)",
+      "facet": "Cowherd, Weaver Girl and star legends",
+      "known_at": 3
+    },
+    {
+      "name": "Hou Yi shooting the suns",
+      "facet": "Cowherd, Weaver Girl and star legends",
+      "known_at": 3
+    },
+    {
+      "name": "Shen and Shang stars (参商)",
+      "facet": "Cowherd, Weaver Girl and star legends",
+      "known_at": 12
+    },
+    {
+      "name": "Three Star Gods Fu Lu Shou (福禄寿)",
+      "facet": "Cowherd, Weaver Girl and star legends",
+      "known_at": 6
+    },
+    {
+      "name": "Old Man of the South Pole (南极老人)",
+      "facet": "Cowherd, Weaver Girl and star legends",
+      "known_at": 8
+    },
+    {
+      "name": "Wenquxing (文曲星)",
+      "facet": "Cowherd, Weaver Girl and star legends",
+      "known_at": 8
+    },
+    {
+      "name": "Tanabata",
+      "facet": "Cowherd, Weaver Girl and star legends",
+      "known_at": 10
+    },
+    {
+      "name": "Orion and the Scorpion myth",
+      "facet": "Cowherd, Weaver Girl and star legends",
+      "known_at": 11
+    },
+    {
+      "name": "Callisto and the Great Bear",
+      "facet": "Cowherd, Weaver Girl and star legends",
+      "known_at": 12
+    },
+    {
+      "name": "Seven Sisters legend",
+      "facet": "Cowherd, Weaver Girl and star legends",
+      "known_at": 12
+    },
+    {
+      "name": "Matariki",
+      "facet": "Cowherd, Weaver Girl and star legends",
+      "known_at": 14
+    },
+    {
+      "name": "Three Enclosures (三垣)",
+      "facet": "Ancient Chinese astronomy",
+      "known_at": 13
+    },
+    {
+      "name": "Dunhuang Star Chart",
+      "facet": "Ancient Chinese astronomy",
+      "known_at": 12
+    },
+    {
+      "name": "Guest star (客星)",
+      "facet": "Ancient Chinese astronomy",
+      "known_at": 12
+    },
+    {
+      "name": "Han dynasty sunspot record",
+      "facet": "Ancient Chinese astronomy",
+      "known_at": 11
+    },
+    {
+      "name": "Suzhou Stone Star Chart",
+      "facet": "Ancient Chinese astronomy",
+      "known_at": 14
+    },
+    {
+      "name": "Milky Way",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 3
+    },
+    {
+      "name": "Large Magellanic Cloud",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 12
+    },
+    {
+      "name": "Small Magellanic Cloud",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 13
+    },
+    {
+      "name": "Spiral galaxy",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 7
+    },
+    {
+      "name": "Elliptical galaxy",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 11
+    },
+    {
+      "name": "Irregular galaxy",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 12
+    },
+    {
+      "name": "Orion Arm",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 13
+    },
+    {
+      "name": "Galactic bulge",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 13
+    },
+    {
+      "name": "Open cluster",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 12
+    },
+    {
+      "name": "Globular cluster",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 12
+    },
+    {
+      "name": "Virgo Cluster",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 14
+    },
+    {
+      "name": "Laniakea",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 14
+    },
+    {
+      "name": "Local Group",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 12
+    },
+    {
+      "name": "Galaxy collision",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 10
+    },
+    {
+      "name": "Hubble Deep Field",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 12
+    },
+    {
+      "name": "Triangulum Galaxy",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 14
+    },
+    {
+      "name": "Whirlpool Galaxy",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 13
+    },
+    {
+      "name": "Sombrero Galaxy",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 13
+    },
+    {
+      "name": "William Herschel",
+      "facet": "The Milky Way and other galaxies",
+      "known_at": 12
+    },
+    {
+      "name": "Expanding universe",
+      "facet": "Big Bang and cosmic distances",
+      "known_at": 9
+    },
+    {
+      "name": "Redshift",
+      "facet": "Big Bang and cosmic distances",
+      "known_at": 11
+    },
+    {
+      "name": "Edwin Hubble",
+      "facet": "Big Bang and cosmic distances",
+      "known_at": 10
+    },
+    {
+      "name": "Hubble constant",
+      "facet": "Big Bang and cosmic distances",
+      "known_at": 13
+    },
+    {
+      "name": "Dark energy",
+      "facet": "Big Bang and cosmic distances",
+      "known_at": 11
+    },
+    {
+      "name": "Age of the universe",
+      "facet": "Big Bang and cosmic distances",
+      "known_at": 10
+    },
+    {
+      "name": "Observable universe",
+      "facet": "Big Bang and cosmic distances",
+      "known_at": 11
+    },
+    {
+      "name": "Cosmic inflation",
+      "facet": "Big Bang and cosmic distances",
+      "known_at": 13
+    },
+    {
+      "name": "Parsec",
+      "facet": "Big Bang and cosmic distances",
+      "known_at": 12
+    },
+    {
+      "name": "Stellar parallax",
+      "facet": "Big Bang and cosmic distances",
+      "known_at": 12
+    },
+    {
+      "name": "Friedrich Bessel",
+      "facet": "Big Bang and cosmic distances",
+      "known_at": 14
+    },
+    {
+      "name": "Standard candle",
+      "facet": "Big Bang and cosmic distances",
+      "known_at": 14
+    },
+    {
+      "name": "FAST (中国天眼)",
+      "facet": "Telescopes and observatories",
+      "known_at": 5
+    },
+    {
+      "name": "James Webb Space Telescope",
+      "facet": "Telescopes and observatories",
+      "known_at": 9
+    },
+    {
+      "name": "Optical telescope",
+      "facet": "Telescopes and observatories",
+      "known_at": 5
+    },
+    {
+      "name": "Refracting telescope",
+      "facet": "Telescopes and observatories",
+      "known_at": 11
+    },
+    {
+      "name": "Reflecting telescope",
+      "facet": "Telescopes and observatories",
+      "known_at": 11
+    },
+    {
+      "name": "Gaia",
+      "facet": "Telescopes and observatories",
+      "known_at": 14
+    },
+    {
+      "name": "Arecibo Observatory",
+      "facet": "Telescopes and observatories",
+      "known_at": 12
+    },
+    {
+      "name": "Mauna Kea",
+      "facet": "Telescopes and observatories",
+      "known_at": 13
+    },
+    {
+      "name": "ALMA",
+      "facet": "Telescopes and observatories",
+      "known_at": 14
+    },
+    {
+      "name": "Kepler space telescope",
+      "facet": "Telescopes and observatories",
+      "known_at": 12
+    },
+    {
+      "name": "Planetarium",
+      "facet": "Telescopes and observatories",
+      "known_at": 5
+    },
+    {
+      "name": "X-ray astronomy",
+      "facet": "Telescopes and observatories",
+      "known_at": 12
+    },
+    {
+      "name": "Light pollution",
+      "facet": "Stargazing and the night sky",
+      "known_at": 6
+    },
+    {
+      "name": "Twinkling stars",
+      "facet": "Stargazing and the night sky",
+      "known_at": 5
+    },
+    {
+      "name": "Star trails",
+      "facet": "Stargazing and the night sky",
+      "known_at": 8
+    },
+    {
+      "name": "Apparent magnitude",
+      "facet": "Stargazing and the night sky",
+      "known_at": 12
+    },
+    {
+      "name": "Hipparchus",
+      "facet": "Stargazing and the night sky",
+      "known_at": 14
+    },
+    {
+      "name": "Precession of the equinoxes",
+      "facet": "Stargazing and the night sky",
+      "known_at": 14
+    },
+    {
+      "name": "Sextant",
+      "facet": "Stargazing and the night sky",
+      "known_at": 10
+    },
+    {
+      "name": "Celestial navigation",
+      "facet": "Stargazing and the night sky",
+      "known_at": 8
+    },
+    {
+      "name": "Morning star",
+      "facet": "Stargazing and the night sky",
+      "known_at": 6
+    },
+    {
+      "name": "Dark sky reserve",
+      "facet": "Stargazing and the night sky",
+      "known_at": 11
+    },
+    {
+      "name": "Ngari Dark Sky Reserve (阿里暗夜公园)",
+      "facet": "Stargazing and the night sky",
+      "known_at": 13
+    },
+    {
+      "name": "Planisphere",
+      "facet": "Stargazing and the night sky",
+      "known_at": 11
+    },
+    {
+      "name": "Binoculars",
+      "facet": "Stargazing and the night sky",
+      "known_at": 4
+    },
+    {
+      "name": "Celestial pole",
+      "facet": "Stargazing and the night sky",
+      "known_at": 11
+    },
+    {
+      "name": "Astrophotography",
+      "facet": "Stargazing and the night sky",
+      "known_at": 9
+    },
+    {
+      "name": "Zodiacal light",
+      "facet": "Stargazing and the night sky",
+      "known_at": 14
+    },
+    {
+      "name": "Twilight",
+      "facet": "Stargazing and the night sky",
+      "known_at": 6
+    },
+    {
+      "name": "Li Bai's “Staying at a Mountain Temple” (夜宿山寺)",
+      "facet": "Stars in poems and sayings",
+      "known_at": 4
+    },
+    {
+      "name": "Cao Cao's “Viewing the Sea” (观沧海)",
+      "facet": "Stars in poems and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Cao Cao's “Short Song” (短歌行)",
+      "facet": "Stars in poems and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Qin Guan's “Magpie Bridge Immortal” (鹊桥仙)",
+      "facet": "Stars in poems and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Du Mu's “Autumn Evening” (秋夕)",
+      "facet": "Stars in poems and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Xin Qiji's “Walking at Night on the Yellow Sand Road” (西江月·夜行黄沙道中)",
+      "facet": "Stars in poems and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "“In the Seventh Month the Fire Star Flows” (七月流火)",
+      "facet": "Stars in poems and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "斗转星移 (dǒu zhuǎn xīng yí)",
+      "facet": "Stars in poems and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "披星戴月 (pī xīng dài yuè)",
+      "facet": "Stars in poems and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "众星捧月 (zhòng xīng pěng yuè)",
+      "facet": "Stars in poems and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "寥若晨星 (liáo ruò chén xīng)",
+      "facet": "Stars in poems and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "星火燎原 (xīng huǒ liáo yuán)",
+      "facet": "Stars in poems and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Five-starred Red Flag",
+      "facet": "Stars in poems and sayings",
+      "known_at": 3
+    },
+    {
+      "name": "Super Star (Super Mario)",
+      "facet": "Stars in poems and sayings",
+      "known_at": 5
+    },
+    {
+      "name": "When You Wish Upon a Star",
+      "facet": "Stars in poems and sayings",
+      "known_at": 10
+    }
+  ]
+}

@@ -1,0 +1,627 @@
+{
+  "subcategory": "guinness-world-records",
+  "facets": [
+    "Record-breaking buildings and bridges",
+    "Ancient wonders and canals",
+    "Rivers, mountains and landscapes",
+    "Record-holding animals and plants",
+    "Human body records",
+    "Olympic and sport records",
+    "Mass gatherings and crowd records",
+    "Giant food and festival records",
+    "Trains, transport and technology",
+    "Space and science records",
+    "Guinness World Records book",
+    "Unusual skills and odd records"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 2,
+      "word_meaning": 1,
+      "count": 2,
+      "estimate": 5,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 1,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 3,
+      "science_news": 4,
+      "educational_media": 4,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 4,
+      "language": 1
+    }
+  },
+  "concepts": [
+    {
+      "name": "Burj Khalifa",
+      "facet": "Record-breaking buildings and bridges",
+      "known_at": 5
+    },
+    {
+      "name": "Empire State Building",
+      "facet": "Record-breaking buildings and bridges",
+      "known_at": 6
+    },
+    {
+      "name": "Palace of the Parliament",
+      "facet": "Record-breaking buildings and bridges",
+      "known_at": 14
+    },
+    {
+      "name": "Great Wall of China",
+      "facet": "Ancient wonders and canals",
+      "known_at": 1
+    },
+    {
+      "name": "Great Pyramid of Giza",
+      "facet": "Ancient wonders and canals",
+      "known_at": 3
+    },
+    {
+      "name": "Hanging Gardens of Babylon",
+      "facet": "Ancient wonders and canals",
+      "known_at": 10
+    },
+    {
+      "name": "Colossus of Rhodes",
+      "facet": "Ancient wonders and canals",
+      "known_at": 11
+    },
+    {
+      "name": "Lighthouse of Alexandria",
+      "facet": "Ancient wonders and canals",
+      "known_at": 11
+    },
+    {
+      "name": "Temple of Artemis",
+      "facet": "Ancient wonders and canals",
+      "known_at": 13
+    },
+    {
+      "name": "Statue of Zeus at Olympia",
+      "facet": "Ancient wonders and canals",
+      "known_at": 13
+    },
+    {
+      "name": "Mount Everest",
+      "facet": "Rivers, mountains and landscapes",
+      "known_at": 3
+    },
+    {
+      "name": "K2",
+      "facet": "Rivers, mountains and landscapes",
+      "known_at": 11
+    },
+    {
+      "name": "Tibetan Plateau",
+      "facet": "Rivers, mountains and landscapes",
+      "known_at": 5
+    },
+    {
+      "name": "Amazon River",
+      "facet": "Rivers, mountains and landscapes",
+      "known_at": 5
+    },
+    {
+      "name": "Sahara",
+      "facet": "Rivers, mountains and landscapes",
+      "known_at": 4
+    },
+    {
+      "name": "Dead Sea",
+      "facet": "Rivers, mountains and landscapes",
+      "known_at": 7
+    },
+    {
+      "name": "Lake Baikal",
+      "facet": "Rivers, mountains and landscapes",
+      "known_at": 9
+    },
+    {
+      "name": "Caspian Sea",
+      "facet": "Rivers, mountains and landscapes",
+      "known_at": 10
+    },
+    {
+      "name": "Pacific Ocean",
+      "facet": "Rivers, mountains and landscapes",
+      "known_at": 2
+    },
+    {
+      "name": "Greenland",
+      "facet": "Rivers, mountains and landscapes",
+      "known_at": 7
+    },
+    {
+      "name": "Angel Falls",
+      "facet": "Rivers, mountains and landscapes",
+      "known_at": 11
+    },
+    {
+      "name": "Rafflesia",
+      "facet": "Record-holding animals and plants",
+      "known_at": 8
+    },
+    {
+      "name": "Titan arum",
+      "facet": "Record-holding animals and plants",
+      "known_at": 10
+    },
+    {
+      "name": "Giant sequoia",
+      "facet": "Record-holding animals and plants",
+      "known_at": 9
+    },
+    {
+      "name": "Methuselah tree",
+      "facet": "Record-holding animals and plants",
+      "known_at": 12
+    },
+    {
+      "name": "Victoria water lily",
+      "facet": "Record-holding animals and plants",
+      "known_at": 8
+    },
+    {
+      "name": "Wolffia",
+      "facet": "Record-holding animals and plants",
+      "known_at": 13
+    },
+    {
+      "name": "Baobab",
+      "facet": "Record-holding animals and plants",
+      "known_at": 7
+    },
+    {
+      "name": "Ostrich",
+      "facet": "Record-holding animals and plants",
+      "known_at": 2
+    },
+    {
+      "name": "Bee hummingbird",
+      "facet": "Record-holding animals and plants",
+      "known_at": 6
+    },
+    {
+      "name": "African elephant",
+      "facet": "Record-holding animals and plants",
+      "known_at": 2
+    },
+    {
+      "name": "Saltwater crocodile",
+      "facet": "Record-holding animals and plants",
+      "known_at": 7
+    },
+    {
+      "name": "Reticulated python",
+      "facet": "Record-holding animals and plants",
+      "known_at": 9
+    },
+    {
+      "name": "Sperm whale",
+      "facet": "Record-holding animals and plants",
+      "known_at": 8
+    },
+    {
+      "name": "Giant squid",
+      "facet": "Record-holding animals and plants",
+      "known_at": 7
+    },
+    {
+      "name": "Arctic tern",
+      "facet": "Record-holding animals and plants",
+      "known_at": 9
+    },
+    {
+      "name": "Ocean sunfish",
+      "facet": "Record-holding animals and plants",
+      "known_at": 9
+    },
+    {
+      "name": "Robert Wadlow",
+      "facet": "Human body records",
+      "known_at": 10
+    },
+    {
+      "name": "Chandra Bahadur Dangi",
+      "facet": "Human body records",
+      "known_at": 14
+    },
+    {
+      "name": "Bao Xishun",
+      "facet": "Human body records",
+      "known_at": 11
+    },
+    {
+      "name": "Zeng Jinlian",
+      "facet": "Human body records",
+      "known_at": 13
+    },
+    {
+      "name": "Sultan Kösen",
+      "facet": "Human body records",
+      "known_at": 12
+    },
+    {
+      "name": "Jeanne Calment",
+      "facet": "Human body records",
+      "known_at": 13
+    },
+    {
+      "name": "Skin",
+      "facet": "Human body records",
+      "known_at": 4
+    },
+    {
+      "name": "Femur",
+      "facet": "Human body records",
+      "known_at": 8
+    },
+    {
+      "name": "Stapes",
+      "facet": "Human body records",
+      "known_at": 10
+    },
+    {
+      "name": "Tooth enamel",
+      "facet": "Human body records",
+      "known_at": 6
+    },
+    {
+      "name": "Fingernails",
+      "facet": "Human body records",
+      "known_at": 3
+    },
+    {
+      "name": "Hair",
+      "facet": "Human body records",
+      "known_at": 2
+    },
+    {
+      "name": "Liver",
+      "facet": "Human body records",
+      "known_at": 7
+    },
+    {
+      "name": "Small intestine",
+      "facet": "Human body records",
+      "known_at": 7
+    },
+    {
+      "name": "Heart",
+      "facet": "Human body records",
+      "known_at": 2
+    },
+    {
+      "name": "Brain",
+      "facet": "Human body records",
+      "known_at": 2
+    },
+    {
+      "name": "Blood vessels",
+      "facet": "Human body records",
+      "known_at": 6
+    },
+    {
+      "name": "Usain Bolt",
+      "facet": "Olympic and sport records",
+      "known_at": 5
+    },
+    {
+      "name": "Javier Sotomayor",
+      "facet": "Olympic and sport records",
+      "known_at": 14
+    },
+    {
+      "name": "Serena Williams",
+      "facet": "Olympic and sport records",
+      "known_at": 9
+    },
+    {
+      "name": "Rafael Nadal",
+      "facet": "Olympic and sport records",
+      "known_at": 8
+    },
+    {
+      "name": "Eliud Kipchoge",
+      "facet": "Olympic and sport records",
+      "known_at": 11
+    },
+    {
+      "name": "Spring Festival travel rush",
+      "facet": "Mass gatherings and crowd records",
+      "known_at": 5
+    },
+    {
+      "name": "Square dancing",
+      "facet": "Mass gatherings and crowd records",
+      "known_at": 4
+    },
+    {
+      "name": "Mass tai chi performance",
+      "facet": "Mass gatherings and crowd records",
+      "known_at": 7
+    },
+    {
+      "name": "Singles' Day",
+      "facet": "Mass gatherings and crowd records",
+      "known_at": 6
+    },
+    {
+      "name": "Kumbh Mela",
+      "facet": "Mass gatherings and crowd records",
+      "known_at": 13
+    },
+    {
+      "name": "Hajj",
+      "facet": "Mass gatherings and crowd records",
+      "known_at": 12
+    },
+    {
+      "name": "Mexican wave",
+      "facet": "Mass gatherings and crowd records",
+      "known_at": 8
+    },
+    {
+      "name": "Maracanã Stadium",
+      "facet": "Mass gatherings and crowd records",
+      "known_at": 12
+    },
+    {
+      "name": "Giant pumpkin",
+      "facet": "Giant food and festival records",
+      "known_at": 3
+    },
+    {
+      "name": "Watermelon",
+      "facet": "Giant food and festival records",
+      "known_at": 1
+    },
+    {
+      "name": "Chocolate chip cookie",
+      "facet": "Giant food and festival records",
+      "known_at": 2
+    },
+    {
+      "name": "Pizza",
+      "facet": "Giant food and festival records",
+      "known_at": 1
+    },
+    {
+      "name": "Hot dog",
+      "facet": "Giant food and festival records",
+      "known_at": 3
+    },
+    {
+      "name": "Chocolate Easter egg",
+      "facet": "Giant food and festival records",
+      "known_at": 6
+    },
+    {
+      "name": "Tangyuan",
+      "facet": "Giant food and festival records",
+      "known_at": 2
+    },
+    {
+      "name": "Longevity noodles",
+      "facet": "Giant food and festival records",
+      "known_at": 4
+    },
+    {
+      "name": "Hot pot",
+      "facet": "Giant food and festival records",
+      "known_at": 2
+    },
+    {
+      "name": "Birthday cake",
+      "facet": "Giant food and festival records",
+      "known_at": 1
+    },
+    {
+      "name": "Paella",
+      "facet": "Giant food and festival records",
+      "known_at": 11
+    },
+    {
+      "name": "Shinkansen",
+      "facet": "Trains, transport and technology",
+      "known_at": 8
+    },
+    {
+      "name": "Antonov An-225 Mriya",
+      "facet": "Trains, transport and technology",
+      "known_at": 11
+    },
+    {
+      "name": "Airbus A380",
+      "facet": "Trains, transport and technology",
+      "known_at": 8
+    },
+    {
+      "name": "COMAC C919",
+      "facet": "Trains, transport and technology",
+      "known_at": 7
+    },
+    {
+      "name": "Concorde",
+      "facet": "Trains, transport and technology",
+      "known_at": 11
+    },
+    {
+      "name": "Bagger 288",
+      "facet": "Trains, transport and technology",
+      "known_at": 12
+    },
+    {
+      "name": "Titanic",
+      "facet": "Trains, transport and technology",
+      "known_at": 5
+    },
+    {
+      "name": "Diamond",
+      "facet": "Space and science records",
+      "known_at": 5
+    },
+    {
+      "name": "Speed of light",
+      "facet": "Space and science records",
+      "known_at": 8
+    },
+    {
+      "name": "Absolute zero",
+      "facet": "Space and science records",
+      "known_at": 11
+    },
+    {
+      "name": "Guinness World Records",
+      "facet": "Guinness World Records book",
+      "known_at": 4
+    },
+    {
+      "name": "Hugh Beaver",
+      "facet": "Guinness World Records book",
+      "known_at": 14
+    },
+    {
+      "name": "Norris and Ross McWhirter",
+      "facet": "Guinness World Records book",
+      "known_at": 15
+    },
+    {
+      "name": "Guinness Brewery",
+      "facet": "Guinness World Records book",
+      "known_at": 12
+    },
+    {
+      "name": "Golden plover",
+      "facet": "Guinness World Records book",
+      "known_at": 15
+    },
+    {
+      "name": "Guinness World Records Day",
+      "facet": "Guinness World Records book",
+      "known_at": 10
+    },
+    {
+      "name": "Record adjudicator",
+      "facet": "Guinness World Records book",
+      "known_at": 10
+    },
+    {
+      "name": "Bible",
+      "facet": "Guinness World Records book",
+      "known_at": 9
+    },
+    {
+      "name": "Thriller",
+      "facet": "Guinness World Records book",
+      "known_at": 9
+    },
+    {
+      "name": "Avengers: Endgame",
+      "facet": "Guinness World Records book",
+      "known_at": 6
+    },
+    {
+      "name": "Super Mario",
+      "facet": "Guinness World Records book",
+      "known_at": 3
+    },
+    {
+      "name": "Harry Potter",
+      "facet": "Guinness World Records book",
+      "known_at": 5
+    },
+    {
+      "name": "Rubik's Cube",
+      "facet": "Unusual skills and odd records",
+      "known_at": 3
+    },
+    {
+      "name": "Domino toppling",
+      "facet": "Unusual skills and odd records",
+      "known_at": 4
+    },
+    {
+      "name": "Jump rope",
+      "facet": "Unusual skills and odd records",
+      "known_at": 1
+    },
+    {
+      "name": "Rubber band ball",
+      "facet": "Unusual skills and odd records",
+      "known_at": 6
+    },
+    {
+      "name": "Diabolo",
+      "facet": "Unusual skills and odd records",
+      "known_at": 5
+    },
+    {
+      "name": "Memorising pi",
+      "facet": "Unusual skills and odd records",
+      "known_at": 8
+    },
+    {
+      "name": "Juggling",
+      "facet": "Unusual skills and odd records",
+      "known_at": 4
+    },
+    {
+      "name": "Card stacking",
+      "facet": "Unusual skills and odd records",
+      "known_at": 7
+    },
+    {
+      "name": "Origami crane",
+      "facet": "Unusual skills and odd records",
+      "known_at": 5
+    },
+    {
+      "name": "Weifang kites",
+      "facet": "Unusual skills and odd records",
+      "known_at": 9
+    },
+    {
+      "name": "Face-changing",
+      "facet": "Unusual skills and odd records",
+      "known_at": 7
+    },
+    {
+      "name": "Paper cutting",
+      "facet": "Unusual skills and odd records",
+      "known_at": 3
+    },
+    {
+      "name": "Push-ups",
+      "facet": "Unusual skills and odd records",
+      "known_at": 2
+    }
+  ]
+}
