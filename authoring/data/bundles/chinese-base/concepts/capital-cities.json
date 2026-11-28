@@ -1,0 +1,1028 @@
+{
+  "subcategory": "capital-cities",
+  "facets": [
+    "Beijing as China's capital",
+    "Ancient capitals of China",
+    "Capitals of China's neighbours",
+    "Southeast and South Asian capitals",
+    "Central and West Asian capitals",
+    "European capitals",
+    "African capitals",
+    "Capitals of the Americas",
+    "Capitals of Oceania and islands",
+    "Landmarks of world capitals",
+    "Moved and renamed capitals",
+    "Capital names and their meanings"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 4,
+      "origin": 2,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 3,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 4,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Siheyuan",
+      "facet": "Beijing as China's capital",
+      "known_at": 6
+    },
+    {
+      "name": "Datong",
+      "facet": "Ancient capitals of China",
+      "known_at": 11
+    },
+    {
+      "name": "Shangdu",
+      "facet": "Ancient capitals of China",
+      "known_at": 12
+    },
+    {
+      "name": "Khanbaliq",
+      "facet": "Ancient capitals of China",
+      "known_at": 11
+    },
+    {
+      "name": "Along the River During the Qingming Festival",
+      "facet": "Ancient capitals of China",
+      "known_at": 7
+    },
+    {
+      "name": "Four Great Ancient Capitals of China",
+      "facet": "Ancient capitals of China",
+      "known_at": 9
+    },
+    {
+      "name": "Tokyo",
+      "facet": "Capitals of China's neighbours",
+      "known_at": 2
+    },
+    {
+      "name": "Seoul",
+      "facet": "Capitals of China's neighbours",
+      "known_at": 3
+    },
+    {
+      "name": "Pyongyang",
+      "facet": "Capitals of China's neighbours",
+      "known_at": 6
+    },
+    {
+      "name": "Ulaanbaatar",
+      "facet": "Capitals of China's neighbours",
+      "known_at": 7
+    },
+    {
+      "name": "Moscow",
+      "facet": "Capitals of China's neighbours",
+      "known_at": 3
+    },
+    {
+      "name": "Hanoi",
+      "facet": "Capitals of China's neighbours",
+      "known_at": 5
+    },
+    {
+      "name": "Vientiane",
+      "facet": "Capitals of China's neighbours",
+      "known_at": 10
+    },
+    {
+      "name": "Kathmandu",
+      "facet": "Capitals of China's neighbours",
+      "known_at": 8
+    },
+    {
+      "name": "Thimphu",
+      "facet": "Capitals of China's neighbours",
+      "known_at": 12
+    },
+    {
+      "name": "New Delhi",
+      "facet": "Capitals of China's neighbours",
+      "known_at": 5
+    },
+    {
+      "name": "Islamabad",
+      "facet": "Capitals of China's neighbours",
+      "known_at": 7
+    },
+    {
+      "name": "Kabul",
+      "facet": "Capitals of China's neighbours",
+      "known_at": 8
+    },
+    {
+      "name": "Dushanbe",
+      "facet": "Capitals of China's neighbours",
+      "known_at": 12
+    },
+    {
+      "name": "Bishkek",
+      "facet": "Capitals of China's neighbours",
+      "known_at": 12
+    },
+    {
+      "name": "Miracle on the Han River",
+      "facet": "Capitals of China's neighbours",
+      "known_at": 12
+    },
+    {
+      "name": "Bangkok",
+      "facet": "Southeast and South Asian capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Jakarta",
+      "facet": "Southeast and South Asian capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Manila",
+      "facet": "Southeast and South Asian capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Phnom Penh",
+      "facet": "Southeast and South Asian capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Dhaka",
+      "facet": "Southeast and South Asian capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Colombo",
+      "facet": "Southeast and South Asian capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Sri Jayawardenepura Kotte",
+      "facet": "Southeast and South Asian capitals",
+      "known_at": 14
+    },
+    {
+      "name": "Malé",
+      "facet": "Southeast and South Asian capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Bandar Seri Begawan",
+      "facet": "Southeast and South Asian capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Dili",
+      "facet": "Southeast and South Asian capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Putrajaya",
+      "facet": "Southeast and South Asian capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Tuk-tuk",
+      "facet": "Southeast and South Asian capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Wat Pho",
+      "facet": "Southeast and South Asian capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Chao Phraya River",
+      "facet": "Southeast and South Asian capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Tashkent",
+      "facet": "Central and West Asian capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Ashgabat",
+      "facet": "Central and West Asian capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Tehran",
+      "facet": "Central and West Asian capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Baghdad",
+      "facet": "Central and West Asian capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Riyadh",
+      "facet": "Central and West Asian capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Ankara",
+      "facet": "Central and West Asian capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Damascus",
+      "facet": "Central and West Asian capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Beirut",
+      "facet": "Central and West Asian capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Amman",
+      "facet": "Central and West Asian capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Doha",
+      "facet": "Central and West Asian capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Abu Dhabi",
+      "facet": "Central and West Asian capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Muscat",
+      "facet": "Central and West Asian capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Kuwait City",
+      "facet": "Central and West Asian capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Baku",
+      "facet": "Central and West Asian capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Tbilisi",
+      "facet": "Central and West Asian capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Yerevan",
+      "facet": "Central and West Asian capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Timur",
+      "facet": "Central and West Asian capitals",
+      "known_at": 12
+    },
+    {
+      "name": "London",
+      "facet": "European capitals",
+      "known_at": 2
+    },
+    {
+      "name": "Paris",
+      "facet": "European capitals",
+      "known_at": 2
+    },
+    {
+      "name": "Rome",
+      "facet": "European capitals",
+      "known_at": 3
+    },
+    {
+      "name": "Berlin",
+      "facet": "European capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Madrid",
+      "facet": "European capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Athens",
+      "facet": "European capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Vienna",
+      "facet": "European capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Budapest",
+      "facet": "European capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Stockholm",
+      "facet": "European capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Prague",
+      "facet": "European capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Amsterdam",
+      "facet": "European capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Lisbon",
+      "facet": "European capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Ljubljana",
+      "facet": "European capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Warsaw",
+      "facet": "European capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Oslo",
+      "facet": "European capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Copenhagen",
+      "facet": "European capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Reykjavik",
+      "facet": "European capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Brussels",
+      "facet": "European capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Bern",
+      "facet": "European capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Tiber",
+      "facet": "European capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Seine",
+      "facet": "European capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Thames",
+      "facet": "European capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Danube",
+      "facet": "European capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Dalmatian",
+      "facet": "European capitals",
+      "known_at": 2
+    },
+    {
+      "name": "The Aristocats",
+      "facet": "European capitals",
+      "known_at": 3
+    },
+    {
+      "name": "Baguette",
+      "facet": "European capitals",
+      "known_at": 3
+    },
+    {
+      "name": "Cairo",
+      "facet": "African capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Nairobi",
+      "facet": "African capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Addis Ababa",
+      "facet": "African capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Abuja",
+      "facet": "African capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Pretoria",
+      "facet": "African capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Cape Town",
+      "facet": "African capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Luanda",
+      "facet": "African capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Kinshasa",
+      "facet": "African capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Brazzaville",
+      "facet": "African capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Khartoum",
+      "facet": "African capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Rabat",
+      "facet": "African capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Algiers",
+      "facet": "African capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Tunis",
+      "facet": "African capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Dakar",
+      "facet": "African capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Accra",
+      "facet": "African capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Kampala",
+      "facet": "African capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Dodoma",
+      "facet": "African capitals",
+      "known_at": 14
+    },
+    {
+      "name": "Antananarivo",
+      "facet": "African capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Kigali",
+      "facet": "African capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Nile",
+      "facet": "African capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Washington, D.C.",
+      "facet": "Capitals of the Americas",
+      "known_at": 4
+    },
+    {
+      "name": "Ottawa",
+      "facet": "Capitals of the Americas",
+      "known_at": 9
+    },
+    {
+      "name": "Mexico City",
+      "facet": "Capitals of the Americas",
+      "known_at": 6
+    },
+    {
+      "name": "Havana",
+      "facet": "Capitals of the Americas",
+      "known_at": 9
+    },
+    {
+      "name": "Lima",
+      "facet": "Capitals of the Americas",
+      "known_at": 10
+    },
+    {
+      "name": "Bogotá",
+      "facet": "Capitals of the Americas",
+      "known_at": 11
+    },
+    {
+      "name": "Buenos Aires",
+      "facet": "Capitals of the Americas",
+      "known_at": 8
+    },
+    {
+      "name": "Santiago",
+      "facet": "Capitals of the Americas",
+      "known_at": 11
+    },
+    {
+      "name": "Brasília",
+      "facet": "Capitals of the Americas",
+      "known_at": 8
+    },
+    {
+      "name": "Quito",
+      "facet": "Capitals of the Americas",
+      "known_at": 12
+    },
+    {
+      "name": "La Paz",
+      "facet": "Capitals of the Americas",
+      "known_at": 11
+    },
+    {
+      "name": "Asunción",
+      "facet": "Capitals of the Americas",
+      "known_at": 13
+    },
+    {
+      "name": "Montevideo",
+      "facet": "Capitals of the Americas",
+      "known_at": 12
+    },
+    {
+      "name": "Caracas",
+      "facet": "Capitals of the Americas",
+      "known_at": 12
+    },
+    {
+      "name": "Santo Domingo",
+      "facet": "Capitals of the Americas",
+      "known_at": 13
+    },
+    {
+      "name": "San Juan",
+      "facet": "Capitals of the Americas",
+      "known_at": 13
+    },
+    {
+      "name": "Kingston",
+      "facet": "Capitals of the Americas",
+      "known_at": 12
+    },
+    {
+      "name": "Panama City",
+      "facet": "Capitals of the Americas",
+      "known_at": 10
+    },
+    {
+      "name": "Tenochtitlan",
+      "facet": "Capitals of the Americas",
+      "known_at": 11
+    },
+    {
+      "name": "Cusco",
+      "facet": "Capitals of the Americas",
+      "known_at": 11
+    },
+    {
+      "name": "Canberra",
+      "facet": "Capitals of Oceania and islands",
+      "known_at": 9
+    },
+    {
+      "name": "Wellington",
+      "facet": "Capitals of Oceania and islands",
+      "known_at": 10
+    },
+    {
+      "name": "Port Moresby",
+      "facet": "Capitals of Oceania and islands",
+      "known_at": 13
+    },
+    {
+      "name": "Suva",
+      "facet": "Capitals of Oceania and islands",
+      "known_at": 13
+    },
+    {
+      "name": "Funafuti",
+      "facet": "Capitals of Oceania and islands",
+      "known_at": 15
+    },
+    {
+      "name": "Apia",
+      "facet": "Capitals of Oceania and islands",
+      "known_at": 14
+    },
+    {
+      "name": "Nuku'alofa",
+      "facet": "Capitals of Oceania and islands",
+      "known_at": 15,
+      "retired": "unaskable: No fair difficulty-15 question about Nuku'alofa that works for Chinese families: none of the three options gives a natural, checkable fact, and Tonga facts belong in base anyway (the Hunga Tonga eruption is already in the pool)."
+    },
+    {
+      "name": "Honiara",
+      "facet": "Capitals of Oceania and islands",
+      "known_at": 14
+    },
+    {
+      "name": "Port Vila",
+      "facet": "Capitals of Oceania and islands",
+      "known_at": 15
+    },
+    {
+      "name": "Tarawa",
+      "facet": "Capitals of Oceania and islands",
+      "known_at": 14
+    },
+    {
+      "name": "Majuro",
+      "facet": "Capitals of Oceania and islands",
+      "known_at": 15
+    },
+    {
+      "name": "Yaren",
+      "facet": "Capitals of Oceania and islands",
+      "known_at": 15
+    },
+    {
+      "name": "Ngerulmud",
+      "facet": "Capitals of Oceania and islands",
+      "known_at": 15
+    },
+    {
+      "name": "Brisbane",
+      "facet": "Capitals of Oceania and islands",
+      "known_at": 9
+    },
+    {
+      "name": "Victoria (Seychelles)",
+      "facet": "Capitals of Oceania and islands",
+      "known_at": 14
+    },
+    {
+      "name": "Port Louis",
+      "facet": "Capitals of Oceania and islands",
+      "known_at": 13
+    },
+    {
+      "name": "Notre-Dame de Paris",
+      "facet": "Landmarks of world capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Big Ben",
+      "facet": "Landmarks of world capitals",
+      "known_at": 3
+    },
+    {
+      "name": "Buckingham Palace",
+      "facet": "Landmarks of world capitals",
+      "known_at": 5
+    },
+    {
+      "name": "White House",
+      "facet": "Landmarks of world capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Louvre",
+      "facet": "Landmarks of world capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Arc de Triomphe",
+      "facet": "Landmarks of world capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Tower Bridge",
+      "facet": "Landmarks of world capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Brandenburg Gate",
+      "facet": "Landmarks of world capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Kremlin",
+      "facet": "Landmarks of world capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Red Square",
+      "facet": "Landmarks of world capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Acropolis",
+      "facet": "Landmarks of world capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Trevi Fountain",
+      "facet": "Landmarks of world capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Merlion",
+      "facet": "Landmarks of world capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Gyeongbokgung",
+      "facet": "Landmarks of world capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Tokyo Tower",
+      "facet": "Landmarks of world capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Tokyo Skytree",
+      "facet": "Landmarks of world capitals",
+      "known_at": 7
+    },
+    {
+      "name": "India Gate",
+      "facet": "Landmarks of world capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Victoria Memorial",
+      "facet": "Landmarks of world capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Grand Palace (Bangkok)",
+      "facet": "Landmarks of world capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Pyramids of Giza",
+      "facet": "Landmarks of world capitals",
+      "known_at": 2
+    },
+    {
+      "name": "Dragon Bridge (Ljubljana)",
+      "facet": "Landmarks of world capitals",
+      "known_at": 14
+    },
+    {
+      "name": "Charles Bridge",
+      "facet": "Landmarks of world capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Atomium",
+      "facet": "Landmarks of world capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Little Mermaid statue",
+      "facet": "Landmarks of world capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Rio de Janeiro",
+      "facet": "Moved and renamed capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Kolkata",
+      "facet": "Moved and renamed capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Saint Petersburg",
+      "facet": "Moved and renamed capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Naypyidaw",
+      "facet": "Moved and renamed capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Yangon",
+      "facet": "Moved and renamed capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Astana",
+      "facet": "Moved and renamed capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Kyoto",
+      "facet": "Moved and renamed capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Edo",
+      "facet": "Moved and renamed capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Istanbul",
+      "facet": "Moved and renamed capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Lagos",
+      "facet": "Moved and renamed capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Bonn",
+      "facet": "Moved and renamed capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Melbourne",
+      "facet": "Moved and renamed capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Philadelphia",
+      "facet": "Moved and renamed capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Nusantara",
+      "facet": "Moved and renamed capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Beiping",
+      "facet": "Moved and renamed capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Saigon",
+      "facet": "Moved and renamed capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Huế",
+      "facet": "Moved and renamed capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Karachi",
+      "facet": "Moved and renamed capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Dar es Salaam",
+      "facet": "Moved and renamed capitals",
+      "known_at": 13
+    },
+    {
+      "name": "京 (jīng)",
+      "facet": "Capital names and their meanings",
+      "known_at": 5
+    },
+    {
+      "name": "The Eternal City",
+      "facet": "Capital names and their meanings",
+      "known_at": 10
+    },
+    {
+      "name": "City of Light",
+      "facet": "Capital names and their meanings",
+      "known_at": 9
+    },
+    {
+      "name": "Krung Thep Maha Nakhon",
+      "facet": "Capital names and their meanings",
+      "known_at": 12
+    },
+    {
+      "name": "Pearl of the Danube",
+      "facet": "Capital names and their meanings",
+      "known_at": 13
+    },
+    {
+      "name": "Venice of the North",
+      "facet": "Capital names and their meanings",
+      "known_at": 12
+    },
+    {
+      "name": "Garden City",
+      "facet": "Capital names and their meanings",
+      "known_at": 11
+    },
+    {
+      "name": "Capital city",
+      "facet": "Capital names and their meanings",
+      "known_at": 3
+    },
+    {
+      "name": "Landlocked country",
+      "facet": "Capital names and their meanings",
+      "known_at": 10
+    },
+    {
+      "name": "Planned city",
+      "facet": "Capital names and their meanings",
+      "known_at": 11
+    },
+    {
+      "name": "City-state",
+      "facet": "Capital names and their meanings",
+      "known_at": 9
+    },
+    {
+      "name": "Federal district",
+      "facet": "Capital names and their meanings",
+      "known_at": 12
+    },
+    {
+      "name": "Australian Capital Territory",
+      "facet": "Capital names and their meanings",
+      "known_at": 13
+    },
+    {
+      "name": "Seat of government",
+      "facet": "Capital names and their meanings",
+      "known_at": 12
+    },
+    {
+      "name": "Primate city",
+      "facet": "Capital names and their meanings",
+      "known_at": 14
+    },
+    {
+      "name": "Highest capital city",
+      "facet": "Capital names and their meanings",
+      "known_at": 11
+    }
+  ]
+}

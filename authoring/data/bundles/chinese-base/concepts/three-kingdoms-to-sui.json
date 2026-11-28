@@ -61,7 +61,8 @@
     {
       "name": "Three Kingdoms period",
       "facet": "Three Kingdoms rulers and states",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The count options only give the answer 3, which the period's name already states. The identify option would repeat questions already in the pool that ask for the era of a Three Kingdoms figure (the Luo River scroll and Liu Bei's three visits)."
     },
     {
       "name": "Cao Cao",

@@ -1,0 +1,1207 @@
+{
+  "subcategory": "science-fiction",
+  "facets": [
+    "Space opera sagas",
+    "Robots and artificial intelligence",
+    "Aliens and first contact",
+    "Time travel stories",
+    "Dystopias and virtual worlds",
+    "Giant monsters and dinosaurs",
+    "Japanese anime and tokusatsu sci-fi",
+    "Animated sci-fi films",
+    "Classic novels on screen",
+    "Space survival and exploration films",
+    "Spaceships, gadgets and inventions",
+    "Sci-fi directors and stars"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 4,
+      "science_news": 2,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Star Wars",
+      "facet": "Space opera sagas",
+      "known_at": 4
+    },
+    {
+      "name": "Darth Vader",
+      "facet": "Space opera sagas",
+      "known_at": 5
+    },
+    {
+      "name": "Luke Skywalker",
+      "facet": "Space opera sagas",
+      "known_at": 7
+    },
+    {
+      "name": "Princess Leia",
+      "facet": "Space opera sagas",
+      "known_at": 8
+    },
+    {
+      "name": "Yoda",
+      "facet": "Space opera sagas",
+      "known_at": 6
+    },
+    {
+      "name": "Jedi",
+      "facet": "Space opera sagas",
+      "known_at": 7
+    },
+    {
+      "name": "Lightsaber",
+      "facet": "Space opera sagas",
+      "known_at": 5
+    },
+    {
+      "name": "The Force",
+      "facet": "Space opera sagas",
+      "known_at": 8
+    },
+    {
+      "name": "Chewbacca",
+      "facet": "Space opera sagas",
+      "known_at": 8
+    },
+    {
+      "name": "Millennium Falcon",
+      "facet": "Space opera sagas",
+      "known_at": 10
+    },
+    {
+      "name": "Stormtrooper",
+      "facet": "Space opera sagas",
+      "known_at": 6
+    },
+    {
+      "name": "Death Star",
+      "facet": "Space opera sagas",
+      "known_at": 9
+    },
+    {
+      "name": "Naboo",
+      "facet": "Space opera sagas",
+      "known_at": 12
+    },
+    {
+      "name": "Tatooine",
+      "facet": "Space opera sagas",
+      "known_at": 11
+    },
+    {
+      "name": "Ewok",
+      "facet": "Space opera sagas",
+      "known_at": 11
+    },
+    {
+      "name": "Obi-Wan Kenobi",
+      "facet": "Space opera sagas",
+      "known_at": 10
+    },
+    {
+      "name": "Palpatine",
+      "facet": "Space opera sagas",
+      "known_at": 11
+    },
+    {
+      "name": "Grogu",
+      "facet": "Space opera sagas",
+      "known_at": 8
+    },
+    {
+      "name": "Star Trek",
+      "facet": "Space opera sagas",
+      "known_at": 9
+    },
+    {
+      "name": "Spock",
+      "facet": "Space opera sagas",
+      "known_at": 11
+    },
+    {
+      "name": "Dune",
+      "facet": "Space opera sagas",
+      "known_at": 10
+    },
+    {
+      "name": "Guardians of the Galaxy",
+      "facet": "Space opera sagas",
+      "known_at": 7
+    },
+    {
+      "name": "Groot",
+      "facet": "Space opera sagas",
+      "known_at": 5
+    },
+    {
+      "name": "R2-D2",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 6
+    },
+    {
+      "name": "C-3PO",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 7
+    },
+    {
+      "name": "Bumblebee",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 3
+    },
+    {
+      "name": "Megatron",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 5
+    },
+    {
+      "name": "Autobots",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 4
+    },
+    {
+      "name": "Decepticons",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 6
+    },
+    {
+      "name": "Cybertron",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 7
+    },
+    {
+      "name": "The Terminator",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 8
+    },
+    {
+      "name": "HAL 9000",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 12
+    },
+    {
+      "name": "Ultron",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 7
+    },
+    {
+      "name": "Three Laws of Robotics",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 11
+    },
+    {
+      "name": "I, Robot",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 10
+    },
+    {
+      "name": "Ex Machina",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 13
+    },
+    {
+      "name": "Replicant",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 13
+    },
+    {
+      "name": "GLaDOS",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 11
+    },
+    {
+      "name": "Chell",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 12
+    },
+    {
+      "name": "Iron Man's J.A.R.V.I.S.",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 7
+    },
+    {
+      "name": "Her",
+      "facet": "Robots and artificial intelligence",
+      "known_at": 13
+    },
+    {
+      "name": "E.T. the Extra-Terrestrial",
+      "facet": "Aliens and first contact",
+      "known_at": 5
+    },
+    {
+      "name": "UFO",
+      "facet": "Aliens and first contact",
+      "known_at": 3
+    },
+    {
+      "name": "Flying saucer",
+      "facet": "Aliens and first contact",
+      "known_at": 2
+    },
+    {
+      "name": "Area 51",
+      "facet": "Aliens and first contact",
+      "known_at": 9
+    },
+    {
+      "name": "Roswell",
+      "facet": "Aliens and first contact",
+      "known_at": 12
+    },
+    {
+      "name": "Arrival",
+      "facet": "Aliens and first contact",
+      "known_at": 12
+    },
+    {
+      "name": "Heptapods",
+      "facet": "Aliens and first contact",
+      "known_at": 14
+    },
+    {
+      "name": "Alien",
+      "facet": "Aliens and first contact",
+      "known_at": 9
+    },
+    {
+      "name": "Xenomorph",
+      "facet": "Aliens and first contact",
+      "known_at": 12
+    },
+    {
+      "name": "Predator",
+      "facet": "Aliens and first contact",
+      "known_at": 10
+    },
+    {
+      "name": "Independence Day",
+      "facet": "Aliens and first contact",
+      "known_at": 10
+    },
+    {
+      "name": "Men in Black",
+      "facet": "Aliens and first contact",
+      "known_at": 7
+    },
+    {
+      "name": "Avatar",
+      "facet": "Aliens and first contact",
+      "known_at": 5
+    },
+    {
+      "name": "Na'vi",
+      "facet": "Aliens and first contact",
+      "known_at": 8
+    },
+    {
+      "name": "Pandora",
+      "facet": "Aliens and first contact",
+      "known_at": 8
+    },
+    {
+      "name": "Close Encounters of the Third Kind",
+      "facet": "Aliens and first contact",
+      "known_at": 13
+    },
+    {
+      "name": "District 9",
+      "facet": "Aliens and first contact",
+      "known_at": 13
+    },
+    {
+      "name": "Krypton",
+      "facet": "Aliens and first contact",
+      "known_at": 8
+    },
+    {
+      "name": "Stranger Things",
+      "facet": "Aliens and first contact",
+      "known_at": 9
+    },
+    {
+      "name": "Thanos",
+      "facet": "Aliens and first contact",
+      "known_at": 5
+    },
+    {
+      "name": "Back to the Future",
+      "facet": "Time travel stories",
+      "known_at": 8
+    },
+    {
+      "name": "DeLorean",
+      "facet": "Time travel stories",
+      "known_at": 10
+    },
+    {
+      "name": "Flux capacitor",
+      "facet": "Time travel stories",
+      "known_at": 13
+    },
+    {
+      "name": "Marty McFly",
+      "facet": "Time travel stories",
+      "known_at": 10
+    },
+    {
+      "name": "Doc Brown",
+      "facet": "Time travel stories",
+      "known_at": 11
+    },
+    {
+      "name": "Hoverboard",
+      "facet": "Time travel stories",
+      "known_at": 8
+    },
+    {
+      "name": "Butterfly effect",
+      "facet": "Time travel stories",
+      "known_at": 8
+    },
+    {
+      "name": "Grandfather paradox",
+      "facet": "Time travel stories",
+      "known_at": 11
+    },
+    {
+      "name": "Time-Turner",
+      "facet": "Time travel stories",
+      "known_at": 7
+    },
+    {
+      "name": "Doctor Who",
+      "facet": "Time travel stories",
+      "known_at": 11
+    },
+    {
+      "name": "TARDIS",
+      "facet": "Time travel stories",
+      "known_at": 12
+    },
+    {
+      "name": "Time loop",
+      "facet": "Time travel stories",
+      "known_at": 8
+    },
+    {
+      "name": "Groundhog Day",
+      "facet": "Time travel stories",
+      "known_at": 12
+    },
+    {
+      "name": "Edge of Tomorrow",
+      "facet": "Time travel stories",
+      "known_at": 11
+    },
+    {
+      "name": "Looper",
+      "facet": "Time travel stories",
+      "known_at": 13
+    },
+    {
+      "name": "Tenet",
+      "facet": "Time travel stories",
+      "known_at": 11
+    },
+    {
+      "name": "Avengers: Endgame",
+      "facet": "Time travel stories",
+      "known_at": 6
+    },
+    {
+      "name": "Dark",
+      "facet": "Time travel stories",
+      "known_at": 13
+    },
+    {
+      "name": "Neo",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 9
+    },
+    {
+      "name": "Morpheus",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 11
+    },
+    {
+      "name": "Red pill",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 10
+    },
+    {
+      "name": "Zion",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 12
+    },
+    {
+      "name": "Nebuchadnezzar",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 13
+    },
+    {
+      "name": "Agent Smith",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 11
+    },
+    {
+      "name": "The Hunger Games",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 8
+    },
+    {
+      "name": "Katniss Everdeen",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 9
+    },
+    {
+      "name": "Mockingjay",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 10
+    },
+    {
+      "name": "Ready Player One",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 9
+    },
+    {
+      "name": "Tron",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 12
+    },
+    {
+      "name": "Black Mirror",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 12
+    },
+    {
+      "name": "Blade Runner",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 11
+    },
+    {
+      "name": "Snowpiercer",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 12
+    },
+    {
+      "name": "The Maze Runner",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 10
+    },
+    {
+      "name": "Divergent",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 11
+    },
+    {
+      "name": "Westworld",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 13
+    },
+    {
+      "name": "Metaverse",
+      "facet": "Dystopias and virtual worlds",
+      "known_at": 9
+    },
+    {
+      "name": "Godzilla",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 4
+    },
+    {
+      "name": "King Kong",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 4
+    },
+    {
+      "name": "Jurassic Park",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 5
+    },
+    {
+      "name": "Velociraptor",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 6
+    },
+    {
+      "name": "Tyrannosaurus rex",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 2
+    },
+    {
+      "name": "Mosasaurus",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 8
+    },
+    {
+      "name": "Indominus rex",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 10
+    },
+    {
+      "name": "Dilophosaurus",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 11
+    },
+    {
+      "name": "Isla Nublar",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 13
+    },
+    {
+      "name": "Pacific Rim",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 9
+    },
+    {
+      "name": "Kaiju",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 10
+    },
+    {
+      "name": "Jaeger",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 11
+    },
+    {
+      "name": "Mothra",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 11
+    },
+    {
+      "name": "King Ghidorah",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 11
+    },
+    {
+      "name": "Mechagodzilla",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 11
+    },
+    {
+      "name": "Skull Island",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 11
+    },
+    {
+      "name": "The Host",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 13
+    },
+    {
+      "name": "Cloverfield",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 13
+    },
+    {
+      "name": "Thriller",
+      "facet": "Giant monsters and dinosaurs",
+      "known_at": 8
+    },
+    {
+      "name": "Astro Boy",
+      "facet": "Japanese anime and tokusatsu sci-fi",
+      "known_at": 6
+    },
+    {
+      "name": "Ultraman Tiga",
+      "facet": "Japanese anime and tokusatsu sci-fi",
+      "known_at": 4
+    },
+    {
+      "name": "Super Sentai",
+      "facet": "Japanese anime and tokusatsu sci-fi",
+      "known_at": 8
+    },
+    {
+      "name": "Neon Genesis Evangelion",
+      "facet": "Japanese anime and tokusatsu sci-fi",
+      "known_at": 10
+    },
+    {
+      "name": "Akira",
+      "facet": "Japanese anime and tokusatsu sci-fi",
+      "known_at": 12
+    },
+    {
+      "name": "Ghost in the Shell",
+      "facet": "Japanese anime and tokusatsu sci-fi",
+      "known_at": 12
+    },
+    {
+      "name": "Mazinger Z",
+      "facet": "Japanese anime and tokusatsu sci-fi",
+      "known_at": 12
+    },
+    {
+      "name": "Macross",
+      "facet": "Japanese anime and tokusatsu sci-fi",
+      "known_at": 13
+    },
+    {
+      "name": "Space Battleship Yamato",
+      "facet": "Japanese anime and tokusatsu sci-fi",
+      "known_at": 13
+    },
+    {
+      "name": "Galaxy Express 999",
+      "facet": "Japanese anime and tokusatsu sci-fi",
+      "known_at": 13
+    },
+    {
+      "name": "Castle in the Sky",
+      "facet": "Japanese anime and tokusatsu sci-fi",
+      "known_at": 6
+    },
+    {
+      "name": "Nausicaä of the Valley of the Wind",
+      "facet": "Japanese anime and tokusatsu sci-fi",
+      "known_at": 9
+    },
+    {
+      "name": "The Girl Who Leapt Through Time",
+      "facet": "Japanese anime and tokusatsu sci-fi",
+      "known_at": 10
+    },
+    {
+      "name": "Steins;Gate",
+      "facet": "Japanese anime and tokusatsu sci-fi",
+      "known_at": 11
+    },
+    {
+      "name": "Attack on Titan",
+      "facet": "Japanese anime and tokusatsu sci-fi",
+      "known_at": 8
+    },
+    {
+      "name": "Your Name",
+      "facet": "Japanese anime and tokusatsu sci-fi",
+      "known_at": 7
+    },
+    {
+      "name": "WALL·E",
+      "facet": "Animated sci-fi films",
+      "known_at": 2
+    },
+    {
+      "name": "EVE",
+      "facet": "Animated sci-fi films",
+      "known_at": 5
+    },
+    {
+      "name": "Axiom",
+      "facet": "Animated sci-fi films",
+      "known_at": 11
+    },
+    {
+      "name": "Big Hero 6",
+      "facet": "Animated sci-fi films",
+      "known_at": 4
+    },
+    {
+      "name": "Baymax",
+      "facet": "Animated sci-fi films",
+      "known_at": 2
+    },
+    {
+      "name": "The Incredibles",
+      "facet": "Animated sci-fi films",
+      "known_at": 4
+    },
+    {
+      "name": "Violet",
+      "facet": "Animated sci-fi films",
+      "known_at": 6
+    },
+    {
+      "name": "Despicable Me",
+      "facet": "Animated sci-fi films",
+      "known_at": 3
+    },
+    {
+      "name": "Gru",
+      "facet": "Animated sci-fi films",
+      "known_at": 3
+    },
+    {
+      "name": "Minions",
+      "facet": "Animated sci-fi films",
+      "known_at": 1
+    },
+    {
+      "name": "Lilo & Stitch",
+      "facet": "Animated sci-fi films",
+      "known_at": 4
+    },
+    {
+      "name": "Stitch",
+      "facet": "Animated sci-fi films",
+      "known_at": 2
+    },
+    {
+      "name": "Zurg",
+      "facet": "Animated sci-fi films",
+      "known_at": 7
+    },
+    {
+      "name": "Megamind",
+      "facet": "Animated sci-fi films",
+      "known_at": 8
+    },
+    {
+      "name": "Monsters vs. Aliens",
+      "facet": "Animated sci-fi films",
+      "known_at": 8
+    },
+    {
+      "name": "The Iron Giant",
+      "facet": "Animated sci-fi films",
+      "known_at": 11
+    },
+    {
+      "name": "Treasure Planet",
+      "facet": "Animated sci-fi films",
+      "known_at": 11
+    },
+    {
+      "name": "Meet the Robinsons",
+      "facet": "Animated sci-fi films",
+      "known_at": 10
+    },
+    {
+      "name": "Cloudy with a Chance of Meatballs",
+      "facet": "Animated sci-fi films",
+      "known_at": 6
+    },
+    {
+      "name": "The Wild Robot",
+      "facet": "Animated sci-fi films",
+      "known_at": 5
+    },
+    {
+      "name": "Spider-Man: Into the Spider-Verse",
+      "facet": "Animated sci-fi films",
+      "known_at": 7
+    },
+    {
+      "name": "Jules Verne",
+      "facet": "Classic novels on screen",
+      "known_at": 8
+    },
+    {
+      "name": "Twenty Thousand Leagues Under the Seas",
+      "facet": "Classic novels on screen",
+      "known_at": 7
+    },
+    {
+      "name": "Captain Nemo",
+      "facet": "Classic novels on screen",
+      "known_at": 8
+    },
+    {
+      "name": "Nautilus",
+      "facet": "Classic novels on screen",
+      "known_at": 9
+    },
+    {
+      "name": "Journey to the Center of the Earth",
+      "facet": "Classic novels on screen",
+      "known_at": 9
+    },
+    {
+      "name": "From the Earth to the Moon",
+      "facet": "Classic novels on screen",
+      "known_at": 12
+    },
+    {
+      "name": "H. G. Wells",
+      "facet": "Classic novels on screen",
+      "known_at": 11
+    },
+    {
+      "name": "The War of the Worlds",
+      "facet": "Classic novels on screen",
+      "known_at": 11
+    },
+    {
+      "name": "The Time Machine",
+      "facet": "Classic novels on screen",
+      "known_at": 11
+    },
+    {
+      "name": "The Invisible Man",
+      "facet": "Classic novels on screen",
+      "known_at": 10
+    },
+    {
+      "name": "Frankenstein",
+      "facet": "Classic novels on screen",
+      "known_at": 8
+    },
+    {
+      "name": "Mary Shelley",
+      "facet": "Classic novels on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Solaris",
+      "facet": "Classic novels on screen",
+      "known_at": 13
+    },
+    {
+      "name": "Stanisław Lem",
+      "facet": "Classic novels on screen",
+      "known_at": 14
+    },
+    {
+      "name": "Nineteen Eighty-Four",
+      "facet": "Classic novels on screen",
+      "known_at": 11
+    },
+    {
+      "name": "George Orwell",
+      "facet": "Classic novels on screen",
+      "known_at": 11
+    },
+    {
+      "name": "Isaac Asimov",
+      "facet": "Classic novels on screen",
+      "known_at": 11
+    },
+    {
+      "name": "Foundation",
+      "facet": "Classic novels on screen",
+      "known_at": 13
+    },
+    {
+      "name": "Arthur C. Clarke",
+      "facet": "Classic novels on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Philip K. Dick",
+      "facet": "Classic novels on screen",
+      "known_at": 13
+    },
+    {
+      "name": "Fahrenheit 451",
+      "facet": "Classic novels on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Ted Chiang",
+      "facet": "Classic novels on screen",
+      "known_at": 13
+    },
+    {
+      "name": "Frank Herbert",
+      "facet": "Classic novels on screen",
+      "known_at": 13
+    },
+    {
+      "name": "Gargantua",
+      "facet": "Space survival and exploration films",
+      "known_at": 12
+    },
+    {
+      "name": "Wormhole",
+      "facet": "Space survival and exploration films",
+      "known_at": 9
+    },
+    {
+      "name": "The Martian",
+      "facet": "Space survival and exploration films",
+      "known_at": 9
+    },
+    {
+      "name": "Mark Watney",
+      "facet": "Space survival and exploration films",
+      "known_at": 12
+    },
+    {
+      "name": "2001: A Space Odyssey",
+      "facet": "Space survival and exploration films",
+      "known_at": 11
+    },
+    {
+      "name": "Passengers",
+      "facet": "Space survival and exploration films",
+      "known_at": 11
+    },
+    {
+      "name": "Armageddon",
+      "facet": "Space survival and exploration films",
+      "known_at": 10
+    },
+    {
+      "name": "Deep Impact",
+      "facet": "Space survival and exploration films",
+      "known_at": 12
+    },
+    {
+      "name": "Sunshine",
+      "facet": "Space survival and exploration films",
+      "known_at": 14
+    },
+    {
+      "name": "Ad Astra",
+      "facet": "Space survival and exploration films",
+      "known_at": 13
+    },
+    {
+      "name": "Contact",
+      "facet": "Space survival and exploration films",
+      "known_at": 13
+    },
+    {
+      "name": "Project Hail Mary",
+      "facet": "Space survival and exploration films",
+      "known_at": 12
+    },
+    {
+      "name": "First Man",
+      "facet": "Space survival and exploration films",
+      "known_at": 12
+    },
+    {
+      "name": "Laser",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 6
+    },
+    {
+      "name": "Jetpack",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 5
+    },
+    {
+      "name": "Flying car",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 3
+    },
+    {
+      "name": "Teleporter",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 7
+    },
+    {
+      "name": "Warp drive",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 11
+    },
+    {
+      "name": "Hyperdrive",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 11
+    },
+    {
+      "name": "Shrink ray",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 5
+    },
+    {
+      "name": "Freeze ray",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 5
+    },
+    {
+      "name": "Force field",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 7
+    },
+    {
+      "name": "Tractor beam",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 10
+    },
+    {
+      "name": "Cryosleep",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 10
+    },
+    {
+      "name": "Iron Man suit",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 4
+    },
+    {
+      "name": "X-wing",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 10
+    },
+    {
+      "name": "TIE fighter",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 11
+    },
+    {
+      "name": "USS Enterprise",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 11
+    },
+    {
+      "name": "Anywhere Door",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Bamboo-copter",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Universal translator",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 9
+    },
+    {
+      "name": "Ray gun",
+      "facet": "Spaceships, gadgets and inventions",
+      "known_at": 5
+    },
+    {
+      "name": "Steven Spielberg",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 9
+    },
+    {
+      "name": "George Lucas",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 11
+    },
+    {
+      "name": "James Cameron",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 9
+    },
+    {
+      "name": "Christopher Nolan",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 10
+    },
+    {
+      "name": "Ridley Scott",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 12
+    },
+    {
+      "name": "Stanley Kubrick",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 12
+    },
+    {
+      "name": "Denis Villeneuve",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 13
+    },
+    {
+      "name": "Bong Joon-ho",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 12
+    },
+    {
+      "name": "Hayao Miyazaki",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 7
+    },
+    {
+      "name": "Osamu Tezuka",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 11
+    },
+    {
+      "name": "Ishirō Honda",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 14
+    },
+    {
+      "name": "Keanu Reeves",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 9
+    },
+    {
+      "name": "Arnold Schwarzenegger",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 8
+    },
+    {
+      "name": "Harrison Ford",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 11
+    },
+    {
+      "name": "Sigourney Weaver",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 13
+    },
+    {
+      "name": "Mark Hamill",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 12
+    },
+    {
+      "name": "Millie Bobby Brown",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 10
+    },
+    {
+      "name": "Tom Cruise",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 8
+    },
+    {
+      "name": "Matt Damon",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 11
+    },
+    {
+      "name": "Zendaya",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 10
+    },
+    {
+      "name": "Michael Jackson",
+      "facet": "Sci-fi directors and stars",
+      "known_at": 6
+    }
+  ]
+}

@@ -1,0 +1,1332 @@
+{
+  "subcategory": "famous-scientists",
+  "facets": [
+    "Physicists and their laws",
+    "Chemists and the elements",
+    "Biologists and evolution",
+    "Astronomers and the universe",
+    "Inventors and engineers",
+    "Great mathematicians",
+    "Pioneers of medicine",
+    "Ancient and medieval scholars",
+    "Nobel Prizes and laureates",
+    "Famous discovery stories",
+    "Units named after scientists",
+    "Computing and space age scientists"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 3,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 5,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Isaac Newton",
+      "facet": "Physicists and their laws",
+      "known_at": 3
+    },
+    {
+      "name": "Albert Einstein",
+      "facet": "Physicists and their laws",
+      "known_at": 3
+    },
+    {
+      "name": "Galileo Galilei",
+      "facet": "Physicists and their laws",
+      "known_at": 6
+    },
+    {
+      "name": "Michael Faraday",
+      "facet": "Physicists and their laws",
+      "known_at": 9
+    },
+    {
+      "name": "James Clerk Maxwell",
+      "facet": "Physicists and their laws",
+      "known_at": 12
+    },
+    {
+      "name": "Georg Simon Ohm",
+      "facet": "Physicists and their laws",
+      "known_at": 9
+    },
+    {
+      "name": "Robert Hooke",
+      "facet": "Physicists and their laws",
+      "known_at": 11
+    },
+    {
+      "name": "Blaise Pascal",
+      "facet": "Physicists and their laws",
+      "known_at": 10
+    },
+    {
+      "name": "Niels Bohr",
+      "facet": "Physicists and their laws",
+      "known_at": 11
+    },
+    {
+      "name": "Max Planck",
+      "facet": "Physicists and their laws",
+      "known_at": 11
+    },
+    {
+      "name": "Erwin Schrödinger",
+      "facet": "Physicists and their laws",
+      "known_at": 11
+    },
+    {
+      "name": "Werner Heisenberg",
+      "facet": "Physicists and their laws",
+      "known_at": 12
+    },
+    {
+      "name": "Ernest Rutherford",
+      "facet": "Physicists and their laws",
+      "known_at": 10
+    },
+    {
+      "name": "Richard Feynman",
+      "facet": "Physicists and their laws",
+      "known_at": 12
+    },
+    {
+      "name": "Stephen Hawking",
+      "facet": "Physicists and their laws",
+      "known_at": 6
+    },
+    {
+      "name": "J. Robert Oppenheimer",
+      "facet": "Physicists and their laws",
+      "known_at": 9
+    },
+    {
+      "name": "Lise Meitner",
+      "facet": "Physicists and their laws",
+      "known_at": 13
+    },
+    {
+      "name": "Enrico Fermi",
+      "facet": "Physicists and their laws",
+      "known_at": 12
+    },
+    {
+      "name": "Paul Dirac",
+      "facet": "Physicists and their laws",
+      "known_at": 13
+    },
+    {
+      "name": "Christian Doppler",
+      "facet": "Physicists and their laws",
+      "known_at": 12
+    },
+    {
+      "name": "Newton's laws of motion",
+      "facet": "Physicists and their laws",
+      "known_at": 7
+    },
+    {
+      "name": "Theory of relativity",
+      "facet": "Physicists and their laws",
+      "known_at": 8
+    },
+    {
+      "name": "Marie Curie",
+      "facet": "Chemists and the elements",
+      "known_at": 5
+    },
+    {
+      "name": "Dmitri Mendeleev",
+      "facet": "Chemists and the elements",
+      "known_at": 9
+    },
+    {
+      "name": "Periodic table",
+      "facet": "Chemists and the elements",
+      "known_at": 6
+    },
+    {
+      "name": "Antoine Lavoisier",
+      "facet": "Chemists and the elements",
+      "known_at": 11
+    },
+    {
+      "name": "Robert Boyle",
+      "facet": "Chemists and the elements",
+      "known_at": 11
+    },
+    {
+      "name": "John Dalton",
+      "facet": "Chemists and the elements",
+      "known_at": 10
+    },
+    {
+      "name": "Amedeo Avogadro",
+      "facet": "Chemists and the elements",
+      "known_at": 11
+    },
+    {
+      "name": "Henry Cavendish",
+      "facet": "Chemists and the elements",
+      "known_at": 12
+    },
+    {
+      "name": "Joseph Priestley",
+      "facet": "Chemists and the elements",
+      "known_at": 12
+    },
+    {
+      "name": "Humphry Davy",
+      "facet": "Chemists and the elements",
+      "known_at": 13
+    },
+    {
+      "name": "Hydrogen",
+      "facet": "Chemists and the elements",
+      "known_at": 4
+    },
+    {
+      "name": "Oxygen",
+      "facet": "Chemists and the elements",
+      "known_at": 3
+    },
+    {
+      "name": "Radium",
+      "facet": "Chemists and the elements",
+      "known_at": 9
+    },
+    {
+      "name": "Polonium",
+      "facet": "Chemists and the elements",
+      "known_at": 10
+    },
+    {
+      "name": "Uranium",
+      "facet": "Chemists and the elements",
+      "known_at": 8
+    },
+    {
+      "name": "Plutonium",
+      "facet": "Chemists and the elements",
+      "known_at": 11
+    },
+    {
+      "name": "Fritz Haber",
+      "facet": "Chemists and the elements",
+      "known_at": 13
+    },
+    {
+      "name": "Linus Pauling",
+      "facet": "Chemists and the elements",
+      "known_at": 13
+    },
+    {
+      "name": "Glenn Seaborg",
+      "facet": "Chemists and the elements",
+      "known_at": 14
+    },
+    {
+      "name": "Dorothy Hodgkin",
+      "facet": "Chemists and the elements",
+      "known_at": 14
+    },
+    {
+      "name": "Buckminsterfullerene",
+      "facet": "Chemists and the elements",
+      "known_at": 13
+    },
+    {
+      "name": "Carbon-14 dating",
+      "facet": "Chemists and the elements",
+      "known_at": 11
+    },
+    {
+      "name": "Gregor Mendel",
+      "facet": "Biologists and evolution",
+      "known_at": 9
+    },
+    {
+      "name": "HMS Beagle",
+      "facet": "Biologists and evolution",
+      "known_at": 11
+    },
+    {
+      "name": "Galápagos Islands",
+      "facet": "Biologists and evolution",
+      "known_at": 9
+    },
+    {
+      "name": "Natural selection",
+      "facet": "Biologists and evolution",
+      "known_at": 8
+    },
+    {
+      "name": "On the Origin of Species",
+      "facet": "Biologists and evolution",
+      "known_at": 9
+    },
+    {
+      "name": "Jean-Baptiste Lamarck",
+      "facet": "Biologists and evolution",
+      "known_at": 11
+    },
+    {
+      "name": "Alfred Russel Wallace",
+      "facet": "Biologists and evolution",
+      "known_at": 13
+    },
+    {
+      "name": "Carl Linnaeus",
+      "facet": "Biologists and evolution",
+      "known_at": 11
+    },
+    {
+      "name": "Jean-Henri Fabre",
+      "facet": "Biologists and evolution",
+      "known_at": 6
+    },
+    {
+      "name": "Jane Goodall",
+      "facet": "Biologists and evolution",
+      "known_at": 9
+    },
+    {
+      "name": "Rachel Carson",
+      "facet": "Biologists and evolution",
+      "known_at": 12
+    },
+    {
+      "name": "DNA",
+      "facet": "Biologists and evolution",
+      "known_at": 5
+    },
+    {
+      "name": "Rosalind Franklin",
+      "facet": "Biologists and evolution",
+      "known_at": 12
+    },
+    {
+      "name": "Francis Crick",
+      "facet": "Biologists and evolution",
+      "known_at": 11
+    },
+    {
+      "name": "Cell",
+      "facet": "Biologists and evolution",
+      "known_at": 4
+    },
+    {
+      "name": "Antonie van Leeuwenhoek",
+      "facet": "Biologists and evolution",
+      "known_at": 12
+    },
+    {
+      "name": "Ernst Haeckel",
+      "facet": "Biologists and evolution",
+      "known_at": 14
+    },
+    {
+      "name": "Barbara McClintock",
+      "facet": "Biologists and evolution",
+      "known_at": 14
+    },
+    {
+      "name": "Artificial selection",
+      "facet": "Biologists and evolution",
+      "known_at": 10
+    },
+    {
+      "name": "Neanderthals",
+      "facet": "Biologists and evolution",
+      "known_at": 8
+    },
+    {
+      "name": "Stem cells",
+      "facet": "Biologists and evolution",
+      "known_at": 10
+    },
+    {
+      "name": "CRISPR",
+      "facet": "Biologists and evolution",
+      "known_at": 12
+    },
+    {
+      "name": "Circadian rhythm",
+      "facet": "Biologists and evolution",
+      "known_at": 10
+    },
+    {
+      "name": "Nicolaus Copernicus",
+      "facet": "Astronomers and the universe",
+      "known_at": 8
+    },
+    {
+      "name": "Johannes Kepler",
+      "facet": "Astronomers and the universe",
+      "known_at": 10
+    },
+    {
+      "name": "Tycho Brahe",
+      "facet": "Astronomers and the universe",
+      "known_at": 13
+    },
+    {
+      "name": "Edwin Hubble",
+      "facet": "Astronomers and the universe",
+      "known_at": 10
+    },
+    {
+      "name": "Edmond Halley",
+      "facet": "Astronomers and the universe",
+      "known_at": 10
+    },
+    {
+      "name": "Halley's Comet",
+      "facet": "Astronomers and the universe",
+      "known_at": 6
+    },
+    {
+      "name": "William Herschel",
+      "facet": "Astronomers and the universe",
+      "known_at": 12
+    },
+    {
+      "name": "Carl Sagan",
+      "facet": "Astronomers and the universe",
+      "known_at": 12
+    },
+    {
+      "name": "Vera Rubin",
+      "facet": "Astronomers and the universe",
+      "known_at": 14
+    },
+    {
+      "name": "Georges Lemaître",
+      "facet": "Astronomers and the universe",
+      "known_at": 14
+    },
+    {
+      "name": "Big Bang",
+      "facet": "Astronomers and the universe",
+      "known_at": 6
+    },
+    {
+      "name": "Black hole",
+      "facet": "Astronomers and the universe",
+      "known_at": 5
+    },
+    {
+      "name": "Andrea Ghez",
+      "facet": "Astronomers and the universe",
+      "known_at": 14
+    },
+    {
+      "name": "Sagittarius A*",
+      "facet": "Astronomers and the universe",
+      "known_at": 13
+    },
+    {
+      "name": "Dark matter",
+      "facet": "Astronomers and the universe",
+      "known_at": 10
+    },
+    {
+      "name": "Milky Way",
+      "facet": "Astronomers and the universe",
+      "known_at": 4
+    },
+    {
+      "name": "Andromeda Galaxy",
+      "facet": "Astronomers and the universe",
+      "known_at": 9
+    },
+    {
+      "name": "Heliocentrism",
+      "facet": "Astronomers and the universe",
+      "known_at": 9
+    },
+    {
+      "name": "Clyde Tombaugh",
+      "facet": "Astronomers and the universe",
+      "known_at": 13
+    },
+    {
+      "name": "Pluto",
+      "facet": "Astronomers and the universe",
+      "known_at": 3
+    },
+    {
+      "name": "Thomas Edison",
+      "facet": "Inventors and engineers",
+      "known_at": 4
+    },
+    {
+      "name": "Light bulb",
+      "facet": "Inventors and engineers",
+      "known_at": 2
+    },
+    {
+      "name": "Alexander Graham Bell",
+      "facet": "Inventors and engineers",
+      "known_at": 6
+    },
+    {
+      "name": "Telephone",
+      "facet": "Inventors and engineers",
+      "known_at": 2
+    },
+    {
+      "name": "Nikola Tesla",
+      "facet": "Inventors and engineers",
+      "known_at": 7
+    },
+    {
+      "name": "James Watt",
+      "facet": "Inventors and engineers",
+      "known_at": 8
+    },
+    {
+      "name": "Steam engine",
+      "facet": "Inventors and engineers",
+      "known_at": 6
+    },
+    {
+      "name": "Wright brothers",
+      "facet": "Inventors and engineers",
+      "known_at": 5
+    },
+    {
+      "name": "Karl Benz",
+      "facet": "Inventors and engineers",
+      "known_at": 10
+    },
+    {
+      "name": "Johannes Gutenberg",
+      "facet": "Inventors and engineers",
+      "known_at": 9
+    },
+    {
+      "name": "Guglielmo Marconi",
+      "facet": "Inventors and engineers",
+      "known_at": 11
+    },
+    {
+      "name": "Alessandro Volta",
+      "facet": "Inventors and engineers",
+      "known_at": 10
+    },
+    {
+      "name": "Benjamin Franklin",
+      "facet": "Inventors and engineers",
+      "known_at": 8
+    },
+    {
+      "name": "Leonardo da Vinci",
+      "facet": "Inventors and engineers",
+      "known_at": 5
+    },
+    {
+      "name": "Mercury thermometer",
+      "facet": "Inventors and engineers",
+      "known_at": 6
+    },
+    {
+      "name": "Microwave oven",
+      "facet": "Inventors and engineers",
+      "known_at": 4
+    },
+    {
+      "name": "Blue LED",
+      "facet": "Inventors and engineers",
+      "known_at": 12
+    },
+    {
+      "name": "Lithium-ion battery",
+      "facet": "Inventors and engineers",
+      "known_at": 8
+    },
+    {
+      "name": "Flint Lockwood",
+      "facet": "Inventors and engineers",
+      "known_at": 8
+    },
+    {
+      "name": "Arc reactor",
+      "facet": "Inventors and engineers",
+      "known_at": 6
+    },
+    {
+      "name": "Spider-Man",
+      "facet": "Inventors and engineers",
+      "known_at": 2
+    },
+    {
+      "name": "The Powerpuff Girls",
+      "facet": "Inventors and engineers",
+      "known_at": 5
+    },
+    {
+      "name": "Victor Frankenstein",
+      "facet": "Inventors and engineers",
+      "known_at": 9
+    },
+    {
+      "name": "Euclid",
+      "facet": "Great mathematicians",
+      "known_at": 9
+    },
+    {
+      "name": "Carl Friedrich Gauss",
+      "facet": "Great mathematicians",
+      "known_at": 7
+    },
+    {
+      "name": "René Descartes",
+      "facet": "Great mathematicians",
+      "known_at": 11
+    },
+    {
+      "name": "Fermat's Last Theorem",
+      "facet": "Great mathematicians",
+      "known_at": 12
+    },
+    {
+      "name": "Andrew Wiles",
+      "facet": "Great mathematicians",
+      "known_at": 14
+    },
+    {
+      "name": "Gottfried Wilhelm Leibniz",
+      "facet": "Great mathematicians",
+      "known_at": 12
+    },
+    {
+      "name": "John Nash",
+      "facet": "Great mathematicians",
+      "known_at": 12
+    },
+    {
+      "name": "Kurt Gödel",
+      "facet": "Great mathematicians",
+      "known_at": 14
+    },
+    {
+      "name": "Srinivasa Ramanujan",
+      "facet": "Great mathematicians",
+      "known_at": 13
+    },
+    {
+      "name": "Abel Prize",
+      "facet": "Great mathematicians",
+      "known_at": 14
+    },
+    {
+      "name": "Fibonacci",
+      "facet": "Great mathematicians",
+      "known_at": 10
+    },
+    {
+      "name": "Leonhard Euler",
+      "facet": "Great mathematicians",
+      "known_at": 13
+    },
+    {
+      "name": "Évariste Galois",
+      "facet": "Great mathematicians",
+      "known_at": 14
+    },
+    {
+      "name": "Bernhard Riemann",
+      "facet": "Great mathematicians",
+      "known_at": 14
+    },
+    {
+      "name": "Grigori Perelman",
+      "facet": "Great mathematicians",
+      "known_at": 14
+    },
+    {
+      "name": "Seven Bridges of Königsberg",
+      "facet": "Great mathematicians",
+      "known_at": 14
+    },
+    {
+      "name": "Emmy Noether",
+      "facet": "Great mathematicians",
+      "known_at": 14
+    },
+    {
+      "name": "Möbius strip",
+      "facet": "Great mathematicians",
+      "known_at": 9
+    },
+    {
+      "name": "Golden ratio",
+      "facet": "Great mathematicians",
+      "known_at": 10
+    },
+    {
+      "name": "Hippocrates",
+      "facet": "Pioneers of medicine",
+      "known_at": 9
+    },
+    {
+      "name": "Hippocratic Oath",
+      "facet": "Pioneers of medicine",
+      "known_at": 11
+    },
+    {
+      "name": "Louis Pasteur",
+      "facet": "Pioneers of medicine",
+      "known_at": 8
+    },
+    {
+      "name": "Edward Jenner",
+      "facet": "Pioneers of medicine",
+      "known_at": 9
+    },
+    {
+      "name": "Alexander Fleming",
+      "facet": "Pioneers of medicine",
+      "known_at": 8
+    },
+    {
+      "name": "Penicillin",
+      "facet": "Pioneers of medicine",
+      "known_at": 7
+    },
+    {
+      "name": "Robert Koch",
+      "facet": "Pioneers of medicine",
+      "known_at": 11
+    },
+    {
+      "name": "Tuberculosis",
+      "facet": "Pioneers of medicine",
+      "known_at": 8
+    },
+    {
+      "name": "Joseph Lister",
+      "facet": "Pioneers of medicine",
+      "known_at": 13
+    },
+    {
+      "name": "Antisepsis",
+      "facet": "Pioneers of medicine",
+      "known_at": 12
+    },
+    {
+      "name": "Florence Nightingale",
+      "facet": "Pioneers of medicine",
+      "known_at": 7
+    },
+    {
+      "name": "William Harvey",
+      "facet": "Pioneers of medicine",
+      "known_at": 12
+    },
+    {
+      "name": "Karl Landsteiner",
+      "facet": "Pioneers of medicine",
+      "known_at": 13
+    },
+    {
+      "name": "Blood type",
+      "facet": "Pioneers of medicine",
+      "known_at": 6
+    },
+    {
+      "name": "Christiaan Barnard",
+      "facet": "Pioneers of medicine",
+      "known_at": 13
+    },
+    {
+      "name": "Wilhelm Röntgen",
+      "facet": "Pioneers of medicine",
+      "known_at": 10
+    },
+    {
+      "name": "Ivan Pavlov",
+      "facet": "Pioneers of medicine",
+      "known_at": 10
+    },
+    {
+      "name": "Sigmund Freud",
+      "facet": "Pioneers of medicine",
+      "known_at": 11
+    },
+    {
+      "name": "Barry Marshall",
+      "facet": "Pioneers of medicine",
+      "known_at": 14
+    },
+    {
+      "name": "In vitro fertilization",
+      "facet": "Pioneers of medicine",
+      "known_at": 12
+    },
+    {
+      "name": "Ignaz Semmelweis",
+      "facet": "Pioneers of medicine",
+      "known_at": 14
+    },
+    {
+      "name": "Ivermectin",
+      "facet": "Pioneers of medicine",
+      "known_at": 14
+    },
+    {
+      "name": "Rita Levi-Montalcini",
+      "facet": "Pioneers of medicine",
+      "known_at": 14
+    },
+    {
+      "name": "Shinya Yamanaka",
+      "facet": "Pioneers of medicine",
+      "known_at": 13
+    },
+    {
+      "name": "Body temperature",
+      "facet": "Pioneers of medicine",
+      "known_at": 4
+    },
+    {
+      "name": "Archimedes",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 7
+    },
+    {
+      "name": "Aristotle",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 9
+    },
+    {
+      "name": "Eratosthenes",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 13
+    },
+    {
+      "name": "Ptolemy",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 12
+    },
+    {
+      "name": "Galen",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 14
+    },
+    {
+      "name": "Avicenna",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 13
+    },
+    {
+      "name": "Hypatia",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 14
+    },
+    {
+      "name": "Al-Khwarizmi",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 13
+    },
+    {
+      "name": "Ibn al-Haytham",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 14
+    },
+    {
+      "name": "Thales of Miletus",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 12
+    },
+    {
+      "name": "Democritus",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 12
+    },
+    {
+      "name": "Aryabhata",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 13
+    },
+    {
+      "name": "Brahmagupta",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 14
+    },
+    {
+      "name": "Hipparchus",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 14
+    },
+    {
+      "name": "Omar Khayyam",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 14
+    },
+    {
+      "name": "Library of Alexandria",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 11
+    },
+    {
+      "name": "Hero of Alexandria",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 14
+    },
+    {
+      "name": "Roger Bacon",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 14
+    },
+    {
+      "name": "Antikythera mechanism",
+      "facet": "Ancient and medieval scholars",
+      "known_at": 13
+    },
+    {
+      "name": "Alfred Nobel",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 6
+    },
+    {
+      "name": "Dynamite",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 6
+    },
+    {
+      "name": "Nobel Prize medal",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 10
+    },
+    {
+      "name": "Nobel Prize award ceremony",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 11
+    },
+    {
+      "name": "Royal Swedish Academy of Sciences",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 13
+    },
+    {
+      "name": "Swedish Academy",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 13
+    },
+    {
+      "name": "Nobel Prize in Economics",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 12
+    },
+    {
+      "name": "Nobel Peace Prize",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 8
+    },
+    {
+      "name": "Malala Yousafzai",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 9
+    },
+    {
+      "name": "Mother Teresa",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 9
+    },
+    {
+      "name": "Martin Luther King Jr.",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 9
+    },
+    {
+      "name": "Nelson Mandela",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 7
+    },
+    {
+      "name": "Amartya Sen",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 13
+    },
+    {
+      "name": "Muhammad Yunus",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 13
+    },
+    {
+      "name": "Bob Dylan",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 11
+    },
+    {
+      "name": "Albert Camus",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 12
+    },
+    {
+      "name": "George Bernard Shaw",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 12
+    },
+    {
+      "name": "Wisława Szymborska",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 14
+    },
+    {
+      "name": "Tu Youyou",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 7
+    },
+    {
+      "name": "Le Duc Tho",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 14
+    },
+    {
+      "name": "UNHCR",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 12
+    },
+    {
+      "name": "International Labour Organization",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 14
+    },
+    {
+      "name": "Nihon Hidankyo",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 14
+    },
+    {
+      "name": "United Nations",
+      "facet": "Nobel Prizes and laureates",
+      "known_at": 5
+    },
+    {
+      "name": "Newton's apple",
+      "facet": "Famous discovery stories",
+      "known_at": 3
+    },
+    {
+      "name": "Eureka",
+      "facet": "Famous discovery stories",
+      "known_at": 8
+    },
+    {
+      "name": "Leaning Tower of Pisa experiment",
+      "facet": "Famous discovery stories",
+      "known_at": 7
+    },
+    {
+      "name": "Franklin's kite experiment",
+      "facet": "Famous discovery stories",
+      "known_at": 9
+    },
+    {
+      "name": "Schrödinger's cat",
+      "facet": "Famous discovery stories",
+      "known_at": 10
+    },
+    {
+      "name": "Gold foil experiment",
+      "facet": "Famous discovery stories",
+      "known_at": 12
+    },
+    {
+      "name": "Miller–Urey experiment",
+      "facet": "Famous discovery stories",
+      "known_at": 13
+    },
+    {
+      "name": "Dolly the sheep",
+      "facet": "Famous discovery stories",
+      "known_at": 7
+    },
+    {
+      "name": "Velcro",
+      "facet": "Famous discovery stories",
+      "known_at": 8
+    },
+    {
+      "name": "Post-it note",
+      "facet": "Famous discovery stories",
+      "known_at": 10
+    },
+    {
+      "name": "Conductive polymers",
+      "facet": "Famous discovery stories",
+      "known_at": 14
+    },
+    {
+      "name": "Nuclear fission",
+      "facet": "Famous discovery stories",
+      "known_at": 11
+    },
+    {
+      "name": "Trinity test",
+      "facet": "Famous discovery stories",
+      "known_at": 11
+    },
+    {
+      "name": "Benzene ring",
+      "facet": "Famous discovery stories",
+      "known_at": 12
+    },
+    {
+      "name": "Galvani's frog legs",
+      "facet": "Famous discovery stories",
+      "known_at": 13
+    },
+    {
+      "name": "Discovery of Neptune",
+      "facet": "Famous discovery stories",
+      "known_at": 13
+    },
+    {
+      "name": "Cosmic microwave background",
+      "facet": "Famous discovery stories",
+      "known_at": 13
+    },
+    {
+      "name": "Gravitational waves",
+      "facet": "Famous discovery stories",
+      "known_at": 11
+    },
+    {
+      "name": "Newton (unit)",
+      "facet": "Units named after scientists",
+      "known_at": 8
+    },
+    {
+      "name": "Joule",
+      "facet": "Units named after scientists",
+      "known_at": 9
+    },
+    {
+      "name": "Watt (unit)",
+      "facet": "Units named after scientists",
+      "known_at": 6
+    },
+    {
+      "name": "Volt",
+      "facet": "Units named after scientists",
+      "known_at": 7
+    },
+    {
+      "name": "Ampere",
+      "facet": "Units named after scientists",
+      "known_at": 9
+    },
+    {
+      "name": "Ohm (unit)",
+      "facet": "Units named after scientists",
+      "known_at": 9
+    },
+    {
+      "name": "Kelvin",
+      "facet": "Units named after scientists",
+      "known_at": 10
+    },
+    {
+      "name": "Celsius scale",
+      "facet": "Units named after scientists",
+      "known_at": 4
+    },
+    {
+      "name": "Fahrenheit scale",
+      "facet": "Units named after scientists",
+      "known_at": 8
+    },
+    {
+      "name": "Hertz",
+      "facet": "Units named after scientists",
+      "known_at": 9
+    },
+    {
+      "name": "Pascal (unit)",
+      "facet": "Units named after scientists",
+      "known_at": 9
+    },
+    {
+      "name": "Tesla (unit)",
+      "facet": "Units named after scientists",
+      "known_at": 11
+    },
+    {
+      "name": "Coulomb",
+      "facet": "Units named after scientists",
+      "known_at": 11
+    },
+    {
+      "name": "Becquerel",
+      "facet": "Units named after scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Sievert",
+      "facet": "Units named after scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Curie (unit)",
+      "facet": "Units named after scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Farad",
+      "facet": "Units named after scientists",
+      "known_at": 12
+    },
+    {
+      "name": "Henry (unit)",
+      "facet": "Units named after scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Weber (unit)",
+      "facet": "Units named after scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Alan Turing",
+      "facet": "Computing and space age scientists",
+      "known_at": 11
+    },
+    {
+      "name": "Turing test",
+      "facet": "Computing and space age scientists",
+      "known_at": 12
+    },
+    {
+      "name": "Ada Lovelace",
+      "facet": "Computing and space age scientists",
+      "known_at": 12
+    },
+    {
+      "name": "Charles Babbage",
+      "facet": "Computing and space age scientists",
+      "known_at": 12
+    },
+    {
+      "name": "Tim Berners-Lee",
+      "facet": "Computing and space age scientists",
+      "known_at": 13
+    },
+    {
+      "name": "World Wide Web",
+      "facet": "Computing and space age scientists",
+      "known_at": 8
+    },
+    {
+      "name": "John von Neumann",
+      "facet": "Computing and space age scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Grace Hopper",
+      "facet": "Computing and space age scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Yuri Gagarin",
+      "facet": "Computing and space age scientists",
+      "known_at": 7
+    },
+    {
+      "name": "Neil Armstrong",
+      "facet": "Computing and space age scientists",
+      "known_at": 4
+    },
+    {
+      "name": "Laika",
+      "facet": "Computing and space age scientists",
+      "known_at": 7
+    },
+    {
+      "name": "Sputnik 1",
+      "facet": "Computing and space age scientists",
+      "known_at": 9
+    },
+    {
+      "name": "Wernher von Braun",
+      "facet": "Computing and space age scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Sergei Korolev",
+      "facet": "Computing and space age scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Katherine Johnson",
+      "facet": "Computing and space age scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Valentina Tereshkova",
+      "facet": "Computing and space age scientists",
+      "known_at": 11
+    },
+    {
+      "name": "Apollo 11",
+      "facet": "Computing and space age scientists",
+      "known_at": 6
+    },
+    {
+      "name": "Konstantin Tsiolkovsky",
+      "facet": "Computing and space age scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Margaret Hamilton",
+      "facet": "Computing and space age scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Enigma machine",
+      "facet": "Computing and space age scientists",
+      "known_at": 12
+    }
+  ]
+}

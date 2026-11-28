@@ -267,7 +267,8 @@
     {
       "name": "Tiangong expansion to six modules",
       "facet": "Tiangong space station modules",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: The six-module expansion was only announced in 2023 and hasn't happened. Its timing, the modules and their order are still plans that can change, so a 'when' or 'what comes next' question can't rest on a settled fact. The settled part, how many modules the station is meant to have, is a count, and none of the three options asks for a number."
     },
     {
       "name": "Tiangong orbit altitude",
@@ -344,7 +345,8 @@
     {
       "name": "Tiangong-3 plan",
       "facet": "Earlier labs Tiangong-1 and 2",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: The cancelled Tiangong-3 lab is too thin and its details (when and how its tasks went to Tiangong-2) are uncertain. None of the options (a riddle, a person from a photo, or an origin person) fits it without forcing."
     },
     {
       "name": "Wang Yaping's space lesson",

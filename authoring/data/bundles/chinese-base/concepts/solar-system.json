@@ -1,0 +1,822 @@
+{
+  "subcategory": "solar-system",
+  "facets": [
+    "The Sun and its activity",
+    "Rocky inner planets",
+    "Gas and ice giants",
+    "The Moon and its phases",
+    "Moons of other planets",
+    "Dwarf planets, asteroids and comets",
+    "Chinese names of planets",
+    "Chang'e, Tianwen and Chinese missions",
+    "Moon myths and festivals",
+    "Ancient Chinese sky records",
+    "Eclipses, orbits and seasons",
+    "World missions to planets"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 4,
+      "record": 5,
+      "origin": 2,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 5,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "body_senses": 2,
+      "colombia": 1,
+      "educational_media": 5,
+      "everyday": 3,
+      "history": 4,
+      "language": 4,
+      "nature": 3,
+      "pop_culture": 3,
+      "popular_science": 4,
+      "school": 5,
+      "science_news": 5,
+      "university": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sun",
+      "facet": "The Sun and its activity",
+      "known_at": 1
+    },
+    {
+      "name": "Sunspot",
+      "facet": "The Sun and its activity",
+      "known_at": 7
+    },
+    {
+      "name": "Solar flare",
+      "facet": "The Sun and its activity",
+      "known_at": 9
+    },
+    {
+      "name": "Solar corona",
+      "facet": "The Sun and its activity",
+      "known_at": 10
+    },
+    {
+      "name": "Aurora",
+      "facet": "The Sun and its activity",
+      "known_at": 5
+    },
+    {
+      "name": "Solar wind",
+      "facet": "The Sun and its activity",
+      "known_at": 9
+    },
+    {
+      "name": "Nuclear fusion",
+      "facet": "The Sun and its activity",
+      "known_at": 9
+    },
+    {
+      "name": "Helium",
+      "facet": "The Sun and its activity",
+      "known_at": 6
+    },
+    {
+      "name": "Ultraviolet rays",
+      "facet": "The Sun and its activity",
+      "known_at": 5
+    },
+    {
+      "name": "Red giant",
+      "facet": "The Sun and its activity",
+      "known_at": 9
+    },
+    {
+      "name": "Yellow dwarf",
+      "facet": "The Sun and its activity",
+      "known_at": 10
+    },
+    {
+      "name": "Photosphere",
+      "facet": "The Sun and its activity",
+      "known_at": 12
+    },
+    {
+      "name": "Coronal mass ejection",
+      "facet": "The Sun and its activity",
+      "known_at": 13
+    },
+    {
+      "name": "Solar cycle",
+      "facet": "The Sun and its activity",
+      "known_at": 12
+    },
+    {
+      "name": "Solar prominence",
+      "facet": "The Sun and its activity",
+      "known_at": 12
+    },
+    {
+      "name": "Mercury",
+      "facet": "Rocky inner planets",
+      "known_at": 3
+    },
+    {
+      "name": "Venus",
+      "facet": "Rocky inner planets",
+      "known_at": 3
+    },
+    {
+      "name": "Earth",
+      "facet": "Rocky inner planets",
+      "known_at": 1
+    },
+    {
+      "name": "Mars",
+      "facet": "Rocky inner planets",
+      "known_at": 2
+    },
+    {
+      "name": "Earth's core",
+      "facet": "Rocky inner planets",
+      "known_at": 6
+    },
+    {
+      "name": "Valles Marineris",
+      "facet": "Rocky inner planets",
+      "known_at": 12
+    },
+    {
+      "name": "Caloris Basin",
+      "facet": "Rocky inner planets",
+      "known_at": 14
+    },
+    {
+      "name": "Martian polar ice caps",
+      "facet": "Rocky inner planets",
+      "known_at": 8
+    },
+    {
+      "name": "Greenhouse effect",
+      "facet": "Rocky inner planets",
+      "known_at": 7
+    },
+    {
+      "name": "Sulfuric acid clouds",
+      "facet": "Rocky inner planets",
+      "known_at": 11
+    },
+    {
+      "name": "Mars dust storm",
+      "facet": "Rocky inner planets",
+      "known_at": 9
+    },
+    {
+      "name": "Ozone layer",
+      "facet": "Rocky inner planets",
+      "known_at": 7
+    },
+    {
+      "name": "Plate tectonics",
+      "facet": "Rocky inner planets",
+      "known_at": 9
+    },
+    {
+      "name": "Habitable zone",
+      "facet": "Rocky inner planets",
+      "known_at": 11
+    },
+    {
+      "name": "Jupiter",
+      "facet": "Gas and ice giants",
+      "known_at": 2
+    },
+    {
+      "name": "Saturn",
+      "facet": "Gas and ice giants",
+      "known_at": 2
+    },
+    {
+      "name": "Uranus",
+      "facet": "Gas and ice giants",
+      "known_at": 4
+    },
+    {
+      "name": "Neptune",
+      "facet": "Gas and ice giants",
+      "known_at": 4
+    },
+    {
+      "name": "Great Red Spot",
+      "facet": "Gas and ice giants",
+      "known_at": 6
+    },
+    {
+      "name": "Great Dark Spot",
+      "facet": "Gas and ice giants",
+      "known_at": 13
+    },
+    {
+      "name": "Saturn's rings",
+      "facet": "Gas and ice giants",
+      "known_at": 2
+    },
+    {
+      "name": "Cassini Division",
+      "facet": "Gas and ice giants",
+      "known_at": 13
+    },
+    {
+      "name": "Gas giant",
+      "facet": "Gas and ice giants",
+      "known_at": 6
+    },
+    {
+      "name": "Ice giant",
+      "facet": "Gas and ice giants",
+      "known_at": 9
+    },
+    {
+      "name": "Saturn's hexagon",
+      "facet": "Gas and ice giants",
+      "known_at": 11
+    },
+    {
+      "name": "Diamond rain",
+      "facet": "Gas and ice giants",
+      "known_at": 11
+    },
+    {
+      "name": "Urbain Le Verrier",
+      "facet": "Gas and ice giants",
+      "known_at": 14
+    },
+    {
+      "name": "Jupiter's rings",
+      "facet": "Gas and ice giants",
+      "known_at": 10
+    },
+    {
+      "name": "Moon",
+      "facet": "The Moon and its phases",
+      "known_at": 1
+    },
+    {
+      "name": "New moon",
+      "facet": "The Moon and its phases",
+      "known_at": 4
+    },
+    {
+      "name": "Crescent moon",
+      "facet": "The Moon and its phases",
+      "known_at": 3
+    },
+    {
+      "name": "First quarter moon",
+      "facet": "The Moon and its phases",
+      "known_at": 6
+    },
+    {
+      "name": "Gibbous moon",
+      "facet": "The Moon and its phases",
+      "known_at": 10
+    },
+    {
+      "name": "Crater",
+      "facet": "The Moon and its phases",
+      "known_at": 3
+    },
+    {
+      "name": "Tidal locking",
+      "facet": "The Moon and its phases",
+      "known_at": 10
+    },
+    {
+      "name": "Tycho crater",
+      "facet": "The Moon and its phases",
+      "known_at": 13
+    },
+    {
+      "name": "Lunar regolith",
+      "facet": "The Moon and its phases",
+      "known_at": 12
+    },
+    {
+      "name": "Blue moon",
+      "facet": "The Moon and its phases",
+      "known_at": 9
+    },
+    {
+      "name": "Phobos",
+      "facet": "Moons of other planets",
+      "known_at": 9
+    },
+    {
+      "name": "Deimos",
+      "facet": "Moons of other planets",
+      "known_at": 10
+    },
+    {
+      "name": "Io",
+      "facet": "Moons of other planets",
+      "known_at": 8
+    },
+    {
+      "name": "Europa",
+      "facet": "Moons of other planets",
+      "known_at": 8
+    },
+    {
+      "name": "Ganymede",
+      "facet": "Moons of other planets",
+      "known_at": 8
+    },
+    {
+      "name": "Callisto",
+      "facet": "Moons of other planets",
+      "known_at": 10
+    },
+    {
+      "name": "Galilean moons",
+      "facet": "Moons of other planets",
+      "known_at": 9
+    },
+    {
+      "name": "Titan",
+      "facet": "Moons of other planets",
+      "known_at": 7
+    },
+    {
+      "name": "Enceladus",
+      "facet": "Moons of other planets",
+      "known_at": 10
+    },
+    {
+      "name": "Mimas",
+      "facet": "Moons of other planets",
+      "known_at": 11
+    },
+    {
+      "name": "Iapetus",
+      "facet": "Moons of other planets",
+      "known_at": 13
+    },
+    {
+      "name": "Hyperion",
+      "facet": "Moons of other planets",
+      "known_at": 13
+    },
+    {
+      "name": "Miranda",
+      "facet": "Moons of other planets",
+      "known_at": 12
+    },
+    {
+      "name": "Titania",
+      "facet": "Moons of other planets",
+      "known_at": 13
+    },
+    {
+      "name": "Triton",
+      "facet": "Moons of other planets",
+      "known_at": 11
+    },
+    {
+      "name": "Charon",
+      "facet": "Moons of other planets",
+      "known_at": 10
+    },
+    {
+      "name": "Pluto",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 2
+    },
+    {
+      "name": "Ceres",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 9
+    },
+    {
+      "name": "Eris",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 11
+    },
+    {
+      "name": "Haumea",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 12
+    },
+    {
+      "name": "Makemake",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 12
+    },
+    {
+      "name": "Quaoar",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 14
+    },
+    {
+      "name": "Sedna",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 13
+    },
+    {
+      "name": "Arrokoth",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 13
+    },
+    {
+      "name": "Kuiper Belt",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 10
+    },
+    {
+      "name": "Oort Cloud",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 11
+    },
+    {
+      "name": "Asteroid belt",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 5
+    },
+    {
+      "name": "Comet",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 3
+    },
+    {
+      "name": "Comet Shoemaker–Levy 9",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 12
+    },
+    {
+      "name": "Comet Hale–Bopp",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 12
+    },
+    {
+      "name": "Bennu",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 12
+    },
+    {
+      "name": "Apophis",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 12
+    },
+    {
+      "name": "Vesta",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 12
+    },
+    {
+      "name": "Jupiter Trojans",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 13
+    },
+    {
+      "name": "Meteor shower",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 4
+    },
+    {
+      "name": "Meteorite",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 4
+    },
+    {
+      "name": "Chicxulub impact",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 7
+    },
+    {
+      "name": "Tunguska event",
+      "facet": "Dwarf planets, asteroids and comets",
+      "known_at": 12
+    },
+    {
+      "name": "Shuixing (水星)",
+      "facet": "Chinese names of planets",
+      "known_at": 4
+    },
+    {
+      "name": "Jinxing (金星)",
+      "facet": "Chinese names of planets",
+      "known_at": 3
+    },
+    {
+      "name": "Huoxing (火星)",
+      "facet": "Chinese names of planets",
+      "known_at": 2
+    },
+    {
+      "name": "Muxing (木星)",
+      "facet": "Chinese names of planets",
+      "known_at": 3
+    },
+    {
+      "name": "Tuxing (土星)",
+      "facet": "Chinese names of planets",
+      "known_at": 3
+    },
+    {
+      "name": "Tianwangxing (天王星)",
+      "facet": "Chinese names of planets",
+      "known_at": 5
+    },
+    {
+      "name": "Haiwangxing (海王星)",
+      "facet": "Chinese names of planets",
+      "known_at": 5
+    },
+    {
+      "name": "Mingwangxing (冥王星)",
+      "facet": "Chinese names of planets",
+      "known_at": 5
+    },
+    {
+      "name": "Taibai (太白)",
+      "facet": "Chinese names of planets",
+      "known_at": 9
+    },
+    {
+      "name": "Qiming (启明) and Changgeng (长庚)",
+      "facet": "Chinese names of planets",
+      "known_at": 11
+    },
+    {
+      "name": "Suixing (岁星)",
+      "facet": "Chinese names of planets",
+      "known_at": 12
+    },
+    {
+      "name": "Chenxing (辰星)",
+      "facet": "Chinese names of planets",
+      "known_at": 13
+    },
+    {
+      "name": "Zhenxing (镇星)",
+      "facet": "Chinese names of planets",
+      "known_at": 13
+    },
+    {
+      "name": "Huixing (彗星)",
+      "facet": "Chinese names of planets",
+      "known_at": 6
+    },
+    {
+      "name": "Liuxing (流星)",
+      "facet": "Chinese names of planets",
+      "known_at": 3
+    },
+    {
+      "name": "Chinese Lunar Exploration Program",
+      "facet": "Chang'e, Tianwen and Chinese missions",
+      "known_at": 7
+    },
+    {
+      "name": "Moon rabbit",
+      "facet": "Moon myths and festivals",
+      "known_at": 2
+    },
+    {
+      "name": "Chinese lunar calendar",
+      "facet": "Moon myths and festivals",
+      "known_at": 4
+    },
+    {
+      "name": "Kuafu chasing the Sun",
+      "facet": "Moon myths and festivals",
+      "known_at": 5
+    },
+    {
+      "name": "Xihe (羲和)",
+      "facet": "Moon myths and festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Yuelao (月老)",
+      "facet": "Moon myths and festivals",
+      "known_at": 8
+    },
+    {
+      "name": "Quiet Night Thought (静夜思)",
+      "facet": "Moon myths and festivals",
+      "known_at": 2
+    },
+    {
+      "name": "Chuseok",
+      "facet": "Moon myths and festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Tsukimi",
+      "facet": "Moon myths and festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Gan De",
+      "facet": "Ancient Chinese sky records",
+      "known_at": 13
+    },
+    {
+      "name": "Shi Shen",
+      "facet": "Ancient Chinese sky records",
+      "known_at": 14
+    },
+    {
+      "name": "Oracle bone eclipse records",
+      "facet": "Ancient Chinese sky records",
+      "known_at": 12
+    },
+    {
+      "name": "Han dynasty sunspot records",
+      "facet": "Ancient Chinese sky records",
+      "known_at": 12
+    },
+    {
+      "name": "Mawangdui comet atlas",
+      "facet": "Ancient Chinese sky records",
+      "known_at": 13
+    },
+    {
+      "name": "Su Song's astronomical clock tower",
+      "facet": "Ancient Chinese sky records",
+      "known_at": 12
+    },
+    {
+      "name": "Solar eclipse",
+      "facet": "Eclipses, orbits and seasons",
+      "known_at": 3
+    },
+    {
+      "name": "Annular eclipse",
+      "facet": "Eclipses, orbits and seasons",
+      "known_at": 9
+    },
+    {
+      "name": "Blood moon",
+      "facet": "Eclipses, orbits and seasons",
+      "known_at": 7
+    },
+    {
+      "name": "Ellipse",
+      "facet": "Eclipses, orbits and seasons",
+      "known_at": 9
+    },
+    {
+      "name": "Gravity",
+      "facet": "Eclipses, orbits and seasons",
+      "known_at": 3
+    },
+    {
+      "name": "Heliocentric model",
+      "facet": "Eclipses, orbits and seasons",
+      "known_at": 8
+    },
+    {
+      "name": "Aristarchus of Samos",
+      "facet": "Eclipses, orbits and seasons",
+      "known_at": 14
+    },
+    {
+      "name": "Axial tilt",
+      "facet": "Eclipses, orbits and seasons",
+      "known_at": 7
+    },
+    {
+      "name": "Equinox",
+      "facet": "Eclipses, orbits and seasons",
+      "known_at": 7
+    },
+    {
+      "name": "Solstice",
+      "facet": "Eclipses, orbits and seasons",
+      "known_at": 7
+    },
+    {
+      "name": "Leap year",
+      "facet": "Eclipses, orbits and seasons",
+      "known_at": 4
+    },
+    {
+      "name": "Tides",
+      "facet": "Eclipses, orbits and seasons",
+      "known_at": 5
+    },
+    {
+      "name": "Ecliptic",
+      "facet": "Eclipses, orbits and seasons",
+      "known_at": 12
+    },
+    {
+      "name": "Zodiac",
+      "facet": "Eclipses, orbits and seasons",
+      "known_at": 5
+    },
+    {
+      "name": "Astronomical unit",
+      "facet": "Eclipses, orbits and seasons",
+      "known_at": 11
+    },
+    {
+      "name": "Light-year",
+      "facet": "Eclipses, orbits and seasons",
+      "known_at": 7
+    },
+    {
+      "name": "Sputnik 1",
+      "facet": "World missions to planets",
+      "known_at": 7
+    },
+    {
+      "name": "Voyager 1",
+      "facet": "World missions to planets",
+      "known_at": 9
+    },
+    {
+      "name": "Voyager 2",
+      "facet": "World missions to planets",
+      "known_at": 10
+    },
+    {
+      "name": "Hubble Space Telescope",
+      "facet": "World missions to planets",
+      "known_at": 6
+    },
+    {
+      "name": "James Webb Space Telescope",
+      "facet": "World missions to planets",
+      "known_at": 8
+    },
+    {
+      "name": "International Space Station",
+      "facet": "World missions to planets",
+      "known_at": 4
+    },
+    {
+      "name": "Cassini–Huygens",
+      "facet": "World missions to planets",
+      "known_at": 11
+    },
+    {
+      "name": "Juno",
+      "facet": "World missions to planets",
+      "known_at": 11
+    },
+    {
+      "name": "New Horizons",
+      "facet": "World missions to planets",
+      "known_at": 10
+    },
+    {
+      "name": "OSIRIS-REx",
+      "facet": "World missions to planets",
+      "known_at": 12
+    },
+    {
+      "name": "Hayabusa2",
+      "facet": "World missions to planets",
+      "known_at": 11
+    },
+    {
+      "name": "Rosetta",
+      "facet": "World missions to planets",
+      "known_at": 12
+    },
+    {
+      "name": "Parker Solar Probe",
+      "facet": "World missions to planets",
+      "known_at": 11
+    },
+    {
+      "name": "DART mission",
+      "facet": "World missions to planets",
+      "known_at": 11
+    },
+    {
+      "name": "Deep Space Network",
+      "facet": "World missions to planets",
+      "known_at": 14
+    }
+  ]
+}
